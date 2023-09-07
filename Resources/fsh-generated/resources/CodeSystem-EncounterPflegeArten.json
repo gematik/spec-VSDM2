@@ -1,0 +1,43 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "EncounterPflegeArten",
+  "id": "EncounterPflegeArten",
+  "url": "https://gematik.de/fhir/isik/v2/Basismodul/CodeSystem/EncounterPflegeArten",
+  "concept": [
+    {
+      "code": "langzeitpflege",
+      "display": "Langzeitpflege"
+    },
+    {
+      "code": "akutPflege",
+      "display": "Akutpflege"
+    },
+    {
+      "code": "intensivpflege",
+      "display": "Intensivpflege"
+    },
+    {
+      "code": "palliativpflege",
+      "display": "Palliativpflege"
+    },
+    {
+      "code": "behindertenpflege",
+      "display": "Behindertenpflege"
+    },
+    {
+      "code": "rehabilitationspflege",
+      "display": "Rehabilitationspflege"
+    },
+    {
+      "code": "psychatrischepflege",
+      "display": "Psychiatrische Pflege"
+    },
+    {
+      "code": "allgemeinepflege",
+      "display": "Allgemeine Pflege"
+    }
+  ],
+  "count": 8
+}

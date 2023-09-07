@@ -1,0 +1,2 @@
+This folder can contain project specific fhir ressources which are not part of a official fhir package but needed for the validation of the profiles in this repository.
+The content of this folder will be copied to the local `~/.fhir`-folder at each start of the `validate-sh` script
