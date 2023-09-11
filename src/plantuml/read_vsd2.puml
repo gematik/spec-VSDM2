@@ -6,6 +6,64 @@ participant AUTH1 as "Mean of\nauthentication" #ee8360
 actor Pract as "Practitioner" #8da5c4
 participant PS as "Client\nSystem (PS)" #8da5c4
 participant AUTH2 as "Mean of\nauthentication" #8da5c4
-participant AUTHN as "Authentication\nService (IDP)" #009a7c
+participant AUTHN as "Double-\nAuthentication\nService (PoP-X)" #009a7c
 participant AUTHZ as "Authorization\nService" #009a7c
 participant VSD as "VSD-\nService" #009a7c
+
+Pat -> AUTH1: provide
+
+Pract -> PS: initiate use case
+activate PS #8da5c4
+PS -> VSD: GET /vsd
+activate VSD #009a7c
+
+alt online
+    VSD -> AUTHZ: not authenticated
+    deactivate VSD
+    AUTHZ -> PS: challenge
+    activate PS
+    PS -> AUTHN
+    activate AUTHN #009a7c
+    AUTHN --> PS
+    deactivate AUTHN
+    PS -> AUTH2:
+    activate AUTH2 #8da5c4
+    AUTH2 --> PS:
+    deactivate AUTH2
+    PS -> AUTHN
+    activate AUTHN #009a7c
+    AUTHN --> PS
+    deactivate AUTHN
+    PS -> AUTH1:
+    activate AUTH1 #ee8360
+    AUTH1 --> PS:
+    deactivate AUTH1
+    PS -> AUTHN
+    activate AUTHN #009a7c
+    AUTHN --> PS
+    deactivate AUTHN
+    PS -> VSD
+    activate VSD #009a7c
+    VSD --> PS
+    deactivate VSD
+    deactivate PS
+    PS -> PS
+else offline
+    VSD --> PS: timeout
+    PS -> PS: Get challenge\nlocally (Timestamp?)
+    PS -> PS: create\nPoP-P-structure as\nChallenge-1
+    PS -> AUTH2: Sign PoP-P-structure\nas Challgenge1
+    activate AUTH2 #8da5c4
+    AUTH2 --> PS: Response
+    deactivate AUTH2
+    PS -> PS: prepare half-signed\nPoP-P-structure as\nChallenge-2
+    PS -> AUTH1: Sign Challenge-2
+    activate AUTH1 #ee8360
+    AUTH1 --> PS: Response
+    deactivate AUTH1
+end
+    PS -> PS: Store signed\nPoP-P-structure\nfor quarterly statement
+
+PS --> Pract
+deactivate PS
+@enduml
