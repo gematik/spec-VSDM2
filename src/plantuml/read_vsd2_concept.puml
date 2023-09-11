@@ -1,4 +1,4 @@
-@startuml read_vsd2
+@startuml read_vsd2_concept
 hide footbox
 title Read VSD 2 (conceptually)
 actor Pat as "Patient" #ee8360
