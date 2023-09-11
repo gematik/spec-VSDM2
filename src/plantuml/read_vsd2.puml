@@ -1,0 +1,11 @@
+@startuml read_vsd2
+hide footbox
+title Read VSD 2
+actor Pat as "Patient" #ee8360
+participant AUTH1 as "Mean of\nauthentication" #ee8360
+actor Pract as "Practitioner" #8da5c4
+participant PS as "Client\nSystem (PS)" #8da5c4
+participant AUTH2 as "Mean of\nauthentication" #8da5c4
+participant AUTHN as "Authentication\nService (IDP)" #009a7c
+participant AUTHZ as "Authorization\nService" #009a7c
+participant VSD as "VSD-\nService" #009a7c

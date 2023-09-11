@@ -1,9 +1,9 @@
-canonical:  https://gematik.de/fhir/isik/v2/Basismodul
+canonical: https://gematik.de/fhir/vsdm2
 fhirVersion: 4.0.1
 FSHOnly: true
 applyExtensionMetadataToRoot: false
-id: Implementierungsleitfaden gematik-Basismodul Stufe 1 1.0.0
-name: Implementierungsleitfaden gematik-Basismodul Stufe 1 1.0.0
+id: Specification VSDM 2
+name: Specification VSDM 2
 status: active
 version: # "1.0.0"
 publisher:
@@ -11,5 +11,5 @@ publisher:
   url: https://www.gematik.de/
   email: info@gematik.de
 dependencies:
-  de.basisprofil.r4: 1.4.0
+  de.basisprofil.r4: 1.3.2
   hl7.fhir.r4.core: 4.0.1

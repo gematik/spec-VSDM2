@@ -1,0 +1,10 @@
+openapi: 3.1.0
+info:
+  title: VSDM2
+  description: RESTful Kostentraeger interface to request Versichertenstammdaten
+              Via this interface practitioners software clients (primary systems) can request data about patients to support a current treatment.
+  version: 0.0.1
+
+    # Changes in 0.0.1
+    #  - initial version
+

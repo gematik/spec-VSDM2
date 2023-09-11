@@ -2,11 +2,11 @@ RuleSet: Meta
 * ^status = #active
 * ^experimental = false
 * ^publisher = "gematik GmbH"
-* ^date = "2022-06-30"
+* ^date = "2023-12-31"
 
 RuleSet: Meta-Inst
 * status = #active
 * experimental = false
-* version = "2.0.0"
+* version = "1.0.0"
 * publisher = "gematik GmbH"
-* date = "2022-06-20"
+* date = "2023-12-31"
