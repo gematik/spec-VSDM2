@@ -2,7 +2,7 @@ name: plantuml
 
 on:
   push:
-    branches: [ '*' ]
+    branches: [ '**' ]
     paths: [ 'src/plantuml/**' ]
 
   # Allows you to run this workflow manually from the Actions tab
