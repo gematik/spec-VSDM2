@@ -8,3 +8,115 @@ info:
     # Changes in 0.0.1
     #  - initial version
 
+externalDocs:
+  description: FHIR Specification VSDM 2
+  url: https://simplifier.net/vsdm2
+servers:
+- url: https://101575519.vsdm2.ti-dienste.de
+  description: TK Production server (PU)
+- url: https://109723913.vsdm2.ti-dienste.de
+  description: BKK VBU Production server (PU)
+- url: https://<iknummer>.vsdm2.ti-dienste.de
+  description: address schema vsdm backends
+
+paths:
+  /v1/metadata:
+    get:
+      summary: This path returns the servers FHIR capability statement
+      description: This path returns the servers FHIR capability statement
+      operationId: getMetadata
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                  $ref: '#/components/schemas/CapabilityStatement'
+        401:
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        403:
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /v1/:
+    get:
+      summary:  the root path returns a Vsdm2Bundle
+      description: the root path returns a Vsdm2Bundle with VSD about a specific patient that is addressed within a PoP-X-Token in the request header
+      operationId: getVsdm2Bundle
+      parameters:
+      - name: Authorization
+        in: header
+        description: the users AccessToken
+      - name: X-PoP-X-Token
+        in: header
+        description: the PoP-X-Token in the http X-PoP-X-Token header
+      - name: X-Device-Token
+        description: the ZeroTrust registered Device
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                  $ref: '#/components/schemas/Vsdm2Bundle'
+        303:
+          description: see other
+          content:
+            header: Location
+        401:
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        403:
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+
+  schemas:
+
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+          description: error message (optional)
+        errors:
+          maxItems: 50
+          minItems: 0
+          type: array
+          items:
+            $ref: '#/components/schemas/InnerError'
+
+    InnerError:
+      type: object
+      properties:
+        attributeName:
+          description: attribute name that caused an error
+          type: string
+        attributeError:
+          description: error details
+          type: string
+
+  securitySchemes:
+    oAuthVsdm:
+      type: oauth2
+      description: This API uses OAuth 2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://idp.ti-dienste.de/oauth2/authorize
+          tokenUrl: https://authz.vsdm.ti-dienste.de/token
+          scopes:
+            read_vsd: allows practitioners to read VSD
