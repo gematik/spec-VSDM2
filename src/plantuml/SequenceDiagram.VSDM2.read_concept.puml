@@ -1,0 +1,34 @@
+@startuml read_vsd2_concept
+hide footbox
+title Read VSD 2 (conceptually)
+actor Pat as "Patient" #ee8360
+participant AUTH1 as "Mean of\nauthentication" #ee8360
+actor Pract as "Practitioner" #8da5c4
+participant PS as "Client\nSystem (PS)" #8da5c4
+participant AUTH2 as "Mean of\nauthentication" #8da5c4
+participant AUTHN as "Double-\nAuthentication\nService (PoP-X)" #009a7c
+participant AUTHZ as "Authorization\nService" #009a7c
+participant VSD as "VSD-\nService" #009a7c
+
+
+Pract -> PS: initiate use case
+activate PS #8da5c4
+
+group Proof of Patient Presence
+    note over Pat, VSD: PoP-P\npatient's and practitioner's means of authentication\ncryptographically joined into a JWT structure
+end
+
+
+PS -> VSD: GET /vsd
+activate VSD #009a7c
+VSD --> PS: {VSD}
+deactivate VSD
+
+PS -> PS: Extract patient data\nfrom VSD && PoP-P
+PS -> PS: Store VSD\nfor quarterly statement
+PS -> PS: Store signed\nPoP-P-structure\nfor quarterly statement
+
+PS --> Pract
+deactivate PS
+
+@enduml
