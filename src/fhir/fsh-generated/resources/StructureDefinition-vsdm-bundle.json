@@ -1,0 +1,169 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "vsdm-bundle",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle",
+  "name": "VSDMBundle",
+  "status": "active",
+  "experimental": false,
+  "date": "2023-12-31",
+  "publisher": "gematik GmbH",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "cda",
+      "uri": "http://hl7.org/v3/cda",
+      "name": "CDA (R2)"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Bundle",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Bundle.id",
+        "path": "Bundle.id",
+        "min": 1
+      },
+      {
+        "id": "Bundle.meta",
+        "path": "Bundle.meta",
+        "min": 1
+      },
+      {
+        "id": "Bundle.meta.profile",
+        "path": "Bundle.meta.profile",
+        "min": 1,
+        "max": "1",
+        "fixedCanonical": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle"
+      },
+      {
+        "id": "Bundle.identifier",
+        "path": "Bundle.identifier",
+        "min": 1
+      },
+      {
+        "id": "Bundle.identifier.system",
+        "path": "Bundle.identifier.system",
+        "min": 1,
+        "fixedUri": "urn:ietf:rfc:3986"
+      },
+      {
+        "id": "Bundle.identifier.value",
+        "path": "Bundle.identifier.value",
+        "short": "a unique bundle identifier",
+        "min": 1
+      },
+      {
+        "id": "Bundle.type",
+        "path": "Bundle.type",
+        "fixedCode": "document"
+      },
+      {
+        "id": "Bundle.timestamp",
+        "path": "Bundle.timestamp",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry",
+        "path": "Bundle.entry",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "resource"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 2,
+        "max": "2"
+      },
+      {
+        "id": "Bundle.entry:VSDMPatient",
+        "path": "Bundle.entry",
+        "sliceName": "VSDMPatient",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Bundle.entry:VSDMPatient.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Patient",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:VSDMCoverage",
+        "path": "Bundle.entry",
+        "sliceName": "VSDMCoverage",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Bundle.entry:VSDMCoverage.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Coverage",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.signature",
+        "path": "Bundle.signature",
+        "min": 1
+      },
+      {
+        "id": "Bundle.signature.who.identifier",
+        "path": "Bundle.signature.who.identifier",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-iknr"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.signature.sigFormat",
+        "path": "Bundle.signature.sigFormat",
+        "fixedCode": "application/pkcs7-mime"
+      },
+      {
+        "id": "Bundle.signature.data",
+        "path": "Bundle.signature.data",
+        "min": 1
+      }
+    ]
+  }
+}

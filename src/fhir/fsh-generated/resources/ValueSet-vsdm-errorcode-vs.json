@@ -1,0 +1,19 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "VSDMErrorcodeVS",
+  "id": "vsdm-errorcode-vs",
+  "title": "ValueSet for VSDM errors",
+  "description": "VSDM errors if Kostentraeger cant provide VSD",
+  "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMErrorcodeVS",
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "date": "2023-12-31",
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS"
+      }
+    ]
+  }
+}

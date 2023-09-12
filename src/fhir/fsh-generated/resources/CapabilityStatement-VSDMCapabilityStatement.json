@@ -1,0 +1,46 @@
+{
+  "resourceType": "CapabilityStatement",
+  "id": "VSDMCapabilityStatement",
+  "url": "https://gematik.de/fhir/vsdm2/VSDMCapabilityStatement",
+  "status": "active",
+  "experimental": false,
+  "version": "1.0.0",
+  "publisher": "gematik GmbH",
+  "date": "2023-12-31",
+  "name": "VSDMCapabilityStatement",
+  "title": "VSDMCapabilityStatement for VSDM backend service",
+  "description": "This CapabilityStatement describes the backends capabilities to serve VSD get requests",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "DE",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Germany"
+        }
+      ]
+    }
+  ],
+  "kind": "capability",
+  "fhirVersion": "4.0.1",
+  "format": [
+    "application/fhir+xml",
+    "application/fhir+json"
+  ],
+  "rest": [
+    {
+      "mode": "server",
+      "security": {
+        "service": [
+          {
+            "coding": [
+              {
+                "code": "OAuth"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

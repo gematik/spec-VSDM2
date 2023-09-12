@@ -1,0 +1,93 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "vsdm-operationoutcome",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome",
+  "name": "VSDMOperationOutcome",
+  "status": "active",
+  "experimental": false,
+  "date": "2023-12-31",
+  "publisher": "gematik GmbH",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "OperationOutcome",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/OperationOutcome",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "OperationOutcome.meta.profile",
+        "path": "OperationOutcome.meta.profile",
+        "fixedCanonical": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome"
+      },
+      {
+        "id": "OperationOutcome.issue",
+        "path": "OperationOutcome.issue",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "OperationOutcome.issue.severity",
+        "path": "OperationOutcome.issue.severity",
+        "definition": "Angabe der Fehlerkategorie",
+        "fixedCode": "fatal"
+      },
+      {
+        "id": "OperationOutcome.issue.code",
+        "path": "OperationOutcome.issue.code",
+        "mustSupport": true
+      },
+      {
+        "id": "OperationOutcome.issue.details",
+        "path": "OperationOutcome.issue.details",
+        "definition": "nähere Beschreibung des Fehlers",
+        "min": 1
+      },
+      {
+        "id": "OperationOutcome.issue.details.coding",
+        "path": "OperationOutcome.issue.details.coding",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMErrorcodeVS"
+        }
+      },
+      {
+        "id": "OperationOutcome.issue.details.coding.system",
+        "path": "OperationOutcome.issue.details.coding.system",
+        "min": 1
+      },
+      {
+        "id": "OperationOutcome.issue.details.coding.code",
+        "path": "OperationOutcome.issue.details.coding.code",
+        "short": "Errorcode",
+        "definition": "Errorcode",
+        "min": 1
+      },
+      {
+        "id": "OperationOutcome.issue.details.coding.display",
+        "path": "OperationOutcome.issue.details.coding.display",
+        "short": "Errortext",
+        "min": 1
+      },
+      {
+        "id": "OperationOutcome.issue.details.text",
+        "path": "OperationOutcome.issue.details.text",
+        "short": "Errortext für Entwickler"
+      }
+    ]
+  }
+}
