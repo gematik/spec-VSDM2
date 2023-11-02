@@ -13,4 +13,7 @@ Usage: #definition
 * format[+] = #application/fhir+json
 * rest.mode = #server
 * rest.security.service.coding.code = #OAuth
+* software.name = "Mega Kassenbackend"
+* software.version = "1.0.0"
+* software.releaseDate = "2013-10-01"
 

@@ -42,5 +42,10 @@
         ]
       }
     }
-  ]
+  ],
+  "software": {
+    "name": "Mega Kassenbackend",
+    "version": "1.0.0",
+    "releaseDate": "2013-10-01"
+  }
 }

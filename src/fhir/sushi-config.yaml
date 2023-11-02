@@ -5,7 +5,7 @@ applyExtensionMetadataToRoot: false
 #id: Specification VSDM 2
 #name: Specification VSDM 2
 #status: active
-version: # "1.0.0"
+#version: "1.0.0"
 #publisher:
 #  name: Gematik GmbH
 #  url: https://www.gematik.de/
