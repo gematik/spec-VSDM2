@@ -122,6 +122,26 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Patient.photo",
+        "path": "Patient.photo",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.photo.contentType",
+        "path": "Patient.photo.contentType",
+        "min": 1
+      },
+      {
+        "id": "Patient.photo.data",
+        "path": "Patient.photo.data",
+        "min": 1
+      },
+      {
+        "id": "Patient.photo.url",
+        "path": "Patient.photo.url",
+        "max": "0"
       }
     ]
   }
