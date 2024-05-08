@@ -10,6 +10,11 @@ Id: vsdm-coverage
 * type from $versicherungsart-de-basis (required)
 * type ^short = "Versicherungsart"
 * type ^definition = "Art der Versicherung: Selbstzahler, gesetzliche/private Versicherung, Berufsgenossenschaft oder Sozialamt"
+* extension ^slicing.discriminator.type = #value
+* extension ^slicing.discriminator.path = "url"
+* extension ^slicing.rules = #open
+* extension contains
+    VSDMFestzuschusshoeheEX named vsdmFestzuschusshoeheEX 0..1
 * beneficiary only Reference(VSDMPatient)
 * beneficiary 1..1
 * beneficiary.reference 1..1
@@ -31,6 +36,8 @@ Usage: #example
 * id = "2d4da53a-413a-48fe-b908-2e67b5761523"
 * meta.profile = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
 * status = #active
+* extension[vsdmFestzuschusshoeheEX].url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMFestzuschusshoeheEX"
+* extension[vsdmFestzuschusshoeheEX].valueCoding = https://gematik.de/fhir/vsdm2/CodeSystem/VSDMFestzuschusshoeheCS#20 "70 % / fünf Jahre durchgehend"
 * type.coding.system = "http://fhir.de/CodeSystem/versicherungsart-de-basis"
 * type.coding.code = #GKV
 * type.coding.display = "gesetzliche Krankenversicherung"

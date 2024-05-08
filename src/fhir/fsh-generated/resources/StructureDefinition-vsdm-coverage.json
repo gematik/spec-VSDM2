@@ -26,6 +26,21 @@
         "fixedCanonical": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
       },
       {
+        "id": "Coverage.extension:vsdmFestzuschusshoeheEX",
+        "path": "Coverage.extension",
+        "sliceName": "vsdmFestzuschusshoeheEX",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMFestzuschusshoeheEX"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Coverage.status",
         "path": "Coverage.status",
         "fixedCode": "active"

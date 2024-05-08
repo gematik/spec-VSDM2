@@ -1,0 +1,33 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "VSDMFestzuschusshoeheCS",
+  "id": "vsdm-festzuschusshoehe-cs",
+  "title": "CodeSystem for Festzuschusshoehe",
+  "description": "Festzuschusshöhe gibt die Höhe des von der GKV gewährten Festzuschusses bei Versorgungen mit Zahnersatz an. Die Zuschusshöhe richtet sich nach der Anzahl an Jahren mit durchgehend durchgeführter Vorsorge oder Prophylaxe",
+  "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMFestzuschusshoeheCS",
+  "concept": [
+    {
+      "code": "10",
+      "display": "60 % / unbekannt"
+    },
+    {
+      "code": "20",
+      "display": "70 % / fünf Jahre durchgehend"
+    },
+    {
+      "code": "30",
+      "display": "75 % / zehn Jahre durchgehend"
+    },
+    {
+      "code": "40",
+      "display": "100 % / Härtefall"
+    }
+  ],
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "date": "2023-12-31",
+  "caseSensitive": true,
+  "count": 4
+}

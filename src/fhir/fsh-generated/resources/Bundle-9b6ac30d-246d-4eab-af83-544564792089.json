@@ -179,6 +179,16 @@
             "display": "Test GKV Krankenkasse"
           }
         ],
+        "extension": [
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMFestzuschusshoeheEX",
+            "valueCoding": {
+              "code": "20",
+              "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMFestzuschusshoeheCS",
+              "display": "70 % / fünf Jahre durchgehend"
+            }
+          }
+        ],
         "type": {
           "coding": [
             {
