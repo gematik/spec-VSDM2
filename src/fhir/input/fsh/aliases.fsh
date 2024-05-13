@@ -8,3 +8,10 @@ Alias: $identifier-pkv = http://fhir.de/StructureDefinition/identifier-pkv
 // in Coverage, Bundle
 Alias: $versicherungsart-de-basis = http://fhir.de/ValueSet/versicherungsart-de-basis
 Alias: $identifier-iknr = http://fhir.de/StructureDefinition/identifier-iknr
+Alias: $versichertenart = http://fhir.de/StructureDefinition/gkv/versichertenart
+Alias: $kostenerstattung = http://fhir.de/StructureDefinition/gkv/kostenerstattung
+Alias: $wop = http://fhir.de/StructureDefinition/gkv/wop
+Alias: $besondere-personengruppe = http://fhir.de/StructureDefinition/gkv/besondere-personengruppe
+Alias: $dmp-kennzeichen = http://fhir.de/StructureDefinition/gkv/dmp-kennzeichen
+Alias: $ruhender-leistungsanspruch = http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch
+Alias: $zuzahlungsstatus = http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus

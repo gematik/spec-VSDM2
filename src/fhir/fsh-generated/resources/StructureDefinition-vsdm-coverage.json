@@ -41,6 +41,111 @@
         ]
       },
       {
+        "id": "Coverage.extension:versichertenart",
+        "path": "Coverage.extension",
+        "sliceName": "versichertenart",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/versichertenart"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:kostenerstattung",
+        "path": "Coverage.extension",
+        "sliceName": "kostenerstattung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/kostenerstattung"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:wop",
+        "path": "Coverage.extension",
+        "sliceName": "wop",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/wop"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:besonderePersonengruppe",
+        "path": "Coverage.extension",
+        "sliceName": "besonderePersonengruppe",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:dmpKennzeichen",
+        "path": "Coverage.extension",
+        "sliceName": "dmpKennzeichen",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/dmp-kennzeichen"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:ruhenderLeistungsanspruch",
+        "path": "Coverage.extension",
+        "sliceName": "ruhenderLeistungsanspruch",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:zuzahlungsstatus",
+        "path": "Coverage.extension",
+        "sliceName": "zuzahlungsstatus",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Coverage.status",
         "path": "Coverage.status",
         "fixedCode": "active"
