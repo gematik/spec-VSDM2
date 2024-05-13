@@ -37,7 +37,7 @@ Usage: #example
 * meta.profile = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
 * status = #active
 * extension[vsdmFestzuschusshoeheEX].url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMFestzuschusshoeheEX"
-* extension[vsdmFestzuschusshoeheEX].valueCoding = https://gematik.de/fhir/vsdm2/CodeSystem/VSDMFestzuschusshoeheCS#20 "70 % / fünf Jahre durchgehend"
+* extension[vsdmFestzuschusshoeheEX].valueCoding = https://gematik.de/fhir/vsdm2/CodeSystem/VSDMFestzuschusshoeheCS#1 "70 % / fünf Jahre durchgehend"
 * type.coding.system = "http://fhir.de/CodeSystem/versicherungsart-de-basis"
 * type.coding.code = #GKV
 * type.coding.display = "gesetzliche Krankenversicherung"

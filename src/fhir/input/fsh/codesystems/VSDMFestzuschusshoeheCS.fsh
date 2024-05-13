@@ -6,7 +6,10 @@ Description: "Festzuschusshöhe gibt die Höhe des von der GKV gewährten Festzu
 * insert Meta
 * ^caseSensitive = true
 * ^content = #complete
-* #10 "60 % / unbekannt"
-* #20 "70 % / fünf Jahre durchgehend"
-* #30 "75 % / zehn Jahre durchgehend"
-* #40 "100 % / Härtefall"
+// refer to EBZ-Verfahren
+// https://www.gkv-datenaustausch.de/media/dokumente/leistungserbringer_1/zahnaerzte/elektronische_beantragungs__und_genehmigungsverfahren/technische_anlagen_aktuell_5/20240418_TA_EBZ_v2.0_oA.pdf
+// section 6.38 "Zuschusshöhe (ZER)"
+* #0 "60 % / unbekannt"
+* #1 "70 % / fünf Jahre durchgehend"
+* #2 "75 % / zehn Jahre durchgehend"
+* #3 "100 % / Härtefall"

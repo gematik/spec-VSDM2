@@ -9,19 +9,19 @@
   "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMFestzuschusshoeheCS",
   "concept": [
     {
-      "code": "10",
+      "code": "0",
       "display": "60 % / unbekannt"
     },
     {
-      "code": "20",
+      "code": "1",
       "display": "70 % / fünf Jahre durchgehend"
     },
     {
-      "code": "30",
+      "code": "2",
       "display": "75 % / zehn Jahre durchgehend"
     },
     {
-      "code": "40",
+      "code": "3",
       "display": "100 % / Härtefall"
     }
   ],

@@ -20,7 +20,7 @@
     {
       "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMFestzuschusshoeheEX",
       "valueCoding": {
-        "code": "20",
+        "code": "1",
         "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMFestzuschusshoeheCS",
         "display": "70 % / fünf Jahre durchgehend"
       }
