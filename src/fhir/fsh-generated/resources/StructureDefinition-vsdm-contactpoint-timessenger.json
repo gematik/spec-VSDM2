@@ -1,0 +1,53 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "vsdm-contactpoint-timessenger",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/vsdm-contactpoint-timessenger",
+  "name": "VSDMContactPointTIMessenger",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "servd",
+      "uri": "http://www.omg.org/spec/ServD/1.0/",
+      "name": "ServD"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "ContactPoint",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ContactPoint",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ContactPoint.system",
+        "path": "ContactPoint.system",
+        "fixedCode": "url"
+      },
+      {
+        "id": "ContactPoint.value",
+        "path": "ContactPoint.value",
+        "constraint": [
+          {
+            "key": "mxid-1",
+            "human": "TI-Messenger MXID starts with @, length UserID <255",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/vsdm-contactpoint-timessenger",
+            "severity": "error",
+            "expression": "matches('matrix:@[A-Za-z0-9._=-]{1,253}:[A-Za-z0-9.-]+')"
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

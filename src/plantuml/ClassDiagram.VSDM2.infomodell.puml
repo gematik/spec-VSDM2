@@ -1,0 +1,48 @@
+@startuml "Info model VSDM 2"
+
+skinparam class {
+    BackgroundColor #e6e6e6
+    ArrowColor #000e52
+    BorderColor #000e52
+    FontColor #000e52
+    AttributeFontColor #000e52
+}
+
+abstract class Versichertenstammdaten {
+    get()
+    get(queryParams isTreatmentCovered)
+}
+note right : VSD consist of Patient and Coverage resources.\nThey are queried from an http-interface\nand returned in a (probably signed) Bundle.
+
+class Bundle {
+
+}
+
+class PatientInformation {
+    Identifier kvnr
+    HumanName name
+    Code gender
+    Address address
+    Date birthDate
+    ...
+}
+
+class CoverageInformation {
+    Identifier identifier
+    Code status
+    Reference beneficiaryPatient
+    Period coveragePeriod
+    PayorInsurer ik
+    CostToBeneficiary coPaymentAndPersonengruppe
+    ExtensionDMP[] dmpCodes
+    ExtensionSelektivVertraege[] selektivVertraegeCodes
+    ...
+}
+
+Versichertenstammdaten <|--Bundle
+Bundle *-- PatientInformation
+Bundle *-- CoverageInformation
+
+
+@enduml
+

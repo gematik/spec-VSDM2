@@ -2,14 +2,14 @@ canonical: https://gematik.de/fhir/vsdm2
 fhirVersion: 4.0.1
 FSHOnly: true
 applyExtensionMetadataToRoot: false
-id: Specification VSDM 2
-name: Specification VSDM 2
-status: active
-version: # "1.0.0"
-publisher:
-  name: Gematik GmbH
-  url: https://www.gematik.de/
-  email: info@gematik.de
+#id: Specification VSDM 2
+#name: Specification VSDM 2
+#status: active
+#version: "1.0.0"
+#publisher:
+#  name: Gematik GmbH
+#  url: https://www.gematik.de/
+#  email: info@gematik.de
 dependencies:
-  de.basisprofil.r4: 1.3.2
+  de.basisprofil.r4: 1.4.0
   hl7.fhir.r4.core: 4.0.1

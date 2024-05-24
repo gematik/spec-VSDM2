@@ -1,0 +1,148 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "vsdm-patient",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient",
+  "name": "VSDMPatient",
+  "status": "active",
+  "experimental": false,
+  "date": "2023-12-31",
+  "publisher": "gematik GmbH",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "cda",
+      "uri": "http://hl7.org/v3/cda",
+      "name": "CDA (R2)"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "loinc",
+      "uri": "http://loinc.org",
+      "name": "LOINC code for the element"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient.meta",
+        "path": "Patient.meta",
+        "min": 1
+      },
+      {
+        "id": "Patient.meta.profile",
+        "path": "Patient.meta.profile",
+        "min": 1,
+        "max": "1",
+        "fixedCanonical": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
+      },
+      {
+        "id": "Patient.identifier",
+        "path": "Patient.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "type"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Patient.identifier:versichertenId_GKV",
+        "path": "Patient.identifier",
+        "sliceName": "versichertenId_GKV",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-kvid-10"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.identifier:versichertenID_pkv",
+        "path": "Patient.identifier",
+        "sliceName": "versichertenID_pkv",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-pkv"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.name",
+        "path": "Patient.name",
+        "type": [
+          {
+            "code": "HumanName",
+            "profile": [
+              "http://fhir.de/StructureDefinition/humanname-de-basis"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.address",
+        "path": "Patient.address",
+        "type": [
+          {
+            "code": "Address",
+            "profile": [
+              "http://fhir.de/StructureDefinition/address-de-basis"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.photo",
+        "path": "Patient.photo",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.photo.contentType",
+        "path": "Patient.photo.contentType",
+        "min": 1
+      },
+      {
+        "id": "Patient.photo.data",
+        "path": "Patient.photo.data",
+        "min": 1
+      },
+      {
+        "id": "Patient.photo.url",
+        "path": "Patient.photo.url",
+        "max": "0"
+      }
+    ]
+  }
+}

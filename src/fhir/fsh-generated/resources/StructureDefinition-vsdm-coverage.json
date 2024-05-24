@@ -1,0 +1,218 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "vsdm-coverage",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage",
+  "name": "VSDMCoverage",
+  "status": "active",
+  "experimental": false,
+  "date": "2023-12-31",
+  "publisher": "gematik GmbH",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Coverage",
+  "baseDefinition": "http://fhir.de/StructureDefinition/coverage-de-basis",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Coverage.meta",
+        "path": "Coverage.meta",
+        "min": 1
+      },
+      {
+        "id": "Coverage.meta.profile",
+        "path": "Coverage.meta.profile",
+        "fixedCanonical": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+      },
+      {
+        "id": "Coverage.extension:vsdmFestzuschusshoeheEX",
+        "path": "Coverage.extension",
+        "sliceName": "vsdmFestzuschusshoeheEX",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMFestzuschusshoeheEX"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:versichertenart",
+        "path": "Coverage.extension",
+        "sliceName": "versichertenart",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/versichertenart"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:kostenerstattung",
+        "path": "Coverage.extension",
+        "sliceName": "kostenerstattung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/kostenerstattung"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:wop",
+        "path": "Coverage.extension",
+        "sliceName": "wop",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/wop"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:besonderePersonengruppe",
+        "path": "Coverage.extension",
+        "sliceName": "besonderePersonengruppe",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:dmpKennzeichen",
+        "path": "Coverage.extension",
+        "sliceName": "dmpKennzeichen",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/dmp-kennzeichen"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:ruhenderLeistungsanspruch",
+        "path": "Coverage.extension",
+        "sliceName": "ruhenderLeistungsanspruch",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:zuzahlungsstatus",
+        "path": "Coverage.extension",
+        "sliceName": "zuzahlungsstatus",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.status",
+        "path": "Coverage.status",
+        "fixedCode": "active"
+      },
+      {
+        "id": "Coverage.type",
+        "path": "Coverage.type",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.de/ValueSet/versicherungsart-de-basis"
+        }
+      },
+      {
+        "id": "Coverage.beneficiary",
+        "path": "Coverage.beneficiary",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.beneficiary.reference",
+        "path": "Coverage.beneficiary.reference",
+        "min": 1
+      },
+      {
+        "id": "Coverage.period",
+        "path": "Coverage.period",
+        "min": 1
+      },
+      {
+        "id": "Coverage.period.start",
+        "path": "Coverage.period.start",
+        "min": 1
+      },
+      {
+        "id": "Coverage.period.end",
+        "path": "Coverage.period.end",
+        "min": 1
+      },
+      {
+        "id": "Coverage.payor",
+        "path": "Coverage.payor",
+        "max": "1"
+      },
+      {
+        "id": "Coverage.payor.identifier",
+        "path": "Coverage.payor.identifier",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-iknr"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.payor.display",
+        "path": "Coverage.payor.display",
+        "min": 1
+      }
+    ]
+  }
+}

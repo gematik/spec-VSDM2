@@ -1,0 +1,45 @@
+{
+  "resourceType": "Coverage",
+  "id": "2d4da53a-413a-48fe-b908-2e67b5761523",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+    ]
+  },
+  "status": "active",
+  "payor": [
+    {
+      "identifier": {
+        "system": "http://fhir.de/sid/arge-ik/iknr",
+        "value": "12345678"
+      },
+      "display": "Test GKV Krankenkasse"
+    }
+  ],
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMFestzuschusshoeheEX",
+      "valueCoding": {
+        "code": "1",
+        "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMFestzuschusshoeheCS",
+        "display": "70 % / fünf Jahre durchgehend"
+      }
+    }
+  ],
+  "type": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+        "code": "GKV",
+        "display": "gesetzliche Krankenversicherung"
+      }
+    ]
+  },
+  "period": {
+    "start": "2022-04-01",
+    "end": "2027-07-31"
+  },
+  "beneficiary": {
+    "reference": "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
+  }
+}
