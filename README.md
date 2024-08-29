@@ -23,6 +23,16 @@ VSDM 2 basically will become a simple application, where a healthcare profession
 
 ![image](images/diagrams/SequenceDiagram.VSDM2.read_concept.png)
 
+## Branch Modell
+In diesem Repository werden Branches verwendet um den Status der Weiterentwicklung und das Review von Änderungen abzubilden.
+Folgende Branches werden verwendet
+
+- main (enthält den letzten freigegebenen Stand der Entwicklung; besteht permanent)
+
+- develop (enthält den Stand der fertig entwickelten Features und wird zum Review durch Industriepartner und Gesellschafter verwendet; basiert auf main; nach Freigabe erfolgt ein merge in main und ein Release wird erzeugt; besteht permanent)
+
+- feature/<name> (in feature branches werden neue Features entwickelt; basiert auf develop; nach Fertigstellung erfolgt ein merge in develop; wird nach dem merge gelöscht)
+
 ## FHIR Profiles VSDM 2
 
 The first VSDM used a proprietary XML data format in a SOAP-service-chain. VSDM 2 migrates to the FHIR-standard that is used more and more in the German healthcare sector. The FHIR-profiles and sample resources will be published in the official [VSDM 2 simplifier project](https://simplifier.net/vsdm2).
