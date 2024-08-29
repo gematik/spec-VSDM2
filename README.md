@@ -21,7 +21,6 @@ The Versichertenstammdatenmanagement VSDM was introduced around 2017 and both pr
 
 VSDM 2 basically will become a simple application, where a healthcare professional can (and in most cases should) get demographic and additional billing information AFTER a PoPP was determined. So the insurant providers provide a simple FHIR-REST-API where doctor's office client software "just" requests additional data by providing a legitimate PoPP-token.
 
-![image](images/diagrams/SequenceDiagram.VSDM2.read_concept.png)
 
 ## Branch Modell
 In diesem Repository werden Branches verwendet um den Status der Weiterentwicklung und das Review von Änderungen abzubilden.
@@ -32,6 +31,15 @@ Folgende Branches werden verwendet
 - develop (enthält den Stand der fertig entwickelten Features und wird zum Review durch Industriepartner und Gesellschafter verwendet; basiert auf main; nach Freigabe erfolgt ein merge in main und ein Release wird erzeugt; besteht permanent)
 
 - feature/<name> (in feature branches werden neue Features entwickelt; basiert auf develop; nach Fertigstellung erfolgt ein merge in develop; wird nach dem merge gelöscht)
+
+## Lizenzbedingungen
+Copyright (c) 2022 gematik GmbH
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
 ## FHIR Profiles VSDM 2
 
