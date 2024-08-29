@@ -11,9 +11,15 @@ This repo holds FHIR-Profiles, sample Resources and OpenAPI specification for th
 - [License](#license)
 - [Contact](#contact)
 
-## What is VSDM 2
+## Was ist VSDM 2.0
 
-The Versichertenstammdatenmanagement VSDM was introduced around 2017 and both provides patient democraphic data to healthcare professionals and proof of treatement to be used in quarterly statements to the KV. All these use cases make use of Konnektor, eHealth Card Terminals, eGK, SMC-B, Intermediär and finaly the insurant provider's VSDM backend services.
+VSDM steht für „Versichertenstammdatenmanagement“. Es ist ein Teil der Telematikinfrastruktur (TI) im deutschen Gesundheitswesen und dient der Verwaltung und dem Abgleich der Stammdaten von gesetzlich versicherten Personen.
+VSDM 2.0 ist die Weiterentwicklung des bestehenden VSDM 1.0. Die Versichertenstammdaten (VSD) werden mit VSDM 2.0 nicht mehr auf der eGK des Versicherten gespeichert und aktualisiert sondern direkt vom Primärsystem (PS) des Leistungserbringers vom Fachdienst der Krankenkasse abgerufen und ggf. im PS aktualisiert.
+
+**Funktionen des VSDM:**
+- Stammdatenabgleich: Über das VSDM werden die Versichertenstammdaten, wie Name, Geburtsdatum, Anschrift, und Versicherungsschutz, bei jedem Arztbesuch elektronisch überprüft und aktualisiert.
+- Sicherstellung der Aktualität: Es soll sichergestellt werden, dass die auf der elektronischen Gesundheitskarte (eGK) gespeicherten Daten stets aktuell sind.
+- Datensicherheit: Die Daten werden verschlüsselt und sicher über die Telematikinfrastruktur übertragen.
 
 - VSDM 2 firstly decouples the proof-of-treatment ("Proof-of-Patient-Presence PoPP) from the use case of providing demographic data. So the PoPP can be used in other applications, too.
 - Secondly, all the named infrastructure-components formed an unfexible and time consuming use case environment. So VSDM 2 reduces dependencies to those components.
