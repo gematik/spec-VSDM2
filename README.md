@@ -16,17 +16,18 @@ This repo holds FHIR-Profiles, sample Resources and OpenAPI specification for th
 VSDM steht für „Versichertenstammdatenmanagement“. Es ist ein Teil der Telematikinfrastruktur (TI) im deutschen Gesundheitswesen und dient der Verwaltung und dem Abgleich der Stammdaten von gesetzlich versicherten Personen.
 VSDM 2.0 ist die Weiterentwicklung des bestehenden VSDM 1.0. Die Versichertenstammdaten (VSD) werden mit VSDM 2.0 nicht mehr auf der eGK des Versicherten gespeichert und aktualisiert sondern direkt vom Primärsystem (PS) des Leistungserbringers vom Fachdienst der Krankenkasse abgerufen und ggf. im PS aktualisiert.
 
+VSDM 2 reduziert die Abhängigkeiten von diesen Komponenten.
+- Schließlich wird mit der Initiative TI 2.0 die gesamte Infrastruktur modernisiert und auf den neuesten Stand der Sicherheits- und Architekturprinzipien gebracht.
+
+VSDM 2.0 entkoppelt zunächst den Versorgungsnachweis („Proof-of-Patient-Presence PoPP“) vom Anwendungsfall der Bereitstellung demografischer Daten. Damit kann der PoPP auch in anderen Anwendungen eingesetzt werden.
+
+VSDM 2 wird im Grunde eine einfache Anwendung, mit der ein Gesundheitsdienstleister demografische und zusätzliche Abrechnungsinformationen abrufen kann (und in den meisten Fällen auch sollte), NACHDEM ein PoPP ermittelt wurde. Die Versicherer stellen also eine einfache FHIR-REST-API bereit, mit der die Client-Software der Arztpraxis „nur“ zusätzliche Daten anfordert, indem sie ein legitimes PoPP-Token bereitstellt.
+
+
 **Funktionen des VSDM:**
 - Stammdatenabgleich: Über das VSDM werden die Versichertenstammdaten, wie Name, Geburtsdatum, Anschrift, und Versicherungsschutz, bei jedem Arztbesuch elektronisch überprüft und aktualisiert.
 - Sicherstellung der Aktualität: Es soll sichergestellt werden, dass die auf der elektronischen Gesundheitskarte (eGK) gespeicherten Daten stets aktuell sind.
 - Datensicherheit: Die Daten werden verschlüsselt und sicher über die Telematikinfrastruktur übertragen.
-
-- VSDM 2 firstly decouples the proof-of-treatment ("Proof-of-Patient-Presence PoPP) from the use case of providing demographic data. So the PoPP can be used in other applications, too.
-- Secondly, all the named infrastructure-components formed an unfexible and time consuming use case environment. So VSDM 2 reduces dependencies to those components.
-- Finally, with the TI 2.0 initiative, the whole infrastructure will get modernized and updated to state of the art security and architecture principles.
-
-VSDM 2 basically will become a simple application, where a healthcare professional can (and in most cases should) get demographic and additional billing information AFTER a PoPP was determined. So the insurant providers provide a simple FHIR-REST-API where doctor's office client software "just" requests additional data by providing a legitimate PoPP-token.
-
 
 ## Branch Modell
 In diesem Repository werden Branches verwendet um den Status der Weiterentwicklung und das Review von Änderungen abzubilden.
