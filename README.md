@@ -23,9 +23,9 @@ Die Versicherer stellen also eine einfache FHIR-REST-API bereit, mit der die Cli
 
 
 **Funktionen des VSDM:**
-**- Stammdatenabgleich:** Über das VSDM werden die Versichertenstammdaten, wie Name, Geburtsdatum, Anschrift, und Versicherungsschutz, bei jedem Arztbesuch elektronisch überprüft und aktualisiert.
-**- Sicherstellung der Aktualität:** Es soll sichergestellt werden, dass die auf der elektronischen Gesundheitskarte (eGK) gespeicherten Daten stets aktuell sind.
-**- Datensicherheit:** Die Daten werden verschlüsselt und sicher über die Telematikinfrastruktur übertragen.
+- Stammdatenabgleich:** Über das VSDM werden die Versichertenstammdaten, wie Name, Geburtsdatum, Anschrift, und Versicherungsschutz, bei jedem Arztbesuch elektronisch überprüft und aktualisiert.
+- **Sicherstellung der Aktualität:** Es soll sichergestellt werden, dass die auf der elektronischen Gesundheitskarte (eGK) gespeicherten Daten stets aktuell sind.
+- **Datensicherheit:** Die Daten werden verschlüsselt und sicher über die Telematikinfrastruktur übertragen.
 
 ## Branch Modell
 In diesem Repository werden Branches verwendet um den Status der Weiterentwicklung und das Review von Änderungen abzubilden.
