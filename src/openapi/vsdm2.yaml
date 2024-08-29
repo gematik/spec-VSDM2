@@ -53,12 +53,10 @@ paths:
       parameters:
       - name: Authorization
         in: header
-        description: the users AccessToken
-      - name: X-PoP-X-Token
+        description: the PoP-X-Token is used as AccessToken
+      - name: DPoP
         in: header
-        description: the PoP-X-Token in the http X-PoP-X-Token header
-      - name: X-Device-Token
-        description: the ZeroTrust registered Device
+        description: the DPoP-Header holds the DPoP-JWT to demonstrate possesssion of local client key
       responses:
         200:
           description: OK
@@ -113,10 +111,10 @@ components:
   securitySchemes:
     oAuthVsdm:
       type: oauth2
-      description: This API uses OAuth 2
+      description: This API uses OAuth 2, to gain access clients need to proof Versorgungskontext with a PoP-X token
       flows:
         authorizationCode:
-          authorizationUrl: https://idp.ti-dienste.de/oauth2/authorize
-          tokenUrl: https://authz.vsdm.ti-dienste.de/token
+          authorizationUrl: https://popp-service.ti-dienste.de/oauth2/authorize
+          tokenUrl: https://popp-service.ti-dienste.de/token
           scopes:
             read_vsd: allows practitioners to read VSD
