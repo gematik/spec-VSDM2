@@ -1,6 +1,6 @@
 <img align="right" width="200" height="37" src="./images/Gematik_Logo_Flag.png"/> <br/>
 
-# Specification VSDM 2 FHIR-Profiles and API
+# Specifikation VSDM 2.0 FHIR-Profiles und API
 
 This repo holds FHIR-Profiles, sample Resources and OpenAPI specification for the VSDM 2 interface.
 
