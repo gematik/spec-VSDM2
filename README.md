@@ -1,15 +1,10 @@
 <img align="right" width="200" height="37" src="./images/Gematik_Logo_Flag.png"/> <br/>
 
-# Specifikation VSDM 2.0 FHIR-Profiles und API
+# Spezifikation VSDM 2.0 FHIR-Profiles und API
 
-This repo holds FHIR-Profiles, sample Resources and OpenAPI specification for the VSDM 2 interface.
+Dieses Dokument enthält FHIR-Profile, Beispielressourcen und OpenAPI-Spezifikationen für die VSDM 2.0-Schnittstelle.
 
-- [Specification VSDM 2 FHIR-Profiles and API](#specification-vsdm-2-fhir-profiles-and-api)
-  - [What is VSDM 2](#what-is-vsdm-2)
-  - [FHIR Profiles VSDM 2](#fhir-profiles-vsdm-2)
-  - [API Documentation VSDM 2](#api-documentation-vsdm-2)
-- [License](#license)
-- [Contact](#contact)
+
 
 ## Was ist VSDM 2.0
 
