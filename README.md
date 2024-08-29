@@ -1,6 +1,6 @@
 <img align="right" width="200" height="37" src="./images/Gematik_Logo_Flag.png"/> <br/>
 
-# Spezifikation VSDM 2.0 FHIR-Profiles und API
+# Spezifikation VSDM 2.0 FHIR-Profile und API
 
 Dieses Dokument enthält FHIR-Profile, Beispielressourcen und OpenAPI-Spezifikationen für die VSDM 2.0-Schnittstelle.
 
@@ -41,15 +41,15 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
-## FHIR Profiles VSDM 2
+## FHIR Profile VSDM 2.0
 
 The first VSDM used a proprietary XML data format in a SOAP-service-chain. VSDM 2 migrates to the FHIR-standard that is used more and more in the German healthcare sector. The FHIR-profiles and sample resources will be published in the official [VSDM 2 simplifier project](https://simplifier.net/vsdm2).
 
-## API Documentation VSDM 2
+## API Dokumentation VSDM 2.0
 
-As stated above, the VSDM 2 will be reduced to the use of a small RESTful FHIR-API, that is documented here [vsdm2.yaml](./src/openapi/vsdm2.yaml).
+Wie oben erwähnt, wird das VSDM 2.0 auf die Verwendung einer RESTful FHIR-API reduziert, die hier dokumentiert ist [vsdm2.yaml](./src/openapi/vsdm2.yaml).
 
 
-# Contact
+# Kontakt
 
-Please refer to <https://www.gematik.de> or <OSPO@gematik.de>
+Gehen Sie zu <https://www.gematik.de> oder <OSPO@gematik.de>
