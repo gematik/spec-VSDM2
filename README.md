@@ -1,6 +1,8 @@
 <img align="right" width="200" height="37" src="./images/Gematik_Logo_Flag.png"/> <br/>
 
 # Spezifikation VSDM 2.0 FHIR-Profile und API
+
+## Einleitung
 Die gematik geht neue Wege und möchte auf diesem Weg die Nutzung der Schnittstellen rund um das VSDM 2.0 vorstellen. Die Beschreibung dieser API ergänzt die normativen Dokumente der gematik sowie die Festlegungen über die VSDM-Profile (inkl. Beispielen) des genutzten FHIR-Standards.
 
 Auf den folgenden Seiten stellt die gematik die Nutzung der Schnittstellen durch die Primärsysteme der Leistungserbringer vor.
