@@ -23,6 +23,14 @@ Die Versicherer stellen also eine einfache FHIR-REST-API bereit, mit der die Cli
 - **Sicherstellung der Aktualität:** Es soll sichergestellt werden, dass die im Primärsystem gespeicherten Daten stets aktuell sind.
 - **Datensicherheit:** Die Daten werden verschlüsselt und sicher über die Telematikinfrastruktur übertragen.
 
+## Implementierungsunterstützung
+Hier geht es zur Informationsseite zur Implementierungsunterstützung bezüglich FHIR und allgemeiner Hinweise  **-> Link einfügen**
+
+## Anwendungsfälle in VSDM 2.0
+In den nachfolgend verlinkten Abschnitten zeigen wir die Anwendungsfälle im VSDM 2.0 Kontext auf   **-> Link einfügen**
+
+
+
 ## Branch Modell
 In diesem Repository werden Branches verwendet um den Status der Weiterentwicklung und das Review von Änderungen abzubilden.
 Folgende Branches werden verwendet
