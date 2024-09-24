@@ -25,7 +25,7 @@ Die Versicherer stellen also eine einfache FHIR-REST-API bereit, mit der die Cli
 
 ## Implementierungsunterstützung
 Hier geht es zur Informationsseite zur Implementierungsunterstützung bezüglich FHIR und allgemeiner Hinweise  **-> Link einfügen**
-
+https://github.com/gematik/spec-VSDM2/blob/c24ef504f64abed10705c2b37daebbbabeb5aaf8/docs/vsdm_fhir_infos.md
 ## Anwendungsfälle in VSDM 2.0
 In den nachfolgend verlinkten Abschnitten zeigen wir die Anwendungsfälle im VSDM 2.0 Kontext auf   **-> Link einfügen**
 
