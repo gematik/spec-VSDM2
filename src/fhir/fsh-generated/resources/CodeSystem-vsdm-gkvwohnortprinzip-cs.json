@@ -1,0 +1,85 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "VSDMGKVWohnortprinzipCS",
+  "id": "vsdm-gkvwohnortprinzip-cs",
+  "title": "CodeSystem für GKV Wohnortprinzip",
+  "description": "Das Kennzeichen WOP ist gemäß § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemäß Artikel 2 § 2 Abs. 2 des Gesetzes zur Einführung des Wohnortprinzips bei Honorarvereinbarungen für Ärzte und Zahnärzte und zur Krankenversichertenkarte gemäß § 291 Abs. 2 Fünftes Sozialgesetzbuch (SGB V) erforderlich.",
+  "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMGKVWohnortprinzipCS",
+  "concept": [
+    {
+      "code": "0",
+      "display": "01 = Schleswig-Holstein"
+    },
+    {
+      "code": "1",
+      "display": "02 = Hamburg"
+    },
+    {
+      "code": "2",
+      "display": "03 = Bremen"
+    },
+    {
+      "code": "3",
+      "display": "17 = Niedersachsen"
+    },
+    {
+      "code": "4",
+      "display": "20 = Westfalen-Lippe"
+    },
+    {
+      "code": "5",
+      "display": "38 = Nordrhein"
+    },
+    {
+      "code": "6",
+      "display": "46 = Hessen"
+    },
+    {
+      "code": "8",
+      "display": "51 = Rheinland-Pfalz"
+    },
+    {
+      "code": "9",
+      "display": "52 = Baden-Württemberg"
+    },
+    {
+      "code": "10",
+      "display": "71 = Bayerns"
+    },
+    {
+      "code": "11",
+      "display": "72 = Berlin"
+    },
+    {
+      "code": "12",
+      "display": "73 = Saarland"
+    },
+    {
+      "code": "13",
+      "display": "78 = Mecklenburg-Vorpommern"
+    },
+    {
+      "code": "14",
+      "display": "83 = Brandenburg"
+    },
+    {
+      "code": "15",
+      "display": "88 = Sachsen-Anhalt"
+    },
+    {
+      "code": "16",
+      "display": "93 = Thüringen"
+    },
+    {
+      "code": "17",
+      "display": "98 = Sachsen"
+    }
+  ],
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "date": "2023-12-31",
+  "caseSensitive": true,
+  "count": 17
+}

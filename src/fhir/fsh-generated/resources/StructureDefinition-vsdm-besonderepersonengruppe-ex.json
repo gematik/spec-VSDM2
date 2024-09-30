@@ -1,8 +1,8 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "vsdm-festzuschusshoehe-ex",
-  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMFestzuschusshoeheEX",
-  "name": "VSDMFestzuschusshoeheEX",
+  "id": "vsdm-besonderepersonengruppe-ex",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBesonderePersonengruppeEX",
+  "name": "VSDMBesonderePersonengruppeEX",
   "status": "active",
   "experimental": false,
   "date": "2023-12-31",
@@ -31,7 +31,7 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Festzuschusshöhe gibt die Höhe des von der GKV gewährten Festzuschusses bei Versorgungen mit Zahnersatz an. Die Zuschusshöhe richtet sich nach der Anzahl an Jahren mit durchgehend durchgeführter Vorsorge oder Prophylaxe",
+        "short": "Gibt die Zugehörigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemäß Schlüsseltabelle",
         "definition": "Optional Extension Element - found in all resources.",
         "min": 0,
         "max": "*",
@@ -193,7 +193,7 @@
             ]
           }
         ],
-        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMFestzuschusshoeheEX",
+        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBesonderePersonengruppeEX",
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -234,7 +234,7 @@
         "isSummary": false,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMFestzuschusshoeheVS"
+          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMBesonderePersonengruppeVS"
         },
         "mapping": [
           {
@@ -577,7 +577,7 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Festzuschusshöhe gibt die Höhe des von der GKV gewährten Festzuschusses bei Versorgungen mit Zahnersatz an. Die Zuschusshöhe richtet sich nach der Anzahl an Jahren mit durchgehend durchgeführter Vorsorge oder Prophylaxe"
+        "short": "Gibt die Zugehörigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemäß Schlüsseltabelle"
       },
       {
         "id": "Extension.extension",
@@ -587,7 +587,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMFestzuschusshoeheEX"
+        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBesonderePersonengruppeEX"
       },
       {
         "id": "Extension.value[x]",
@@ -599,7 +599,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMFestzuschusshoeheVS"
+          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMBesonderePersonengruppeVS"
         }
       },
       {

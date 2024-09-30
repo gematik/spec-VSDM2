@@ -22,6 +22,9 @@ Id: vsdm-coverage
     $dmp-kennzeichen named dmpKennzeichen 0..1 and
     $ruhender-leistungsanspruch named ruhenderLeistungsanspruch 0..1 and
     $zuzahlungsstatus named zuzahlungsstatus 0..1
+
+
+
 * beneficiary only Reference(VSDMPatient)
 * beneficiary 1..1
 * beneficiary.reference 1..1

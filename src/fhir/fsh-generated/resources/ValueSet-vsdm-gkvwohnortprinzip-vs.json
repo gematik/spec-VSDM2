@@ -1,0 +1,19 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "VSDMGKVWohnortprinzipVS",
+  "id": "vsdm-gkvwohnortprinzip-vs",
+  "title": "ValueSet für VSDM GKV Wohnortprinzip",
+  "description": "Das Kennzeichen WOP ist gemäß § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemäß Artikel 2 § 2 Abs. 2 des Gesetzes zur Einführung des Wohnortprinzips bei Honorarvereinbarungen für Ärzte und Zahnärzte und zur Krankenversichertenkarte gemäß § 291 Abs. 2 Fünftes Sozialgesetzbuch (SGB V) erforderlich.",
+  "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMGKVWohnortprinzipVS",
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "date": "2023-12-31",
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMGKVWohnortprinzipCS"
+      }
+    ]
+  }
+}

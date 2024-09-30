@@ -88,20 +88,6 @@
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
           ]
         },
-        "identifier": [
-          {
-            "type": {
-              "coding": [
-                {
-                  "system": "http://fhir.de/CodeSystem/identifier-type-de-basis",
-                  "code": "GKV"
-                }
-              ]
-            },
-            "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "T024791905"
-          }
-        ],
         "name": [
           {
             "use": "official",
@@ -117,6 +103,12 @@
             "given": [
               "Ludger"
             ]
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "T024791905"
           }
         ],
         "address": [
