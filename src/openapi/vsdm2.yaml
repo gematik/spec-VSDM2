@@ -2,112 +2,322 @@ openapi: 3.1.0
 info:
   title: VSDM2
   description: RESTful Kostentraeger interface to request Versichertenstammdaten
-              Via this interface practitioners software clients (primary systems) can request data about patients to support a current treatment.
+    Via this interface practitioners software clients (primary systems) can request data about patients to support a current treatment.
+  contact:
+    name: gematik GmbH
+    url: 'http://www.gematik.de'
+  license:
+    name: Apache 2.0
+    url: "https://www.apache.org/licenses/LICENSE-2.0"
+
   version: 0.0.1
 
-    # Changes in 0.0.1
-    #  - initial version
+  # Changes in 0.0.1
+  #  - initial version
 
 externalDocs:
   description: FHIR Specification VSDM 2
   url: https://simplifier.net/vsdm2
 servers:
-- url: https://101575519.vsdm2.ti-dienste.de
-  description: TK Production server (PU)
-- url: https://109723913.vsdm2.ti-dienste.de
-  description: BKK VBU Production server (PU)
-- url: https://<iknummer>.vsdm2.ti-dienste.de
-  description: address schema vsdm backends
-
+  - url: https://101575519.vsdm2.ti-dienste.de
+    description: TK Production server (PU)
+  - url: https://109723913.vsdm2.ti-dienste.de
+    description: BKK VBU Production server (PU)
+  - url: https://<iknummer>.vsdm2.ti-dienste.de
+    description: address schema vsdm backends
+tags:
+  - name: Vsdm
+    description: Endpoint to retrieve VSDM Bundle (Versichertenstammdaten).
 paths:
-  /v1/metadata:
+  /vsdservice/v1/vsdm-bundle:
     get:
-      summary: This path returns the servers FHIR capability statement
-      description: This path returns the servers FHIR capability statement
-      operationId: getMetadata
-      responses:
-        200:
-          description: OK
-          content:
-            application/json:
-              schema:
-                  $ref: '#/components/schemas/CapabilityStatement'
-        401:
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-        403:
-          description: Forbidden
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-
-  /v1/:
-    get:
-      summary:  the root path returns a Vsdm2Bundle
-      description: the root path returns a Vsdm2Bundle with VSD about a specific patient that is addressed within a PoP-X-Token in the request header
+      tags:
+        - Vsdm
+      summary: Returns a Vsdm2Bundle for the specified patient.
+      description: Returns a Vsdm2Bundle with VSD about a specific patient that is addressed within a PoP-X-Token in the request header.
       operationId: getVsdm2Bundle
+      security:
+        - oAuthVsdm: [ read_vsd ]
       parameters:
-      - name: Authorization
-        in: header
-        description: the PoP-X-Token is used as AccessToken
-      - name: DPoP
-        in: header
-        description: the DPoP-Header holds the DPoP-JWT to demonstrate possesssion of local client key
+        - name: Authorization
+          in: header
+          description: the PoP-X-Token is used as AccessToken
+          schema:
+            type: string
+        - name: DPoP
+          in: header
+          description: the DPoP-Header holds the DPoP-JWT to demonstrate possession of local client key
+          schema:
+            type: string
       responses:
-        200:
+        '200':
           description: OK
           content:
             application/json:
               schema:
-                  $ref: '#/components/schemas/Vsdm2Bundle'
-        303:
-          description: see other
-          content:
-            header: Location
-        401:
-          description: Unauthorized
-          content:
-            application/json:
+                $ref: '#/components/schemas/GetVsdmBundleResponse'
+        '303':
+          description: See other. The response is available at a different address.
+          headers:
+            location:
               schema:
-                $ref: '#/components/schemas/Error'
-        403:
-          description: Forbidden
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
+                type: string
+              example: "https://<iknummer>.vsdm2.ti-dienste.de"
+        '401':
+          $ref: '#/components/responses/Error401Unauthorized'
+        '403':
+          $ref: '#/components/responses/Error403Forbidden'
+        '500':
+          $ref: '#/components/responses/Error500InternalError'
 
 components:
-
+  responses:
+    Error401Unauthorized:
+      description: Unauthorized.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorType'
+    Error403Forbidden:
+      description: Forbidden.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorType'
+    Error500InternalError:
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorType'
   schemas:
-
-    Error:
+    GetVsdmBundleResponse:
+      description: Response including the requested Vsdm2Bundle
       type: object
       properties:
-        message:
-          type: string
-          description: error message (optional)
-        errors:
-          maxItems: 50
-          minItems: 0
-          type: array
-          items:
-            $ref: '#/components/schemas/InnerError'
-
-    InnerError:
+        vsdmBundle:
+          $ref: '#/components/schemas/Vsdm2Bundle'
+    Vsdm2Bundle:
+      type: object
+      description: 'https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle'
+      example:
+        {
+          "resourceType": "Bundle",
+          "id": "9b6ac30d-246d-4eab-af83-544564792089",
+          "meta": {
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle"
+            ]
+          },
+          "type": "document",
+          "identifier": {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:9b6ac30d-246d-4eab-af83-544564792089"
+          },
+          "signature": {
+            "sigFormat": "application/pkcs7-mime",
+            "who": {
+              "identifier": {
+                "system": "http://fhir.de/sid/arge-ik/iknr",
+                "value": "12345678"
+              }
+            },
+            "type": [
+              {
+                "system": "urn:iso-astm:E1762-95:2013",
+                "code": "1.2.840.10065.1.12.1.7",
+                "display": "Consent Signature"
+              }
+            ],
+            "when": "2023-11-03T12:02:23.157+01:00",
+            "data": "dGhpcyBibG9iIGlzIHNuaXBwZWQ="
+          },
+          "timestamp": "2023-11-03T12:02:23.157+01:00",
+          "entry": [
+            {
+              "fullUrl": "https://gematik.de/fhir/Composition/c624cf47-e235-4624-af71-0a09dc9254dc",
+              "resource": {
+                "resourceType": "Composition",
+                "id": "c624cf47-e235-4624-af71-0a09dc9254dc",
+                "meta": {
+                  "profile": [
+                    "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMComposition"
+                  ]
+                },
+                "status": "final",
+                "author": [
+                  {
+                    "identifier": {
+                      "system": "http://fhir.de/sid/arge-ik/iknr",
+                      "value": "12345678"
+                    }
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "code": "not-applicable",
+                      "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason"
+                    }
+                  ]
+                },
+                "date": "2023-11-03T12:02:23.157+01:00",
+                "title": "VSDM 2 data",
+                "section": [
+                  {
+                    "entry": [
+                      {
+                        "reference": "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
+                      }
+                    ]
+                  },
+                  {
+                    "entry": [
+                      {
+                        "reference": "Coverage/2d4da53a-413a-48fe-b908-2e67b5761523"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "fullUrl": "https://gematik.de/fhir/Patient/437f2555-2396-4c64-a656-e9553161ca3c",
+              "resource": {
+                "resourceType": "Patient",
+                "id": "437f2555-2396-4c64-a656-e9553161ca3c",
+                "meta": {
+                  "profile": [
+                    "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
+                  ]
+                },
+                "name": [
+                  {
+                    "use": "official",
+                    "family": "Königstein",
+                    "_family": {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                          "valueString": "Königstein"
+                        }
+                      ]
+                    },
+                    "given": [
+                      "Ludger"
+                    ]
+                  }
+                ],
+                "identifier": [
+                  {
+                    "system": "http://fhir.de/sid/gkv/kvid-10",
+                    "value": "T024791905"
+                  }
+                ],
+                "address": [
+                  {
+                    "line": [
+                      "Blumenweg 14"
+                    ],
+                    "_line": [
+                      {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                            "valueString": "14"
+                          },
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                            "valueString": "Blumenweg"
+                          }
+                        ]
+                      }
+                    ],
+                    "type": "both",
+                    "city": "Esens",
+                    "postalCode": "26427",
+                    "country": "D"
+                  }
+                ],
+                "birthDate": "1935-06-22",
+                "telecom": [
+                  {
+                    "system": "url",
+                    "value": "matrix:@T024791905:aok-nord.de"
+                  }
+                ],
+                "photo": [
+                  {
+                    "contentType": "image/gif",
+                    "data": "R0lGODlhEwARAPcAAAAAAAAA/+9aAO+1AP/WAP/eAP/eCP/eEP/eGP/nAP/nCP/nEP/nIf/nKf/nUv/nWv/vAP/vCP/vEP/vGP/vIf/vKf/vMf/vOf/vWv/vY//va//vjP/3c//3lP/3nP//tf//vf///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEAAAEALAAAAAATABEAAAi+AAMIDDCgYMGBCBMSvMCQ4QCFCQcwDBGCA4cLDyEGECDxAoAQHjxwyKhQAMeGIUOSJJjRpIAGDS5wCDly4AALFlYOgHlBwwOSNydM0AmzwYGjBi8IHWoTgQYORg8QIGDAwAKhESI8HIDgwQaRDI1WXXAhK9MBBzZ8/XDxQoUFZC9IiCBh6wEHGz6IbNuwQoSpWxEgyLCXL8O/gAnylNlW6AUEBRIL7Og3KwQIiCXb9HsZQoIEUzUjNEiaNMKAAAA7"
+                  }
+                ]
+              }
+            },
+            {
+              "fullUrl": "https://gematik.de/fhir/Coverage/2d4da53a-413a-48fe-b908-2e67b5761523",
+              "resource": {
+                "resourceType": "Coverage",
+                "id": "2d4da53a-413a-48fe-b908-2e67b5761523",
+                "meta": {
+                  "profile": [
+                    "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+                  ]
+                },
+                "status": "active",
+                "payor": [
+                  {
+                    "identifier": {
+                      "system": "http://fhir.de/sid/arge-ik/iknr",
+                      "value": "12345678"
+                    },
+                    "display": "Test GKV Krankenkasse"
+                  }
+                ],
+                "extension": [
+                  {
+                    "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMFestzuschusshoeheEX",
+                    "valueCoding": {
+                      "code": "1",
+                      "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMFestzuschusshoeheCS",
+                      "display": "70 % / fünf Jahre durchgehend"
+                    }
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+                      "code": "GKV",
+                      "display": "gesetzliche Krankenversicherung"
+                    }
+                  ]
+                },
+                "period": {
+                  "start": "2022-04-01",
+                  "end": "2027-07-31"
+                },
+                "beneficiary": {
+                  "reference": "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
+                }
+              }
+            }
+          ]
+        }
+    ErrorType:
+      description: Error object with additional information about the occurred error
       type: object
       properties:
-        attributeName:
-          description: attribute name that caused an error
+        errorCode:
+          description: Error condition specifier
           type: string
-        attributeError:
-          description: error details
+          example: unauthorized, forbidden or internalError
+        errorDetail:
+          description: Additional details regarding the error condition (if applicable)
           type: string
-
+          example: User is not authorized, Request is forbidden or Server can not handle request for now
+      required:
+        - errorCode
   securitySchemes:
     oAuthVsdm:
       type: oauth2
