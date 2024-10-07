@@ -29,24 +29,39 @@ tags:
   - name: Vsdm
     description: Endpoint to retrieve VSDM Bundle (Versichertenstammdaten).
 paths:
-  /vsdservice/v1/vsdm-bundle:
+  /vsdservice/v1/vsdmbundle:
     get:
       tags:
         - Vsdm
       summary: Returns a Vsdm2Bundle for the specified patient.
-      description: Returns a Vsdm2Bundle with VSD about a specific patient that is addressed within a PoP-X-Token in the request header.
+      description: Returns a Vsdm2Bundle with VSD about a specific patient that is addressed within a token in the request header.
       operationId: getVsdm2Bundle
       security:
-        - oAuthVsdm: [ read_vsd ]
+        - oAuthVsdm: [ vsdservice ]
       parameters:
         - name: Authorization
           in: header
-          description: the PoP-X-Token is used as AccessToken
+          description: oauth2 Bearer AccessToken
+          schema:
+            type: string
+        - name: PoPP-Authorization
+          in: header
+          description: Bearer Token containing proof of patient presence (Versorgungskontextnachweis).
           schema:
             type: string
         - name: DPoP
           in: header
-          description: the DPoP-Header holds the DPoP-JWT to demonstrate possession of local client key
+          description: The DPoP-Header holds the DPoP-JWT to demonstrate possession of local client key
+          schema:
+            type: string
+        - name: If-None-Match
+          description: Header for conditional resource response
+          in: header
+          schema:
+            type: string
+        - name: Accept
+          in: header
+          description: Specifies the format of the FHIR response. Which could be application/fhir+json or application/fhir+xml.
           schema:
             type: string
       responses:
@@ -56,6 +71,22 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetVsdmBundleResponse'
+          headers:
+            ETag:
+              description: The version of the vsdm bundle
+              schema:
+                type: string
+              example: "9b6ac30d-246d-4eab-af83-544564792089"
+            VSDM-Pn:
+              $ref: '#/components/parameters/VSDM-Pn'
+            VSDM-Pn-Type:
+              $ref: '#/components/parameters/VSDM-Pn-Type'
+            VSDM-Pn-Encoding:
+              $ref: '#/components/parameters/VSDM-Pn-Encoding'
+            VSDM-Pn-Length:
+              $ref: '#/components/parameters/VSDM-Pn-Length'
+            VSDM-Pn-Disposition:
+              $ref: '#/components/parameters/VSDM-Pn-Disposition'
         '303':
           description: See other. The response is available at a different address.
           headers:
@@ -63,6 +94,24 @@ paths:
               schema:
                 type: string
               example: "https://<iknummer>.vsdm2.ti-dienste.de"
+        '304':
+          description: Bundle was found but not modified
+          headers:
+            ETag:
+              description: The version of the vsdm bundle
+              schema:
+                type: string
+              example: "9b6ac30d-246d-4eab-af83-544564792089"
+            VSDM-Pn:
+              $ref: '#/components/parameters/VSDM-Pn'
+            VSDM-Pn-Type:
+              $ref: '#/components/parameters/VSDM-Pn-Type'
+            VSDM-Pn-Encoding:
+              $ref: '#/components/parameters/VSDM-Pn-Encoding'
+            VSDM-Pn-Length:
+              $ref: '#/components/parameters/VSDM-Pn-Length'
+            VSDM-Pn-Disposition:
+              $ref: '#/components/parameters/VSDM-Pn-Disposition'
         '401':
           $ref: '#/components/responses/Error401Unauthorized'
         '403':
@@ -71,6 +120,42 @@ paths:
           $ref: '#/components/responses/Error500InternalError'
 
 components:
+  parameters:
+    VSDM-Pn:
+      name: VSDM-Pn
+      in: header
+      description: Base64URL kodierter Prüfungsnachweis
+      schema:
+        type: string
+      example: "QTEyMzQ1Njc4OTE2NzM1NTE2MjJVQTH18SAUJtWEH6RTbIPBFL4Tb8OdVvlemN0="
+    VSDM-Pn-Type:
+      name: VSDM-Pn-Type
+      in: header
+      description: Type of PN file
+      schema:
+        type: string
+      example: "application/xml"
+    VSDM-Pn-Encoding:
+      name: VSDM-Pn-Encoding
+      in: header
+      description: Encoding of PN file
+      schema:
+        type: string
+      example: "gzip"
+    VSDM-Pn-Length:
+      name: VSDM-Pn-Length
+      in: header
+      description: length of the uncompressed XML file
+      schema:
+        type: integer
+      example: 256
+    VSDM-Pn-Disposition:
+      name: VSDM-Pn-Disposition
+      in: header
+      description: Prüfungsnachweis as XML file. attachment; filename="pruefungsnachweis.xml"
+      schema:
+        type: string
+      example: "XML file containing Prüfungsnachweis"
   responses:
     Error401Unauthorized:
       description: Unauthorized.
@@ -324,7 +409,7 @@ components:
       description: This API uses OAuth 2, to gain access clients need to proof Versorgungskontext with a PoP-X token
       flows:
         authorizationCode:
-          authorizationUrl: https://popp-service.ti-dienste.de/oauth2/authorize
-          tokenUrl: https://popp-service.ti-dienste.de/token
+          authorizationUrl: https://101575519.vsdm2.ti-dienste.de/auth
+          tokenUrl: https://101575519.vsdm2.ti-dienste.de/token
           scopes:
-            read_vsd: allows practitioners to read VSD
+            vsdservice: allows practitioners to access VSD service API
