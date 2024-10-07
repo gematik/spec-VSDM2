@@ -10,17 +10,23 @@ Id: vsdm-dmp-kennzeichen-ex
 
 
 * extension contains
+
 	angabe 1..1 MS and
-    teilnahme 1..1 and
-	beginn 1..1 MS and
-	ende 0..1 and
-    dmpkennzeichen 1..
+    teilnahme 0..1 and
+	kennzeichen 0..1 and
+	beginn 0..1 MS and
+	ende 0..1
 
 * extension[angabe] ^definition = "Gibt an, ob die Kasse die DMP-Kennzeichnung in den VSD befüllt.:\r\ntrue = wird befüllt\r\nfalse = wird nicht befüllt"
 * extension[angabe].value[x] only boolean
 
 * extension[teilnahme] ^definition = "Gibt an, ob der Versicherte an einem DMP-Programm teilnimmt.:\r\ntrue = nimmt teil\r\nfalse = nimmt nicht teil"
 * extension[teilnahme].value[x] only boolean
+
+* extension[kennzeichen].value[x] only Coding
+* extension[kennzeichen].value[x] from VSDMDMPKennzeichenVS (required)
+* extension[kennzeichen].value[x].system 1..
+* extension[kennzeichen].value[x].code 1..
 
 * extension[beginn] ^short = "Datum Beginn DMP"
 * extension[beginn].value[x] only date
@@ -32,7 +38,3 @@ Id: vsdm-dmp-kennzeichen-ex
 
 
 
-* extension[dmpkennzeichen].value[x] only Coding
-* extension[dmpkennzeichen].value[x] from VSDMDMPKennzeichenVS (required)
-* extension[dmpkennzeichen].value[x].system 1..
-* extension[dmpkennzeichen].value[x].code 1..

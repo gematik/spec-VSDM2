@@ -76,8 +76,8 @@
     "fshName": "VSDMPatientSample",
     "fshType": "Instance",
     "fshFile": "profiles/VSDMPatient.fsh",
-    "startLine": 23,
-    "endLine": 49
+    "startLine": 31,
+    "endLine": 99
   },
   {
     "outputFile": "StructureDefinition-vsdm-besonderepersonengruppe-ex.json",
@@ -125,7 +125,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMDMPKennzeichen.fsh",
     "startLine": 1,
-    "endLine": 38
+    "endLine": 37
   },
   {
     "outputFile": "StructureDefinition-vsdm-festzuschusshoehe-ex.json",
@@ -173,7 +173,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 14
+    "endLine": 23
   },
   {
     "outputFile": "StructureDefinition-vsdm-ruhenderleistungsanspruch-ex.json",

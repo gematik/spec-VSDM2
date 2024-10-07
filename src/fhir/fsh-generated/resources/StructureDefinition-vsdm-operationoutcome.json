@@ -3,7 +3,7 @@
   "id": "vsdm-operationoutcome",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome",
   "name": "VSDMOperationOutcome",
-  "status": "active",
+  "status": "draft",
   "experimental": false,
   "date": "2023-12-31",
   "publisher": "gematik GmbH",

@@ -3,7 +3,7 @@
   "id": "vsdm-besonderepersonengruppe-ex",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBesonderePersonengruppeEX",
   "name": "VSDMBesonderePersonengruppeEX",
-  "status": "active",
+  "status": "draft",
   "experimental": false,
   "date": "2023-12-31",
   "publisher": "gematik GmbH",

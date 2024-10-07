@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "status": "active",
+  "status": "draft",
   "name": "VSDMBesonderePersonengruppeVS",
   "id": "vsdm-besonderepersonengruppe-vs",
   "title": "ValueSet für VSDM besonderePersonengruppe",

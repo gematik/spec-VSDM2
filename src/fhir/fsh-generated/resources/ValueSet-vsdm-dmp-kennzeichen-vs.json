@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "status": "active",
+  "status": "draft",
   "name": "VSDMDMPKennzeichenVS",
   "id": "vsdm-dmp-kennzeichen-vs",
   "title": "ValueSet für VSDM DMP Kennzeichen",

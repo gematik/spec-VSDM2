@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "status": "active",
+  "status": "draft",
   "content": "complete",
   "name": "VSDMErrorcodeCS",
   "id": "vsdm-errorcode-cs",

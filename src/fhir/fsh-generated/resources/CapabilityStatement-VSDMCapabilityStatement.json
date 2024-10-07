@@ -2,7 +2,7 @@
   "resourceType": "CapabilityStatement",
   "id": "VSDMCapabilityStatement",
   "url": "https://gematik.de/fhir/vsdm2/VSDMCapabilityStatement",
-  "status": "active",
+  "status": "draft",
   "experimental": false,
   "version": "1.0.0",
   "publisher": "gematik GmbH",

@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "status": "active",
+  "status": "draft",
   "name": "VSDMErrorcodeVS",
   "id": "vsdm-errorcode-vs",
   "title": "ValueSet for VSDM errors",

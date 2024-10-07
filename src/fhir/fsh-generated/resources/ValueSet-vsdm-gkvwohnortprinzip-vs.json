@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "status": "active",
+  "status": "draft",
   "name": "VSDMGKVWohnortprinzipVS",
   "id": "vsdm-gkvwohnortprinzip-vs",
   "title": "ValueSet für VSDM GKV Wohnortprinzip",
