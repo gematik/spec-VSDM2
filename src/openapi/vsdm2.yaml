@@ -1,8 +1,10 @@
 openapi: 3.1.0
 info:
   title: VSDM2
-  description: RESTful Kostentraeger interface to request Versichertenstammdaten
-    Via this interface practitioners software clients (primary systems) can request data about patients to support a current treatment.
+  description: RESTful "Versichertenstammdaten-Dienst" interface to request "Versichertenstammdaten". 
+    THIS INTERFACE SPECIFIES THE CONTRACT BETWEEN THE "PRIMAERSYSTEM" AND THE "HTTP-PROXY" (as part of the "Versichertenstammdatendienst"). 
+    The interface of the ressource server is part of the description elemts within this document.
+    Practitioners software clients "Primaersysteme" can request data about patients by using this interface to support a current treatment.
   contact:
     name: gematik GmbH
     url: 'http://www.gematik.de'
@@ -10,7 +12,7 @@ info:
     name: Apache 2.0
     url: "https://www.apache.org/licenses/LICENSE-2.0"
 
-  version: 0.0.1
+  version: 1.0.0
 
   # Changes in 0.0.1
   #  - initial version
@@ -24,34 +26,48 @@ servers:
   - url: https://109723913.vsdm2.ti-dienste.de
     description: BKK VBU Production server (PU)
   - url: https://<iknummer>.vsdm2.ti-dienste.de
-    description: address schema vsdm backends
+    description: address schema vsdm backends - productive environment
+  - url: https://<iknummer>.ref.vsdm2.ti-dienste.de
+    description: address schema vsdm backends - reference environment
+  - url: https://<iknummer>.tu.vsdm2.ti-dienste.de
+    description: address schema vsdm backends - test environment
+  - url: https://<iknummer>.dev.vsdm2.ti-dienste.de
+    description: address schema vsdm backends - development environment
 tags:
   - name: Vsdm
-    description: Endpoint to retrieve VSDM Bundle (Versichertenstammdaten).
+    description: Endpoint of the application "Versichertenstammdatenmanagement" (VSDM) to retrieve a VSDMBundle FHIR-Ressource (Versichertenstammdaten; VSD) of a specific patient.
+      VSDBundle contains the VSDMPatient and VSDMCoverage FHIR-Ressources.
 paths:
   /vsdservice/v1/vsdmbundle:
     get:
       tags:
         - Vsdm
-      summary: Returns a Vsdm2Bundle for the specified patient.
-      description: Returns a Vsdm2Bundle with VSD about a specific patient that is addressed within a token in the request header.
-      operationId: getVsdm2Bundle
+      summary: Returns a VsdmBundle for the specified patient.
+      description: Returns a VsdmBundle with VSD about a specific patient that is addressed within a token in the request header.
+      operationId: getVsdmBundle
       security:
         - oAuthVsdm: [ vsdservice ]
       parameters:
         - name: Authorization
           in: header
-          description: oauth2 Bearer AccessToken
+          description: OAuth2 Bearer AccessToken granting access to the VSDService-API. 
+            The Access-Token ist verified by the HTTP-Proxy component of the "Versichertenstammdatendienst".
           schema:
             type: string
         - name: PoPP-Authorization
           in: header
-          description: Bearer Token containing proof of patient presence (Versorgungskontextnachweis).
+          description: Bearer Token containing proof of patient presence (Versorgungskontextnachweis). 
+            This Token represents the proof about an actual encouter between patient and practitioner as ressource access condition.
+            The HTTP-Proxy verifies the Token and sends the Token-Payload within the custom header "X-ZTA-PoPP-Token-Content" to the ressource server.
+            The ressource server MUST check the value "patient.proofTime" of the Token-Payload against the server time. The value "patient.proofTime" must be within the actual quarter of the actual year as ressource access condition.
+            The Token contains also the "Krankenversichertennummer" (kvnr) as the identifier for the corresponding VSDMBundle instance.
           schema:
             type: string
         - name: DPoP
           in: header
-          description: The DPoP-Header holds the DPoP-JWT to demonstrate possession of local client key
+          description: The DPoP-Header holds the DPoP-JWT to demonstrate possession of local client key. 
+            The oauth2 AccessToken is bound to the client via DPoP. 
+            The DPoP is verified by the HTTP-Proxy component of the "Versichertenstammdatendienst".
           schema:
             type: string
         - name: If-None-Match
@@ -61,7 +77,7 @@ paths:
             type: string
         - name: Accept
           in: header
-          description: Specifies the format of the FHIR response. Which could be application/fhir+json or application/fhir+xml.
+          description: Specifies the format of the FHIR response requested by a client which could be application/fhir+json or application/fhir+xml.
           schema:
             type: string
       responses:
@@ -76,7 +92,7 @@ paths:
               description: The version of the vsdm bundle
               schema:
                 type: string
-              example: "9b6ac30d-246d-4eab-af83-544564792089"
+              example: "9b6ac30d246d4eabaf83544564792089"
             VSDM-Pn:
               $ref: '#/components/parameters/VSDM-Pn'
             VSDM-Pn-Type:
@@ -101,7 +117,7 @@ paths:
               description: The version of the vsdm bundle
               schema:
                 type: string
-              example: "9b6ac30d-246d-4eab-af83-544564792089"
+              example: "9b6ac30d246d4eabaf83544564792089"
             VSDM-Pn:
               $ref: '#/components/parameters/VSDM-Pn'
             VSDM-Pn-Type:
@@ -127,7 +143,7 @@ components:
       description: Base64URL kodierter Prüfungsnachweis
       schema:
         type: string
-      example: "QTEyMzQ1Njc4OTE2NzM1NTE2MjJVQTH18SAUJtWEH6RTbIPBFL4Tb8OdVvlemN0="
+      example: "QTEyMzQ1Njc4OTE2NzM1NTE2MjJVQTH18SAUJtWEH6RTbIPBFL4Tb8OdVvlemN0-"
     VSDM-Pn-Type:
       name: VSDM-Pn-Type
       in: header
@@ -155,7 +171,7 @@ components:
       description: Prüfungsnachweis as XML file. attachment; filename="pruefungsnachweis.xml"
       schema:
         type: string
-      example: "XML file containing Prüfungsnachweis"
+      example: "pruefungsnachweis.xml"
   responses:
     Error401Unauthorized:
       description: Unauthorized.
@@ -177,12 +193,12 @@ components:
             $ref: '#/components/schemas/ErrorType'
   schemas:
     GetVsdmBundleResponse:
-      description: Response including the requested Vsdm2Bundle
+      description: Response including the requested VsdmBundle
       type: object
       properties:
         vsdmBundle:
-          $ref: '#/components/schemas/Vsdm2Bundle'
-    Vsdm2Bundle:
+          $ref: '#/components/schemas/VsdmBundle'
+    VsdmBundle:
       type: object
       description: 'https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle'
       example:
@@ -412,4 +428,4 @@ components:
           authorizationUrl: https://101575519.vsdm2.ti-dienste.de/auth
           tokenUrl: https://101575519.vsdm2.ti-dienste.de/token
           scopes:
-            vsdservice: allows practitioners to access VSD service API
+            vsdservice: allows practitioners to access the VSDService API of the "Versichertenstammdatendienst"
