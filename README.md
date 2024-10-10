@@ -33,12 +33,17 @@ Hier geht es zur Informationsseite zur Implementierungsunterstützung bezüglich
 
 ## Anwendungsfälle in VSDM 2.0
 In den nachfolgend verlinkten Abschnitten zeigen wir die Anwendungsfälle im VSDM 2.0 Kontext auf  
-
+### Allgemein
 |Dokumentation<img width="430" height="1">| Zielgruppe<img width="70" height="1"> |
 |-----|------------|
-|[Fehlerbehandlung](docs/vsdm_statuscodes)|![][PVS] ![][AVS]|
+|[Fehlerbehandlung](docs/vsdm_statuscodes.md)|![][PVS] ![][AVS]|
 
-[VSDM Anwendungsfälle](docs/vsdm_anwendungsfaelle.md)
+### Anwendungsfälle Abruf VSD
+|Dokumentation<img width="430" height="1">| Zielgruppe<img width="70" height="1"> |
+|-----|------------|
+|[VSD über PS abrufen](docs/vsdm_anwendungsfaelle.md)|![][PVS] ![][AVS]|
+
+
 
 
 
