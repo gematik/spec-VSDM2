@@ -26,7 +26,7 @@ Folgende FHIR-Profile sind im VSDM 2.0 -Kontext relevant und werden von den vers
 
 ## VSDM FHIR-Beispiele
 
-## Konvertireung von FHIR XML und JSON
+## Konvertierung von FHIR XML und JSON
 
 ## Rwferenzen in Bundles und Parameters Objekten
 
