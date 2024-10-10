@@ -18,7 +18,7 @@ Standardablauf
 ### Variante UC VSD lesen bei vorliegendem PoPP-Token
 Voraussetzung: Der PoPP-Token ist gültig. Da der Versorgungskontext bereits vorliegt (quartalsmäßiger Abruf der VSD ist bereits erfolgt) kann der im PS gespeicherte und gültige PoPP-Token verwendet werden.
 Standardablauf -> gibt es auch hier einen weiteren Prüfungsnachweis?
-- Das PS prüft den Token auf Gültigkeit
+- Das PS prüft den Token auf zeitliche Gültigkeit (Prüfung, ob der Token im aktuellen Quartal erzeugt wurde)
 - Das PS ruft die Operation ReadVSD am Fachdienst VSDM mit den Parametern *irgendwas=true* und *irgendwas=true* auf.
 - Der Fachdienst VSDM prüft anhand eines Hashwertes, ob aktuellere Daten vorleigen
 
