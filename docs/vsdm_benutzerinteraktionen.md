@@ -2,6 +2,10 @@
 
 **Diese Seite enthält Hinweise und Empfehlungen zur Interaktion mit dem Nutzer des Clientsystems im VSDM 2.0 Kontext**
 
+Durch die in den Arztpraxen, Krankenhäusern oder Apotheken eingesetzten Clientsysteme soll vor allem die Interoperabilität, Benutzerfreundlichkeit und Sicherheit sichergestellt werden.
+Das Clientsystem sollte einfach und intuitiv zu bedienen sein, sodass Nutzer (Ärzte, Praxispersonal) in ihren täglichen Arbeitsabläufen unterstützt werden.
+
+
 
 | Aktion/Daten | Verhalten PS |
 | ----------- | ------------- |
