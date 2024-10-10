@@ -30,6 +30,8 @@ Hier geht es zur Informationsseite zur Implementierungsunterstützung bezüglich
 
 [VSDM FHIR Ressourcen](docs/vsdm_fhir_infos.md)
 
+[Benutzerinteraktionen](docs/vsdm_benutzerinteraktionen.md)
+
 
 ## Anwendungsfälle in VSDM 2.0
 In den nachfolgend verlinkten Abschnitten zeigen wir die Anwendungsfälle im VSDM 2.0 Kontext auf  
