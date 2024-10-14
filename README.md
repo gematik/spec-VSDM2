@@ -39,7 +39,7 @@ Hier geht es zur Informationsseite zur Implementierungsunterstützung bezüglich
 
 [Benutzerinteraktionen](docs/vsdm_benutzerinteraktionen.md)
 
-Support bei der Implementierung
+[Support bei der Implementierung](docs/vsdm_support.md]
 
 
 ## Anwendungsfälle in VSDM 2.0
