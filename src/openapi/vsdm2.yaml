@@ -29,7 +29,7 @@ servers:
     description: address schema vsdm backends - productive environment
   - url: https://<iknummer>.ref.vsdm2.ti-dienste.de
     description: address schema vsdm backends - reference environment
-  - url: https://<iknummer>.tu.vsdm2.ti-dienste.de
+  - url: https://<iknummer>.test.vsdm2.ti-dienste.de
     description: address schema vsdm backends - test environment
   - url: https://<iknummer>.dev.vsdm2.ti-dienste.de
     description: address schema vsdm backends - development environment
