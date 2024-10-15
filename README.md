@@ -24,26 +24,42 @@ Die Versicherer stellen also eine einfache FHIR-REST-API bereit, mit der die Cli
 - **Datensicherheit:** Die Daten werden verschlüsselt und sicher über die Telematikinfrastruktur übertragen.
 
 ## Anwendungsszenarien
-Hier finden Sie eine Informationsseite zu Anwendungsszenarien in den verschiedenen Sektoren
+In diesem Kapitel finden Sie eine Beschreibung der für VSDM 2.0 relevanten Sektoren des Gesundheitswesens
+[]
+
+## Anwendungsfälle in VSDM 2.0
+Im nachfolgend verlinkten Kapitel finden Sie die Übersicht der Anwendungsfälle im Kontext VSDM 2.0  
+[]
+
+## Abläufe im Primärsystem
+Im Rahmen der Anwendungsfälle finden im Primärsystem weitere Abläufe im Zusammenhang mit der Versorgung des Versicherten statt. Hier fonden Sie Informationen zu den Abläufen und Benutzerinteraktionen mit dem Primärsystem
+
+[Abläufe]
+[Benutzinteraktionen]
+
+
+## Allgemeine Implementierungshinweise
+[]
+
+## Informationsmodell VSD
+[]
+
+## Prüfungsnachweis
+[]
 
 ## Implementierungsunterstützung
 Hier geht es zur Informationsseite zur Implementierungsunterstützung bezüglich FHIR und allgemeiner Hinweise  
 
-## Anwendungsfälle in VSDM 2.0
-In den nachfolgend verlinkten Abschnitten zeigen wir die Anwendungsfälle im VSDM 2.0 Kontext auf  
+## Fehlerbehandlung
 
-### Allgemein
-|Dokumentation<img width="430" height="1">| Zielgruppe<img width="70" height="1"> |
-|-----|------------|
-|[Fehlerbehandlung](docs/vsdm_statuscodes.md)|![][PVS] ![][AVS]|
+## Support / User Help Desk
 
-### Anwendungsfälle Abruf VSD
-|Dokumentation<img width="430" height="1">| Zielgruppe<img width="70" height="1"> |
-|-----|------------|
-|[VSD über PS abrufen](docs/vsdm_anwendungsfaelle.md)|![][PVS] ![][AVS]|
+## Mitgeltende Dokumente und Informationen
+Hier finden Sie eine Übersicht zu den weiterführenden Dokumenten zur Implementierung
 
-
-
+Spezifikation VSDM 2.0: Link zu gemSpec_VSDM_2
+FHIR-Profile VSDM 2.0: Link zu Simplifier
+XML-Schemata VSDM 2.0: Link zu api-telematik
 
 
 ## Branch Modell
