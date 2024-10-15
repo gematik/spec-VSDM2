@@ -40,6 +40,7 @@ Konfigurationsparameter zum onlie Abruf VSD im PS
 
 
 
+
 **Herstellung des Versorgungskontextes**
 
 Versorgungskontext bedeutet, dass ein Zusammenhang zwischen einem berechtigten Versicherten und einer behandelnden oder versorgenden Leistungserbringerinstitution (LEI) hergestellt wird.
