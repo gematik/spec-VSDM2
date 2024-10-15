@@ -35,7 +35,7 @@ Hier geht es zur Informationsseite zur Implementierungsunterstützung bezüglich
 
 [VSDM FHIR Ressourcen](docs/vsdm_fhir_infos.md)
 
-[Allgemeine Implementierungshinweise](docs/vsdm_implementierungshiweise.md)
+[Allgemeine Implementierungshinweise](docs/vsdm_implementierungshinweise.md)
 
 [Benutzerinteraktionen](docs/vsdm_benutzerinteraktionen.md)
 
