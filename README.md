@@ -23,8 +23,8 @@ Die Versicherer stellen also eine einfache FHIR-REST-API bereit, mit der die Cli
 - **Sicherstellung der Aktualität:** Es soll sichergestellt werden, dass die im Primärsystem gespeicherten Daten stets aktuell sind.
 - **Datensicherheit:** Die Daten werden verschlüsselt und sicher über die Telematikinfrastruktur übertragen.
 
-## Prozess-Sicht
-Hier finden Sie eine Informationsseite zu Prozessen in den verschiedenen Sektoren
+## Anwendungsszenarien
+Hier finden Sie eine Informationsseite zu Anwendungsszenarien in den verschiedenen Sektoren
 
 [VSDM Prozesse in den Sektoren](docs/vsdm_prozesssicht.md)
 
