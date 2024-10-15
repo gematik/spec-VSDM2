@@ -29,8 +29,4 @@ Das PS speichert diese Informationen.
 
 
 
-**Prozess-Sichten**
 
-Niedergelassener Sektor
-
-Stationärer Sektor
