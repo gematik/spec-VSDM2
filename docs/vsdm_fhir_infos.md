@@ -18,8 +18,6 @@ Folgende FHIR-Profile sind im VSDM 2.0 -Kontext relevant und werden von den vers
 
 ## Testportal??
 
-## Allgemeine Implementierungshinweise
-
 ## Referenzierung von FHIR-Objekten un Bundles
 
 ## Tools und Hinweise zu FHIR
