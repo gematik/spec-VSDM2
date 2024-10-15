@@ -24,15 +24,16 @@ Die Versicherer stellen also eine einfache FHIR-REST-API bereit, mit der die Cli
 - **Datensicherheit:** Die Daten werden verschlüsselt und sicher über die Telematikinfrastruktur übertragen.
 
 ## Anwendungsszenarien
-In diesem Kapitel finden Sie eine Beschreibung der für VSDM 2.0 relevanten Sektoren des Gesundheitswesens
-[]
+In diesem Kapitel finden Sie eine Beschreibung der für VSDM 2.0 relevanten Sektoren des Gesundheitswesens.
+[Anwendungsszenarien](docs/vsdm_anwendungsszenarien.md)
 
 ## Anwendungsfälle in VSDM 2.0
-Im nachfolgend verlinkten Kapitel finden Sie die Übersicht der Anwendungsfälle im Kontext VSDM 2.0  
-[]
+Im nachfolgend verlinkten Kapitel finden Sie die Übersicht der Anwendungsfälle im Kontext VSDM 2.0.
+
+[Anwendungsfälle](docs/vsdm_anwendungsfaelle.md)
 
 ## Abläufe im Primärsystem
-Im Rahmen der Anwendungsfälle finden im Primärsystem weitere Abläufe im Zusammenhang mit der Versorgung des Versicherten statt. Hier fonden Sie Informationen zu den Abläufen und Benutzerinteraktionen mit dem Primärsystem
+Im Rahmen der Anwendungsfälle finden im Primärsystem weitere Abläufe im Zusammenhang mit der Versorgung des Versicherten statt. Hier fonden Sie Informationen zu den Abläufen und Benutzerinteraktionen mit dem Primärsystem.
 
 [Abläufe]
 [Benutzinteraktionen]
