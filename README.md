@@ -36,9 +36,9 @@ Im nachfolgend verlinkten Kapitel finden Sie die Übersicht der Anwendungsfälle
 ## Abläufe im Primärsystem
 Im Rahmen der Anwendungsfälle finden im Primärsystem weitere Abläufe im Zusammenhang mit der Versorgung des Versicherten statt. Hier fonden Sie Informationen zu den Abläufen und Benutzerinteraktionen mit dem Primärsystem.
 
-[Abläufe]
+[Abläufe](src/vsdm_ablaeufe.md)
 
-[Benutzinteraktionen]
+[Benutzinteraktionen](vsdm/benutzerinteraktionen.md)
 
 
 ## Allgemeine Implementierungshinweise
