@@ -26,24 +26,12 @@ Die Versicherer stellen also eine einfache FHIR-REST-API bereit, mit der die Cli
 ## Anwendungsszenarien
 Hier finden Sie eine Informationsseite zu Anwendungsszenarien in den verschiedenen Sektoren
 
-[VSDM Prozesse in den Sektoren](docs/vsdm_prozesssicht.md)
-
 ## Implementierungsunterstützung
 Hier geht es zur Informationsseite zur Implementierungsunterstützung bezüglich FHIR und allgemeiner Hinweise  
 
-
-
-[VSDM FHIR Ressourcen](docs/vsdm_fhir_infos.md)
-
-[Allgemeine Implementierungshinweise](docs/vsdm_implementierungshinweise.md)
-
-[Benutzerinteraktionen](docs/vsdm_benutzerinteraktionen.md)
-
-[Support bei der Implementierung](docs/vsdm_support.md)
-
-
 ## Anwendungsfälle in VSDM 2.0
 In den nachfolgend verlinkten Abschnitten zeigen wir die Anwendungsfälle im VSDM 2.0 Kontext auf  
+
 ### Allgemein
 |Dokumentation<img width="430" height="1">| Zielgruppe<img width="70" height="1"> |
 |-----|------------|
