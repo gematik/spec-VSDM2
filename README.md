@@ -56,6 +56,9 @@ Hier geht es zur Informationsseite zur Implementierungsunterstützung bezüglich
 ## Fehlerbehandlung
 
 ## Support / User Help Desk
+Hier geht es zur Informationsseite zum Support
+
+[Support / UHD](docs/vsdm_support.md)
 
 ## Mitgeltende Dokumente und Informationen
 Hier finden Sie eine Übersicht zu den weiterführenden Dokumenten zur Implementierung
