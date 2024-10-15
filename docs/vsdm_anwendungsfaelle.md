@@ -39,3 +39,15 @@ Standardablauf -> gibt es auch hier einen weiteren Prüfungsnachweis?
 
 # VSD von eGK lesen
 Dieser Anwendungsfall kommt dann zum tragen, wenn die VSD nicht online vom Fachdienst der Kasse abgerufen werden können. Die erhaltenen Daten von der eGK dienen dann zur Nutzung von bereits etablierten Ersatzverfahren ausserhalb des VSDM 2.0.
+
+
+
+### Allgemein
+|Dokumentation<img width="430" height="1">| Zielgruppe<img width="70" height="1"> |
+|-----|------------|
+|[Fehlerbehandlung](docs/vsdm_statuscodes.md)|![][PVS] ![][AVS]|
+
+### Anwendungsfälle Abruf VSD
+|Dokumentation<img width="430" height="1">| Zielgruppe<img width="70" height="1"> |
+|-----|------------|
+|[VSD über PS abrufen](docs/vsdm_anwendungsfaelle.md)|![][PVS] ![][AVS]|
