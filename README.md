@@ -25,6 +25,7 @@ Die Versicherer stellen also eine einfache FHIR-REST-API bereit, mit der die Cli
 
 ## Anwendungsszenarien
 In diesem Kapitel finden Sie eine Beschreibung der für VSDM 2.0 relevanten Sektoren des Gesundheitswesens.
+
 [Anwendungsszenarien](docs/vsdm_anwendungsszenarien.md)
 
 ## Anwendungsfälle in VSDM 2.0
@@ -36,6 +37,7 @@ Im nachfolgend verlinkten Kapitel finden Sie die Übersicht der Anwendungsfälle
 Im Rahmen der Anwendungsfälle finden im Primärsystem weitere Abläufe im Zusammenhang mit der Versorgung des Versicherten statt. Hier fonden Sie Informationen zu den Abläufen und Benutzerinteraktionen mit dem Primärsystem.
 
 [Abläufe]
+
 [Benutzinteraktionen]
 
 
