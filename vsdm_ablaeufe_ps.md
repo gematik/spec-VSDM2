@@ -18,6 +18,7 @@ Der Nutzer soll einen Hinweis erhalten, dass der Versicherte noch nicht im Patie
 
 **Patientenakte anzeigen**
 Existiert bereits eine Patientenakte soll das PS den Abruf der VSD automatisch starten wenn die Patientenakte im Rahmen eines Folgebesuchs geöffnet wird. Liegt im laufenden Quartal noch kein gültiger Prüfungsnachweis vor muss der Abruf der VSD erfolgen.
+Das PS soll dem Nutzer die Möglichkeit bieten, den Abruf der VSD manuell zu starten.
 
 Die Anzeige der zum Versicherten gehörigen Patientenakte kann auf unterschiedliche Arten erfolgen:
 
