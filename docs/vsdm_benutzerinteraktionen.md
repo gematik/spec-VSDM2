@@ -42,7 +42,6 @@ Der Nutzer erhält einen Hinweis wenn kein Leistungsanspruch aufgrund der Prüfu
 
 Der Nutzer erhält einen Hinweis wenn aufgrund eines ruhenden Leistungsanspruchs kein, oder nur ein eingeschränkter Leistungsanspruch besteht
 
-- Das PS soll dem Nutzer die Möglichkeit bieten, den Abruf der VSD manuell zu starten.
 
 ### Benutzerinteraktionen zum Prüfungsnachweis
 
