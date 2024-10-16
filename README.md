@@ -42,12 +42,14 @@ Im Rahmen der Anwendungsfälle finden im Primärsystem weitere Abläufe im Zusam
 
 
 ## Informationsmodell VSD
-Hier geht es zur Informationsseite zum neuen Informationsmodell für VSDM 2.0
+Hier geht es zur Informationsseite zum neuen Informationsmodell für VSDM 2.0.
 
 [Informationsmodell](docs/vsdm_informationsmodell.md)
 
 ## Prüfungsnachweis
-[] 
+Hier finden Sie Informationen zum Prüfungsnachweis für VSDM 2.0.
+
+[Prüfungsnachweis](docs/vsdm_pruefungsnachweis.md) 
 
 ## Fehlerbehandlung
 
@@ -56,12 +58,12 @@ Hier geht es zur Informationsseite zum neuen Informationsmodell für VSDM 2.0
 In VSDM 1.0 wurde ein proprietäres XML-Datenformat in einer SOAP-Servicekette verwendet. Mit VSDM 2.0 wird der VSD Datensatz in den FHIR-Standard migriert, der im deutschen Gesundheitswesen immer mehr zum Einsatz kommt. Die FHIR-Profile und Beispielressourcen werden im offiziellen [VSDM 2 simplifier project](https://simplifier.net/vsdm2) veröffentlicht.
 
 ## Support / User Help Desk
-Hier geht es zur Informationsseite zum Support
+Hier geht es zur Informationsseite zum Support.
 
 [Support / UHD](docs/vsdm_support.md)
 
 ## Mitgeltende Dokumente und Informationen
-Hier finden Sie eine Übersicht zu den weiterführenden Dokumenten zur Implementierung
+Hier finden Sie eine Übersicht zu den weiterführenden Dokumenten zur Implementierung.
 
 Spezifikation VSDM 2.0: Link zu gemSpec_VSDM_2
 FHIR-Profile VSDM 2.0: Link zu Simplifier
