@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="wiki.gematik.de" modified="2024-10-09T15:06:58.054Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" etag="DD78pRAfgADtx8qZezY4" version="24.6.4" type="atlas">
+<mxfile host="wiki.gematik.de" modified="2024-10-16T13:47:47.373Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" etag="tbYrrwzO2p4MLqhHNRNr" version="24.6.4" type="atlas">
   <diagram id="XZqBrHnGn3-9SLynYtlv" name="Seite-1">
     <mxGraphModel dx="1562" dy="904" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -251,8 +251,8 @@
         <mxCell id="PffGhIVuYgeO10GvfS6d-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="Ux8lGl-wnyfo4ktNm6vA-23" target="Ux8lGl-wnyfo4ktNm6vA-22" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Ux8lGl-wnyfo4ktNm6vA-23" value="Mapping-Regeln&lt;br&gt;gemäß FHIR-Profil&lt;br&gt;&amp;nbsp;VSDMPatient" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#000000;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.document;labelBackgroundColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1145" y="327.5" width="30" height="35" as="geometry" />
+        <mxCell id="Ux8lGl-wnyfo4ktNm6vA-23" value="Mapping-Regeln&amp;nbsp;&lt;br&gt;gemäß FHIR-Profile:&lt;br&gt;&amp;nbsp;VSDMPatient,&lt;div&gt;VSDMCoverage,&lt;/div&gt;&lt;div&gt;VSDMBundle&lt;/div&gt;" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#000000;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.document;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1145" y="300" width="30" height="35" as="geometry" />
         </mxCell>
         <mxCell id="Ux8lGl-wnyfo4ktNm6vA-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="Veu_fZ2Ik_sSsAxx7kRS-3" target="Ux8lGl-wnyfo4ktNm6vA-20" edge="1">
           <mxGeometry relative="1" as="geometry">
