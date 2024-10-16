@@ -43,7 +43,8 @@ Im Rahmen der Anwendungsfälle finden im Primärsystem weitere Abläufe im Zusam
 
 ## Informationsmodell VSD
 Hier geht es zur Informationsseite zum neuen Informationsmodell für VSDM 2.0
-[]
+
+[Informationsmodell](docs/vsdm_informationsmodell.md)
 
 ## Prüfungsnachweis
 [] 
