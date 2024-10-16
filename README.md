@@ -41,19 +41,18 @@ Im Rahmen der Anwendungsfälle finden im Primärsystem weitere Abläufe im Zusam
 [Benutzinteraktionen](vsdm/benutzerinteraktionen.md)
 
 
-## Allgemeine Implementierungshinweise
-[]
-
 ## Informationsmodell VSD
+Hier geht es zur Informationsseite zum neuen Informationsmodell für VSDM 2.0
 []
 
 ## Prüfungsnachweis
-[]
-
-## Implementierungsunterstützung
-Hier geht es zur Informationsseite zur Implementierungsunterstützung bezüglich FHIR und allgemeiner Hinweise  
+[] 
 
 ## Fehlerbehandlung
+
+## FHIR Profile VSDM 2.0
+
+In VSDM 1.0 wurde ein proprietäres XML-Datenformat in einer SOAP-Servicekette verwendet. Mit VSDM 2.0 wird der VSD Datensatz in den FHIR-Standard migriert, der im deutschen Gesundheitswesen immer mehr zum Einsatz kommt. Die FHIR-Profile und Beispielressourcen werden im offiziellen [VSDM 2 simplifier project](https://simplifier.net/vsdm2) veröffentlicht.
 
 ## Support / User Help Desk
 Hier geht es zur Informationsseite zum Support
@@ -66,6 +65,7 @@ Hier finden Sie eine Übersicht zu den weiterführenden Dokumenten zur Implement
 Spezifikation VSDM 2.0: Link zu gemSpec_VSDM_2
 FHIR-Profile VSDM 2.0: Link zu Simplifier
 XML-Schemata VSDM 2.0: Link zu api-telematik
+XML-Schema Prüfungsnachweis: Link zu api-telematik
 
 
 ## Branch Modell
@@ -87,9 +87,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
-## FHIR Profile VSDM 2.0
 
-In VSDM 1.0 wurde ein proprietäres XML-Datenformat in einer SOAP-Servicekette verwendet. Mit VSDM 2.0 wird der VSD Datensatz in den FHIR-Standard migriert, der im deutschen Gesundheitswesen immer mehr zum Einsatz kommt. Die FHIR-Profile und Beispielressourcen werden im offiziellen [VSDM 2 simplifier project](https://simplifier.net/vsdm2) veröffentlicht.
 
 ## API Dokumentation VSDM 2.0
 
