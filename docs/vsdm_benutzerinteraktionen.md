@@ -12,10 +12,6 @@ Nachfolgend werden Interaktionen des PS mit dem Nutzer aufgeführt die helfen k�
 
 Der Nutzer soll einen Hinweis durch das PS erhalten wenn der Abruf der VSD gestartet wird.
 
-**Fortschrittsanzeige**
-
-Das PS soll dem Nutzer den Fortschritt des online Abrufs der VSD visuell anzeigen.
-
 **Abruf VSD kann nicht durchgeführt werden**
 
 Der Nutzer soll einen Hinweis erhalten wenn der Abruf VSD aufgrund Nichterreichbarkeit des Fachdienstes nicht durchgeführt werden konnte.
@@ -43,17 +39,7 @@ Der Nutzer erhält einen Hinweis wenn kein Leistungsanspruch aufgrund der Prüfu
 Der Nutzer erhält einen Hinweis wenn aufgrund eines ruhenden Leistungsanspruchs kein, oder nur ein eingeschränkter Leistungsanspruch besteht
 
 
-### Benutzerinteraktionen zum Prüfungsnachweis
 
-**Prüfungsnachweis erhalten**
-
-Der Nutzer erhält einen Hinweis, dass der Prüfungsnachweis erfolgreich übertragen und im PS gespeichert wurde.
-
-**Prüfungsnachweis überschrieben**
-
-Der Nutzer erhält einen Hinweis, dass der für das gültige Quartal bestehende Prüfungsnachweis durch einen neuen gültigen Prüfungsnachweis überschrieben wurde.
-
-Dies ist der Fall, wenn im laufenden Quartal bereits ein Abruf VSD erfolgte und ein gültiger Prüfungsnachweis vorliegt. Bei einem erneuten Abruf VSD im laufenden Quartal wird immer ein neuer Prüfungsnachweis durch den Fachdienst an das PS geliefert. Der bereits bestehende Prüfungsnachweis wird in diesem Fall durch den aktuelleren ersetzt, so dass so dass nur ein gültiger Prüfungsnachweis im PS vorliegt.
 
 
 
