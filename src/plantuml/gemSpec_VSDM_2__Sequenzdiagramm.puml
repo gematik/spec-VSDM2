@@ -50,7 +50,7 @@ alt neuer Patient
 end
 LE -> PS: Patientenstamm aufrufen
 
-== Versorgungskontext herstellen (nur bei erstmalige Patientenversorgung im Quartal) ==
+== Versorgungskontext herstellen (nur bei erstmaliger Patientenversorgung im Quartal) ==
 'Versorgungskontext herstellen
 LE -> PS: PoPP initiieren
 activate PoPP
