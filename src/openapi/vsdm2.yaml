@@ -422,7 +422,7 @@ components:
   securitySchemes:
     oAuthVsdm:
       type: oauth2
-      description: This API uses OAuth 2, to gain access clients need to proof Versorgungskontext with a PoP-X token
+      description: This API uses OAuth 2, to gain access clients need an Access-Token and to proof "Versorgungskontext" with a PoPP-Token in addition
       flows:
         authorizationCode:
           authorizationUrl: https://101575519.vsdm2.ti-dienste.de/auth
