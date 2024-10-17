@@ -8,7 +8,44 @@ Bei einer erfolgreichen Durchführung des Abrufs VSD wird
 
 an das Primärsystem übermittelt.
 
-Das Primärsystem muss den Prüfungsnachweis zur Erstellung der Abrechnungsunterlagen speichern. Dieser Leitfaden zur Implementierung trifft keine Aussage darüber, ob jeder im laufenden Quartal erhaltene Prüfungsnachweis gespeichert werden muss oder eine Überschreibung des vorhandenen Prüfungsnachweises erfolgen soll. 
+Das Primärsystem muss den Prüfungsnachweis zur Erstellung der Abrechnungsunterlagen speichern. 
+
+Dieser Leitfaden zur Implementierung trifft keine Aussage darüber, ob jeder im laufenden Quartal erhaltene Prüfungsnachweis gespeichert werden muss oder eine Überschreibung des vorhandenen Prüfungsnachweises erfolgen soll. 
 
 Die Regelungen dazu werden im Anforderungskatalog KVDT (KBV_ITA_VGEX_Anforderungskatalog_KVDT) getroffen und müssen durch das Primärsystem entsprechend umgesetzt werden.
+
+Anmerkung: Ein im Rahmen der Herstellung des Versorgungskontextes übermittelter Prüfungsnachweis vom PoPP-Service kann nicht für die Abrechnungsunterlagen zur Einreichung an die KV verwendet werden.
+
+# Struktur des Prüfungsnachweises
+Der Fachdienst VSDM 2.0 muss den Prüfungsnachweis entsprechend dem Infomodell erzeugen und mit den in der nachfolgenden Tabelle aufgezählter Feldern befüllen.
+
+|  |  |
+| ----------------- | --------------------- | 
+| CDM_Version | CDMVersion |
+| Timestamp | Aktueller Zeitstempel UTC |
+| Ergebnis | ... |
+| ErrorCode | ... |
+| Prüfziffer | Vom Fachdienst VSDM 2.0 gesendete Prüfziffer |
+
+
+# Struktur der Prüfziffer
+
+| Nr | Feld | Format | Länge |
+| ---- | ---- |---- | ---- | 
+| 1 | 10-stelliger unveränderlicher Teil der KVNR | alphanummerisch | 10 |
+| 2 | aktueller Unix Timestamp (bspw. "1673551622") | alphanummerisch | 10 |
+| 3 | Ausstellender Dienst: 2 = Fachdienst VSDM 2.0 | alphanummerisch | 1 |
+| 4 | Kennung des Betreibers Fachdienste VSDM gemäß Liste der gematik | alphanummerisch | 1 |
+| 5 | Für den Betreiber des Fachdienstes spezifische Version des HMAC-Schlüssels | alphanummerisch | 1 |
+| 6 | Es wird ein HMAC nach A_23461-* über die konkatenierten Felder 1-5 mittels des betreiberspezifischen Schlüssel berechnet.  Dieser berechnete HMAC-Wert (256-Bit) wird auf 192 Bit (also 24 Byte) gekürzt (die ersten 24 Byte des HMAC-Wertes werden verwendet, die restlichen 8 Byte werden verworfen). Dieser gekürzte HMAC-Wert ist das 6-te Datenfeld. | binär | 24 |
+
+# Zeichenkodierung von Daten
+
+Das Primärsystem muss den vom Fachdienst gelieferten Prüfungsnachweis aus dem HTTP-Header VSDM-Pn extrahieren, BASE64URL dekodieren sowie mittels gzip dekomprimieren. Danach steht das XML-Element Prüfungsnachweis zur weiteren Verarbeitung im Primärsystem zur Verfügung.
+
+
+
+
+
+
 
