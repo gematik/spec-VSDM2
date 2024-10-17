@@ -92,7 +92,7 @@ paths:
               description: The version of the vsdm bundle
               schema:
                 type: string
-              example: "9b6ac30d246d4eabaf83544564792089"
+              example: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             VSDM-Pn:
               $ref: '#/components/parameters/VSDM-Pn'
             VSDM-Pn-Type:
@@ -117,7 +117,7 @@ paths:
               description: The version of the vsdm bundle
               schema:
                 type: string
-              example: "9b6ac30d246d4eabaf83544564792089"
+              example: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             VSDM-Pn:
               $ref: '#/components/parameters/VSDM-Pn'
             VSDM-Pn-Type:
