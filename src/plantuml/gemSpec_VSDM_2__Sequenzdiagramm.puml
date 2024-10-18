@@ -52,11 +52,8 @@ LE -> PS: Patientenstamm aufrufen
 
 == Versorgungskontext herstellen (nur bei erstmaliger Patientenversorgung im Quartal) ==
 'Versorgungskontext herstellen
-LE -> PS: PoPP initiieren
-activate PoPP
-ref over Ver, PoPP : Versorgungskontext mit eGK oder GesundheitsID herstellen (siehe gemSpec_PoPP_Dienst)
+ref over Ver, PoPP : Versorgungskontext mit eGK oder GesundheitsID herstellen (siehe gemSpec_PoPP_Service)
 PoPP -> PS : PoPP-Token mit \nKVNR, IK-Nummer, OID, Zeitstempel
-deactivate PoPP
 PS -> PS : PoPP-Token speichern \n(bspw. im Patientenstamm)
 PS -> PS : PoPP-Token dekodieren und KVNR, IK-Nummer \n(bspw. im Patientenstamm) speichern
 
@@ -67,11 +64,8 @@ ref over PS, PoPP : Dienstlokalisierung mit FQDN <ik-nummer>.vsdm2.ti-dienste.de
 ' VSDD Endpunkte Lokalisieren
 ref over PS, VSDD_Proxy : Endpunkt-Lokalisierung Fachdienst VSDM 2.0 (siehe gemSpec_Zero-Trust)
 'Authentifizierung und AUtorisierung am VSDM AuthZ-Server durchführen
-PS -> VSDD_AuthZ : get new access token
-activate VSDD_AuthZ
 ref over PS, VSDD_AuthZ : LEI-Authentifizierung (SMC-B) und LEI-Autorisierung (siehe gemSpec_Zero-Trust)
-VSDD_AuthZ -> PS : HTTP 200 OK (Refresh-Token, Access-Token)
-deactivate VSDD_AuthZ
+VSDD_AuthZ -> PS : HTTP 200 OK \n{Refresh-Token, Access-Token} mit scope : vsdservice
 
 PS -> VSDD_Proxy : GET /vsdservice/v1/vsdmbundle \nAuthorization: DPoP <access_token> \nDPoP: <dpop_proof_jwt> \nPoPP: Bearer <popp_token> \nIf-None-Match: "<etag_value>"
 activate VSDD_Proxy
@@ -131,23 +125,11 @@ deactivate LE
 
 == Fehlerbehandlung HTTP 401 Unauthorized (Access-Token ungültig) ==
 'Authentifizierung und AUtorisierung am VSDM AuthZ-Server durchführen
-PS -> VSDD_AuthZ : get new access token
-activate PS
-activate VSDD_AuthZ
 ref over PS, VSDD_AuthZ : LEI-Authentifizierung (SMC-B) und LEI-Autorisierung (siehe gemSpec_Zero-Trust)
-VSDD_AuthZ -> PS : HTTP 200 OK \n(Refresh-Token mit scope : vsdservice, Access-Token  mit scope : vsdservice)
-deactivate PS
-deactivate VSDD_AuthZ
+VSDD_AuthZ -> PS : HTTP 200 OK \n{Refresh-Token, Access-Token} mit scope : vsdservice
 
 == Fehlerbehandlung HTTP 403 Forbidden (Versorgungskontext bzw. PoPP-Token ungültig) ==
-LE -> PS: PoPP initiieren
-activate LE
-activate PS
-activate PoPP
-ref over Ver, LE, PS, VSDD_AuthZ, VSDD_Proxy, VSDD_Server, PoPP : Versorgungskontext mit eGK oder GesundheitsID herstellen (siehe gemSpec_PoPP_Dienst)
+ref over Ver, LE, PS, VSDD_AuthZ, VSDD_Proxy, VSDD_Server, PoPP : Versorgungskontext mit eGK oder GesundheitsID herstellen (siehe gemSpec_PoPP_Service)
 PoPP -> PS : PoPP-Token mit\nKVNR, IK-Nummer, OID, Zeitstempel
-deactivate LE
-deactivate PS
-deactivate PoPP
 
 @enduml
