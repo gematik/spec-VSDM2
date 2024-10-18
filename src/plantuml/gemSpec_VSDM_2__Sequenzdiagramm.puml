@@ -73,7 +73,7 @@ ref over PS, VSDD_AuthZ : LEI-Authentifizierung (SMC-B) und LEI-Autorisierung (s
 VSDD_AuthZ -> PS : HTTP 200 OK (Refresh-Token, Access-Token)
 deactivate VSDD_AuthZ
 
-PS -> VSDD_Proxy : GET /vsdservice/v1/vsdmbundle \nHTTP-Header: Access-Token, PoPP-Token, \nIf-None-Match: "<etag_value>"
+PS -> VSDD_Proxy : GET /vsdservice/v1/vsdmbundle \nAuthorization: DPoP <access_token> \nDPoP: <dpop_proof_jwt> \nPoPP: Bearer <popp_token> \nIf-None-Match: "<etag_value>"
 activate VSDD_Proxy
 
 VSDD_Proxy -> VSDD_Proxy : Access-Token prüfen
@@ -93,7 +93,7 @@ alt Request not valid
 	VSDD_Proxy -> PS : HTTP 400 Bad Request
 end
 
-VSDD_Proxy -> VSDD_Server : GET /vsdservice/v1/vsdmbundle \nHTTP-Header: X-ZTA-User-Info, \nX-ZTA-PoPP-Token-Content, \nX-ZTA-Client-Data, \nIf-None-Match: "<etag_value>"
+VSDD_Proxy -> VSDD_Server : GET /vsdservice/v1/vsdmbundle \nX-ZTA-User-Info <user_info>, \nX-ZTA-PoPP-Token-Content <content>, \nX-ZTA-Client-Data <client data>, \nIf-None-Match: "<etag_value>"
 activate VSDD_Server
 
 VSDD_Server -> VSDD_Server : X-ZTA Header prüfen
