@@ -49,6 +49,7 @@ alt neuer Patient
 	PS -> PS: initialen Patientenstamm generieren 
 end
 LE -> PS: Patientenstamm aufrufen
+deactivate LE
 
 == Versorgungskontext herstellen (nur bei erstmaliger Patientenversorgung im Quartal) ==
 'Versorgungskontext herstellen
