@@ -67,7 +67,7 @@ ref over PS, PoPP : Dienstlokalisierung mit FQDN <ik-nummer>.vsdm2.ti-dienste.de
 ' VSDD Endpunkte Lokalisieren
 ref over PS, VSDD_Proxy : Endpunkt-Lokalisierung Fachdienst VSDM 2.0 (siehe gemSpec_Zero-Trust)
 'Authentifizierung und AUtorisierung am VSDM AuthZ-Server durchführen
-PS -> VSDD_AuthZ : GET /auth (optionaler scope : vsdservice)
+PS -> VSDD_AuthZ : get new access token
 activate VSDD_AuthZ
 ref over PS, VSDD_AuthZ : LEI-Authentifizierung (SMC-B) und LEI-Autorisierung (siehe gemSpec_Zero-Trust)
 VSDD_AuthZ -> PS : HTTP 200 OK (Refresh-Token, Access-Token)
@@ -131,7 +131,7 @@ deactivate LE
 
 == Fehlerbehandlung HTTP 401 Unauthorized (Access-Token ungültig) ==
 'Authentifizierung und AUtorisierung am VSDM AuthZ-Server durchführen
-PS -> VSDD_AuthZ : GET /auth_endpoint (optionaler scope : vsdservice)
+PS -> VSDD_AuthZ : get new access token
 activate PS
 activate VSDD_AuthZ
 ref over PS, VSDD_AuthZ : LEI-Authentifizierung (SMC-B) und LEI-Autorisierung (siehe gemSpec_Zero-Trust)
@@ -140,11 +140,13 @@ deactivate PS
 deactivate VSDD_AuthZ
 
 == Fehlerbehandlung HTTP 403 Forbidden (Versorgungskontext bzw. PoPP-Token ungültig) ==
-PS -> PoPP : GET /popp_token
+LE -> PS: PoPP initiieren
+activate LE
 activate PS
 activate PoPP
 ref over Ver, LE, PS, VSDD_AuthZ, VSDD_Proxy, VSDD_Server, PoPP : Versorgungskontext mit eGK oder GesundheitsID herstellen (siehe gemSpec_PoPP_Dienst)
 PoPP -> PS : PoPP-Token mit\nKVNR, IK-Nummer, OID, Zeitstempel
+deactivate LE
 deactivate PS
 deactivate PoPP
 
