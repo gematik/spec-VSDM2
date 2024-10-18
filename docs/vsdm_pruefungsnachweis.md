@@ -27,6 +27,16 @@ Der Fachdienst VSDM 2.0 muss den Prüfungsnachweis entsprechend dem Infomodell e
 | ErrorCode | ... |
 | Prüfziffer | Vom Fachdienst VSDM 2.0 gesendete Prüfziffer |
 
+Zur Erstellung eines Abrechnungsdatensatzes überträgt die Abrechnungssoftware die Inhalte der im Prüfungsnachweis enthaltenen Elemente gemäß Anforderungskatalog KVDT (KBV_ITA_VGEX_Anforderungskatalog_KVDT):
+- Timestamp
+- Ergebnis
+- ErrorCode
+- Prüfziffer (base64-codiert ohne Zeilenumbrüche)
+
+Das Element **Ergebnis** liefert keinen Hinweis mehr über das Ergebnis einer Aktualisierung, da die VSD nicht mehr auf die eGK geschrieben werden, sondern direkt an das PS gesendet werden. Daher kann dieses Element nur einen Wert enthalten der aussagt, dass der Abruf VSD erfolgt ist.
+
+Das Element **ErrorCode** kann in VSDM 2.0 keinen validen Error-Code enthalten, da in einem Fehlerfall (z.B. Nichterreichbarkeit) der Fachdienst keine VSD und den Prüfungsnachweis liefert. Hierfür wird ein Wert als Platzhalter definiert.
+
 
 # Struktur der Prüfziffer
 
@@ -38,6 +48,8 @@ Der Fachdienst VSDM 2.0 muss den Prüfungsnachweis entsprechend dem Infomodell e
 | 4 | Kennung des Betreibers Fachdienste VSDM gemäß Liste der gematik | alphanummerisch | 1 |
 | 5 | Für den Betreiber des Fachdienstes spezifische Version des HMAC-Schlüssels | alphanummerisch | 1 |
 | 6 | Es wird ein HMAC nach A_23461-* über die konkatenierten Felder 1-5 mittels des betreiberspezifischen Schlüssel berechnet.  Dieser berechnete HMAC-Wert (256-Bit) wird auf 192 Bit (also 24 Byte) gekürzt (die ersten 24 Byte des HMAC-Wertes werden verwendet, die restlichen 8 Byte werden verworfen). Dieser gekürzte HMAC-Wert ist das 6-te Datenfeld. | binär | 24 |
+
+
 
 # Zeichenkodierung von Daten
 
