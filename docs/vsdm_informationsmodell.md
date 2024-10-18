@@ -6,15 +6,18 @@ Mit der Einführung von VSDM 2.0 gibt es Änderungen Informationsmodell im Vergl
 
 ### MXID des Versicherten
 
-**Beispiel-Code einer MXID**
+Die MXID (Maschinelle eXterne Identifikationsnummer) ist eine eindeutige Identifikationsnummer für Versicherte im deutschen Gesundheitswesen. Sie wird verwendet, um Versicherte eindeutig zu identifizieren, vor allem in elektronischen Prozessen und beim Datenaustausch zwischen Krankenkassen, Leistungserbringern und weiteren Beteiligten.
 
-|        |
-| ------ |
-|Instance: ContactPointAOKMXID |
-| InstanceOf: VSDMContactPointTIMessenger |
-| Usage: #inline |
-| system = #url |
-| value = "matrix:@T024791905:aok-nord.de" |
+Die MXID wird folgendermaßen gebildet:
+
+- Anfangsbuchstabe der Krankenkasse: Der erste Buchstabe der Krankenkasse (z. B. „A“ für AOK, „T“ für Techniker Krankenkasse usw.).
+
+- Versichertennummer: Die eigentliche Versichertennummer des Patienten bei der Krankenkasse. Diese Nummer besteht aus einer Kombination aus Buchstaben und Zahlen und ist in der Regel 10-stellig.
+
+- Prüfziffer: Eine zusätzliche Prüfziffer, die an die Versichertennummer angehängt wird. Diese wird auf Basis eines algorithmischen Verfahrens berechnet, um Eingabefehler zu verhindern.
+
+**Beispiel-Code einer MXID**
+.....
 
 
 
