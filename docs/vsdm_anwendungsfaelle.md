@@ -4,29 +4,31 @@ Der Anwendungsfall ermöglicht dem Leistungserbringer,
 - die jeweils zum Besuch aktuellen VSD und
 - den Prüfungsnachweis für die Abrechnung zu erhalten
 
-Einfügen Sequenzdiagramm Online-Abruf VSD aus Spec
+Um diesen Anwendungsfall ausführen zu können, muss sich das Primärsystem der Leistungserbringerinstitution (LEI) am PoPP-Service unter Verwendung des Zero Trust Access registrieren. Nach der erfolgreichen Registrierung und Anmeldung kann der PoPP-Token erzeugt und abgerufen werden. Sind diese Vorraussetzungen erfüllt, kann der Versorgungskontext mittels Popp-Token attestiert werden. Für die Herstellung des Versorungskontextes kann der Versicherte sowohl die eGK als auch die GesundheitsID nutzen. Die Herstellung des Versorgungskontektes ist nur beim ersten Besuch des Versicherten im laufenden Quartal notwendig. 
 
-Beim erstmaligen Besuch des Versicherten im Quartal stellt das Clientsystem den Nachweis des Versorgungskontextes durch Abruf des PoPP-Tokens her. Der Token und die daraus extrahierte KVNR und IK.Nummer wird gespeichert, z.B. im Patientenstamm.
+## Standardablauf Abruf VSD
 
-Das PS ruft die Operation ReadVSD am Fachdienst VSDM mit den Parametern *irgendwas=true* und *irgendwas=true* auf.
+**Eingangsbedingung:**
+- Abruf der VSD erfolgt erstmalig im laufenden Quartal
 
-Der Fachdienst VSDM übermittelt die VSD an das PS
+**Vorraussetzungen:**
+- PoPP-Token liegt im PS vor
+- KVNR und IK-Nummer sind im PS gespeichert (z.B. im Patientenstammblatt)
 
-Der Fachdienst erstellt den Prüfungsnachweis und übermittelt ihn an das PS
+| Aktivität | Komponente | Beschreibung |
+| :-------- | :----------- | :---------- |
+| Lokalisierung FD VSDM 2.0 | PS | Zur Lokalisierung des Fachdienstes VSDM 2.0 (der die VSD des Versicherten verwaltet) wird eine Service Discovery auf Basis der IK der Krankenkasse durchgeführt |
+| Übertragung des Versorgungskontextnachweises | PS | Zur Anfrage an den zuständigen Fachdienst wird der gültige Versorgungskontextnachweis in Form eines PoPP-Tokens üertragen |
+| Access-Token prüfen | FD | Der HTTP-Proxy des FD prüft auf gültigen PoPP-Token und leitet die Anfrage an den FD weiter.   |
+| VSD übermitteln | FD | Der FD übermittelt die VSD als FHIR-Bundle an das PS |
+| PN übermitteln | FD | Der FD übermittelt den PN als XML-Datei an das PS |
+| VSD speichern | PS | Die übermittelten VSD werden gespeichert |
+| PN speichern | PS | Der übermittelte PN wird für das laufende Quartal gespeichert|
 
-Das PS speichert die VSD und den Prüfungsnachweis
 
-| URI         | https: |
-| ----------- | ------ |
-| Method      |  |
-| Requester   | AVS |
-| Responder   | Fachdienst VSDM 2.0 |
-| HTTP Header |  |
-| Payload     |  |
 
-Response
 
-Hier kommt die Response rein
+
 
 
 ### Variante UC VSD lesen bei vorliegendem PoPP-Token
