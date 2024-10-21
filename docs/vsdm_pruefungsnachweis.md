@@ -23,7 +23,7 @@ Der Fachdienst VSDM 2.0 muss den Prüfungsnachweis entsprechend dem Infomodell e
 | ----------------- | --------------------- | 
 | CDM_Version | CDMVersion |
 | Timestamp | Aktueller Zeitstempel UTC |
-| Ergebnis | ... |
+| Ergebnis | Ergebnis Abruf VSD |
 | ErrorCode | ... |
 | Prüfziffer | Vom Fachdienst VSDM 2.0 gesendete Prüfziffer |
 
