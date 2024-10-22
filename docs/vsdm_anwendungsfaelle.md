@@ -4,14 +4,31 @@ Der Anwendungsfall ermöglicht dem Leistungserbringer,
 - die jeweils zum Besuch aktuellen VSD und
 - den Prüfungsnachweis für die Abrechnung zu erhalten
 
-Um diesen Anwendungsfall ausführen zu können, muss sich das Primärsystem der Leistungserbringerinstitution (LEI) am PoPP-Service unter Verwendung des Zero Trust Access registrieren. Nach der erfolgreichen Registrierung und Anmeldung kann der PoPP-Token erzeugt und abgerufen werden. Sind diese Vorraussetzungen erfüllt, kann der Versorgungskontext mittels Popp-Token attestiert werden. Für die Herstellung des Versorungskontextes kann der Versicherte sowohl die eGK als auch die GesundheitsID nutzen. Die Herstellung des Versorgungskontektes ist nur beim ersten Besuch des Versicherten im laufenden Quartal notwendig. 
+Um diesen Anwendungsfall ausführen zu können, muss sich das Primärsystem der Leistungserbringerinstitution (LEI) am PoPP-Service unter Verwendung des Zero Trust Access registrieren. Nach der erfolgreichen Registrierung und Anmeldung kann der PoPP-Token erzeugt und abgerufen werden. Sind diese Vorraussetzungen erfüllt, kann der Versorgungskontext mittels Popp-Token attestiert werden. Für die Herstellung des Versorungskontextes kann der Versicherte sowohl die eGK als auch die GesundheitsID nutzen. Die Herstellung des Versorgungskontextes ist nur beim ersten Besuch des Versicherten im laufenden Quartal notwendig. 
 
-## Standardablauf Abruf VSD
+**Übersicht**
+
+Die nachfolgend aufgeführte Tabelle stellt die möglichen Varianten des Anwendungsfalls Abruf VSD dar.
+
+| Variante | Art des Besuchs | Versicherter | VSD |
+| :-- | :---------- | :---------- | :---------- |
+| 1 | 1. x im Quartal | bekannter Versicherter | ohne Aktualisierung |
+| 2 | 1. x im Quartal | bekannter Versicherter | mit Aktualisierung |
+| 3 | 1. x im Quartal | unbekannter Versicherter | ohne Aktualisierung |
+| 4 | Folgebesuch | bekannter Versicherter | ohne Aktualisierung |
+| 5 | Folgebesuch | bekannter Versicherter | mit Aktualisierung |
+
+
+
+## Standardablauf Abruf VSD inkl. Herstellung Versorgungskontext
 
 **Eingangsbedingung:**
 - Abruf der VSD erfolgt erstmalig im laufenden Quartal
+- Versicherter authentisiert sich mit eGK oder GesundheitsID
+- LEI ist am PoPP-Service registriert und angemeldet 
 
 **Vorraussetzungen:**
+- Versorgungskontext ist in Form einen vorleigenden PoPP-Tokens attestiert
 - PoPP-Token liegt im PS vor
 - KVNR und IK-Nummer sind im PS gespeichert (z.B. im Patientenstammblatt)
 
@@ -25,14 +42,26 @@ Um diesen Anwendungsfall ausführen zu können, muss sich das Primärsystem der 
 | VSD speichern | PS | Die übermittelten VSD werden gespeichert |
 | PN speichern | PS | Der übermittelte PN wird für das laufende Quartal gespeichert|
 
+Ende des UC unterscheidet sich durch bekannten oder unbekannten Versicherten: anlegen eines Patientenstammblatts neu
 
 
 
+### Variante Abruf VSD bei bereits vorliegendem Versorgungskontext (PoPP-Token liegt im PS vor)
+
+**Einhgangsbedingung:** 
+- Abruf der VSD erfolgt im Rahmen eines Folgebesuchs des Versicherten
+
+**Voraussetzung:**
+- PoPP-Token liegt im PS vor
+- KVNR und IK-Nummer sind im PS gespeichert (z.B. im Patientenstammblatt)
+
+### Variante Abruf VSD mit Aktualisierung
+
+ggf. in Standardablauf integrieren
 
 
 
-### Variante UC VSD lesen bei vorliegendem PoPP-Token
-Voraussetzung: Der PoPP-Token ist gültig. Da der Versorgungskontext bereits vorliegt (quartalsmäßiger Abruf der VSD ist bereits erfolgt) kann der im PS gespeicherte und gültige PoPP-Token verwendet werden.
+Der PoPP-Token ist gültig. Da der Versorgungskontext bereits vorliegt (quartalsmäßiger Abruf der VSD ist bereits erfolgt) kann der im PS gespeicherte und gültige PoPP-Token verwendet werden.
 Standardablauf -> gibt es auch hier einen weiteren Prüfungsnachweis?
 - Das PS prüft den Token auf zeitliche Gültigkeit (Prüfung, ob der Token im aktuellen Quartal erzeugt wurde)
 - Das PS ruft die Operation ReadVSD am Fachdienst VSDM mit den Parametern *irgendwas=true* und *irgendwas=true* auf.
