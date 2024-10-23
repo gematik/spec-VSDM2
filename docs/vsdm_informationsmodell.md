@@ -25,11 +25,11 @@ Die MXID wird folgendermaßen gebildet:
 
 Zu folgenden Angaben zum Versicherungsverhältnis gibt es in VSDM 2.0 Anpassungen:
 
-**Selektivverträge**
+**- Selektivverträge**
 
 Die Angabe der Selektivverträge entfällt und wird durch die Angabe der Wahltarife ersetzt.
 
-**Wahltarif**
+**- Wahltarif**
 
 Wahltarif ersetzt die Angabe der Seltivverträge und bildet ein Kennzeichen für die Rechtsgrundlage des jeweiligen Wahltarifs ab. Die Angabe ist optional.
 
@@ -43,7 +43,7 @@ Anmerkung:
 
 §140a SGB V = besondere Versorgung
 
-**DMP-Kennzeichnung**
+**- DMP-Kennzeichnung**
 
 Die Angabe zur Teilnahme des Versicherten an DMP-Programmen wird erweitert.
 
