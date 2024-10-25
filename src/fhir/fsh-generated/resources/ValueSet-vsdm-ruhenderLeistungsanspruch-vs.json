@@ -1,0 +1,19 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "VSDMRuhenderLeistungsanspruchVS",
+  "id": "vsdm-ruhenderLeistungsanspruch-vs",
+  "title": "ValueSet für Ruhenden Leistungsanspruch",
+  "description": "Gibt an, on für den Versicherten ein ruhender Leistungsanspruch nach §16 SGB V besteht",
+  "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMRuhenderLeistungsanspruchVS",
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "date": "2023-12-31",
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMRuhenderLeistungsanspruchCS"
+      }
+    ]
+  }
+}

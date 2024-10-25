@@ -7,10 +7,9 @@ Description: "Gibt ein Kennzeichen für die Rechtsgrundlage des jeweiligen Wahlt
 * ^caseSensitive = true
 * ^content = #complete
 
-// Angaben gemäß Schlüsseltabelle
-
-* #0 "1 = § 73b SGB V"
-* #1 "2 = § 140a SGB V"
-* #2 "3 = Sonstige Verträge"
+// Angabe nach fachlichem Informationsmodell GKV-SV
+* #1 "§73b SGB V"
+* #2 "§140a SGB V"
+* #3 "Sonstige Verträge"
 
 

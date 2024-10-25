@@ -1,9 +1,10 @@
 Profile: VSDMContactPointTIMessenger
 Parent: ContactPoint
 Id: vsdm-contactpoint-timessenger
-* system = #url (exactly)
-* value MS
+* value 1..1 MS
 * value obeys mxid-1
+* system MS
+* system = #url
 
 Invariant: mxid-1
 Description: "TI-Messenger MXID starts with @, length UserID <255"

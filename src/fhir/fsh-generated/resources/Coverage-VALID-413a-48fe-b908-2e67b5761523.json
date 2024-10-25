@@ -1,6 +1,6 @@
 {
   "resourceType": "Coverage",
-  "id": "2d4da53a-413a-48fe-b908-2e67b5761523",
+  "id": "VALID-413a-48fe-b908-2e67b5761523",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
@@ -112,13 +112,9 @@
         {
           "url": "wahltarif",
           "valueCoding": {
-            "code": "1",
+            "code": "2",
             "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMWahltarifeCS"
           }
-        },
-        {
-          "url": "wahltarif-vertragskennzeichen",
-          "valueString": "Test Kommentar"
         }
       ],
       "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMWahltarifeEX"

@@ -3,33 +3,9 @@
     "outputFile": "Bundle-9b6ac30d-246d-4eab-af83-544564792089.json",
     "fshName": "Vsdm2BundleSample",
     "fshType": "Instance",
-    "fshFile": "profiles/VSDMBundle.fsh",
-    "startLine": 43,
-    "endLine": 66
-  },
-  {
-    "outputFile": "CapabilityStatement-VSDMCapabilityStatement.json",
-    "fshName": "VSDMCapabilityStatement",
-    "fshType": "Instance",
-    "fshFile": "VSDMCapabilityStatement.fsh",
+    "fshFile": "examples/ExampleVSDMBundle.fsh",
     "startLine": 1,
-    "endLine": 18
-  },
-  {
-    "outputFile": "CodeSystem-vsdm-besonderepersonmengruppe-cs.json",
-    "fshName": "VSDMBesonderePersonengruppeCS",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMBesonderePersonengruppeCS.fsh",
-    "startLine": 1,
-    "endLine": 18
-  },
-  {
-    "outputFile": "CodeSystem-vsdm-dmp-kennzeichen-cs.json",
-    "fshName": "VSDMDMPKennzeichenCS",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMDMPKennzeichenCS.fsh",
-    "startLine": 1,
-    "endLine": 24
+    "endLine": 21
   },
   {
     "outputFile": "CodeSystem-vsdm-errorcode-cs.json",
@@ -37,29 +13,29 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMErrorcodeCS.fsh",
     "startLine": 1,
-    "endLine": 16
+    "endLine": 19
   },
   {
-    "outputFile": "CodeSystem-vsdm-festzuschusshoehe-cs.json",
-    "fshName": "VSDMFestzuschusshoeheCS",
+    "outputFile": "CodeSystem-vsdm-ruhenderLeistungsanspruch-cs.json",
+    "fshName": "VSDMRuhenderLeistungsanspruchCS",
     "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMFestzuschusshoeheCS.fsh",
+    "fshFile": "codesystems/VSDMRuhenderLeistungsanspruchCS.fsh",
     "startLine": 1,
-    "endLine": 15
+    "endLine": 12
   },
   {
-    "outputFile": "CodeSystem-vsdm-gkvwohnortprinzip-cs.json",
-    "fshName": "VSDMGKVWohnortprinzipCS",
+    "outputFile": "CodeSystem-vsdm-wahltarife-cs.json",
+    "fshName": "VSDMWahltarifeCS",
     "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMGKVWohnortprinzipCS.fsh",
+    "fshFile": "codesystems/VSDMWahltarifeCS.fsh",
     "startLine": 1,
-    "endLine": 29
+    "endLine": 13
   },
   {
-    "outputFile": "CodeSystem-vsdm-versichertenart-cs.json",
-    "fshName": "VSDMVersichertenartCS",
+    "outputFile": "CodeSystem-vsdmkostentreager-angabestatus-cs.json",
+    "fshName": "VSDMKostentreagerAngabestatusCS",
     "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMVersichertenartCS.fsh",
+    "fshFile": "codesystems/VSDMKostentreagerAngabestatusCS.fsh",
     "startLine": 1,
     "endLine": 14
   },
@@ -67,25 +43,25 @@
     "outputFile": "Coverage-2d4da53a-413a-48fe-b908-2e67b5761523.json",
     "fshName": "VSDMCoverageSample",
     "fshType": "Instance",
-    "fshFile": "profiles/VSDMCoverage.fsh",
-    "startLine": 43,
-    "endLine": 108
+    "fshFile": "examples/ExampleVSDMCoverage.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "Coverage-VALID-413a-48fe-b908-2e67b5761523.json",
+    "fshName": "VALID-VSDMCoverageSample",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleVSDMCoverage.fsh",
+    "startLine": 12,
+    "endLine": 18
   },
   {
     "outputFile": "Patient-437f2555-2396-4c64-a656-e9553161ca3c.json",
     "fshName": "VSDMPatientSample",
     "fshType": "Instance",
     "fshFile": "profiles/VSDMPatient.fsh",
-    "startLine": 24,
-    "endLine": 47
-  },
-  {
-    "outputFile": "StructureDefinition-vsdm-besonderepersonengruppe-ex.json",
-    "fshName": "VSDMBesonderePersonengruppeEX",
-    "fshType": "Extension",
-    "fshFile": "extensions/VSDMBesonderePersonengruppeEX.fsh",
-    "startLine": 1,
-    "endLine": 12
+    "startLine": 36,
+    "endLine": 59
   },
   {
     "outputFile": "StructureDefinition-vsdm-bundle.json",
@@ -101,7 +77,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMComposition.fsh",
     "startLine": 1,
-    "endLine": 22
+    "endLine": 20
   },
   {
     "outputFile": "StructureDefinition-vsdm-contactpoint-timessenger.json",
@@ -109,7 +85,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMContactPointTIMessenger.fsh",
     "startLine": 1,
-    "endLine": 6
+    "endLine": 7
   },
   {
     "outputFile": "StructureDefinition-vsdm-coverage.json",
@@ -117,7 +93,15 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
-    "endLine": 41
+    "endLine": 48
+  },
+  {
+    "outputFile": "StructureDefinition-vsdm-dmp-kennzeichen-basis-ex.json",
+    "fshName": "VSDMDMPKennzeichenBasisEX",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMDMPKennzeichenBasis.fsh",
+    "startLine": 1,
+    "endLine": 11
   },
   {
     "outputFile": "StructureDefinition-vsdm-dmp-kennzeichen-ex.json",
@@ -125,39 +109,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMDMPKennzeichen.fsh",
     "startLine": 1,
-    "endLine": 38
-  },
-  {
-    "outputFile": "StructureDefinition-vsdm-festzuschusshoehe-ex.json",
-    "fshName": "VSDMFestzuschusshoeheEX",
-    "fshType": "Extension",
-    "fshFile": "extensions/VSDMFestzuschusshoeheEX.fsh",
-    "startLine": 1,
-    "endLine": 12
-  },
-  {
-    "outputFile": "StructureDefinition-vsdm-gkvwohnortprinzip-ex.json",
-    "fshName": "VSDMGKVWohnortprinzipEX",
-    "fshType": "Extension",
-    "fshFile": "extensions/VSDMGKVWohnortprinzipEX.fsh",
-    "startLine": 1,
-    "endLine": 8
-  },
-  {
-    "outputFile": "StructureDefinition-vsdm-kostenerstattung-ex.json",
-    "fshName": "VSDMKostenerstattungEX",
-    "fshType": "Extension",
-    "fshFile": "extensions/VSDMKostenerstattungEX.fsh",
-    "startLine": 1,
     "endLine": 25
-  },
-  {
-    "outputFile": "StructureDefinition-vsdm-namenszusatz-ex.json",
-    "fshName": "VSDMNamenszusatzEX",
-    "fshType": "Extension",
-    "fshFile": "extensions/VSDMNamenszusatzEX.fsh",
-    "startLine": 1,
-    "endLine": 11
   },
   {
     "outputFile": "StructureDefinition-vsdm-operationoutcome.json",
@@ -165,7 +117,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMOperationOutcome.fsh",
     "startLine": 1,
-    "endLine": 22
+    "endLine": 33
   },
   {
     "outputFile": "StructureDefinition-vsdm-patient.json",
@@ -173,55 +125,23 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 14
+    "endLine": 26
   },
   {
-    "outputFile": "StructureDefinition-vsdm-ruhenderleistungsanspruch-ex.json",
-    "fshName": "VSDMRuhenderLeistungsanspruchEX",
+    "outputFile": "StructureDefinition-vsdm-wahltarife-ex.json",
+    "fshName": "VSDMWahltarifeEX",
     "fshType": "Extension",
-    "fshFile": "extensions/VSDMRuhenderLeistungsanspruchEX.fsh",
+    "fshFile": "extensions/VSDMWahltarifeEX.fsh",
     "startLine": 1,
-    "endLine": 28
+    "endLine": 35
   },
   {
-    "outputFile": "StructureDefinition-vsdm-selektivvertraege-ex.json",
-    "fshName": "VSDMSelektivvertraegeEX",
+    "outputFile": "StructureDefinition-vsdmkostentreager-angabestatus-ex.json",
+    "fshName": "VSDMKostentreagerAngabestatusEX",
     "fshType": "Extension",
-    "fshFile": "extensions/VSDMSelektivvertaegeEX.fsh",
+    "fshFile": "extensions/VSDMKostentreagerAngabestatusEX.fsh",
     "startLine": 1,
-    "endLine": 20
-  },
-  {
-    "outputFile": "StructureDefinition-vsdm-versichertenart-ex.json",
-    "fshName": "VSDMVersichertenartEX",
-    "fshType": "Extension",
-    "fshFile": "extensions/VSDMVersichertenartEX.fsh",
-    "startLine": 1,
-    "endLine": 12
-  },
-  {
-    "outputFile": "StructureDefinition-vsdm-zuzahlungsstatus-ex.json",
-    "fshName": "VSDMZuzahlungsstatusEX",
-    "fshType": "Extension",
-    "fshFile": "extensions/VSDMZuzahlungsstatusEX.fsh",
-    "startLine": 1,
-    "endLine": 21
-  },
-  {
-    "outputFile": "ValueSet-vsdm-besonderepersonengruppe-vs.json",
-    "fshName": "VSDMBesonderePersonengruppeVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMBesonderePersonengruppeVS.fsh",
-    "startLine": 1,
-    "endLine": 7
-  },
-  {
-    "outputFile": "ValueSet-vsdm-dmp-kennzeichen-vs.json",
-    "fshName": "VSDMDMPKennzeichenVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMDMPKennzeichenVS.fsh",
-    "startLine": 1,
-    "endLine": 7
+    "endLine": 11
   },
   {
     "outputFile": "ValueSet-vsdm-errorcode-vs.json",
@@ -232,26 +152,26 @@
     "endLine": 7
   },
   {
-    "outputFile": "ValueSet-vsdm-festzuschusshoehe-vs.json",
-    "fshName": "VSDMFestzuschusshoeheVS",
+    "outputFile": "ValueSet-vsdm-ruhenderLeistungsanspruch-vs.json",
+    "fshName": "VSDMRuhenderLeistungsanspruchVS",
     "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMFestzuschusshoeheVS.fsh",
+    "fshFile": "valuesets/VSDMRuhenderLeistungsanspruchVS.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "ValueSet-vsdm-wahltarife-vs.json",
+    "fshName": "VSDMWahltarifeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMWahltarifeVS.fsh",
     "startLine": 1,
     "endLine": 7
   },
   {
-    "outputFile": "ValueSet-vsdm-gkvwohnortprinzip-vs.json",
-    "fshName": "VSDMGKVWohnortprinzipVS",
+    "outputFile": "ValueSet-vsdmkostentreager-angabestatus-vs.json",
+    "fshName": "VSDMKostentreagerAngabestatusVS",
     "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMGKVWohnortprinzipVS.fsh",
-    "startLine": 1,
-    "endLine": 7
-  },
-  {
-    "outputFile": "ValueSet-vsdm-versichertenart-vs.json",
-    "fshName": "VSDMVersichertenartVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMVersichertenartVS.fsh",
+    "fshFile": "valuesets/VSDMKostentreagerAngabestatusVS.fsh",
     "startLine": 1,
     "endLine": 7
   }

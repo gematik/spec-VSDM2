@@ -1,0 +1,29 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "VSDMWahltarifeCS",
+  "id": "vsdm-wahltarife-cs",
+  "title": "CodeSystem für Wahltarife",
+  "description": "Gibt ein Kennzeichen für die Rechtsgrundlage des jeweiligen Wahltarifs an",
+  "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMWahltarifeCS",
+  "concept": [
+    {
+      "code": "1",
+      "display": "§73b SGB V"
+    },
+    {
+      "code": "2",
+      "display": "§140a SGB V"
+    },
+    {
+      "code": "3",
+      "display": "Sonstige Verträge"
+    }
+  ],
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "date": "2023-12-31",
+  "caseSensitive": true,
+  "count": 3
+}
