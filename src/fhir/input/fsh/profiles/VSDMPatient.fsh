@@ -13,6 +13,7 @@ Id: vsdm-patient
 * name[Name].family.extension[nachname]
   * ^comment = "Gibt den Nachnamen der Person an"
 
+// TODO: Slicing Testen mit Beipsielinstanz
 * telecom
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "system"

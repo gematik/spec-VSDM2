@@ -47,6 +47,19 @@
         ]
       },
       {
+        "id": "Extension.extension:ruhenderLeistungsanspruch.extension:art",
+        "path": "Extension.extension.extension",
+        "sliceName": "art"
+      },
+      {
+        "id": "Extension.extension:ruhenderLeistungsanspruch.extension:art.value[x]",
+        "path": "Extension.extension.extension.value[x]",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMRuhenderLeistungsanspruchVS"
+        }
+      },
+      {
         "id": "Extension.extension:kostentraeger-angabestatus",
         "path": "Extension.extension",
         "sliceName": "kostentraeger-angabestatus",

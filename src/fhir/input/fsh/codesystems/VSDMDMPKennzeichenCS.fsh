@@ -9,8 +9,6 @@ Description: "Gibt die Teilnahme des Versicherten an einem oder mehreren Disease
 
 // Angaben gemäß Schlüsseltabelle
 
-
-
 * #1 "Diabetes mellitus Typ 2"
 * #2 "Brustkrebs"
 * #3 "Koronare Herzkrankheit"
