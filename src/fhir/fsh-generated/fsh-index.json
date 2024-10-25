@@ -8,22 +8,6 @@
     "endLine": 18
   },
   {
-    "outputFile": "CodeSystem-vsdm-besonderepersonmengruppe-cs.json",
-    "fshName": "VSDMBesonderePersonengruppeCS",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMBesonderePersonengruppeCS.fsh",
-    "startLine": 1,
-    "endLine": 18
-  },
-  {
-    "outputFile": "CodeSystem-vsdm-dmp-kennzeichen-cs.json",
-    "fshName": "VSDMDMPKennzeichenCS",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMDMPKennzeichenCS.fsh",
-    "startLine": 1,
-    "endLine": 22
-  },
-  {
     "outputFile": "CodeSystem-vsdm-errorcode-cs.json",
     "fshName": "VSDMErrorcodeCS",
     "fshType": "CodeSystem",
@@ -32,36 +16,12 @@
     "endLine": 16
   },
   {
-    "outputFile": "CodeSystem-vsdm-festzuschusshoehe-cs.json",
-    "fshName": "VSDMFestzuschusshoeheCS",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMFestzuschusshoeheCS.fsh",
-    "startLine": 1,
-    "endLine": 15
-  },
-  {
-    "outputFile": "CodeSystem-vsdm-gkvwohnortprinzip-cs.json",
-    "fshName": "VSDMGKVWohnortprinzipCS",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMGKVWohnortprinzipCS.fsh",
-    "startLine": 1,
-    "endLine": 29
-  },
-  {
     "outputFile": "CodeSystem-vsdm-ruhenderLeistungsanspruch-cs.json",
     "fshName": "VSDMRuhenderLeistungsanspruchCS",
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMRuhenderLeistungsanspruchCS.fsh",
     "startLine": 1,
     "endLine": 12
-  },
-  {
-    "outputFile": "CodeSystem-vsdm-versichertenart-cs.json",
-    "fshName": "VSDMVersichertenartCS",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMVersichertenartCS.fsh",
-    "startLine": 1,
-    "endLine": 14
   },
   {
     "outputFile": "CodeSystem-vsdm-wahltarife-cs.json",
@@ -152,22 +112,6 @@
     "endLine": 14
   },
   {
-    "outputFile": "StructureDefinition-vsdm-selektivvertraege-ex.json",
-    "fshName": "VSDMSelektivvertraegeEX",
-    "fshType": "Extension",
-    "fshFile": "extensions/VSDMSelektivvertaegeEX.fsh",
-    "startLine": 1,
-    "endLine": 20
-  },
-  {
-    "outputFile": "StructureDefinition-vsdm-versichertenart-ex.json",
-    "fshName": "VSDMVersichertenartEX",
-    "fshType": "Extension",
-    "fshFile": "extensions/VSDMVersichertenartEX.fsh",
-    "startLine": 1,
-    "endLine": 12
-  },
-  {
     "outputFile": "StructureDefinition-vsdm-wahltarife-ex.json",
     "fshName": "VSDMWahltarifeEX",
     "fshType": "Extension",
@@ -184,42 +128,10 @@
     "endLine": 13
   },
   {
-    "outputFile": "ValueSet-vsdm-besonderepersonengruppe-vs.json",
-    "fshName": "VSDMBesonderePersonengruppeVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMBesonderePersonengruppeVS.fsh",
-    "startLine": 1,
-    "endLine": 7
-  },
-  {
-    "outputFile": "ValueSet-vsdm-dmp-kennzeichen-vs.json",
-    "fshName": "VSDMDMPKennzeichenVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMDMPKennzeichenVS.fsh",
-    "startLine": 1,
-    "endLine": 7
-  },
-  {
     "outputFile": "ValueSet-vsdm-errorcode-vs.json",
     "fshName": "VSDMErrorcodeVS",
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMErrorcodeVS.fsh",
-    "startLine": 1,
-    "endLine": 7
-  },
-  {
-    "outputFile": "ValueSet-vsdm-festzuschusshoehe-vs.json",
-    "fshName": "VSDMFestzuschusshoeheVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMFestzuschusshoeheVS.fsh",
-    "startLine": 1,
-    "endLine": 7
-  },
-  {
-    "outputFile": "ValueSet-vsdm-gkvwohnortprinzip-vs.json",
-    "fshName": "VSDMGKVWohnortprinzipVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMGKVWohnortprinzipVS.fsh",
     "startLine": 1,
     "endLine": 7
   },
@@ -230,14 +142,6 @@
     "fshFile": "valuesets/VSDMRuhenderLeistungsanspruchVS.fsh",
     "startLine": 1,
     "endLine": 8
-  },
-  {
-    "outputFile": "ValueSet-vsdm-versichertenart-vs.json",
-    "fshName": "VSDMVersichertenartVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMVersichertenartVS.fsh",
-    "startLine": 1,
-    "endLine": 7
   },
   {
     "outputFile": "ValueSet-vsdm-wahltarife-vs.json",

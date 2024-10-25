@@ -11,18 +11,3 @@ Id: vsdm-zuzahlungsstatus-ex
 * extension contains 
     $zuzahlungsstatus named zuzahlungsstatus 1..1 and
     kostentraeger-angabestatus 1..1 MS
-
-/*
-* extension contains
-    status 1..1 and
-    gueltigBis 0..*
-* extension[status] ^short = "Status der Befreiung"
-* extension[status] ^definition = "true = von Zuzahlungspflicht befreit\r\nfalse = von Zuzahlungspflicht nicht befreit "
-* extension[status].value[x] only boolean
-* extension[status].value[x] ^short = "Status der Befreiung"
-* extension[status].value[x] ^definition = "true = von Zuzahlungspflicht befreit\r\nfalse = von Zuzahlungspflicht nicht befreit "
-* extension[gueltigBis] ^short = "Ende der Gültigkeit"
-* extension[gueltigBis].value[x] only date
-* extension[gueltigBis].value[x] ^short = "Ende der Gültigkeit"
-* url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMZuzahlungsstatusEX" (exactly)
-*/
