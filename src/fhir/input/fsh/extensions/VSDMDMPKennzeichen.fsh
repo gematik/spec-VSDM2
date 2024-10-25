@@ -9,8 +9,7 @@ Context: Coverage
 * extension contains
 	VSDMDMPKennzeichenBasisEX named dmpKennzeichen 1..1 MS and
 	dmp-zeitraum 1..1 MS and
-	digitales-dmp 0..1 MS and
-	kostentraeger-angabestatus 1..1 MS
+	digitales-dmp 0..1 MS
 
 * extension[dmp-zeitraum].value[x] only Period
 * extension[dmp-zeitraum].value[x] ^short = "Zeitraum der Teilnahme am DMP"

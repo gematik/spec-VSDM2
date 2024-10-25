@@ -88,7 +88,7 @@
           {
             "code": "Composition",
             "profile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/vsdm-composition"
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMComposition"
             ]
           }
         ]

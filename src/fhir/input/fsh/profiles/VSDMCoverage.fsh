@@ -15,22 +15,11 @@ Id: vsdm-coverage
     $versichertenart named versichertenart 0..1 and
     $wop named wop 0..1 and
     $besondere-personengruppe named besonderePersonengruppe 0..1 and
-    VSDMKostenerstattungEX named vsdm-kostenerstattung 0..1 and
-    VSDMRuhenderLeistungsanspruchEX named vsdm-ruhenderLeistungsanspruch 0..1 and
-    VSDMZuzahlungsstatusEX named vsdm-zuzahlungsstatus 1..1 and
+    $kostenerstattung named gkv-kostenerstattung 0..1 and
+    $ruhender-leistungsanspruch named ruhenderLeistungsanspruch 1..1 and
+    $zuzahlungsstatus named zuzahlungsstatus 1..1 and
     VSDMDMPKennzeichenEX named vsdm-dmpKennzeichen 0..* and 
     VSDMWahltarifeEX named vsdm-wahltarife 0..*
-
-* extension[vsdm-kostenerstattung].extension[kostentraeger-angabestatus].value[x] MS
-* extension[vsdm-kostenerstattung].extension[kostentraeger-angabestatus].value[x] only boolean
-* extension[vsdm-dmpKennzeichen].extension[kostentraeger-angabestatus].value[x] MS
-* extension[vsdm-dmpKennzeichen].extension[kostentraeger-angabestatus].value[x] only boolean
-* extension[vsdm-ruhenderLeistungsanspruch].extension[kostentraeger-angabestatus].value[x] MS
-* extension[vsdm-ruhenderLeistungsanspruch].extension[kostentraeger-angabestatus].value[x] only boolean
-* extension[vsdm-zuzahlungsstatus].extension[kostentraeger-angabestatus].value[x] MS
-* extension[vsdm-zuzahlungsstatus].extension[kostentraeger-angabestatus].value[x] only boolean
-* extension[vsdm-wahltarife].extension[kostentraeger-angabestatus].value[x] MS
-* extension[vsdm-wahltarife].extension[kostentraeger-angabestatus].value[x] only boolean
 
 * beneficiary only Reference(VSDMPatient)
 * beneficiary 1..1

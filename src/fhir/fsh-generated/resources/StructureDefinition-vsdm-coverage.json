@@ -28,7 +28,7 @@
       {
         "id": "Coverage.extension",
         "path": "Coverage.extension",
-        "min": 1
+        "min": 2
       },
       {
         "id": "Coverage.extension:versichertenart",
@@ -76,109 +76,49 @@
         ]
       },
       {
-        "id": "Coverage.extension:vsdm-kostenerstattung",
+        "id": "Coverage.extension:gkv-kostenerstattung",
         "path": "Coverage.extension",
-        "sliceName": "vsdm-kostenerstattung",
+        "sliceName": "gkv-kostenerstattung",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostenerstattungEX"
+              "http://fhir.de/StructureDefinition/gkv/kostenerstattung"
             ]
           }
         ]
       },
       {
-        "id": "Coverage.extension:vsdm-kostenerstattung.extension:kostentraeger-angabestatus",
-        "path": "Coverage.extension.extension",
-        "sliceName": "kostentraeger-angabestatus"
-      },
-      {
-        "id": "Coverage.extension:vsdm-kostenerstattung.extension:kostentraeger-angabestatus.extension",
-        "path": "Coverage.extension.extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Coverage.extension:vsdm-kostenerstattung.extension:kostentraeger-angabestatus.value[x]",
-        "path": "Coverage.extension.extension.value[x]",
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Coverage.extension:vsdm-ruhenderLeistungsanspruch",
+        "id": "Coverage.extension:ruhenderLeistungsanspruch",
         "path": "Coverage.extension",
-        "sliceName": "vsdm-ruhenderLeistungsanspruch",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMRuhenderLeistungsanspruchEX"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Coverage.extension:vsdm-ruhenderLeistungsanspruch.extension:kostentraeger-angabestatus",
-        "path": "Coverage.extension.extension",
-        "sliceName": "kostentraeger-angabestatus"
-      },
-      {
-        "id": "Coverage.extension:vsdm-ruhenderLeistungsanspruch.extension:kostentraeger-angabestatus.extension",
-        "path": "Coverage.extension.extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Coverage.extension:vsdm-ruhenderLeistungsanspruch.extension:kostentraeger-angabestatus.value[x]",
-        "path": "Coverage.extension.extension.value[x]",
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Coverage.extension:vsdm-zuzahlungsstatus",
-        "path": "Coverage.extension",
-        "sliceName": "vsdm-zuzahlungsstatus",
+        "sliceName": "ruhenderLeistungsanspruch",
         "min": 1,
         "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMZuzahlungsstatusEX"
+              "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch"
             ]
           }
         ]
       },
       {
-        "id": "Coverage.extension:vsdm-zuzahlungsstatus.extension:kostentraeger-angabestatus",
-        "path": "Coverage.extension.extension",
-        "sliceName": "kostentraeger-angabestatus"
-      },
-      {
-        "id": "Coverage.extension:vsdm-zuzahlungsstatus.extension:kostentraeger-angabestatus.extension",
-        "path": "Coverage.extension.extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Coverage.extension:vsdm-zuzahlungsstatus.extension:kostentraeger-angabestatus.value[x]",
-        "path": "Coverage.extension.extension.value[x]",
+        "id": "Coverage.extension:zuzahlungsstatus",
+        "path": "Coverage.extension",
+        "sliceName": "zuzahlungsstatus",
+        "min": 1,
+        "max": "1",
         "type": [
           {
-            "code": "boolean"
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus"
+            ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Coverage.extension:vsdm-dmpKennzeichen",
@@ -196,26 +136,6 @@
         ]
       },
       {
-        "id": "Coverage.extension:vsdm-dmpKennzeichen.extension:kostentraeger-angabestatus",
-        "path": "Coverage.extension.extension",
-        "sliceName": "kostentraeger-angabestatus"
-      },
-      {
-        "id": "Coverage.extension:vsdm-dmpKennzeichen.extension:kostentraeger-angabestatus.extension",
-        "path": "Coverage.extension.extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Coverage.extension:vsdm-dmpKennzeichen.extension:kostentraeger-angabestatus.value[x]",
-        "path": "Coverage.extension.extension.value[x]",
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "mustSupport": true
-      },
-      {
         "id": "Coverage.extension:vsdm-wahltarife",
         "path": "Coverage.extension",
         "sliceName": "vsdm-wahltarife",
@@ -229,26 +149,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "Coverage.extension:vsdm-wahltarife.extension:kostentraeger-angabestatus",
-        "path": "Coverage.extension.extension",
-        "sliceName": "kostentraeger-angabestatus"
-      },
-      {
-        "id": "Coverage.extension:vsdm-wahltarife.extension:kostentraeger-angabestatus.extension",
-        "path": "Coverage.extension.extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Coverage.extension:vsdm-wahltarife.extension:kostentraeger-angabestatus.value[x]",
-        "path": "Coverage.extension.extension.value[x]",
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "mustSupport": true
       },
       {
         "id": "Coverage.status",

@@ -10,9 +10,8 @@ Id: vsdm-wahltarife-ex
 * extension contains
     wahltarif 1..1 MS and
     wahltarif-zeitraum 1..1 MS and
-    wahltarif-vertragskennzeichen 0..1 MS and
-    kostentraeger-angabestatus 1..1 MS
-
+    wahltarif-vertragskennzeichen 0..1 MS 
+    
 // Wahltarif
 * extension[wahltarif].value[x] only Coding
 * extension[wahltarif].valueCoding from VSDMWahltarifeVS (required)

@@ -38,7 +38,6 @@
         "id": "c624cf47-e235-4624-af71-0a09dc9254dc",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/vsdm2/StructureDefinition/vsdm-composition",
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMComposition"
           ]
         },
@@ -160,19 +159,27 @@
         "status": "active",
         "extension": [
           {
-            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMZuzahlungsstatusEX",
+            "url": "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch",
             "extension": [
               {
-                "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
-                "extension": [
-                  {
-                    "url": "status",
-                    "valueBoolean": true
-                  }
-                ]
+                "url": "art",
+                "valueCoding": {
+                  "code": "1"
+                }
               },
               {
-                "url": "kostentraeger-angabestatus",
+                "url": "dauer",
+                "valuePeriod": {
+                  "start": "2022-05-05"
+                }
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
+            "extension": [
+              {
+                "url": "status",
                 "valueBoolean": true
               }
             ]
@@ -201,46 +208,11 @@
           {
             "extension": [
               {
-                "extension": [
-                  {
-                    "url": "aerztlicheVersorgung",
-                    "valueBoolean": true
-                  }
-                ],
-                "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung"
-              },
-              {
-                "url": "kostentraeger-angabestatus",
+                "url": "aerztlicheVersorgung",
                 "valueBoolean": true
               }
             ],
-            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostenerstattungEX"
-          },
-          {
-            "extension": [
-              {
-                "extension": [
-                  {
-                    "url": "art",
-                    "valueCoding": {
-                      "code": "1"
-                    }
-                  },
-                  {
-                    "url": "dauer",
-                    "valuePeriod": {
-                      "start": "2022-05-05"
-                    }
-                  }
-                ],
-                "url": "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch"
-              },
-              {
-                "url": "kostentraeger-angabestatus",
-                "valueBoolean": true
-              }
-            ],
-            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMRuhenderLeistungsanspruchEX"
+            "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung"
           },
           {
             "extension": [
@@ -256,10 +228,6 @@
                 "valuePeriod": {
                   "start": "2022-05-05"
                 }
-              },
-              {
-                "url": "kostentraeger-angabestatus",
-                "valueBoolean": true
               },
               {
                 "url": "digitales-dmp",
@@ -282,10 +250,6 @@
                   "code": "1",
                   "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMWahltarifeCS"
                 }
-              },
-              {
-                "url": "kostentraeger-angabestatus",
-                "valueBoolean": true
               },
               {
                 "url": "wahltarif-vertragskennzeichen",

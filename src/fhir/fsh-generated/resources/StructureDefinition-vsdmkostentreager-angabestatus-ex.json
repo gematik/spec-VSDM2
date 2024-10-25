@@ -1,0 +1,56 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "vsdmkostentreager-angabestatus-ex",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentreagerAngabestatusEX",
+  "name": "VSDMKostentreagerAngabestatusEX",
+  "title": "VSDM Kostentreager Angabestatus EX",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-12-31",
+  "publisher": "gematik GmbH",
+  "description": "Gibt an, ob der Kostenträger die Information zum Versicherten angibt.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Gibt an, ob der Kostenträger die Information zum Versicherten angibt."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentreagerAngabestatusEX"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentreagerAngabestatusVS"
+        }
+      }
+    ]
+  }
+}

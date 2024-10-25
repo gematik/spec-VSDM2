@@ -1,3 +1,4 @@
+
 Instance: VSDMCoverageSample
 InstanceOf: VSDMCoverage
 Title:   "Coverage for VSDM 2 Query"
@@ -7,6 +8,7 @@ Usage: #example
 * extension[vsdm-wahltarife].extension[wahltarif].valueCoding = VSDMWahltarifeCS#1
 * extension[vsdm-wahltarife].extension[wahltarif-vertragskennzeichen].valueString = "Test Kommentar"
 
+/*
 Instance: VALID-VSDMCoverageSample
 InstanceOf: VSDMCoverage
 Title:   "Coverage for VSDM 2 Query"
@@ -22,7 +24,7 @@ Usage: #example
 * id = "INVALID-322b-4bbd-9c8b-6b0340075a0d"
 * insert ExampleCoverage
 * extension[vsdm-wahltarife].extension[wahltarif].valueCoding = VSDMWahltarifeCS#1
-
+*/
 
 RuleSet: ExampleCoverage
 * type.coding = $versichertenart-de-basis-cs#GKV
@@ -36,21 +38,16 @@ RuleSet: ExampleCoverage
 * extension[wop].valueCoding = $KBV_CS_SFHIR_ITA_WOP#72
 * extension[besonderePersonengruppe].valueCoding = $KBV_CS_SFHIR_KBV_PERSONENGRUPPE#06
 
-* extension[vsdm-kostenerstattung].extension[gkv-kostenerstattung].extension[aerztlicheVersorgung].valueBoolean = true
-* extension[vsdm-kostenerstattung].extension[kostentraeger-angabestatus].valueBoolean = true
+* extension[kostenerstattung].extension[aerztlicheVersorgung].valueBoolean = true
 
-* extension[vsdm-ruhenderLeistungsanspruch].extension[ruhenderLeistungsanspruch].extension[art].valueCoding.code = #1
-* extension[vsdm-ruhenderLeistungsanspruch].extension[ruhenderLeistungsanspruch].extension[dauer].valuePeriod.start = "2022-05-05"
-* extension[vsdm-ruhenderLeistungsanspruch].extension[kostentraeger-angabestatus].valueBoolean = true
+* extension[ruhenderLeistungsanspruch].extension[art].valueCoding.code = #1
+* extension[ruhenderLeistungsanspruch].extension[dauer].valuePeriod.start = "2022-05-05"
 
-* extension[vsdm-zuzahlungsstatus].extension[zuzahlungsstatus].extension[status].valueBoolean = true
-* extension[vsdm-zuzahlungsstatus].extension[kostentraeger-angabestatus].valueBoolean = true
+* extension[zuzahlungsstatus].extension[status].valueBoolean = true
 
 * extension[vsdm-dmpKennzeichen].extension[dmpKennzeichen].valueCoding = $KBV_CS_SFHIR_KBV_DMP#01
 * extension[vsdm-dmpKennzeichen].extension[dmp-zeitraum].valuePeriod.start = "2022-05-05"
 * extension[vsdm-dmpKennzeichen].extension[digitales-dmp].valueBoolean = true
-* extension[vsdm-dmpKennzeichen].extension[kostentraeger-angabestatus].valueBoolean = true
 
 * extension[vsdm-wahltarife].extension[wahltarif-zeitraum].valuePeriod.start = "2022-05-05"
-* extension[vsdm-wahltarife].extension[kostentraeger-angabestatus].valueBoolean = true
 
