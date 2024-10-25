@@ -68,8 +68,8 @@
     "fshName": "VSDMPatientSample",
     "fshType": "Instance",
     "fshFile": "profiles/VSDMPatient.fsh",
-    "startLine": 24,
-    "endLine": 47
+    "startLine": 35,
+    "endLine": 58
   },
   {
     "outputFile": "StructureDefinition-vsdm-besonderepersonengruppe-ex.json",
@@ -101,7 +101,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMContactPointTIMessenger.fsh",
     "startLine": 1,
-    "endLine": 6
+    "endLine": 7
   },
   {
     "outputFile": "StructureDefinition-vsdm-coverage.json",
@@ -165,7 +165,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 14
+    "endLine": 25
   },
   {
     "outputFile": "StructureDefinition-vsdm-ruhenderleistungsanspruch-ex.json",

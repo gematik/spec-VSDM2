@@ -44,6 +44,38 @@
         "comment": "Gibt den Nachnamen der Person an"
       },
       {
+        "id": "Patient.telecom",
+        "path": "Patient.telecom",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "system"
+            }
+          ],
+          "rules": "open",
+          "description": "Slices for Patient contact information",
+          "ordered": false
+        },
+        "min": 1
+      },
+      {
+        "id": "Patient.telecom:ti-messenger",
+        "path": "Patient.telecom",
+        "sliceName": "ti-messenger",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "ContactPoint",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/vsdm-contactpoint-timessenger"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Patient.address",
         "path": "Patient.address",
         "type": [

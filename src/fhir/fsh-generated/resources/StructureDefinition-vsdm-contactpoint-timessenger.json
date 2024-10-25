@@ -15,11 +15,13 @@
       {
         "id": "ContactPoint.system",
         "path": "ContactPoint.system",
-        "fixedCode": "url"
+        "patternCode": "url",
+        "mustSupport": true
       },
       {
         "id": "ContactPoint.value",
         "path": "ContactPoint.value",
+        "min": 1,
         "constraint": [
           {
             "key": "mxid-1",
