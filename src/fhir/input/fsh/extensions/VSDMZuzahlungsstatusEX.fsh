@@ -7,6 +7,12 @@ Id: vsdm-zuzahlungsstatus-ex
 * . ^short = "Gibt an, ob für den Versicherten eine Befreiung von der Zuzahlungspflicht nach § 62 Abs. 3 SGB V vorliegt."
 * url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMZuzahlungsstatusEX" (exactly)
 
+
+* extension contains 
+    $zuzahlungsstatus named zuzahlungsstatus 1..1 and
+    kostentraeger-angabestatus 1..1 MS
+
+/*
 * extension contains
     status 1..1 and
     gueltigBis 0..*
@@ -19,3 +25,4 @@ Id: vsdm-zuzahlungsstatus-ex
 * extension[gueltigBis].value[x] only date
 * extension[gueltigBis].value[x] ^short = "Ende der Gültigkeit"
 * url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMZuzahlungsstatusEX" (exactly)
+*/

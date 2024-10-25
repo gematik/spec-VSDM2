@@ -26,6 +26,11 @@
         "fixedCanonical": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
       },
       {
+        "id": "Coverage.extension",
+        "path": "Coverage.extension",
+        "min": 1
+      },
+      {
         "id": "Coverage.extension:versichertenart",
         "path": "Coverage.extension",
         "sliceName": "versichertenart",
@@ -36,55 +41,6 @@
             "code": "Extension",
             "profile": [
               "http://fhir.de/StructureDefinition/gkv/versichertenart"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Coverage.extension:vsdm-kostenerstattung",
-        "path": "Coverage.extension",
-        "sliceName": "vsdm-kostenerstattung",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostenerstattungEX"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Coverage.extension:vsdm-kostenerstattung.extension:kostenerstattung-angagabe",
-        "path": "Coverage.extension.extension",
-        "sliceName": "kostenerstattung-angagabe"
-      },
-      {
-        "id": "Coverage.extension:vsdm-kostenerstattung.extension:kostenerstattung-angagabe.extension",
-        "path": "Coverage.extension.extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Coverage.extension:vsdm-kostenerstattung.extension:kostenerstattung-angagabe.value[x]",
-        "path": "Coverage.extension.extension.value[x]",
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ]
-      },
-      {
-        "id": "Coverage.extension:ruhenderLeistungsanspruch",
-        "path": "Coverage.extension",
-        "sliceName": "ruhenderLeistungsanspruch",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch"
             ]
           }
         ]
@@ -120,24 +76,111 @@
         ]
       },
       {
-        "id": "Coverage.extension:zuzahlungsstatus",
+        "id": "Coverage.extension:vsdm-kostenerstattung",
         "path": "Coverage.extension",
-        "sliceName": "zuzahlungsstatus",
+        "sliceName": "vsdm-kostenerstattung",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus"
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostenerstattungEX"
             ]
           }
         ]
       },
       {
-        "id": "Coverage.extension:dmpKennzeichen",
+        "id": "Coverage.extension:vsdm-kostenerstattung.extension:kostentraeger-angabestatus",
+        "path": "Coverage.extension.extension",
+        "sliceName": "kostentraeger-angabestatus"
+      },
+      {
+        "id": "Coverage.extension:vsdm-kostenerstattung.extension:kostentraeger-angabestatus.extension",
+        "path": "Coverage.extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.extension:vsdm-kostenerstattung.extension:kostentraeger-angabestatus.value[x]",
+        "path": "Coverage.extension.extension.value[x]",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:vsdm-ruhenderLeistungsanspruch",
         "path": "Coverage.extension",
-        "sliceName": "dmpKennzeichen",
+        "sliceName": "vsdm-ruhenderLeistungsanspruch",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMRuhenderLeistungsanspruchEX"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:vsdm-ruhenderLeistungsanspruch.extension:kostentraeger-angabestatus",
+        "path": "Coverage.extension.extension",
+        "sliceName": "kostentraeger-angabestatus"
+      },
+      {
+        "id": "Coverage.extension:vsdm-ruhenderLeistungsanspruch.extension:kostentraeger-angabestatus.extension",
+        "path": "Coverage.extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.extension:vsdm-ruhenderLeistungsanspruch.extension:kostentraeger-angabestatus.value[x]",
+        "path": "Coverage.extension.extension.value[x]",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:vsdm-zuzahlungsstatus",
+        "path": "Coverage.extension",
+        "sliceName": "vsdm-zuzahlungsstatus",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMZuzahlungsstatusEX"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:vsdm-zuzahlungsstatus.extension:kostentraeger-angabestatus",
+        "path": "Coverage.extension.extension",
+        "sliceName": "kostentraeger-angabestatus"
+      },
+      {
+        "id": "Coverage.extension:vsdm-zuzahlungsstatus.extension:kostentraeger-angabestatus.extension",
+        "path": "Coverage.extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.extension:vsdm-zuzahlungsstatus.extension:kostentraeger-angabestatus.value[x]",
+        "path": "Coverage.extension.extension.value[x]",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:vsdm-dmpKennzeichen",
+        "path": "Coverage.extension",
+        "sliceName": "vsdm-dmpKennzeichen",
         "min": 0,
         "max": "*",
         "type": [
@@ -150,9 +193,28 @@
         ]
       },
       {
-        "id": "Coverage.extension:wahltarife",
+        "id": "Coverage.extension:vsdm-dmpKennzeichen.extension:kostentraeger-angabestatus",
+        "path": "Coverage.extension.extension",
+        "sliceName": "kostentraeger-angabestatus"
+      },
+      {
+        "id": "Coverage.extension:vsdm-dmpKennzeichen.extension:kostentraeger-angabestatus.extension",
+        "path": "Coverage.extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.extension:vsdm-dmpKennzeichen.extension:kostentraeger-angabestatus.value[x]",
+        "path": "Coverage.extension.extension.value[x]",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:vsdm-wahltarife",
         "path": "Coverage.extension",
-        "sliceName": "wahltarife",
+        "sliceName": "vsdm-wahltarife",
         "min": 0,
         "max": "*",
         "type": [
@@ -161,6 +223,25 @@
             "profile": [
               "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMWahltarifeEX"
             ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:vsdm-wahltarife.extension:kostentraeger-angabestatus",
+        "path": "Coverage.extension.extension",
+        "sliceName": "kostentraeger-angabestatus"
+      },
+      {
+        "id": "Coverage.extension:vsdm-wahltarife.extension:kostentraeger-angabestatus.extension",
+        "path": "Coverage.extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.extension:vsdm-wahltarife.extension:kostentraeger-angabestatus.value[x]",
+        "path": "Coverage.extension.extension.value[x]",
+        "type": [
+          {
+            "code": "boolean"
           }
         ]
       },

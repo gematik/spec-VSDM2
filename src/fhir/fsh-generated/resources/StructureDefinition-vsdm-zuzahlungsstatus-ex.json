@@ -29,65 +29,35 @@
       {
         "id": "Extension.extension",
         "path": "Extension.extension",
-        "min": 1
+        "min": 2
       },
       {
-        "id": "Extension.extension:status",
+        "id": "Extension.extension:zuzahlungsstatus",
         "path": "Extension.extension",
-        "sliceName": "status",
-        "short": "Status der Befreiung",
-        "definition": "true = von Zuzahlungspflicht befreit\r\nfalse = von Zuzahlungspflicht nicht befreit ",
+        "sliceName": "zuzahlungsstatus",
         "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "Extension.extension:status.extension",
-        "path": "Extension.extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Extension.extension:status.url",
-        "path": "Extension.extension.url",
-        "fixedUri": "status"
-      },
-      {
-        "id": "Extension.extension:status.value[x]",
-        "path": "Extension.extension.value[x]",
-        "short": "Status der Befreiung",
-        "definition": "true = von Zuzahlungspflicht befreit\r\nfalse = von Zuzahlungspflicht nicht befreit ",
+        "max": "1",
         "type": [
           {
-            "code": "boolean"
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus"
+            ]
           }
         ]
       },
       {
-        "id": "Extension.extension:gueltigBis",
+        "id": "Extension.extension:kostentraeger-angabestatus",
         "path": "Extension.extension",
-        "sliceName": "gueltigBis",
-        "short": "Ende der Gültigkeit",
-        "min": 0,
-        "max": "*"
+        "sliceName": "kostentraeger-angabestatus",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
       },
       {
-        "id": "Extension.extension:gueltigBis.extension",
-        "path": "Extension.extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Extension.extension:gueltigBis.url",
+        "id": "Extension.extension:kostentraeger-angabestatus.url",
         "path": "Extension.extension.url",
-        "fixedUri": "gueltigBis"
-      },
-      {
-        "id": "Extension.extension:gueltigBis.value[x]",
-        "path": "Extension.extension.value[x]",
-        "short": "Ende der Gültigkeit",
-        "type": [
-          {
-            "code": "date"
-          }
-        ]
+        "fixedUri": "kostentraeger-angabestatus"
       },
       {
         "id": "Extension.url",

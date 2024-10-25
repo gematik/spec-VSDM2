@@ -1,13 +1,5 @@
 [
   {
-    "outputFile": "Bundle-9b6ac30d-246d-4eab-af83-544564792089.json",
-    "fshName": "Vsdm2BundleSample",
-    "fshType": "Instance",
-    "fshFile": "profiles/VSDMBundle.fsh",
-    "startLine": 43,
-    "endLine": 66
-  },
-  {
     "outputFile": "CapabilityStatement-VSDMCapabilityStatement.json",
     "fshName": "VSDMCapabilityStatement",
     "fshType": "Instance",
@@ -72,14 +64,6 @@
     "endLine": 13
   },
   {
-    "outputFile": "Coverage-2d4da53a-413a-48fe-b908-2e67b5761523.json",
-    "fshName": "VSDMCoverageSample",
-    "fshType": "Instance",
-    "fshFile": "profiles/VSDMCoverage.fsh",
-    "startLine": 58,
-    "endLine": 73
-  },
-  {
     "outputFile": "Patient-437f2555-2396-4c64-a656-e9553161ca3c.json",
     "fshName": "VSDMPatientSample",
     "fshType": "Instance",
@@ -125,7 +109,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
-    "endLine": 56
+    "endLine": 43
   },
   {
     "outputFile": "StructureDefinition-vsdm-dmp-kennzeichen-ex.json",
@@ -133,7 +117,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMDMPKennzeichen.fsh",
     "startLine": 1,
-    "endLine": 25
+    "endLine": 26
   },
   {
     "outputFile": "StructureDefinition-vsdm-festzuschusshoehe-ex.json",
@@ -189,7 +173,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMRuhenderLeistungsanspruchEX.fsh",
     "startLine": 1,
-    "endLine": 28
+    "endLine": 12
   },
   {
     "outputFile": "StructureDefinition-vsdm-selektivvertraege-ex.json",
@@ -213,7 +197,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMWahltarifeEX.fsh",
     "startLine": 1,
-    "endLine": 36
+    "endLine": 37
   },
   {
     "outputFile": "StructureDefinition-vsdm-zuzahlungsstatus-ex.json",
@@ -221,7 +205,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMZuzahlungsstatusEX.fsh",
     "startLine": 1,
-    "endLine": 21
+    "endLine": 13
   },
   {
     "outputFile": "ValueSet-vsdm-besonderepersonengruppe-vs.json",

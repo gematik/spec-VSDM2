@@ -13,32 +13,19 @@ Id: vsdm-coverage
 
 * extension contains
     $versichertenart named versichertenart 0..1 and
-    VSDMKostenerstattungEX named vsdm-kostenerstattung 0..1 and
-    $ruhender-leistungsanspruch named ruhenderLeistungsanspruch 0..1 and
     $wop named wop 0..1 and
     $besondere-personengruppe named besonderePersonengruppe 0..1 and
-    $zuzahlungsstatus named zuzahlungsstatus 0..1 and
-    VSDMDMPKennzeichenEX named dmpKennzeichen 0..* and 
-    VSDMWahltarifeEX named wahltarife 0..*
+    VSDMKostenerstattungEX named vsdm-kostenerstattung 0..1 and
+    VSDMRuhenderLeistungsanspruchEX named vsdm-ruhenderLeistungsanspruch 0..1 and
+    VSDMZuzahlungsstatusEX named vsdm-zuzahlungsstatus 1..1 and
+    VSDMDMPKennzeichenEX named vsdm-dmpKennzeichen 0..* and 
+    VSDMWahltarifeEX named vsdm-wahltarife 0..*
 
-* extension[vsdm-kostenerstattung].extension[kostenerstattung-angagabe].value[x] only boolean
-    /*
-    kennzeichen ob ja/nein
-
-    - Extesion KlammerDMP
-      - DMP
-      - supportDMP
-
-    - Extension unterstuetze-extensions
-      - WT
-      - DMP
-
-    - WT
-    - zuzahlungsstatus
-    - dmp
-    - ruhenderLeistungsanspruch
-    - kostenerstattung
-*/
+* extension[vsdm-kostenerstattung].extension[kostentraeger-angabestatus].value[x] only boolean
+* extension[vsdm-dmpKennzeichen].extension[kostentraeger-angabestatus].value[x] only boolean
+* extension[vsdm-ruhenderLeistungsanspruch].extension[kostentraeger-angabestatus].value[x] only boolean
+* extension[vsdm-zuzahlungsstatus].extension[kostentraeger-angabestatus].value[x] only boolean
+* extension[vsdm-wahltarife].extension[kostentraeger-angabestatus].value[x] only boolean
 
 * beneficiary only Reference(VSDMPatient)
 * beneficiary 1..1
@@ -55,6 +42,8 @@ Id: vsdm-coverage
 * payor.identifier 1..1
 * payor.display 1..1
 
+
+/*
 Instance: VSDMCoverageSample
 InstanceOf: VSDMCoverage
 Title:   "Coverage for VSDM 2 Query"
@@ -72,7 +61,7 @@ Usage: #example
 * payor.identifier.value = "12345678"
 * payor.display = "Test GKV Krankenkasse"
 
-
+*/
 /*
 * extension[vsdmFestzuschusshoeheEX].url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMFestzuschusshoeheEX"
 * extension[vsdmFestzuschusshoeheEX].valueCoding = https://gematik.de/fhir/vsdm2/CodeSystem/VSDMFestzuschusshoeheCS#1 "70 % / fünf Jahre durchgehend"

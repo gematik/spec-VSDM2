@@ -40,6 +40,8 @@ Id: vsdm-bundle
 
 
 // Beispielgenerierung
+/*
+// TODO
 Instance: Vsdm2BundleSample
 InstanceOf: VSDMBundle
 Title: "GKV VSDM 2 Bundle"
@@ -64,3 +66,5 @@ Usage: #example
 * signature.who.identifier.value = "12345678"
 * signature.sigFormat = #application/pkcs7-mime
 * signature.data = "dGhpcyBibG9iIGlzIHNuaXBwZWQ="
+
+*/

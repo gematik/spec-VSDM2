@@ -8,8 +8,8 @@ Id: vsdm-kostenerstattung-ex
 * url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostenerstattungEX" (exactly)
 
 * extension contains
-    $kostenerstattung named kostenerstattung 0..1 and
-    kostenerstattung-angagabe 1..1 MS 
+    $kostenerstattung named gkv-kostenerstattung 0..1 and
+    kostentraeger-angabestatus 1..1 MS
 
 /*
 * extension contains
