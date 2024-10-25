@@ -14,14 +14,28 @@ Id: vsdm-coverage
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
-    VSDMFestzuschusshoeheEX named vsdmFestzuschusshoeheEX 0..1 and
     $versichertenart named versichertenart 0..1 and
     $kostenerstattung named kostenerstattung 0..1 and
+    $ruhender-leistungsanspruch named ruhenderLeistungsanspruch 0..1 and
     $wop named wop 0..1 and
     $besondere-personengruppe named besonderePersonengruppe 0..1 and
-    $dmp-kennzeichen named dmpKennzeichen 0..1 and
-    $ruhender-leistungsanspruch named ruhenderLeistungsanspruch 0..1 and
-    $zuzahlungsstatus named zuzahlungsstatus 0..1
+    $zuzahlungsstatus named zuzahlungsstatus 0..1 and
+    VSDMDMPKennzeichenEX named dmpKennzeichen 0..*
+    /*
+       kennzeichen ob ja/nein
+    - WT
+    - zuzahlungsstatus
+    - dmp
+    - ruhenderLeistungsanspruch
+    - kostenerstattung
+
+    // TODO: Wahltarif
+    Wahltarif
+        wt
+        wt-period
+        wt-vertragskennzeichnen
+
+*/
 
 * beneficiary only Reference(VSDMPatient)
 * beneficiary 1..1
