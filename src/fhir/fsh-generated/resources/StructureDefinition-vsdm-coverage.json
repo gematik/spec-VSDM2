@@ -34,6 +34,7 @@
         "id": "Coverage.extension:versichertenart",
         "path": "Coverage.extension",
         "sliceName": "versichertenart",
+        "short": "Versichertenart",
         "min": 0,
         "max": "1",
         "type": [
@@ -46,14 +47,10 @@
         ]
       },
       {
-        "id": "Coverage.extension:versichertenart.url",
-        "path": "Coverage.extension.url",
-        "mustSupport": true
-      },
-      {
         "id": "Coverage.extension:wop",
         "path": "Coverage.extension",
         "sliceName": "wop",
+        "short": "Wohnortprinzip",
         "min": 0,
         "max": "1",
         "type": [
@@ -66,14 +63,10 @@
         ]
       },
       {
-        "id": "Coverage.extension:wop.url",
-        "path": "Coverage.extension.url",
-        "mustSupport": true
-      },
-      {
         "id": "Coverage.extension:besonderePersonengruppe",
         "path": "Coverage.extension",
         "sliceName": "besonderePersonengruppe",
+        "short": "Besondere Personengruppe",
         "min": 0,
         "max": "1",
         "type": [
@@ -86,14 +79,10 @@
         ]
       },
       {
-        "id": "Coverage.extension:besonderePersonengruppe.url",
-        "path": "Coverage.extension.url",
-        "mustSupport": true
-      },
-      {
         "id": "Coverage.extension:gkv-kostenerstattung",
         "path": "Coverage.extension",
         "sliceName": "gkv-kostenerstattung",
+        "short": "GKV-Kostenerstattung",
         "min": 0,
         "max": "1",
         "type": [
@@ -106,14 +95,10 @@
         ]
       },
       {
-        "id": "Coverage.extension:gkv-kostenerstattung.url",
-        "path": "Coverage.extension.url",
-        "mustSupport": true
-      },
-      {
         "id": "Coverage.extension:ruhenderLeistungsanspruch",
         "path": "Coverage.extension",
         "sliceName": "ruhenderLeistungsanspruch",
+        "short": "Ruhender Leiustungsanspruch",
         "min": 1,
         "max": "1",
         "type": [
@@ -126,14 +111,10 @@
         ]
       },
       {
-        "id": "Coverage.extension:ruhenderLeistungsanspruch.url",
-        "path": "Coverage.extension.url",
-        "mustSupport": true
-      },
-      {
         "id": "Coverage.extension:zuzahlungsstatus",
         "path": "Coverage.extension",
         "sliceName": "zuzahlungsstatus",
+        "short": "Zuzahluungsstatus",
         "min": 1,
         "max": "1",
         "type": [
@@ -144,11 +125,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "Coverage.extension:zuzahlungsstatus.url",
-        "path": "Coverage.extension.url",
-        "mustSupport": true
       },
       {
         "id": "Coverage.extension:vsdm-dmpKennzeichen",
@@ -184,6 +160,7 @@
         "id": "Coverage.extension:vsdm-kostentragerAngabestatus",
         "path": "Coverage.extension",
         "sliceName": "vsdm-kostentragerAngabestatus",
+        "short": "Kostenträgerangabestatus",
         "min": 1,
         "max": "1",
         "type": [
@@ -194,11 +171,6 @@
             ]
           }
         ],
-        "mustSupport": true
-      },
-      {
-        "id": "Coverage.extension:vsdm-kostentragerAngabestatus.url",
-        "path": "Coverage.extension.url",
         "mustSupport": true
       },
       {

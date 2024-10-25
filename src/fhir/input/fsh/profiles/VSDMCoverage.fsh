@@ -23,13 +23,13 @@ Id: vsdm-coverage
     VSDMKostentreagerAngabestatusEX named vsdm-kostentragerAngabestatus 1..1 MS
 
 // For better display on simplifier
-* extension[vsdm-kostentragerAngabestatus].url MS
-* extension[versichertenart].url MS
-* extension[wop].url MS
-* extension[besonderePersonengruppe].url MS
-* extension[gkv-kostenerstattung].url MS
-* extension[ruhenderLeistungsanspruch].url MS
-* extension[zuzahlungsstatus].url MS
+* extension[vsdm-kostentragerAngabestatus] ^short = "Kostenträgerangabestatus"
+* extension[versichertenart] ^short = "Versichertenart"
+* extension[wop] ^short = "Wohnortprinzip"
+* extension[besonderePersonengruppe] ^short = "Besondere Personengruppe"
+* extension[gkv-kostenerstattung] ^short = "GKV-Kostenerstattung"
+* extension[ruhenderLeistungsanspruch] ^short = "Ruhender Leiustungsanspruch"
+* extension[zuzahlungsstatus] ^short = "Zuzahluungsstatus"
 
 * beneficiary only Reference(VSDMPatient)
 * beneficiary 1..1
