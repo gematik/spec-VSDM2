@@ -24,7 +24,16 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Gibt ein Kennzeichen für die Rechtsgrundlage des jeweiligen Wahltarifs an"
+        "short": "Gibt ein Kennzeichen für die Rechtsgrundlage des jeweiligen Wahltarifs an",
+        "constraint": [
+          {
+            "key": "wahltarif-ex-vertragskennzeichen-bei-73b",
+            "severity": "error",
+            "human": "Vertragskennzeichens bei Wahltarif muss angegeben werden, wenn Wahltarif nach §73b SGB V besteht",
+            "expression": "extension('wahltarif').valueCoding.code == '1' implies extension('wahltarif-vertragskennzeichen').exists() extension('wahltarif-vertragskennzeichen').valueString.empty().not()",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMWahltarifeEX"
+          }
+        ]
       },
       {
         "id": "Extension.extension",

@@ -7,7 +7,7 @@ CodeSystem-vsdm-errorcode-cs.json                           VSDMErrorcodeCS     
 CodeSystem-vsdm-festzuschusshoehe-cs.json                   VSDMFestzuschusshoeheCS          CodeSystem  codesystems/VSDMFestzuschusshoeheCS.fsh         1 - 15
 CodeSystem-vsdm-gkvwohnortprinzip-cs.json                   VSDMGKVWohnortprinzipCS          CodeSystem  codesystems/VSDMGKVWohnortprinzipCS.fsh         1 - 29
 CodeSystem-vsdm-versichertenart-cs.json                     VSDMVersichertenartCS            CodeSystem  codesystems/VSDMVersichertenartCS.fsh           1 - 14
-CodeSystem-vsdm-wahltarife-cs.json                          VSDMWahltarifeCS                 CodeSystem  codesystems/VSDMWahltarifeCS.fsh                1 - 14
+CodeSystem-vsdm-wahltarife-cs.json                          VSDMWahltarifeCS                 CodeSystem  codesystems/VSDMWahltarifeCS.fsh                1 - 13
 Coverage-2d4da53a-413a-48fe-b908-2e67b5761523.json          VSDMCoverageSample               Instance    profiles/VSDMCoverage.fsh                       51 - 66
 Patient-437f2555-2396-4c64-a656-e9553161ca3c.json           VSDMPatientSample                Instance    profiles/VSDMPatient.fsh                        24 - 47
 StructureDefinition-vsdm-besonderepersonengruppe-ex.json    VSDMBesonderePersonengruppeEX    Extension   extensions/VSDMBesonderePersonengruppeEX.fsh    1 - 12
@@ -25,7 +25,7 @@ StructureDefinition-vsdm-patient.json                       VSDMPatient         
 StructureDefinition-vsdm-ruhenderleistungsanspruch-ex.json  VSDMRuhenderLeistungsanspruchEX  Extension   extensions/VSDMRuhenderLeistungsanspruchEX.fsh  1 - 28
 StructureDefinition-vsdm-selektivvertraege-ex.json          VSDMSelektivvertraegeEX          Extension   extensions/VSDMSelektivvertaegeEX.fsh           1 - 20
 StructureDefinition-vsdm-versichertenart-ex.json            VSDMVersichertenartEX            Extension   extensions/VSDMVersichertenartEX.fsh            1 - 12
-StructureDefinition-vsdm-wahltarife-ex.json                 VSDMWahltarifeEX                 Extension   extensions/VSDMWahltarifeEX.fsh                 1 - 33
+StructureDefinition-vsdm-wahltarife-ex.json                 VSDMWahltarifeEX                 Extension   extensions/VSDMWahltarifeEX.fsh                 1 - 35
 StructureDefinition-vsdm-zuzahlungsstatus-ex.json           VSDMZuzahlungsstatusEX           Extension   extensions/VSDMZuzahlungsstatusEX.fsh           1 - 21
 ValueSet-vsdm-besonderepersonengruppe-vs.json               VSDMBesonderePersonengruppeVS    ValueSet    valuesets/VSDMBesonderePersonengruppeVS.fsh     1 - 7
 ValueSet-vsdm-dmp-kennzeichen-vs.json                       VSDMDMPKennzeichenVS             ValueSet    valuesets/VSDMDMPKennzeichenVS.fsh              1 - 7

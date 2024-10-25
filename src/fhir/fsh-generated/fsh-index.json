@@ -69,7 +69,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMWahltarifeCS.fsh",
     "startLine": 1,
-    "endLine": 14
+    "endLine": 13
   },
   {
     "outputFile": "Coverage-2d4da53a-413a-48fe-b908-2e67b5761523.json",
@@ -213,7 +213,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMWahltarifeEX.fsh",
     "startLine": 1,
-    "endLine": 33
+    "endLine": 35
   },
   {
     "outputFile": "StructureDefinition-vsdm-zuzahlungsstatus-ex.json",

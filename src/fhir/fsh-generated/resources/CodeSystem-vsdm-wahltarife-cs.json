@@ -9,16 +9,16 @@
   "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMWahltarifeCS",
   "concept": [
     {
-      "code": "0",
-      "display": "1 = § 73b SGB V"
-    },
-    {
       "code": "1",
-      "display": "2 = § 140a SGB V"
+      "display": "§73b SGB V"
     },
     {
       "code": "2",
-      "display": "3 = Sonstige Verträge"
+      "display": "§140a SGB V"
+    },
+    {
+      "code": "3",
+      "display": "Sonstige Verträge"
     }
   ],
   "experimental": false,

@@ -5,6 +5,8 @@ Id: vsdm-wahltarife-ex
 * . ^short = "Gibt ein Kennzeichen für die Rechtsgrundlage des jeweiligen Wahltarifs an"
 * url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMWahltarifeEX" (exactly)
 
+* obeys wahltarif-ex-vertragskennzeichen-bei-73b
+
 * extension contains
     wahltarif 1..1 MS and
     wahltarif-zeitraum 1..1 MS and
@@ -32,6 +34,10 @@ Id: vsdm-wahltarife-ex
 * extension[wahltarif-vertragskennzeichen].valueString ^short = "Vertragskennzeichnen des Wahltarifs"
 * extension[wahltarif-vertragskennzeichen].valueString ^comment = "Länge des Strings ist maximal 25 Zeichen"
 
+Invariant: wahltarif-ex-vertragskennzeichen-bei-73b
+Description: "Vertragskennzeichens bei Wahltarif muss angegeben werden, wenn Wahltarif nach §73b SGB V besteht"
+Expression: "extension('wahltarif').valueCoding.code == '1' implies extension('wahltarif-vertragskennzeichen').exists() extension('wahltarif-vertragskennzeichen').valueString.empty().not()"
+Severity: #error
 
-//TODO Constraint vertragskennzeichnen nur bei 73b (1)
+// TODO: Positiv + Negativ Beispiel erstellen
 
