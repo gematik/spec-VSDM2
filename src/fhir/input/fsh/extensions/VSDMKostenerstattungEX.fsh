@@ -7,7 +7,11 @@ Id: vsdm-kostenerstattung-ex
 * . ^short = "Gibt an, ob der Kostenträger den Nachweis der Inanspruchnahme von Leisrungen der Abrechnungsart Kostnerstattung in den VSD speichert"
 * url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostenerstattungEX" (exactly)
 
+* extension contains
+    $kostenerstattung named kostenerstattung 0..1 and
+    kostenerstattung-angagabe 1..1 MS 
 
+/*
 * extension contains
     aerztlicheVersorgung 0..1 and
     zahnaerztlicheVersorgung 0..1 and
@@ -23,3 +27,4 @@ Id: vsdm-kostenerstattung-ex
 * extension[veranlassteLeistungen] ^definition = "Gibt die vom versicherten gewählte Kostenerstattung für veranlasste Leistungen an:\r\ntrue = Kostenerstattung\r\nfalse = keine Kostenerstattung"
 * extension[veranlassteLeistungen].value[x] only boolean
 * url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostenerstattungEX" (exactly)
+*/

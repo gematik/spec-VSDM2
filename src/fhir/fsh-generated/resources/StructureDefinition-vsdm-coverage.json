@@ -41,17 +41,36 @@
         ]
       },
       {
-        "id": "Coverage.extension:kostenerstattung",
+        "id": "Coverage.extension:vsdm-kostenerstattung",
         "path": "Coverage.extension",
-        "sliceName": "kostenerstattung",
+        "sliceName": "vsdm-kostenerstattung",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "http://fhir.de/StructureDefinition/gkv/kostenerstattung"
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostenerstattungEX"
             ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:vsdm-kostenerstattung.extension:kostenerstattung-angagabe",
+        "path": "Coverage.extension.extension",
+        "sliceName": "kostenerstattung-angagabe"
+      },
+      {
+        "id": "Coverage.extension:vsdm-kostenerstattung.extension:kostenerstattung-angagabe.extension",
+        "path": "Coverage.extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.extension:vsdm-kostenerstattung.extension:kostenerstattung-angagabe.value[x]",
+        "path": "Coverage.extension.extension.value[x]",
+        "type": [
+          {
+            "code": "boolean"
           }
         ]
       },

@@ -76,8 +76,8 @@
     "fshName": "VSDMCoverageSample",
     "fshType": "Instance",
     "fshFile": "profiles/VSDMCoverage.fsh",
-    "startLine": 51,
-    "endLine": 66
+    "startLine": 58,
+    "endLine": 73
   },
   {
     "outputFile": "Patient-437f2555-2396-4c64-a656-e9553161ca3c.json",
@@ -125,7 +125,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
-    "endLine": 49
+    "endLine": 56
   },
   {
     "outputFile": "StructureDefinition-vsdm-dmp-kennzeichen-ex.json",
@@ -157,7 +157,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMKostenerstattungEX.fsh",
     "startLine": 1,
-    "endLine": 25
+    "endLine": 12
   },
   {
     "outputFile": "StructureDefinition-vsdm-namenszusatz-ex.json",
@@ -213,7 +213,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMWahltarifeEX.fsh",
     "startLine": 1,
-    "endLine": 35
+    "endLine": 36
   },
   {
     "outputFile": "StructureDefinition-vsdm-zuzahlungsstatus-ex.json",

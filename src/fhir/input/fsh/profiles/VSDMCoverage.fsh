@@ -8,29 +8,36 @@ Id: vsdm-coverage
 * status = #active (exactly)
 * type 1..1
 * type from $versicherungsart-de-basis (required)
-* type ^short = "Versicherungsart"
-* type ^definition = "Art der Versicherung: Selbstzahler, gesetzliche/private Versicherung, Berufsgenossenschaft oder Sozialamt"
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #open
+  * ^short = "Versicherungsart"
+  * ^definition = "Art der Versicherung: Selbstzahler, gesetzliche/private Versicherung, Berufsgenossenschaft oder Sozialamt"
+
 * extension contains
     $versichertenart named versichertenart 0..1 and
-    $kostenerstattung named kostenerstattung 0..1 and
+    VSDMKostenerstattungEX named vsdm-kostenerstattung 0..1 and
     $ruhender-leistungsanspruch named ruhenderLeistungsanspruch 0..1 and
     $wop named wop 0..1 and
     $besondere-personengruppe named besonderePersonengruppe 0..1 and
     $zuzahlungsstatus named zuzahlungsstatus 0..1 and
     VSDMDMPKennzeichenEX named dmpKennzeichen 0..* and 
     VSDMWahltarifeEX named wahltarife 0..*
+
+* extension[vsdm-kostenerstattung].extension[kostenerstattung-angagabe].value[x] only boolean
     /*
-       kennzeichen ob ja/nein
+    kennzeichen ob ja/nein
+
+    - Extesion KlammerDMP
+      - DMP
+      - supportDMP
+
+    - Extension unterstuetze-extensions
+      - WT
+      - DMP
+
     - WT
     - zuzahlungsstatus
     - dmp
     - ruhenderLeistungsanspruch
     - kostenerstattung
-
-
 */
 
 * beneficiary only Reference(VSDMPatient)
