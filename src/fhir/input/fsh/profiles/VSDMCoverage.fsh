@@ -22,10 +22,15 @@ Id: vsdm-coverage
     VSDMWahltarifeEX named vsdm-wahltarife 0..*
 
 * extension[vsdm-kostenerstattung].extension[kostentraeger-angabestatus].value[x] only boolean
+* extension[vsdm-kostenerstattung].extension[kostentraeger-angabestatus].value[x] 1..1 MS
 * extension[vsdm-dmpKennzeichen].extension[kostentraeger-angabestatus].value[x] only boolean
+* extension[vsdm-dmpKennzeichen].extension[kostentraeger-angabestatus].value[x] 1..1 MS
 * extension[vsdm-ruhenderLeistungsanspruch].extension[kostentraeger-angabestatus].value[x] only boolean
+* extension[vsdm-ruhenderLeistungsanspruch].extension[kostentraeger-angabestatus].value[x] 1..1 MS
 * extension[vsdm-zuzahlungsstatus].extension[kostentraeger-angabestatus].value[x] only boolean
+* extension[vsdm-zuzahlungsstatus].extension[kostentraeger-angabestatus].value[x] 1..1 MS
 * extension[vsdm-wahltarife].extension[kostentraeger-angabestatus].value[x] only boolean
+* extension[vsdm-wahltarife].extension[kostentraeger-angabestatus].value[x] 1..1 MS
 
 * beneficiary only Reference(VSDMPatient)
 * beneficiary 1..1

@@ -109,7 +109,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
-    "endLine": 43
+    "endLine": 48
   },
   {
     "outputFile": "StructureDefinition-vsdm-dmp-kennzeichen-ex.json",

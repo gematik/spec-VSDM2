@@ -103,11 +103,13 @@
       {
         "id": "Coverage.extension:vsdm-kostenerstattung.extension:kostentraeger-angabestatus.value[x]",
         "path": "Coverage.extension.extension.value[x]",
+        "min": 1,
         "type": [
           {
             "code": "boolean"
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:vsdm-ruhenderLeistungsanspruch",
@@ -137,11 +139,13 @@
       {
         "id": "Coverage.extension:vsdm-ruhenderLeistungsanspruch.extension:kostentraeger-angabestatus.value[x]",
         "path": "Coverage.extension.extension.value[x]",
+        "min": 1,
         "type": [
           {
             "code": "boolean"
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:vsdm-zuzahlungsstatus",
@@ -171,11 +175,13 @@
       {
         "id": "Coverage.extension:vsdm-zuzahlungsstatus.extension:kostentraeger-angabestatus.value[x]",
         "path": "Coverage.extension.extension.value[x]",
+        "min": 1,
         "type": [
           {
             "code": "boolean"
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:vsdm-dmpKennzeichen",
@@ -205,11 +211,13 @@
       {
         "id": "Coverage.extension:vsdm-dmpKennzeichen.extension:kostentraeger-angabestatus.value[x]",
         "path": "Coverage.extension.extension.value[x]",
+        "min": 1,
         "type": [
           {
             "code": "boolean"
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:vsdm-wahltarife",
@@ -239,11 +247,13 @@
       {
         "id": "Coverage.extension:vsdm-wahltarife.extension:kostentraeger-angabestatus.value[x]",
         "path": "Coverage.extension.extension.value[x]",
+        "min": 1,
         "type": [
           {
             "code": "boolean"
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.status",
