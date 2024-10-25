@@ -22,6 +22,8 @@ Id: vsdm-coverage
     VSDMWahltarifeEX named vsdm-wahltarife 0..* and
     VSDMKostentreagerAngabestatusEX named vsdm-kostentragerAngabestatus 1..1 MS
 
+* extension[vsdm-kostentragerAngabestatus].value[x] MS
+
 * beneficiary only Reference(VSDMPatient)
 * beneficiary 1..1
 * beneficiary.reference 1..1

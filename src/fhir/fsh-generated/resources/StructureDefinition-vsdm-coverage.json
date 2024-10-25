@@ -167,6 +167,11 @@
         "mustSupport": true
       },
       {
+        "id": "Coverage.extension:vsdm-kostentragerAngabestatus.value[x]",
+        "path": "Coverage.extension.value[x]",
+        "mustSupport": true
+      },
+      {
         "id": "Coverage.status",
         "path": "Coverage.status",
         "fixedCode": "active"
