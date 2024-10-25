@@ -8,7 +8,7 @@ Usage: #example
 * extension[vsdm-wahltarife].extension[wahltarif].valueCoding = VSDMWahltarifeCS#1
 * extension[vsdm-wahltarife].extension[wahltarif-vertragskennzeichen].valueString = "Test Kommentar"
 
-/*
+
 Instance: VALID-VSDMCoverageSample
 InstanceOf: VSDMCoverage
 Title:   "Coverage for VSDM 2 Query"
@@ -17,14 +17,6 @@ Usage: #example
 * insert ExampleCoverage
 * extension[vsdm-wahltarife].extension[wahltarif].valueCoding = VSDMWahltarifeCS#2
 
-Instance: INVALID-VSDMCoverageSample
-InstanceOf: VSDMCoverage
-Title:   "Invalide Coverage für Wahltarif"
-Usage: #example
-* id = "INVALID-322b-4bbd-9c8b-6b0340075a0d"
-* insert ExampleCoverage
-* extension[vsdm-wahltarife].extension[wahltarif].valueCoding = VSDMWahltarifeCS#1
-*/
 
 RuleSet: ExampleCoverage
 * type.coding = $versichertenart-de-basis-cs#GKV

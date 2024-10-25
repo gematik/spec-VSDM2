@@ -5,6 +5,7 @@ CodeSystem-vsdm-ruhenderLeistungsanspruch-cs.json           VSDMRuhenderLeistung
 CodeSystem-vsdm-wahltarife-cs.json                          VSDMWahltarifeCS                 CodeSystem  codesystems/VSDMWahltarifeCS.fsh                 1 - 13
 CodeSystem-vsdmkostentreager-angabestatus-cs.json           VSDMKostentreagerAngabestatusCS  CodeSystem  codesystems/VSDMKostentreagerAngabestatusCS.fsh  1 - 14
 Coverage-2d4da53a-413a-48fe-b908-2e67b5761523.json          VSDMCoverageSample               Instance    examples/ExampleVSDMCoverage.fsh                 2 - 9
+Coverage-VALID-413a-48fe-b908-2e67b5761523.json             VALID-VSDMCoverageSample         Instance    examples/ExampleVSDMCoverage.fsh                 12 - 18
 Patient-437f2555-2396-4c64-a656-e9553161ca3c.json           VSDMPatientSample                Instance    profiles/VSDMPatient.fsh                         36 - 59
 StructureDefinition-vsdm-bundle.json                        VSDMBundle                       Profile     profiles/VSDMBundle.fsh                          1 - 39
 StructureDefinition-vsdm-composition.json                   VSDMComposition                  Profile     profiles/VSDMComposition.fsh                     1 - 20

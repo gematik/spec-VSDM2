@@ -48,6 +48,14 @@
     "endLine": 9
   },
   {
+    "outputFile": "Coverage-VALID-413a-48fe-b908-2e67b5761523.json",
+    "fshName": "VALID-VSDMCoverageSample",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleVSDMCoverage.fsh",
+    "startLine": 12,
+    "endLine": 18
+  },
+  {
     "outputFile": "Patient-437f2555-2396-4c64-a656-e9553161ca3c.json",
     "fshName": "VSDMPatientSample",
     "fshType": "Instance",
