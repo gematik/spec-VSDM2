@@ -26,7 +26,7 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "value",
+              "type": "pattern",
               "path": "details.coding.system"
             }
           ],
@@ -74,7 +74,8 @@
       {
         "id": "OperationOutcome.issue:vsdm-error.details.coding.system",
         "path": "OperationOutcome.issue.details.coding.system",
-        "min": 1
+        "min": 1,
+        "patternUri": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS"
       },
       {
         "id": "OperationOutcome.issue:vsdm-error.details.coding.code",

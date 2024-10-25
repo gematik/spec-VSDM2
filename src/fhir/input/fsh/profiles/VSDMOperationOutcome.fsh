@@ -6,7 +6,7 @@ Id: vsdm-operationoutcome
 * meta.profile = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome" (exactly)
 
 * issue MS
-  * ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "details.coding.system"
   * ^slicing.rules = #open
   * ^slicing.description = "Slicing der OperationOutcome Issues"
@@ -23,6 +23,7 @@ Id: vsdm-operationoutcome
     * coding 1..1
     * coding from VSDMErrorcodeVS (required)
       * system 1..1
+      * system = "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS"
       * code 1..1
       * code ^short = "Errorcode"
       * code ^definition = "Errorcode"

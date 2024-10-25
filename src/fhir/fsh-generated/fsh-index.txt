@@ -9,7 +9,7 @@ StructureDefinition-vsdm-contactpoint-timessenger.json      VSDMContactPointTIMe
 StructureDefinition-vsdm-coverage.json                      VSDMCoverage                     Profile     profiles/VSDMCoverage.fsh                        1 - 48
 StructureDefinition-vsdm-dmp-kennzeichen-ex.json            VSDMDMPKennzeichenEX             Extension   extensions/VSDMDMPKennzeichen.fsh                1 - 26
 StructureDefinition-vsdm-kostenerstattung-ex.json           VSDMKostenerstattungEX           Extension   extensions/VSDMKostenerstattungEX.fsh            1 - 12
-StructureDefinition-vsdm-operationoutcome.json              VSDMOperationOutcome             Profile     profiles/VSDMOperationOutcome.fsh                1 - 32
+StructureDefinition-vsdm-operationoutcome.json              VSDMOperationOutcome             Profile     profiles/VSDMOperationOutcome.fsh                1 - 33
 StructureDefinition-vsdm-patient.json                       VSDMPatient                      Profile     profiles/VSDMPatient.fsh                         1 - 26
 StructureDefinition-vsdm-ruhenderleistungsanspruch-ex.json  VSDMRuhenderLeistungsanspruchEX  Extension   extensions/VSDMRuhenderLeistungsanspruchEX.fsh   1 - 14
 StructureDefinition-vsdm-wahltarife-ex.json                 VSDMWahltarifeEX                 Extension   extensions/VSDMWahltarifeEX.fsh                  1 - 37
