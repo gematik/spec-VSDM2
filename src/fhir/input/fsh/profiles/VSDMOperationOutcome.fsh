@@ -25,8 +25,8 @@ Id: vsdm-operationoutcome
       * system 1..1
       * system = "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS"
       * code 1..1
-      * code ^short = "Errorcode"
-      * code ^definition = "Errorcode"
+        * ^short = "Errorcode"
+        * ^definition = "Errorcode"
       * display 1..1
       * display ^short = "Errortext"
     * text 0..1

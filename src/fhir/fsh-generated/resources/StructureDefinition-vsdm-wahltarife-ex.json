@@ -38,7 +38,7 @@
       {
         "id": "Extension.extension",
         "path": "Extension.extension",
-        "min": 4
+        "min": 3
       },
       {
         "id": "Extension.extension:wahltarif",
@@ -150,19 +150,6 @@
             "code": "string"
           }
         ]
-      },
-      {
-        "id": "Extension.extension:wahltarif-kostentraeger-angabestatus",
-        "path": "Extension.extension",
-        "sliceName": "wahltarif-kostentraeger-angabestatus",
-        "min": 1,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "Extension.extension:wahltarif-kostentraeger-angabestatus.url",
-        "path": "Extension.extension.url",
-        "fixedUri": "wahltarif-kostentraeger-angabestatus"
       },
       {
         "id": "Extension.extension:kostentraeger-angabestatus",

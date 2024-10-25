@@ -1,0 +1,167 @@
+{
+  "resourceType": "Coverage",
+  "id": "2d4da53a-413a-48fe-b908-2e67b5761523",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+    ]
+  },
+  "status": "active",
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMZuzahlungsstatusEX",
+      "extension": [
+        {
+          "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
+          "extension": [
+            {
+              "url": "status",
+              "valueBoolean": true
+            }
+          ]
+        },
+        {
+          "url": "kostentraeger-angabestatus",
+          "valueBoolean": true
+        }
+      ]
+    },
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
+      "valueCoding": {
+        "code": "1",
+        "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS"
+      }
+    },
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/wop",
+      "valueCoding": {
+        "code": "72",
+        "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP"
+      }
+    },
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe",
+      "valueCoding": {
+        "code": "06",
+        "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE"
+      }
+    },
+    {
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "aerztlicheVersorgung",
+              "valueBoolean": true
+            }
+          ],
+          "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung"
+        },
+        {
+          "url": "kostentraeger-angabestatus",
+          "valueBoolean": true
+        }
+      ],
+      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostenerstattungEX"
+    },
+    {
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "art",
+              "valueCoding": {
+                "code": "1"
+              }
+            },
+            {
+              "url": "dauer"
+            }
+          ],
+          "url": "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch"
+        },
+        {
+          "url": "kostentraeger-angabestatus",
+          "valueBoolean": true
+        }
+      ],
+      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMRuhenderLeistungsanspruchEX"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://fhir.de/StructureDefinition/gkv/dmp-kennzeichen",
+          "valueCoding": {
+            "code": "01",
+            "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP"
+          }
+        },
+        {
+          "url": "dmp-zeitraum",
+          "valuePeriod": {
+            "start": "2022-05-05"
+          }
+        },
+        {
+          "url": "kostentraeger-angabestatus",
+          "valueBoolean": true
+        },
+        {
+          "url": "digitales-dmp",
+          "valueBoolean": true
+        }
+      ],
+      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenEX"
+    },
+    {
+      "extension": [
+        {
+          "url": "wahltarif-zeitraum",
+          "valuePeriod": {
+            "start": "2022-05-05"
+          }
+        },
+        {
+          "url": "wahltarif",
+          "valueCoding": {
+            "code": "1",
+            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMWahltarifeCS"
+          }
+        },
+        {
+          "url": "kostentraeger-angabestatus",
+          "valueBoolean": true
+        },
+        {
+          "url": "wahltarif-vertragskennzeichen",
+          "valueString": "Test Kommentar"
+        }
+      ],
+      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMWahltarifeEX"
+    }
+  ],
+  "payor": [
+    {
+      "identifier": {
+        "system": "http://fhir.de/sid/arge-ik/iknr",
+        "value": "12345678"
+      },
+      "display": "Test GKV Krankenkasse"
+    }
+  ],
+  "type": {
+    "coding": [
+      {
+        "code": "GKV"
+      }
+    ]
+  },
+  "period": {
+    "start": "2022-04-01",
+    "end": "2027-07-31"
+  },
+  "beneficiary": {
+    "reference": "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
+  }
+}

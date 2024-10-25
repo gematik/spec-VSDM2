@@ -20,3 +20,11 @@ Alias: $dmp-kennzeichen = http://fhir.de/StructureDefinition/gkv/dmp-kennzeichen
 Alias: $ruhender-leistungsanspruch = http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch
 Alias: $zuzahlungsstatus = http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus
 Alias: $AbrechnendeIK = http://fhir.de/StructureDefinition/AbrechnendeIK
+
+// KBV Schlüsseltabellen
+Alias: $KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS
+Alias: $KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS
+Alias: $KBV_CS_SFHIR_ITA_WOP = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP
+Alias: $KBV_CS_SFHIR_KBV_PERSONENGRUPPE = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE
+Alias: $KBV_CS_SFHIR_KBV_DMP = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP
+Alias: $KBV_CS_SFHIR_KBV_DMP = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP

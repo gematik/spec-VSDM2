@@ -1,5 +1,13 @@
 [
   {
+    "outputFile": "Bundle-9b6ac30d-246d-4eab-af83-544564792089.json",
+    "fshName": "Vsdm2BundleSample",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleVSDMBundle.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
     "outputFile": "CodeSystem-vsdm-errorcode-cs.json",
     "fshName": "VSDMErrorcodeCS",
     "fshType": "CodeSystem",
@@ -22,6 +30,30 @@
     "fshFile": "codesystems/VSDMWahltarifeCS.fsh",
     "startLine": 1,
     "endLine": 13
+  },
+  {
+    "outputFile": "Coverage-2d4da53a-413a-48fe-b908-2e67b5761523.json",
+    "fshName": "VSDMCoverageSample",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleCSDMCoverage.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "Coverage-INVALID-322b-4bbd-9c8b-6b0340075a0d.json",
+    "fshName": "INVALID-VSDMCoverageSample",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleCSDMCoverage.fsh",
+    "startLine": 18,
+    "endLine": 24
+  },
+  {
+    "outputFile": "Coverage-VALID-413a-48fe-b908-2e67b5761523.json",
+    "fshName": "VALID-VSDMCoverageSample",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleCSDMCoverage.fsh",
+    "startLine": 10,
+    "endLine": 16
   },
   {
     "outputFile": "Patient-437f2555-2396-4c64-a656-e9553161ca3c.json",
@@ -61,7 +93,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
-    "endLine": 48
+    "endLine": 46
   },
   {
     "outputFile": "StructureDefinition-vsdm-dmp-kennzeichen-ex.json",
@@ -109,7 +141,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMWahltarifeEX.fsh",
     "startLine": 1,
-    "endLine": 37
+    "endLine": 36
   },
   {
     "outputFile": "StructureDefinition-vsdm-zuzahlungsstatus-ex.json",

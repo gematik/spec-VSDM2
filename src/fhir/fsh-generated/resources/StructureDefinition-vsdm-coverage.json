@@ -103,7 +103,6 @@
       {
         "id": "Coverage.extension:vsdm-kostenerstattung.extension:kostentraeger-angabestatus.value[x]",
         "path": "Coverage.extension.extension.value[x]",
-        "min": 1,
         "type": [
           {
             "code": "boolean"
@@ -139,7 +138,6 @@
       {
         "id": "Coverage.extension:vsdm-ruhenderLeistungsanspruch.extension:kostentraeger-angabestatus.value[x]",
         "path": "Coverage.extension.extension.value[x]",
-        "min": 1,
         "type": [
           {
             "code": "boolean"
@@ -175,7 +173,6 @@
       {
         "id": "Coverage.extension:vsdm-zuzahlungsstatus.extension:kostentraeger-angabestatus.value[x]",
         "path": "Coverage.extension.extension.value[x]",
-        "min": 1,
         "type": [
           {
             "code": "boolean"
@@ -211,7 +208,6 @@
       {
         "id": "Coverage.extension:vsdm-dmpKennzeichen.extension:kostentraeger-angabestatus.value[x]",
         "path": "Coverage.extension.extension.value[x]",
-        "min": 1,
         "type": [
           {
             "code": "boolean"
@@ -247,7 +243,6 @@
       {
         "id": "Coverage.extension:vsdm-wahltarife.extension:kostentraeger-angabestatus.value[x]",
         "path": "Coverage.extension.extension.value[x]",
-        "min": 1,
         "type": [
           {
             "code": "boolean"
@@ -336,6 +331,7 @@
       {
         "id": "Coverage.payor.display",
         "path": "Coverage.payor.display",
+        "short": "Name des Kostenträgers",
         "min": 1
       }
     ]
