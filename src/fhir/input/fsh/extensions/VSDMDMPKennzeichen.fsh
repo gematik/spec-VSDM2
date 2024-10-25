@@ -7,8 +7,6 @@ Id: vsdm-dmp-kennzeichen-ex
 * . ^short = "Gibt die Teilnahme des Versicherten an einem oder mehreren Disease Management Programmen an."
 * url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenEX" (exactly)
 
-
-
 * extension contains
 
 	angabe 1..1 MS and
@@ -29,6 +27,7 @@ Id: vsdm-dmp-kennzeichen-ex
 //* extension[kennzeichen].value[x].system 1..
 //* extension[kennzeichen].value[x].code 1..
 
+/*
 * extension[beginn] ^short = "Datum Beginn DMP"
 * extension[beginn].value[x] only date
 * extension[beginn].value[x] ^short = "Datum Beginn DMP"
@@ -36,6 +35,6 @@ Id: vsdm-dmp-kennzeichen-ex
 * extension[ende] ^short = "Datum Ende DMP"
 * extension[ende].value[x] only date
 * extension[ende].value[x] ^short = "Datum Ende DMP"
-
+*/
 
 

@@ -23,8 +23,6 @@ Id: vsdm-coverage
     $ruhender-leistungsanspruch named ruhenderLeistungsanspruch 0..1 and
     $zuzahlungsstatus named zuzahlungsstatus 0..1
 
-
-
 * beneficiary only Reference(VSDMPatient)
 * beneficiary 1..1
 * beneficiary.reference 1..1
@@ -59,6 +57,8 @@ Usage: #example
 * payor.identifier.value = "12345678"
 * payor.display = "Test GKV Krankenkasse"
 
+
+/*
 * extension[vsdmbesonderepersonengruppe].valueCoding = VSDMBesonderePersonengruppeCS#3
 
 
@@ -88,5 +88,5 @@ Usage: #example
 * extension[vsdmzuzahlungsstatus].extension[status].valueBoolean = true
 * extension[vsdmzuzahlungsstatus].extension[gueltigBis].valueDate = "2025-12-31"
 
-
+*/
 

@@ -1,5 +1,5 @@
 Extension: VSDMWahltarifeEX
-Id: vsdm-versichertenart-ex
+Id: vsdm-wahltarife-ex
 * ^url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMWahltarifeEX"
 * insert Meta
 * ^context.type = #element

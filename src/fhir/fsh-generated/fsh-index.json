@@ -64,12 +64,20 @@
     "endLine": 14
   },
   {
+    "outputFile": "CodeSystem-vsdm-wahltarife-cs.json",
+    "fshName": "VSDMWahltarifeCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMWahltarifeCS.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
     "outputFile": "Coverage-2d4da53a-413a-48fe-b908-2e67b5761523.json",
     "fshName": "VSDMCoverageSample",
     "fshType": "Instance",
     "fshFile": "profiles/VSDMCoverage.fsh",
-    "startLine": 43,
-    "endLine": 108
+    "startLine": 41,
+    "endLine": 58
   },
   {
     "outputFile": "Patient-437f2555-2396-4c64-a656-e9553161ca3c.json",
@@ -117,7 +125,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
-    "endLine": 41
+    "endLine": 39
   },
   {
     "outputFile": "StructureDefinition-vsdm-dmp-kennzeichen-ex.json",
@@ -125,7 +133,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMDMPKennzeichen.fsh",
     "startLine": 1,
-    "endLine": 38
+    "endLine": 22
   },
   {
     "outputFile": "StructureDefinition-vsdm-festzuschusshoehe-ex.json",
@@ -200,6 +208,14 @@
     "endLine": 12
   },
   {
+    "outputFile": "StructureDefinition-vsdm-wahltarife-ex.json",
+    "fshName": "VSDMWahltarifeEX",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMWahltarifeEX.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
     "outputFile": "StructureDefinition-vsdm-zuzahlungsstatus-ex.json",
     "fshName": "VSDMZuzahlungsstatusEX",
     "fshType": "Extension",
@@ -252,6 +268,14 @@
     "fshName": "VSDMVersichertenartVS",
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMVersichertenartVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-vsdm-wahltarife-vs.json",
+    "fshName": "VSDMWahltarifeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMWahltarifeVS.fsh",
     "startLine": 1,
     "endLine": 7
   }

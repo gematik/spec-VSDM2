@@ -173,34 +173,6 @@
               "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMFestzuschusshoeheCS",
               "display": "70 % / fünf Jahre durchgehend"
             }
-          },
-          {
-            "extension": [
-              {
-                "url": "dauer",
-                "valuePeriod": {
-                  "start": "2024-06-01",
-                  "end": "2024-07-01"
-                }
-              },
-              {
-                "url": "art"
-              }
-            ],
-            "url": "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch"
-          },
-          {
-            "extension": [
-              {
-                "url": "status",
-                "valueBoolean": true
-              },
-              {
-                "url": "gueltigBis",
-                "valueDate": "2024-12-31"
-              }
-            ],
-            "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus"
           }
         ],
         "type": {

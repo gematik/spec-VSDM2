@@ -1,8 +1,8 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "vsdm-versichertenart-ex",
-  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMVersichertenartEX",
-  "name": "VSDMVersichertenartEX",
+  "id": "vsdm-wahltarife-ex",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMWahltarifeEX",
+  "name": "VSDMWahltarifeEX",
   "status": "draft",
   "experimental": false,
   "date": "2023-12-31",
@@ -24,7 +24,7 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Gibt die Versichertenart des Versicherten an"
+        "short": "Gibt ein Kennzeichen für die Rechtsgrundlage des jeweiligen Wahltarifs an"
       },
       {
         "id": "Extension.extension",
@@ -34,7 +34,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMVersichertenartEX"
+        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMWahltarifeEX"
       },
       {
         "id": "Extension.value[x]",
@@ -46,7 +46,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMVersichertenartVS"
+          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMWahltarifeVS"
         }
       },
       {
