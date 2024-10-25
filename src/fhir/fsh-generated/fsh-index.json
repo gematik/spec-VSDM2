@@ -5,7 +5,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMErrorcodeCS.fsh",
     "startLine": 1,
-    "endLine": 16
+    "endLine": 19
   },
   {
     "outputFile": "CodeSystem-vsdm-ruhenderLeistungsanspruch-cs.json",
@@ -85,7 +85,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMOperationOutcome.fsh",
     "startLine": 1,
-    "endLine": 22
+    "endLine": 32
   },
   {
     "outputFile": "StructureDefinition-vsdm-patient.json",

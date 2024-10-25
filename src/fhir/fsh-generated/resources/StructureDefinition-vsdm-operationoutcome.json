@@ -23,28 +23,46 @@
       {
         "id": "OperationOutcome.issue",
         "path": "OperationOutcome.issue",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "details.coding.system"
+            }
+          ],
+          "rules": "open",
+          "description": "Slicing der OperationOutcome Issues",
+          "ordered": false
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "OperationOutcome.issue:vsdm-error",
+        "path": "OperationOutcome.issue",
+        "sliceName": "vsdm-error",
+        "min": 0,
         "max": "1",
         "mustSupport": true
       },
       {
-        "id": "OperationOutcome.issue.severity",
+        "id": "OperationOutcome.issue:vsdm-error.severity",
         "path": "OperationOutcome.issue.severity",
-        "definition": "Angabe der Fehlerkategorie",
+        "definition": "Angabe der Schwere des Fehlers",
         "fixedCode": "fatal"
       },
       {
-        "id": "OperationOutcome.issue.code",
+        "id": "OperationOutcome.issue:vsdm-error.code",
         "path": "OperationOutcome.issue.code",
         "mustSupport": true
       },
       {
-        "id": "OperationOutcome.issue.details",
+        "id": "OperationOutcome.issue:vsdm-error.details",
         "path": "OperationOutcome.issue.details",
-        "definition": "nähere Beschreibung des Fehlers",
+        "definition": "Nähere Beschreibung des Fehlers",
         "min": 1
       },
       {
-        "id": "OperationOutcome.issue.details.coding",
+        "id": "OperationOutcome.issue:vsdm-error.details.coding",
         "path": "OperationOutcome.issue.details.coding",
         "min": 1,
         "max": "1",
@@ -54,25 +72,25 @@
         }
       },
       {
-        "id": "OperationOutcome.issue.details.coding.system",
+        "id": "OperationOutcome.issue:vsdm-error.details.coding.system",
         "path": "OperationOutcome.issue.details.coding.system",
         "min": 1
       },
       {
-        "id": "OperationOutcome.issue.details.coding.code",
+        "id": "OperationOutcome.issue:vsdm-error.details.coding.code",
         "path": "OperationOutcome.issue.details.coding.code",
         "short": "Errorcode",
         "definition": "Errorcode",
         "min": 1
       },
       {
-        "id": "OperationOutcome.issue.details.coding.display",
+        "id": "OperationOutcome.issue:vsdm-error.details.coding.display",
         "path": "OperationOutcome.issue.details.coding.display",
         "short": "Errortext",
         "min": 1
       },
       {
-        "id": "OperationOutcome.issue.details.text",
+        "id": "OperationOutcome.issue:vsdm-error.details.text",
         "path": "OperationOutcome.issue.details.text",
         "short": "Errortext für Entwickler"
       }
