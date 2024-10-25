@@ -76,7 +76,10 @@
               }
             },
             {
-              "url": "dauer"
+              "url": "dauer",
+              "valuePeriod": {
+                "start": "2022-05-05"
+              }
             }
           ],
           "url": "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch"
@@ -91,7 +94,7 @@
     {
       "extension": [
         {
-          "url": "http://fhir.de/StructureDefinition/gkv/dmp-kennzeichen",
+          "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenBasisEX",
           "valueCoding": {
             "code": "01",
             "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP"
@@ -149,7 +152,8 @@
   "type": {
     "coding": [
       {
-        "code": "GKV"
+        "code": "GKV",
+        "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis"
       }
     ]
   },

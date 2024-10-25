@@ -35,7 +35,7 @@
     "outputFile": "Coverage-2d4da53a-413a-48fe-b908-2e67b5761523.json",
     "fshName": "VSDMCoverageSample",
     "fshType": "Instance",
-    "fshFile": "examples/ExampleCSDMCoverage.fsh",
+    "fshFile": "examples/ExampleVSDMCoverage.fsh",
     "startLine": 1,
     "endLine": 8
   },
@@ -43,7 +43,7 @@
     "outputFile": "Coverage-INVALID-322b-4bbd-9c8b-6b0340075a0d.json",
     "fshName": "INVALID-VSDMCoverageSample",
     "fshType": "Instance",
-    "fshFile": "examples/ExampleCSDMCoverage.fsh",
+    "fshFile": "examples/ExampleVSDMCoverage.fsh",
     "startLine": 18,
     "endLine": 24
   },
@@ -51,7 +51,7 @@
     "outputFile": "Coverage-VALID-413a-48fe-b908-2e67b5761523.json",
     "fshName": "VALID-VSDMCoverageSample",
     "fshType": "Instance",
-    "fshFile": "examples/ExampleCSDMCoverage.fsh",
+    "fshFile": "examples/ExampleVSDMCoverage.fsh",
     "startLine": 10,
     "endLine": 16
   },
@@ -94,6 +94,14 @@
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
     "endLine": 46
+  },
+  {
+    "outputFile": "StructureDefinition-vsdm-dmp-kennzeichen-basis-ex.json",
+    "fshName": "VSDMDMPKennzeichenBasisEX",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMDMPKennzeichenBasis.fsh",
+    "startLine": 1,
+    "endLine": 11
   },
   {
     "outputFile": "StructureDefinition-vsdm-dmp-kennzeichen-ex.json",

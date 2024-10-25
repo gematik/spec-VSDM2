@@ -41,7 +41,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://fhir.de/StructureDefinition/gkv/dmp-kennzeichen"
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenBasisEX"
             ]
           }
         ],

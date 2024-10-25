@@ -4,6 +4,7 @@ Alias: $identifier-type-de-basis = http://fhir.de/CodeSystem/identifier-type-de-
 Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $loinc = http://loinc.org
+Alias: $versichertenart-de-basis-cs = http://fhir.de/CodeSystem/versicherungsart-de-basis
 
 // in Patient
 Alias: $identifier-kvid-10 = http://fhir.de/StructureDefinition/identifier-kvid-10
@@ -28,3 +29,4 @@ Alias: $KBV_CS_SFHIR_ITA_WOP = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WO
 Alias: $KBV_CS_SFHIR_KBV_PERSONENGRUPPE = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE
 Alias: $KBV_CS_SFHIR_KBV_DMP = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP
 Alias: $KBV_CS_SFHIR_KBV_DMP = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP
+Alias: $KBV_VS_SFHIR_KBV_DMP = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_DMP

@@ -7,7 +7,7 @@ Context: Coverage
 * url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenEX" (exactly)
 
 * extension contains
-	$dmp-kennzeichen named dmpKennzeichen 1..1 MS and
+	VSDMDMPKennzeichenBasisEX named dmpKennzeichen 1..1 MS and
 	dmp-zeitraum 1..1 MS and
 	digitales-dmp 0..1 MS and
 	kostentraeger-angabestatus 1..1 MS

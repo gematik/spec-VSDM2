@@ -25,7 +25,7 @@ Usage: #example
 
 
 RuleSet: ExampleCoverage
-* type.coding.code = #GKV
+* type.coding = $versichertenart-de-basis-cs#GKV
 * period.start = "2022-04-01"
 * period.end = "2027-07-31"
 * beneficiary.reference =  "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
@@ -40,6 +40,7 @@ RuleSet: ExampleCoverage
 * extension[vsdm-kostenerstattung].extension[kostentraeger-angabestatus].valueBoolean = true
 
 * extension[vsdm-ruhenderLeistungsanspruch].extension[ruhenderLeistungsanspruch].extension[art].valueCoding.code = #1
+* extension[vsdm-ruhenderLeistungsanspruch].extension[ruhenderLeistungsanspruch].extension[dauer].valuePeriod.start = "2022-05-05"
 * extension[vsdm-ruhenderLeistungsanspruch].extension[kostentraeger-angabestatus].valueBoolean = true
 
 * extension[vsdm-zuzahlungsstatus].extension[zuzahlungsstatus].extension[status].valueBoolean = true

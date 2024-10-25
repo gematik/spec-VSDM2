@@ -37,7 +37,7 @@ Id: vsdm-wahltarife-ex
 
 Invariant: wahltarif-ex-vertragskennzeichen-bei-73b
 Description: "Vertragskennzeichens bei Wahltarif muss angegeben werden, wenn Wahltarif nach §73b SGB V besteht"
-Expression: "extension('wahltarif').valueCoding.code == '1' implies extension('wahltarif-vertragskennzeichen').exists() extension('wahltarif-vertragskennzeichen').valueString.empty().not()"
+Expression: "extension.where(url = 'wahltarif').valueCoding.code = '1' implies (extension.where(url = 'wahltarif-vertragskennzeichen').exists() and extension.where(url = 'wahltarif-vertragskennzeichen').valueString.empty().not())"
 Severity: #error
 
 // TODO: Positiv + Negativ Beispiel erstellen

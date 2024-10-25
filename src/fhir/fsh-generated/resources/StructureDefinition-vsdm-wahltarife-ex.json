@@ -30,7 +30,7 @@
             "key": "wahltarif-ex-vertragskennzeichen-bei-73b",
             "severity": "error",
             "human": "Vertragskennzeichens bei Wahltarif muss angegeben werden, wenn Wahltarif nach §73b SGB V besteht",
-            "expression": "extension('wahltarif').valueCoding.code == '1' implies extension('wahltarif-vertragskennzeichen').exists() extension('wahltarif-vertragskennzeichen').valueString.empty().not()",
+            "expression": "extension.where(url = 'wahltarif').valueCoding.code = '1' implies (extension.where(url = 'wahltarif-vertragskennzeichen').exists() and extension.where(url = 'wahltarif-vertragskennzeichen').valueString.empty().not())",
             "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMWahltarifeEX"
           }
         ]
