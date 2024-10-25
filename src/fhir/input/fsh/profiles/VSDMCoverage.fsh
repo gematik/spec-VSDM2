@@ -19,7 +19,8 @@ Id: vsdm-coverage
     $ruhender-leistungsanspruch named ruhenderLeistungsanspruch 1..1 and
     $zuzahlungsstatus named zuzahlungsstatus 1..1 and
     VSDMDMPKennzeichenEX named vsdm-dmpKennzeichen 0..* and 
-    VSDMWahltarifeEX named vsdm-wahltarife 0..*
+    VSDMWahltarifeEX named vsdm-wahltarife 0..* and
+    VSDMKostentreagerAngabestatusEX named vsdm-kostentragerAngabestatus 1..1 MS
 
 * beneficiary only Reference(VSDMPatient)
 * beneficiary 1..1

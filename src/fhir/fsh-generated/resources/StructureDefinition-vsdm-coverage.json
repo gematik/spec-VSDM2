@@ -28,7 +28,7 @@
       {
         "id": "Coverage.extension",
         "path": "Coverage.extension",
-        "min": 2
+        "min": 3
       },
       {
         "id": "Coverage.extension:versichertenart",
@@ -149,6 +149,22 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Coverage.extension:vsdm-kostentragerAngabestatus",
+        "path": "Coverage.extension",
+        "sliceName": "vsdm-kostentragerAngabestatus",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentreagerAngabestatusEX"
+            ]
+          }
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.status",

@@ -185,6 +185,21 @@
             ]
           },
           {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentreagerAngabestatusEX",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "dmp",
+                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentreagerAngabestatusCS"
+                },
+                {
+                  "code": "wahltarife",
+                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentreagerAngabestatusCS"
+                }
+              ]
+            }
+          },
+          {
             "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
             "valueCoding": {
               "code": "1",
