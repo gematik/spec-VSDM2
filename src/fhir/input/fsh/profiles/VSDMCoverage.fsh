@@ -22,7 +22,14 @@ Id: vsdm-coverage
     VSDMWahltarifeEX named vsdm-wahltarife 0..* and
     VSDMKostentreagerAngabestatusEX named vsdm-kostentragerAngabestatus 1..1 MS
 
-* extension[vsdm-kostentragerAngabestatus].value[x] MS
+// For better display on simplifier
+* extension[vsdm-kostentragerAngabestatus].url MS
+* extension[versichertenart].url MS
+* extension[wop].url MS
+* extension[besonderePersonengruppe].url MS
+* extension[gkv-kostenerstattung].url MS
+* extension[ruhenderLeistungsanspruch].url MS
+* extension[zuzahlungsstatus].url MS
 
 * beneficiary only Reference(VSDMPatient)
 * beneficiary 1..1

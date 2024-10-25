@@ -46,6 +46,11 @@
         ]
       },
       {
+        "id": "Coverage.extension:versichertenart.url",
+        "path": "Coverage.extension.url",
+        "mustSupport": true
+      },
+      {
         "id": "Coverage.extension:wop",
         "path": "Coverage.extension",
         "sliceName": "wop",
@@ -59,6 +64,11 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Coverage.extension:wop.url",
+        "path": "Coverage.extension.url",
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:besonderePersonengruppe",
@@ -76,6 +86,11 @@
         ]
       },
       {
+        "id": "Coverage.extension:besonderePersonengruppe.url",
+        "path": "Coverage.extension.url",
+        "mustSupport": true
+      },
+      {
         "id": "Coverage.extension:gkv-kostenerstattung",
         "path": "Coverage.extension",
         "sliceName": "gkv-kostenerstattung",
@@ -89,6 +104,11 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Coverage.extension:gkv-kostenerstattung.url",
+        "path": "Coverage.extension.url",
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:ruhenderLeistungsanspruch",
@@ -106,6 +126,11 @@
         ]
       },
       {
+        "id": "Coverage.extension:ruhenderLeistungsanspruch.url",
+        "path": "Coverage.extension.url",
+        "mustSupport": true
+      },
+      {
         "id": "Coverage.extension:zuzahlungsstatus",
         "path": "Coverage.extension",
         "sliceName": "zuzahlungsstatus",
@@ -119,6 +144,11 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Coverage.extension:zuzahlungsstatus.url",
+        "path": "Coverage.extension.url",
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:vsdm-dmpKennzeichen",
@@ -167,8 +197,8 @@
         "mustSupport": true
       },
       {
-        "id": "Coverage.extension:vsdm-kostentragerAngabestatus.value[x]",
-        "path": "Coverage.extension.value[x]",
+        "id": "Coverage.extension:vsdm-kostentragerAngabestatus.url",
+        "path": "Coverage.extension.url",
         "mustSupport": true
       },
       {
