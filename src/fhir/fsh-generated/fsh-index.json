@@ -76,8 +76,8 @@
     "fshName": "VSDMCoverageSample",
     "fshType": "Instance",
     "fshFile": "profiles/VSDMCoverage.fsh",
-    "startLine": 41,
-    "endLine": 58
+    "startLine": 55,
+    "endLine": 70
   },
   {
     "outputFile": "Patient-437f2555-2396-4c64-a656-e9553161ca3c.json",
@@ -125,7 +125,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
-    "endLine": 39
+    "endLine": 53
   },
   {
     "outputFile": "StructureDefinition-vsdm-dmp-kennzeichen-ex.json",
@@ -133,7 +133,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMDMPKennzeichen.fsh",
     "startLine": 1,
-    "endLine": 22
+    "endLine": 25
   },
   {
     "outputFile": "StructureDefinition-vsdm-festzuschusshoehe-ex.json",

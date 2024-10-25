@@ -12,8 +12,8 @@
   "abstract": false,
   "context": [
     {
-      "type": "element",
-      "expression": "Coverage"
+      "expression": "Coverage",
+      "type": "element"
     }
   ],
   "type": "Extension",
@@ -29,68 +29,13 @@
       {
         "id": "Extension.extension",
         "path": "Extension.extension",
-        "min": 1
+        "min": 2
       },
       {
-        "id": "Extension.extension:angabe",
+        "id": "Extension.extension:dmpKennzeichen",
         "path": "Extension.extension",
-        "sliceName": "angabe",
-        "definition": "Gibt an, ob die Kasse die DMP-Kennzeichnung in den VSD befüllt.:\r\ntrue = wird befüllt\r\nfalse = wird nicht befüllt",
+        "sliceName": "dmpKennzeichen",
         "min": 1,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "Extension.extension:angabe.extension",
-        "path": "Extension.extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Extension.extension:angabe.url",
-        "path": "Extension.extension.url",
-        "fixedUri": "angabe"
-      },
-      {
-        "id": "Extension.extension:angabe.value[x]",
-        "path": "Extension.extension.value[x]",
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ]
-      },
-      {
-        "id": "Extension.extension:teilnahme",
-        "path": "Extension.extension",
-        "sliceName": "teilnahme",
-        "definition": "Gibt an, ob der Versicherte an einem DMP-Programm teilnimmt.:\r\ntrue = nimmt teil\r\nfalse = nimmt nicht teil",
-        "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "Extension.extension:teilnahme.extension",
-        "path": "Extension.extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Extension.extension:teilnahme.url",
-        "path": "Extension.extension.url",
-        "fixedUri": "teilnahme"
-      },
-      {
-        "id": "Extension.extension:teilnahme.value[x]",
-        "path": "Extension.extension.value[x]",
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ]
-      },
-      {
-        "id": "Extension.extension:dmpkennzeichen",
-        "path": "Extension.extension",
-        "sliceName": "dmpkennzeichen",
-        "min": 0,
         "max": "1",
         "type": [
           {
@@ -99,32 +44,77 @@
               "http://fhir.de/StructureDefinition/gkv/dmp-kennzeichen"
             ]
           }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:dmp-zeitraum",
+        "path": "Extension.extension",
+        "sliceName": "dmp-zeitraum",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:dmp-zeitraum.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:dmp-zeitraum.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "dmp-zeitraum"
+      },
+      {
+        "id": "Extension.extension:dmp-zeitraum.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Zeitraum der Teilnahme am DMP",
+        "type": [
+          {
+            "code": "Period"
+          }
         ]
       },
       {
-        "id": "Extension.extension:beginn",
+        "id": "Extension.extension:dmp-zeitraum.value[x].start",
+        "path": "Extension.extension.value[x].start",
+        "short": "Startdatum des DMP-Zeitraums",
+        "comment": "Datumsformat in ISO8601 (YYYY-MM-DD)",
+        "min": 1
+      },
+      {
+        "id": "Extension.extension:dmp-zeitraum.value[x].end",
+        "path": "Extension.extension.value[x].end",
+        "short": "Enddatum des DMP-Zeitraums",
+        "comment": "Datumsformat in ISO8601 (YYYY-MM-DD)"
+      },
+      {
+        "id": "Extension.extension:digitales-dmp",
         "path": "Extension.extension",
-        "sliceName": "beginn",
+        "sliceName": "digitales-dmp",
         "min": 0,
         "max": "1",
         "mustSupport": true
       },
       {
-        "id": "Extension.extension:beginn.url",
-        "path": "Extension.extension.url",
-        "fixedUri": "beginn"
+        "id": "Extension.extension:digitales-dmp.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
       },
       {
-        "id": "Extension.extension:ende",
-        "path": "Extension.extension",
-        "sliceName": "ende",
-        "min": 0,
-        "max": "1"
+        "id": "Extension.extension:digitales-dmp.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "digitales-dmp"
       },
       {
-        "id": "Extension.extension:ende.url",
-        "path": "Extension.extension.url",
-        "fixedUri": "ende"
+        "id": "Extension.extension:digitales-dmp.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Information, ob ein digitales DMP vorhanden ist",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
       },
       {
         "id": "Extension.url",

@@ -26,21 +26,6 @@
         "fixedCanonical": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
       },
       {
-        "id": "Coverage.extension:vsdmFestzuschusshoeheEX",
-        "path": "Coverage.extension",
-        "sliceName": "vsdmFestzuschusshoeheEX",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMFestzuschusshoeheEX"
-            ]
-          }
-        ]
-      },
-      {
         "id": "Coverage.extension:versichertenart",
         "path": "Coverage.extension",
         "sliceName": "versichertenart",
@@ -66,6 +51,21 @@
             "code": "Extension",
             "profile": [
               "http://fhir.de/StructureDefinition/gkv/kostenerstattung"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:ruhenderLeistungsanspruch",
+        "path": "Coverage.extension",
+        "sliceName": "ruhenderLeistungsanspruch",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch"
             ]
           }
         ]
@@ -101,36 +101,6 @@
         ]
       },
       {
-        "id": "Coverage.extension:dmpKennzeichen",
-        "path": "Coverage.extension",
-        "sliceName": "dmpKennzeichen",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://fhir.de/StructureDefinition/gkv/dmp-kennzeichen"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Coverage.extension:ruhenderLeistungsanspruch",
-        "path": "Coverage.extension",
-        "sliceName": "ruhenderLeistungsanspruch",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch"
-            ]
-          }
-        ]
-      },
-      {
         "id": "Coverage.extension:zuzahlungsstatus",
         "path": "Coverage.extension",
         "sliceName": "zuzahlungsstatus",
@@ -141,6 +111,21 @@
             "code": "Extension",
             "profile": [
               "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.extension:dmpKennzeichen",
+        "path": "Coverage.extension",
+        "sliceName": "dmpKennzeichen",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenEX"
             ]
           }
         ]
