@@ -1,0 +1,136 @@
+@startuml VSDM 2.0 Sequenzdiagramm
+hide footbox
+
+title VSDM 2.0 Sequenzdiagramm "Versichertenstammdaten und Prüfungsnachweis abrufen"
+
+actor Ver as "Patient"
+actor LE as "LEI-Mitarbeiter"
+participant PS order 1 [
+	=LEI
+	----
+	""Primärsystem""
+]
+participant VSDD_AuthZ order 10 [
+	=VSD-Dienst
+	----
+	""Authorization-Server""
+]
+participant VSDD_Proxy order 11 [
+	=VSD-Dienst
+	----
+	""HTTP-Proxy""
+]
+participant VSDD_Server order 12 [
+	=VSD-Dienst
+	----
+	""Ressource-Server""
+]
+participant PoPP order 20 [
+	=PoPP-Service
+	----
+	""PoPP-Service""
+]
+
+<style>
+  sequenceDiagram {
+    reference {
+      BackGroundColor #ebf5fb
+    }
+}
+</style>
+skinparam SequenceDividerBackgroundColor #d1f2eb
+
+== Start == 
+Ver -> LE: Anmeldung
+activate LE
+alt neuer Patient
+	LE -> PS: Patientenaufnahme
+	activate PS
+	PS -> PS: initialen Patientenstamm generieren 
+end
+LE -> PS: Patientenstamm aufrufen
+deactivate LE
+
+== Versorgungskontext herstellen (nur bei erstmaliger Patientenversorgung im Quartal) ==
+'Versorgungskontext herstellen
+ref over Ver, PoPP : Versorgungskontext mit eGK oder GesundheitsID herstellen (siehe gemSpec_PoPP_Service)
+PoPP -> PS : PoPP-Token mit \nKVNR, IK-Nummer, OID, Zeitstempel
+PS -> PS : PoPP-Token speichern \n(bspw. im Patientenstamm)
+PS -> PS : PoPP-Token dekodieren und KVNR, IK-Nummer \n(bspw. im Patientenstamm) speichern
+
+== Fachdienst VSDM 2.0 Dienstlokalisierung (alle 24 Stunden) ==
+ref over PS, PoPP : Dienstlokalisierung mit FQDN <ik-nummer>.vsdm2.ti-dienste.de
+
+== Versichertenstammdaten abrufen ==
+' VSDD Endpunkte Lokalisieren
+ref over PS, VSDD_Proxy : Endpunkt-Lokalisierung Fachdienst VSDM 2.0 (siehe gemSpec_Zero-Trust)
+'Authentifizierung und AUtorisierung am VSDM AuthZ-Server durchführen
+ref over PS, VSDD_AuthZ : LEI-Authentifizierung (SMC-B) und LEI-Autorisierung (siehe gemSpec_Zero-Trust)
+VSDD_AuthZ -> PS : HTTP 200 OK \n{Refresh-Token, Access-Token} mit scope : vsdservice
+
+PS -> VSDD_Proxy : GET /vsdservice/v1/vsdmbundle \nAuthorization: DPoP <access_token> \nDPoP: <dpop_proof_jwt> \nPoPP: Bearer <popp_token> \nIf-None-Match: "<etag_value>"
+activate VSDD_Proxy
+
+VSDD_Proxy -> VSDD_Proxy : Access-Token prüfen
+'Signatur, DPoP, scope : VSDService enthalten
+alt Access-Token nicht vorhanden oder ungültig
+    VSDD_Proxy -> PS : HTTP 401 Unauthorized
+end
+
+VSDD_Proxy -> VSDD_Proxy : PoPP-Token prüfen
+'Signatur, TelematikID(Access-Token) = TelematikID(PoPP-Token)
+alt PoPP-Token nicht vorhanden oder ungültig
+	VSDD_Proxy -> PS : HTTP 403 Forbidden
+end
+
+VSDD_Proxy -> VSDD_Proxy : HTTP-Method und API-Endpunkt \ndes Client-Request prüfen
+alt Request not valid
+	VSDD_Proxy -> PS : HTTP 400 Bad Request
+end
+
+VSDD_Proxy -> VSDD_Server : GET /vsdservice/v1/vsdmbundle \nX-ZTA-User-Info <user_info>, \nX-ZTA-PoPP-Token-Content <content>, \nX-ZTA-Client-Data <client data>, \nIf-None-Match: "<etag_value>"
+activate VSDD_Server
+
+VSDD_Server -> VSDD_Server : X-ZTA Header prüfen
+alt Zero-Trust Access Header nicht vorhanden
+    VSDD_Server -> VSDD_Proxy : HTTP 400 Bad Request
+    VSDD_Proxy -> PS : HTTP 400/500 (abhängig, welcher header fehlt oder ungültig ist)
+end
+
+VSDD_Server -> VSDD_Server : zeitliche Gültigkeit(PoPP-Token) prüfen
+alt PoPP-Token ist für das aktuelle Quartal NICHT gültig
+    VSDD_Server -> VSDD_Proxy : HTTP 403 Forbidden
+    VSDD_Proxy -> PS : HTTP 403 Forbidden
+end
+
+VSDD_Server -> VSDD_Server : vsd-version prüfen
+alt etag_value(client) == etag_value(VSDD)
+	VSDD_Server -> VSDD_Proxy : HTTP 304 Not Modified \nETag: "<etag_value>" \nVSDM-Pn: <Prüfungsnachweis>
+	VSDD_Proxy -> PS : HTTP 304 Not Modified \nETag: "<etag_value>" \nVSDM-Pn: <Prüfungsnachweis>
+else etag_value(client) != etag_value(VSDD)
+	VSDD_Server -> VSDD_Server : lokalisiere VSD zu KVNR(PoPP-Token)
+	VSDD_Server -> VSDD_Proxy : HTTP 200 OK \nETag: "<new_etag_value>" \nVSDM-Pn: <Prüfungsnachweis>\nVSDMBundle
+	VSDD_Proxy -> PS : HTTP 200 OK \nETag: "<new_etag_value>" \nVSDM-Pn: <Prüfungsnachweis>\nVSDMBundle
+	PS -> PS : Aktualisiere VSD
+	PS -> LE : Zeige VSD an
+end
+
+PS -> PS : Aktualisiere Prüfungsnachweis
+VSDD_Server -> VSDD_Server : write Zugriffsprotokoll(KVNR) mit Inhalt: User-Info
+activate VSDD_Server
+deactivate PS
+deactivate VSDD_Proxy
+deactivate VSDD_Server
+deactivate VSDD_Server
+deactivate LE
+
+== Fehlerbehandlung HTTP 401 Unauthorized (Access-Token ungültig) ==
+'Authentifizierung und AUtorisierung am VSDM AuthZ-Server durchführen
+ref over PS, VSDD_AuthZ : LEI-Authentifizierung (SMC-B) und LEI-Autorisierung (siehe gemSpec_Zero-Trust)
+VSDD_AuthZ -> PS : HTTP 200 OK \n{Refresh-Token, Access-Token} mit scope : vsdservice
+
+== Fehlerbehandlung HTTP 403 Forbidden (Versorgungskontext bzw. PoPP-Token ungültig) ==
+ref over Ver, LE, PS, VSDD_AuthZ, VSDD_Proxy, VSDD_Server, PoPP : Versorgungskontext mit eGK oder GesundheitsID herstellen (siehe gemSpec_PoPP_Service)
+PoPP -> PS : PoPP-Token mit\nKVNR, IK-Nummer, OID, Zeitstempel
+
+@enduml
