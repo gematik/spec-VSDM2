@@ -35,6 +35,7 @@ Id: vsdm-coverage
 * payor.extension ^slicing.discriminator.type = #value
 * payor.extension ^slicing.discriminator.path = "url"
 * payor.extension ^slicing.rules = #open
+* payor.extension contains $AbrechnendeIK named abrechnendeIK 0..1
 * payor.identifier only $identifier-iknr
 * payor.identifier 1..1
 * payor.display 1..1
@@ -57,3 +58,35 @@ Usage: #example
 * payor.identifier.system = "http://fhir.de/sid/arge-ik/iknr"
 * payor.identifier.value = "12345678"
 * payor.display = "Test GKV Krankenkasse"
+
+* extension[vsdmbesonderepersonengruppe].valueCoding = VSDMBesonderePersonengruppeCS#3
+
+
+* extension[vsdmdmpkennzeichen].extension[angabe].valueBoolean = true
+* extension[vsdmdmpkennzeichen].extension[teilnahme].valueBoolean = true
+* extension[vsdmdmpkennzeichen].extension[kennzeichen].valueCoding = VSDMDMPKennzeichenCS#1
+* extension[vsdmdmpkennzeichen].extension[beginn].valueDate = "2024-05-05"
+* extension[vsdmdmpkennzeichen].extension[ende].valueDate = "2024-07-05"
+
+* extension[vsdmgkvwohnortprinzip].valueCoding = VSDMGKVWohnortprinzipCS#1
+
+* extension[vsdmversichertenart].valueCoding = VSDMVersichertenartCS#2
+
+* extension[vsdmkostenerstattung].extension[aerztlicheVersorgung].valueBoolean = true
+* extension[vsdmkostenerstattung].extension[zahnaerztlicheVersorgung].valueBoolean = false
+* extension[vsdmkostenerstattung].extension[stationaererBereich].valueBoolean = false
+* extension[vsdmkostenerstattung].extension[veranlassteLeistungen].valueBoolean = false
+
+* extension[vsdmselektivvertraege].extension[aerztlich].valueBoolean = true
+* extension[vsdmselektivvertraege].extension[zahnaerztlich].valueBoolean = false
+
+* extension[vsdmruhenderleistungsanspruch].extension[art].valueBoolean = true
+* extension[vsdmruhenderleistungsanspruch].extension[dauer].valueDate = "2024-01-15"
+* extension[vsdmruhenderleistungsanspruch].extension[dauer].url = "Ende"
+* extension[vsdmruhenderleistungsanspruch].extension[dauer].valueDate = "2024-04-15"
+
+* extension[vsdmzuzahlungsstatus].extension[status].valueBoolean = true
+* extension[vsdmzuzahlungsstatus].extension[gueltigBis].valueDate = "2025-12-31"
+
+
+

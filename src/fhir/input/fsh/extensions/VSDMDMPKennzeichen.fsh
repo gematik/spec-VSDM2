@@ -13,7 +13,7 @@ Id: vsdm-dmp-kennzeichen-ex
 
 	angabe 1..1 MS and
     teilnahme 0..1 and
-	kennzeichen 0..1 and
+	$dmp-kennzeichen named dmpkennzeichen 0..1 and
 	beginn 0..1 MS and
 	ende 0..1
 
@@ -23,10 +23,11 @@ Id: vsdm-dmp-kennzeichen-ex
 * extension[teilnahme] ^definition = "Gibt an, ob der Versicherte an einem DMP-Programm teilnimmt.:\r\ntrue = nimmt teil\r\nfalse = nimmt nicht teil"
 * extension[teilnahme].value[x] only boolean
 
-* extension[kennzeichen].value[x] only Coding
-* extension[kennzeichen].value[x] from VSDMDMPKennzeichenVS (required)
-* extension[kennzeichen].value[x].system 1..
-* extension[kennzeichen].value[x].code 1..
+
+//* extension[kennzeichen].value[x] only Coding
+//* extension[kennzeichen].value[x] from VSDMDMPKennzeichenVS (required)
+//* extension[kennzeichen].value[x].system 1..
+//* extension[kennzeichen].value[x].code 1..
 
 * extension[beginn] ^short = "Datum Beginn DMP"
 * extension[beginn].value[x] only date

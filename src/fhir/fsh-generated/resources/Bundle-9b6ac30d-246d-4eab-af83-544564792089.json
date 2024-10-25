@@ -105,121 +105,6 @@
             ]
           }
         ],
-        "extension": [
-          {
-            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBesonderePersonengruppeEX",
-            "valueCoding": {
-              "code": "3",
-              "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMBesonderePersonengruppeCS"
-            }
-          },
-          {
-            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenEX",
-            "extension": [
-              {
-                "url": "angabe",
-                "valueBoolean": true
-              },
-              {
-                "url": "teilnahme",
-                "valueBoolean": true
-              },
-              {
-                "url": "kennzeichen",
-                "valueCoding": {
-                  "code": "1",
-                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMDMPKennzeichenCS"
-                }
-              },
-              {
-                "url": "beginn",
-                "valueDate": "2024-05-05"
-              },
-              {
-                "url": "ende",
-                "valueDate": "2024-07-05"
-              }
-            ]
-          },
-          {
-            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMGKVWohnortprinzipEX",
-            "valueCoding": {
-              "code": "1",
-              "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMGKVWohnortprinzipCS"
-            }
-          },
-          {
-            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostenerstattungEX",
-            "extension": [
-              {
-                "url": "aerztlicheVersorgung",
-                "valueBoolean": true
-              },
-              {
-                "url": "zahnaerztlicheVersorgung",
-                "valueBoolean": false
-              },
-              {
-                "url": "stationaererBereich",
-                "valueBoolean": false
-              },
-              {
-                "url": "veranlassteLeistungen",
-                "valueBoolean": false
-              }
-            ]
-          },
-          {
-            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMRuhenderLeistungsanspruchEX",
-            "extension": [
-              {
-                "url": "vollständig",
-                "valueBoolean": true
-              },
-              {
-                "url": "Beginn",
-                "valueDate": "2024-01-15"
-              },
-              {
-                "url": "Ende",
-                "valueDate": "2024-04-15"
-              }
-            ]
-          },
-          {
-            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMSelektivvertraegeEX",
-            "extension": [
-              {
-                "url": "aerztlich",
-                "valueBoolean": true
-              },
-              {
-                "url": "zahnaerztlich",
-                "valueBoolean": false
-              }
-            ]
-          },
-          {
-            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMVersichertenartEX",
-            "valueCoding": {
-              "code": "2",
-              "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMVersichertenartCS"
-            }
-          },
-          {
-            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMZuzahlungsstatusEX",
-            "extension": [
-              {
-                "url": "status",
-                "valueBoolean": true
-              },
-              {
-                "url": "gueltigbis",
-                "valueDate": "2025-12-31"
-              }
-            ]
-          }
-        ],
         "identifier": [
           {
             "system": "http://fhir.de/sid/gkv/kvid-10",
@@ -288,6 +173,34 @@
               "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMFestzuschusshoeheCS",
               "display": "70 % / fünf Jahre durchgehend"
             }
+          },
+          {
+            "extension": [
+              {
+                "url": "dauer",
+                "valuePeriod": {
+                  "start": "2024-06-01",
+                  "end": "2024-07-01"
+                }
+              },
+              {
+                "url": "art"
+              }
+            ],
+            "url": "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch"
+          },
+          {
+            "extension": [
+              {
+                "url": "status",
+                "valueBoolean": true
+              },
+              {
+                "url": "gueltigBis",
+                "valueDate": "2024-12-31"
+              }
+            ],
+            "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus"
           }
         ],
         "type": {

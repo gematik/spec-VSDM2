@@ -68,16 +68,16 @@
     "fshName": "VSDMCoverageSample",
     "fshType": "Instance",
     "fshFile": "profiles/VSDMCoverage.fsh",
-    "startLine": 42,
-    "endLine": 59
+    "startLine": 43,
+    "endLine": 108
   },
   {
     "outputFile": "Patient-437f2555-2396-4c64-a656-e9553161ca3c.json",
     "fshName": "VSDMPatientSample",
     "fshType": "Instance",
     "fshFile": "profiles/VSDMPatient.fsh",
-    "startLine": 31,
-    "endLine": 99
+    "startLine": 24,
+    "endLine": 47
   },
   {
     "outputFile": "StructureDefinition-vsdm-besonderepersonengruppe-ex.json",
@@ -117,7 +117,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
-    "endLine": 40
+    "endLine": 41
   },
   {
     "outputFile": "StructureDefinition-vsdm-dmp-kennzeichen-ex.json",
@@ -125,7 +125,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMDMPKennzeichen.fsh",
     "startLine": 1,
-    "endLine": 37
+    "endLine": 38
   },
   {
     "outputFile": "StructureDefinition-vsdm-festzuschusshoehe-ex.json",
@@ -173,7 +173,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 14
   },
   {
     "outputFile": "StructureDefinition-vsdm-ruhenderleistungsanspruch-ex.json",
