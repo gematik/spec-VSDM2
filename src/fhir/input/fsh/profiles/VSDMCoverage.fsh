@@ -20,7 +20,8 @@ Id: vsdm-coverage
     $wop named wop 0..1 and
     $besondere-personengruppe named besonderePersonengruppe 0..1 and
     $zuzahlungsstatus named zuzahlungsstatus 0..1 and
-    VSDMDMPKennzeichenEX named dmpKennzeichen 0..*
+    VSDMDMPKennzeichenEX named dmpKennzeichen 0..* and 
+    VSDMWahltarifeEX named wahltarife 0..*
     /*
        kennzeichen ob ja/nein
     - WT
@@ -29,11 +30,6 @@ Id: vsdm-coverage
     - ruhenderLeistungsanspruch
     - kostenerstattung
 
-    // TODO: Wahltarif
-    Wahltarif
-        wt
-        wt-period
-        wt-vertragskennzeichnen
 
 */
 

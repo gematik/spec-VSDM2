@@ -131,6 +131,21 @@
         ]
       },
       {
+        "id": "Coverage.extension:wahltarife",
+        "path": "Coverage.extension",
+        "sliceName": "wahltarife",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMWahltarifeEX"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Coverage.status",
         "path": "Coverage.status",
         "fixedCode": "active"

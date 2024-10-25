@@ -13,7 +13,7 @@
   "context": [
     {
       "type": "element",
-      "expression": "Coverage"
+      "expression": "Element"
     }
   ],
   "type": "Extension",
@@ -29,16 +29,29 @@
       {
         "id": "Extension.extension",
         "path": "Extension.extension",
+        "min": 2
+      },
+      {
+        "id": "Extension.extension:wahltarif",
+        "path": "Extension.extension",
+        "sliceName": "wahltarif",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:wahltarif.extension",
+        "path": "Extension.extension.extension",
         "max": "0"
       },
       {
-        "id": "Extension.url",
-        "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMWahltarifeEX"
+        "id": "Extension.extension:wahltarif.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "wahltarif"
       },
       {
-        "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
+        "id": "Extension.extension:wahltarif.value[x]",
+        "path": "Extension.extension.value[x]",
         "type": [
           {
             "code": "Coding"
@@ -50,14 +63,94 @@
         }
       },
       {
-        "id": "Extension.value[x].system",
-        "path": "Extension.value[x].system",
+        "id": "Extension.extension:wahltarif.value[x].system",
+        "path": "Extension.extension.value[x].system",
         "min": 1
       },
       {
-        "id": "Extension.value[x].code",
-        "path": "Extension.value[x].code",
+        "id": "Extension.extension:wahltarif.value[x].code",
+        "path": "Extension.extension.value[x].code",
         "min": 1
+      },
+      {
+        "id": "Extension.extension:wahltarif-zeitraum",
+        "path": "Extension.extension",
+        "sliceName": "wahltarif-zeitraum",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:wahltarif-zeitraum.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:wahltarif-zeitraum.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "wahltarif-zeitraum"
+      },
+      {
+        "id": "Extension.extension:wahltarif-zeitraum.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Zeitraum der Gültigkeit des Wahltarifs",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:wahltarif-zeitraum.value[x].start",
+        "path": "Extension.extension.value[x].start",
+        "short": "Startdatum des Wahltarif-Zeitraums",
+        "comment": "Datumsformat in ISO8601 (YYYY-MM-DD)",
+        "min": 1
+      },
+      {
+        "id": "Extension.extension:wahltarif-zeitraum.value[x].end",
+        "path": "Extension.extension.value[x].end",
+        "short": "Enddatum des Wahltarif-Zeitraums",
+        "comment": "Datumsformat in ISO8601 (YYYY-MM-DD)"
+      },
+      {
+        "id": "Extension.extension:wahltarif-vertragskennzeichen",
+        "path": "Extension.extension",
+        "sliceName": "wahltarif-vertragskennzeichen",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:wahltarif-vertragskennzeichen.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:wahltarif-vertragskennzeichen.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "wahltarif-vertragskennzeichen"
+      },
+      {
+        "id": "Extension.extension:wahltarif-vertragskennzeichen.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Vertragskennzeichnen des Wahltarifs",
+        "comment": "Länge des Strings ist maximal 25 Zeichen",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMWahltarifeEX"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
       }
     ]
   }
