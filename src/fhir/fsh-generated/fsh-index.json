@@ -1,13 +1,5 @@
 [
   {
-    "outputFile": "CapabilityStatement-VSDMCapabilityStatement.json",
-    "fshName": "VSDMCapabilityStatement",
-    "fshType": "Instance",
-    "fshFile": "VSDMCapabilityStatement.fsh",
-    "startLine": 1,
-    "endLine": 18
-  },
-  {
     "outputFile": "CodeSystem-vsdm-errorcode-cs.json",
     "fshName": "VSDMErrorcodeCS",
     "fshType": "CodeSystem",
@@ -53,7 +45,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMComposition.fsh",
     "startLine": 1,
-    "endLine": 22
+    "endLine": 19
   },
   {
     "outputFile": "StructureDefinition-vsdm-contactpoint-timessenger.json",

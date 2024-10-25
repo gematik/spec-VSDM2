@@ -71,8 +71,7 @@
           ],
           "rules": "closed"
         },
-        "min": 3,
-        "max": "3"
+        "min": 3
       },
       {
         "id": "Bundle.entry:DocumentInformation",
@@ -89,7 +88,7 @@
           {
             "code": "Composition",
             "profile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMComposition"
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/vsdm-composition"
             ]
           }
         ]

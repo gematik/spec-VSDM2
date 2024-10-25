@@ -1,11 +1,10 @@
 Output File                                                 Name                             Type        FSH File                                         Lines
-CapabilityStatement-VSDMCapabilityStatement.json            VSDMCapabilityStatement          Instance    VSDMCapabilityStatement.fsh                      1 - 18
 CodeSystem-vsdm-errorcode-cs.json                           VSDMErrorcodeCS                  CodeSystem  codesystems/VSDMErrorcodeCS.fsh                  1 - 16
 CodeSystem-vsdm-ruhenderLeistungsanspruch-cs.json           VSDMRuhenderLeistungsanspruchCS  CodeSystem  codesystems/VSDMRuhenderLeistungsanspruchCS.fsh  1 - 12
 CodeSystem-vsdm-wahltarife-cs.json                          VSDMWahltarifeCS                 CodeSystem  codesystems/VSDMWahltarifeCS.fsh                 1 - 13
 Patient-437f2555-2396-4c64-a656-e9553161ca3c.json           VSDMPatientSample                Instance    profiles/VSDMPatient.fsh                         36 - 59
 StructureDefinition-vsdm-bundle.json                        VSDMBundle                       Profile     profiles/VSDMBundle.fsh                          1 - 39
-StructureDefinition-vsdm-composition.json                   VSDMComposition                  Profile     profiles/VSDMComposition.fsh                     1 - 22
+StructureDefinition-vsdm-composition.json                   VSDMComposition                  Profile     profiles/VSDMComposition.fsh                     1 - 19
 StructureDefinition-vsdm-contactpoint-timessenger.json      VSDMContactPointTIMessenger      Profile     profiles/VSDMContactPointTIMessenger.fsh         1 - 7
 StructureDefinition-vsdm-coverage.json                      VSDMCoverage                     Profile     profiles/VSDMCoverage.fsh                        1 - 48
 StructureDefinition-vsdm-dmp-kennzeichen-ex.json            VSDMDMPKennzeichenEX             Extension   extensions/VSDMDMPKennzeichen.fsh                1 - 26
