@@ -48,7 +48,7 @@ Das Element **ErrorCode** kann in VSDM 2.0 keinen validen Error-Code enthalten, 
 | ---- | ---- |---- | ---- | 
 | 1 | 10-stelliger unveränderlicher Teil der KVNR | alphanummerisch | 10 |
 | 2 | aktueller Unix Timestamp (bspw. "1673551622") | alphanummerisch | 10 |
-| 3 | Ausstellender Dienst: 2 = Fachdienst VSDM 2.0 | alphanummerisch | 1 |
+| 3 | Ausstellender Dienst: 2 = VSDM 2.0 | alphanummerisch | 1 |
 | 4 | Kennung des Betreibers Fachdienste VSDM gemäß Liste der gematik | alphanummerisch | 1 |
 | 5 | Für den Betreiber des Fachdienstes spezifische Version des HMAC-Schlüssels | alphanummerisch | 1 |
 | 6 | Es wird ein HMAC nach A_23461-* über die konkatenierten Felder 1-5 mittels des betreiberspezifischen Schlüssel berechnet.  Dieser berechnete HMAC-Wert (256-Bit) wird auf 192 Bit (also 24 Byte) gekürzt (die ersten 24 Byte des HMAC-Wertes werden verwendet, die restlichen 8 Byte werden verworfen). Dieser gekürzte HMAC-Wert ist das 6-te Datenfeld. | binär | 24 |
