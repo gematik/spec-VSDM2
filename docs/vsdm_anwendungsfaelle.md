@@ -37,7 +37,7 @@ Tabelle Übersicht Varianten Abruf VSD
 - Abruf der VSD erfolgt erstmalig im laufenden Quartal
 - Versicherter authentisiert sich mit eGK oder GesundheitsID
 - LEI ist am PoPP-Service registriert und angemeldet
-- Dienstlokalisierung am FD VASM 2.0 ist erfolgt (alle 24 Stunden)
+- Dienstlokalisierung am FD VSDM 2.0 ist erfolgt (alle 24 Stunden)
 
 **Vorraussetzungen:**
 - Versorgungskontext ist in Form einen vorleigenden PoPP-Tokens attestiert
