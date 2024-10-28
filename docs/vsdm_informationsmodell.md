@@ -17,6 +17,7 @@ Die MXID wird folgendermaßen gebildet:
 - Prüfziffer: Eine zusätzliche Prüfziffer, die an die Versichertennummer angehängt wird. Diese wird auf Basis eines algorithmischen Verfahrens berechnet, um Eingabefehler zu verhindern.
 
 **Beispiel einer MXID**
+
 @Y234567890:tk-matrix-homeserver.de
 
 
