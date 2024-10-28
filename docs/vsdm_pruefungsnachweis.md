@@ -37,7 +37,7 @@ Das Element **Ergebnis** liefert keinen Hinweis mehr über das Ergebnis einer Ak
 
 Das Element **ErrorCode** kann in VSDM 2.0 keinen validen Error-Code enthalten, da in einem Fehlerfall (z.B. Nichterreichbarkeit) der Fachdienst keine VSD und den Prüfungsnachweis liefert. Hierfür wird ein Wert als Platzhalter definiert.
 
-[XMl-Schema Prüfungsnachweis VSDM 2.0](docs/src/vsds/vsdm_pruefungsnachweis.md)
+[XMl-Schema Prüfungsnachweis VSDM 2.0](src/vsds/vsdm_pruefungsnachweis.xsd)
 
 
 # Prüfziffer
