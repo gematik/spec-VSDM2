@@ -3,8 +3,8 @@
 **Diese Seite enthält Hinweise und Empfehlungen zur Interaktion des Primärsystems mit dem Nutzer im VSDM 2.0 Kontext**
 
 Durch die in den Arztpraxen, Krankenhäusern oder Apotheken eingesetzten Clientsysteme soll vor allem die Interoperabilität, Benutzerfreundlichkeit und Sicherheit sichergestellt werden.
-Das Primärsystem sollte einfach und intuitiv zu bedienen sein, sodass Nutzer (Ärzte, Praxispersonal) in ihren täglichen Arbeitsabläufen unterstützt werden.
-Nachfolgend werden Interaktionen des PS mit dem Nutzer aufgeführt die helfen können, den Prozess möglichst nutzerfreundlich zu gestalten. Ein Anspruch auf Vollständigkeit bei der Abdeckung der Aufnahmeprozesse besteht nicht und die hier beschriebenen Inhalte sind als Intgerpretationshilfe zu verstehen. Der Lösungsraum geht darüber hinaus.
+Das Primärsystem sollte einfach und intuitiv zu bedienen sein, so dass Nutzer (Ärzte, Praxispersonal) in ihren täglichen Arbeitsabläufen unterstützt werden.
+Nachfolgend werden Interaktionen des PS mit dem Nutzer aufgeführt, die helfen können den Prozess möglichst nutzerfreundlich zu gestalten. Ein Anspruch auf Vollständigkeit bei der Abdeckung der Aufnahmeprozesse besteht nicht und die hier beschriebenen Inhalte sind als Intgerpretationshilfe zu verstehen. Der Lösungsraum geht darüber hinaus.
 
 ### PS-Interaktionen im Kontext Abruf VSD
 
