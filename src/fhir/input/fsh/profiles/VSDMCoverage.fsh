@@ -12,13 +12,13 @@ Id: vsdm-coverage
   * ^definition = "Art der Versicherung: Selbstzahler, gesetzliche/private Versicherung, Berufsgenossenschaft oder Sozialamt"
 
 * extension contains
-    $versichertenart named versichertenart 0..1 and
-    $wop named wop 0..1 and
+    $versichertenart named versichertenart 1..1 MS and
+    $wop named wop 1..1 MS and
     $besondere-personengruppe named besonderePersonengruppe 0..1 and
     $kostenerstattung named gkv-kostenerstattung 0..1 and
     $ruhender-leistungsanspruch named ruhenderLeistungsanspruch 1..1 and
     $zuzahlungsstatus named zuzahlungsstatus 1..1 and
-    VSDMDMPKennzeichenEX named vsdm-dmpKennzeichen 0..* and 
+    VSDMDMPKennzeichenEX named vsdm-dmpKennzeichen 0..* and
     VSDMWahltarifeEX named vsdm-wahltarife 0..* and
     VSDMKostentreagerAngabestatusEX named vsdm-kostentragerAngabestatus 1..1 MS
 

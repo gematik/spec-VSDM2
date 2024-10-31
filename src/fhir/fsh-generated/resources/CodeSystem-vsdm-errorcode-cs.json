@@ -31,11 +31,55 @@
     {
       "code": "300",
       "display": "Technical error, input data corrupted"
+    },
+    {
+      "code": "79000",
+      "display": "The proof of patient presence token is expired."
+    },
+    {
+      "code": "79010",
+      "display": "Invalid health insurer mark <ik>."
+    },
+    {
+      "code": "79011",
+      "display": "Invalid health insured person number<kvnr>"
+    },
+    {
+      "code": "79020",
+      "display": "The patient record for <kvnr> could not found at health insurer with id <ik> or patient does not exist."
+    },
+    {
+      "code": "79030",
+      "display": "The required header <header> is missing or invalid."
+    },
+    {
+      "code": "79031",
+      "display": "The clientsystem asked for an unsupported media type  <media type>."
+    },
+    {
+      "code": "79032",
+      "display": "The clientsystem asked for an unsupported encoding scheme<encoding scheme>."
+    },
+    {
+      "code": "79033",
+      "display": "The etag_value does not exists or could not processed."
+    },
+    {
+      "code": "79100",
+      "display": "Unexpected internal server error."
+    },
+    {
+      "code": "79110",
+      "display": "Health insurer system with id <ik> is offline."
+    },
+    {
+      "code": "79111",
+      "display": "Health insurer system with id <ik> timed out."
     }
   ],
   "experimental": false,
   "publisher": "gematik GmbH",
   "date": "2023-12-31",
   "caseSensitive": true,
-  "count": 6
+  "count": 17
 }

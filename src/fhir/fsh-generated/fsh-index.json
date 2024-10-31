@@ -13,7 +13,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMErrorcodeCS.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 34
   },
   {
     "outputFile": "CodeSystem-vsdm-ruhenderLeistungsanspruch-cs.json",
