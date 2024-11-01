@@ -1,10 +1,10 @@
-# Hinweise zum Informationsmodell VSDM 2.0
+# 1 Hinweise zum Informationsmodell VSDM 2.0
 
 Mit der Einführung von VSDM 2.0 gibt es Änderungen im Informationsmodell verglichen mit dem bestehenden Informationsmodell für VSDM 1.0 in der Schemaversion 5.2.
 
 ## Änderungen
 
-### 1. MXID des Versicherten
+### 1.1 MXID des Versicherten
 
 Die Versichertenstammdaten in VSDM 2.0 werden die TI-Messenger Adresse des Versicherten beinhalten.
 
@@ -22,15 +22,15 @@ Die MXID wird nach folgender Bildungsregel erzeugt:
 
 
 
-### 2. Zusatzinformationen zum Versicherungsverhältnis
+### 2.1 Zusatzinformationen zum Versicherungsverhältnis
 
 Zu folgenden Angaben zum Versicherungsverhältnis gibt es in VSDM 2.0 Anpassungen:
 
-#### 2.1 Selektivverträge
+#### 2.1.1 Selektivverträge
 
 Die Angabe der Selektivverträge entfällt und wird durch die Angabe der Wahltarife ersetzt.
 
-#### 2.2 Wahltarife
+#### 2.1.2 Wahltarife
 
 Wahltarife ersetzt die Angabe der Selektivverträge und bildet ein Kennzeichen für die Rechtsgrundlage des jeweiligen Wahltarifs ab. Die Angabe ist optional.
 
@@ -45,7 +45,7 @@ Anmerkung:
 §140a SGB V = besondere Versorgung
 
 
-#### 2.3 DMP-Kennzeichnung
+#### 2.1.3 DMP-Kennzeichnung
 
 Die Angabe zur Teilnahme des Versicherten an DMP-Programmen wird erweitert.
 
@@ -56,7 +56,7 @@ Die Angabe zur Teilnahme des Versicherten an DMP-Programmen wird erweitert.
 | 291a Absatz 3 Nr. 2 SGB V | Angabe der Information, ob ein digitales DMP vorhanden ist  |  ja / nein  | 
 
 
-#### 2.4 Kostenträger-Angabestatus
+#### 2.1.4 Kostenträger-Angabestatus
 
 Für die Angaben zu
 - DMP
@@ -72,8 +72,16 @@ Es kann Gründe für die Krankenkasse geben, dieses Feld nicht zu befüllen obwo
 
 Der Leistungserbringer erhält in diesem Fall keine Information darüber und muss dann bei gegebenem Anlass in Kontakt mit der Krankenkasse treten, um Informationen zu diesen Vertragsverhältnissen zu erhalten.
 
+# 2. Hinweise zum verkürzten VSD-Datensatz auf der eGK
 
+Gemäß den gesetzlichen Vorgaben aus §291 SGB V muss die eGK wenn sie nach dem 1. Januar 2026 herausgegeben wird die Speicherung folgender Daten ermöglichen:
 
+- die Bezeichnung der ausstellenden Krankenkasse, einschließlich eines Kennzeichens für die Kassenärztliche Vereinigung, in deren Bezirk der Versicherte seinen Wohnsitz hat
+- die Bezeichnung der ausstellenden Krankenkasse, einschließlich eines Kennzeichens für die Kassenärztliche Vereinigung, in deren Bezirk der Versicherte seinen Wohnsitz hat
+- der Familienname und der Vorname des Versicherten
+- das Geburtsdatum des Versicherten
+- die Krankenversichertennummer des Versicherten
+  
 
 
 
