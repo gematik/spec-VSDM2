@@ -83,5 +83,5 @@ Gemäß den gesetzlichen Vorgaben aus §291 SGB V muss die eGK wenn sie nach dem
 - die Krankenversichertennummer des Versicherten
   
 
-[XML-Schema zum verkürzten VSD-Datensatz](vsds/vsdmschemaverkuerzt.xsd]
+[XML-Schema zum verkürzten VSD-Datensatz](src/vsds/vsdmschemaverkuerzt.xsd]
 
