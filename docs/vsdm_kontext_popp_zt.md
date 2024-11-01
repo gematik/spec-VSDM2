@@ -2,7 +2,7 @@
 
 **Überblick Zusammenspiel der Anwendungen**
 
-Bild 
+![Alt-Text](/images/VSDMPoPPZT.png)
 
 VSDM 2.0 setzt voraus, dass der Versorgungskontext für einen zu behandelnden Versicherten in Form eines PoPP-Tokens vom Primärsystem via PoPP-Client und PoPP-Service bezogen wurde, um den Anwendungsfall zum Abruf der VSD durchführen zu können.
 
