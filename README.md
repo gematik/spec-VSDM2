@@ -17,6 +17,10 @@ Mit der Initiative TI 2.0 wird die gesamte Infrastruktur modernisiert und auf de
 VSDM 2.0 entkoppelt den Versorgungsnachweis („Proof-of-Patient-Presence PoPP“) vom Anwendungsfall der Bereitstellung demografischer Daten. Damit kann der PoPP auch in anderen Anwendungen eingesetzt werden.
 Die Versicherer stellen also eine einfache FHIR-REST-API bereit, mit der die Client-Software der Arztpraxis „nur“ zusätzliche Daten anfordert, indem sie ein legitimes PoPP-Token bereitstellt.
 
+Im nachfolgend verlinkten Kapitel finden Sie eine Übersicht, in welchem Kontext VSDM, PoPP und Zero Trust zueinander stehen:
+
+[Kontext VSDM/PoPP/ZeroTrust](docs/vsdm_kontext_popp_zt.md)
+
 
 **Funktionen des VSDM:**
 - **Stammdatenabgleich:** Über das VSDM 2.0 werden die Versichertenstammdaten, wie Name, Geburtsdatum, Anschrift, und Versicherungsschutz, bei jedem Arztbesuch online abgerufen und ggf.  aktualisiert.
