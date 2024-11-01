@@ -81,6 +81,14 @@ Gemäß den gesetzlichen Vorgaben aus §291 SGB V muss die eGK wenn sie nach dem
 - der Familienname und der Vorname des Versicherten
 - das Geburtsdatum des Versicherten
 - die Krankenversichertennummer des Versicherten
+
+Die Restdaten befinden sich in folgenden Containern der eGK:
+- Allgemeine Versicherungsdaten
+- Persönliche Versichertendaten
+
+Der Container "Geschützte Versichertendaten" wird nicht mehr befüllt.
+
+Die Bereitstellung der Daten erfolgt mittels eines angepassten VSD Schemas auf der Basis des in VSDM 1 verwendeten Schemas VSD 5.2.
   
 
 [XML-Schema zum verkürzten VSD-Datensatz](src/vsds/vsdmschemaverkuerzt.xsd]
