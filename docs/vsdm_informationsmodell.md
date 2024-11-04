@@ -91,5 +91,5 @@ Der Container "Geschützte Versichertendaten" wird nicht mehr befüllt.
 Die Bereitstellung der Daten erfolgt mittels eines angepassten VSD Schemas auf der Basis des in VSDM 1 verwendeten Schemas VSD 5.2.
   
 
-[XML-Schema zum verkürzten VSD-Datensatz](src/vsds/vsdmschemaverkuerzt.xsd)
+[XML-Schema zum verkürzten VSD-Datensatz](/src/vsds/vsdmschemaverkuerzt.xsd)
 
