@@ -30,7 +30,7 @@ Id: vsdm-bundle
 * entry[VSDMCoverage].resource 1..
 * entry[VSDMCoverage].resource only VSDMCoverage
 
-* signature 1..1
+* signature 0..1
 * signature.sigFormat = #application/pkcs7-mime (exactly)
 * signature.when 1..1
 * signature.who 1..1

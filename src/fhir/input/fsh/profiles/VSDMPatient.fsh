@@ -20,7 +20,7 @@ Id: vsdm-patient
   * ^slicing.rules = #open
   * ^slicing.description = "Slices for Patient contact information"
   * ^slicing.ordered = false
-  
+
 * telecom contains ti-messenger 1..1 MS
 
 * telecom[ti-messenger] only VSDMContactPointTIMessenger

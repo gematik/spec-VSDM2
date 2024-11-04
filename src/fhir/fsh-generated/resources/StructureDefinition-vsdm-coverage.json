@@ -1830,6 +1830,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -2382,6 +2383,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -3618,6 +3620,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -4937,6 +4940,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -5739,6 +5743,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -6780,6 +6785,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -10972,7 +10978,8 @@
               "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:besonderePersonengruppe.url",
@@ -10992,7 +10999,8 @@
               "http://fhir.de/StructureDefinition/gkv/kostenerstattung"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:gkv-kostenerstattung.url",
@@ -11012,7 +11020,8 @@
               "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:ruhenderLeistungsanspruch.url",
@@ -11032,7 +11041,8 @@
               "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:zuzahlungsstatus.url",
@@ -11052,7 +11062,8 @@
               "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenEX"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:vsdm-dmpKennzeichen.url",
@@ -11072,7 +11083,8 @@
               "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMWahltarifeEX"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:vsdm-wahltarife.url",
