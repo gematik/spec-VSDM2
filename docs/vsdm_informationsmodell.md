@@ -40,9 +40,11 @@ Wahltarife ersetzt die Angabe der Selektivverträge und bildet ein Kennzeichen f
 
 Anmerkung:
 
-§73b SGB V = Hausarztzentrierte Versorgung
+§73b SGB V: Hausarztzentrierte Versorgung
 
-§140a SGB V = besondere Versorgung
+§140a SGB V: besondere Versorgung
+
+sonstige Verträge: Dieses Feld ist nur verpflichtend, wenn ein Wahltarif nach §73b vorliegt. 
 
 
 #### 2.1.3 DMP-Kennzeichnung
