@@ -75,10 +75,10 @@ Hier geht es zur Informationsseite zum Support.
 ## Mitgeltende Dokumente und Informationen
 Hier finden Sie eine Übersicht zu den weiterführenden Dokumenten zur Implementierung.
 
-Spezifikation VSDM 2.0: Link zu gemSpec_VSDM_2
-FHIR-Profile VSDM 2.0: Link zu Simplifier
-XML-Schemata VSDM 2.0: Link zu api-telematik
-XML-Schema Prüfungsnachweis: Link zu api-telematik
+**Links vor offizieller Kommentierungsphase einfügen**
+
+- Spezifikation VSDM 2.0: **Link zu gemSpec_VSDM_2**
+- FHIR-Profile VSDM 2.0: **Link zu Simplifier**
 
 
 ## Branch Modell
@@ -89,7 +89,7 @@ Folgende Branches werden verwendet
 
 - develop (enthält den Stand der fertig entwickelten Features und wird zum Review durch Industriepartner und Gesellschafter verwendet; basiert auf main; nach Freigabe erfolgt ein merge in main und ein Release wird erzeugt; besteht permanent)
 
-- feature/<name> (in feature branches werden neue Features entwickelt; basiert auf develop; nach Fertigstellung erfolgt ein merge in develop; wird nach dem merge gelöscht)
+- feature/ilf (in feature branches werden neue Features entwickelt (ggf. basierend auf develop); nach Fertigstellung erfolgt ein merge in develop; der feature branch wird nach dem merge gelöscht)
 
 ## Lizenzbedingungen
 Copyright (c) 2022 gematik GmbH
