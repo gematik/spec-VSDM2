@@ -77,8 +77,8 @@ Hier finden Sie eine Übersicht zu den weiterführenden Dokumenten zur Implement
 
 **Links vor offizieller Kommentierungsphase einfügen**
 
-- Spezifikation VSDM 2.0: **Link zu gemSpec_VSDM_2**
-- FHIR-Profile VSDM 2.0: **Link zu Simplifier**
+- [Spezifikation VSDM 2.0]( **Link zu gemSpec_VSDM_2**)
+- [FHIR-Profile VSDM 2.0](https://simplifier.net/vsdm2)
 
 
 ## Branch Modell
