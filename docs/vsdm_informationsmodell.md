@@ -24,7 +24,7 @@ Die MXID wird nach folgender Bildungsregel erzeugt:
 
 ### 2.1 Zusatzinformationen zum Versicherungsverhältnis
 
-Zu folgenden Angaben zum Versicherungsverhältnis gibt es in VSDM 2.0 Anpassungen:
+Zu folgenden Angaben zum Versicherungsverhältnis gibt es in VSDM 2.0 Anpassungen.
 
 #### 2.1.1 Selektivverträge
 
