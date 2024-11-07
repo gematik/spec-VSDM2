@@ -1,7 +1,6 @@
 Output File                                                 Name                             Type        FSH File                                         Lines
 Bundle-9b6ac30d-246d-4eab-af83-544564792089.json            Vsdm2BundleSample                Instance    examples/ExampleVSDMBundle.fsh                   1 - 21
 CodeSystem-vsdm-errorcode-cs.json                           VSDMErrorcodeCS                  CodeSystem  codesystems/VSDMErrorcodeCS.fsh                  1 - 34
-CodeSystem-vsdm-ruhenderLeistungsanspruch-cs.json           VSDMRuhenderLeistungsanspruchCS  CodeSystem  codesystems/VSDMRuhenderLeistungsanspruchCS.fsh  1 - 12
 CodeSystem-vsdm-wahltarife-cs.json                          VSDMWahltarifeCS                 CodeSystem  codesystems/VSDMWahltarifeCS.fsh                 1 - 13
 CodeSystem-vsdmkostentreager-angabestatus-cs.json           VSDMKostentreagerAngabestatusCS  CodeSystem  codesystems/VSDMKostentreagerAngabestatusCS.fsh  1 - 14
 Coverage-2d4da53a-413a-48fe-b908-2e67b5761523.json          VSDMCoverageSample               Instance    examples/ExampleVSDMCoverage.fsh                 2 - 9
@@ -18,6 +17,5 @@ StructureDefinition-vsdm-patient.json                       VSDMPatient         
 StructureDefinition-vsdm-wahltarife-ex.json                 VSDMWahltarifeEX                 Extension   extensions/VSDMWahltarifeEX.fsh                  1 - 35
 StructureDefinition-vsdmkostentreager-angabestatus-ex.json  VSDMKostentreagerAngabestatusEX  Extension   extensions/VSDMKostentreagerAngabestatusEX.fsh   1 - 11
 ValueSet-vsdm-errorcode-vs.json                             VSDMErrorcodeVS                  ValueSet    valuesets/VSDMErrorcodeVS.fsh                    1 - 7
-ValueSet-vsdm-ruhenderLeistungsanspruch-vs.json             VSDMRuhenderLeistungsanspruchVS  ValueSet    valuesets/VSDMRuhenderLeistungsanspruchVS.fsh    1 - 8
 ValueSet-vsdm-wahltarife-vs.json                            VSDMWahltarifeVS                 ValueSet    valuesets/VSDMWahltarifeVS.fsh                   1 - 7
 ValueSet-vsdmkostentreager-angabestatus-vs.json             VSDMKostentreagerAngabestatusVS  ValueSet    valuesets/VSDMKostentreagerAngabestatusVS.fsh    1 - 7
