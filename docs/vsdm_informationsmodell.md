@@ -79,7 +79,6 @@ Der Leistungserbringer erhält in diesem Fall keine Information darüber und mus
 Gemäß den gesetzlichen Vorgaben aus §291 SGB V muss die eGK wenn sie nach dem 1. Januar 2026 herausgegeben wird die Speicherung folgender Daten ermöglichen:
 
 - die Bezeichnung der ausstellenden Krankenkasse, einschließlich eines Kennzeichens für die Kassenärztliche Vereinigung, in deren Bezirk der Versicherte seinen Wohnsitz hat
-- die Bezeichnung der ausstellenden Krankenkasse, einschließlich eines Kennzeichens für die Kassenärztliche Vereinigung, in deren Bezirk der Versicherte seinen Wohnsitz hat
 - der Familienname und der Vorname des Versicherten
 - das Geburtsdatum des Versicherten
 - die Krankenversichertennummer des Versicherten
