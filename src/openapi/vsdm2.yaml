@@ -52,6 +52,7 @@ paths:
           in: header
           description: OAuth2 Bearer AccessToken granting access to the VSDService-API. 
             The Access-Token ist verified by the HTTP-Proxy component of the "Versichertenstammdatendienst".
+            The Access-Token ist bound via "demonstrating proof of posession" (DPoP) to the requesting client according rfc9449 6.1. JWK Thumbprint Confirmation Method.
           schema:
             type: string
         - name: PoPP-Authorization
@@ -65,8 +66,7 @@ paths:
             type: string
         - name: DPoP
           in: header
-          description: The DPoP-Header holds the DPoP-JWT to demonstrate possession of local client key. 
-            The oauth2 AccessToken is bound to the client via DPoP. 
+          description: The DPoP-Header holds the DPoP-JWT to demonstrate possession of local client key and to bind a local client to his oauth2 AccessToken according rfc9449. 
             The DPoP is verified by the HTTP-Proxy component of the "Versichertenstammdatendienst".
           schema:
             type: string
