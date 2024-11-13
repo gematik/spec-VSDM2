@@ -6,29 +6,19 @@ Description: "VSDM errors if Kostentraeger cant provide VSD"
 * insert Meta
 * ^caseSensitive = true
 * ^content = #complete
-// processing
-* #100 "Patient not insured here"
-* #110 "Patient not identifyable"
-* #120 "Patient treatment not covered"
+// client
+* #VSDSERVICE_POPPTOKEN_EXPIRED "The proof of patient presence token is expired."
+* #VSDSERVICE_INVALID_IK "Invalid health insurer mark <ik>."
+* #VSDSERVICE_INVALID_KVNR "Invalid health insured person number <kvnr>."
+* #VSDSERVICE_PATIENT_RECORD_NOT_FOUND "The patient record for <kvnr> could not found at health insurer with id <ik>."
+* #VSDSERVICE_MISSING_OR_INVALID_HEADER "The required header <header> is missing or invalid."
+* #VSDSERVICE_UNSUPPORTED_MEDIATYPE "The clientsystem asked for an unsupported media type <media type>."
+* #VSDSERVICE_UNSUPPORTED_ENCODING "The clientsystem asked for an unsupported encoding scheme <encoding scheme>."
+* #VSDSERVICE_INVALID_PATIENT_RECORD_VERSION "The etag_value does not exists or could not processed."
+* #VSDSERVICE_INVALID_HTTP_OPERATION "ERROR"
+* #VSDSERVICE_INVALID_ENDPOINT "ERROR"
 
-// security
-* #200 "The provided Proof-of-Patient-Presence is invalid"
-* #210 "The user role in the provided AccessToken is not allowed to request VSD"
-
-// processing
-* #300 "Technical error, input data corrupted"
-
-// specific VSDM 2.0 Request Errors
-* #79000 "The proof of patient presence token is expired."
-* #79010 "Invalid health insurer mark <ik>."
-* #79011 "Invalid health insured person number<kvnr>"
-* #79020 "The patient record for <kvnr> could not found at health insurer with id <ik> or patient does not exist."
-* #79030 "The required header <header> is missing or invalid."
-* #79031 "The clientsystem asked for an unsupported media type  <media type>."
-* #79032 "The clientsystem asked for an unsupported encoding scheme<encoding scheme>."
-* #79033 "The etag_value does not exists or could not processed."
-
-// specific VSDM 2.0 Resource System Errors
-* #79100 "Unexpected internal server error."
-* #79110 "Health insurer system with id <ik> is offline."
-* #79111 "Health insurer system with id <ik> timed out."
+// system
+* #VSD_SERVICE_INTERNAL_SERVER_ERROR "Unexpected internal server error."
+* #VSDSERVICE_VSDDB_NOTREACHABLE "Health insurer system with id <ik> is offline."
+* #VSDSERVICE_VSDDB_TIMEOUT "Health insurer system with id <ik> timed out."

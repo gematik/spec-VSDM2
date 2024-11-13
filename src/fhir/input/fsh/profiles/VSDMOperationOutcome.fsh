@@ -11,8 +11,9 @@ Id: vsdm-operationoutcome
   * ^slicing.rules = #open
   * ^slicing.description = "Slicing der OperationOutcome Issues"
   * ^slicing.ordered = false
-  
-* issue contains vsdm-error 0..1 MS
+
+* issue contains vsdm-error 0..1 MS and $operationoutcomecodes 0..1 MS
+
 
 * issue[vsdm-error]
   * severity = #fatal (exactly)

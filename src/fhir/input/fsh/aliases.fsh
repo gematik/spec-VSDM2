@@ -5,6 +5,7 @@ Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $loinc = http://loinc.org
 Alias: $versichertenart-de-basis-cs = http://fhir.de/CodeSystem/versicherungsart-de-basis
+Alias: $operationoutcomecodes = http://terminology.hl7.org/CodeSystem/operation-outcome
 
 // in Patient
 Alias: $identifier-kvid-10 = http://fhir.de/StructureDefinition/identifier-kvid-10

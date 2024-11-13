@@ -9,71 +9,55 @@
   "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
   "concept": [
     {
-      "code": "100",
-      "display": "Patient not insured here"
-    },
-    {
-      "code": "110",
-      "display": "Patient not identifyable"
-    },
-    {
-      "code": "120",
-      "display": "Patient treatment not covered"
-    },
-    {
-      "code": "200",
-      "display": "The provided Proof-of-Patient-Presence is invalid"
-    },
-    {
-      "code": "210",
-      "display": "The user role in the provided AccessToken is not allowed to request VSD"
-    },
-    {
-      "code": "300",
-      "display": "Technical error, input data corrupted"
-    },
-    {
-      "code": "79000",
+      "code": "VSDSERVICE_POPPTOKEN_EXPIRED",
       "display": "The proof of patient presence token is expired."
     },
     {
-      "code": "79010",
+      "code": "VSDSERVICE_INVALID_IK",
       "display": "Invalid health insurer mark <ik>."
     },
     {
-      "code": "79011",
-      "display": "Invalid health insured person number<kvnr>"
+      "code": "VSDSERVICE_INVALID_KVNR",
+      "display": "Invalid health insured person number <kvnr>."
     },
     {
-      "code": "79020",
-      "display": "The patient record for <kvnr> could not found at health insurer with id <ik> or patient does not exist."
+      "code": "VSDSERVICE_PATIENT_RECORD_NOT_FOUND",
+      "display": "The patient record for <kvnr> could not found at health insurer with id <ik>."
     },
     {
-      "code": "79030",
+      "code": "VSDSERVICE_MISSING_OR_INVALID_HEADER",
       "display": "The required header <header> is missing or invalid."
     },
     {
-      "code": "79031",
-      "display": "The clientsystem asked for an unsupported media type  <media type>."
+      "code": "VSDSERVICE_UNSUPPORTED_MEDIATYPE",
+      "display": "The clientsystem asked for an unsupported media type <media type>."
     },
     {
-      "code": "79032",
-      "display": "The clientsystem asked for an unsupported encoding scheme<encoding scheme>."
+      "code": "VSDSERVICE_UNSUPPORTED_ENCODING",
+      "display": "The clientsystem asked for an unsupported encoding scheme <encoding scheme>."
     },
     {
-      "code": "79033",
+      "code": "VSDSERVICE_INVALID_PATIENT_RECORD_VERSION",
       "display": "The etag_value does not exists or could not processed."
     },
     {
-      "code": "79100",
+      "code": "VSDSERVICE_INVALID_HTTP_OPERATION",
+      "display": "ERROR"
+    },
+    {
+      "code": "VSDSERVICE_INVALID_ENDPOINT",
+      "display": "ERROR"
+    },
+    {
+      "code": "VSD_SERVICE_INTERNAL_SERVER_ERROR",
       "display": "Unexpected internal server error."
     },
     {
-      "code": "79110",
+      "code": "VSDSERVICE_VSDDB_NOTREACHABLE",
       "display": "Health insurer system with id <ik> is offline."
     },
     {
-      "code": "79111",
+      "code": "VSDSERVICE_VSDDB_TIMEOUT",
       "display": "Health insurer system with id <ik> timed out."
     }
   ],
@@ -81,5 +65,5 @@
   "publisher": "gematik GmbH",
   "date": "2023-12-31",
   "caseSensitive": true,
-  "count": 17
+  "count": 13
 }
