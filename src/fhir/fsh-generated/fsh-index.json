@@ -16,14 +16,6 @@
     "endLine": 24
   },
   {
-    "outputFile": "CodeSystem-vsdm-ruhenderLeistungsanspruch-cs.json",
-    "fshName": "VSDMRuhenderLeistungsanspruchCS",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMRuhenderLeistungsanspruchCS.fsh",
-    "startLine": 1,
-    "endLine": 12
-  },
-  {
     "outputFile": "CodeSystem-vsdm-wahltarife-cs.json",
     "fshName": "VSDMWahltarifeCS",
     "fshType": "CodeSystem",
@@ -150,14 +142,6 @@
     "fshFile": "valuesets/VSDMErrorcodeVS.fsh",
     "startLine": 1,
     "endLine": 7
-  },
-  {
-    "outputFile": "ValueSet-vsdm-ruhenderLeistungsanspruch-vs.json",
-    "fshName": "VSDMRuhenderLeistungsanspruchVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMRuhenderLeistungsanspruchVS.fsh",
-    "startLine": 1,
-    "endLine": 8
   },
   {
     "outputFile": "ValueSet-vsdm-wahltarife-vs.json",
