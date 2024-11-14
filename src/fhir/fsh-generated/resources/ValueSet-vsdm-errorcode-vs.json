@@ -13,6 +13,9 @@
     "include": [
       {
         "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/operation-outcome"
       }
     ]
   }

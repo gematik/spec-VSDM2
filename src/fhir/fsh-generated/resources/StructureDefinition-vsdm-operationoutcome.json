@@ -2196,48 +2196,6 @@
             "map": "./location[parent::AcknowledgmentDetail]"
           }
         ]
-      },
-      {
-        "id": "OperationOutcome.issue:$operationoutcomecodes",
-        "path": "OperationOutcome.issue",
-        "sliceName": "$operationoutcomecodes",
-        "short": "A single issue associated with the action",
-        "definition": "An error, warning, or information message that results from a system action.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "OperationOutcome.issue",
-          "min": 1,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "BackboneElement"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "ERR"
-          },
-          {
-            "identity": "rim",
-            "map": "AcknowledgementDetail or Observation[classCode=\"ALRT\" and moodCode=\"EVN\"]"
-          }
-        ]
       }
     ]
   },
@@ -2322,14 +2280,6 @@
         "id": "OperationOutcome.issue:vsdm-error.details.text",
         "path": "OperationOutcome.issue.details.text",
         "short": "Errortext für Entwickler"
-      },
-      {
-        "id": "OperationOutcome.issue:$operationoutcomecodes",
-        "path": "OperationOutcome.issue",
-        "sliceName": "$operationoutcomecodes",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true
       }
     ]
   }

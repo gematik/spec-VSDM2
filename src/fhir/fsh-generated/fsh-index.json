@@ -141,7 +141,7 @@
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMErrorcodeVS.fsh",
     "startLine": 1,
-    "endLine": 7
+    "endLine": 8
   },
   {
     "outputFile": "ValueSet-vsdm-wahltarife-vs.json",
