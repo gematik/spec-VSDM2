@@ -67,11 +67,6 @@ Hier geht es zur Informationsseite zum Umgang mit Fehlermeldungen
 
 In VSDM 1.0 wurde ein proprietäres XML-Datenformat in einer SOAP-Servicekette verwendet. Mit VSDM 2.0 wird der VSD Datensatz in den FHIR-Standard migriert, der im deutschen Gesundheitswesen immer mehr zum Einsatz kommt. Die FHIR-Profile und Beispielressourcen werden im offiziellen [VSDM 2 simplifier project](https://simplifier.net/vsdm2) veröffentlicht.
 
-## Support / User Help Desk
-Hier geht es zur Informationsseite zum Support.
-
-[Support / UHD](docs/vsdm_support.md)
-
 ## Mitgeltende Dokumente und Informationen
 Hier finden Sie eine Übersicht zu den weiterführenden Dokumenten zur Implementierung.
 
