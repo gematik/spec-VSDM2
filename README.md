@@ -1,40 +1,112 @@
 <img align="right" width="200" height="37" src="./images/Gematik_Logo_Flag.png"/> <br/>
 
-# Specification VSDM 2 FHIR-Profiles and API
+# Spezifikation VSDM 2.0 FHIR-Profile und API
 
-This repo holds FHIR-Profiles, sample Resources and OpenAPI specification for the VSDM 2 interface.
+## Einleitung
+Die gematik geht neue Wege und möchte auf diesem Weg die Nutzung der Schnittstellen rund um das VSDM 2.0 vorstellen. Die Beschreibung dieser API ergänzt die normativen Dokumente der gematik sowie die Festlegungen über die VSDM-Profile (inkl. Beispielen) des genutzten FHIR-Standards.
 
-- [Specification VSDM 2 FHIR-Profiles and API](#specification-vsdm-2-fhir-profiles-and-api)
-  - [What is VSDM 2](#what-is-vsdm-2)
-  - [FHIR Profiles VSDM 2](#fhir-profiles-vsdm-2)
-  - [API Documentation VSDM 2](#api-documentation-vsdm-2)
-- [License](#license)
-- [Contact](#contact)
+Auf den folgenden Seiten stellt die gematik die Nutzung der Schnittstellen durch die Primärsysteme der Leistungserbringer vor.
 
-## What is VSDM 2
+## Was ist VSDM 2.0
 
-The Versichertenstammdatenmanagement VSDM was introduced around 2017 and both provides patient democraphic data to healthcare professionals and proof of treatement to be used in quarterly statements to the KV. All these use cases make use of Konnektor, eHealth Card Terminals, eGK, SMC-B, Intermediär and finaly the insurant provider's VSDM backend services.
+VSDM steht für „Versichertenstammdatenmanagement“. Es ist ein Teil der Telematikinfrastruktur (TI) im deutschen Gesundheitswesen und dient der Verwaltung und dem Abgleich der Stammdaten von gesetzlich versicherten Personen.
+VSDM 2.0 ist die Weiterentwicklung des bestehenden VSDM 1.0. Die Versichertenstammdaten (VSD) werden mit VSDM 2.0 nicht mehr auf der eGK des Versicherten gespeichert und aktualisiert sondern direkt vom Primärsystem (PS) des Leistungserbringers vom Fachdienst der Krankenkasse abgerufen und ggf. im PS aktualisiert.
+Während bei VSDM 1.0 in den Anwendungsfällen die Komponenten Konnektor, eHealth Card Terminals, eGK, SMC-B, Intermediär und schließlich die VSDM-Backend-Dienste des Versicherers zum Einsatz kommen reduziert VSDM 2.0 die Abhängigkeiten von diesen Komponenten. 
+Mit der Initiative TI 2.0 wird die gesamte Infrastruktur modernisiert und auf den neuesten Stand der Sicherheits- und Architekturprinzipien gebracht.
 
-- VSDM 2 firstly decouples the proof-of-treatment ("Proof-of-Patient-Presence PoPP) from the use case of providing demographic data. So the PoPP can be used in other applications, too.
-- Secondly, all the named infrastructure-components formed an unfexible and time consuming use case environment. So VSDM 2 reduces dependencies to those components.
-- Finally, with the TI 2.0 initiative, the whole infrastructure will get modernized and updated to state of the art security and architecture principles.
+VSDM 2.0 entkoppelt den Versorgungsnachweis („Proof-of-Patient-Presence PoPP“) vom Anwendungsfall der Bereitstellung demografischer Daten. Damit kann der PoPP auch in anderen Anwendungen eingesetzt werden.
+Die Versicherer stellen also eine einfache FHIR-REST-API bereit, mit der die Client-Software der Arztpraxis „nur“ zusätzliche Daten anfordert, indem sie ein legitimes PoPP-Token bereitstellt.
 
-VSDM 2 basically will become a simple application, where a healthcare professional can (and in most cases should) get demographic and additional billing information AFTER a PoPP was determined. So the insurant providers provide a simple FHIR-REST-API where doctor's office client software "just" requests additional data by providing a legitimate PoPP-token.
+Im nachfolgend verlinkten Kapitel finden Sie eine Übersicht, in welchem Kontext VSDM, PoPP und Zero Trust zueinander stehen:
 
-![image](images/diagrams/SequenceDiagram.VSDM2.read_concept.png)
+[Kontext VSDM/PoPP/ZeroTrust](docs/vsdm_kontext_popp_zt.md)
 
-## FHIR Profiles VSDM 2
 
-The first VSDM used a proprietary XML data format in a SOAP-service-chain. VSDM 2 migrates to the FHIR-standard that is used more and more in the German healthcare sector. The FHIR-profiles and sample resources will be published in the official [VSDM 2 simplifier project](https://simplifier.net/vsdm2).
+**Funktionen des VSDM:**
+- **Stammdatenabgleich:** Über das VSDM 2.0 werden die Versichertenstammdaten, wie Name, Geburtsdatum, Anschrift, und Versicherungsschutz, bei jedem Arztbesuch online abgerufen und ggf.  aktualisiert.
+- **Sicherstellung der Aktualität:** Es soll sichergestellt werden, dass die im Primärsystem gespeicherten Daten stets aktuell sind.
+- **Datensicherheit:** Die Daten werden verschlüsselt und sicher über die Telematikinfrastruktur übertragen.
 
-## API Documentation VSDM 2
+## Anwendungsszenarien
+In diesem Kapitel finden Sie eine Beschreibung der für VSDM 2.0 relevanten Sektoren des Gesundheitswesens.
 
-As stated above, the VSDM 2 will be reduced to the use of a small RESTful FHIR-API, that is documented here [vsdm2.yaml](./src/openapi/vsdm2.yaml).
+[Anwendungsszenarien](docs/vsdm_anwendungsszenarien.md)
 
-# License
+## Anwendungsfälle in VSDM 2.0
+Im nachfolgend verlinkten Kapitel finden Sie die Übersicht der Anwendungsfälle im Kontext VSDM 2.0.
 
-See [LICENSE](/LICENSE)
+[Anwendungsfälle](docs/vsdm_anwendungsfaelle.md)
 
-# Contact
+## Abläufe im Primärsystem
+Im Rahmen der Anwendungsfälle finden im Primärsystem weitere Abläufe im Zusammenhang mit der Versorgung des Versicherten statt. Hier finden Sie Informationen zu den Abläufen im Primärsystem und Interaktionen des Primärsystems mit dem Nutzer.
 
-Please refer to <https://www.gematik.de> or <OSPO@gematik.de>
+[Abläufe](docs/vsdm_ablauf_ps.md)
+
+[Primärsystem-Interaktionen](docs/vsdm_psinteraktionen.md)
+
+
+## Informationsmodell VSD
+Hier geht es zur Informationsseite zum neuen Informationsmodell für VSDM 2.0.
+
+**Anmerkung: Die Festlegung der finalen Inhalte des Informationsmodells erfolgt im Rahmen der Kommentierungsphase dieser Spezifikation. Die in diesem Dokument dargestellten Informationen stellen somit lediglich den bis zum Zeitpunkt der Vorveröffentlichung abgestimmten Stand dar.**
+
+[Informationsmodell](docs/vsdm_informationsmodell.md)
+
+## Prüfungsnachweis
+Hier finden Sie Informationen zum Prüfungsnachweis für VSDM 2.0.
+
+[Prüfungsnachweis](docs/vsdm_pruefungsnachweis.md) 
+
+## Fehlerbehandlung
+
+Hier geht es zur Informationsseite zum Umgang mit Fehlermeldungen
+
+[Fehlermeldungen](docs/vsdm_errorcodes.md)
+
+## FHIR Profile VSDM 2.0
+
+In VSDM 1.0 wurde ein proprietäres XML-Datenformat in einer SOAP-Servicekette verwendet. Mit VSDM 2.0 wird der VSD Datensatz in den FHIR-Standard migriert, der im deutschen Gesundheitswesen immer mehr zum Einsatz kommt. Die FHIR-Profile und Beispielressourcen werden im offiziellen [VSDM 2 simplifier project](https://simplifier.net/vsdm2) veröffentlicht.
+
+## Support / User Help Desk
+Hier geht es zur Informationsseite zum Support.
+
+[Support / UHD](docs/vsdm_support.md)
+
+## Mitgeltende Dokumente und Informationen
+Hier finden Sie eine Übersicht zu den weiterführenden Dokumenten zur Implementierung.
+
+**Links vor offizieller Kommentierungsphase einfügen**
+
+- [Spezifikation VSDM 2.0]( **Link zu gemSpec_VSDM_2**)
+- [FHIR-Profile VSDM 2.0](https://simplifier.net/vsdm2)
+
+
+## Branch Modell
+In diesem Repository werden Branches verwendet um den Status der Weiterentwicklung und das Review von Änderungen abzubilden.
+Folgende Branches werden verwendet
+
+- main (enthält den letzten freigegebenen Stand der Entwicklung; besteht permanent)
+
+- develop (enthält den Stand der fertig entwickelten Features und wird zum Review durch Industriepartner und Gesellschafter verwendet; basiert auf main; nach Freigabe erfolgt ein merge in main und ein Release wird erzeugt; besteht permanent)
+
+- feature/ilf (in feature branches werden neue Features entwickelt (ggf. basierend auf develop); nach Fertigstellung erfolgt ein merge in develop; der feature branch wird nach dem merge gelöscht)
+
+## Lizenzbedingungen
+Copyright (c) 2022 gematik GmbH
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+
+
+## API Dokumentation VSDM 2.0
+
+Wie oben erwähnt, wird das VSDM 2.0 auf die Verwendung einer RESTful FHIR-API reduziert, die hier dokumentiert ist [vsdm2.yaml](./src/openapi/vsdm2.yaml).
+
+
+# Kontakt
+
+Gehen Sie zu <https://www.gematik.de> oder <OSPO@gematik.de>
