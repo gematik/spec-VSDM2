@@ -70,7 +70,7 @@ In VSDM 1.0 wurde ein proprietäres XML-Datenformat in einer SOAP-Servicekette v
 ## Mitgeltende Dokumente und Informationen
 Hier finden Sie eine Übersicht zu den weiterführenden Dokumenten zur Implementierung.
 
-- [Spezifikation VSDM 2.0]( **Link zu gemSpec_VSDM_2**)
+- [Spezifikation VSDM 2.0](https://gemspec.gematik.de/prereleases/Draft_ZeroTrust_VSDM2_24_1/gemSpec_VSDM_2_V1.0.0_CC/)
 - [FHIR-Profile VSDM 2.0](https://simplifier.net/vsdm2)
 
 
