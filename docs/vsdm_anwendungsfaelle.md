@@ -4,7 +4,7 @@ Der Anwendungsfall ermöglicht dem Leistungserbringer,
 - die jeweils zum Besuch aktuellen VSD und
 - den Prüfungsnachweis für die Abrechnung zu erhalten
 
-Vorraussetzungen für die Durchführung des VSDM-Anwendungsfalls ist die Herstellung des Versorgungskontextes. Versorgungskontext bedeutet, dass ein Zusammenhang zwischen einem berechtigten Versicherten und einer behandelnden oder versorgenden Leistungserbringerinstitution (LEI) hergestellt wird.
+Voraussetzungen für die Durchführung des VSDM-Anwendungsfalls ist die Herstellung des Versorgungskontextes. Versorgungskontext bedeutet, dass ein Zusammenhang zwischen einem berechtigten Versicherten und einer behandelnden oder versorgenden Leistungserbringerinstitution (LEI) hergestellt wird.
 
 Der Versorgungskontext wird durch die folgenden Schritte realisiert:
 - Authentisierung der LEI am PoPP-Service mittels einer SM-B Identität (Karte oder HSM)
@@ -39,8 +39,8 @@ Tabelle Übersicht Varianten Abruf VSD
 - LEI ist am PoPP-Service registriert und angemeldet
 - Dienstlokalisierung am FD VSDM 2.0 ist erfolgt (alle 24 Stunden)
 
-**Vorraussetzungen:**
-- Versorgungskontext ist in Form einen vorleigenden PoPP-Tokens attestiert
+**Voraussetzungen:**
+- Versorgungskontext ist in Form eines vorliegenden PoPP-Tokens attestiert
 - PoPP-Token liegt im PS vor
 - KVNR und IK-Nummer sind im PS gespeichert (z.B. im Patientenstammblatt)
 
@@ -77,5 +77,4 @@ Liegt dem PS bei einer Anfrage an den Fd noch kein VSD-Änderungsindikator vor, 
 Dieser Anwendungsfall kommt dann zum tragen, wenn die VSD nicht online vom Fachdienst der Kasse abgerufen werden können. Die LEI muss dann in der Lage sein, die vorhandenen Daten von der eGk zu lesen, anzuzeigen und speichen zu können. Die erhaltenen Daten dienen dann zur Nutzung von bereits etablierten Ersatzverfahren ausserhalb des VSDM 2.0.
 Das PS muss in der Lage sein, die eGK mit den in der LEI vorhandenen Kartenlesegeräten auslesen zu können. Das können sowohl eHealth-Kartenterminals als auch handelsübliche Smartcard-Reader sein. 
 Die Daten werden aus dem ungeschützten Bereich der eGK aus den Containern PD und VD gelesen.
-Zu beachten ist, dass sich auf der eGk einseits der komplette VSD-Datensatz und andererseits auch ein verkürzter Datensatz befinden kann. Keiner dieser Datensätze kann jedoch den notwendigen Abruf der VSD im laufenden Quartal ersetzen da es sich lediglich um statische Daten auf der eGK handelt, die nicht aktualisert werden.
-
+Zu beachten ist, dass sich auf der eGk einerseits der komplette VSD-Datensatz und andererseits auch ein verkürzter Datensatz befinden kann. Keiner dieser Datensätze kann jedoch den notwendigen Abruf der VSD im laufenden Quartal ersetzen da es sich lediglich um statische Daten auf der eGK handelt, die nicht aktualisiert werden.
