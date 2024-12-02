@@ -17,7 +17,7 @@ Die Regelungen dazu werden im Anforderungskatalog KVDT (KBV_ITA_VGEX_Anforderung
 Anmerkung: Ein im Rahmen der Herstellung des Versorgungskontextes übermittelter Prüfungsnachweis vom PoPP-Service kann nicht für die Abrechnungsunterlagen zur Einreichung an die KV verwendet werden.
 
 # Struktur des Prüfungsnachweises
-Der Fachdienst VSDM 2.0 muss den Prüfungsnachweis entsprechend dem Infomodell erzeugen und mit den in der nachfolgenden Tabelle aufgezählter Feldern befüllen.
+Der Fachdienst VSDM 2.0 muss den Prüfungsnachweis entsprechend dem Infomodell erzeugen und mit den in der nachfolgenden Tabelle aufgezählten Feldern befüllen.
 
 |  |  |
 | ----------------- | --------------------- | 
@@ -33,7 +33,7 @@ Zur Erstellung eines Abrechnungsdatensatzes überträgt die Abrechnungssoftware 
 - ErrorCode
 - Prüfziffer (base64-codiert ohne Zeilenumbrüche)
 
-Das Element **Ergebnis** liefert keinen Hinweis mehr über das Ergebnis einer Aktualisierung, da die VSD nicht mehr auf die eGK geschrieben werden, sondern direkt an das PS gesendet werden. Daher kann dieses Element nur einen Wert enthalten der aussagt, dass der Abruf VSD erfolgt ist.
+Das Element **Ergebnis** liefert keinen Hinweis mehr über das Ergebnis einer Aktualisierung, da die VSD nicht mehr auf die eGK geschrieben werden, sondern direkt an das PS gesendet werden. Daher kann dieses Element nur einen Wert enthalten, der aussagt, dass der Abruf VSD erfolgt ist.
 
 Das Element **ErrorCode** kann in VSDM 2.0 keinen validen Error-Code enthalten, da in einem Fehlerfall (z.B. Nichterreichbarkeit) der Fachdienst keine VSD und den Prüfungsnachweis liefert. Hierfür wird ein Wert als Platzhalter definiert.
 
@@ -58,7 +58,7 @@ Das Element **ErrorCode** kann in VSDM 2.0 keinen validen Error-Code enthalten, 
 
 Das Primärsystem muss den vom Fachdienst gelieferten Prüfungsnachweis aus dem HTTP-Header VSDM-Pn extrahieren, BASE64URL dekodieren sowie mittels gzip dekomprimieren. Danach steht das XML-Element Prüfungsnachweis zur weiteren Verarbeitung im Primärsystem zur Verfügung.
 
-Beispiel einer dekomprimierten Prüziffer aus einerm Prüfungsnachweis (XML-Datei)
+Beispiel einer dekomprimierten Prüfziffer aus einem Prüfungsnachweis (XML-Datei)
 | dekomprimierte Prüfziffer |
 | :----------                |
 | <PZ>VDAyMzU5MDA1MDE3MjY3Mzc2MDFVVDLYyBOm+EDF0oe1aW/ndQe2p36MGAzvyBk=</PZ> |
@@ -67,10 +67,3 @@ Beispiel einer dekodierten (Base64) Prüfziffer aus dem Prüfungsnachweis
 | Prüfziffer |
 | :---------- |
 | T0235900501726737601UT2ØÈ¦ø@ÅÒ‡µioçu¶§~ŒïÈ |
-
-
-
-
-
-
-
