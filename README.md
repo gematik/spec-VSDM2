@@ -28,7 +28,7 @@ Im nachfolgend verlinkten Kapitel finden Sie eine Übersicht, in welchem Kontext
 
 
 **Funktionen des VSDM:**
-- **Stammdatenabgleich:** Über das VSDM 2.0 werden die Versichertenstammdaten, wie Name, Geburtsdatum, Anschrift, und Versicherungsschutz, bei jedem Arztbesuch online abgerufen und ggf.  aktualisiert.
+- **Stammdatenabgleich:** Über das VSDM 2.0 werden die Versichertenstammdaten, wie Name, Geburtsdatum, Anschrift und Versicherungsschutz, bei jedem Arztbesuch online abgerufen und ggf.  aktualisiert.
 - **Sicherstellung der Aktualität:** Es soll sichergestellt werden, dass die im Primärsystem gespeicherten Daten stets aktuell sind.
 - **Datensicherheit:** Die Daten werden verschlüsselt und sicher über die Telematikinfrastruktur übertragen.
 
@@ -70,7 +70,7 @@ Hier geht es zur Informationsseite zum Umgang mit Fehlermeldungen
 
 ## FHIR Profile VSDM 2.0
 
-In VSDM 1.0 wurde ein proprietäres XML-Datenformat in einer SOAP-Servicekette verwendet. Mit VSDM 2.0 wird der VSD Datensatz in den FHIR-Standard migriert, der im deutschen Gesundheitswesen immer mehr zum Einsatz kommt. Die FHIR-Profile und Beispielressourcen werden im offiziellen [VSDM 2 simplifier project](https://simplifier.net/vsdm2) veröffentlicht.
+In VSDM 1.0 wurde ein proprietäres XML-Datenformat in einer SOAP-Servicekette verwendet. Mit VSDM 2.0 wird der VSD-Datensatz in den FHIR-Standard migriert, der im deutschen Gesundheitswesen immer mehr zum Einsatz kommt. Die FHIR-Profile und Beispielressourcen werden im offiziellen [VSDM 2 simplifier project](https://simplifier.net/vsdm2) veröffentlicht.
 
 ## Mitgeltende Dokumente und Informationen
 Hier finden Sie eine Übersicht zu den weiterführenden Dokumenten zur Implementierung.
@@ -79,8 +79,8 @@ Hier finden Sie eine Übersicht zu den weiterführenden Dokumenten zur Implement
 - [FHIR-Profile VSDM 2.0](https://simplifier.net/vsdm2)
 
 
-## Branch Modell
-In diesem Repository werden Branches verwendet um den Status der Weiterentwicklung und das Review von Änderungen abzubilden.
+## Branch-Modell
+In diesem Repository werden Branches verwendet, um den Status der Weiterentwicklung und das Review von Änderungen abzubilden.
 Folgende Branches werden verwendet
 
 - main (enthält den letzten freigegebenen Stand der Entwicklung; besteht permanent)

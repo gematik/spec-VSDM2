@@ -13,11 +13,11 @@ This repo holds FHIR-Profiles, sample Resources and OpenAPI specification for th
 
 ## What is VSDM 2
 
-The Versichertenstammdatenmanagement VSDM was introduced around 2017 and both provides patient democraphic data to healthcare professionals and proof of treatement to be used in quarterly statements to the KV. All these use cases make use of Konnektor, eHealth Card Terminals, eGK, SMC-B, Intermediär and finaly the insurant provider's VSDM backend services.
+The Versichertenstammdatenmanagement VSDM was introduced around 2017 and both provides patient demographic data to healthcare professionals and proof of treatment to be used in quarterly statements to the KV. All these use cases make use of Konnektor, eHealth Card Terminals, eGK, SMC-B, Intermediär and finally the insurant provider's VSDM backend services.
 
 - VSDM 2 firstly decouples the proof-of-treatment ("Proof-of-Patient-Presence PoPP) from the use case of providing demographic data. So the PoPP can be used in other applications, too.
-- Secondly, all the named infrastructure-components formed an unfexible and time consuming use case environment. So VSDM 2 reduces dependencies to those components.
-- Finally, with the TI 2.0 initiative, the whole infrastructure will get modernized and updated to state of the art security and architecture principles.
+- Secondly, all the named infrastructure-components formed an inflexible and time-consuming use case environment. So VSDM 2 reduces dependencies to those components.
+- Finally, with the TI 2.0 initiative, the whole infrastructure will get modernized and updated to state-of-the-art security and architecture principles.
 
 VSDM 2 basically will become a simple application, where a healthcare professional can (and in most cases should) get demographic and additional billing information AFTER a PoPP was determined. So the insurant providers provide a simple FHIR-REST-API where doctor's office client software "just" requests additional data by providing a legitimate PoPP-token.
 

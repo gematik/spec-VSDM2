@@ -23,10 +23,3 @@ Beispiele für Übertragung der Prüfziffer sind in gemSpecVSDM2 dargestellt und
 
 
 
-
-
-
-
-
-
-

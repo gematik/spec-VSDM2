@@ -4,7 +4,7 @@ Der Anwendungsfall ermöglicht dem Leistungserbringer,
 - die jeweils zum Besuch aktuellen VSD und
 - die Prüfziffer für die Abrechnung zu erhalten
 
-Vorraussetzungen für die Durchführung des VSDM-Anwendungsfalls ist die Herstellung des Versorgungskontextes. Versorgungskontext bedeutet, dass ein Zusammenhang zwischen einem berechtigten Versicherten und einer behandelnden oder versorgenden Leistungserbringerinstitution (LEI) hergestellt wird.
+Voraussetzungen für die Durchführung des VSDM-Anwendungsfalls ist die Herstellung des Versorgungskontextes. Versorgungskontext bedeutet, dass ein Zusammenhang zwischen einem berechtigten Versicherten und einer behandelnden oder versorgenden Leistungserbringerinstitution (LEI) hergestellt wird.
 
 Der Versorgungskontext wird durch die folgenden Schritte realisiert:
 - Authentisierung der LEI am PoPP-Service mittels einer SM-B Identität (Karte oder HSM)
@@ -39,8 +39,8 @@ Tabelle Übersicht Varianten Abruf VSD
 - LEI ist am PoPP-Service registriert und angemeldet
 - Dienstlokalisierung am FD VSDM 2.0 ist erfolgt (alle 24 Stunden)
 
-**Vorraussetzungen:**
-- Versorgungskontext ist in Form einen vorleigenden PoPP-Tokens attestiert
+**Voraussetzungen:**
+- Versorgungskontext ist in Form eines vorliegenden PoPP-Tokens attestiert
 - PoPP-Token liegt im PS vor
 - KVNR und IK-Nummer sind im PS gespeichert (z.B. im Patientenstammblatt)
 
