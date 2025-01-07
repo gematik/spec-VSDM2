@@ -56,6 +56,14 @@
     "endLine": 59
   },
   {
+    "outputFile": "StructureDefinition-gem-erp-sr-log-dispense-request-confirmation.json",
+    "fshName": "GEM_ERP_SR_LOG_DispenseRequest_Confirmation",
+    "fshType": "Logical",
+    "fshFile": "logicalmodel/logical_VSD_Datensatz.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
     "outputFile": "StructureDefinition-vsdm-bundle.json",
     "fshName": "VSDMBundle",
     "fshType": "Profile",
