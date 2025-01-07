@@ -1,0 +1,85 @@
+name: Automatic Image Generation
+
+on:
+  push:
+    paths:
+      - 'src/plantuml/**'
+      - 'src/drawio/**'
+  workflow_dispatch:
+
+jobs:
+  generate_images:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4  # Updated to Node.js 20 compatible version
+      with:
+        fetch-depth: 0  # Ensures all commits are fetched
+
+    - name: Set up JDK 11
+      uses: actions/setup-java@v3.11.0  # Updated to Node.js 20 compatible version
+      with:
+        distribution: 'temurin'
+        java-version: '11'
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y graphviz xdotool xvfb
+        sudo snap install drawio --classic
+
+    - name: Download PlantUML jar
+      run: |
+        wget https://github.com/plantuml/plantuml/releases/latest/download/plantuml.jar -O /usr/local/bin/plantuml.jar
+
+    - name: Check for changed files
+      id: changed_files
+      run: |
+        BASE_SHA=$(git rev-parse HEAD^1)
+        CHANGED_FILES=$(git diff --name-only $BASE_SHA HEAD | grep -E 'src/plantuml/.*\.puml|src/drawio/.*\.drawio' || true)
+        echo "changed_files=$CHANGED_FILES" >> $GITHUB_ENV
+        echo "::set-output name=changed_files::$CHANGED_FILES"
+        echo "CHANGED_FILES: $CHANGED_FILES"
+        
+    - name: Debug changed files
+      run: |
+        echo "Debug: Changed files are ${{ steps.changed_files.outputs.changed_files }}"
+
+    - name: Generate images from changed PlantUML files
+      if: ${{ steps.changed_files.outputs.changed_files }} != ''
+      run: |
+        for file in $(echo "${{ steps.changed_files.outputs.changed_files }}" | grep 'src/plantuml/.*\.puml' || true); do
+          echo "Processing PlantUML file: $file"
+          output_dir=$(dirname "$file" | sed 's|^src/plantuml|images|')
+          mkdir -p "$output_dir"
+          java -jar /usr/local/bin/plantuml.jar -tpng "$file" -o "${PWD}/$output_dir"
+          java -jar /usr/local/bin/plantuml.jar -tsvg "$file" -o "${PWD}/$output_dir"
+        done
+
+    - name: Generate images from changed drawio files
+      if: ${{ steps.changed_files.outputs.changed_files }} != ''
+      run: |
+        for file in $(echo "${{ steps.changed_files.outputs.changed_files }}" | grep 'src/drawio/.*\.drawio' || true); do
+          echo "Processing drawio file: $file"
+          output_dir=$(dirname "$file" | sed 's|^src/drawio|images|')
+          mkdir -p "$output_dir"
+          xvfb-run -a drawio -x -f png -o "${PWD}/$output_dir/$(basename "$file" .drawio).png" "$file"
+          xvfb-run -a drawio -x -f svg -o "${PWD}/$output_dir/$(basename "$file" .drawio).svg" "$file"
+        done
+
+    - name: Debug images folder
+      run: |
+        echo "Contents of the images folder:"
+        ls -R images
+
+    - name: Commit and push generated images
+      if: ${{ steps.changed_files.outputs.changed_files }} != ''
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        git add -A images
+        git commit -m "Generate images from changed PlantUML and drawio files"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
