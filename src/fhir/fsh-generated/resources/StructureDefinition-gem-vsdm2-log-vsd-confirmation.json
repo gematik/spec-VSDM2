@@ -314,6 +314,62 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse",
+        "short": "StrassenAdresse",
+        "definition": "Angaben zur Strassenadresse des Versicherten",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Strasse",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Strasse",
+        "short": "Gibt den Namen der Strasse an.",
+        "definition": "Pflichtangabe soweit bekannt, wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen. Anlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Strasse",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
       }
     ]
   },
@@ -395,6 +451,32 @@
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.Namenszusatz",
         "short": "Gibt die Namenszusaetze der Person an, z. B.: Freiherr",
         "definition": "Anlage 7 (Tabelle der gültigen Namenszusätze) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse",
+        "short": "StrassenAdresse",
+        "definition": "Angaben zur Strassenadresse des Versicherten",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Strasse",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Strasse",
+        "short": "Gibt den Namen der Strasse an.",
+        "definition": "Pflichtangabe soweit bekannt, wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen. Anlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
         "min": 0,
         "max": "1",
         "type": [
