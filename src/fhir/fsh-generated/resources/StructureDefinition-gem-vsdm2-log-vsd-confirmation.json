@@ -510,6 +510,174 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
+        "short": "Gibt das Land zu der Strassen- und oder Postfachadresse an.",
+        "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzlaendercode zu beiden Adressdaten vorhanden sein.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse",
+        "short": "Gibt die Postfachadresse des Versicherten an",
+        "definition": "Gibt die Postfachadresse des Versicherten an",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Postfach",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Postfach",
+        "short": "Gibt das Postfach des Versicherten an",
+        "definition": "Gibt das Postfach des Versicherten an",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Postfach",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Postleitzahl",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Postleitzahl",
+        "short": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an.",
+        "definition": "Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. In Verbindung mit dem Wohnsitzländercode D für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Postleitzahl",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Ort",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Ort",
+        "short": "Gibt den Ort zur Strassen- und oder Postfachadresse an.",
+        "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein. Abweichung zur Festlegung in DEÜV (Feldlänge = 34)",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Ort",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+        "short": "Gibt das Land zu der Strassen- und oder Postfachadresse an.",
+        "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzlaendercode zu beiden Adressdaten vorhanden sein.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
       }
     ]
   },
@@ -682,6 +850,84 @@
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Ort",
         "short": "Gibt den Ort zur Strassen- und oder Postfachadresse an. ",
         "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein. Abweichung zur Festlegung in DEÜV (Feldlänge = 34)",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
+        "short": "Gibt das Land zu der Strassen- und oder Postfachadresse an.",
+        "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzlaendercode zu beiden Adressdaten vorhanden sein.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse",
+        "short": "Gibt die Postfachadresse des Versicherten an",
+        "definition": "Gibt die Postfachadresse des Versicherten an",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Postfach",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Postfach",
+        "short": "Gibt das Postfach des Versicherten an",
+        "definition": "Gibt das Postfach des Versicherten an",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Postleitzahl",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Postleitzahl",
+        "short": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an.",
+        "definition": "Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. In Verbindung mit dem Wohnsitzländercode D für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Ort",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Ort",
+        "short": "Gibt den Ort zur Strassen- und oder Postfachadresse an.",
+        "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein. Abweichung zur Festlegung in DEÜV (Feldlänge = 34)",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+        "short": "Gibt das Land zu der Strassen- und oder Postfachadresse an.",
+        "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzlaendercode zu beiden Adressdaten vorhanden sein.",
         "min": 1,
         "max": "1",
         "type": [
