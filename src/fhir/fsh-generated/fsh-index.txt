@@ -6,7 +6,7 @@ CodeSystem-vsdmkostentreager-angabestatus-cs.json           VSDMKostentreagerAng
 Coverage-2d4da53a-413a-48fe-b908-2e67b5761523.json          VSDMCoverageSample               Instance    examples/ExampleVSDMCoverage.fsh                 2 - 9
 Coverage-VALID-413a-48fe-b908-2e67b5761523.json             VALID-VSDMCoverageSample         Instance    examples/ExampleVSDMCoverage.fsh                 12 - 18
 Patient-437f2555-2396-4c64-a656-e9553161ca3c.json           VSDMPatientSample                Instance    profiles/VSDMPatient.fsh                         36 - 59
-StructureDefinition-gem-vsdm2-log-vsd-confirmation.json     GEM_VSDM2_LOG_VSD_Confirmation   Logical     logicalmodel/logical_VSD_Datensatz.fsh           1 - 13
+StructureDefinition-gem-vsdm2-log-vsd-confirmation.json     GEM_VSDM2_LOG_VSD_Confirmation   Logical     logicalmodel/logical_VSD_Datensatz.fsh           1 - 18
 StructureDefinition-vsdm-bundle.json                        VSDMBundle                       Profile     profiles/VSDMBundle.fsh                          1 - 39
 StructureDefinition-vsdm-composition.json                   VSDMComposition                  Profile     profiles/VSDMComposition.fsh                     1 - 20
 StructureDefinition-vsdm-contactpoint-timessenger.json      VSDMContactPointTIMessenger      Profile     profiles/VSDMContactPointTIMessenger.fsh         1 - 7
