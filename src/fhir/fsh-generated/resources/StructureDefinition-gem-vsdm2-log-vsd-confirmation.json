@@ -148,14 +148,42 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.VersichertenID",
-        "path": "gem-vsdm2-log-vsd-confirmation.VersichertenID",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten",
+        "short": "Versichertendaten",
+        "definition": "Versichertendaten",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.VersichertenID",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.VersichertenID",
         "short": "KVNR",
         "definition": "Die Versicherten-ID ist der 10-stellige unveraenderliche Teil der 30-stelligen Krankenversichertennummer",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.VersichertenID",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.VersichertenID",
           "min": 1,
           "max": "1"
         },
@@ -176,14 +204,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter",
         "short": "Angaben zum Versicherten",
         "definition": "Angaben zum Versicherten",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter",
           "min": 0,
           "max": "1"
         },
@@ -204,14 +232,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.Nachname",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.Nachname",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Nachname",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Nachname",
         "short": "Gibt den Nachnamen des Versicherten an",
         "definition": "Gibt den Nachnamen des Versicherten an",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.Nachname",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Nachname",
           "min": 1,
           "max": "1"
         },
@@ -232,14 +260,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.Vorname",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.Vorname",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorname",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorname",
         "short": "Gibt den Vornamen der Person an.",
         "definition": "Alle Vornamen der Person (max. 5) werden eingegeben. Mehrere Vornamen werden durch Leerzeichen oder Bindestrich getrennt.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.Vorname",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorname",
           "min": 1,
           "max": "1"
         },
@@ -260,14 +288,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.Vorsatzwort",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.Vorsatzwort",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorsatzwort",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorsatzwort",
         "short": "Gibt die Vorsatzwoerter der Person an.",
         "definition": "Mehrere Vorsatzwörter werden durch Leerzeichen getrennt angegeben. Anlage 6 (Tabelle der gültigen Vorsatzworte) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.Vorsatzwort",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorsatzwort",
           "min": 0,
           "max": "1"
         },
@@ -288,14 +316,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.Namenszusatz",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.Namenszusatz",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Namenszusatz",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Namenszusatz",
         "short": "Gibt die Namenszusaetze der Person an, z. B.: Freiherr",
         "definition": "Anlage 7 (Tabelle der gültigen Namenszusätze) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.Namenszusatz",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Namenszusatz",
           "min": 0,
           "max": "1"
         },
@@ -316,14 +344,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.Titel",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.Titel",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Titel",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Titel",
         "short": "Gibt die akademischen Grade der Person an.",
         "definition": "Mehrere Titel werden durch Leerzeichen getrennt angegeben.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.Titel",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Titel",
           "min": 0,
           "max": "1"
         },
@@ -344,14 +372,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.Geschlecht",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.Geschlecht",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geschlecht",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geschlecht",
         "short": "Gibt das Geschlecht des Versicherten an",
         "definition": "Gibt das Geschlecht des Versicherten an",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.Geschlecht",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geschlecht",
           "min": 1,
           "max": "1"
         },
@@ -372,14 +400,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse",
         "short": "Gibt die Strassenadresse des Versicherten an",
         "definition": "Gibt die Strassenadresse des Versicherten an",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse",
           "min": 0,
           "max": "1"
         },
@@ -400,14 +428,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Strasse",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Strasse",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
         "short": "Gibt den Namen der Strasse an",
         "definition": "Wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Strasse",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
           "min": 0,
           "max": "1"
         },
@@ -428,14 +456,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Hausnummer",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Hausnummer",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
         "short": "Gibt die Hausnummer in der Strasse der Person an.",
         "definition": "Wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Hausnummer",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
           "min": 0,
           "max": "1"
         },
@@ -456,14 +484,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Postleitzahl",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Postleitzahl",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
         "short": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an.",
         "definition": "Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. In Verbindung mit dem Wohnsitzländercode D für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Postleitzahl",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
           "min": 0,
           "max": "1"
         },
@@ -484,14 +512,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Ort",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Ort",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Ort",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Ort",
         "short": "Gibt den Ort zur Strassen- und oder Postfachadresse an. ",
         "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein. Abweichung zur Festlegung in DEÜV (Feldlänge = 34)",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Ort",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Ort",
           "min": 1,
           "max": "1"
         },
@@ -512,14 +540,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
         "short": "Gibt das Land zu der Strassen- und oder Postfachadresse an.",
         "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzlaendercode zu beiden Adressdaten vorhanden sein.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
           "min": 1,
           "max": "1"
         },
@@ -540,14 +568,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse",
         "short": "Gibt die Postfachadresse des Versicherten an",
         "definition": "Gibt die Postfachadresse des Versicherten an",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse",
           "min": 0,
           "max": "1"
         },
@@ -568,14 +596,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Postfach",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Postfach",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
         "short": "Gibt das Postfach des Versicherten an",
         "definition": "Gibt das Postfach des Versicherten an",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Postfach",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
           "min": 1,
           "max": "1"
         },
@@ -596,14 +624,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Postleitzahl",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Postleitzahl",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
         "short": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an.",
         "definition": "Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. In Verbindung mit dem Wohnsitzländercode D für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Postleitzahl",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
           "min": 0,
           "max": "1"
         },
@@ -624,14 +652,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Ort",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Ort",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Ort",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Ort",
         "short": "Gibt den Ort zur Strassen- und oder Postfachadresse an.",
         "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein. Abweichung zur Festlegung in DEÜV (Feldlänge = 34)",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Ort",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Ort",
           "min": 1,
           "max": "1"
         },
@@ -652,14 +680,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
         "short": "Gibt das Land zu der Strassen- und oder Postfachadresse an.",
         "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzlaendercode zu beiden Adressdaten vorhanden sein.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
           "min": 1,
           "max": "1"
         },
@@ -680,20 +708,48 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.TIMessengerID",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.TIMessengerID",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.TIMessengerID",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.TIMessengerID",
         "short": "Eindeutige Identifikation einen TI-Messenger-Nutzers.",
         "definition": "Die jeweils vollständige MXID der/des Versicherten soll dem LE zur Kommunikation mit der/dem Versicherten im Rahmen des Abrufs der VSD zur Verfügung gestellt werden können.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.TIMessengerID",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.TIMessengerID",
           "min": 0,
           "max": "1"
         },
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten",
+        "short": "Angaben zum Versicherungsverhältnis",
+        "definition": "Angaben zum Versicherungsverhältnis",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
           }
         ],
         "constraint": [
@@ -718,8 +774,21 @@
         "definition": "Fachliches Modell zur Beschreibung des VSD-Datensatzes"
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.VersichertenID",
-        "path": "gem-vsdm2-log-vsd-confirmation.VersichertenID",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten",
+        "short": "Versichertendaten",
+        "definition": "Versichertendaten",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.VersichertenID",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.VersichertenID",
         "short": "KVNR",
         "definition": "Die Versicherten-ID ist der 10-stellige unveraenderliche Teil der 30-stelligen Krankenversichertennummer",
         "min": 1,
@@ -731,8 +800,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter",
         "short": "Angaben zum Versicherten",
         "definition": "Angaben zum Versicherten",
         "min": 0,
@@ -744,8 +813,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.Nachname",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.Nachname",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Nachname",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Nachname",
         "short": "Gibt den Nachnamen des Versicherten an",
         "definition": "Gibt den Nachnamen des Versicherten an",
         "min": 1,
@@ -757,8 +826,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.Vorname",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.Vorname",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorname",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorname",
         "short": "Gibt den Vornamen der Person an.",
         "definition": "Alle Vornamen der Person (max. 5) werden eingegeben. Mehrere Vornamen werden durch Leerzeichen oder Bindestrich getrennt.",
         "min": 1,
@@ -770,8 +839,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.Vorsatzwort",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.Vorsatzwort",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorsatzwort",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorsatzwort",
         "short": "Gibt die Vorsatzwoerter der Person an.",
         "definition": "Mehrere Vorsatzwörter werden durch Leerzeichen getrennt angegeben. Anlage 6 (Tabelle der gültigen Vorsatzworte) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
         "min": 0,
@@ -783,8 +852,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.Namenszusatz",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.Namenszusatz",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Namenszusatz",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Namenszusatz",
         "short": "Gibt die Namenszusaetze der Person an, z. B.: Freiherr",
         "definition": "Anlage 7 (Tabelle der gültigen Namenszusätze) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
         "min": 0,
@@ -796,8 +865,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.Titel",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.Titel",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Titel",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Titel",
         "short": "Gibt die akademischen Grade der Person an.",
         "definition": "Mehrere Titel werden durch Leerzeichen getrennt angegeben.",
         "min": 0,
@@ -809,8 +878,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.Geschlecht",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.Geschlecht",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geschlecht",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geschlecht",
         "short": "Gibt das Geschlecht des Versicherten an",
         "definition": "Gibt das Geschlecht des Versicherten an",
         "min": 1,
@@ -822,8 +891,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse",
         "short": "Gibt die Strassenadresse des Versicherten an",
         "definition": "Gibt die Strassenadresse des Versicherten an",
         "min": 0,
@@ -835,8 +904,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Strasse",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Strasse",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
         "short": "Gibt den Namen der Strasse an",
         "definition": "Wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.",
         "min": 0,
@@ -848,8 +917,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Hausnummer",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Hausnummer",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
         "short": "Gibt die Hausnummer in der Strasse der Person an.",
         "definition": "Wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.",
         "min": 0,
@@ -861,8 +930,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Postleitzahl",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Postleitzahl",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
         "short": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an.",
         "definition": "Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. In Verbindung mit dem Wohnsitzländercode D für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.",
         "min": 0,
@@ -874,8 +943,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Ort",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Ort",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Ort",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Ort",
         "short": "Gibt den Ort zur Strassen- und oder Postfachadresse an. ",
         "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein. Abweichung zur Festlegung in DEÜV (Feldlänge = 34)",
         "min": 1,
@@ -887,8 +956,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
         "short": "Gibt das Land zu der Strassen- und oder Postfachadresse an.",
         "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzlaendercode zu beiden Adressdaten vorhanden sein.",
         "min": 1,
@@ -900,8 +969,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse",
         "short": "Gibt die Postfachadresse des Versicherten an",
         "definition": "Gibt die Postfachadresse des Versicherten an",
         "min": 0,
@@ -913,8 +982,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Postfach",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Postfach",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
         "short": "Gibt das Postfach des Versicherten an",
         "definition": "Gibt das Postfach des Versicherten an",
         "min": 1,
@@ -926,8 +995,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Postleitzahl",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Postleitzahl",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
         "short": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an.",
         "definition": "Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. In Verbindung mit dem Wohnsitzländercode D für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.",
         "min": 0,
@@ -939,8 +1008,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Ort",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Ort",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Ort",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Ort",
         "short": "Gibt den Ort zur Strassen- und oder Postfachadresse an.",
         "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein. Abweichung zur Festlegung in DEÜV (Feldlänge = 34)",
         "min": 1,
@@ -952,8 +1021,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
         "short": "Gibt das Land zu der Strassen- und oder Postfachadresse an.",
         "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzlaendercode zu beiden Adressdaten vorhanden sein.",
         "min": 1,
@@ -965,8 +1034,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherter.TIMessengerID",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherter.TIMessengerID",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.TIMessengerID",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.TIMessengerID",
         "short": "Eindeutige Identifikation einen TI-Messenger-Nutzers.",
         "definition": "Die jeweils vollständige MXID der/des Versicherten soll dem LE zur Kommunikation mit der/dem Versicherten im Rahmen des Abrufs der VSD zur Verfügung gestellt werden können.",
         "min": 0,
@@ -974,6 +1043,19 @@
         "type": [
           {
             "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten",
+        "short": "Angaben zum Versicherungsverhältnis",
+        "definition": "Angaben zum Versicherungsverhältnis",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
           }
         ]
       }
