@@ -1100,6 +1100,34 @@
         ]
       },
       {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.KostentraegerAngabestatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.KostentraegerAngabestatus",
+        "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
+        "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.KostentraegerAngabestatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.Status",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.Status",
         "short": "Gibt an, ob fuer den Versicherten eine Befreiung von der Zuzahlungspflicht nach § 62 SGB V vorliegt.",
@@ -1282,6 +1310,34 @@
         "type": [
           {
             "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.DMP",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.DMP",
+        "short": "Gibt den Namen des DMP-Programms an",
+        "definition": "Angaben erfolgen gemaess Schlüsseltabelle",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.DMP",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
           }
         ],
         "constraint": [
@@ -1562,6 +1618,34 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.KostentraegerAngabestatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.KostentraegerAngabestatus",
+        "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
+        "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.KostentraegerAngabestatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
           }
         ],
         "constraint": [
@@ -2140,6 +2224,19 @@
         ]
       },
       {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.KostentraegerAngabestatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.KostentraegerAngabestatus",
+        "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
+        "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.Status",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.Status",
         "short": "Gibt an, ob fuer den Versicherten eine Befreiung von der Zuzahlungspflicht nach § 62 SGB V vorliegt.",
@@ -2227,6 +2324,19 @@
         "type": [
           {
             "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.DMP",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.DMP",
+        "short": "Gibt den Namen des DMP-Programms an",
+        "definition": "Angaben erfolgen gemaess Schlüsseltabelle",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
           }
         ]
       },
@@ -2357,6 +2467,19 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.KostentraegerAngabestatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.KostentraegerAngabestatus",
+        "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
+        "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
           }
         ]
       },
