@@ -372,10 +372,38 @@
         ]
       },
       {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geburtsdatum",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geburtsdatum",
+        "short": "Gibt das Geburtsdatum des Versicherten an",
+        "definition": "Das Geburtsjahr MUSS immer gefuellt werden. Bei Inlaendern ist immer ein logisch richtiges Geburtsdatum anzugeben. Bei Auslaendern gilt folgendes: Zumindest das Geburtsjahr ist immer anzugeben. Im Geburtstag oder im Geburtstag und im Geburtsmonat ist bei Ausländern „00“ bzw. „0000“ zulässig, wenn der Geburtstag und der Geburtsmonat nicht zu ermitteln sind. Das Geburtsdatum muss komplett gefüllt sein. Beispiel: 1990-00-00",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geburtsdatum",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
         "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geschlecht",
         "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geschlecht",
         "short": "Gibt das Geschlecht des Versicherten an",
-        "definition": "Gibt das Geschlecht des Versicherten an",
+        "definition": "M = maennlich, W = weiblich, X = unbestimmt, D = divers",
         "min": 1,
         "max": "1",
         "base": {
@@ -514,7 +542,7 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Ort",
         "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Ort",
-        "short": "Gibt den Ort zur Strassen- und oder Postfachadresse an. ",
+        "short": "Gibt den Ort zur Strassen- und oder Postfachadresse an.",
         "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein. Abweichung zur Festlegung in DEÜV (Feldlänge = 34)",
         "min": 1,
         "max": "1",
@@ -711,7 +739,7 @@
         "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.TIMessengerID",
         "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.TIMessengerID",
         "short": "Eindeutige Identifikation einen TI-Messenger-Nutzers.",
-        "definition": "Die jeweils vollständige MXID der/des Versicherten soll dem LE zur Kommunikation mit der/dem Versicherten im Rahmen des Abrufs der VSD zur Verfügung gestellt werden können.",
+        "definition": "Die jeweils vollständige MXID der/des Versicherten soll dem LE zur Kommunikation mit der/dem Versicherten im Rahmen des Abrufs der VSD zur Verfügung gestellt werden können. Wenn sich der Versicherte für den TI Messenger-Dienst  registriert hat, MUSS es übertragen werden.",
         "min": 0,
         "max": "1",
         "base": {
@@ -750,6 +778,902 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger",
+        "short": "Angaben zum Kostenträger",
+        "definition": "Angaben zum Kostenträger",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Name",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Name",
+        "short": "Gibt den Namen der Institution/Organisation an.",
+        "definition": "Gibt den Namen der Institution/Organisation an.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Name",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
+        "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
+        "definition": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
+        "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
+        "definition": "Anlage 8 - Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger",
+        "short": "Angaben zum abrechnenden Kostenträger",
+        "definition": "Angaben zum abrechnenden Kostenträger",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Name",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Name",
+        "short": "Gibt den Namen der Institution/Organisation an.",
+        "definition": "Gibt den Namen der Institution/Organisation an.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Name",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
+        "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
+        "definition": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
+        "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
+        "definition": "Anlage 8 - Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WOP",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WOP",
+        "short": "Das Kennzeichen WOP ist gemaess § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemaess Artikel 2 § 2 Abs. 2 des Gesetzes zur Einfuehrung des Wohnortprinzips bei Honorarvereinbarungen fuer Aerzte und Zahnaerzte und zur Krankenversichertenkarte gemaess § 291 Abs. 2 Fuenftes Sozialgesetzbuch (SGB V) erforderlich.",
+        "definition": "Angaben gemäß Anlage 21 BMV-Ä und EKV.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WOP",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.BesonderePersonengruppe",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.BesonderePersonengruppe",
+        "short": "Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
+        "definition": "Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.BesonderePersonengruppe",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus",
+        "short": "Gibt den Zuzahlungsstatus des Versicherten an",
+        "definition": "Gibt den Zuzahlungsstatus des Versicherten an",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.Status",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.Status",
+        "short": "Gibt an, ob fuer den Versicherten eine Befreiung von der Zuzahlungspflicht nach § 62 SGB V vorliegt.",
+        "definition": "1 true = von Zuzahlungspflicht befreit, 0 false = von Zuzahlungspflicht nicht befreit",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.Status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.GueltigBis",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.GueltigBis",
+        "short": "Gibt die Gueltigkeit der Befreiung von der Zuzahlungspflicht nach § 62 SGB V an.",
+        "definition": "Wird nur angegeben, wenn Status Zuzahlung mit 1 = befreit angegeben ist.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.GueltigBis",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz",
+        "short": "Angaben zum Versicherungsschutz",
+        "definition": "Angaben zum Versicherungsschutz",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Beginn",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Beginn",
+        "short": "Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem angegebenen Kostentraeger an.",
+        "definition": "Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem angegebenen Kostentraeger an.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Beginn",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Ende",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Ende",
+        "short": "Gibt das Datum des Endes der Mitgliedschaft des Versicherten bei dem unter Klasse Kostentraeger angegebenen Kostentraeger an oder das Datum des Fristablaufs bei befristeter Gueltigkeit der Karte.",
+        "definition": "Gibt das Datum des Endes der Mitgliedschaft des Versicherten bei dem unter Klasse Kostentraeger angegebenen Kostentraeger an oder das Datum des Fristablaufs bei befristeter Gueltigkeit der Karte.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Ende",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP",
+        "short": "Angaben zur Teilnahme des Versicherten an DMP-Programmen",
+        "definition": "Angaben zur Teilnahme des Versicherten an DMP-Programmen",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.KostentraegerAngabestatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.KostentraegerAngabestatus",
+        "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
+        "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.KostentraegerAngabestatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.Beginn",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.Beginn",
+        "short": "Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.",
+        "definition": "Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.Beginn",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.Ende",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.Ende",
+        "short": "Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an.",
+        "definition": "Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.Ende",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.digitalesDMP",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.digitalesDMP",
+        "short": "Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
+        "definition": "Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.digitalesDMP",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung",
+        "short": "Angaben zur Kostenerstattung für verschiedene Sektoren",
+        "definition": "Angaben zur Kostenerstattung für verschiedene Sektoren",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.KostentraegerAngabestatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.KostentraegerAngabestatus",
+        "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
+        "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.KostentraegerAngabestatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.AerztlicheVersorgung",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.AerztlicheVersorgung",
+        "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer die aerztliche Versorgung an.",
+        "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.AerztlicheVersorgung",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.ZahnaerztlicheVersorgung",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.ZahnaerztlicheVersorgung",
+        "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer zahnaerztliche Versorgung an.",
+        "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.ZahnaerztlicheVersorgung",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.StationaererBereich",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.StationaererBereich",
+        "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer den stationaeren Bereich an.",
+        "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.StationaererBereich",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.VeranlassteLeistungen",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.VeranlassteLeistungen",
+        "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer veranlasste Leistungen an.",
+        "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.VeranlassteLeistungen",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch",
+        "short": "Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
+        "definition": "Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.Beginn",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.Beginn",
+        "short": "Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an.",
+        "definition": "Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.Beginn",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.Ende",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.Ende",
+        "short": "Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.",
+        "definition": "Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.Ende",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.ArtDesRuhens",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.ArtDesRuhens",
+        "short": "Gibt die Art des Ruhens an.",
+        "definition": "1 = vollständig, 2 = eingeschränkt",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.ArtDesRuhens",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versichertenart",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versichertenart",
+        "short": "Gibt die Art der Versicherung an",
+        "definition": "1 = Mitglied, 3 = Familienversicherter, 5 = Rentner und ihre Familienangehörigen",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versichertenart",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
           }
         ],
         "constraint": [
@@ -878,10 +1802,23 @@
         ]
       },
       {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geburtsdatum",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geburtsdatum",
+        "short": "Gibt das Geburtsdatum des Versicherten an",
+        "definition": "Das Geburtsjahr MUSS immer gefuellt werden. Bei Inlaendern ist immer ein logisch richtiges Geburtsdatum anzugeben. Bei Auslaendern gilt folgendes: Zumindest das Geburtsjahr ist immer anzugeben. Im Geburtstag oder im Geburtstag und im Geburtsmonat ist bei Ausländern „00“ bzw. „0000“ zulässig, wenn der Geburtstag und der Geburtsmonat nicht zu ermitteln sind. Das Geburtsdatum muss komplett gefüllt sein. Beispiel: 1990-00-00",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
         "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geschlecht",
         "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geschlecht",
         "short": "Gibt das Geschlecht des Versicherten an",
-        "definition": "Gibt das Geschlecht des Versicherten an",
+        "definition": "M = maennlich, W = weiblich, X = unbestimmt, D = divers",
         "min": 1,
         "max": "1",
         "type": [
@@ -945,7 +1882,7 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Ort",
         "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Ort",
-        "short": "Gibt den Ort zur Strassen- und oder Postfachadresse an. ",
+        "short": "Gibt den Ort zur Strassen- und oder Postfachadresse an.",
         "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein. Abweichung zur Festlegung in DEÜV (Feldlänge = 34)",
         "min": 1,
         "max": "1",
@@ -1037,7 +1974,7 @@
         "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.TIMessengerID",
         "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.TIMessengerID",
         "short": "Eindeutige Identifikation einen TI-Messenger-Nutzers.",
-        "definition": "Die jeweils vollständige MXID der/des Versicherten soll dem LE zur Kommunikation mit der/dem Versicherten im Rahmen des Abrufs der VSD zur Verfügung gestellt werden können.",
+        "definition": "Die jeweils vollständige MXID der/des Versicherten soll dem LE zur Kommunikation mit der/dem Versicherten im Rahmen des Abrufs der VSD zur Verfügung gestellt werden können. Wenn sich der Versicherte für den TI Messenger-Dienst  registriert hat, MUSS es übertragen werden.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1056,6 +1993,422 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger",
+        "short": "Angaben zum Kostenträger",
+        "definition": "Angaben zum Kostenträger",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Name",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Name",
+        "short": "Gibt den Namen der Institution/Organisation an.",
+        "definition": "Gibt den Namen der Institution/Organisation an.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
+        "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
+        "definition": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
+        "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
+        "definition": "Anlage 8 - Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger",
+        "short": "Angaben zum abrechnenden Kostenträger",
+        "definition": "Angaben zum abrechnenden Kostenträger",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Name",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Name",
+        "short": "Gibt den Namen der Institution/Organisation an.",
+        "definition": "Gibt den Namen der Institution/Organisation an.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
+        "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
+        "definition": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
+        "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
+        "definition": "Anlage 8 - Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WOP",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WOP",
+        "short": "Das Kennzeichen WOP ist gemaess § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemaess Artikel 2 § 2 Abs. 2 des Gesetzes zur Einfuehrung des Wohnortprinzips bei Honorarvereinbarungen fuer Aerzte und Zahnaerzte und zur Krankenversichertenkarte gemaess § 291 Abs. 2 Fuenftes Sozialgesetzbuch (SGB V) erforderlich.",
+        "definition": "Angaben gemäß Anlage 21 BMV-Ä und EKV.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.BesonderePersonengruppe",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.BesonderePersonengruppe",
+        "short": "Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
+        "definition": "Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus",
+        "short": "Gibt den Zuzahlungsstatus des Versicherten an",
+        "definition": "Gibt den Zuzahlungsstatus des Versicherten an",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.Status",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.Status",
+        "short": "Gibt an, ob fuer den Versicherten eine Befreiung von der Zuzahlungspflicht nach § 62 SGB V vorliegt.",
+        "definition": "1 true = von Zuzahlungspflicht befreit, 0 false = von Zuzahlungspflicht nicht befreit",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.GueltigBis",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.GueltigBis",
+        "short": "Gibt die Gueltigkeit der Befreiung von der Zuzahlungspflicht nach § 62 SGB V an.",
+        "definition": "Wird nur angegeben, wenn Status Zuzahlung mit 1 = befreit angegeben ist.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz",
+        "short": "Angaben zum Versicherungsschutz",
+        "definition": "Angaben zum Versicherungsschutz",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Beginn",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Beginn",
+        "short": "Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem angegebenen Kostentraeger an.",
+        "definition": "Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem angegebenen Kostentraeger an.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Ende",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Ende",
+        "short": "Gibt das Datum des Endes der Mitgliedschaft des Versicherten bei dem unter Klasse Kostentraeger angegebenen Kostentraeger an oder das Datum des Fristablaufs bei befristeter Gueltigkeit der Karte.",
+        "definition": "Gibt das Datum des Endes der Mitgliedschaft des Versicherten bei dem unter Klasse Kostentraeger angegebenen Kostentraeger an oder das Datum des Fristablaufs bei befristeter Gueltigkeit der Karte.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP",
+        "short": "Angaben zur Teilnahme des Versicherten an DMP-Programmen",
+        "definition": "Angaben zur Teilnahme des Versicherten an DMP-Programmen",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.KostentraegerAngabestatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.KostentraegerAngabestatus",
+        "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
+        "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.Beginn",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.Beginn",
+        "short": "Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.",
+        "definition": "Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.Ende",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.Ende",
+        "short": "Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an.",
+        "definition": "Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.digitalesDMP",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.digitalesDMP",
+        "short": "Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
+        "definition": "Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung",
+        "short": "Angaben zur Kostenerstattung für verschiedene Sektoren",
+        "definition": "Angaben zur Kostenerstattung für verschiedene Sektoren",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.KostentraegerAngabestatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.KostentraegerAngabestatus",
+        "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
+        "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.AerztlicheVersorgung",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.AerztlicheVersorgung",
+        "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer die aerztliche Versorgung an.",
+        "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.ZahnaerztlicheVersorgung",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.ZahnaerztlicheVersorgung",
+        "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer zahnaerztliche Versorgung an.",
+        "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.StationaererBereich",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.StationaererBereich",
+        "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer den stationaeren Bereich an.",
+        "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.VeranlassteLeistungen",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.VeranlassteLeistungen",
+        "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer veranlasste Leistungen an.",
+        "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch",
+        "short": "Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
+        "definition": "Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.Beginn",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.Beginn",
+        "short": "Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an.",
+        "definition": "Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.Ende",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.Ende",
+        "short": "Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.",
+        "definition": "Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.ArtDesRuhens",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.ArtDesRuhens",
+        "short": "Gibt die Art des Ruhens an.",
+        "definition": "1 = vollständig, 2 = eingeschränkt",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versichertenart",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versichertenart",
+        "short": "Gibt die Art der Versicherung an",
+        "definition": "1 = Mitglied, 3 = Familienversicherter, 5 = Rentner und ihre Familienangehörigen",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
           }
         ]
       }
