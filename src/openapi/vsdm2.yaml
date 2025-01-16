@@ -25,14 +25,30 @@ servers:
     description: TK Production server (PU)
   - url: https://109723913.vsdm2.ti-dienste.de
     description: BKK VBU Production server (PU)
-  - url: https://<iknummer>.vsdm2.ti-dienste.de
+  - url: https://{iknummer}.vsdm2.ti-dienste.de
     description: address schema vsdm backends - productive environment
-  - url: https://<iknummer>.ref.vsdm2.ti-dienste.de
+    variables:
+      iknummer:
+        default: "111111111"
+        description: institutional identifier for a specific health insurer
+  - url: https://{iknummer}.ref.vsdm2.ti-dienste.de
     description: address schema vsdm backends - reference environment
-  - url: https://<iknummer>.test.vsdm2.ti-dienste.de
+    variables:
+      iknummer:
+        default: "111111111"
+        description: institutional identifier for a specific health insurer
+  - url: https://{iknummer}.test.vsdm2.ti-dienste.de
     description: address schema vsdm backends - test environment
-  - url: https://<iknummer>.dev.vsdm2.ti-dienste.de
+    variables:
+      iknummer:
+        default: "111111111"
+        description: institutional identifier for a specific health insurer
+  - url: https://{iknummer}.dev.vsdm2.ti-dienste.de
     description: address schema vsdm backends - development environment
+    variables:
+      iknummer:
+        default: "111111111"
+        description: institutional identifier for a specific health insurer
 tags:
   - name: Vsdm
     description: Endpoint of the application "Versichertenstammdatenmanagement" (VSDM) to retrieve a VSDMBundle FHIR-Resource (Versichertenstammdaten; VSD) of a specific patient.
@@ -173,8 +189,8 @@ components:
     VSDMBundle:
       type: object
       description: 'https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle'
-      example:
-        {
+      examples:
+        [
           "resourceType": "Bundle",
           "id": "9b6ac30d-246d-4eab-af83-544564792089",
           "meta": {
@@ -376,7 +392,7 @@ components:
               }
             }
           ]
-        }
+        ]
     VSDMOperationOutcome:
       type: object
       description: 'https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome'
@@ -387,11 +403,11 @@ components:
         errorCode:
           description: Error condition specifier
           type: string
-          example: unauthorized, forbidden or internalError
+          examples: [unauthorized, forbidden, internalError]
         errorDetail:
           description: Additional details regarding the error condition (if applicable)
           type: string
-          example: User is not authorized, Request is forbidden or Server can not handle request for now
+          examples: [User is not authorized, Request is forbidden, Server can not handle request for now]
       required:
         - errorCode
   securitySchemes:
