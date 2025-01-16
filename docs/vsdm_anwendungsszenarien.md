@@ -9,6 +9,8 @@ Existiert zum Versicherten bereits ein Patientenstammblatt wird diese im Laufe d
 Der Abruf der VSD muss immer beim ersten Besuch des Versicherten im laufenden Quartal durchgeführt werden. Auch bei Folgebesuchen im entsprechenden Quartal soll der LE einen Abruf der VSD durchführen, um auch unterquartalige Änderungen in den VSD im PS zu dokumentieren.
 Das PS muss zudem auch den bei jedem Abruf mitgelieferten Prüfungsnachweis für Abrechnungsunterlagen speichern. 
 
+Kann der Abruf der VSD zur Herstellung des Behandlungskontextes nicht erfolgen (z.B. aus technischen Gründen) muss die Aufnahme des Versicherten über ein definiertes Ersatzverfahren erfolgen (Regelungen innerhalb des BMV-Ä).
+
 
 ## Stationärer Sektor
 
