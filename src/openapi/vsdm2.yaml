@@ -1,9 +1,9 @@
 openapi: 3.1.0
 info:
   title: VSDM2
-  description: RESTful "Versichertenstammdaten-Dienst" interface to request "Versichertenstammdaten". 
-    THIS INTERFACE SPECIFIES THE CONTRACT BETWEEN THE "PRIMAERSYSTEM" AND THE "HTTP-PROXY" (as part of the "Versichertenstammdatendienst"). 
-    The interface of the ressource server is part of the description elemts within this document.
+  description: HTTP-based "Versichertenstammdatendienst" (vsdd) interface to request "Versichertenstammdaten" (vsd). 
+    This API document specifies the contract between a vsdm-client ("Primaersystem") and the ressorce serve of the "Versichertenstammdatendienst". 
+    The ressource server ist protected by a proxy component. Details about the interface description of the proxy component can be found (soon) at a separate github project https://github.com/gematik/spec-t20r/tree/develop/src/openapi.
     Practitioners software clients "Primaersysteme" can request data about patients by using this interface to support a current treatment.
   contact:
     name: gematik GmbH
@@ -35,33 +35,32 @@ servers:
     description: address schema vsdm backends - development environment
 tags:
   - name: Vsdm
-    description: Endpoint of the application "Versichertenstammdatenmanagement" (VSDM) to retrieve a VSDMBundle FHIR-Ressource (Versichertenstammdaten; VSD) of a specific patient.
-      VSDBundle contains the VSDMPatient and VSDMCoverage FHIR-Ressources.
+    description: Endpoint of the application "Versichertenstammdatenmanagement" (VSDM) to retrieve a VSDMBundle FHIR-Resource (Versichertenstammdaten; VSD) of a specific patient.
+      VSDMBundle contains the VSDMPatient and VSDMCoverage FHIR-Resources.
 paths:
   /vsdservice/v1/vsdmbundle:
     get:
       tags:
         - Vsdm
-      summary: Returns a VsdmBundle for the specified patient.
-      description: Returns a VsdmBundle with VSD about a specific patient that is addressed within a token in the request header.
-      operationId: getVsdmBundle
+      summary: Returns a VSDMBundle for the specified patient.
+      description: Returns a VSDMBundle with VSD about a specific patient that is addressed within the PoPP-Token in the request header.
+      operationId: getVSDMBundle
       security:
         - oAuthVsdm: [ vsdservice ]
       parameters:
         - name: Authorization
           in: header
           description: OAuth2 Bearer AccessToken granting access to the VSDService-API. 
-            The Access-Token ist verified by the HTTP-Proxy component of the "Versichertenstammdatendienst".
-            The Access-Token ist bound via "demonstrating proof of posession" (DPoP) to the requesting client according rfc9449 6.1. JWK Thumbprint Confirmation Method.
+            The Access-Token is verified by the HTTP-Proxy component of the "Versichertenstammdatendienst".
+            The Access-Token is bound via "demonstrating proof of posession" (DPoP) to the requesting client according rfc9449 6.1. JWK Thumbprint Confirmation Method.
           schema:
             type: string
-        - name: PoPP-Authorization
+        - name: PoPP
           in: header
           description: Bearer Token containing proof of patient presence (Versorgungskontextnachweis). 
-            This Token represents the proof about an actual encouter between patient and practitioner as ressource access condition.
-            The HTTP-Proxy verifies the Token and sends the Token-Payload within the custom header "X-ZTA-PoPP-Token-Content" to the ressource server.
-            The ressource server MUST check the value "patient.proofTime" of the Token-Payload against the server time. The value "patient.proofTime" must be within the actual quarter of the actual year as ressource access condition.
-            The Token contains also the "Krankenversichertennummer" (kvnr) as the identifier for the corresponding VSDMBundle instance.
+            This Token represents the proof about an actual encounter between patient and practitioner as resource access condition.
+            The HTTP-Proxy verifies the Token and sends the Token-Payload within the custom header "ZTA-PoPP-Token-Content" to the resource server.
+            The Header contains the "Krankenversichertennummer" (kvnr) as the identifier for the corresponding VSDMBundle instance.
           schema:
             type: string
         - name: DPoP
@@ -86,119 +85,92 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetVsdmBundleResponse'
+                $ref: '#/components/schemas/GetVSDMBundleResponse'
           headers:
             ETag:
-              description: The version of the vsdm bundle
-              schema:
-                type: string
-              example: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            VSDM-Pn:
-              $ref: '#/components/parameters/VSDM-Pn'
-            VSDM-Pn-Type:
-              $ref: '#/components/parameters/VSDM-Pn-Type'
-            VSDM-Pn-Encoding:
-              $ref: '#/components/parameters/VSDM-Pn-Encoding'
-            VSDM-Pn-Length:
-              $ref: '#/components/parameters/VSDM-Pn-Length'
-            VSDM-Pn-Disposition:
-              $ref: '#/components/parameters/VSDM-Pn-Disposition'
-        '303':
-          description: See other. The response is available at a different address.
-          headers:
-            location:
-              schema:
-                type: string
-              example: "https://<iknummer>.vsdm2.ti-dienste.de"
+              $ref: '#/components/parameters/ETag'
+            VSDM-Pz:
+              $ref: '#/components/parameters/VSDM-Pz'
         '304':
           description: Bundle was found but not modified
           headers:
             ETag:
-              description: The version of the vsdm bundle
+              $ref: '#/components/parameters/ETag'
+            VSDM-Pz:
+              $ref: '#/components/parameters/VSDM-Pz'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
               schema:
-                type: string
-              example: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            VSDM-Pn:
-              $ref: '#/components/parameters/VSDM-Pn'
-            VSDM-Pn-Type:
-              $ref: '#/components/parameters/VSDM-Pn-Type'
-            VSDM-Pn-Encoding:
-              $ref: '#/components/parameters/VSDM-Pn-Encoding'
-            VSDM-Pn-Length:
-              $ref: '#/components/parameters/VSDM-Pn-Length'
-            VSDM-Pn-Disposition:
-              $ref: '#/components/parameters/VSDM-Pn-Disposition'
-        '401':
-          $ref: '#/components/responses/Error401Unauthorized'
+                $ref: '#/components/schemas/VSDMOperationOutcome'
         '403':
-          $ref: '#/components/responses/Error403Forbidden'
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
+        '405':
+          description: Method Not Allowed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
+        '428':
+          description: Precondition Required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
         '500':
-          $ref: '#/components/responses/Error500InternalError'
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
+        '502':
+          description: Bad Gateway
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
+        '504':
+          description: Gateway Timeout
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
 
 components:
   parameters:
-    VSDM-Pn:
-      name: VSDM-Pn
+    ETag:
+      name: ETag
       in: header
-      description: Base64URL kodierter Prüfungsnachweis
+      description: Value according rfc7232 to represent the version of the VSDMBundle.
       schema:
         type: string
-      example: "QTEyMzQ1Njc4OTE2NzM1NTE2MjJVQTH18SAUJtWEH6RTbIPBFL4Tb8OdVvlemN0-"
-    VSDM-Pn-Type:
-      name: VSDM-Pn-Type
+      example: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    VSDM-Pz:
+      name: VSDM-Pz
       in: header
-      description: Type of PN file
+      description: Base64URL encoded "Pruefziffer"
       schema:
         type: string
-      example: "application/xml"
-    VSDM-Pn-Encoding:
-      name: VSDM-Pn-Encoding
-      in: header
-      description: Encoding of PN file
-      schema:
-        type: string
-      example: "gzip"
-    VSDM-Pn-Length:
-      name: VSDM-Pn-Length
-      in: header
-      description: length of the uncompressed XML file
-      schema:
-        type: integer
-      example: 256
-    VSDM-Pn-Disposition:
-      name: VSDM-Pn-Disposition
-      in: header
-      description: Prüfungsnachweis as XML file. attachment; filename="pruefungsnachweis.xml"
-      schema:
-        type: string
-      example: "pruefungsnachweis.xml"
-  responses:
-    Error401Unauthorized:
-      description: Unauthorized.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ErrorType'
-    Error403Forbidden:
-      description: Forbidden.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ErrorType'
-    Error500InternalError:
-      description: Internal Server Error
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ErrorType'
+      example: VDAyMzU5MDA1MDE3MjY3Mzc2MDFVVDLYyBOm-EDF0oe1aW_ndQe2p36MGAzvyBk
   schemas:
-    GetVsdmBundleResponse:
-      description: Response including the requested VsdmBundle
+    GetVSDMBundleResponse:
+      description: Response including the requested VSDMBundle
       type: object
       properties:
-        vsdmBundle:
-          $ref: '#/components/schemas/VsdmBundle'
-    VsdmBundle:
+        VSDMBundle:
+          $ref: '#/components/schemas/VSDMBundle'
+    VSDMBundle:
       type: object
       description: 'https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle'
       example:
@@ -405,6 +377,9 @@ components:
             }
           ]
         }
+    VSDMOperationOutcome:
+      type: object
+      description: 'https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome'
     ErrorType:
       description: Error object with additional information about the occurred error
       type: object
