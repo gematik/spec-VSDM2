@@ -10,7 +10,7 @@ Dies beinhaltet
   - bei unbekannten Versicherten das Anlegen des Patientenstammblatts
   - bei bekannten Versicherten ggf. das Aktualisieren des Patientenstammblatts
     
-Beim ersten Kontakt des Versicherten im laufenden Quartal muss das PS den Abruf der VSD beim Fachdienst VSDM durchführen. Bei Folgebesuchen des Versicherten im laufenden Quartal soll immer ein erneuter Abruf der VSD erfolgen um Änderungen in den VSD in das PS übernehmen zu können. Dies kann insbesondere wichtig sein in Bezug auf Anpassungen zum Versicherungsschutz oder zur Kostenabdeckung. 
+Beim ersten Kontakt des Versicherten im laufenden Quartal muss das PS den Abruf der VSD beim Fachdienst VSDM durchführen. Bei Folgebesuchen des Versicherten im laufenden Quartal kann immer ein erneuter Abruf der VSD erfolgen um Änderungen in den VSD in das PS übernehmen zu können. Dies kann insbesondere wichtig sein in Bezug auf Anpassungen zum Versicherungsschutz oder zur Kostenabdeckung. 
 
 **Patientenstammblatt anlegen**
 
