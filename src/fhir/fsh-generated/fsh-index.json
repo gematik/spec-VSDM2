@@ -56,12 +56,12 @@
     "endLine": 19
   },
   {
-    "outputFile": "OperationOutcome-ExampleOperationOutcome.json",
+    "outputFile": "OperationOutcome-example-vsdm-operationoutcome.json",
     "fshName": "ExampleOperationOutcome",
     "fshType": "Instance",
     "fshFile": "examples/ExampleOperationOutcome.fsh",
     "startLine": 1,
-    "endLine": 6
+    "endLine": 15
   },
   {
     "outputFile": "Patient-437f2555-2396-4c64-a656-e9553161ca3c.json",
