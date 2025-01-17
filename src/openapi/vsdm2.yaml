@@ -75,7 +75,7 @@ paths:
           in: header
           description: Bearer Token containing proof of patient presence (Versorgungskontextnachweis). 
             This Token represents the proof about an actual encounter between patient and practitioner as resource access condition.
-            The HTTP-Proxy verifies the Token and sends the Token-Payload within the custom header "ZTA-PoPP-Token-Content" to the resource server.
+            The HTTP-Proxy verifies the Token and sends the Token-Payload within the custom header "ZETA-PoPP-Token-Content" to the resource server.
             The Header contains the "Krankenversichertennummer" (kvnr) as the identifier for the corresponding VSDMBundle instance.
           schema:
             type: string
