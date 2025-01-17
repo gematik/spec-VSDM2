@@ -9240,7 +9240,7 @@
         "id": "Coverage.type",
         "path": "Coverage.type",
         "short": "Versicherungsart",
-        "definition": "Art der Versicherung: Selbstzahler, gesetzliche/private Versicherung, Berufsgenossenschaft oder Sozialamt",
+        "definition": "Art der Versicherung: gesetzliche oder private Versicherung",
         "comment": "28.07.2017 (zulip): TC Konsens bzgl. Verwendung eines eigenen ValueSets anstelle des im Standrad definierten preferred bindings, da die dort igen Codes nicht passen.",
         "requirements": "The order of application of coverages is dependent on the types of coverage.",
         "min": 1,
@@ -9269,7 +9269,7 @@
         "isSummary": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://fhir.de/ValueSet/versicherungsart-de-basis"
+          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMVersicherungsartVS"
         },
         "mapping": [
           {
@@ -11704,9 +11704,10 @@
       {
         "id": "Coverage.type",
         "path": "Coverage.type",
+        "definition": "Art der Versicherung: gesetzliche oder private Versicherung",
         "binding": {
           "strength": "required",
-          "valueSet": "http://fhir.de/ValueSet/versicherungsart-de-basis"
+          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMVersicherungsartVS"
         }
       },
       {

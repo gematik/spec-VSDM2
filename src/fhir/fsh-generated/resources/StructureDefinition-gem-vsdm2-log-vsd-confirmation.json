@@ -9,10 +9,16 @@
   "fhirVersion": "4.0.1",
   "mapping": [
     {
+      "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+      "name": "VSD-Datensatz Fachliches Mapping Coverage",
+      "uri": "VSDMCoverage",
+      "comment": "Mapping des Fachmodells aus GEM_VSDM2_LOG_VSD_Confirmation auf das FHIR-Profil Coverage"
+    },
+    {
       "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
       "name": "VSD-Datensatz Fachliches Mapping Patient",
       "uri": "VSDMPatient",
-      "comment": "Mapping des Fachmodells aus GEM_VSDM2_LOG_VSD_Confirmation auf das FHIR-Modell ???"
+      "comment": "Mapping des Fachmodells aus GEM_VSDM2_LOG_VSD_Confirmation auf das FHIR-Profil Patient"
     },
     {
       "identity": "rim",
@@ -303,6 +309,12 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.name:Name.given"
+          }
         ]
       },
       {
@@ -330,6 +342,12 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.name:Name.family.extension:vorsatzwort"
           }
         ]
       },
@@ -359,6 +377,12 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.name:Name.family.extension:namenszusatz"
+          }
         ]
       },
       {
@@ -386,6 +410,12 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.name:Name.prefix.extension:prefix-qualifier"
           }
         ]
       },
@@ -415,6 +445,12 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.birthDate"
+          }
         ]
       },
       {
@@ -442,6 +478,12 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.gender"
           }
         ]
       },
@@ -471,6 +513,12 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.address"
+          }
         ]
       },
       {
@@ -498,6 +546,12 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.Address.line.extension:Strasse"
           }
         ]
       },
@@ -527,6 +581,12 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.Address.line.extension:Hausnummer"
+          }
         ]
       },
       {
@@ -554,6 +614,12 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.Address.postalCode"
           }
         ]
       },
@@ -583,6 +649,12 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.Address.city"
+          }
         ]
       },
       {
@@ -610,6 +682,12 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.Address.country"
           }
         ]
       },
@@ -639,6 +717,12 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.address"
+          }
         ]
       },
       {
@@ -666,6 +750,12 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.Address.line.extension:Postfach"
           }
         ]
       },
@@ -695,6 +785,12 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.Address.postalCode"
+          }
         ]
       },
       {
@@ -722,6 +818,12 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.address.city"
           }
         ]
       },
@@ -751,17 +853,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.Address.country"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.TIMessengerID",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.TIMessengerID",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.WIPTIMessengerID",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.WIPTIMessengerID",
         "short": "Eindeutige Identifikation einen TI-Messenger-Nutzers.",
         "definition": "Die jeweils vollständige MXID der/des Versicherten soll dem LE zur Kommunikation mit der/dem Versicherten im Rahmen des Abrufs der VSD zur Verfügung gestellt werden können. Wenn sich der Versicherte für den TI Messenger-Dienst  registriert hat, MUSS es übertragen werden.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.TIMessengerID",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.WIPTIMessengerID",
           "min": 0,
           "max": "1"
         },
@@ -778,6 +886,12 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.telecom:ti-messenger"
           }
         ]
       },
@@ -863,6 +977,12 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.payor"
+          }
         ]
       },
       {
@@ -891,6 +1011,12 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-kostentraegerlaendercode"
+          }
         ]
       },
       {
@@ -918,6 +1044,12 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.payor.identifier"
           }
         ]
       },
@@ -975,6 +1107,12 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.payor"
+          }
         ]
       },
       {
@@ -1002,6 +1140,12 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-kostentraegerlaendercode"
           }
         ]
       },
@@ -1031,6 +1175,12 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.payor.extension:abrechnendeIK"
+          }
         ]
       },
       {
@@ -1059,17 +1209,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:wop"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.BesonderePersonengruppe",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.BesonderePersonengruppe",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPBesonderePersonengruppe",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPBesonderePersonengruppe",
         "short": "Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
         "definition": "Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.BesonderePersonengruppe",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPBesonderePersonengruppe",
           "min": 0,
           "max": "1"
         },
@@ -1087,17 +1243,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:besonderePersonengruppe"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus",
         "short": "Gibt den Zuzahlungsstatus des Versicherten an",
         "definition": "Gibt den Zuzahlungsstatus des Versicherten an",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus",
           "min": 1,
           "max": "1"
         },
@@ -1115,17 +1277,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:zuzahlungsstatus"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.KostentraegerAngabestatus",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.KostentraegerAngabestatus",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
         "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.KostentraegerAngabestatus",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
           "min": 1,
           "max": "1"
         },
@@ -1143,17 +1311,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-kostentragerAngabestatus"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.Status",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.Status",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.Status",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.Status",
         "short": "Gibt an, ob fuer den Versicherten eine Befreiung von der Zuzahlungspflicht nach § 62 SGB V vorliegt.",
         "definition": "1 true = von Zuzahlungspflicht befreit, 0 false = von Zuzahlungspflicht nicht befreit",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.Status",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.Status",
           "min": 1,
           "max": "1"
         },
@@ -1171,17 +1345,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:zuzahlungsstatus.extension:status"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.GueltigBis",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.GueltigBis",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
         "short": "Gibt die Gueltigkeit der Befreiung von der Zuzahlungspflicht nach § 62 SGB V an.",
         "definition": "Wird nur angegeben, wenn Status Zuzahlung mit 1 = befreit angegeben ist.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.GueltigBis",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
           "min": 1,
           "max": "1"
         },
@@ -1198,6 +1378,12 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:zuzahlungsstatus.extension:gueltigBis"
           }
         ]
       },
@@ -1227,6 +1413,12 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.period"
+          }
         ]
       },
       {
@@ -1255,17 +1447,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.period.start"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Ende",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Ende",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.WIPEnde",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.WIPEnde",
         "short": "Gibt das Datum des Endes der Mitgliedschaft des Versicherten bei dem unter Klasse Kostentraeger angegebenen Kostentraeger an oder das Datum des Fristablaufs bei befristeter Gueltigkeit der Karte.",
         "definition": "Gibt das Datum des Endes der Mitgliedschaft des Versicherten bei dem unter Klasse Kostentraeger angegebenen Kostentraeger an oder das Datum des Fristablaufs bei befristeter Gueltigkeit der Karte.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Ende",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.WIPEnde",
           "min": 0,
           "max": "1"
         },
@@ -1283,17 +1481,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.period.end"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP",
         "short": "Angaben zur Teilnahme des Versicherten an DMP-Programmen",
         "definition": "Angaben zur Teilnahme des Versicherten an DMP-Programmen",
         "min": 0,
         "max": "*",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP",
           "min": 0,
           "max": "*"
         },
@@ -1311,17 +1515,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.KostentraegerAngabestatus",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.KostentraegerAngabestatus",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
         "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.KostentraegerAngabestatus",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
           "min": 1,
           "max": "1"
         },
@@ -1339,17 +1549,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-kostentragerAngabestatus"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.DMP",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.DMP",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.DMP",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.DMP",
         "short": "Gibt den Namen des DMP-Programms an",
         "definition": "Angaben erfolgen gemaess Schlüsseltabelle",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.DMP",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.DMP",
           "min": 1,
           "max": "1"
         },
@@ -1367,17 +1583,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmpKennzeichen"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.Beginn",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.Beginn",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Beginn",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Beginn",
         "short": "Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.",
         "definition": "Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.Beginn",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Beginn",
           "min": 1,
           "max": "1"
         },
@@ -1395,17 +1617,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmp-zeitraum.value[x].start"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.Ende",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.Ende",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Ende",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Ende",
         "short": "Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an.",
         "definition": "Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.Ende",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Ende",
           "min": 0,
           "max": "1"
         },
@@ -1423,17 +1651,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmp-zeitraum.value[x].end"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.digitalesDMP",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.digitalesDMP",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPdigitalesDMP",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPdigitalesDMP",
         "short": "Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
         "definition": "Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
         "min": 0,
         "max": "*",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.digitalesDMP",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPdigitalesDMP",
           "min": 0,
           "max": "*"
         },
@@ -1451,17 +1685,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:digitales-dmp"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung",
         "short": "Angaben zur Kostenerstattung für verschiedene Sektoren",
         "definition": "Angaben zur Kostenerstattung für verschiedene Sektoren",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung",
           "min": 0,
           "max": "1"
         },
@@ -1479,17 +1719,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:gkv-kostenerstattung"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.KostentraegerAngabestatus",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.KostentraegerAngabestatus",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
         "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.KostentraegerAngabestatus",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
           "min": 1,
           "max": "1"
         },
@@ -1507,17 +1753,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-kostentragerAngabestatus"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.AerztlicheVersorgung",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.AerztlicheVersorgung",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
         "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer die aerztliche Versorgung an.",
         "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.AerztlicheVersorgung",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
           "min": 1,
           "max": "1"
         },
@@ -1535,17 +1787,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:gkv-kostenerstattung.extension:aerztlicheVersorgung"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.ZahnaerztlicheVersorgung",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.ZahnaerztlicheVersorgung",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
         "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer zahnaerztliche Versorgung an.",
         "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.ZahnaerztlicheVersorgung",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
           "min": 1,
           "max": "1"
         },
@@ -1563,17 +1821,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:gkv-kostenerstattung.extension:zahnaerztlicheVersorgung"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.StationaererBereich",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.StationaererBereich",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
         "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer den stationaeren Bereich an.",
         "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.StationaererBereich",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
           "min": 1,
           "max": "1"
         },
@@ -1591,17 +1855,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:gkv-kostenerstattung.extension:stationaererBereich"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.VeranlassteLeistungen",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.VeranlassteLeistungen",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
         "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer veranlasste Leistungen an.",
         "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.VeranlassteLeistungen",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
           "min": 1,
           "max": "1"
         },
@@ -1619,17 +1889,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:gkv-kostenerstattung.extension:veranlassteLeistungen"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
         "short": "Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
         "definition": "Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
           "min": 0,
           "max": "1"
         },
@@ -1647,17 +1923,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:ruhenderLeistungsanspruch"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.KostentraegerAngabestatus",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.KostentraegerAngabestatus",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
         "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.KostentraegerAngabestatus",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
           "min": 1,
           "max": "1"
         },
@@ -1675,17 +1957,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-kostentragerAngabestatus"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.Beginn",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.Beginn",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
         "short": "Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an.",
         "definition": "Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.Beginn",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
           "min": 1,
           "max": "1"
         },
@@ -1703,17 +1991,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:dauer.value[x].start"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.Ende",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.Ende",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
         "short": "Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.",
         "definition": "Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.Ende",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
           "min": 0,
           "max": "1"
         },
@@ -1731,17 +2025,23 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:dauer.value[x].end"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.ArtDesRuhens",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.ArtDesRuhens",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
         "short": "Gibt die Art des Ruhens an.",
         "definition": "1 = vollständig, 2 = eingeschränkt",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.ArtDesRuhens",
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
           "min": 1,
           "max": "1"
         },
@@ -1758,6 +2058,12 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:art"
           }
         ]
       },
@@ -1786,6 +2092,12 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:versichertenart"
           }
         ]
       }
@@ -1874,6 +2186,12 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.name:Name.given"
+          }
         ]
       },
       {
@@ -1886,6 +2204,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.name:Name.family.extension:vorsatzwort"
           }
         ]
       },
@@ -1900,6 +2224,12 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.name:Name.family.extension:namenszusatz"
+          }
         ]
       },
       {
@@ -1912,6 +2242,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.name:Name.prefix.extension:prefix-qualifier"
           }
         ]
       },
@@ -1926,6 +2262,12 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.birthDate"
+          }
         ]
       },
       {
@@ -1938,6 +2280,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.gender"
           }
         ]
       },
@@ -1952,6 +2300,12 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.address"
+          }
         ]
       },
       {
@@ -1964,6 +2318,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.Address.line.extension:Strasse"
           }
         ]
       },
@@ -1978,6 +2338,12 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.Address.line.extension:Hausnummer"
+          }
         ]
       },
       {
@@ -1990,6 +2356,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.Address.postalCode"
           }
         ]
       },
@@ -2004,6 +2376,12 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.Address.city"
+          }
         ]
       },
       {
@@ -2016,6 +2394,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.Address.country"
           }
         ]
       },
@@ -2030,6 +2414,12 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.address"
+          }
         ]
       },
       {
@@ -2042,6 +2432,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.Address.line.extension:Postfach"
           }
         ]
       },
@@ -2056,6 +2452,12 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.Address.postalCode"
+          }
         ]
       },
       {
@@ -2068,6 +2470,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.address.city"
           }
         ]
       },
@@ -2082,11 +2490,17 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.Address.country"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.TIMessengerID",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.TIMessengerID",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.WIPTIMessengerID",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.WIPTIMessengerID",
         "short": "Eindeutige Identifikation einen TI-Messenger-Nutzers.",
         "definition": "Die jeweils vollständige MXID der/des Versicherten soll dem LE zur Kommunikation mit der/dem Versicherten im Rahmen des Abrufs der VSD zur Verfügung gestellt werden können. Wenn sich der Versicherte für den TI Messenger-Dienst  registriert hat, MUSS es übertragen werden.",
         "min": 0,
@@ -2094,6 +2508,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.telecom:ti-messenger"
           }
         ]
       },
@@ -2134,6 +2554,12 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.payor"
+          }
         ]
       },
       {
@@ -2147,6 +2573,12 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-kostentraegerlaendercode"
+          }
         ]
       },
       {
@@ -2159,6 +2591,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.payor.identifier"
           }
         ]
       },
@@ -2186,6 +2624,12 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.payor"
+          }
         ]
       },
       {
@@ -2198,6 +2642,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-kostentraegerlaendercode"
           }
         ]
       },
@@ -2212,6 +2662,12 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.payor.extension:abrechnendeIK"
+          }
         ]
       },
       {
@@ -2225,11 +2681,17 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:wop"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.BesonderePersonengruppe",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.BesonderePersonengruppe",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPBesonderePersonengruppe",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPBesonderePersonengruppe",
         "short": "Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
         "definition": "Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
         "min": 0,
@@ -2238,11 +2700,17 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:besonderePersonengruppe"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus",
         "short": "Gibt den Zuzahlungsstatus des Versicherten an",
         "definition": "Gibt den Zuzahlungsstatus des Versicherten an",
         "min": 1,
@@ -2251,11 +2719,17 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:zuzahlungsstatus"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.KostentraegerAngabestatus",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.KostentraegerAngabestatus",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
         "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
@@ -2264,11 +2738,17 @@
           {
             "code": "boolean"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-kostentragerAngabestatus"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.Status",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.Status",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.Status",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.Status",
         "short": "Gibt an, ob fuer den Versicherten eine Befreiung von der Zuzahlungspflicht nach § 62 SGB V vorliegt.",
         "definition": "1 true = von Zuzahlungspflicht befreit, 0 false = von Zuzahlungspflicht nicht befreit",
         "min": 1,
@@ -2277,11 +2757,17 @@
           {
             "code": "boolean"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:zuzahlungsstatus.extension:status"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.GueltigBis",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Zuzahlungsstatus.GueltigBis",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
         "short": "Gibt die Gueltigkeit der Befreiung von der Zuzahlungspflicht nach § 62 SGB V an.",
         "definition": "Wird nur angegeben, wenn Status Zuzahlung mit 1 = befreit angegeben ist.",
         "min": 1,
@@ -2289,6 +2775,12 @@
         "type": [
           {
             "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:zuzahlungsstatus.extension:gueltigBis"
           }
         ]
       },
@@ -2303,6 +2795,12 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.period"
+          }
         ]
       },
       {
@@ -2316,11 +2814,17 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.period.start"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Ende",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Ende",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.WIPEnde",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.WIPEnde",
         "short": "Gibt das Datum des Endes der Mitgliedschaft des Versicherten bei dem unter Klasse Kostentraeger angegebenen Kostentraeger an oder das Datum des Fristablaufs bei befristeter Gueltigkeit der Karte.",
         "definition": "Gibt das Datum des Endes der Mitgliedschaft des Versicherten bei dem unter Klasse Kostentraeger angegebenen Kostentraeger an oder das Datum des Fristablaufs bei befristeter Gueltigkeit der Karte.",
         "min": 0,
@@ -2329,11 +2833,17 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.period.end"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP",
         "short": "Angaben zur Teilnahme des Versicherten an DMP-Programmen",
         "definition": "Angaben zur Teilnahme des Versicherten an DMP-Programmen",
         "min": 0,
@@ -2342,11 +2852,17 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.KostentraegerAngabestatus",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.KostentraegerAngabestatus",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
         "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
@@ -2355,11 +2871,17 @@
           {
             "code": "boolean"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-kostentragerAngabestatus"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.DMP",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.DMP",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.DMP",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.DMP",
         "short": "Gibt den Namen des DMP-Programms an",
         "definition": "Angaben erfolgen gemaess Schlüsseltabelle",
         "min": 1,
@@ -2368,11 +2890,17 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmpKennzeichen"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.Beginn",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.Beginn",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Beginn",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Beginn",
         "short": "Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.",
         "definition": "Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.",
         "min": 1,
@@ -2381,11 +2909,17 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmp-zeitraum.value[x].start"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.Ende",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.DMP.Ende",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Ende",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Ende",
         "short": "Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an.",
         "definition": "Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an.",
         "min": 0,
@@ -2394,11 +2928,17 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmp-zeitraum.value[x].end"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.digitalesDMP",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.digitalesDMP",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPdigitalesDMP",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPdigitalesDMP",
         "short": "Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
         "definition": "Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
         "min": 0,
@@ -2407,11 +2947,17 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:digitales-dmp"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung",
         "short": "Angaben zur Kostenerstattung für verschiedene Sektoren",
         "definition": "Angaben zur Kostenerstattung für verschiedene Sektoren",
         "min": 0,
@@ -2420,11 +2966,17 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:gkv-kostenerstattung"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.KostentraegerAngabestatus",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.KostentraegerAngabestatus",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
         "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
@@ -2433,11 +2985,17 @@
           {
             "code": "boolean"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-kostentragerAngabestatus"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.AerztlicheVersorgung",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.AerztlicheVersorgung",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
         "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer die aerztliche Versorgung an.",
         "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
         "min": 1,
@@ -2446,11 +3004,17 @@
           {
             "code": "boolean"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:gkv-kostenerstattung.extension:aerztlicheVersorgung"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.ZahnaerztlicheVersorgung",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.ZahnaerztlicheVersorgung",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
         "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer zahnaerztliche Versorgung an.",
         "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
         "min": 1,
@@ -2459,11 +3023,17 @@
           {
             "code": "boolean"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:gkv-kostenerstattung.extension:zahnaerztlicheVersorgung"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.StationaererBereich",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.StationaererBereich",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
         "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer den stationaeren Bereich an.",
         "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
         "min": 1,
@@ -2472,11 +3042,17 @@
           {
             "code": "boolean"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:gkv-kostenerstattung.extension:stationaererBereich"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.VeranlassteLeistungen",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostenerstattung.VeranlassteLeistungen",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
         "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer veranlasste Leistungen an.",
         "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
         "min": 1,
@@ -2485,11 +3061,17 @@
           {
             "code": "boolean"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:gkv-kostenerstattung.extension:veranlassteLeistungen"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
         "short": "Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
         "definition": "Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
         "min": 0,
@@ -2498,11 +3080,17 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:ruhenderLeistungsanspruch"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.KostentraegerAngabestatus",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.KostentraegerAngabestatus",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
         "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
@@ -2511,11 +3099,17 @@
           {
             "code": "boolean"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-kostentragerAngabestatus"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.Beginn",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.Beginn",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
         "short": "Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an.",
         "definition": "Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an.",
         "min": 1,
@@ -2524,11 +3118,17 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:dauer.value[x].start"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.Ende",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.Ende",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
         "short": "Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.",
         "definition": "Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.",
         "min": 0,
@@ -2537,11 +3137,17 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:dauer.value[x].end"
+          }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.ArtDesRuhens",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.RuhenderLeistungsanspruch.ArtDesRuhens",
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
         "short": "Gibt die Art des Ruhens an.",
         "definition": "1 = vollständig, 2 = eingeschränkt",
         "min": 1,
@@ -2549,6 +3155,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:art"
           }
         ]
       },
@@ -2562,6 +3174,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:versichertenart"
           }
         ]
       }

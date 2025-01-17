@@ -214,7 +214,11 @@
             }
           },
           {
-            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerLaendercodeEX"
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerLaendercodeEX",
+            "valueCoding": {
+              "code": "DE",
+              "system": "http://hl7.org/fhir/CodeSystem/iso3166-1-2"
+            }
           },
           {
             "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe",

@@ -9,6 +9,7 @@ Usage: #example
 * extension[vsdm-wahltarife].extension[wahltarif-vertragskennzeichen].valueString = "Test Kommentar"
 
 
+
 Instance: VALID-VSDMCoverageSample
 InstanceOf: VSDMCoverage
 Title:   "Coverage for VSDM 2 Query"
@@ -45,4 +46,5 @@ RuleSet: ExampleCoverage
 * extension[vsdm-dmpKennzeichen].extension[digitales-dmp].valueBoolean = true
 
 * extension[vsdm-wahltarife].extension[wahltarif-zeitraum].valuePeriod.start = "2022-05-05"
+* extension[vsdm-kostentraegerlaendercode].valueCoding = $cs-iso3166-1-2#DE
 

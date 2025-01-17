@@ -16,6 +16,14 @@
     "endLine": 23
   },
   {
+    "outputFile": "CodeSystem-vsdm-versicherungsart-cs.json",
+    "fshName": "VSDMVersicherungsartCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMVersicherungsartCS.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
     "outputFile": "CodeSystem-vsdm-wahltarife-cs.json",
     "fshName": "VSDMWahltarifeCS",
     "fshType": "CodeSystem",
@@ -44,8 +52,16 @@
     "fshName": "VALID-VSDMCoverageSample",
     "fshType": "Instance",
     "fshFile": "examples/ExampleVSDMCoverage.fsh",
-    "startLine": 12,
-    "endLine": 18
+    "startLine": 13,
+    "endLine": 19
+  },
+  {
+    "outputFile": "OperationOutcome-ExampleOperationOutcome.json",
+    "fshName": "ExampleOperationOutcome",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleOperationOutcome.fsh",
+    "startLine": 1,
+    "endLine": 6
   },
   {
     "outputFile": "Patient-437f2555-2396-4c64-a656-e9553161ca3c.json",
@@ -158,6 +174,14 @@
     "fshFile": "valuesets/VSDMErrorcodeVS.fsh",
     "startLine": 1,
     "endLine": 8
+  },
+  {
+    "outputFile": "ValueSet-vsdm-versicherungsart-vs.json",
+    "fshName": "VSDMVersicherungsartVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMVersicherungsartVS.fsh",
+    "startLine": 1,
+    "endLine": 7
   },
   {
     "outputFile": "ValueSet-vsdm-wahltarife-vs.json",

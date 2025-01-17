@@ -7,9 +7,9 @@ Id: vsdm-coverage
 * meta.profile = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage" (exactly)
 * status = #active (exactly)
 * type 1..1
-* type from $versicherungsart-de-basis (required)
+* type from VSDMVersicherungsartVS (required)
   * ^short = "Versicherungsart"
-  * ^definition = "Art der Versicherung: Selbstzahler, gesetzliche/private Versicherung, Berufsgenossenschaft oder Sozialamt"
+  * ^definition = "Art der Versicherung: gesetzliche oder private Versicherung"
 
 * extension contains
     $versichertenart named versichertenart 1..1 MS and
