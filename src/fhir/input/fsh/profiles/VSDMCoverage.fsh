@@ -20,7 +20,8 @@ Id: vsdm-coverage
     $zuzahlungsstatus named zuzahlungsstatus 1..1 MS and
     VSDMDMPKennzeichenEX named vsdm-dmpKennzeichen 0..* MS and
     VSDMWahltarifeEX named vsdm-wahltarife 0..* MS and
-    VSDMKostentreagerAngabestatusEX named vsdm-kostentragerAngabestatus 1..1 MS
+    VSDMKostentreagerAngabestatusEX named vsdm-kostentragerAngabestatus 1..1 MS and
+    VSDMKostentraegerLaendercodeEX named vsdm-kostentraegerlaendercode 1..1 MS
 
 // For better display on simplifier
 * extension[vsdm-kostentragerAngabestatus].url MS
@@ -33,6 +34,7 @@ Id: vsdm-coverage
 * extension[vsdm-wahltarife].url MS
 * extension[vsdm-dmpKennzeichen].url MS
 * extension[vsdm-kostentragerAngabestatus].url MS
+* extension[vsdm-kostentraegerlaendercode].url MS
 
 * beneficiary only Reference(VSDMPatient)
 * beneficiary 1..1

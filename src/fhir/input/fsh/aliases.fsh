@@ -22,6 +22,7 @@ Alias: $dmp-kennzeichen = http://fhir.de/StructureDefinition/gkv/dmp-kennzeichen
 Alias: $ruhender-leistungsanspruch = http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch
 Alias: $zuzahlungsstatus = http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus
 Alias: $AbrechnendeIK = http://fhir.de/StructureDefinition/AbrechnendeIK
+Alias: $iso3166-1-2 = http://hl7.org/fhir/ValueSet/iso3166-1-2
 
 // KBV Schlüsseltabellen
 Alias: $KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS

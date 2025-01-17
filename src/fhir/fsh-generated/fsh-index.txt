@@ -1,6 +1,6 @@
 Output File                                                 Name                             Type        FSH File                                         Lines
 Bundle-9b6ac30d-246d-4eab-af83-544564792089.json            Vsdm2BundleSample                Instance    examples/ExampleVSDMBundle.fsh                   1 - 21
-CodeSystem-vsdm-errorcode-cs.json                           VSDMErrorcodeCS                  CodeSystem  codesystems/VSDMErrorcodeCS.fsh                  1 - 24
+CodeSystem-vsdm-errorcode-cs.json                           VSDMErrorcodeCS                  CodeSystem  codesystems/VSDMErrorcodeCS.fsh                  1 - 23
 CodeSystem-vsdm-wahltarife-cs.json                          VSDMWahltarifeCS                 CodeSystem  codesystems/VSDMWahltarifeCS.fsh                 1 - 13
 CodeSystem-vsdmkostentreager-angabestatus-cs.json           VSDMKostentreagerAngabestatusCS  CodeSystem  codesystems/VSDMKostentreagerAngabestatusCS.fsh  1 - 14
 Coverage-2d4da53a-413a-48fe-b908-2e67b5761523.json          VSDMCoverageSample               Instance    examples/ExampleVSDMCoverage.fsh                 2 - 9
@@ -10,9 +10,10 @@ StructureDefinition-gem-vsdm2-log-vsd-confirmation.json     GEM_VSDM2_LOG_VSD_Co
 StructureDefinition-vsdm-bundle.json                        VSDMBundle                       Profile     profiles/VSDMBundle.fsh                          1 - 39
 StructureDefinition-vsdm-composition.json                   VSDMComposition                  Profile     profiles/VSDMComposition.fsh                     1 - 20
 StructureDefinition-vsdm-contactpoint-timessenger.json      VSDMContactPointTIMessenger      Profile     profiles/VSDMContactPointTIMessenger.fsh         1 - 7
-StructureDefinition-vsdm-coverage.json                      VSDMCoverage                     Profile     profiles/VSDMCoverage.fsh                        1 - 48
+StructureDefinition-vsdm-coverage.json                      VSDMCoverage                     Profile     profiles/VSDMCoverage.fsh                        1 - 50
 StructureDefinition-vsdm-dmp-kennzeichen-basis-ex.json      VSDMDMPKennzeichenBasisEX        Extension   extensions/VSDMDMPKennzeichenBasis.fsh           1 - 11
-StructureDefinition-vsdm-dmp-kennzeichen-ex.json            VSDMDMPKennzeichenEX             Extension   extensions/VSDMDMPKennzeichen.fsh                1 - 25
+StructureDefinition-vsdm-dmpKennzeichen-ex.json             VSDMDMPKennzeichenEX             Extension   extensions/VSDMDMPKennzeichen.fsh                1 - 25
+StructureDefinition-vsdm-kostentraeger-laendercode-ex.json  VSDMKostentraegerLaendercodeEX   Extension   extensions/VSDMKostentraegerLaendercodeEX.fsh    1 - 14
 StructureDefinition-vsdm-operationoutcome.json              VSDMOperationOutcome             Profile     profiles/VSDMOperationOutcome.fsh                1 - 34
 StructureDefinition-vsdm-patient.json                       VSDMPatient                      Profile     profiles/VSDMPatient.fsh                         1 - 26
 StructureDefinition-vsdm-wahltarife-ex.json                 VSDMWahltarifeEX                 Extension   extensions/VSDMWahltarifeEX.fsh                  1 - 35

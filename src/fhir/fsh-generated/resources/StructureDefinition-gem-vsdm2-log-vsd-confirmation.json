@@ -9,6 +9,12 @@
   "fhirVersion": "4.0.1",
   "mapping": [
     {
+      "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+      "name": "VSD-Datensatz Fachliches Mapping Patient",
+      "uri": "VSDMPatient",
+      "comment": "Mapping des Fachmodells aus GEM_VSDM2_LOG_VSD_Confirmation auf das FHIR-Modell ???"
+    },
+    {
       "identity": "rim",
       "uri": "http://hl7.org/v3",
       "name": "RIM Mapping"
@@ -201,6 +207,12 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.identifier:KVNR.value"
+          }
         ]
       },
       {
@@ -256,6 +268,12 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.name:Name.family.extension:nachname"
           }
         ]
       },
@@ -1805,6 +1823,12 @@
           {
             "code": "Identifier"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.identifier:KVNR.value"
+          }
         ]
       },
       {
@@ -1830,6 +1854,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.name:Name.family.extension:nachname"
           }
         ]
       },

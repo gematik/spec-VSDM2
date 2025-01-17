@@ -1,9 +1,9 @@
 Extension: VSDMDMPKennzeichenEX
-Id: vsdm-dmp-kennzeichen-ex
+Id: vsdm-dmpKennzeichen-ex
 Context: Coverage
 * insert Meta
 * ^url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenEX"
-* . ^short = "Gibt die Teilnahme des Versicherten an einem oder mehreren Disease Management Programmen an."
+* . ^short = "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an."
 * url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenEX" (exactly)
 
 * extension contains

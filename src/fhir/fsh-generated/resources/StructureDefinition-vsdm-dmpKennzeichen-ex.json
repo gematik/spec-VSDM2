@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "vsdm-dmp-kennzeichen-ex",
+  "id": "vsdm-dmpKennzeichen-ex",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenEX",
   "name": "VSDMDMPKennzeichenEX",
   "status": "draft",
@@ -31,7 +31,7 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Gibt die Teilnahme des Versicherten an einem oder mehreren Disease Management Programmen an.",
+        "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
         "definition": "Optional Extension Element - found in all resources.",
         "min": 0,
         "max": "*",
@@ -1066,7 +1066,7 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Gibt die Teilnahme des Versicherten an einem oder mehreren Disease Management Programmen an."
+        "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an."
       },
       {
         "id": "Extension.extension",

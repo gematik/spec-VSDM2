@@ -13,7 +13,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMErrorcodeCS.fsh",
     "startLine": 1,
-    "endLine": 24
+    "endLine": 23
   },
   {
     "outputFile": "CodeSystem-vsdm-wahltarife-cs.json",
@@ -93,7 +93,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
-    "endLine": 48
+    "endLine": 50
   },
   {
     "outputFile": "StructureDefinition-vsdm-dmp-kennzeichen-basis-ex.json",
@@ -104,12 +104,20 @@
     "endLine": 11
   },
   {
-    "outputFile": "StructureDefinition-vsdm-dmp-kennzeichen-ex.json",
+    "outputFile": "StructureDefinition-vsdm-dmpKennzeichen-ex.json",
     "fshName": "VSDMDMPKennzeichenEX",
     "fshType": "Extension",
     "fshFile": "extensions/VSDMDMPKennzeichen.fsh",
     "startLine": 1,
     "endLine": 25
+  },
+  {
+    "outputFile": "StructureDefinition-vsdm-kostentraeger-laendercode-ex.json",
+    "fshName": "VSDMKostentraegerLaendercodeEX",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMKostentraegerLaendercodeEX.fsh",
+    "startLine": 1,
+    "endLine": 14
   },
   {
     "outputFile": "StructureDefinition-vsdm-operationoutcome.json",

@@ -9,61 +9,57 @@
   "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
   "concept": [
     {
-      "code": "VSDSERVICE_POPPTOKEN_EXPIRED",
-      "display": "The proof of patient presence token is expired."
-    },
-    {
       "code": "VSDSERVICE_INVALID_IK",
-      "display": "Invalid health insurer mark <ik>."
+      "display": "Ungültige oder nicht bekannte Institutionskennung <ik>."
     },
     {
       "code": "VSDSERVICE_INVALID_KVNR",
-      "display": "Invalid health insured person number <kvnr>."
+      "display": "Ungültige oder nicht bekannte Krankenversichertennummer <kvnr>."
     },
     {
       "code": "VSDSERVICE_PATIENT_RECORD_NOT_FOUND",
-      "display": "The patient record for <kvnr> could not found at health insurer with id <ik>."
+      "display": "Die Versichertenstammdaten zur Versichertennummer <kvnr> konnten für die Institutionskennung <ik> nicht ermittelt werden."
     },
     {
       "code": "VSDSERVICE_MISSING_OR_INVALID_HEADER",
-      "display": "The required header <header> is missing or invalid."
+      "display": "Der erforderliche HTTP-Header <header> fehlt oder ist undgültig."
     },
     {
       "code": "VSDSERVICE_UNSUPPORTED_MEDIATYPE",
-      "display": "The clientsystem asked for an unsupported media type <media type>."
+      "display": "Der vom Clientsystem angefragte Medientyp <media type> wird nicht unterstützt."
     },
     {
       "code": "VSDSERVICE_UNSUPPORTED_ENCODING",
-      "display": "The clientsystem asked for an unsupported encoding scheme <encoding scheme>."
+      "display": "Das vom Clientsystem angefragte Komprimierungsverfahren <encoding scheme> wird nicht unterstützt."
     },
     {
       "code": "VSDSERVICE_INVALID_PATIENT_RECORD_VERSION",
-      "display": "The etag_value does not exists or could not processed."
+      "display": "Der Änderungsindikator <etag_value> kann nicht verarbeitet werden."
     },
     {
       "code": "VSDSERVICE_INVALID_HTTP_OPERATION",
-      "display": "ERROR"
+      "display": "Die HTTP-Operation <http-operation> wird nicht unterstützt."
     },
     {
       "code": "VSDSERVICE_INVALID_ENDPOINT",
-      "display": "ERROR"
+      "display": "Der angefragte Endpunkt <endpoint> wird nicht unterstützt."
     },
     {
       "code": "VSD_SERVICE_INTERNAL_SERVER_ERROR",
-      "display": "Unexpected internal server error."
+      "display": "Unerwarteter interner Fehler des Fachdienstes VSDM."
     },
     {
-      "code": "VSDSERVICE_VSDDB_NOTREACHABLE",
-      "display": "Health insurer system with id <ik> is offline."
+      "code": "VSDSERVICE_VSDD_NOTREACHABLE",
+      "display": "Fachdienst VSDM ist für den Kostenträger <ik> nicht erreichbar."
     },
     {
-      "code": "VSDSERVICE_VSDDB_TIMEOUT",
-      "display": "Health insurer system with id <ik> timed out."
+      "code": "VSDSERVICE_VSDD_TIMEOUT",
+      "display": "Fachdienst VSDM für den Kostenträger <ik> hat das Zeitlimit für eine Antwort überschritten."
     }
   ],
   "experimental": false,
   "publisher": "gematik GmbH",
   "date": "2023-12-31",
   "caseSensitive": true,
-  "count": 13
+  "count": 12
 }
