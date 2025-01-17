@@ -6,22 +6,21 @@ Nutzer sollen an der Anwendungsoberfläche des Primärsystems eine Handlungsanwe
 
 | Code | Anzeige | Handlungsempfehlung |
 |:------------- | :------------ | :-------------- |
-| VSDSERVICE_POPPTOKEN_EXPIRED | The proof of patient presence token is expired. | Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service erneuern. |
-| VSDSERVICE_INVALID_IK | Invalid health insurer mark <ik>. | Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service 1 x erneuern. Bei erneutem Fehler: Abbruch, da wahrscheinlich ein Implementierungsfehler vorliegt (Clientsystem oder PoPP-Service) oder die KTR gar nicht bei diesem FD-Anbieter ist (fehlerhafter DNS-Eintrag). |
-| VSDSERVICE_INVALID_KVNR | Invalid health insured person number <kvnr>. | Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service 1 x erneuern. Bei erneutem Fehler: Abbruch, da wahrscheinlich ein Implementierungsfehler vorliegt (Clientsystem oder PoPP-Service) |
-| VSDSERVICE_PATIENT_RECORD_NOT_FOUND |The patient record for <kvnr> could not found at health insurer with id <ik>. | Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service 1 x erneuern. Bei erneutem Fehler: Abbruch, da wahrscheinlich ein Implementierungsfehler vorliegt (Clientsystem, PoPP-Service oder Schnittstelle zu KTR-Bestandssystemen). |
-| VSDSERVICE_MISSING_OR_INVALID_HEADER | The required header <header> is  missing or invalid. | Im Falle des Headers PoPP: Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service 1 x erneuern. Bei erneutem Fehler: Abbruch, da wahrscheinlich ein Implementierungsfehler vorliegt (Clientsystem). |
-| VSDSERVICE_UNSUPPORTED_MEDIATYPE | The clientsystem asked for an unsupported media type <media type>. | ./. (Implementierungsfehler) |
-| VSDSERVICE_UNSUPPORTED_ENCODING | The clientsystem asked for an unsupported encoding scheme <encoding scheme>. | ./. (Implementierungsfehler) |
-| VSDSERVICE_INVALID_PATIENT_RECORD_VERSION | The etag_value does not exists or could not processed. | ./. (Implementierungsfehler) |
-| VSDSERVICE_INVALID_HTTP_OPERATION | ERROR | ./. (Implementierungsfehler) |
-| VSDSERVICE_INVALID_ENDPOINT | ERROR | ./. (Implementierungsfehler) |
+| VSDSERVICE_INVALID_IK | Ungültige oder nicht bekannte  Institutionskennung <ik>. | Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service 1 x erneuern. Bei erneutem Fehler: Abbruch, da wahrscheinlich ein Implementierungsfehler vorliegt (Clientsystem oder PoPP-Service) oder die KTR gar nicht bei diesem FD-Anbieter ist (fehlerhafter DNS-Eintrag). |
+| VSDSERVICE_INVALID_KVNR | Ungültige oder nicht bekannte Krankenversichertennummer <kvnr>. | Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service 1 x erneuern. Bei erneutem Fehler: Abbruch, da wahrscheinlich ein Implementierungsfehler vorliegt (Clientsystem oder PoPP-Service) |
+| VSDSERVICE_PATIENT_RECORD_NOT_FOUND |Die Versichertenstammdaten zur Versichertennummer <kvnr> konnten für die Institutionskennung <ik> nicht ermittelt werden. | Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service 1 x erneuern. Bei erneutem Fehler: Abbruch, da wahrscheinlich ein Implementierungsfehler vorliegt (Clientsystem, PoPP-Service oder Schnittstelle zu KTR-Bestandssystemen). |
+| VSDSERVICE_MISSING_OR_INVALID_HEADER | Der erforderliche HTTP-Header <header> fehlt oder ist undgültig. | Im Falle des Headers PoPP: Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service 1 x erneuern. Bei erneutem Fehler: Abbruch, da wahrscheinlich ein Implementierungsfehler vorliegt (Clientsystem). |
+| VSDSERVICE_UNSUPPORTED_MEDIATYPE | Der vom Clientsystem angefragte Medientyp <media type> wird nicht unterstützt. | ./. (Implementierungsfehler) |
+| VSDSERVICE_UNSUPPORTED_ENCODING | Das vom Clientsystem angefragte Komprimierungsverfahren <encoding scheme> wird nicht unterstützt. | ./. (Implementierungsfehler) |
+| VSDSERVICE_INVALID_PATIENT_RECORD_VERSION | Der Änderungsindikator <etag_value> kann nicht verarbeitet werden. | ./. (Implementierungsfehler) |
+| VSDSERVICE_INVALID_HTTP_OPERATION | Die HTTP-Operation <http-operation> wird nicht unterstützt. | ./. (Implementierungsfehler) |
+| VSDSERVICE_INVALID_ENDPOINT | Der angefragte Endpunkt <endpoint> wird nicht unterstützt.  | ./. (Implementierungsfehler) |
 
 **Fehlermeldungen des Fachdienstes VSDM**
 
 | Code | Anzeige | Handlungsempfehlung |
 | :------------- | :------------ | :-------------- |
-| VSD_SERVICE_INTERNAL_SERVER_ERROR | Unexpected internal server error. | Wiederholungsversuch in 15 Minuten Abständen. Abbruch nach 8 Versuchen. |
-| VSDSERVICE_VSDDB_NOTREACHABLE | Health insurer system with id <ik> is offline. | Wiederholungsversuch in 15 Minuten Abständen. Abbruch nach 8 Versuchen. |
-| VSDSERVICE_VSDDB_TIMEOUT | Health insurer system with id <ik> timed out. | Wiederholungsversuch in 15 Minuten Abständen. Abbruch nach 8 Versuchen. |
+| VSD_SERVICE_INTERNAL_SERVER_ERROR | Unerwarteter interner Fehler des Fachdienstes VSDM.  | Wiederholungsversuch in 15 Minuten Abständen. Abbruch nach 8 Versuchen. |
+| VSDSERVICE_VSDD_NOTREACHABLE | Fachdienst VSDM ist für den Kostenträger  <ik> nicht erreichbar. | Wiederholungsversuch in 15 Minuten Abständen. Abbruch nach 8 Versuchen. |
+| VSDSERVICE_VSDD_TIMEOUT | Fachdienst VSDM für den Kostenträger  <ik> hat das Zeitlimit für eine Antwort überschritten.  | Wiederholungsversuch in 15 Minuten Abständen. Abbruch nach 8 Versuchen. |
  
