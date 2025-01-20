@@ -1,8 +1,7 @@
 # 1 Hinweise zum Informationsmodell VSDM 2.0
 
-Mit der Einführung von VSDM 2.0 gibt es Änderungen im Informationsmodell verglichen mit dem bestehenden Informationsmodell für VSDM 1.0 in der Schemaversion 5.2.
-
-## xxx
+Mit der Einführung von VSDM 2.0 wird FHIR (Fast Healthcare Interoperability Resources) zur Datenübertragung verwendet. 
+Ziel der FHIR-Implementierung für VSDM 2.0 ist eine konsistente Datenhaltung und einen effizienten Austausch von Versichertenstammdaten zwischen dem Fachdienst VSDM 2.0 und den Primärsystemen zu gewährleisten. FHIR bietet hierfür eine Grundlage, die sich flexibel an spezifische Anforderungen anpassen lässt.
 
 ### Logical Model 
 
