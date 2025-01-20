@@ -2,6 +2,9 @@
 
 # Spezifikation VSDM 2.0 FHIR-Profile und API
 
+## Disclaimer
+Dieses Dokument beschreibt die für die Implementierung des Versicherungsstammdatenmanagements (VSDM) 2.0 erforderlichen Vorgaben. Weitere Vorgaben zur Implementierung der Anteile von PoPP und Zero Trust sind zum Stand der Veröffentlichung von VSDM 2.0 nicht Bestandteil dieses Dokuments. Die Aufnahme der Implementierungsvorgaben aus PoPP und Zero Trust in den ILF für VSDM 2.0 erfolgt iterativ sobald die notwendigen Informationen aus diesen Implementierungsleitfäden vorliegen.
+
 ## Einleitung
 Die gematik geht neue Wege und möchte auf diesem Weg die Nutzung der Schnittstellen rund um das VSDM 2.0 vorstellen. Die Beschreibung dieser API ergänzt die normativen Dokumente der gematik sowie die Festlegungen über die VSDM-Profile (inkl. Beispielen) des genutzten FHIR-Standards.
 
@@ -48,14 +51,14 @@ Im Rahmen der Anwendungsfälle finden im Primärsystem weitere Abläufe im Zusam
 ## Informationsmodell VSD
 Hier geht es zur Informationsseite zum neuen Informationsmodell für VSDM 2.0.
 
-**Anmerkung: Die Festlegung der finalen Inhalte des Informationsmodells erfolgt im Rahmen der Kommentierungsphase dieser Spezifikation. Die in diesem Dokument dargestellten Informationen stellen somit lediglich den bis zum Zeitpunkt der Vorveröffentlichung abgestimmten Stand dar.**
+**Anmerkung: Die Festlegung der finalen Inhalte des Informationsmodells erfolgt im Rahmen der Fortschreibung dieser Spezifikation. Die in diesem Dokument dargestellten Informationen stellen somit lediglich den bis zum Zeitpunkt der Veröffentlichung abgestimmten Stand dar.**
 
 [Informationsmodell](docs/vsdm_informationsmodell.md)
 
-## Prüfungsnachweis
-Hier finden Sie Informationen zum Prüfungsnachweis für VSDM 2.0.
+## Prüfziffer
+Hier finden Sie Informationen zur Prüfziffer für VSDM 2.0.
 
-[Prüfungsnachweis](docs/vsdm_pruefungsnachweis.md) 
+[Prüfziffer](docs/vsdm_pruefungsnachweis.md) 
 
 ## Fehlerbehandlung
 

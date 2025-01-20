@@ -1,78 +1,44 @@
 # 1 Hinweise zum Informationsmodell VSDM 2.0
 
-Mit der Einführung von VSDM 2.0 gibt es Änderungen im Informationsmodell verglichen mit dem bestehenden Informationsmodell für VSDM 1.0 in der Schemaversion 5.2.
+Mit der Einführung von VSDM 2.0 wird FHIR (Fast Healthcare Interoperability Resources) zur Datenübertragung verwendet. 
+Ziel der FHIR-Implementierung für VSDM 2.0 ist eine konsistente Datenhaltung und einen effizienten Austausch von Versichertenstammdaten zwischen dem Fachdienst VSDM 2.0 und den Primärsystemen zu gewährleisten. FHIR bietet hierfür eine Grundlage, die sich flexibel an spezifische Anforderungen anpassen lässt.
 
-## Änderungen
+### Logical Model 
 
-### 1.1 MXID des Versicherten
+Das Logical Model beschreibt die Struktur der Versichertenstammdaten aus fachlicher Sicht. Es dient als Grundlage für die Ableitung von FHIR-Profilen und unterstützt die Kommunikation zwischen Fachdomäne und technischer Umsetzung.
+Jedes Element des Datensatzen wird wiefolgt beschrieben:
+- Name des Attributs
+- Kardinalität
+- Datentyp
+- Beschreibung
+- Definition
 
-Die Versichertenstammdaten in VSDM 2.0 werden die TI-Messenger Adresse des Versicherten beinhalten.
+Link Simplifier
+[LogicalModelVSDM2.0](https://simplifier.net/vsdm2/gem_vsdm2_log_vsd_confirmation)
 
-Die MXID (die Matrix ID) eines Versicherten ist die Adresse, mit der Versicherte über den TI-Messenger erreichbar sind. Die MXID ist z.B. vergleichbar mit einer Email Adresse. Ist die MXID einer Person bekannt, kann diese über einen TI-Messenger angeschrieben werden.
+Die nachfolgenden logical models dienen zur Beschreibung der VSD und als Grundlage zur Definition der FHIR-Profile für VSDM 2.0
 
-Die MXIDs der Versicherten werden von den Kostenträgern erzeugt, verwaltet und bereitgestellt. 
+#### Versichertendaten
 
-Die MXID wird nach folgender Bildungsregel erzeugt:
-
-@<KVNR>:<Matrix-Domain der Krankenkasse für Versicherte>
-
-**Beispiel einer MXID**
-
-@Y234567890:tk-matrix-homeserver.de
-
-
-
-### 2.1 Zusatzinformationen zum Versicherungsverhältnis
-
-Zu folgenden Angaben zum Versicherungsverhältnis gibt es in VSDM 2.0 Anpassungen.
-
-#### 2.1.1 Selektivverträge
-
-Die Angabe der Selektivverträge entfällt und wird durch die Angabe der Wahltarife ersetzt.
-
-#### 2.1.2 Wahltarife
-
-Wahltarife ersetzt die Angabe der Selektivverträge und bildet ein Kennzeichen für die Rechtsgrundlage des jeweiligen Wahltarifs ab. Die Angabe ist optional.
-
-| Gesetzliche Grundlage | Inhalt | Werte |
-| :--------------------- | :------------------------------------ | :------|
-| 291a Absatz 3 Nr. 1 SGB V | Angabe von bis zu 3 Wahltarifen mit Beginn- und Endedatum und Vertragskennzeichen | 1 = §73b SGB V, 2=  §140a SGB V, 3 = Sonstige Verträge |
-
-Anmerkung:
-
-§73b SGB V: Hausarztzentrierte Versorgung
-
-§140a SGB V: besondere Versorgung
-
-sonstige Verträge: Dieses Feld ist nur verpflichtend, wenn ein Wahltarif nach §73b vorliegt. 
+![Alt-Text](/images/logicalmodelVersichertendaten.png)
 
 
-#### 2.1.3 DMP-Kennzeichnung
+#### Versicherungsdaten
 
-Die Angabe zur Teilnahme des Versicherten an DMP-Programmen wird erweitert.
-
-| Gesetzliche Grundlage | Inhalt | Werte |
-| :--------------------- | :------------------------------------ | :------|
-| 291a Absatz 3 Nr. 2 SGB V | DMP: Angabe des/der DMP-Programme für die der Versicherte eingeschrieben ist |  Werte gem. Schlüsseltabelle |
-| 291a Absatz 3 Nr. 2 SGB V | Angabe des Beginn- und Endedatums für jedes angegebene DMP  |  Datum  | 
-| 291a Absatz 3 Nr. 2 SGB V | Angabe der Information, ob ein digitales DMP vorhanden ist  |  ja / nein  | 
+![Alt-Text](/images/logicalmodelVersicherungsdaten.png)
 
 
-#### 2.1.4 Kostenträger-Angabestatus
+### Mapping
+Das Mapping beschreibt die Zuordnung der Attribute des Logical Models für Versicherungsdaten zu den entsprechenden Feldern in einer FHIR-Ressource Coverage und Patient. 
 
-Für die Angaben zu
-- DMP
-- Wahltarife
-- Kostenerstattung
-- Zuzahlungsstatus
-- Ruhender Leistungsanspruch
+Ziel ist es, sicherzustellen, dass die Daten aus dem Logical Model korrekt in beide Zielsysteme transformiert werden können.“
 
-wird das Feld **Kostenträger-Angabestatus** eingeführt.
+Die Mappingtabellen zu Patient und Coverage befinden sich hier:
 
-Das Feld drückt aus, ob der Kostenträger das Feld grundsätzlich befüllt wenn Informationen vorhanden sind oder ob der Kostenträger die Informationen nicht in den VSD für den LE zur Verfügung stellt.
-Es kann Gründe für die Krankenkasse geben, dieses Feld nicht zu befüllen obwohl die Daten vorliegen, z.B. die Teilnahme an einem DMP-Programm. 
+[Mapping logicalmodel-FHIR-Profile](https://simplifier.net/vsdm2/GEM_VSDM2_LOG_VSD_Confirmation/~mappings)
 
-Der Leistungserbringer erhält in diesem Fall keine Information darüber und muss dann bei gegebenem Anlass in Kontakt mit der Krankenkasse treten, um Informationen zu diesen Vertragsverhältnissen zu erhalten.
+
+
 
 # 2. Hinweise zum verkürzten VSD-Datensatz auf der eGK
 
