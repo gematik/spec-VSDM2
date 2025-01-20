@@ -14,17 +14,30 @@ Jedes Element des Datensatzen wird wiefolgt beschrieben:
 - Beschreibung
 - Definition
 
+Link Simplifier
+[LogicalModelVSDM2.0](https://simplifier.net/vsdm2/gem_vsdm2_log_vsd_confirmation)
+
 Die nachfolgenden logical models dienen zur Beschreibung der VSD und als Grundlage zur Definition der FHIR-Profile für VSDM 2.0
 
 #### Versichertendaten
 
-![Alt-Text](/images/Systemüberblick_V_P_Z.png)
+![Alt-Text](/images/logicalmodelVersichertendaten.png)
+
 
 #### Versicherungsdaten
 
-![Alt-Text](/images/Systemüberblick_V_P_Z.png)
+![Alt-Text](/images/logicalmodelVersicherungsdaten.png)
+
 
 ### Mapping
+Das Mapping beschreibt die Zuordnung der Attribute des Logical Models für Versicherungsdaten zu den entsprechenden Feldern in einer FHIR-Ressource Coverage und Patient. 
+
+Ziel ist es, sicherzustellen, dass die Daten aus dem Logical Model korrekt in beide Zielsysteme transformiert werden können.“
+
+Die Mappingtabellen zu Patient und Coverage befinden sich hier:
+
+[Mapping logicalmodel-FHIR-Profile](https://simplifier.net/vsdm2/GEM_VSDM2_LOG_VSD_Confirmation/~mappings)
+
 
 
 
