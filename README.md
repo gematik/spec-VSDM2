@@ -51,7 +51,7 @@ Im Rahmen der Anwendungsfälle finden im Primärsystem weitere Abläufe im Zusam
 ## Informationsmodell VSD
 Hier geht es zur Informationsseite zum neuen Informationsmodell für VSDM 2.0.
 
-**Anmerkung: Die Festlegung der finalen Inhalte des Informationsmodells erfolgt im Rahmen der Kommentierungsphase dieser Spezifikation. Die in diesem Dokument dargestellten Informationen stellen somit lediglich den bis zum Zeitpunkt der Vorveröffentlichung abgestimmten Stand dar.**
+**Anmerkung: Die Festlegung der finalen Inhalte des Informationsmodells erfolgt im Rahmen der Fortschreibung dieser Spezifikation. Die in diesem Dokument dargestellten Informationen stellen somit lediglich den bis zum Zeitpunkt der Veröffentlichung abgestimmten Stand dar.**
 
 [Informationsmodell](docs/vsdm_informationsmodell.md)
 
