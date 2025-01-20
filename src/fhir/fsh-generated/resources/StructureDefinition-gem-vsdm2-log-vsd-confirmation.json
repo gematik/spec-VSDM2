@@ -1731,8 +1731,8 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung",
-        "short": "Angaben zur Kostenerstattung für verschiedene Sektoren",
-        "definition": "Angaben zur Kostenerstattung für verschiedene Sektoren",
+        "short": "Definition und Nutzung noch in Absprache - Angaben zur Kostenerstattung für verschiedene Sektoren",
+        "definition": "Definition und Nutzung noch in Absprache - Angaben zur Kostenerstattung für verschiedene Sektoren",
         "min": 0,
         "max": "1",
         "base": {
@@ -3013,8 +3013,8 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung",
-        "short": "Angaben zur Kostenerstattung für verschiedene Sektoren",
-        "definition": "Angaben zur Kostenerstattung für verschiedene Sektoren",
+        "short": "Definition und Nutzung noch in Absprache - Angaben zur Kostenerstattung für verschiedene Sektoren",
+        "definition": "Definition und Nutzung noch in Absprache - Angaben zur Kostenerstattung für verschiedene Sektoren",
         "min": 0,
         "max": "1",
         "type": [
