@@ -899,7 +899,7 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.WIPTIMessengerID",
         "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.WIPTIMessengerID",
-        "short": "Eindeutige Identifikation einen TI-Messenger-Nutzers.",
+        "short": "Definition und Nutzung noch in Absprache - Eindeutige Identifikation einen TI-Messenger-Nutzers.",
         "definition": "Die jeweils vollständige MXID der/des Versicherten soll dem LE zur Kommunikation mit der/dem Versicherten im Rahmen des Abrufs der VSD zur Verfügung gestellt werden können. Wenn sich der Versicherte für den TI Messenger-Dienst  registriert hat, MUSS es übertragen werden.",
         "min": 0,
         "max": "1",
@@ -1255,8 +1255,8 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPBesonderePersonengruppe",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPBesonderePersonengruppe",
-        "short": "Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
-        "definition": "Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
+        "short": "Definition und Nutzung noch in Absprache - Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
+        "definition": "Definition und Nutzung noch in Absprache - Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
         "min": 0,
         "max": "1",
         "base": {
@@ -1289,8 +1289,8 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus",
-        "short": "Gibt den Zuzahlungsstatus des Versicherten an",
-        "definition": "Gibt den Zuzahlungsstatus des Versicherten an",
+        "short": "Definition und Nutzung noch in Absprache - Gibt den Zuzahlungsstatus des Versicherten an",
+        "definition": "Definition und Nutzung noch in Absprache - Gibt den Zuzahlungsstatus des Versicherten an",
         "min": 1,
         "max": "1",
         "base": {
@@ -1323,7 +1323,7 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
-        "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
+        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
         "max": "1",
@@ -1527,8 +1527,8 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP",
-        "short": "Angaben zur Teilnahme des Versicherten an DMP-Programmen",
-        "definition": "Angaben zur Teilnahme des Versicherten an DMP-Programmen",
+        "short": "Definition und Nutzung noch in Absprache - Angaben zur Teilnahme des Versicherten an DMP-Programmen",
+        "definition": "Definition und Nutzung noch in Absprache - Angaben zur Teilnahme des Versicherten an DMP-Programmen",
         "min": 0,
         "max": "*",
         "base": {
@@ -1561,7 +1561,7 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
-        "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
+        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
         "max": "1",
@@ -1697,8 +1697,8 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPdigitalesDMP",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPdigitalesDMP",
-        "short": "Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
-        "definition": "Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
+        "short": "Definition und Nutzung noch in Absprache - Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
+        "definition": "Definition und Nutzung noch in Absprache - Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
         "min": 0,
         "max": "*",
         "base": {
@@ -1765,7 +1765,7 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
-        "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
+        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
         "max": "1",
@@ -1935,8 +1935,8 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
-        "short": "Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
-        "definition": "Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
+        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
+        "definition": "Definition und Nutzung noch in Absprache - Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
         "min": 0,
         "max": "1",
         "base": {
@@ -1969,7 +1969,7 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
-        "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
+        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
         "max": "1",
@@ -2556,7 +2556,7 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.WIPTIMessengerID",
         "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.WIPTIMessengerID",
-        "short": "Eindeutige Identifikation einen TI-Messenger-Nutzers.",
+        "short": "Definition und Nutzung noch in Absprache - Eindeutige Identifikation einen TI-Messenger-Nutzers.",
         "definition": "Die jeweils vollständige MXID der/des Versicherten soll dem LE zur Kommunikation mit der/dem Versicherten im Rahmen des Abrufs der VSD zur Verfügung gestellt werden können. Wenn sich der Versicherte für den TI Messenger-Dienst  registriert hat, MUSS es übertragen werden.",
         "min": 0,
         "max": "1",
@@ -2747,8 +2747,8 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPBesonderePersonengruppe",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPBesonderePersonengruppe",
-        "short": "Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
-        "definition": "Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
+        "short": "Definition und Nutzung noch in Absprache - Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
+        "definition": "Definition und Nutzung noch in Absprache - Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
         "min": 0,
         "max": "1",
         "type": [
@@ -2766,8 +2766,8 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus",
-        "short": "Gibt den Zuzahlungsstatus des Versicherten an",
-        "definition": "Gibt den Zuzahlungsstatus des Versicherten an",
+        "short": "Definition und Nutzung noch in Absprache - Gibt den Zuzahlungsstatus des Versicherten an",
+        "definition": "Definition und Nutzung noch in Absprache - Gibt den Zuzahlungsstatus des Versicherten an",
         "min": 1,
         "max": "1",
         "type": [
@@ -2785,7 +2785,7 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
-        "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
+        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
         "max": "1",
@@ -2899,8 +2899,8 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP",
-        "short": "Angaben zur Teilnahme des Versicherten an DMP-Programmen",
-        "definition": "Angaben zur Teilnahme des Versicherten an DMP-Programmen",
+        "short": "Definition und Nutzung noch in Absprache - Angaben zur Teilnahme des Versicherten an DMP-Programmen",
+        "definition": "Definition und Nutzung noch in Absprache - Angaben zur Teilnahme des Versicherten an DMP-Programmen",
         "min": 0,
         "max": "*",
         "type": [
@@ -2918,7 +2918,7 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
-        "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
+        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
         "max": "1",
@@ -2994,8 +2994,8 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPdigitalesDMP",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPdigitalesDMP",
-        "short": "Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
-        "definition": "Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
+        "short": "Definition und Nutzung noch in Absprache - Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
+        "definition": "Definition und Nutzung noch in Absprache - Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
         "min": 0,
         "max": "*",
         "type": [
@@ -3032,7 +3032,7 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
-        "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
+        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
         "max": "1",
@@ -3127,8 +3127,8 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
-        "short": "Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
-        "definition": "Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
+        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
+        "definition": "Definition und Nutzung noch in Absprache - Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
         "min": 0,
         "max": "1",
         "type": [
@@ -3146,7 +3146,7 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
-        "short": "Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
+        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
         "max": "1",
