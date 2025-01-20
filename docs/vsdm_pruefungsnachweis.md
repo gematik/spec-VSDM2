@@ -29,19 +29,7 @@ Die Regelungen dazu werden im Anforderungskatalog KVDT (KBV_ITA_VGEX_Anforderung
 | 6 | Es wird ein HMAC nach A_23461-* über die konkatenierten Felder 1-5 mittels des betreiberspezifischen Schlüssel berechnet.  Dieser berechnete HMAC-Wert (256-Bit) wird auf 192 Bit (also 24 Byte) gekürzt (die ersten 24 Byte des HMAC-Wertes werden verwendet, die restlichen 8 Byte werden verworfen). Dieser gekürzte HMAC-Wert ist das 6-te Datenfeld. | binär | 24 |
 
 
-# Zeichenkodierung von Daten
 
-Das Primärsystem muss den vom Fachdienst gelieferten Prüfungsnachweis aus dem HTTP-Header VSDM-Pn extrahieren, BASE64URL dekodieren sowie mittels gzip dekomprimieren. Danach steht das XML-Element Prüfungsnachweis zur weiteren Verarbeitung im Primärsystem zur Verfügung.
-
-Beispiel einer dekomprimierten Prüziffer aus einerm Prüfungsnachweis (XML-Datei)
-| dekomprimierte Prüfziffer |
-| :----------                |
-| <PZ>VDAyMzU5MDA1MDE3MjY3Mzc2MDFVVDLYyBOm+EDF0oe1aW/ndQe2p36MGAzvyBk=</PZ> |
-
-Beispiel einer dekodierten (Base64) Prüfziffer aus dem Prüfungsnachweis
-| Prüfziffer |
-| :---------- |
-| T0235900501726737601UT2ØÈ¦ø@ÅÒ‡µioçu¶§~ŒïÈ |
 
 
 
