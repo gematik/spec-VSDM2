@@ -52,17 +52,17 @@ Tabelle Übersicht Varianten Abruf VSD
 | 4 | Versorgungskontext übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt dem FD VSDM 2.0 die Daten "patient.identifier.value" (KVNR) und patient.proof_time zur Prüfung der zeitlichen Gültigkeit des Versorgungskontextnachweises und Protokollierung  |
 | 5 | (zeitliche) Gültigkeit PoPP-Token prüfen | FD | Der FD prüft die zeitliche Gültigkeit des Versorgungskontextes: Wert patient.proofTime zum Zeitpunkt der HTTP-GET-Operation liegt innerhalb des aktuellen Quartals des aktuellen Jahres) |
 | 6 | VSD-Version prüfen | FD | Der FD führt beim Aufruf der HTTP-GET-Operation vor dem Abruf des Versichertenstammdatensatzes von dem KTR-Bestandssystem eine VSD-Aktualitätsprüfung durch |
-| 7 | PN übermitteln | FD | Der FD übermittelt den PN als XML-Datei und den etag_value an den HTTP-Proxy des ZT-Clusters |
-| 7.1 | PN an PS übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt den PN als XML-Datei und den etag_value an das PS |
+| 7 | PZ übermitteln | FD | Der FD übermittelt die Prüfziffer und den etag_value an den HTTP-Proxy des ZT-Clusters |
+| 7.1 | PZ an PS übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt die Prüfziffer und den etag_value an das PS |
 | 8 | VSD lokalisieren | FD | Der FD führt eine Lokalisierung der VSD anhand der KVNR am KTR-Bestandssystem durch und ruft diesen ab |
-| 8.1 | VSD und PN übermitteln | FD | Der FD übermittelt die VSD als FHIR-Bundle, den PN als XML-Datei und den new_etag_value an den HTTP-Proxy des ZT-Clusters |
-| 8.2 | VSD und PN an PS übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt die VSD als FHIR-Bundle, den PN als XML-Datei und den new_etag_value an das PS |
+| 8.1 | VSD und PZ übermitteln | FD | Der FD übermittelt die VSD und die Prüfziffer als FHIR-Bundle und den new_etag_value an den HTTP-Proxy des ZT-Clusters |
+| 8.2 | VSD und PZ an PS übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt die VSD und die Prüfziffer als FHIR-Bundle und den new_etag_value an das PS |
 | 8.3 | VSD speichern | PS | Die übermittelten VSD werden gespeichert oder aktualisiert |
-| 9 | PN speichern | PS | Der übermittelte PN wird für das laufende Quartal gespeichert |
+| 9 | PZ speichern | PS | Die übermittelte Prüfziffer wird für das laufende Quartal gespeichert |
 
 **Nachbedingung**
 - PS: Die VSD im Patientenstammblatt wurden aktualisiert / sind aktuell
-- PS: Prüfungsnachweis ist im PS gespeichert
+- PS: Die Prüfziffer ist im PS gespeichert
 
 Hinweis: Die Schritte 7 und 8 bilden keine Reihenfolge im Ablauf ab. Schritt 8 wird nur ausgeführt, wenn beim Vergleich des ETags aus dem Request mit dem Änderungsindikator des Fachdienstes keine Übereinstimmung vorliegt.
 
