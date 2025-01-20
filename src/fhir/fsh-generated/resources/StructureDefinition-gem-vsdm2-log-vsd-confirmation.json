@@ -551,7 +551,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.Address.line.extension:Strasse"
+            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Strasse"
           }
         ]
       },
@@ -585,7 +585,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.Address.line.extension:Hausnummer"
+            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Hausnummer"
           }
         ]
       },
@@ -619,7 +619,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.Address.postalCode"
+            "map": "VSDMPatient.address.postalCode"
           }
         ]
       },
@@ -653,7 +653,42 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.Address.city"
+            "map": "VSDMPatient.address.city"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
+        "short": "ibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. „Hinterhaus“ angegeben werden.",
+        "definition": "ibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. „Hinterhaus“ angegeben werden.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "Gibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. Hinterhaus angegeben werden.",
+            "comment": "VSDMPatient.address.AddressDeBasis.line.extension:Adresszusatz"
           }
         ]
       },
@@ -687,7 +722,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.Address.country"
+            "map": "VSDMPatient.address.country"
           }
         ]
       },
@@ -755,7 +790,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.Address.line.extension:Postfach"
+            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Postfach"
           }
         ]
       },
@@ -789,7 +824,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.Address.postalCode"
+            "map": "VSDMPatient.address.postalCode"
           }
         ]
       },
@@ -2323,7 +2358,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.Address.line.extension:Strasse"
+            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Strasse"
           }
         ]
       },
@@ -2342,7 +2377,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.Address.line.extension:Hausnummer"
+            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Hausnummer"
           }
         ]
       },
@@ -2361,7 +2396,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.Address.postalCode"
+            "map": "VSDMPatient.address.postalCode"
           }
         ]
       },
@@ -2380,7 +2415,27 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.Address.city"
+            "map": "VSDMPatient.address.city"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
+        "short": "ibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. „Hinterhaus“ angegeben werden.",
+        "definition": "ibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. „Hinterhaus“ angegeben werden.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "Gibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. Hinterhaus angegeben werden.",
+            "comment": "VSDMPatient.address.AddressDeBasis.line.extension:Adresszusatz"
           }
         ]
       },
@@ -2399,7 +2454,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.Address.country"
+            "map": "VSDMPatient.address.country"
           }
         ]
       },
@@ -2437,7 +2492,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.Address.line.extension:Postfach"
+            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Postfach"
           }
         ]
       },
@@ -2456,7 +2511,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.Address.postalCode"
+            "map": "VSDMPatient.address.postalCode"
           }
         ]
       },
