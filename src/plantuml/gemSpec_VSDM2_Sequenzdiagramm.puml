@@ -1,7 +1,7 @@
 @startuml VSDM 2.0 Sequenzdiagramm
 hide footbox
 
-title VSDM 2.0 Sequenzdiagramm "Versichertenstammdaten und Prüfungsnachweis abrufen"
+title VSDM 2.0 Sequenzdiagramm "Versichertenstammdaten und Prüfziffer abrufen"
 
 actor Ver as "Patient"
 actor LE as "LEI-Mitarbeiter"
@@ -83,39 +83,33 @@ alt PoPP-Token nicht vorhanden oder ungültig
 	VSDD_Proxy -> PS : HTTP 403 Forbidden
 end
 
-VSDD_Proxy -> VSDD_Proxy : HTTP-Method und API-Endpunkt \ndes Client-Request prüfen
+VSDD_Proxy -> VSDD_Proxy : HTTP-Methode und API-Endpunkt \ndes Client-Request prüfen
 alt Request not valid
 	VSDD_Proxy -> PS : HTTP 400 Bad Request
 end
 
-VSDD_Proxy -> VSDD_Server : GET /vsdservice/v1/vsdmbundle \nZTA-User-Info <user_info>, \nZTA-PoPP-Token-Content <content>, \nZTA-Client-Data <client data>, \nIf-None-Match: "<etag_value>"
+VSDD_Proxy -> VSDD_Server : GET /vsdservice/v1/vsdmbundle \nZETA-User-Info <user_info>, \nZETA-PoPP-Token-Content <content>, \nZETA-Client-Data <client data>, \nIf-None-Match: "<etag_value>"
 activate VSDD_Server
 
-VSDD_Server -> VSDD_Server : ZTA- Header prüfen
-alt Zero-Trust Access Header nicht vorhanden
+VSDD_Server -> VSDD_Server : ZETA-Header prüfen
+alt Zero-Trust Access Header nicht vorhanden oder verarbeitbar
     VSDD_Server -> VSDD_Proxy : HTTP 400 Bad Request
-    VSDD_Proxy -> PS : HTTP 400/500 (abhängig, welcher header fehlt oder ungültig ist)
-end
-
-VSDD_Server -> VSDD_Server : zeitliche Gültigkeit(PoPP-Token) prüfen
-alt PoPP-Token ist für das aktuelle Quartal NICHT gültig
-    VSDD_Server -> VSDD_Proxy : HTTP 403 Forbidden
-    VSDD_Proxy -> PS : HTTP 403 Forbidden
+    VSDD_Proxy -> PS : HTTP 400 Bad Request
 end
 
 VSDD_Server -> VSDD_Server : vsd-version prüfen
 alt etag_value(client) == etag_value(VSDD)
-	VSDD_Server -> VSDD_Proxy : HTTP 304 Not Modified \nETag: "<etag_value>" \nVSDM-Pn: <Prüfungsnachweis>
-	VSDD_Proxy -> PS : HTTP 304 Not Modified \nETag: "<etag_value>" \nVSDM-Pn: <Prüfungsnachweis>
+	VSDD_Server -> VSDD_Proxy : HTTP 304 Not Modified \nETag: "<etag_value>" \nVSDM-Pz: <Prüfziffer>
+	VSDD_Proxy -> PS : HTTP 304 Not Modified \nETag: "<etag_value>" \nVSDM-Pz: <Prüfziffer>
 else etag_value(client) != etag_value(VSDD)
 	VSDD_Server -> VSDD_Server : lokalisiere VSD zu KVNR(PoPP-Token)
-	VSDD_Server -> VSDD_Proxy : HTTP 200 OK \nETag: "<new_etag_value>" \nVSDM-Pn: <Prüfungsnachweis>\nVSDMBundle
-	VSDD_Proxy -> PS : HTTP 200 OK \nETag: "<new_etag_value>" \nVSDM-Pn: <Prüfungsnachweis>\nVSDMBundle
+	VSDD_Server -> VSDD_Proxy : HTTP 200 OK \nETag: "<new_etag_value>" \nVSDM-Pz: <Prüfziffer>\nVSDMBundle
+	VSDD_Proxy -> PS : HTTP 200 OK \nETag: "<new_etag_value>" \nVSDM-Pz: <Prüfziffer>\nVSDMBundle
 	PS -> PS : Aktualisiere VSD
 	PS -> LE : Zeige VSD an
 end
 
-PS -> PS : Aktualisiere Prüfungsnachweis
+PS -> PS : Aktualisiere Prüfziffer
 VSDD_Server -> VSDD_Server : write Zugriffsprotokoll(KVNR) mit Inhalt: User-Info
 activate VSDD_Server
 deactivate PS
@@ -126,7 +120,7 @@ deactivate LE
 
 == Fehlerbehandlung HTTP 401 Unauthorized (Access-Token ungültig) ==
 'Authentifizierung und AUtorisierung am VSDM AuthZ-Server durchführen
-ref over PS, VSDD_AuthZ : LEI-Authentifizierung (SMC-B) und LEI-Autorisierung (siehe gemSpec_Zero-Trust)
+ref over PS, VSDD_AuthZ : LEI-Authentifizierung (SMC-B) und LEI-Autorisierung (siehe gemSpec_ZETA)
 VSDD_AuthZ -> PS : HTTP 200 OK \n{Refresh-Token, Access-Token} mit scope : vsdservice
 
 == Fehlerbehandlung HTTP 403 Forbidden (Versorgungskontext bzw. PoPP-Token ungültig) ==
