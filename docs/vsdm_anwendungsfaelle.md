@@ -74,3 +74,11 @@ Das PS muss in der Lage sein, die eGK mit den in der LEI vorhandenen Kartenleseg
 Die Daten werden aus dem ungeschützten Bereich der eGK aus den Containern PD und VD gelesen.
 Zu beachten ist, dass sich auf der eGk einseits der komplette VSD-Datensatz und andererseits auch ein verkürzter Datensatz befinden kann. Keiner dieser Datensätze kann jedoch den notwendigen Abruf der VSD im laufenden Quartal ersetzen da es sich lediglich um statische Daten auf der eGK handelt, die nicht aktualisert werden.
 
+Hier ist ein Beispielprogramm zum Auslesen der eGK wenn ein Standardkartenleser verwendet wird:
+
+[Beispielprogramm zum Auslesen der eGK](examples/eGKRead.java)
+
+Hinweis 1: Die Daten werden ausgelesen und decodiert in einer Log-Datei angezeigt (auch als XML).
+Hinweis 2: Das Programm prüft NICHT die Echtheit der eGK.
+
+
