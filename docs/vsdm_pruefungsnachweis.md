@@ -2,11 +2,11 @@
 
 Im Gegensatz zu VSDM 1.0 wird mit VSDM 2.0 vom Fachdienst kein Prüfungsnachweis mehr sondern die Prüfziffer an das Primärsystem übergeben. 
 
-Bei einer erfolgreichen Durchführung des Abrufs VSD wird 
-  - bei erstmaligem Abruf im laufenden Quartal die Prüfziffer in Verbindung mit den VSD und
-  - bei jedem weiteren Abruf der VSD im laufenden Quartal die Prüfziffer unabhängig davon, ob sich Änderungen in den VSD ergeben haben
-
-an das Primärsystem übermittelt.
+Bei einer erfolgreichen Durchführung einer VSD-Anfrage wird 
+  - bei erstmaligem Abruf im laufenden Quartal und
+  - bei jedem weiteren Abruf der VSD im laufenden Quartal
+    
+die Prüfziffer unabhängig davon, ob sich Änderungen in den VSD ergeben haben an das Primärsystem übermittelt.
 
 Das Primärsystem muss die Prüfziffer zur Erstellung der Abrechnungsunterlagen speichern. 
 
