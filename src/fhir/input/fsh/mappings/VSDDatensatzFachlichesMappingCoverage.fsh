@@ -45,3 +45,4 @@ Description: "Mapping des Fachmodells aus GEM_VSDM2_LOG_VSD_Confirmation auf das
     * Ende -> "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:dauer.value[x].end"
     * ArtDesRuhens -> "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:art"
   * Versichertenart -> "VSDMCoverage.extension:versichertenart"
+  * Versicherungsart -> "VSDMCoverage.type"

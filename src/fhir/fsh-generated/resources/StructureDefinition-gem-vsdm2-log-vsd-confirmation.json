@@ -2162,6 +2162,12 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.type"
+          }
         ]
       }
     ]
@@ -3276,6 +3282,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.type"
           }
         ]
       }
