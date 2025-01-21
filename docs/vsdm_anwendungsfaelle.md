@@ -76,7 +76,7 @@ Zu beachten ist, dass sich auf der eGk einseits der komplette VSD-Datensatz und 
 
 Hier ist ein Beispielprogramm zum Auslesen der eGK wenn ein Standardkartenleser verwendet wird:
 
-[Beispielprogramm zum Auslesen der eGK](src/examples/eGKRead.java)
+[Beispielprogramm zum Auslesen der eGK](/src/examples/eGKRead.java)
 
 Hinweis 1: Die Daten werden ausgelesen und decodiert in einer Log-Datei angezeigt (auch als XML).
 Hinweis 2: Das Programm prüft NICHT die Echtheit der eGK.
