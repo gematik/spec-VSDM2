@@ -2135,6 +2135,34 @@
             "map": "VSDMCoverage.extension:versichertenart"
           }
         ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsart",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsart",
+        "short": "Art der Versicherung: gesetzliche oder private Versicherung",
+        "definition": "GKV = gesetzlich versichert, PKV = privat versichert",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsart",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
       }
     ]
   },
@@ -3235,6 +3263,19 @@
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
             "map": "VSDMCoverage.extension:versichertenart"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsart",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsart",
+        "short": "Art der Versicherung: gesetzliche oder private Versicherung",
+        "definition": "GKV = gesetzlich versichert, PKV = privat versichert",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
           }
         ]
       }
