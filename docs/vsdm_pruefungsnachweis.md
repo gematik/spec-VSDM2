@@ -1,12 +1,12 @@
 # Hinweise zur Prüfziffer
 
-Im Gegensatz zu VSDM 1.0 wird mit VSDM 2.0 kein Prüfungsnachweis mehr an das Primärsystem übergeben. 
+Im Gegensatz zu VSDM 1.0 wird mit VSDM 2.0 vom Fachdienst kein Prüfungsnachweis mehr sondern die Prüfziffer an das Primärsystem übergeben. 
 
-Bei einer erfolgreichen Durchführung des Abrufs VSD wird 
-  - bei erstmaligem Abruf im laufenden Quartal die Prüfziffer in Verbindung mit den VSD und
-  - bei jedem weiteren Abruf der VSD im laufenden Quartal die Prüfziffer unabhängig davon, ob sich Änderungen in den VSD ergeben haben
-
-an das Primärsystem übermittelt.
+Bei einer erfolgreichen Durchführung einer VSD-Anfrage wird 
+  - bei erstmaligem Abruf im laufenden Quartal und
+  - bei jedem weiteren Abruf der VSD im laufenden Quartal
+    
+die Prüfziffer unabhängig davon, ob sich Änderungen in den VSD ergeben haben an das Primärsystem übermittelt.
 
 Das Primärsystem muss die Prüfziffer zur Erstellung der Abrechnungsunterlagen speichern. 
 
@@ -14,34 +14,15 @@ Dieser Leitfaden zur Implementierung trifft keine Aussage darüber, ob jede im l
 
 Die Regelungen dazu werden im Anforderungskatalog KVDT (KBV_ITA_VGEX_Anforderungskatalog_KVDT) getroffen und müssen durch das Primärsystem entsprechend umgesetzt werden.
 
-
-# Prüfziffer
-
-## Struktur der Prüfziffer
-
-| Nr | Feld | Format | Länge |
-| ---- | ---- |---- | ---- | 
-| 1 | 10-stelliger unveränderlicher Teil der KVNR | alphanummerisch | 10 |
-| 2 | aktueller Unix Timestamp (bspw. "1673551622") | alphanummerisch | 10 |
-| 3 | Ausstellender Dienst: 2 = VSDM 2.0 | alphanummerisch | 1 |
-| 4 | Kennung des Betreibers Fachdienste VSDM gemäß Liste der gematik | alphanummerisch | 1 |
-| 5 | Für den Betreiber des Fachdienstes spezifische Version des HMAC-Schlüssels | alphanummerisch | 1 |
-| 6 | Es wird ein HMAC nach A_23461-* über die konkatenierten Felder 1-5 mittels des betreiberspezifischen Schlüssel berechnet.  Dieser berechnete HMAC-Wert (256-Bit) wird auf 192 Bit (also 24 Byte) gekürzt (die ersten 24 Byte des HMAC-Wertes werden verwendet, die restlichen 8 Byte werden verworfen). Dieser gekürzte HMAC-Wert ist das 6-te Datenfeld. | binär | 24 |
+Beispiele für Übertragung der Prüfziffer sind in gemSpecVSDM2 dargestellt und beschrieben.
 
 
-# Zeichenkodierung von Daten
 
-Das Primärsystem muss den vom Fachdienst gelieferten Prüfungsnachweis aus dem HTTP-Header VSDM-Pn extrahieren, BASE64URL dekodieren sowie mittels gzip dekomprimieren. Danach steht das XML-Element Prüfungsnachweis zur weiteren Verarbeitung im Primärsystem zur Verfügung.
 
-Beispiel einer dekomprimierten Prüziffer aus einerm Prüfungsnachweis (XML-Datei)
-| dekomprimierte Prüfziffer |
-| :----------                |
-| <PZ>VDAyMzU5MDA1MDE3MjY3Mzc2MDFVVDLYyBOm+EDF0oe1aW/ndQe2p36MGAzvyBk=</PZ> |
 
-Beispiel einer dekodierten (Base64) Prüfziffer aus dem Prüfungsnachweis
-| Prüfziffer |
-| :---------- |
-| T0235900501726737601UT2ØÈ¦ø@ÅÒ‡µioçu¶§~ŒïÈ |
+
+
+
 
 
 

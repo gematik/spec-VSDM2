@@ -6,7 +6,7 @@ Im Primärsystem dient bei der Anmeldung die eGK und zukünftig die GesundheitsI
 Dies beinhaltet
   - die Herstellung des Versorgungskontexres
   - den Abruf der VSD beim Fachdienst VSDM 2.0
-  - den Abruf des Prüfungsnachweises
+  - den Abruf der Prüfziffer für die Abrechnung
   - bei unbekannten Versicherten das Anlegen des Patientenstammblatts
   - bei bekannten Versicherten ggf. das Aktualisieren des Patientenstammblatts
     
@@ -19,7 +19,7 @@ Der Nutzer soll einen Hinweis erhalten, dass der Versicherte noch nicht im PS ex
 
 **Patientenstammblatt anzeigen**
 
-Existiert bereits ein Patientenstammblatt, soll das PS den Abruf der VSD automatisch starten wenn das Patientenstammblatt im Rahmen eines Folgebesuchs geöffnet wird. Liegt im laufenden Quartal noch kein gültiger Prüfungsnachweis vor muss der Abruf der VSD erfolgen.
+Existiert bereits ein Patientenstammblatt, soll das PS den Abruf der VSD automatisch starten wenn das Patientenstammblatt im Rahmen eines Folgebesuchs geöffnet wird. Liegt im laufenden Quartal noch keine Prüfziffer vor muss der Abruf der VSD erfolgen.
 Das PS soll dem Nutzer die Möglichkeit bieten, den Abruf der VSD manuell zu starten.
 
 Die Anzeige des zum Versicherten gehörigen Patientenstammblatt kann auf unterschiedliche Arten erfolgen:

@@ -2,7 +2,7 @@
 Der Anwendungsfall ermöglicht dem Leistungserbringer,
 - das gültige Versicherungsverhältnis beim erstmaligen Quartalsbesuch zu prüfen,
 - die jeweils zum Besuch aktuellen VSD und
-- den Prüfungsnachweis für die Abrechnung zu erhalten
+- die Prüfziffer für die Abrechnung zu erhalten
 
 Vorraussetzungen für die Durchführung des VSDM-Anwendungsfalls ist die Herstellung des Versorgungskontextes. Versorgungskontext bedeutet, dass ein Zusammenhang zwischen einem berechtigten Versicherten und einer behandelnden oder versorgenden Leistungserbringerinstitution (LEI) hergestellt wird.
 
@@ -26,7 +26,7 @@ Tabelle Übersicht Varianten Abruf VSD
 | :-- | :---------- | :---------- | :---------- | ------------ |
 | 1 | 1. x im Quartal | bekannter Versicherter | ohne Aktualisierung | keine Übertragung VSD |
 | 2 | 1. x im Quartal | bekannter Versicherter | mit Aktualisierung | Übertragung VSD und Aktualisierung Patientenstammblatt |
-| 3 | 1. x im Quartal | unbekannter Versicherter | ohne Aktualisierung | Übertragung VSD und Anlage Patientenstammblatt |
+| 3 | 1. x im Quartal | unbekannter Versicherter | mit Aktualisierung | Übertragung VSD und Anlage Patientenstammblatt |
 | 4 | Folgebesuch | bekannter Versicherter | ohne Aktualisierung | keine Übertragung VSD |
 | 5 | Folgebesuch | bekannter Versicherter | mit Aktualisierung | Übertragung VSD und Aktualisierung Patientenstammblat |
 
@@ -46,25 +46,20 @@ Tabelle Übersicht Varianten Abruf VSD
 
 | Nr | Aktivität | Komponente | Beschreibung |
 | -- | :-------- | :----------- | :---------- |
-| 1 | VSD am FD abrufen | PS | Zur Anfrage an den zuständigen Fachdienst wird der gültige Versorgungskontextnachweis in Form eines PoPP-Tokens, der Access-Token und der VSD-Änderungsindikator (ETag) übertragen. ETag muss auf "0" gesetzt werden wenn noch kein Änderungsindikator vorliegt |
+| 1 | VSD am FD anfragen | PS | Zur Anfrage an den zuständigen Fachdienst wird der gültige Versorgungskontextnachweis in Form eines PoPP-Tokens, der Access-Token und der VSD-Änderungsindikator (ETag) übertragen. ETag muss auf "0" gesetzt werden wenn noch kein Änderungsindikator vorliegt |
 | 2 | Access-Token prüfen | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters prüft auf gültigen Access-Token und leitet den Request an den FD weiter. |
 | 3 | PoPP-Token prüfen | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters prüft auf gültigen PoPP-Token und leitet den Request an den FD weiter. |
-| 4 | Versorgungskontext übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt dem FD VSDM 2.0 die Daten "patient.identifier.value" (KVNR) und patient.proof_time zur Prüfung der zeitlichen Gültigkeit des Versorgungskontextnachweises und Protokollierung  |
-| 5 | (zeitliche) Gültigkeit PoPP-Token prüfen | FD | Der FD prüft die zeitliche Gültigkeit des Versorgungskontextes: Wert patient.proofTime zum Zeitpunkt der HTTP-GET-Operation liegt innerhalb des aktuellen Quartals des aktuellen Jahres) |
-| 6 | VSD-Version prüfen | FD | Der FD führt beim Aufruf der HTTP-GET-Operation vor dem Abruf des Versichertenstammdatensatzes von dem KTR-Bestandssystem eine VSD-Aktualitätsprüfung durch |
-| 7 | PN übermitteln | FD | Der FD übermittelt den PN als XML-Datei und den etag_value an den HTTP-Proxy des ZT-Clusters |
-| 7.1 | PN an PS übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt den PN als XML-Datei und den etag_value an das PS |
-| 8 | VSD lokalisieren | FD | Der FD führt eine Lokalisierung der VSD anhand der KVNR am KTR-Bestandssystem durch und ruft diesen ab |
-| 8.1 | VSD und PN übermitteln | FD | Der FD übermittelt die VSD als FHIR-Bundle, den PN als XML-Datei und den new_etag_value an den HTTP-Proxy des ZT-Clusters |
-| 8.2 | VSD und PN an PS übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt die VSD als FHIR-Bundle, den PN als XML-Datei und den new_etag_value an das PS |
-| 8.3 | VSD speichern | PS | Die übermittelten VSD werden gespeichert oder aktualisiert |
-| 9 | PN speichern | PS | Der übermittelte PN wird für das laufende Quartal gespeichert |
+| 4 | KVNR übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt dem FD VSDM die KVNR in Form des Elements patientId des HTTP-Headers ZETA-PoPP-Token-Content zur Lokalisierung der VSD-Version und der Versichertenstammdaten. |
+| 5 | VSD-Version prüfen | FD | Der FD führt beim Aufruf der HTTP-GET-Operation vor der Verarbeitung eines Versichertenstammdatensatzes eine VSD-Aktualitätsprüfung durch |
+| 6 | VSD lokalisieren | FD | Der FD führt bei Unterschieden in der VSD Version zwischen PS und FD eine Lokalisierung der VSD anhand der KVNR durch und ruft diese ab |
+| 7 | PZ und ggf. VSD übermitteln | FD | Der FD übermittelt die Prüfziffer, den etag_value und bei Unterschieden in der VSD Version die VSD an den HTTP-Proxy des ZT-Clusters |
+| 8 | PZ und ggf. VSD an PS übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt die Prüfziffer, den etag_value und bei Unterschieden in der VSD Version die VSD an das PS |
+| 9 | PZ und ggf. VSD speichern | PS | Die übermittelte PZ, der etag_value und bei Unterschieden in der VSD Version die VSD werden gespeichert |
 
 **Nachbedingung**
 - PS: Die VSD im Patientenstammblatt wurden aktualisiert / sind aktuell
-- PS: Prüfungsnachweis ist im PS gespeichert
-
-Hinweis: Die Schritte 7 und 8 bilden keine Reihenfolge im Ablauf ab. Schritt 8 wird nur ausgeführt, wenn beim Vergleich des ETags aus dem Request mit dem Änderungsindikator des Fachdienstes keine Übereinstimmung vorliegt.
+- PS: Die Prüfziffer ist im PS gespeichert
+- PS: der etag_value wurde aktualisiert
 
 **Hinweise zum Entity Tag (ETag)**
 
@@ -78,4 +73,12 @@ Dieser Anwendungsfall kommt dann zum tragen, wenn die VSD nicht online vom Fachd
 Das PS muss in der Lage sein, die eGK mit den in der LEI vorhandenen Kartenlesegeräten auslesen zu können. Das können sowohl eHealth-Kartenterminals als auch handelsübliche Smartcard-Reader sein. 
 Die Daten werden aus dem ungeschützten Bereich der eGK aus den Containern PD und VD gelesen.
 Zu beachten ist, dass sich auf der eGk einseits der komplette VSD-Datensatz und andererseits auch ein verkürzter Datensatz befinden kann. Keiner dieser Datensätze kann jedoch den notwendigen Abruf der VSD im laufenden Quartal ersetzen da es sich lediglich um statische Daten auf der eGK handelt, die nicht aktualisert werden.
+
+Hier ist ein Beispielprogramm zum Auslesen der eGK wenn ein Standardkartenleser verwendet wird:
+
+[Beispielprogramm zum Auslesen der eGK](/src/examples/eGKRead.java)
+
+Hinweis 1: Die Daten werden ausgelesen und decodiert in einer Log-Datei angezeigt (auch als XML).
+Hinweis 2: Das Programm prüft NICHT die Echtheit der eGK.
+
 

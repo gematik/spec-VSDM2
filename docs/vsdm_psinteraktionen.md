@@ -16,9 +16,9 @@ Der Nutzer soll einen Hinweis durch das PS erhalten wenn der Abruf der VSD gesta
 
 Der Nutzer soll einen Hinweis erhalten wenn der Abruf VSD aufgrund Nichterreichbarkeit des Fachdienstes nicht durchgeführt werden konnte.
 
-**VSD Abruf bei fehlenden Prüfungsnachweis**
+**VSD Abruf bei fehlender Prüfziffer**
 
-Das PS soll dem Nutzer einen Hinweis anzeigen wenn der Abruf der VSD aufgrund eines fehlenden Prüfungsnachweises erforderlich ist. Die kann der Fall sein, wenn ein vorangegangener Abruf VSD nicht erfolgreich durchgeführt werden konnte.
+Das PS soll dem Nutzer einen Hinweis anzeigen wenn der Abruf der VSD aufgrund einer fehlenden Prüfziffer erforderlich ist. Die kann der Fall sein, wenn ein vorangegangener Abruf VSD nicht erfolgreich durchgeführt werden konnte.
 
 **Abruf VSD erfolgreich durchgeführt**
 
