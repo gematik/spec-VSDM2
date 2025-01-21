@@ -49,7 +49,7 @@ Tabelle Übersicht Varianten Abruf VSD
 | 1 | VSD am FD anfragen | PS | Zur Anfrage an den zuständigen Fachdienst wird der gültige Versorgungskontextnachweis in Form eines PoPP-Tokens, der Access-Token und der VSD-Änderungsindikator (ETag) übertragen. ETag muss auf "0" gesetzt werden wenn noch kein Änderungsindikator vorliegt |
 | 2 | Access-Token prüfen | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters prüft auf gültigen Access-Token und leitet den Request an den FD weiter. |
 | 3 | PoPP-Token prüfen | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters prüft auf gültigen PoPP-Token und leitet den Request an den FD weiter. |
-| 4 | **Versorgungskontext übermitteln** | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt dem FD VSDM 2.0 die Daten "patient.identifier.value" (KVNR) und patient.proof_time zur Prüfung der zeitlichen Gültigkeit des Versorgungskontextnachweises und Protokollierung  |
+| 4 | KVNR übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt dem FD VSDM die KVNR in Form des Elements patientId des HTTP-Headers ZETA-PoPP-Token-Content zur Lokalisierung der VSD-Version und der Versichertenstammdaten. |
 | 5 | VSD-Version prüfen | FD | Der FD führt beim Aufruf der HTTP-GET-Operation vor der Verarbeitung eines Versichertenstammdatensatzes eine VSD-Aktualitätsprüfung durch |
 | 6 | VSD lokalisieren | FD | Der FD führt bei Unterschieden in der VSD Version zwischen PS und FD eine Lokalisierung der VSD anhand der KVNR durch und ruft diese ab |
 | 7 | PZ und ggf. VSD übermitteln | FD | Der FD übermittelt die Prüfziffer, den etag_value und bei Unterschieden in der VSD Version die VSD an den HTTP-Proxy des ZT-Clusters |
