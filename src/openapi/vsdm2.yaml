@@ -1,13 +1,13 @@
 openapi: 3.1.0
 info:
   title: VSDM2
-  description: HTTP-based "Versichertenstammdatendienst" (vsdd) interface to request "Versichertenstammdaten" (vsd). 
-    This API document specifies the contract between a vsdm-client ("Primaersystem") and the ressorce serve of the "Versichertenstammdatendienst". 
-    The ressource server ist protected by a proxy component. Details about the interface description of the proxy component can be found (soon) at a separate github project https://github.com/gematik/spec-t20r/tree/develop/src/openapi.
+  description: HTTP-based "Versichertenstammdatendienst" (VSDD) interface to request "Versichertenstammdaten" (vsd). 
+    This API document specifies the contract between a vsdm-client ("Primaersystem") and the resource server of the "Versichertenstammdatendienst". 
+    The ressource server ist protected by a proxy component. Details about the interface description of the proxy component can be found (soon) at a separate GitHub project https://github.com/gematik/spec-t20r/tree/develop/src/openapi.
     Practitioners software clients "Primaersysteme" can request data about patients by using this interface to support a current treatment.
   contact:
     name: gematik GmbH
-    url: 'http://www.gematik.de'
+    url: 'https://www.gematik.de'
   license:
     name: Apache 2.0
     url: "https://www.apache.org/licenses/LICENSE-2.0"
@@ -30,25 +30,25 @@ servers:
     variables:
       iknummer:
         default: "111111111"
-        description: institutional identifier for a specific health insurer
+        description: Institutional identifier for a specific health insurer.
   - url: https://{iknummer}.ref.vsdm2.ti-dienste.de
     description: address schema vsdm backends - reference environment
     variables:
       iknummer:
         default: "111111111"
-        description: institutional identifier for a specific health insurer
+        description: Institutional identifier for a specific health insurer.
   - url: https://{iknummer}.test.vsdm2.ti-dienste.de
     description: address schema vsdm backends - test environment
     variables:
       iknummer:
         default: "111111111"
-        description: institutional identifier for a specific health insurer
+        description: Institutional identifier for a specific health insurer.
   - url: https://{iknummer}.dev.vsdm2.ti-dienste.de
     description: address schema vsdm backends - development environment
     variables:
       iknummer:
         default: "111111111"
-        description: institutional identifier for a specific health insurer
+        description: Institutional identifier for a specific health insurer.
 tags:
   - name: Vsdm
     description: Endpoint of the application "Versichertenstammdatenmanagement" (VSDM) to retrieve a VSDMBundle FHIR-Resource (Versichertenstammdaten; VSD) of a specific patient.
@@ -68,20 +68,20 @@ paths:
           in: header
           description: OAuth2 Bearer AccessToken granting access to the VSDService-API. 
             The Access-Token is verified by the HTTP-Proxy component of the "Versichertenstammdatendienst".
-            The Access-Token is bound via "demonstrating proof of posession" (DPoP) to the requesting client according rfc9449 6.1. JWK Thumbprint Confirmation Method.
+            The Access-Token is bound via "demonstrating proof of possession" (DPoP) to the requesting client, according to RFC 9449 6.1. JWK Thumbprint Confirmation Method.
           schema:
             type: string
         - name: PoPP
           in: header
           description: Bearer Token containing proof of patient presence (Versorgungskontextnachweis). 
-            This Token represents the proof about an actual encounter between patient and practitioner as resource access condition.
-            The HTTP-Proxy verifies the Token and sends the Token-Payload within the custom header "ZETA-PoPP-Token-Content" to the resource server.
-            The Header contains the "Krankenversichertennummer" (kvnr) as the identifier for the corresponding VSDMBundle instance.
+            This token represents the proof of an actual encounter between patient and practitioner as a resource access condition.
+            The HTTP-Proxy verifies the Token and sends the Token-Payload within the custom header "ZETA-PoPP-Token-Content" to the resource server.
+            The Header contains the "Krankenversichertennummer" (KVNR) as the identifier for the corresponding VSDMBundle instance.
           schema:
             type: string
         - name: DPoP
           in: header
-          description: The DPoP-Header holds the DPoP-JWT to demonstrate possession of local client key and to bind a local client to his oauth2 AccessToken according rfc9449. 
+          description: The DPoP-Header holds the DPoP-JWT to demonstrate possession of a local client key and to bind a local client to his oauth2 AccessToken according to RFC 9449. 
             The DPoP is verified by the HTTP-Proxy component of the "Versichertenstammdatendienst".
           schema:
             type: string
@@ -208,7 +208,7 @@ components:
               "sigFormat": "application/pkcs7-mime",
               "who": {
                 "identifier": {
-                  "system": "http://fhir.de/sid/arge-ik/iknr",
+                  "system": "https://fhir.de/sid/arge-ik/iknr",
                   "value": "12345678"
                 }
               },
@@ -238,7 +238,7 @@ components:
                   "author": [
                     {
                       "identifier": {
-                        "system": "http://fhir.de/sid/arge-ik/iknr",
+                        "system": "https://fhir.de/sid/arge-ik/iknr",
                         "value": "12345678"
                       }
                     }
@@ -247,7 +247,7 @@ components:
                     "coding": [
                       {
                         "code": "not-applicable",
-                        "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason"
+                        "system": "https://terminology.hl7.org/CodeSystem/data-absent-reason"
                       }
                     ]
                   },
@@ -288,7 +288,7 @@ components:
                       "_family": {
                         "extension": [
                           {
-                            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                            "url": "https://hl7.org/fhir/StructureDefinition/humanname-own-name",
                             "valueString": "Königstein"
                           }
                         ]
@@ -300,7 +300,7 @@ components:
                   ],
                   "identifier": [
                     {
-                      "system": "http://fhir.de/sid/gkv/kvid-10",
+                      "system": "https://fhir.de/sid/gkv/kvid-10",
                       "value": "T024791905"
                     }
                   ],
@@ -313,11 +313,11 @@ components:
                         {
                           "extension": [
                             {
-                              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                              "url": "https://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
                               "valueString": "14"
                             },
                             {
-                              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                              "url": "https://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
                               "valueString": "Blumenweg"
                             }
                           ]
@@ -358,7 +358,7 @@ components:
                   "payor": [
                     {
                       "identifier": {
-                        "system": "http://fhir.de/sid/arge-ik/iknr",
+                        "system": "https://fhir.de/sid/arge-ik/iknr",
                         "value": "12345678"
                       },
                       "display": "Test GKV Krankenkasse"
@@ -377,9 +377,9 @@ components:
                   "type": {
                     "coding": [
                       {
-                        "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+                        "system": "https://fhir.de/CodeSystem/versicherungsart-de-basis",
                         "code": "GKV",
-                        "display": "gesetzliche Krankenversicherung"
+                        "display": "Gesetzliche Krankenversicherung"
                       }
                     ]
                   },
@@ -424,7 +424,7 @@ components:
                       }
                   }
               ]
-          }          
+          }
         ]
     ErrorType:
       description: Error object with additional information about the occurred error
@@ -437,7 +437,7 @@ components:
         errorDetail:
           description: Additional details regarding the error condition (if applicable)
           type: string
-          examples: [User is not authorized, Request is forbidden, Server can not handle request for now]
+          examples: [User is not authorized, Request is forbidden, Server cannot handle request for now]
       required:
         - errorCode
   securitySchemes:
