@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="wiki.gematik.de" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="24.9.3">
+<mxfile host="wiki.gematik.de" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36" version="24.9.3">
   <diagram id="XZqBrHnGn3-9SLynYtlv" name="Seite-1">
-    <mxGraphModel dx="1962" dy="904" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1450" dy="616" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -519,7 +519,7 @@
         <mxCell id="mA7ABEJn_w4v4imi2nxo-4" value="VSD-DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#000000;dashed=1;dashPattern=1 4;" parent="1" vertex="1">
           <mxGeometry x="1125" y="223" width="70" height="58.75" as="geometry" />
         </mxCell>
-        <mxCell id="mA7ABEJn_w4v4imi2nxo-5" value="Erstellung&lt;div&gt;Prüfungs-nachweis&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+        <mxCell id="mA7ABEJn_w4v4imi2nxo-5" value="Erstellung&lt;div&gt;Prüfzifffer&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="990" y="277.63" width="60" height="49.87" as="geometry" />
         </mxCell>
         <mxCell id="mA7ABEJn_w4v4imi2nxo-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;curved=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.824;exitY=1.002;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="Veu_fZ2Ik_sSsAxx7kRS-4" target="mA7ABEJn_w4v4imi2nxo-5" edge="1">
