@@ -1057,8 +1057,8 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
-        "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
-        "definition": "Anlage 8 - Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
+        "short": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
+        "definition": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
         "min": 1,
         "max": "1",
         "base": {
@@ -1187,8 +1187,8 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
-        "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
-        "definition": "Anlage 8 - Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
+        "short": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
+        "definition": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
         "min": 1,
         "max": "1",
         "base": {
@@ -1393,11 +1393,11 @@
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
         "short": "Gibt die Gueltigkeit der Befreiung von der Zuzahlungspflicht nach § 62 SGB V an.",
         "definition": "Wird nur angegeben, wenn Status Zuzahlung mit 1 = befreit angegeben ist.",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
-          "min": 1,
+          "min": 0,
           "max": "1"
         },
         "type": [
@@ -2673,8 +2673,8 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
-        "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
-        "definition": "Anlage 8 - Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
+        "short": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
+        "definition": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
         "min": 1,
         "max": "1",
         "type": [
@@ -2743,8 +2743,8 @@
       {
         "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
-        "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
-        "definition": "Anlage 8 - Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
+        "short": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
+        "definition": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
         "min": 1,
         "max": "1",
         "type": [
@@ -2859,7 +2859,7 @@
         "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
         "short": "Gibt die Gueltigkeit der Befreiung von der Zuzahlungspflicht nach § 62 SGB V an.",
         "definition": "Wird nur angegeben, wenn Status Zuzahlung mit 1 = befreit angegeben ist.",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
