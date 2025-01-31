@@ -10,7 +10,7 @@ Der Versorgungskontext wird durch die folgenden Schritte realisiert:
 - Authentisierung der LEI am PoPP-Service mittels einer SM-B Identität (Karte oder HSM)
 - Authentisierung des Versicherten mittels eGK oder GesundheitsID
 
-Nach der erfolgreichen Authentisierung der LEI und des Versicherten wird das Vorhandensein des Versorgungskontextes in Form eines PoPP-Tokens, welcher an das PS übergeben wird, attestiert. Anschließend kann das Primärsystems den PoPP-Token als Autorisierung verwenden, um den Abruf der Versichertenstammdaten am Fachdienst VSDM 2.0 durchzuführen. Die Herstellung des Versorgungskontextes ist nur beim ersten Besuch des Versicherten im laufenden Quartal notwendig. Bei Folgebesuchen wird der im PS bereits vorhandene PoPP-Token für jeden weiteren Abruf der VSD im laufenden Quartal verwendet.
+Nach der erfolgreichen Authentisierung der LEI und des Versicherten wird das Vorhandensein des Versorgungskontextes in Form eines PoPP-Tokens, welcher an das PS übergeben wird, attestiert. Anschließend kann das Primärsystems den PoPP-Token als Autorisierung verwenden, um den Abruf der Versichertenstammdaten am Fachdienst VSDM 2.0 durchzuführen. Die Herstellung des Versorgungskontextes ist nur beim ersten Besuch des Versicherten im laufenden Quartal notwendig. Bei Folgebesuchen kann der im PS bereits vorhandene PoPP-Token für jeden weiteren Abruf der VSD im laufenden Quartal verwendet werden.
 
 Die Authentisierung der LEI gegenüber dem PoPP-Dienst und gegenüber dem Fachdienst ist einmal am Tag erforderlich.
 Zukünftig kann der Versicherte auch die GesundheitsID in Verbindung mit einem Frontend des Versicherten (FdV) nutzen, um sich gegenüber dem PoPP-Dienst zu authentisieren.
