@@ -6,7 +6,7 @@ Die Aufnahme eines Patienten in einer Arzt-/ Zahnarztpraxis oder in psychotherap
 Für jeden Versicherten wird ein Patientenstammblatt angelegt (der Begriff kann variieren und ist nicht mit der elektonischen Patientenakte zu verwechseln) die alle relevanten medizinischen und administrativen Daten enthält. Das Patientenstammblatt ist integrativer Teil des Primärsystems und dient sowohl der Dokumentation als auch der Nachverfolgbarkeit des Behandlungsverlaufs und ist für eine korrekte Diagnose, Therapie und Nachsorge unerlässlich.
 Für Versicherte, die der Praxis noch nicht bekannt sind wird ein Patientenstammblatt im Zusammenhang mit dem Abruf der VSD angelegt.
 Existiert zum Versicherten bereits ein Patientenstammblatt wird diese im Laufe der Behandlung fortgeschrieben und aktualsiert.
-Der Abruf der VSD muss immer beim ersten Besuch des Versicherten im laufenden Quartal durchgeführt werden. Auch bei Folgebesuchen im entsprechenden Quartal soll der LE einen Abruf der VSD durchführen, um auch unterquartalige Änderungen in den VSD im PS zu dokumentieren.
+Der Abruf der VSD muss immer beim ersten Besuch des Versicherten im laufenden Quartal durchgeführt werden. Auch bei Folgebesuchen im entsprechenden Quartal kann der LE einen Abruf der VSD durchführen, um auch unterquartalige Änderungen in den VSD im PS zu dokumentieren.
 Das PS muss zudem auch den bei jedem Abruf mitgelieferten Prüfungsnachweis für Abrechnungsunterlagen speichern. 
 
 Kann der Abruf der VSD zur Herstellung des Behandlungskontextes nicht erfolgen (z.B. aus technischen Gründen) muss die Aufnahme des Versicherten über ein definiertes Ersatzverfahren erfolgen (Regelungen innerhalb des BMV-Ä).
