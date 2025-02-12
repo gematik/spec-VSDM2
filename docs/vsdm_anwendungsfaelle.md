@@ -36,13 +36,13 @@ Tabelle Übersicht Varianten Abruf VSD
 ### Variante 1
 
 **Eingangsbedingung:**
-- Abruf der VSD erfolgt erstmalig im laufenden Quartal
+- Abruf der VSD erfolgt erstmalig für einen unbekannten Versicherten
 - Versicherter authentisiert sich mit eGK oder GesundheitsID
 - LEI ist am PoPP-Service registriert und angemeldet
 - Dienstlokalisierung am FD VSDM 2.0 ist erfolgt (alle 24 Stunden)
 
 **Vorraussetzungen:**
-- Versorgungskontext ist in Form einen vorleigenden PoPP-Tokens attestiert
+- Versorgungskontext ist in Form einen vorliegenden PoPP-Tokens attestiert
 - PoPP-Token liegt im PS vor
 - KVNR und IK-Nummer sind im PS gespeichert (z.B. im Patientenstammblatt)
 
