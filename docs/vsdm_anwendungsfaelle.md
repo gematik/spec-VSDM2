@@ -59,7 +59,7 @@ Tabelle Übersicht Varianten Abruf VSD
 | 9 | PZ und ggf. VSD speichern | PS | Die übermittelte PZ, der etag_value und bei Unterschieden in der VSD Version die VSD werden gespeichert |
 
 **Nachbedingung**
-- PS: Die VSD im Patientenstammblatt wurden aktualisiert / sind aktuell
+- PS: Die VSD wurden im Patientenstammblatt gespeichert
 - PS: Die Prüfziffer ist im PS gespeichert
 - PS: der etag_value wurde aktualisiert
 
