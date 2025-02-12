@@ -33,7 +33,7 @@ Tabelle Übersicht Varianten Abruf VSD
 
 ## Standardablauf Abruf VSD 
 
-**1. bei unbekanntem Versicherten**
+### Variante 1
 
 **Eingangsbedingung:**
 - Abruf der VSD erfolgt erstmalig im laufenden Quartal
@@ -63,7 +63,7 @@ Tabelle Übersicht Varianten Abruf VSD
 - PS: Die Prüfziffer ist im PS gespeichert
 - PS: der etag_value wurde aktualisiert
 
-**2. bei bekanntem Versicherten**
+### Variante 2
 
 | Nr | Aktivität | Komponente | Beschreibung |
 | -- | :-------- | :----------- | :---------- |
