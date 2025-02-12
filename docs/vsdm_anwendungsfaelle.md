@@ -24,9 +24,9 @@ Die nachfolgend aufgeführte Tabelle stellt die möglichen Varianten des Anwendu
 Tabelle Übersicht Varianten Abruf VSD
 | Variante | Art des Besuchs | Versicherter | VSD | Bemerkung |
 | :-- | :---------- | :---------- | :---------- | ------------ |
-| 1 | 1. x im Quartal | bekannter Versicherter | ohne Aktualisierung | keine Übertragung VSD |
-| 2 | 1. x im Quartal | bekannter Versicherter | mit Aktualisierung | Übertragung VSD und Aktualisierung Patientenstammblatt |
-| 3 | 1. x im Quartal | unbekannter Versicherter | mit Aktualisierung | Übertragung VSD und Anlage Patientenstammblatt |
+| 1 | 1. x im Quartal | unbekannter Versicherter | mit Aktualisierung | Übertragung VSD und Anlage Patientenstammblatt |
+| 2 | 1. x im Quartal | bekannter Versicherter | ohne Aktualisierung | keine Übertragung VSD |
+| 3 | 1. x im Quartal | bekannter Versicherter | mit Aktualisierung | Übertragung VSD und Aktualisierung Patientenstammblatt |
 | 4 | Folgebesuch | bekannter Versicherter | ohne Aktualisierung | keine Übertragung VSD |
 | 5 | Folgebesuch | bekannter Versicherter | mit Aktualisierung | Übertragung VSD und Aktualisierung Patientenstammblat |
 
