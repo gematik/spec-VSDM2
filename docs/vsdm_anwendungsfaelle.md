@@ -31,9 +31,10 @@ Tabelle Übersicht Varianten Abruf VSD
 | 5 | Folgebesuch | bekannter Versicherter | mit Aktualisierung | Übertragung VSD und Aktualisierung Patientenstammblat |
 
 
-## Standardablauf Abruf VSD 
+## Varianten des Abrufs der VSD 
 
 ### Variante 1
+Ein unbekannter Versicherter wird in der LEI als Patient aufgenommen
 
 **Eingangsbedingung:**
 - Abruf der VSD erfolgt erstmalig für einen unbekannten Versicherten
