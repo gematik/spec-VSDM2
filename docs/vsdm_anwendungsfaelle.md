@@ -34,6 +34,7 @@ Tabelle Übersicht Varianten Abruf VSD
 ## Varianten des Abrufs der VSD 
 
 ### Variante 1
+
 Ein unbekannter Versicherter wird in der LEI als Patient aufgenommen
 
 **Eingangsbedingung:**
@@ -64,7 +65,20 @@ Ein unbekannter Versicherter wird in der LEI als Patient aufgenommen
 - PS: Die Prüfziffer ist im PS gespeichert
 - PS: der etag_value wurde aktualisiert
 
-### Variante 2
+### Variante 2 und 3
+
+Ein der LEI bereits bekannter Versicherter wird zum ersten Mal im laufenden Quartal als Patient aufgenommen.
+
+**Eingangsbedingung:**
+- Abruf der VSD erfolgt erstmalig im Quartal für einen bekannten Versicherten
+- Versicherter authentisiert sich mit eGK oder GesundheitsID
+- LEI ist am PoPP-Service registriert und angemeldet
+- Dienstlokalisierung am FD VSDM 2.0 ist erfolgt (alle 24 Stunden)
+
+**Vorraussetzungen:**
+- Versorgungskontext ist in Form einen vorliegenden PoPP-Tokens attestiert
+- PoPP-Token liegt im PS vor
+- KVNR und IK-Nummer sind im PS gespeichert (z.B. im Patientenstammblatt)
 
 | Nr | Aktivität | Komponente | Beschreibung |
 | -- | :-------- | :----------- | :---------- |
@@ -83,7 +97,19 @@ Ein unbekannter Versicherter wird in der LEI als Patient aufgenommen
 - PS: Die Prüfziffer ist im PS gespeichert
 - PS: der etag_value wurde aktualisiert
 
-### Variante 3
+### Variante 4 und 5
+
+Ein der LEI bereits bekannter Patient wird im Rahmen eines Folgebesuchs behandelt und ist bereits im laufenden Quartal aufgenommen worden.
+
+**Eingangsbedingung:**
+- Abruf der VSD erfolgt erneut im laufenden Quartal für einen kannten Versicherten
+- LEI ist am PoPP-Service registriert und angemeldet
+- Dienstlokalisierung am FD VSDM 2.0 ist erfolgt (alle 24 Stunden)
+
+**Vorraussetzungen:**
+- Versorgungskontext ist in Form einen vorliegenden PoPP-Tokens attestiert
+- PoPP-Token liegt im PS vor
+- KVNR und IK-Nummer sind im PS gespeichert (z.B. im Patientenstammblatt)
 
 | Nr | Aktivität | Komponente | Beschreibung |
 | -- | :-------- | :----------- | :---------- |
