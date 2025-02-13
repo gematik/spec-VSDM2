@@ -67,7 +67,7 @@ Ein unbekannter Versicherter wird in der LEI als Patient aufgenommen
 
 ### Variante 2 und 3
 
-Ein der LEI bereits bekannter Versicherter wird zum ersten Mal im laufenden Quartal als Patient aufgenommen.
+Ein der LEI bereits bekannter Versicherter wird zum ersten Mal im laufenden Quartal als Patient aufgenommen. In Variante 2 erfolgt keine Aktualisierung der VSD.
 
 **Eingangsbedingung:**
 - Abruf der VSD erfolgt erstmalig im Quartal für einen bekannten Versicherten
@@ -99,7 +99,7 @@ Ein der LEI bereits bekannter Versicherter wird zum ersten Mal im laufenden Quar
 
 ### Variante 4 und 5
 
-Ein der LEI bereits bekannter Patient wird im Rahmen eines Folgebesuchs behandelt und ist bereits im laufenden Quartal aufgenommen worden.
+Ein der LEI bereits bekannter Patient wird im Rahmen eines Folgebesuchs behandelt und ist bereits im laufenden Quartal aufgenommen worden. In Variante 4 erfolgt keine Aktualisierung der VSD.
 
 **Eingangsbedingung:**
 - Abruf der VSD erfolgt erneut im laufenden Quartal für einen kannten Versicherten
