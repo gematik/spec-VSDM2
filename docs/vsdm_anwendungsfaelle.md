@@ -56,9 +56,9 @@ Ein unbekannter Versicherter wird in der LEI als Patient aufgenommen
 | 4 | KVNR übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt dem FD VSDM die KVNR in Form des Elements patientId des HTTP-Headers ZETA-PoPP-Token-Content zur Lokalisierung der VSD-Version und der Versichertenstammdaten. |
 | 5 | VSD-Version prüfen | FD | Der FD führt beim Aufruf der HTTP-GET-Operation vor der Verarbeitung eines Versichertenstammdatensatzes eine VSD-Aktualitätsprüfung durch |
 | 6 | VSD lokalisieren | FD | Der FD führt bei Unterschieden in der VSD Version zwischen PS und FD eine Lokalisierung der VSD anhand der KVNR durch und ruft diese ab |
-| 7 | PZ und ggf. VSD übermitteln | FD | Der FD übermittelt die Prüfziffer, den etag_value und bei Unterschieden in der VSD Version die VSD an den HTTP-Proxy des ZT-Clusters |
-| 8 | PZ und ggf. VSD an PS übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt die Prüfziffer, den etag_value und bei Unterschieden in der VSD Version die VSD an das PS |
-| 9 | PZ und ggf. VSD speichern | PS | Die übermittelte PZ, der etag_value und bei Unterschieden in der VSD Version die VSD werden gespeichert |
+| 7 | PZ und VSD übermitteln | FD | Der FD übermittelt die Prüfziffer, den etag_value und die VSD an den HTTP-Proxy des ZT-Clusters |
+| 8 | PZ und VSD an PS übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt die Prüfziffer, den etag_value und die VSD an das PS |
+| 9 | PZ und VSD speichern | PS | Die übermittelte PZ, der etag_value und die VSD werden gespeichert |
 
 **Nachbedingung**
 - PS: Die VSD wurden im Patientenstammblatt gespeichert
