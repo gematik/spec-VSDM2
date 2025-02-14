@@ -41,7 +41,7 @@ Ein unbekannter Versicherter wird in der LEI als Patient aufgenommen
 - Abruf der VSD erfolgt erstmalig für einen unbekannten Versicherten
 - Versicherter authentisiert sich mit eGK oder GesundheitsID
 - LEI ist am PoPP-Service registriert und angemeldet
-- Dienstlokalisierung am FD VSDM 2.0 ist erfolgt (alle 24 Stunden)
+- Dienstlokalisierung des FD VSDM 2.0 ist erfolgt
 
 **Vorraussetzungen:**
 - Versorgungskontext ist in Form einen vorliegenden PoPP-Tokens attestiert
@@ -50,7 +50,7 @@ Ein unbekannter Versicherter wird in der LEI als Patient aufgenommen
 
 | Nr | Aktivität | Komponente | Beschreibung |
 | -- | :-------- | :----------- | :---------- |
-| 1 | VSD am FD anfragen | PS | Zur Anfrage an den zuständigen Fachdienst wird der gültige Versorgungskontextnachweis in Form eines PoPP-Tokens, der Access-Token und der VSD-Änderungsindikator (ETag) übertragen. ETag muss auf "0" gesetzt werden wenn noch kein Änderungsindikator vorliegt |
+| 1 | VSD am FD anfragen | PS | Zur Anfrage an den zuständigen Fachdienst wird der gültige Versorgungskontextnachweis in Form eines PoPP-Tokens, der Access-Token und der VSD-Änderungsindikator (ETag) übertragen. ETag muss auf "0" gesetzt werden |
 | 2 | Access-Token prüfen | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters prüft auf gültigen Access-Token und leitet den Request an den FD weiter. |
 | 3 | PoPP-Token prüfen | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters prüft auf gültigen PoPP-Token und leitet den Request an den FD weiter. |
 | 4 | KVNR übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt dem FD VSDM die KVNR in Form des Elements patientId des HTTP-Headers ZETA-PoPP-Token-Content zur Lokalisierung der VSD-Version und der Versichertenstammdaten. |
@@ -67,13 +67,13 @@ Ein unbekannter Versicherter wird in der LEI als Patient aufgenommen
 
 ### Variante 2 und 3
 
-Ein der LEI bereits bekannter Versicherter wird zum ersten Mal im laufenden Quartal als Patient aufgenommen. In Variante 2 erfolgt keine Aktualisierung der VSD.
+Ein der LEI bereits bekannter Versicherter wird zum ersten Mal im laufenden Quartal als Patient behandelt. In Variante 2 erfolgt keine Aktualisierung der VSD.
 
 **Eingangsbedingung:**
 - Abruf der VSD erfolgt erstmalig im Quartal für einen bekannten Versicherten
 - Versicherter authentisiert sich mit eGK oder GesundheitsID
 - LEI ist am PoPP-Service registriert und angemeldet
-- Dienstlokalisierung am FD VSDM 2.0 ist erfolgt (alle 24 Stunden)
+- Dienstlokalisierung des FD VSDM 2.0 ist erfolgt
 
 **Vorraussetzungen:**
 - Versorgungskontext ist in Form einen vorliegenden PoPP-Tokens attestiert
@@ -82,52 +82,58 @@ Ein der LEI bereits bekannter Versicherter wird zum ersten Mal im laufenden Quar
 
 | Nr | Aktivität | Komponente | Beschreibung |
 | -- | :-------- | :----------- | :---------- |
-| 1 | VSD am FD anfragen | PS | Zur Anfrage an den zuständigen Fachdienst wird der gültige Versorgungskontextnachweis in Form eines PoPP-Tokens, der Access-Token und der VSD-Änderungsindikator (ETag) übertragen. ETag muss auf "0" gesetzt werden wenn noch kein Änderungsindikator vorliegt |
+| 1 | VSD am FD anfragen | PS | Zur Anfrage an den zuständigen Fachdienst wird der gültige Versorgungskontextnachweis in Form eines PoPP-Tokens, der Access-Token und der VSD-Änderungsindikator (ETag) übertragen. |
 | 2 | Access-Token prüfen | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters prüft auf gültigen Access-Token und leitet den Request an den FD weiter. |
 | 3 | PoPP-Token prüfen | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters prüft auf gültigen PoPP-Token und leitet den Request an den FD weiter. |
 | 4 | KVNR übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt dem FD VSDM die KVNR in Form des Elements patientId des HTTP-Headers ZETA-PoPP-Token-Content zur Lokalisierung der VSD-Version und der Versichertenstammdaten. |
-| 5 | VSD-Version prüfen | FD | Der FD führt beim Aufruf der HTTP-GET-Operation vor der Verarbeitung eines Versichertenstammdatensatzes eine VSD-Aktualitätsprüfung durch |
-| 6 | VSD lokalisieren | FD | Der FD führt bei Unterschieden in der VSD Version zwischen PS und FD eine Lokalisierung der VSD anhand der KVNR durch und ruft diese ab |
-| 7 | PZ und ggf. VSD übermitteln | FD | Der FD übermittelt die Prüfziffer, den etag_value und bei Unterschieden in der VSD Version die VSD an den HTTP-Proxy des ZT-Clusters |
-| 8 | PZ und ggf. VSD an PS übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt die Prüfziffer, den etag_value und bei Unterschieden in der VSD Version die VSD an das PS |
-| 9 | PZ und ggf. VSD speichern | PS | Die übermittelte PZ, der etag_value und bei Unterschieden in der VSD Version die VSD werden gespeichert |
+| 5 | VSD-Version prüfen | FD | Der FD führt beim Aufruf der HTTP-GET-Operation vor der Verarbeitung eines Versichertenstammdatensatzes eine VSD-Aktualitätsprüfung auf Basis der KVNR durch |
+| 6.1 | PZ übermitteln | FD | Der FD übermittelt bei Übereinstimmung des etag_values mit dem Änderungsindikator die Prüfziffer und den etag_value an den HTTP-Proxy des ZT-Clusters |
+| 6.2 | VSD lokalisieren | FD | Der FD übermittelt bei Unterschieden zwischen etag_value und dem Änderungsindikator die auf Basis der KVNR lokalisierten VSD, die Prüfziffer und den etag_value an den HTTP-Proxy des ZT-Clusters  |
+| 7 | PZ und ggf. VSD an PS übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt die Prüfziffer, den etag_value und bei Unterschieden in der VSD Version die VSD an das PS |
+| 8 | PZ und ggf. VSD speichern | PS | Die übermittelte PZ, der etag_value und bei Unterschieden in der VSD Version die VSD werden gespeichert |
+
+Schritt 6.1: Variante 2 ohne Aktualisierung VSD
+Schritt 6.2: Variante 3 mit Aktualisierung VSD
 
 **Nachbedingung**
-- PS: Die VSD sind im Patientenstammblatt gespeichert
+- PS: Variante 3 - Die VSD sind im Patientenstammblatt aktualisiert
 - PS: Die Prüfziffer ist im PS gespeichert
 - PS: der etag_value wurde aktualisiert
 
 ### Variante 4 und 5
 
-Ein der LEI bereits bekannter Patient wird im Rahmen eines Folgebesuchs behandelt und ist bereits im laufenden Quartal aufgenommen worden. In Variante 4 erfolgt keine Aktualisierung der VSD.
+Ein der LEI bereits bekannter Patient wird im Rahmen eines Folgebesuchs behandelt und ist bereits im laufenden Quartal aufgenommen/ behandelt worden. In Variante 4 erfolgt keine Aktualisierung der VSD.
 
 **Eingangsbedingung:**
-- Abruf der VSD erfolgt erneut im laufenden Quartal für einen kannten Versicherten
-- LEI ist am PoPP-Service registriert und angemeldet
-- Dienstlokalisierung am FD VSDM 2.0 ist erfolgt (alle 24 Stunden)
+- Abruf der VSD erfolgt erneut im laufenden Quartal für einen bekannten Versicherten
+- Dienstlokalisierung des FD VSDM 2.0 ist erfolgt
 
 **Vorraussetzungen:**
-- Versorgungskontext ist in Form einen vorliegenden PoPP-Tokens attestiert
-- PoPP-Token liegt im PS vor
+- PoPP-Token liegt im PS vor (aus erstem VSD-Abruf des laufenden Quartals)
 - KVNR und IK-Nummer sind im PS gespeichert (z.B. im Patientenstammblatt)
 
 | Nr | Aktivität | Komponente | Beschreibung |
 | -- | :-------- | :----------- | :---------- |
-| 1 | VSD am FD anfragen | PS | Zur Anfrage an den zuständigen Fachdienst wird der gültige Versorgungskontextnachweis in Form eines PoPP-Tokens, der Access-Token und der VSD-Änderungsindikator (ETag) übertragen. ETag muss auf "0" gesetzt werden wenn noch kein Änderungsindikator vorliegt |
+| 1 | VSD am FD anfragen | PS | Zur Anfrage an den zuständigen Fachdienst wird der gültige Versorgungskontextnachweis in Form eines PoPP-Tokens, der Access-Token und der VSD-Änderungsindikator (ETag) übertragen. |
 | 2 | Access-Token prüfen | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters prüft auf gültigen Access-Token und leitet den Request an den FD weiter. |
 | 3 | PoPP-Token prüfen | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters prüft auf gültigen PoPP-Token und leitet den Request an den FD weiter. |
 | 4 | KVNR übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt dem FD VSDM die KVNR in Form des Elements patientId des HTTP-Headers ZETA-PoPP-Token-Content zur Lokalisierung der VSD-Version und der Versichertenstammdaten. |
-| 5 | VSD-Version prüfen | FD | Der FD führt beim Aufruf der HTTP-GET-Operation vor der Verarbeitung eines Versichertenstammdatensatzes eine VSD-Aktualitätsprüfung durch |
-| 6 | VSD lokalisieren | FD | Der FD führt bei Unterschieden in der VSD Version zwischen PS und FD eine Lokalisierung der VSD anhand der KVNR durch und ruft diese ab |
-| 7 | PZ und ggf. VSD übermitteln | FD | Der FD übermittelt die Prüfziffer, den etag_value und bei Unterschieden in der VSD Version die VSD an den HTTP-Proxy des ZT-Clusters |
-| 8 | PZ und ggf. VSD an PS übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt die Prüfziffer, den etag_value und bei Unterschieden in der VSD Version die VSD an das PS |
-| 9 | PZ und ggf. VSD speichern | PS | Die übermittelte PZ, der etag_value und bei Unterschieden in der VSD Version die VSD werden gespeichert |
+| 5 | VSD-Version prüfen | FD | Der FD führt beim Aufruf der HTTP-GET-Operation vor der Verarbeitung eines Versichertenstammdatensatzes eine VSD-Aktualitätsprüfung auf Basis der KVNR durch |
+| 6.1 | PZ übermitteln | FD | Der FD übermittelt bei Übereinstimmung des etag_values mit dem Änderungsindikator die Prüfziffer und den etag_value an den HTTP-Proxy des ZT-Clusters |
+| 6.2 | VSD lokalisieren | FD | Der FD übermittelt bei Unterschieden zwischen etag_value und dem Änderungsindikator die auf Basis der KVNR lokalisierten VSD, die Prüfziffer und den etag_value an den HTTP-Proxy des ZT-Clusters  |
+| 7 | PZ und ggf. VSD an PS übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt die Prüfziffer, den etag_value und bei Unterschieden in der VSD Version die VSD an das PS |
+| 8 | PZ und ggf. VSD speichern | PS | Die übermittelte PZ, der etag_value und bei Unterschieden in der VSD Version die VSD werden gespeichert |
+
+Schritt 6.1: Variante 4 ohne Aktualisierung VSD
+Schritt 6.2: Variante 5 mit Aktualisierung VSD
 
 **Nachbedingung**
-- PS: Die VSD sind im Patientenstammblatt gespeichert
+- PS: Variante 5 - Die VSD sind im Patientenstammblatt aktualisiert
 - PS: Die Prüfziffer ist im PS gespeichert
 - PS: der etag_value wurde aktualisiert
 
+**Anmerkung**
+Der Patient muss weder seine eGK oder GesundheitsID verwenden noch muss ein neuer PoPP-Token vom PoPP-Service bezogen werden, da der im PS bereits vorliegende PoPP-Token für alle Folgebesuche im laufenden Quartal verwendet werden kann.
 
 
 **Hinweise zum Entity Tag (ETag)**
