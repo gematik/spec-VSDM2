@@ -60,7 +60,7 @@ Hier geht es zur Informationsseite zum neuen Informationsmodell für VSDM 2.0.
 ## Prüfziffer
 Hier finden Sie Informationen zur Prüfziffer für VSDM 2.0.
 
-[Prüfziffer](docs/vsdm_pruefungsnachweis.md) 
+[Prüfziffer](docs/vsdm_pruefziffer.md) 
 
 ## Fehlerbehandlung
 
