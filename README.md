@@ -68,6 +68,11 @@ Hier geht es zur Informationsseite zum Umgang mit Fehlermeldungen
 
 [Fehlermeldungen](docs/vsdm_errorcodes.md)
 
+Hier geht es zur Informationsseite zu Statuscodes 
+
+[Statuscodes](docs/vsdm_statuscodes.md)
+
+
 ## FHIR Profile VSDM 2.0
 
 In VSDM 1.0 wurde ein proprietäres XML-Datenformat in einer SOAP-Servicekette verwendet. Mit VSDM 2.0 wird der VSD Datensatz in den FHIR-Standard migriert, der im deutschen Gesundheitswesen immer mehr zum Einsatz kommt. Die FHIR-Profile und Beispielressourcen werden im offiziellen [VSDM 2 simplifier project](https://simplifier.net/vsdm2) veröffentlicht.
