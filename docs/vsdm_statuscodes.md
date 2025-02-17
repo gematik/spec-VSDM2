@@ -21,15 +21,5 @@ Fehler können sowohl im inneren http-Requests (bei fachlichen Fehlern) als auch
 |    | 504 |  79111 |
 
 
-## Server Fehlercodes
--------------------
-| Mögliche http Status Codes | Bedeutung/Fehlerdetails | Verhalten im Fehlerfall |
-| -------- | -------- | -------- |
-|    |    |    |
-|    |    |    |
-|    |    |    |
-|    |    |    |
-
-
 
 
