@@ -22,5 +22,5 @@ Nutzer sollen an der Anwendungsoberfläche des Primärsystems eine Handlungsanwe
 | :------------- | :------------ | :-------------- |
 | VSD_SERVICE_INTERNAL_SERVER_ERROR | Unerwarteter interner Fehler des Fachdienstes VSDM.  | Wiederholungsversuch in 15 Minuten Abständen. Abbruch nach 8 Versuchen. |
 | VSDSERVICE_VSDD_NOTREACHABLE | Fachdienst VSDM ist für den Kostenträger  <ik> nicht erreichbar. | Wiederholungsversuch in 15 Minuten Abständen. Abbruch nach 8 Versuchen. |
-| VSDSERVICE_VSDD_TIMEOUT | Fachdienst VSDM für den Kostenträger  <ik> hat das Zeitlimit für eine Antwort überschritten.  | Wiederholungsversuch in 15 Minuten Abständen. Abbruch nach 8 Versuchen. |
+| VSDSERVICE_VSDD_TIMEOUT | Fachdienst VSDM für den Kostenträger "<ik>" hat das Zeitlimit für eine Antwort überschritten.  | Wiederholungsversuch in 15 Minuten Abständen. Abbruch nach 8 Versuchen. |
  
