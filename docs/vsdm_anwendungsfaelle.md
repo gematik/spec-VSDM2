@@ -147,7 +147,7 @@ Liegt dem PS bei einer Anfrage an den Fd noch kein VSD-Änderungsindikator vor, 
 Dieser Anwendungsfall kommt dann zum tragen, wenn die VSD nicht online vom Fachdienst der Kasse abgerufen werden können. Die LEI muss dann in der Lage sein, die vorhandenen Daten von der eGk zu lesen, anzuzeigen und speichen zu können. Die erhaltenen Daten dienen dann zur Nutzung von bereits etablierten Ersatzverfahren ausserhalb des VSDM 2.0.
 Das PS muss in der Lage sein, die eGK mit den in der LEI vorhandenen Kartenlesegeräten auslesen zu können. Das können sowohl eHealth-Kartenterminals als auch handelsübliche USB Smartcard-Reader sein. 
 Die Daten werden aus dem ungeschützten Bereich der eGK aus den Containern PD und VD gelesen.
-Zu beachten ist, dass sich auf der eGk einerseits der komplette VSD-Datensatz und andererseits auch ein verkürzter Datensatz befinden kann. Keiner dieser Datensätze kann jedoch den notwendigen Abruf der VSD im laufenden Quartal ersetzen, da es sich lediglich um statische Daten auf der eGK handelt.
+Zu beachten ist, dass sich auf der eGk einerseits der komplette VSD-Datensatz und andererseits auch ein verkürzter Datensatz (siehe gemSpec_VSDM2, Kapitel "7.2 Informationsmodell verkürzte VSD") auf eGK befinden kann. Keiner dieser Datensätze kann jedoch den notwendigen Abruf der VSD im laufenden Quartal ersetzen, da es sich lediglich um statische Daten auf der eGK handelt.
 Eine Aktualisierung der VSD auf der eGK findet nicht statt.
 
 **Auslesen der VSD mittels eHealth-Kartenterminal**
