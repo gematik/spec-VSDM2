@@ -151,10 +151,24 @@ Zu beachten ist, dass sich auf der eGk einerseits der komplette VSD-Datensatz un
 Eine Aktualisierung der VSD auf der eGK findet nicht statt.
 
 **Auslesen der VSD mittels eHealth-Kartenterminal**
-Die in der LEI bereits vorhandenen eHealth_Kartenterminals (eHKT), welche mit dem Konnektor gepairt sind, können weiterhin zum Auslesen der VSD von der eGK verwendet werden. In diesem Fall muss das PS die VSD mit dem Parameter "PerformOnlineCheck=false" aufrufen.
+
+Die in der LEI bereits vorhandenen eHealth_Kartenterminals (eHKT), welche mit dem Konnektor gepairt sind, können weiterhin zum Auslesen der VSD von der eGK verwendet werden. Die Schnittstelle *I_VSDService* stellt dafür die Operation *ReadVSD* zum Lesen der VSD zur Verfügung.
+Im PS muss folgender Konfigurationsparameter verwendet werden:
+
+| Konfigurationsparameter zum Lesen der VSD  |
+| -- |
+| *MODE-ONLINE-CHECK* / *NEVER* / Eine Online-Prüfung wird niemals vom PS angefordert |
+
+Parametrisierung *ReadVSD*
+
+| ReadVSD Paramter |
+| -- |
+| *ReadOnlineReceipt=false* |
+| *PerformOnlineCheck=false* |
 
 
 **Auslesen der VSD mittels handelsüblichem USB Smartcard-Reader**
+
 Für das Aulesen der VSD kann alternativ zum eHKT auch ein handelsüblicher Smartcard-Reader verwendet werden. Dieser ist an das PS angeschlossen und liefert die VSD aus den frei auslesbaren Containern der eGK zur Übernahme direkt in das PS. Die Beteiligung eines Konnektors und eHKT für das Auslesen der eGK findet in diesem Szeanrio nicht statt.
 Das PS muss für dieses Szenarion entsprechend erweitert werden. 
 Für die Implementierung kann das nachfolgend verlinkte Beispielprogramm zum Auslesen der eGK bei Nutzung eines USB Smartcard_Readers genutzt werden:
