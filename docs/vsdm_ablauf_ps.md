@@ -3,8 +3,9 @@
 **Aufnahme des Versicherten**
 
 Im Primärsystem dient bei der Anmeldung die eGK und zukünftig die GesundheitsID des Versicherten zur Aufnahme bzw. Identifikation des Versicherten. 
+
 Dies beinhaltet
-  - die Herstellung des Versorgungskontexres
+  - die Herstellung des Versorgungskontextes
   - den Abruf der VSD beim Fachdienst VSDM 2.0
   - den Abruf der Prüfziffer für die Abrechnung
   - bei unbekannten Versicherten das Anlegen des Patientenstammblatts
@@ -25,7 +26,7 @@ Das PS soll dem Nutzer die Möglichkeit bieten, den Abruf der VSD manuell zu sta
 Die Anzeige des zum Versicherten gehörigen Patientenstammblatt kann auf unterschiedliche Arten erfolgen:
 
 - Automatische Identifikation des Patientenstammblatts im PS anhand der KVNR durch Stecken der eGK oder Verwendung der GesundheitsID des Versicherten
-- Manuelle Identifikation des Patientenstammblatts des Verischerten, z.B. anhand des Namens und Geburtsdatums 
+- Manuelle Identifikation des Patientenstammblatts des Versicherten, z.B. anhand des Namens und Geburtsdatums 
 
 Bei der automatischen Identifikation soll die Zuordnung von Versichertem und Patientenstammblatt im PS über die KVNR erfolgen, da diese einen eindeutigen Bezug zum Versicherten herstellt.
 
