@@ -113,6 +113,14 @@ Wie oben erwähnt, wird das VSDM 2.0 auf die Verwendung einer RESTful FHIR-API r
 
 [vsdm2.yaml](./src/openapi/vsdm2.yaml).
 
+## Mitgeltende Unterlagen
+
+Spezifikation VSDM 2.0 [gemSpec_VSDM2]
+FHIR-Profile VSDM 2.0 https://simplifier.net/vsdm2
+Clientsystem-Schnittstelle zum VSDM 2
+
+
+
 
 # Kontakt
 
