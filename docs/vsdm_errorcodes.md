@@ -51,13 +51,10 @@ Variante: Ein unbekannter Versicherter wird in der LEI als Patient aufgenommen
 | 2 | Access-Token prüfen | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters prüft auf gültigen Access-Token und leitet den Request an den FD weiter. |
 | 3 | PoPP-Token prüfen | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters prüft auf gültigen PoPP-Token und leitet den Request an den FD weiter. |
 | 4 | KVNR übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt dem FD VSDM die KVNR in Form des Elements patientId des HTTP-Headers ZETA-PoPP-Token-Content zur Lokalisierung der VSD-Version und der Versichertenstammdaten. |
-
-
 | 5 | VSD-Version prüfen | FD | Der FD führt beim Aufruf der HTTP-GET-Operation vor der Verarbeitung eines Versichertenstammdatensatzes eine VSD-Aktualitätsprüfung durch |
-| 6 | VSD lokalisieren | FD | Der FD führt bei Unterschieden in der VSD Version zwischen PS und FD eine Lokalisierung der VSD anhand der KVNR durch und ruft diese ab |
-| 7 | PZ und VSD übermitteln | FD | Der FD übermittelt die Prüfziffer, den etag_value und die VSD an den HTTP-Proxy des ZT-Clusters |
-| 8 | PZ und VSD an PS übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt die Prüfziffer, den etag_value und die VSD an das PS |
-| 9 | PZ und VSD speichern | PS | Die übermittelte PZ, der etag_value und die VSD werden gespeichert |
+| 6 | Fehler zurückgeben | FD | Der FD stellt eine ungültige KVNR fest und gibt den Fehler VSDSERVICE_INVALID_KVNR zurück |
+| 7 | Fehler anzeigen | PS | Das PS zeigt die Fehlerbeschreibung an: Ungültige oder nicht bekannte Krankenversichertennummer (kvnr) |
+| 8 | Handlungsempfehlung anzeigen | PS | Das PS zeigt die Handlungsempfehlung für den Fehlercode an |
 
 **Nachbedingung**
 - PS: Die VSD wurden wurden nicht im Patientenstammblatt gespeichert
