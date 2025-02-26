@@ -33,7 +33,7 @@ Im nachfolgend verlinkten Kapitel finden Sie eine Übersicht, in welchem Kontext
 - **Datensicherheit:** Die Daten werden verschlüsselt und sicher über die Telematikinfrastruktur übertragen.
 
 ## Anwendungsszenarien
-In diesem Kapitel finden Sie eine Beschreibung der für VSDM 2.0 relevanten Sektoren des Gesundheitswesens.
+In diesem Kapitel finden Sie eine Beschreibung der Anwendungsszenarien VSDM 2.0 für die relevanten Sektoren des Gesundheitswesens.
 
 [Anwendungsszenarien](docs/vsdm_anwendungsszenarien.md)
 
