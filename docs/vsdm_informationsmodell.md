@@ -16,7 +16,7 @@ Jedes Element des Datensatzen wird wiefolgt beschrieben:
 Link Simplifier
 [LogicalModelVSDM2.0](https://simplifier.net/vsdm2/gem_vsdm2_log_vsd_confirmation)
 
-Die nachfolgenden Logical Models dienen zur Beschreibung der VSD und als Grundlage zur Definition der FHIR-Profile für VSDM 2.0.
+Die nachfolgenden Logical Models "Versichertendaten" und "Versicherungsdaten" dienen zur Beschreibung der VSD und als Grundlage zur Definition der FHIR-Profile für VSDM 2.0.
 
 Weitere in den FHIR-Profilen Patient und Coverage befindliche Felder aus dem Basisdatensatz werden bei der Befüllung und Übertragung des Datensatzes nicht beachtet. Das Logical Model bildet den kompletten VSD-Datensatz ab.
 
@@ -30,7 +30,7 @@ Weitere in den FHIR-Profilen Patient und Coverage befindliche Felder aus dem Bas
 ![Alt-Text](/images/logicalmodelVersicherungsdaten.png)
  
 
-**Anmerkung:** Die konkrete Ausgestaltung des Datensatzes befindet sich noch in Absprache zwischen den Gesellschaftern. Die in Abstimmung befindlichen Felder sind im Logical Model auf Simplifier mit **"WIP"** (WorkInProgress) gekennzeichnet. Die Festlegungen hierzu werden in einem späteren Release nachgeführt.
+**Anmerkung:** Die konkrete Ausgestaltung des Datensatzes befindet sich noch in Absprache zwischen den Gesellschaftern. Die in Abstimmung befindlichen Felder sind im Logical Model auf Simplifier mit **"WIP"** (**W**ork**I**n**P**rogress) gekennzeichnet. Die Festlegungen hierzu werden in einem späteren Release nachgeführt.
 
 
 ### Mapping
