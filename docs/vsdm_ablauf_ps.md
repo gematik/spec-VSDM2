@@ -37,4 +37,4 @@ Konfigurationsparameter zum online Abruf VSD im PS
 |:-------------:|:---------------:|:-------------:|
 | MODE_ONLINE_CHECK | ALWAYS (Immer) | Ein Abruf VSD wird ungeachtet eines vorangegangenen Abrufs immer angefordert |
 | MODE_ONLINE_CHECK | FIRST (Quartal) | Ein online Abruf VSD wird nur beim ersten Kontakt im Quartal angefordert. Die Prüfung wird wiederholt, wenn der vorangegangene Abruf wegen technischer Probleme abgebrochen wurde |
-| MODE_ONLINE_CHECK | USER (benutzerinteraktion) | Der Nutzer entscheidet individuell über die Durchführung eines Abrufs VSD. Falls das PS die Notwendigkeit einer Online-Prüfung festgestellt hat, sollte dies in Form einer Bestätigung erfolgen. |
+| MODE_ONLINE_CHECK | USER (Benutzerinteraktion) | Der Nutzer entscheidet individuell über die Durchführung eines Abrufs VSD. Falls das PS die Notwendigkeit einer Online-Prüfung festgestellt hat, sollte dies in Form einer Bestätigung erfolgen. |
