@@ -107,7 +107,9 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 ## API Dokumentation VSDM 2.0
 
-Wie oben erwähnt, wird das VSDM 2.0 auf die Verwendung einer RESTful FHIR-API reduziert, die hier dokumentiert ist [vsdm2.yaml](./src/openapi/vsdm2.yaml).
+Wie oben erwähnt, wird das VSDM 2.0 auf die Verwendung einer RESTful FHIR-API reduziert, die hier dokumentiert ist:
+
+[vsdm2.yaml](./src/openapi/vsdm2.yaml).
 
 
 # Kontakt
