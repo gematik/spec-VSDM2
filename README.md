@@ -5,7 +5,7 @@
 ## Disclaimer
 Dieses Dokument beschreibt die für die Implementierung des Versicherungsstammdatenmanagements (VSDM) 2.0 erforderlichen Vorgaben. Weitere Vorgaben zur Implementierung der Anteile von PoPP und Zero Trust sind zum Stand der Veröffentlichung von VSDM 2.0 nicht Bestandteil dieses Dokuments. Die Aufnahme der Implementierungsvorgaben aus PoPP und Zero Trust in den ILF für VSDM 2.0 erfolgt iterativ sobald die notwendigen Informationen aus diesen Implementierungsleitfäden vorliegen.
 
-Die in [gemSpecVSDM_2] enthaltenen und in den Steckbrief [gemSST_CS_VSDM_2] ausgeleiteten Anforderungen an Clientsysteme haben informativen Charakter und treffen Festlegungen über diesen Implementierungsleitfaden hinaus. Die Anforderungen dienen zur Unterstützung der Implementierung durch Primärsystemhersteller.
+Die in [gemSpec_VSDM_2] enthaltenen und in den Steckbrief [gemSST_CS_VSDM_2] ausgeleiteten Anforderungen an Clientsysteme haben informativen Charakter und treffen Festlegungen über diesen Implementierungsleitfaden hinaus. Die Anforderungen dienen zur Unterstützung der Implementierung durch Primärsystemhersteller.
 
 ## Einleitung
 Die gematik geht neue Wege und möchte auf diesem Weg die Nutzung der Schnittstellen rund um das VSDM 2.0 vorstellen. Die Beschreibung dieser API ergänzt die normativen Dokumente der gematik sowie die Festlegungen über die VSDM-Profile (inkl. Beispielen) des genutzten FHIR-Standards.
@@ -19,7 +19,7 @@ VSDM 2.0 ist die Weiterentwicklung des bestehenden VSDM 1.0. Die Versichertensta
 Während bei VSDM 1.0 in den Anwendungsfällen die Komponenten Konnektor, eHealth Kartenterminals, eGK, SMC-B, Intermediär und schließlich die VSDM-Backend-Dienste des Versicherers zum Einsatz kommen, reduziert VSDM 2.0 die Abhängigkeiten von diesen Komponenten. 
 Mit der Initiative TI 2.0 wird die gesamte Infrastruktur modernisiert und auf den neuesten Stand der Sicherheits- und Architekturprinzipien gebracht.
 
-VSDM 2.0 entkoppelt den Versorgungsnachweis („Proof-of-Patient-Presence PoPP“) vom Anwendungsfall der Bereitstellung demografischer Daten. Damit kann der PoPP auch in anderen Anwendungen eingesetzt werden.
+VSDM 2.0 entkoppelt den Nachweis des Versorgungskontextes mittels PoPP („**P**roof-**o**f-**P**atient-**P**resence“) vom Anwendungsfall der Bereitstellung demografischer Daten. Damit kann der PoPP auch in anderen Anwendungen eingesetzt werden.
 Die Versicherer stellen also eine einfache FHIR-REST-API bereit, mit der die Client-Software der Arztpraxis „nur“ zusätzliche Daten anfordert, indem sie ein legitimes PoPP-Token bereitstellt.
 
 Im nachfolgend verlinkten Kapitel finden Sie eine Übersicht, in welchem Kontext VSDM, PoPP und Zero Trust zueinander stehen:
