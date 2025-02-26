@@ -16,7 +16,7 @@ Der Nutzer soll einen Hinweis durch das PS erhalten wenn der Abruf der VSD gesta
 
 Der Nutzer soll einen Hinweis erhalten wenn der Abruf VSD aufgrund Nichterreichbarkeit des Fachdienstes nicht durchgeführt werden konnte.
 
-**VSD Abruf bei fehlender Prüfziffer**
+**Abruf VSD bei fehlender Prüfziffer**
 
 Das PS soll dem Nutzer einen Hinweis anzeigen wenn der Abruf der VSD aufgrund einer fehlenden Prüfziffer erforderlich ist. Die kann der Fall sein, wenn ein vorangegangener Abruf VSD nicht erfolgreich durchgeführt werden konnte.
 
@@ -36,7 +36,7 @@ Der Nutzer erhält einen Hinweis wenn kein Leistungsanspruch aufgrund der Prüfu
 
 **Hinweis ruhender Leistungsanspruch**
 
-Der Nutzer erhält einen Hinweis wenn aufgrund eines ruhenden Leistungsanspruchs kein, oder nur ein eingeschränkter Leistungsanspruch besteht
+Der Nutzer erhält einen Hinweis wenn aufgrund eines ruhenden Leistungsanspruchs kein, oder nur ein eingeschränkter Leistungsanspruch besteht.
 
 
 
