@@ -84,6 +84,7 @@ Hier finden Sie eine Übersicht zu den weiterführenden Dokumenten zur Implement
 
 - [Spezifikation VSDM 2.0](https://gemspec.gematik.de/prereleases/Draft_ZeroTrust_VSDM2_24_1/gemSpec_VSDM_2_V1.0.0_CC/)
 - [FHIR-Profile VSDM 2.0](https://simplifier.net/vsdm2)
+- [Clientsystem-Schnittstelle zum VSDM 2.0] (Link einfügen)
 
 
 ## Branch Modell
@@ -112,17 +113,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
 Wie oben erwähnt, wird das VSDM 2.0 auf die Verwendung einer RESTful FHIR-API reduziert, die hier dokumentiert ist:
 
 [vsdm2.yaml](./src/openapi/vsdm2.yaml).
-
-## Mitgeltende Unterlagen
-
-| <!-- -->      | <!-- -->        | <!-- -->      |
-|:-------------|:---------------|:-------------:|
-| Spezifikation VSDM 2.0 | [gemSpec_VSDM2] |  |
-| FHIR-Profile VSDM 2.0 | FHIR Spezifikation VSDM 2 | https://simplifier.net/vsdm2 |
-| Clientsystem-Schnittstelle zum VSDM 2.0 |  |  |
-
-
-
 
 
 
