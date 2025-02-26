@@ -60,7 +60,7 @@ Hier geht es zur Informationsseite zum neuen Informationsmodell für VSDM 2.0.
 ## Prüfziffer
 Bei jedem erfolgreich durchgeführten Abruf der VSD wird von Fachdienst VSDM 2.0 auch immer die Prüfziffer übermittelt. Diese wird im Primärsystem gespeichert und kann den Abrechnungsunterlagen beigefügt werden.
 
-Hier finden Sie Informationen zur Prüfziffer für VSDM 2.0.
+Hier finden Sie weitere Informationen zur Prüfziffer für VSDM 2.0.
 
 [Prüfziffer](docs/vsdm_pruefziffer.md) 
 
