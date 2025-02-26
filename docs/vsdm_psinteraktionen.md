@@ -1,6 +1,6 @@
 ## Interaktionen des Primärsystems
 
-**Diese Seite enthält Hinweise und Empfehlungen zur Interaktion des Primärsystems mit dem Nutzer im VSDM 2.0 Kontext**
+**Diese Seite enthält Hinweise und Empfehlungen zur Interaktion des Primärsystems mit dem Nutzer im VSDM 2.0 - Kontext**
 
 Durch die in den Arztpraxen, Krankenhäusern oder Apotheken eingesetzten Clientsysteme soll vor allem die Interoperabilität, Benutzerfreundlichkeit und Sicherheit sichergestellt werden.
 Das Primärsystem sollte einfach und intuitiv zu bedienen sein, so dass Nutzer (Ärzte, Praxispersonal) in ihren täglichen Arbeitsabläufen unterstützt werden.
