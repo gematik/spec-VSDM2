@@ -32,7 +32,7 @@ Bei der automatischen Identifikation soll die Zuordnung von Versichertem und Pat
 
 Auf welche Weise der Aufnahmeprozess durchgeführt wird, wird in der Konfiguration des PS festgelegt oder ist ein Leistungsmerkmal des PS. Empfohlen wird die automatische Unterstützung einer Neuanlage oder Aktualisierung des Patientenstammblatts.
 
-Konfigurationsparameter zum onlie Abruf VSD im PS
+Konfigurationsparameter zum online Abruf VSD im PS
 | <!-- -->      | <!-- -->        | <!-- -->      |
 |:-------------:|:---------------:|:-------------:|
 | MODE_ONLINE_CHECK | ALWAYS (Immer) | Ein Abruf VSD wird ungeachtet eines vorangegangenen Abrufs immer angefordert |
