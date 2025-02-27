@@ -52,7 +52,7 @@ Variante: Ein unbekannter Versicherter wird in der LEI als Patient aufgenommen
 | 3 | PoPP-Token prüfen | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters prüft auf gültigen PoPP-Token und leitet den Request an den FD weiter. |
 | 4 | KVNR übermitteln | ZT-Cluster | Der HTTP-Proxy des ZT-Clusters übermittelt dem FD VSDM die KVNR in Form des Elements patientId des HTTP-Headers ZETA-PoPP-Token-Content zur Lokalisierung der VSD-Version und der Versichertenstammdaten. |
 | 5 | VSD-Version prüfen | FD | Der FD führt beim Aufruf der HTTP-GET-Operation vor der Verarbeitung eines Versichertenstammdatensatzes eine VSD-Aktualitätsprüfung durch |
-| 6 | Fehler zurückgeben | FD | Der FD stellt eine ungültige KVNR fest und gibt den Fehler VSDSERVICE_INVALID_KVNR zurück |
+| 6 | Fehler zurückgeben | FD | Der FD kann zu der KVNR keine VSD lokalisieren und gibt den Fehler VSDSERVICE_INVALID_KVNR zurück |
 | 7 | Fehler anzeigen | PS | Das PS zeigt die Fehlerbeschreibung an: Ungültige oder nicht bekannte Krankenversichertennummer (kvnr) |
 | 8 | Handlungsempfehlung anzeigen | PS | Das PS zeigt die Handlungsempfehlung für den Fehlercode an |
 
