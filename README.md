@@ -84,7 +84,7 @@ Hier finden Sie eine Übersicht zu den weiterführenden Dokumenten zur Implement
 
 - [Spezifikation VSDM 2.0](https://gemspec.gematik.de/prereleases/Draft_ZeroTrust_VSDM2_24_1/gemSpec_VSDM_2_V1.0.0_CC/)
 - [FHIR-Profile VSDM 2.0](https://simplifier.net/vsdm2)
-- [Steckbrief Clientsystem-Schnittstelle zum VSDM 2.0] (Link einfügen)
+- [Steckbrief Clientsystem-Schnittstelle zum VSDM 2.0](https://gemspec.gematik.de/docs/gemSST/gemSST_CS_VSDM_2)
 
 
 ## Branch Modell
