@@ -5,7 +5,7 @@
 ## Disclaimer
 Dieses Dokument beschreibt die für die Implementierung des Versicherungsstammdatenmanagements (VSDM) 2.0 erforderlichen Vorgaben. Weitere Vorgaben zur Implementierung der Anteile von PoPP und Zero Trust sind zum Stand der Veröffentlichung von VSDM 2.0 nicht Bestandteil dieses Dokuments. Die Aufnahme der Implementierungsvorgaben aus PoPP und Zero Trust in den ILF für VSDM 2.0 erfolgt iterativ sobald die notwendigen Informationen aus diesen Implementierungsleitfäden vorliegen.
 
-Die in "gemSpecVSDM_2" enthaltenen und in den Steckbrief "gemSST_CS_VSDM_2" ausgeleiteten Anforderungen an Clientsysteme haben informativen Charakter und treffen Festlegungen über diesen Implementierungsleitfaden hinaus. Die Anforderungen dienen zur Unterstützung der Implementierung durch Primärsystemhersteller.
+Die in der Spezifikation VSDM 2.0 [gemSpec_VSDM_2] enthaltenen und in den Steckbrief [gemSST_CS_VSDM_2] ausgeleiteten Anforderungen an Clientsysteme haben informativen Charakter und treffen Festlegungen über diesen Implementierungsleitfaden hinaus. Die Anforderungen dienen zur Unterstützung der Implementierung durch Primärsystemhersteller.
 
 ## Einleitung
 Die gematik geht neue Wege und möchte auf diesem Weg die Nutzung der Schnittstellen rund um das VSDM 2.0 vorstellen. Die Beschreibung dieser API ergänzt die normativen Dokumente der gematik sowie die Festlegungen über die VSDM-Profile (inkl. Beispielen) des genutzten FHIR-Standards.
@@ -15,11 +15,11 @@ Auf den folgenden Seiten stellt die gematik die Nutzung der Schnittstellen durch
 ## Was ist VSDM 2.0
 
 VSDM steht für „Versichertenstammdatenmanagement“. Es ist ein Teil der Telematikinfrastruktur (TI) im deutschen Gesundheitswesen und dient der Verwaltung und dem Abgleich der Stammdaten von gesetzlich versicherten Personen.
-VSDM 2.0 ist die Weiterentwicklung des bestehenden VSDM 1.0. Die Versichertenstammdaten (VSD) werden mit VSDM 2.0 nicht mehr auf der eGK des Versicherten gespeichert und aktualisiert sondern direkt vom Primärsystem (PS) des Leistungserbringers vom Fachdienst der Krankenkasse abgerufen und ggf. im PS aktualisiert.
-Während bei VSDM 1.0 in den Anwendungsfällen die Komponenten Konnektor, eHealth Card Terminals, eGK, SMC-B, Intermediär und schließlich die VSDM-Backend-Dienste des Versicherers zum Einsatz kommen reduziert VSDM 2.0 die Abhängigkeiten von diesen Komponenten. 
+VSDM 2.0 ist die Weiterentwicklung des bestehenden VSDM 1.0. Die Versichertenstammdaten (VSD) werden mit VSDM 2.0 nicht mehr auf der eGK des Versicherten gespeichert und aktualisiert sondern direkt vom Primärsystem (PS) des Leistungserbringers (LE) vom Fachdienst der Krankenkasse abgerufen und ggf. im PS aktualisiert.
+Während bei VSDM 1.0 in den Anwendungsfällen die Komponenten Konnektor, eHealth Kartenterminals, eGK, SMC-B, Intermediär und schließlich die VSDM-Backend-Dienste des Versicherers zum Einsatz kommen, reduziert VSDM 2.0 die Abhängigkeiten von diesen Komponenten. 
 Mit der Initiative TI 2.0 wird die gesamte Infrastruktur modernisiert und auf den neuesten Stand der Sicherheits- und Architekturprinzipien gebracht.
 
-VSDM 2.0 entkoppelt den Versorgungsnachweis („Proof-of-Patient-Presence PoPP“) vom Anwendungsfall der Bereitstellung demografischer Daten. Damit kann der PoPP auch in anderen Anwendungen eingesetzt werden.
+VSDM 2.0 entkoppelt den Nachweis des Versorgungskontextes mittels PoPP („**P**roof-**o**f-**P**atient-**P**resence“) vom Anwendungsfall der Bereitstellung demografischer Daten. Damit kann der PoPP auch in anderen Anwendungen eingesetzt werden.
 Die Versicherer stellen also eine einfache FHIR-REST-API bereit, mit der die Client-Software der Arztpraxis „nur“ zusätzliche Daten anfordert, indem sie ein legitimes PoPP-Token bereitstellt.
 
 Im nachfolgend verlinkten Kapitel finden Sie eine Übersicht, in welchem Kontext VSDM, PoPP und Zero Trust zueinander stehen:
@@ -33,7 +33,7 @@ Im nachfolgend verlinkten Kapitel finden Sie eine Übersicht, in welchem Kontext
 - **Datensicherheit:** Die Daten werden verschlüsselt und sicher über die Telematikinfrastruktur übertragen.
 
 ## Anwendungsszenarien
-In diesem Kapitel finden Sie eine Beschreibung der für VSDM 2.0 relevanten Sektoren des Gesundheitswesens.
+In diesem Kapitel finden Sie eine Beschreibung der Anwendungsszenarien VSDM 2.0 für die relevanten Sektoren des Gesundheitswesens.
 
 [Anwendungsszenarien](docs/vsdm_anwendungsszenarien.md)
 
@@ -58,15 +58,22 @@ Hier geht es zur Informationsseite zum neuen Informationsmodell für VSDM 2.0.
 [Informationsmodell](docs/vsdm_informationsmodell.md)
 
 ## Prüfziffer
-Hier finden Sie Informationen zur Prüfziffer für VSDM 2.0.
+Bei jedem erfolgreich durchgeführten Abruf der VSD wird von Fachdienst VSDM 2.0 auch immer die Prüfziffer übermittelt. Diese wird im Primärsystem gespeichert und kann den Abrechnungsunterlagen beigefügt werden.
 
-[Prüfziffer](docs/vsdm_pruefungsnachweis.md) 
+Hier finden Sie weitere Informationen zur Prüfziffer für VSDM 2.0.
+
+[Prüfziffer](docs/vsdm_pruefziffer.md) 
 
 ## Fehlerbehandlung
 
 Hier geht es zur Informationsseite zum Umgang mit Fehlermeldungen
 
 [Fehlermeldungen](docs/vsdm_errorcodes.md)
+
+Hier geht es zur Informationsseite zu Statuscodes 
+
+[Statuscodes](docs/vsdm_statuscodes.md)
+
 
 ## FHIR Profile VSDM 2.0
 
@@ -77,6 +84,7 @@ Hier finden Sie eine Übersicht zu den weiterführenden Dokumenten zur Implement
 
 - [Spezifikation VSDM 2.0](https://gemspec.gematik.de/prereleases/Draft_ZeroTrust_VSDM2_24_1/gemSpec_VSDM_2_V1.0.0_CC/)
 - [FHIR-Profile VSDM 2.0](https://simplifier.net/vsdm2)
+- [Steckbrief Clientsystem-Schnittstelle zum VSDM 2.0](https://gemspec.gematik.de/docs/gemSST/gemSST_CS_VSDM_2)
 
 
 ## Branch Modell
@@ -102,7 +110,10 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 ## API Dokumentation VSDM 2.0
 
-Wie oben erwähnt, wird das VSDM 2.0 auf die Verwendung einer RESTful FHIR-API reduziert, die hier dokumentiert ist [vsdm2.yaml](./src/openapi/vsdm2.yaml).
+Wie oben erwähnt, wird das VSDM 2.0 auf die Verwendung einer RESTful FHIR-API reduziert, die hier dokumentiert ist:
+
+[vsdm2.yaml](./src/openapi/vsdm2.yaml).
+
 
 
 # Kontakt

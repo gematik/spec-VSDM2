@@ -14,7 +14,8 @@ Dieser Leitfaden zur Implementierung trifft keine Aussage darüber, ob jede im l
 
 Die Regelungen dazu werden im Anforderungskatalog KVDT (KBV_ITA_VGEX_Anforderungskatalog_KVDT) getroffen und müssen durch das Primärsystem entsprechend umgesetzt werden.
 
-Beispiele für Übertragung der Prüfziffer sind in gemSpecVSDM2 dargestellt und beschrieben.
+Beispiele für Übertragung der Prüfziffer sind in [gemSpec_VSDM2] dargestellt und beschrieben.
+
 
 
 
