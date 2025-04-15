@@ -10,6 +10,7 @@ Alias: $operationoutcomecodes = http://terminology.hl7.org/CodeSystem/operation-
 // in Patient
 Alias: $identifier-kvid-10 = http://fhir.de/StructureDefinition/identifier-kvid-10
 Alias: $identifier-pkv = http://fhir.de/StructureDefinition/identifier-pkv
+Alias: $iso21090-EN-qualifier = http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier
 
 // in Coverage, Bundle
 Alias: $versicherungsart-de-basis = http://fhir.de/ValueSet/versicherungsart-de-basis

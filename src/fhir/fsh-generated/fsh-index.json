@@ -72,6 +72,14 @@
     "endLine": 59
   },
   {
+    "outputFile": "Patient-Valid-437f2555-2396-4c64-a656-e9553161ca3c.json",
+    "fshName": "ValidExampleVSDMPatient",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleVSDMPatient.fsh",
+    "startLine": 1,
+    "endLine": 30
+  },
+  {
     "outputFile": "StructureDefinition-gem-vsdm2-log-vsd-confirmation.json",
     "fshName": "GEM_VSDM2_LOG_VSD_Confirmation",
     "fshType": "Logical",
