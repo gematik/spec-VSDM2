@@ -21,11 +21,11 @@ externalDocs:
   description: FHIR Specification VSDM 2
   url: https://simplifier.net/vsdm2
 servers:
-  - url: https://101575519.vsdm2.ti-dienste.de
+  - url: https://101575519.prod.vsdm2.ti-dienste.de
     description: TK Production server (PU)
-  - url: https://109723913.vsdm2.ti-dienste.de
+  - url: https://109723913.prod.vsdm2.ti-dienste.de
     description: BKK VBU Production server (PU)
-  - url: https://{iknummer}.vsdm2.ti-dienste.de
+  - url: https://{iknummer}.prod.vsdm2.ti-dienste.de
     description: address schema vsdm backends - productive environment
     variables:
       iknummer:
@@ -446,7 +446,7 @@ components:
       description: This API uses OAuth 2, to gain access clients need an Access-Token and to proof "Versorgungskontext" with a PoPP-Token in addition
       flows:
         authorizationCode:
-          authorizationUrl: https://101575519.vsdm2.ti-dienste.de/auth
-          tokenUrl: https://101575519.vsdm2.ti-dienste.de/token
+          authorizationUrl: https://101575519.prod.vsdm2.ti-dienste.de/auth
+          tokenUrl: https://101575519.prod.vsdm2.ti-dienste.de/token
           scopes:
             vsdservice: allows practitioners to access the VSDService API of the "Versichertenstammdatendienst"
