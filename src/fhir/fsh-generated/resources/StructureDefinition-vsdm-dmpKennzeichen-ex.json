@@ -79,14 +79,30 @@
         "id": "Extension.extension:dmp-zeitraum.value[x].start",
         "path": "Extension.extension.value[x].start",
         "short": "Startdatum des DMP-Zeitraums",
-        "comment": "Datumsformat in ISO8601 (YYYY-MM-DD)",
-        "min": 1
+        "min": 1,
+        "constraint": [
+          {
+            "key": "date-precision-1",
+            "human": "date consists exactly of year, month and day",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenEX",
+            "severity": "error",
+            "expression": "toString().matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')"
+          }
+        ]
       },
       {
         "id": "Extension.extension:dmp-zeitraum.value[x].end",
         "path": "Extension.extension.value[x].end",
         "short": "Enddatum des DMP-Zeitraums",
-        "comment": "Datumsformat in ISO8601 (YYYY-MM-DD)"
+        "constraint": [
+          {
+            "key": "date-precision-1",
+            "human": "date consists exactly of year, month and day",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenEX",
+            "severity": "error",
+            "expression": "toString().matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')"
+          }
+        ]
       },
       {
         "id": "Extension.extension:digitales-dmp",
