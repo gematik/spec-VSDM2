@@ -132,29 +132,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "Bundle.signature.who.identifier",
-        "path": "Bundle.signature.who.identifier",
-        "min": 1,
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-iknr"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Bundle.signature.sigFormat",
-        "path": "Bundle.signature.sigFormat",
-        "fixedCode": "application/pkcs7-mime"
-      },
-      {
-        "id": "Bundle.signature.data",
-        "path": "Bundle.signature.data",
-        "min": 1
       }
     ]
   }

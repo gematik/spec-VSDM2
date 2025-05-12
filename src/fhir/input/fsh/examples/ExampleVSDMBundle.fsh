@@ -12,10 +12,3 @@ Usage: #example
 * entry[VSDMPatient][=].resource = VSDMPatientSample
 * entry[VSDMCoverage][+].fullUrl = "https://gematik.de/fhir/Coverage/2d4da53a-413a-48fe-b908-2e67b5761523"
 * entry[VSDMCoverage][=].resource = VSDMCoverageSample
-* signature.type.system = "urn:iso-astm:E1762-95:2013"
-* signature.type.code = #1.2.840.10065.1.12.1.7
-* signature.type.display = "Consent Signature"
-* signature.when = "2023-11-03T12:02:23.157+01:00"
-* signature.who.identifier.value = "12345678"
-* signature.sigFormat = #application/pkcs7-mime
-* signature.data = "dGhpcyBibG9iIGlzIHNuaXBwZWQ="

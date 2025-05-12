@@ -29,11 +29,3 @@ Id: vsdm-bundle
 * entry[VSDMPatient].resource only VSDMPatient
 * entry[VSDMCoverage].resource 1..
 * entry[VSDMCoverage].resource only VSDMCoverage
-
-* signature 0..1
-* signature.sigFormat = #application/pkcs7-mime (exactly)
-* signature.when 1..1
-* signature.who 1..1
-* signature.who.identifier 1..1
-* signature.who.identifier only IdentifierIknr
-* signature.data 1..1
