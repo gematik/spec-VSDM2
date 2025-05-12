@@ -10,8 +10,9 @@ Context: Coverage
 * value[x] only Coding
 * value[x] from $iso3166-1-2 (required)
 * value[x] obeys CodingSystemCodeInv
-* value[x].system 1.. MS
-* value[x].code 1.. MS
+  * system 1.. MS
+  * system = $cs-iso3166-1-2
+  * code 1.. MS
 
 Invariant: CodingSystemCodeInv
 Description: "System and Code SHOULD be present"
