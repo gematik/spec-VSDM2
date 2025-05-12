@@ -16,6 +16,7 @@ Id: vsdm-wahltarife-ex
 * extension[wahltarif].value[x] only Coding
 * extension[wahltarif].valueCoding from VSDMWahltarifeVS (required)
   * system 1..1
+  * system = "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMWahltarifeCS"
   * code 1..1
 
 // Wahltarif Zeitraum

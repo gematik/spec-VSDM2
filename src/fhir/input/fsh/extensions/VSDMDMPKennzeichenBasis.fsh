@@ -7,5 +7,6 @@ Id: vsdm-dmp-kennzeichen-basis-ex
 
 * value[x] only Coding
 * value[x] from $KBV_VS_SFHIR_KBV_DMP (required)
-* value[x].system 1..
-* value[x].code 1..
+  * system 1..
+  * system = $KBV_CS_SFHIR_KBV_DMP
+  * code 1..
