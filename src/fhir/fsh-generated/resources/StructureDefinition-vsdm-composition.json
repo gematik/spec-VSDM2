@@ -38,6 +38,7 @@
               "path": "url"
             }
           ],
+          "description": "Extensions are always sliced by (at least) url",
           "rules": "closed"
         }
       },
@@ -69,14 +70,13 @@
         "mustSupport": true
       },
       {
-        "id": "Composition.author.identifier",
-        "path": "Composition.author.identifier",
-        "min": 1,
+        "id": "Composition.author",
+        "path": "Composition.author",
         "type": [
           {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-iknr"
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraeger"
             ]
           }
         ]

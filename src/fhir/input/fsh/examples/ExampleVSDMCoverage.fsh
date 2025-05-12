@@ -24,8 +24,8 @@ RuleSet: ExampleCoverage
 * period.start = "2022-04-01"
 * period.end = "2027-07-31"
 * beneficiary.reference =  "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
-* payor.identifier.value = "12345678"
-* payor.display = "Test GKV Krankenkasse"
+* payor[+].reference = "Organization/2a6924bf-6e6a-4ef3-b79f-c2138c10712f"
+* payor[+].reference = "Organization/d1f7b106-7f99-40d6-9f21-50b051301127"
 
 * extension[vsdm-kostentragerAngabestatus].valueCodeableConcept.coding[+] = VSDMKostentreagerAngabestatusCS#dmp
 * extension[vsdm-kostentragerAngabestatus].valueCodeableConcept.coding[+] = VSDMKostentreagerAngabestatusCS#wahltarife
