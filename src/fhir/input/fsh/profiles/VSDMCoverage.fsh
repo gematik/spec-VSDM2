@@ -20,7 +20,7 @@ Id: vsdm-coverage
     $zuzahlungsstatus named zuzahlungsstatus 1..1 MS and
     VSDMDMPKennzeichenEX named vsdm-dmpKennzeichen 0..* MS and
     VSDMWahltarifeEX named vsdm-wahltarife 0..* MS and
-    VSDMKostentreagerAngabestatusEX named vsdm-kostentragerAngabestatus 1..1 MS and
+    VSDMKostentraegerAngabestatusEX named vsdm-kostentragerAngabestatus 1..1 MS and
     VSDMKostentraegerLaendercodeEX named vsdm-kostentraegerlaendercode 1..1 MS
 
 // For better display on simplifier

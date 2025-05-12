@@ -218,7 +218,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentreagerAngabestatusEX"
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerAngabestatusEX"
             ]
           }
         ],
