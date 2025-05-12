@@ -64,6 +64,7 @@
         "id": "Extension.value[x].system",
         "path": "Extension.value[x].system",
         "min": 1,
+        "patternUri": "http://hl7.org/fhir/CodeSystem/iso3166-1-2",
         "mustSupport": true
       },
       {

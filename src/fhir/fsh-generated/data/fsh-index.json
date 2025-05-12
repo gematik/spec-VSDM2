@@ -125,7 +125,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMDMPKennzeichenBasis.fsh",
     "startLine": 1,
-    "endLine": 11
+    "endLine": 12
   },
   {
     "outputFile": "StructureDefinition-vsdm-dmpKennzeichen-ex.json",
@@ -141,7 +141,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMKostentraegerLaendercodeEX.fsh",
     "startLine": 1,
-    "endLine": 14
+    "endLine": 15
   },
   {
     "outputFile": "StructureDefinition-vsdm-operationoutcome.json",
@@ -165,7 +165,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMWahltarifeEX.fsh",
     "startLine": 1,
-    "endLine": 35
+    "endLine": 36
   },
   {
     "outputFile": "StructureDefinition-vsdmkostentreager-angabestatus-ex.json",

@@ -52,7 +52,8 @@
       {
         "id": "Extension.value[x].system",
         "path": "Extension.value[x].system",
-        "min": 1
+        "min": 1,
+        "patternUri": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP"
       },
       {
         "id": "Extension.value[x].code",
