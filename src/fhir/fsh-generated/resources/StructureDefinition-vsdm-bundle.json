@@ -71,7 +71,7 @@
           ],
           "rules": "closed"
         },
-        "min": 3
+        "min": 4
       },
       {
         "id": "Bundle.entry:DocumentInformation",
@@ -89,6 +89,26 @@
             "code": "Composition",
             "profile": [
               "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMComposition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:VSDMKostentraeger",
+        "path": "Bundle.entry",
+        "sliceName": "VSDMKostentraeger",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Bundle.entry:VSDMKostentraeger.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Organization",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraeger"
             ]
           }
         ]

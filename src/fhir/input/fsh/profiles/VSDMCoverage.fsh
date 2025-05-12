@@ -42,10 +42,5 @@ Id: vsdm-coverage
 * period 1..1
   * start 1..1
   * end 1..1
-* payor 1..1
-  * extension contains $AbrechnendeIK named abrechnendeIK 0..1
-  * identifier 1..1
-  * identifier only IdentifierIknr
-  * display 1..1
-    * ^short = "Name des Kostenträgers"
-
+* payor 1..*
+* payor only Reference(VSDMKostentraeger)

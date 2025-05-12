@@ -1,0 +1,26 @@
+{
+  "resourceType": "Organization",
+  "id": "2a6924bf-6e6a-4ef3-b79f-c2138c10712f",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraeger"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://fhir.de/sid/arge-ik/iknr",
+      "value": "12345678"
+    }
+  ],
+  "name": "Beispiel-Kostenträger (Haupt-IK)",
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "ins",
+          "display": "Haupt-IK"
+        }
+      ]
+    }
+  ]
+}

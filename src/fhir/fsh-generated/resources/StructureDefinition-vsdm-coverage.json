@@ -299,41 +299,14 @@
       {
         "id": "Coverage.payor",
         "path": "Coverage.payor",
-        "max": "1"
-      },
-      {
-        "id": "Coverage.payor.extension:abrechnendeIK",
-        "path": "Coverage.payor.extension",
-        "sliceName": "abrechnendeIK",
-        "min": 0,
-        "max": "1",
         "type": [
           {
-            "code": "Extension",
-            "profile": [
-              "http://fhir.de/StructureDefinition/AbrechnendeIK"
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraeger"
             ]
           }
         ]
-      },
-      {
-        "id": "Coverage.payor.identifier",
-        "path": "Coverage.payor.identifier",
-        "min": 1,
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-iknr"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Coverage.payor.display",
-        "path": "Coverage.payor.display",
-        "short": "Name des Kostenträgers",
-        "min": 1
       }
     ]
   }

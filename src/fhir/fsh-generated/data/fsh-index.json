@@ -5,7 +5,7 @@
     "fshType": "Instance",
     "fshFile": "examples/ExampleVSDMBundle.fsh",
     "startLine": 1,
-    "endLine": 21
+    "endLine": 25
   },
   {
     "outputFile": "CodeSystem-vsdm-errorcode-cs.json",
@@ -64,6 +64,22 @@
     "endLine": 15
   },
   {
+    "outputFile": "Organization-2a6924bf-6e6a-4ef3-b79f-c2138c10712f.json",
+    "fshName": "VSDMKostentraegerMain",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleVSDMKostentraeger.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "Organization-d1f7b106-7f99-40d6-9f21-50b051301127.json",
+    "fshName": "VSDMKostentraegerBilling",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleVSDMKostentraeger.fsh",
+    "startLine": 11,
+    "endLine": 29
+  },
+  {
     "outputFile": "Patient-437f2555-2396-4c64-a656-e9553161ca3c.json",
     "fshName": "VSDMPatientSample",
     "fshType": "Instance",
@@ -93,7 +109,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMBundle.fsh",
     "startLine": 1,
-    "endLine": 39
+    "endLine": 42
   },
   {
     "outputFile": "StructureDefinition-vsdm-composition.json",
@@ -101,7 +117,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMComposition.fsh",
     "startLine": 1,
-    "endLine": 20
+    "endLine": 19
   },
   {
     "outputFile": "StructureDefinition-vsdm-contactpoint-timessenger.json",
@@ -117,7 +133,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
-    "endLine": 50
+    "endLine": 46
   },
   {
     "outputFile": "StructureDefinition-vsdm-dmp-kennzeichen-basis-ex.json",
@@ -142,6 +158,14 @@
     "fshFile": "extensions/VSDMKostentraegerLaendercodeEX.fsh",
     "startLine": 1,
     "endLine": 14
+  },
+  {
+    "outputFile": "StructureDefinition-vsdm-kostentraeger.json",
+    "fshName": "VSDMKostentraeger",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMKostentraeger.fsh",
+    "startLine": 1,
+    "endLine": 12
   },
   {
     "outputFile": "StructureDefinition-vsdm-operationoutcome.json",
@@ -180,6 +204,14 @@
     "fshName": "VSDMErrorcodeVS",
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMErrorcodeVS.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "ValueSet-vsdm-kostentraeger-typ-vs.json",
+    "fshName": "VSDMKostentraegerTypVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMKostentraegerTypVS.fsh",
     "startLine": 1,
     "endLine": 8
   },
