@@ -24,7 +24,7 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an."
+        "short": "Gibt die Teilnahme des Versicherten an einem oder mehreren Disease Management Programmen an."
       },
       {
         "id": "Extension.extension",
