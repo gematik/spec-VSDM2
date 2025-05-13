@@ -32,7 +32,7 @@ Id: vsdm-wahltarife-ex
 // Wahltarif Kennzeichen
 * extension[wahltarif-vertragskennzeichen].value[x] only string
 * extension[wahltarif-vertragskennzeichen].valueString ^short = "Vertragskennzeichnen des Wahltarifs"
-* extension[wahltarif-vertragskennzeichen].valueString ^comment = "Länge des Strings ist maximal 25 Zeichen"
+* extension[wahltarif-vertragskennzeichen].valueString ^maxLength = 25
 
 Invariant: wahltarif-ex-vertragskennzeichen-bei-73b
 Description: "Vertragskennzeichens bei Wahltarif muss angegeben werden, wenn Wahltarif nach §73b SGB V besteht"
