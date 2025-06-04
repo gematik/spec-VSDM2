@@ -195,7 +195,7 @@
             ]
           }
         ],
-        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentreagerAngabestatusEX",
+        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerAngabestatusEX",
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -236,7 +236,7 @@
         "isSummary": false,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentreagerAngabestatusVS"
+          "valueSet": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerAngabestatusVS"
         },
         "mapping": [
           {

@@ -1310,7 +1310,6 @@
         "path": "Extension.extension.value[x]",
         "short": "Vertragskennzeichnen des Wahltarifs",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
-        "comment": "Länge des Strings ist maximal 25 Zeichen",
         "min": 0,
         "max": "1",
         "base": {
@@ -1323,6 +1322,7 @@
             "code": "string"
           }
         ],
+        "maxLength": 25,
         "constraint": [
           {
             "key": "ele-1",

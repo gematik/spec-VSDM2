@@ -1350,7 +1350,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-kostentragerAngabestatus"
+            "map": "VSDMCoverage.extension:vsdm-kostentraegerAngabestatus"
           }
         ]
       },
@@ -1588,7 +1588,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-kostentragerAngabestatus"
+            "map": "VSDMCoverage.extension:vsdm-kostentraegerAngabestatus"
           }
         ]
       },
@@ -1792,7 +1792,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-kostentragerAngabestatus"
+            "map": "VSDMCoverage.extension:vsdm-kostentraegerAngabestatus"
           }
         ]
       },
@@ -1996,7 +1996,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-kostentragerAngabestatus"
+            "map": "VSDMCoverage.extension:vsdm-kostentraegerAngabestatus"
           }
         ]
       },
