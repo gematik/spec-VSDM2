@@ -1689,12 +1689,12 @@
         "id": "Extension.extension:wahltarif-vertragskennzeichen.value[x]",
         "path": "Extension.extension.value[x]",
         "short": "Vertragskennzeichnen des Wahltarifs",
-        "comment": "Länge des Strings ist maximal 25 Zeichen",
         "type": [
           {
             "code": "string"
           }
-        ]
+        ],
+        "maxLength": 25
       },
       {
         "id": "Extension.url",
