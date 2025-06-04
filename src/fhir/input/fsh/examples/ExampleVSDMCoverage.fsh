@@ -27,8 +27,8 @@ RuleSet: ExampleCoverage
 * payor.identifier.value = "12345678"
 * payor.display = "Test GKV Krankenkasse"
 
-* extension[vsdm-kostentragerAngabestatus].valueCodeableConcept.coding[+] = VSDMKostentreagerAngabestatusCS#dmp
-* extension[vsdm-kostentragerAngabestatus].valueCodeableConcept.coding[+] = VSDMKostentreagerAngabestatusCS#wahltarife
+* extension[vsdm-kostentraegerAngabestatus].valueCodeableConcept.coding[+] = VSDMKostentraegerAngabestatusCS#dmp
+* extension[vsdm-kostentraegerAngabestatus].valueCodeableConcept.coding[+] = VSDMKostentraegerAngabestatusCS#wahltarife
 
 * extension[versichertenart].valueCoding = $KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS#1
 * extension[wop].valueCoding = $KBV_CS_SFHIR_ITA_WOP#72

@@ -49,16 +49,16 @@
       ]
     },
     {
-      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentreagerAngabestatusEX",
+      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerAngabestatusEX",
       "valueCodeableConcept": {
         "coding": [
           {
             "code": "dmp",
-            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentreagerAngabestatusCS"
+            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerAngabestatusCS"
           },
           {
             "code": "wahltarife",
-            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentreagerAngabestatusCS"
+            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerAngabestatusCS"
           }
         ]
       }

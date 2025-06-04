@@ -32,10 +32,10 @@
     "endLine": 13
   },
   {
-    "outputFile": "CodeSystem-vsdmkostentreager-angabestatus-cs.json",
-    "fshName": "VSDMKostentreagerAngabestatusCS",
+    "outputFile": "CodeSystem-vsdmkostentraeger-angabestatus-cs.json",
+    "fshName": "VSDMKostentraegerAngabestatusCS",
     "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMKostentreagerAngabestatusCS.fsh",
+    "fshFile": "codesystems/VSDMKostentraegerAngabestatusCS.fsh",
     "startLine": 1,
     "endLine": 14
   },
@@ -168,10 +168,10 @@
     "endLine": 35
   },
   {
-    "outputFile": "StructureDefinition-vsdmkostentreager-angabestatus-ex.json",
-    "fshName": "VSDMKostentreagerAngabestatusEX",
+    "outputFile": "StructureDefinition-vsdmkostentraeger-angabestatus-ex.json",
+    "fshName": "VSDMKostentraegerAngabestatusEX",
     "fshType": "Extension",
-    "fshFile": "extensions/VSDMKostentreagerAngabestatusEX.fsh",
+    "fshFile": "extensions/VSDMKostentraegerAngabestatusEX.fsh",
     "startLine": 1,
     "endLine": 11
   },
@@ -200,10 +200,10 @@
     "endLine": 7
   },
   {
-    "outputFile": "ValueSet-vsdmkostentreager-angabestatus-vs.json",
-    "fshName": "VSDMKostentreagerAngabestatusVS",
+    "outputFile": "ValueSet-vsdmkostentraeger-angabestatus-vs.json",
+    "fshName": "VSDMKostentraegerAngabestatusVS",
     "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMKostentreagerAngabestatusVS.fsh",
+    "fshFile": "valuesets/VSDMKostentraegerAngabestatusVS.fsh",
     "startLine": 1,
     "endLine": 7
   }

@@ -2,11 +2,11 @@
   "resourceType": "CodeSystem",
   "status": "draft",
   "content": "complete",
-  "name": "VSDMKostentreagerAngabestatusCS",
-  "id": "vsdmkostentreager-angabestatus-cs",
-  "title": "VSDM Kostentreager Angabestatus CS",
+  "name": "VSDMKostentraegerAngabestatusCS",
+  "id": "vsdmkostentraeger-angabestatus-cs",
+  "title": "VSDM Kostentraeger Angabestatus CS",
   "description": "Codes zur Angabe, ob der Kostenträger die Information zum Versicherten angibt.",
-  "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentreagerAngabestatusCS",
+  "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerAngabestatusCS",
   "concept": [
     {
       "code": "zuzahlungsstatus",
