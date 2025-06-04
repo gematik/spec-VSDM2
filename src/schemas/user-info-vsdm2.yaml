@@ -1,0 +1,28 @@
+# Schema for the user-info-vsdm2 json object.
+# The VSDM2 Resource Server uses the schema to validate the ZETA-user-info HTTP header
+#
+$schema: "http://json-schema.org/draft-07/schema#"
+user_info:
+  type: object
+  properties:
+    subject:
+      type: string
+      description: "User id. Assigned by the Authorization Server."
+    identifier:
+      type: string
+      description: "Telematik-ID, KVNR or other unique identifier"
+    professionOID:
+      type: string
+      description: "Profession identifier (OID)"
+    organizationName:
+      type: string
+      description: "Name of the organization"
+    commonName:
+      type: string
+      description: "Common name of the organization"
+  required:
+    - subject
+    - identifier
+    - professionOID
+  additionalProperties: true
+ 

@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "vsdmkostentreager-angabestatus-ex",
-  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentreagerAngabestatusEX",
-  "name": "VSDMKostentreagerAngabestatusEX",
-  "title": "VSDM Kostentreager Angabestatus EX",
+  "id": "vsdmkostentraeger-angabestatus-ex",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerAngabestatusEX",
+  "name": "VSDMKostentraegerAngabestatusEX",
+  "title": "VSDM Kostentraeger Angabestatus EX",
   "status": "draft",
   "experimental": false,
   "date": "2023-12-31",
@@ -262,7 +262,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentreagerAngabestatusEX"
+        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerAngabestatusEX"
       },
       {
         "id": "Extension.value[x]",
@@ -274,7 +274,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentreagerAngabestatusVS"
+          "valueSet": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerAngabestatusVS"
         }
       }
     ]
