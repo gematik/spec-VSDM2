@@ -19,6 +19,11 @@
       "name": "VSD-Datensatz Fachliches Mapping Patient",
       "uri": "VSDMPatient",
       "comment": "Mapping des Fachmodells aus GEM_VSDM2_LOG_VSD_Confirmation auf das FHIR-Profil Patient"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
     }
   ],
   "kind": "logical",
@@ -26,6 +31,2147 @@
   "type": "https://gematik.de/fhir/vsdm2/StructureDefinition/gem-vsdm2-log-vsd-confirmation",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation",
+        "path": "gem-vsdm2-log-vsd-confirmation",
+        "short": "Logical Model VSD-Datensatz für VSDM 2.0",
+        "definition": "Fachliches Modell zur Beschreibung des VSD-Datensatzes",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation",
+          "min": 0,
+          "max": "*"
+        },
+        "condition": [
+          "ele-1"
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div"
+          }
+        ],
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.id",
+        "path": "gem-vsdm2-log-vsd-confirmation.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhirpath/System.String",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+                "valueUrl": "string"
+              }
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.extension",
+        "path": "gem-vsdm2-log-vsd-confirmation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten",
+        "short": "Versichertendaten",
+        "definition": "Versichertendaten",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.VersichertenID",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.VersichertenID",
+        "short": "KVNR",
+        "definition": "Die Versicherten-ID ist der 10-stellige unveraenderliche Teil der 30-stelligen Krankenversichertennummer",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.VersichertenID",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.identifier:KVNR.value"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter",
+        "short": "Angaben zum Versicherten",
+        "definition": "Angaben zum Versicherten",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Nachname",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Nachname",
+        "short": "Gibt den Nachnamen des Versicherten an",
+        "definition": "Gibt den Nachnamen des Versicherten an",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Nachname",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.name:Name.family.extension:nachname"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorname",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorname",
+        "short": "Gibt den Vornamen der Person an.",
+        "definition": "Alle Vornamen der Person (max. 5) werden eingegeben. Mehrere Vornamen werden durch Leerzeichen oder Bindestrich getrennt.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorname",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.name:Name.given"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorsatzwort",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorsatzwort",
+        "short": "Gibt die Vorsatzwoerter der Person an.",
+        "definition": "Mehrere Vorsatzwörter werden durch Leerzeichen getrennt angegeben. Anlage 6 (Tabelle der gültigen Vorsatzworte) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorsatzwort",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.name:Name.family.extension:vorsatzwort"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Namenszusatz",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Namenszusatz",
+        "short": "Gibt die Namenszusaetze der Person an, z. B.: Freiherr",
+        "definition": "Anlage 7 (Tabelle der gültigen Namenszusätze) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Namenszusatz",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.name:Name.family.extension:namenszusatz"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Titel",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Titel",
+        "short": "Gibt die akademischen Grade der Person an.",
+        "definition": "Mehrere Titel werden durch Leerzeichen getrennt angegeben.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Titel",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.name:Name.prefix.extension:prefix-qualifier"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geburtsdatum",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geburtsdatum",
+        "short": "Gibt das Geburtsdatum des Versicherten an",
+        "definition": "Das Geburtsjahr MUSS immer gefuellt werden. Bei Inlaendern ist immer ein logisch richtiges Geburtsdatum anzugeben. Bei Auslaendern gilt folgendes: Zumindest das Geburtsjahr ist immer anzugeben. Im Geburtstag oder im Geburtstag und im Geburtsmonat ist bei Ausländern „00“ bzw. „0000“ zulässig, wenn der Geburtstag und der Geburtsmonat nicht zu ermitteln sind. Das Geburtsdatum muss komplett gefüllt sein. Beispiel: 1990-00-00",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geburtsdatum",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.birthDate"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geschlecht",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geschlecht",
+        "short": "Gibt das Geschlecht des Versicherten an",
+        "definition": "M = maennlich, W = weiblich, X = unbestimmt, D = divers",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geschlecht",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.gender"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse",
+        "short": "Gibt die Strassenadresse des Versicherten an",
+        "definition": "Gibt die Strassenadresse des Versicherten an",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.address"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
+        "short": "Gibt den Namen der Strasse an",
+        "definition": "Wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Strasse"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
+        "short": "Gibt die Hausnummer in der Strasse der Person an.",
+        "definition": "Wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Hausnummer"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
+        "short": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an.",
+        "definition": "Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. In Verbindung mit dem Wohnsitzländercode D für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.address.postalCode"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Ort",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Ort",
+        "short": "Gibt den Ort zur Strassen- und oder Postfachadresse an.",
+        "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein. Abweichung zur Festlegung in DEÜV (Feldlänge = 34)",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Ort",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.address.city"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
+        "short": "ibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. „Hinterhaus“ angegeben werden.",
+        "definition": "ibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. „Hinterhaus“ angegeben werden.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "Gibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. Hinterhaus angegeben werden.",
+            "comment": "VSDMPatient.address.AddressDeBasis.line.extension:Adresszusatz"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
+        "short": "Gibt das Land zu der Strassen- und oder Postfachadresse an.",
+        "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzlaendercode zu beiden Adressdaten vorhanden sein.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.address.country"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse",
+        "short": "Gibt die Postfachadresse des Versicherten an",
+        "definition": "Gibt die Postfachadresse des Versicherten an",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.address"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
+        "short": "Gibt das Postfach des Versicherten an",
+        "definition": "Gibt das Postfach des Versicherten an",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Postfach"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
+        "short": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an.",
+        "definition": "Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. In Verbindung mit dem Wohnsitzländercode D für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.address.postalCode"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Ort",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Ort",
+        "short": "Gibt den Ort zur Strassen- und oder Postfachadresse an.",
+        "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein. Abweichung zur Festlegung in DEÜV (Feldlänge = 34)",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Ort",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.address.city"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+        "short": "Gibt das Land zu der Strassen- und oder Postfachadresse an.",
+        "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzlaendercode zu beiden Adressdaten vorhanden sein.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.Address.country"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.WIPTIMessengerID",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.WIPTIMessengerID",
+        "short": "Definition und Nutzung noch in Absprache - Eindeutige Identifikation einen TI-Messenger-Nutzers.",
+        "definition": "Die jeweils vollständige MXID der/des Versicherten soll dem LE zur Kommunikation mit der/dem Versicherten im Rahmen des Abrufs der VSD zur Verfügung gestellt werden können. Wenn sich der Versicherte für den TI Messenger-Dienst  registriert hat, MUSS es übertragen werden.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.WIPTIMessengerID",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.telecom:ti-messenger"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten",
+        "short": "Angaben zum Versicherungsverhältnis",
+        "definition": "Angaben zum Versicherungsverhältnis",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger",
+        "short": "Angaben zum Kostenträger",
+        "definition": "Angaben zum Kostenträger",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Name",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Name",
+        "short": "Gibt den Namen der Institution/Organisation an.",
+        "definition": "Gibt den Namen der Institution/Organisation an.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Name",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.payor"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
+        "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
+        "definition": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-kostentraegerlaendercode"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
+        "short": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
+        "definition": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.payor.identifier"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger",
+        "short": "Angaben zum abrechnenden Kostenträger",
+        "definition": "Angaben zum abrechnenden Kostenträger",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Name",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Name",
+        "short": "Gibt den Namen der Institution/Organisation an.",
+        "definition": "Gibt den Namen der Institution/Organisation an.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Name",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.payor"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
+        "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
+        "definition": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-kostentraegerlaendercode"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
+        "short": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
+        "definition": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.payor.extension:abrechnendeIK"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WOP",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WOP",
+        "short": "Das Kennzeichen WOP ist gemaess § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemaess Artikel 2 § 2 Abs. 2 des Gesetzes zur Einfuehrung des Wohnortprinzips bei Honorarvereinbarungen fuer Aerzte und Zahnaerzte und zur Krankenversichertenkarte gemaess § 291 Abs. 2 Fuenftes Sozialgesetzbuch (SGB V) erforderlich.",
+        "definition": "Angaben gemäß Anlage 21 BMV-Ä und EKV.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WOP",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:wop"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPBesonderePersonengruppe",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPBesonderePersonengruppe",
+        "short": "Definition und Nutzung noch in Absprache - Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
+        "definition": "Definition und Nutzung noch in Absprache - Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPBesonderePersonengruppe",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:besonderePersonengruppe"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus",
+        "short": "Definition und Nutzung noch in Absprache - Gibt den Zuzahlungsstatus des Versicherten an",
+        "definition": "Definition und Nutzung noch in Absprache - Gibt den Zuzahlungsstatus des Versicherten an",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:zuzahlungsstatus"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
+        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
+        "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-kostentragerAngabestatus"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.Status",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.Status",
+        "short": "Gibt an, ob fuer den Versicherten eine Befreiung von der Zuzahlungspflicht nach § 62 SGB V vorliegt.",
+        "definition": "1 true = von Zuzahlungspflicht befreit, 0 false = von Zuzahlungspflicht nicht befreit",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.Status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:zuzahlungsstatus.extension:status"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
+        "short": "Gibt die Gueltigkeit der Befreiung von der Zuzahlungspflicht nach § 62 SGB V an.",
+        "definition": "Wird nur angegeben, wenn Status Zuzahlung mit 1 = befreit angegeben ist.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:zuzahlungsstatus.extension:gueltigBis"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz",
+        "short": "Angaben zum Versicherungsschutz",
+        "definition": "Angaben zum Versicherungsschutz",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.period"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Beginn",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Beginn",
+        "short": "Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem angegebenen Kostentraeger an.",
+        "definition": "Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem angegebenen Kostentraeger an.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Beginn",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.period.start"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.WIPEnde",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.WIPEnde",
+        "short": "Gibt das Datum des Endes der Mitgliedschaft des Versicherten bei dem unter Klasse Kostentraeger angegebenen Kostentraeger an oder das Datum des Fristablaufs bei befristeter Gueltigkeit der Karte.",
+        "definition": "Gibt das Datum des Endes der Mitgliedschaft des Versicherten bei dem unter Klasse Kostentraeger angegebenen Kostentraeger an oder das Datum des Fristablaufs bei befristeter Gueltigkeit der Karte.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.WIPEnde",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.period.end"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP",
+        "short": "Definition und Nutzung noch in Absprache - Angaben zur Teilnahme des Versicherten an DMP-Programmen",
+        "definition": "Definition und Nutzung noch in Absprache - Angaben zur Teilnahme des Versicherten an DMP-Programmen",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
+        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
+        "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-kostentragerAngabestatus"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.DMP",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.DMP",
+        "short": "Gibt den Namen des DMP-Programms an",
+        "definition": "Angaben erfolgen gemaess Schlüsseltabelle",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.DMP",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmpKennzeichen"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Beginn",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Beginn",
+        "short": "Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.",
+        "definition": "Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Beginn",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmp-zeitraum.value[x].start"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Ende",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Ende",
+        "short": "Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an.",
+        "definition": "Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Ende",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmp-zeitraum.value[x].end"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPdigitalesDMP",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPdigitalesDMP",
+        "short": "Definition und Nutzung noch in Absprache - Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
+        "definition": "Definition und Nutzung noch in Absprache - Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPdigitalesDMP",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:digitales-dmp"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung",
+        "short": "Definition und Nutzung noch in Absprache - Angaben zur Kostenerstattung für verschiedene Sektoren",
+        "definition": "Definition und Nutzung noch in Absprache - Angaben zur Kostenerstattung für verschiedene Sektoren",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:gkv-kostenerstattung"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
+        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
+        "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-kostentragerAngabestatus"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
+        "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer die aerztliche Versorgung an.",
+        "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:gkv-kostenerstattung.extension:aerztlicheVersorgung"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
+        "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer zahnaerztliche Versorgung an.",
+        "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:gkv-kostenerstattung.extension:zahnaerztlicheVersorgung"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
+        "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer den stationaeren Bereich an.",
+        "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:gkv-kostenerstattung.extension:stationaererBereich"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
+        "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer veranlasste Leistungen an.",
+        "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:gkv-kostenerstattung.extension:veranlassteLeistungen"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
+        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
+        "definition": "Definition und Nutzung noch in Absprache - Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:ruhenderLeistungsanspruch"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
+        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
+        "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:vsdm-kostentragerAngabestatus"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
+        "short": "Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an.",
+        "definition": "Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:dauer.value[x].start"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
+        "short": "Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.",
+        "definition": "Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:dauer.value[x].end"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
+        "short": "Gibt die Art des Ruhens an.",
+        "definition": "1 = vollständig, 2 = eingeschränkt",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:art"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versichertenart",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versichertenart",
+        "short": "Gibt die Art der Versicherung an",
+        "definition": "1 = Mitglied, 3 = Familienversicherter, 5 = Rentner und ihre Familienangehörigen",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versichertenart",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.extension:versichertenart"
+          }
+        ]
+      },
+      {
+        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsart",
+        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsart",
+        "short": "Art der Versicherung: gesetzliche oder private Versicherung",
+        "definition": "GKV = gesetzlich versichert, PKV = privat versichert",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsart",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.type"
+          }
+        ]
+      }
+    ]
+  },
   "differential": {
     "element": [
       {
