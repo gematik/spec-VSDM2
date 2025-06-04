@@ -55,6 +55,6 @@ Usage: #example
 * address.line.extension[=][Strasse].valueString = "Blumenweg"
 * address.city = "Esens"
 * address.postalCode = "26427"
-* address.country = "D"
+* address.country = $cs-iso3166-1-2#DE
 * telecom = ContactPointAOKMXID
 
