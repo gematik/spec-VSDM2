@@ -5,6 +5,7 @@ on:
     paths:
       - 'src/plantuml/**'
       - 'src/drawio/**'
+      - '.github/workflows/generate_images.yml'
   workflow_dispatch:
 
 jobs:
@@ -27,6 +28,7 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y --no-install-recommends graphviz xvfb
         # Install drawio via snap
+        sudo snap remove drawio
         sudo snap install drawio
         # Wait a moment for snap changes to propagate if needed
         sleep 5
