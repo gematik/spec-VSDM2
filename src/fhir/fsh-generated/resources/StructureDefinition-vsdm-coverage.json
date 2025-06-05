@@ -378,6 +378,16 @@
       },
       {
         "id": "Coverage.meta.security",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Coverage.meta.security",
         "short": "Security Labels applied to this resource",
         "definition": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
@@ -393,6 +403,9 @@
           {
             "code": "Coding"
           }
+        ],
+        "condition": [
+          "ele-1"
         ],
         "constraint": [
           {
@@ -420,10 +433,38 @@
           "strength": "extensible",
           "description": "Security Labels from the Healthcare Privacy and Security Classification System.",
           "valueSet": "http://hl7.org/fhir/ValueSet/security-labels"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "v2",
+            "map": "CE/CNE/CWE subset one of the sets of component 1-3 or 4-6"
+          },
+          {
+            "identity": "rim",
+            "map": "CV"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding rdfs:subClassOf dt:CDCoding"
+          }
+        ]
       },
       {
         "id": "Coverage.meta.tag",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Coverage.meta.tag",
         "short": "Tags applied to this resource",
         "definition": "Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
@@ -439,6 +480,9 @@
           {
             "code": "Coding"
           }
+        ],
+        "condition": [
+          "ele-1"
         ],
         "constraint": [
           {
@@ -462,7 +506,25 @@
           "strength": "example",
           "description": "Codes that represent various types of tags, commonly workflow-related; e.g. \"Needs review by Dr. Jones\".",
           "valueSet": "http://hl7.org/fhir/ValueSet/common-tags"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "v2",
+            "map": "CE/CNE/CWE subset one of the sets of component 1-3 or 4-6"
+          },
+          {
+            "identity": "rim",
+            "map": "CV"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding rdfs:subClassOf dt:CDCoding"
+          }
+        ]
       },
       {
         "id": "Coverage.implicitRules",
@@ -6074,8 +6136,6 @@
           }
         ],
         "fixedUri": "dmp-zeitraum",
-        "isModifier": false,
-        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -6085,6 +6145,16 @@
       },
       {
         "id": "Coverage.extension:vsdm-dmpKennzeichen.extension:dmp-zeitraum.value[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Coverage.extension.extension.value[x]",
         "short": "Zeitraum der Teilnahme am DMP",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -6100,6 +6170,9 @@
             "code": "Period"
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -6111,8 +6184,11 @@
           }
         ],
         "isModifier": false,
-        "isSummary": false,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
           {
             "identity": "rim",
             "map": "N/A"
@@ -6218,7 +6294,7 @@
         "path": "Coverage.extension.extension.value[x].start",
         "short": "Startdatum des DMP-Zeitraums",
         "definition": "The start of the period. The boundary is inclusive.",
-        "comment": "Datumsformat in ISO8601 (YYYY-MM-DD)",
+        "comment": "If the low element is missing, the meaning is that the low boundary is not known.",
         "min": 1,
         "max": "1",
         "base": {
@@ -6242,6 +6318,13 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "date-precision-1",
+            "human": "date consists exactly of year, month and day",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenEX",
+            "severity": "error",
+            "expression": "toString().matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')"
           }
         ],
         "isModifier": false,
@@ -6262,7 +6345,7 @@
         "path": "Coverage.extension.extension.value[x].end",
         "short": "Enddatum des DMP-Zeitraums",
         "definition": "The end of the period. If the end of the period is missing, it means no end was known or planned at the time the instance was created. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time.",
-        "comment": "Datumsformat in ISO8601 (YYYY-MM-DD)",
+        "comment": "The high value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has an end value of 2012-02-03.",
         "min": 0,
         "max": "1",
         "base": {
@@ -6287,6 +6370,13 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "date-precision-1",
+            "human": "date consists exactly of year, month and day",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenEX",
+            "severity": "error",
+            "expression": "toString().matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')"
           }
         ],
         "isModifier": false,
@@ -6475,8 +6565,6 @@
           }
         ],
         "fixedUri": "digitales-dmp",
-        "isModifier": false,
-        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -6486,6 +6574,16 @@
       },
       {
         "id": "Coverage.extension:vsdm-dmpKennzeichen.extension:digitales-dmp.value[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Coverage.extension.extension.value[x]",
         "short": "Information, ob ein digitales DMP vorhanden ist",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -6501,6 +6599,9 @@
             "code": "boolean"
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -6512,8 +6613,11 @@
           }
         ],
         "isModifier": false,
-        "isSummary": false,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
           {
             "identity": "rim",
             "map": "N/A"
@@ -6549,8 +6653,6 @@
         ],
         "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenEX",
         "mustSupport": true,
-        "isModifier": false,
-        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -6560,6 +6662,16 @@
       },
       {
         "id": "Coverage.extension:vsdm-dmpKennzeichen.value[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Coverage.extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -6722,6 +6834,9 @@
             "code": "Meta"
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -6733,8 +6848,11 @@
           }
         ],
         "isModifier": false,
-        "isSummary": false,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
           {
             "identity": "rim",
             "map": "N/A"
@@ -7062,8 +7180,6 @@
           }
         ],
         "fixedUri": "wahltarif",
-        "isModifier": false,
-        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -7073,6 +7189,16 @@
       },
       {
         "id": "Coverage.extension:vsdm-wahltarife.extension:wahltarif.value[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Coverage.extension.extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -7088,6 +7214,9 @@
             "code": "Coding"
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -7099,12 +7228,15 @@
           }
         ],
         "isModifier": false,
-        "isSummary": false,
         "binding": {
           "strength": "required",
           "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMWahltarifeVS"
         },
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
           {
             "identity": "rim",
             "map": "N/A"
@@ -7352,6 +7484,7 @@
         "path": "Coverage.extension.extension.value[x].display",
         "short": "Representation defined by the system",
         "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
+        "comment": "Note that FHIR strings SHALL NOT exceed 1MB in size",
         "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
         "min": 0,
         "max": "1",
@@ -7611,8 +7744,6 @@
           }
         ],
         "fixedUri": "wahltarif-zeitraum",
-        "isModifier": false,
-        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -7622,6 +7753,16 @@
       },
       {
         "id": "Coverage.extension:vsdm-wahltarife.extension:wahltarif-zeitraum.value[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Coverage.extension.extension.value[x]",
         "short": "Zeitraum der Gültigkeit des Wahltarifs",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -7637,6 +7778,9 @@
             "code": "Period"
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -7648,8 +7792,11 @@
           }
         ],
         "isModifier": false,
-        "isSummary": false,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
           {
             "identity": "rim",
             "map": "N/A"
@@ -7755,7 +7902,7 @@
         "path": "Coverage.extension.extension.value[x].start",
         "short": "Startdatum des Wahltarif-Zeitraums",
         "definition": "The start of the period. The boundary is inclusive.",
-        "comment": "Datumsformat in ISO8601 (YYYY-MM-DD)",
+        "comment": "If the low element is missing, the meaning is that the low boundary is not known.",
         "min": 1,
         "max": "1",
         "base": {
@@ -7779,6 +7926,13 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "date-precision-1",
+            "human": "date consists exactly of year, month and day",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMWahltarifeEX",
+            "severity": "error",
+            "expression": "toString().matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')"
           }
         ],
         "isModifier": false,
@@ -7799,7 +7953,7 @@
         "path": "Coverage.extension.extension.value[x].end",
         "short": "Enddatum des Wahltarif-Zeitraums",
         "definition": "The end of the period. If the end of the period is missing, it means no end was known or planned at the time the instance was created. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time.",
-        "comment": "Datumsformat in ISO8601 (YYYY-MM-DD)",
+        "comment": "The high value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has an end value of 2012-02-03.",
         "min": 0,
         "max": "1",
         "base": {
@@ -7824,6 +7978,13 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "date-precision-1",
+            "human": "date consists exactly of year, month and day",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMWahltarifeEX",
+            "severity": "error",
+            "expression": "toString().matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')"
           }
         ],
         "isModifier": false,
@@ -8012,8 +8173,6 @@
           }
         ],
         "fixedUri": "wahltarif-vertragskennzeichen",
-        "isModifier": false,
-        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -8023,6 +8182,16 @@
       },
       {
         "id": "Coverage.extension:vsdm-wahltarife.extension:wahltarif-vertragskennzeichen.value[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Coverage.extension.extension.value[x]",
         "short": "Vertragskennzeichnen des Wahltarifs",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -8039,6 +8208,9 @@
           }
         ],
         "maxLength": 25,
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -8050,8 +8222,11 @@
           }
         ],
         "isModifier": false,
-        "isSummary": false,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
           {
             "identity": "rim",
             "map": "N/A"
@@ -8087,8 +8262,6 @@
         ],
         "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMWahltarifeEX",
         "mustSupport": true,
-        "isModifier": false,
-        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -8098,6 +8271,16 @@
       },
       {
         "id": "Coverage.extension:vsdm-wahltarife.value[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Coverage.extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -8260,6 +8443,9 @@
             "code": "Meta"
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -8271,8 +8457,11 @@
           }
         ],
         "isModifier": false,
-        "isSummary": false,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
           {
             "identity": "rim",
             "map": "N/A"
@@ -8456,8 +8645,6 @@
         ],
         "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerAngabestatusEX",
         "mustSupport": true,
-        "isModifier": false,
-        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -8467,6 +8654,16 @@
       },
       {
         "id": "Coverage.extension:vsdm-kostentraegerAngabestatus.value[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Coverage.extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -8482,6 +8679,9 @@
             "code": "CodeableConcept"
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -8493,12 +8693,15 @@
           }
         ],
         "isModifier": false,
-        "isSummary": false,
         "binding": {
           "strength": "required",
           "valueSet": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerAngabestatusVS"
         },
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
           {
             "identity": "rim",
             "map": "N/A"
@@ -8682,8 +8885,6 @@
         ],
         "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerLaendercodeEX",
         "mustSupport": true,
-        "isModifier": false,
-        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -8693,6 +8894,16 @@
       },
       {
         "id": "Coverage.extension:vsdm-kostentraegerlaendercode.value[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Coverage.extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -8707,6 +8918,9 @@
           {
             "code": "Coding"
           }
+        ],
+        "condition": [
+          "ele-1"
         ],
         "constraint": [
           {
@@ -8727,12 +8941,15 @@
         ],
         "mustSupport": true,
         "isModifier": false,
-        "isSummary": false,
         "binding": {
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2"
         },
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
           {
             "identity": "rim",
             "map": "N/A"
@@ -8982,6 +9199,7 @@
         "path": "Coverage.extension.value[x].display",
         "short": "Representation defined by the system",
         "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
+        "comment": "Note that FHIR strings SHALL NOT exceed 1MB in size",
         "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
         "min": 0,
         "max": "1",
@@ -9696,6 +9914,16 @@
       },
       {
         "id": "Coverage.beneficiary.identifier",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Coverage.beneficiary.identifier",
         "short": "Logical reference, when literal reference is not known",
         "definition": "An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference.",
@@ -9712,6 +9940,9 @@
             "code": "Identifier"
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -9725,6 +9956,22 @@
         "isModifier": false,
         "isSummary": true,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "v2",
+            "map": "CX / EI (occasionally, more often EI maps to a resource id or a URL)"
+          },
+          {
+            "identity": "rim",
+            "map": "II - The Identifier class is a little looser than the v3 type II because it allows URIs as well as registered OIDs or GUIDs.  Also maps to Role[classCode=IDENT]"
+          },
+          {
+            "identity": "servd",
+            "map": "Identifier"
+          },
           {
             "identity": "rim",
             "map": ".identifier"
@@ -10115,9 +10362,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Organization",
-              "http://hl7.org/fhir/StructureDefinition/Patient",
-              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraeger"
             ]
           }
         ],
@@ -10149,324 +10394,6 @@
           {
             "identity": "cpha3pharm",
             "map": "C.30"
-          }
-        ]
-      },
-      {
-        "id": "Coverage.payor.id",
-        "path": "Coverage.payor.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "Unique id for inter-element referencing",
-        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "http://hl7.org/fhirpath/System.String",
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "string"
-              }
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Coverage.payor.extension",
-        "path": "Coverage.payor.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          },
-          {
-            "key": "ext-1",
-            "severity": "error",
-            "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Coverage.payor.extension:abrechnendeIK",
-        "path": "Coverage.payor.extension",
-        "sliceName": "abrechnendeIK",
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://fhir.de/StructureDefinition/AbrechnendeIK"
-            ]
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          },
-          {
-            "key": "ext-1",
-            "severity": "error",
-            "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Coverage.payor.reference",
-        "path": "Coverage.payor.reference",
-        "short": "Literal reference, Relative, internal or absolute URL",
-        "definition": "A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources.",
-        "comment": "Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure \"/[type]/[id]\" then it should be assumed that the reference is to a FHIR RESTful server.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Reference.reference",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "condition": [
-          "ref-1"
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ]
-      },
-      {
-        "id": "Coverage.payor.type",
-        "path": "Coverage.payor.type",
-        "short": "Type the reference refers to (e.g. \"Patient\")",
-        "definition": "The expected type of the target of the reference. If both Reference.type and Reference.reference are populated and Reference.reference is a FHIR URL, both SHALL be consistent.\n\nThe type is the Canonical URL of Resource Definition that is the type this reference refers to. References are URLs that are relative to http://hl7.org/fhir/StructureDefinition/ e.g. \"Patient\" is a reference to http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only allowed for logical models (and can only be used in references in logical models, not resources).",
-        "comment": "This element is used to indicate the type of  the target of the reference. This may be used which ever of the other elements are populated (or not). In some cases, the type of the target may be determined by inspection of the reference (e.g. a RESTful URL) or by resolving the target of the reference; if both the type and a reference is provided, the reference SHALL resolve to a resource of the same type as that specified.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Reference.type",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "uri"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "FHIRResourceTypeExt"
-            }
-          ],
-          "strength": "extensible",
-          "description": "Aa resource (or, for logical models, the URI of the logical model).",
-          "valueSet": "http://hl7.org/fhir/ValueSet/resource-types"
-        },
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ]
-      },
-      {
-        "id": "Coverage.payor.identifier",
-        "path": "Coverage.payor.identifier",
-        "short": "Logical reference, when literal reference is not known",
-        "definition": "An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference.",
-        "comment": "When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. \n\nWhen both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference\n\nApplications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it.\n\nReference is intended to point to a structure that can potentially be expressed as a FHIR resource, though there is no need for it to exist as an actual FHIR resource instance - except in as much as an application wishes to actual find the target of the reference. The content referred to be the identifier must meet the logical constraints implied by any limitations on what resource types are permitted for the reference.  For example, it would not be legitimate to send the identifier for a drug prescription if the type were Reference(Observation|DiagnosticReport).  One of the use-cases for Reference.identifier is the situation where no FHIR representation exists (where the type is Reference (Any).",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Reference.identifier",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-iknr"
-            ]
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".identifier"
-          }
-        ]
-      },
-      {
-        "id": "Coverage.payor.display",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "Coverage.payor.display",
-        "short": "Name des Kostenträgers",
-        "definition": "Plain text narrative that identifies the resource in addition to the resource reference.",
-        "comment": "This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Reference.display",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
           }
         ]
       },
@@ -11745,41 +11672,15 @@
       {
         "id": "Coverage.payor",
         "path": "Coverage.payor",
-        "max": "1"
-      },
-      {
-        "id": "Coverage.payor.extension:abrechnendeIK",
-        "path": "Coverage.payor.extension",
-        "sliceName": "abrechnendeIK",
-        "min": 0,
         "max": "1",
         "type": [
           {
-            "code": "Extension",
-            "profile": [
-              "http://fhir.de/StructureDefinition/AbrechnendeIK"
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraeger"
             ]
           }
         ]
-      },
-      {
-        "id": "Coverage.payor.identifier",
-        "path": "Coverage.payor.identifier",
-        "min": 1,
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-iknr"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Coverage.payor.display",
-        "path": "Coverage.payor.display",
-        "short": "Name des Kostenträgers",
-        "min": 1
       }
     ]
   }

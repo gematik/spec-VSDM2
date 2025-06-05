@@ -16,5 +16,4 @@ Title: "VSDM 2 Composition for VSDM 2 Bundle"
 * type.coding 1..1
 * type.coding = $loinc#55188-7 "Patient data Document"
 * date MS
-* author.identifier 1..1
-* author.identifier only IdentifierIknr
+* author only Reference(VSDMKostentraeger)
