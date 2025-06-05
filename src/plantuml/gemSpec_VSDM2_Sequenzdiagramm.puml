@@ -88,7 +88,7 @@ alt Request not valid
 	VSDD_Proxy -> PS : HTTP 400 Bad Request
 end
 
-VSDD_Proxy -> VSDD_Server : GET /vsdservice/v1/vsdmbundle \nZETA-User-Info <user_info>, \nZETA-PoPP-Token-Content <content>, \nZETA-Client-Data <client data>, \nIf-None-Match: "<etag_value>"
+VSDD_Proxy -> VSDD_Server : GET /vsdservice/v1/vsdmbundle \nZETA-User-Info <user_info>, \nZETA-PoPP-Token-Content <content>, \nIf-None-Match: "<etag_value>"
 activate VSDD_Server
 
 VSDD_Server -> VSDD_Server : ZETA-Header prüfen
