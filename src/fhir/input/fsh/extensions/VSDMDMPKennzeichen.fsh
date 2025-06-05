@@ -16,10 +16,10 @@ Context: Coverage
 // start
 * extension[dmp-zeitraum].valuePeriod.start 1..1
 * extension[dmp-zeitraum].valuePeriod.start ^short = "Startdatum des DMP-Zeitraums"
-* extension[dmp-zeitraum].valuePeriod.start ^comment = "Datumsformat in ISO8601 (YYYY-MM-DD)"
+* extension[dmp-zeitraum].valuePeriod.start obeys date-precision-1
 // end
 * extension[dmp-zeitraum].valuePeriod.end ^short = "Enddatum des DMP-Zeitraums"
-* extension[dmp-zeitraum].valuePeriod.end ^comment = "Datumsformat in ISO8601 (YYYY-MM-DD)"
+* extension[dmp-zeitraum].valuePeriod.end obeys date-precision-1
 
 * extension[digitales-dmp].value[x] only boolean
 * extension[digitales-dmp].value[x] ^short = "Information, ob ein digitales DMP vorhanden ist"

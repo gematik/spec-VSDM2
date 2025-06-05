@@ -24,10 +24,10 @@ Id: vsdm-wahltarife-ex
 // start
 * extension[wahltarif-zeitraum].valuePeriod.start 1..1
   * ^short = "Startdatum des Wahltarif-Zeitraums"
-  * ^comment = "Datumsformat in ISO8601 (YYYY-MM-DD)"
+  * obeys date-precision-1
 // end
 * extension[wahltarif-zeitraum].valuePeriod.end ^short = "Enddatum des Wahltarif-Zeitraums"
-* extension[wahltarif-zeitraum].valuePeriod.end ^comment = "Datumsformat in ISO8601 (YYYY-MM-DD)"
+* extension[wahltarif-zeitraum].valuePeriod.end obeys date-precision-1
 
 // Wahltarif Kennzeichen
 * extension[wahltarif-vertragskennzeichen].value[x] only string
