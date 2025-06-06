@@ -188,7 +188,7 @@ jobs:
             
             echo "📊 PNG generation exit code: $png_exit_code"
             if [ $png_exit_code -ne 0 ]; then
-              echo "❌ PNG generation failed!
+              echo "❌ PNG generation failed!"
             else
               echo "✅ PNG generation command completed"
             fi
@@ -285,18 +285,16 @@ jobs:
             
             # Generate PNG with debugging
             echo "🖼️ Generating PNG for: $file"
-            
-            docker run -it rlespinasse/drawio-export --help
 
             docker run --rm \
-              -v $(pwd):/data \
+              -v "$(pwd):/data" \
               rlespinasse/drawio-export:4.4.0 \
               --format png \
-              --output "${{ env.OUTPUT_DIR }} \
+              --output "${{ env.OUTPUT_DIR }}" \
               "$file" \
               2>&1 | sed 's/^/  | /'
             
-            png_exit_code=${PIPESTATUS[0]}
+            png_exit_code=$?
             echo "📊 Docker PNG exit code: $png_exit_code"
             
             # Check and rename PNG
@@ -311,14 +309,12 @@ jobs:
             
             # Generate SVG with debugging
             echo "🎭 Generating SVG for: $file"
-            
-            docker run -it rlespinasse/drawio-export --help
 
             docker run --rm \
-              -v $(pwd):/data \
+              -v "$(pwd):/data" \
               rlespinasse/drawio-export:4.4.0 \
               --format svg \
-              --output "${{ env.OUTPUT_DIR }} \
+              --output "${{ env.OUTPUT_DIR }}" \
               "$file" \
               2>&1 | sed 's/^/  | /'
             
