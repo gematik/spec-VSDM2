@@ -29,7 +29,15 @@ jobs:
           mkdir -p ${{ env.OUTPUT_DIR }}
           echo "📁 Output directory: ${{ env.OUTPUT_DIR }}"
 
-      # PlantUML mit Java Setup (zuverlässiger als externe Action)
+      - name: Debug - Check repository structure
+        run: |
+          echo "=== Repository structure ==="
+          find . -name "*.puml" -o -name "*.plantuml" -o -name "*.drawio" -o -name "*.dio" | head -20
+          echo "=== src/plantuml contents ==="
+          ls -la src/plantuml/ 2>/dev/null || echo "src/plantuml directory not found"
+          echo "=== src/drawio contents ==="
+          ls -la src/drawio/ 2>/dev/null || echo "src/drawio directory not found"
+
       - name: Set up JDK 11
         uses: actions/setup-java@v4
         with:
@@ -40,117 +48,85 @@ jobs:
         run: |
           wget https://github.com/plantuml/plantuml/releases/latest/download/plantuml.jar -O /tmp/plantuml.jar
           echo "PlantUML downloaded successfully"
+          java -jar /tmp/plantuml.jar -version
 
-      - name: Generate PlantUML images
+      - name: Generate PlantUML images (with debugging)
         continue-on-error: true
         run: |
           echo "=== Generating PlantUML images ==="
-          puml_files=$(find src/plantuml -name "*.puml" -o -name "*.plantuml" 2>/dev/null)
+          
+          # Find all puml files with absolute paths
+          puml_files=$(find $(pwd)/src/plantuml -name "*.puml" -o -name "*.plantuml" 2>/dev/null)
           if [ -z "$puml_files" ]; then
-            echo "No PlantUML files found in src/plantuml/"
-          else
-            echo "Found PlantUML files:"
-            echo "$puml_files"
-            
-            for file in $puml_files; do
-              echo "Processing: $file"
-              base=$(basename "$file" | sed 's/\.[^.]*$//')
-              
-              # Generate PNG
-              if java -jar /tmp/plantuml.jar -tpng "$file" -o "${{ env.OUTPUT_DIR }}"; then
-                if [ -f "${{ env.OUTPUT_DIR }}/${base}.png" ]; then
-                  mv "${{ env.OUTPUT_DIR }}/${base}.png" "${{ env.OUTPUT_DIR }}/${{ env.PLANTUML_PREFIX }}-${base}.png"
-                  echo "✅ Generated PNG: ${{ env.OUTPUT_DIR }}/${{ env.PLANTUML_PREFIX }}-${base}.png"
-                fi
-              else
-                echo "❌ Failed to generate PNG for $file"
-              fi
-              
-              # Generate SVG
-              if java -jar /tmp/plantuml.jar -tsvg "$file" -o "${{ env.OUTPUT_DIR }}"; then
-                if [ -f "${{ env.OUTPUT_DIR }}/${base}.svg" ]; then
-                  mv "${{ env.OUTPUT_DIR }}/${base}.svg" "${{ env.OUTPUT_DIR }}/${{ env.PLANTUML_PREFIX }}-${base}.svg"
-                  echo "✅ Generated SVG: ${{ env.OUTPUT_DIR }}/${{ env.PLANTUML_PREFIX }}-${base}.svg"
-                fi
-              else
-                echo "❌ Failed to generate SVG for $file"
-              fi
-            done
+            echo "❌ No PlantUML files found in src/plantuml/"
+            exit 0
           fi
-
-      # Draw.io mit bewährter Docker-Lösung
-      - name: Generate Draw.io images
-        continue-on-error: true
-        run: |
-          echo "=== Generating drawio images ==="
-          drawio_files=$(find src/drawio -name "*.drawio" -o -name "*.dio" 2>/dev/null)
-          if [ -z "$drawio_files" ]; then
-            echo "No drawio files found in src/drawio/"
-          else
-            echo "Found drawio files:"
-            echo "$drawio_files"
+          
+          echo "Found PlantUML files:"
+          echo "$puml_files"
+          
+          # Create absolute path for output
+          output_abs=$(pwd)/${{ env.OUTPUT_DIR }}
+          echo "Output directory: $output_abs"
+          
+          for file in $puml_files; do
+            echo "Processing: $file"
+            base=$(basename "$file" | sed 's/\.[^.]*$//')
             
-            for file in $drawio_files; do
-              echo "Processing: $file"
-              base=$(basename "$file" | sed 's/\.[^.]*$//')
-              
-              # Generate PNG using rlespinasse/drawio-export (bewährte Action)
-              docker run --rm \
-                -v $(pwd):/data \
-                rlespinasse/drawio-export:4.4.0 \
-                --format png \
-                --output "${{ env.OUTPUT_DIR }}" \
-                "$file"
-              
-              # Rename with prefix
-              if [ -f "${{ env.OUTPUT_DIR }}/${base}.png" ]; then
-                mv "${{ env.OUTPUT_DIR }}/${base}.png" "${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}-${base}.png"
-                echo "✅ Generated PNG: ${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}-${base}.png"
-              fi
-              
-              # Generate SVG
-              docker run --rm \
-                -v $(pwd):/data \
-                rlespinasse/drawio-export:4.4.0 \
-                --format svg \
-                --output "${{ env.OUTPUT_DIR }}" \
-                "$file"
-              
-              # Rename with prefix
-              if [ -f "${{ env.OUTPUT_DIR }}/${base}.svg" ]; then
-                mv "${{ env.OUTPUT_DIR }}/${base}.svg" "${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}-${base}.svg"
-                echo "✅ Generated SVG: ${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}-${base}.svg"
-              fi
-            done
-          fi
+            # Test PlantUML syntax first
+            echo "Testing syntax for: $file"
+            java -jar /tmp/plantuml.jar -syntax "$file" || echo "Syntax check failed"
+            
+            # Generate PNG with verbose output
+            echo "Generating PNG for: $file"
+            java -jar /tmp/plantuml.jar -v -tpng "$file" -o "$output_abs" 2>&1 | tee /tmp/plantuml.log
+            
+            # Check if file was created
+            if [ -f "$output_abs/${base}.png" ]; then
+              mv "$output_abs/${base}.png" "$output_abs/${{ env.PLANTUML_PREFIX }}-${base}.png"
+              echo "✅ Generated PNG: ${{ env.PLANTUML_PREFIX }}-${base}.png"
+            else
+              echo "❌ PNG not created for $file"
+              echo "PlantUML log:"
+              cat /tmp/plantuml.log || true
+            fi
+            
+            # Generate SVG
+            echo "Generating SVG for: $file"
+            java -jar /tmp/plantuml.jar -v -tsvg "$file" -o "$output_abs" 2>&1
+            
+            if [ -f "$output_abs/${base}.svg" ]; then
+              mv "$output_abs/${base}.svg" "$output_abs/${{ env.PLANTUML_PREFIX }}-${base}.svg"
+              echo "✅ Generated SVG: ${{ env.PLANTUML_PREFIX }}-${base}.svg"
+            else
+              echo "❌ SVG not created for $file"
+            fi
+            
+            echo "--- Next file ---"
+          done
 
-      - name: Show Git Status for Images
+      - name: Simple Draw.io test (skip for now)
         run: |
+          echo "=== Skipping Draw.io for debugging ==="
+          echo "Will focus on PlantUML first"
+
+      - name: Show results
+        run: |
+          echo "=== Generated files ==="
+          ls -la ${{ env.OUTPUT_DIR }}/ 2>/dev/null || echo "No images directory"
           echo "=== Git Status ==="
           git status
-          echo "=== Generated image files in ${{ env.OUTPUT_DIR }}/ ==="
-          find ${{ env.OUTPUT_DIR }} -name "*.png" -o -name "*.svg" 2>/dev/null | head -20
-          echo "=== Total images generated ==="
-          find ${{ env.OUTPUT_DIR }} -name "*.png" -o -name "*.svg" 2>/dev/null | wc -l
 
-      - name: Commit and push generated images
+      - name: Commit generated images (debug version)
         run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
           
-          image_count=$(find ${{ env.OUTPUT_DIR }} -name "*.png" -o -name "*.svg" 2>/dev/null | wc -l)
-          echo "Found $image_count generated images"
-          
-          if [ "$image_count" -eq 0 ]; then
-            echo "No images to commit"
-            exit 0
-          fi
-          
-          git add ${{ env.OUTPUT_DIR }}/
-          if git diff --staged --quiet; then
-            echo "No changes staged for commit"
-          else
-            git commit -m "🖼️ Auto-generate $image_count images - PlantUML: ${{ env.PLANTUML_PREFIX }}-*.{png,svg} - Draw.io: ${{ env.DRAWIO_PREFIX }}-*.{png,svg} - Generated: $(date)"
+          if [ -d "${{ env.OUTPUT_DIR }}" ] && [ "$(ls -A ${{ env.OUTPUT_DIR }})" ]; then
+            git add ${{ env.OUTPUT_DIR }}/
+            git commit -m "🔧 Debug: Generate images test"
             git push
-            echo "✅ $image_count images committed and pushed"
+            echo "✅ Images committed"
+          else
+            echo "❌ No images to commit"
           fi
