@@ -183,9 +183,9 @@ jobs:
             echo ""
             echo "🖼️ Generating PNG for: $file"
             
-            java -jar /tmp/plantuml.jar -tpng -scale 4 "$file" -o "$output_abs" \
-            || echo "   WARNING: PNG generation command may have failed for $file (Exit Code: $?)" >&2
+            java -jar /tmp/plantuml.jar -tpng -scale 4 "$file" -o "$output_abs"
             
+            png_exit_code=$?
             echo "📊 PNG generation exit code: $png_exit_code"
             if [ -n "$png_exit_code" ] && [ "$png_exit_code" -ne 0 ]; then
               echo "❌ PNG generation failed!"
@@ -211,9 +211,9 @@ jobs:
             echo ""
             echo "🎭 Generating SVG for: $file"
             
-            java -jar /tmp/plantuml.jar -tsvg "$file" -o "$output_abs" \
-            || echo "   WARNING: SVG generation command may have failed for $file (Exit Code: $?)" >&2
+            java -jar /tmp/plantuml.jar -tsvg "$file" -o "$output_abs"
             
+            png_exit_code=$?
             echo "📊 SVG generation exit code: $svg_exit_code"
             if [ -n "$svg_exit_code" ] && [ "$svg_exit_code" -ne 0 ]; then
               echo "❌ SVG generation failed! Log output:"
