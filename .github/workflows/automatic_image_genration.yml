@@ -1,155 +1,165 @@
-name: Automatic Image Generation
+name: Generate Images from PlantUML and drawio
 
 on:
   push:
     paths:
       - 'src/plantuml/**'
       - 'src/drawio/**'
-      - '.github/workflows/generate_images.yml'
+    branches: 
+      - main
+      - github_action_test
   workflow_dispatch:
+
+env:
+  OUTPUT_DIR: images        
+  PLANTUML_PREFIX: uml
+  DRAWIO_PREFIX: diagram
 
 jobs:
   generate_images:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
       # fetch-depth: 0 # Not strictly needed anymore, default checkout is usually fine
 
-    - name: Set up JDK 11
-      uses: actions/setup-java@v3
-      with:
-        distribution: 'temurin'
-        java-version: '11'
+      - name: Set up JDK 11
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '11'
 
-    - name: Install dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y --no-install-recommends graphviz xvfb
-        # Install drawio via snap
-        sudo snap remove drawio
-        sudo snap install drawio
-        # Wait a moment for snap changes to propagate if needed
-        sleep 5
+      - name: Create output directory
+        run: |
+          mkdir -p ${{ env.OUTPUT_DIR }}
+          echo "📁 Output directory: ${{ env.OUTPUT_DIR }}"
 
-    - name: Download PlantUML jar
-      run: |
-        wget https://github.com/plantuml/plantuml/releases/latest/download/plantuml.jar -O /tmp/plantuml.jar
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends graphviz xvfb
+          # Install drawio via snap
+          sudo snap remove drawio
+          sudo snap install drawio
+          # Wait a moment for snap changes to propagate
+          sleep 5
 
-    - name: Generate images from PlantUML files
-      id: generate_plantuml
-      run: |
-        set -e
-        GENERATED_COUNT=0
-        shopt -s nullglob # Ensure loop doesn't run if find returns nothing
-        while IFS= read -r -d $'\0' file; do
-          echo "Checking PlantUML file: $file"
-          output_dir=$(dirname "$file" | sed 's|^src/plantuml|images|')
-          image_base=$(basename "$file" .puml)
-          png_path="$output_dir/$image_base.png"
-          svg_path="$output_dir/$image_base.svg"
+      - name: Cache PlantUML
+        uses: actions/cache@v3
+        with:
+          path: /tmp/plantuml.jar
+          key: plantuml-v1.2025.3
 
-          # Regenerate if PNG or SVG is missing, OR if the source file is newer than PNG or SVG
-          if [ ! -f "$png_path" ] || [ ! -f "$svg_path" ] || { [ -f "$png_path" ] && [ "$file" -nt "$png_path" ]; } || { [ -f "$svg_path" ] && [ "$file" -nt "$svg_path" ]; }; then
-            echo "-> Generating images for $file"
-            mkdir -p "$output_dir"
-            # Run generation commands
-            java -jar /tmp/plantuml.jar -tpng "$file" -o "$output_dir"
-            java -jar /tmp/plantuml.jar -tsvg "$file" -o "$output_dir"
-            # Verify files were created (for debugging)
-            if [ -f "$png_path" ] && [ -f "$svg_path" ]; then
-               echo "   Successfully generated: $png_path and $svg_path"
-               GENERATED_COUNT=$((GENERATED_COUNT + 1))
-            else
-               echo "   ERROR: Failed to generate images for $file" >&2
-               # Consider failing the step: exit 1
-            fi
+      - name: Download PlantUML jar
+        run: |
+          if [ ! -f /tmp/plantuml.jar ]; then
+            echo "Downloading PlantUML..."
+            wget --timeout=300 --tries=3 --progress=dot:giga \
+              https://github.com/plantuml/plantuml/releases/latest/download/plantuml.jar \
+              -O /tmp/plantuml.jar
           else
-            echo "-> Images for $file are up-to-date."
+            echo "PlantUML already cached"
           fi
-        done < <(find src/plantuml -name "*.puml" -print0) # Use process substitution
+          # Verify download
+          if [ ! -f /tmp/plantuml.jar ] || [ ! -s /tmp/plantuml.jar ]; then
+            echo "PlantUML download failed, trying alternative..."
+            sudo apt-get install -y plantuml
+            cp /usr/share/plantuml/plantuml.jar /tmp/plantuml.jar 2>/dev/null || true
+          fi
 
-        echo "Generated/Updated $GENERATED_COUNT PlantUML image sets."
-        # Set output flag if any images were generated
-        if [ "$GENERATED_COUNT" -gt 0 ]; then
-          echo "plantuml_generated=true" >> $GITHUB_OUTPUT
-        else
-          echo "plantuml_generated=false" >> $GITHUB_OUTPUT
-        fi
-      shell: bash # Explicitly use bash for process substitution
-
-    - name: Generate images from drawio files
-      id: generate_drawio
-      run: |
-        set -e
-        GENERATED_COUNT=0
-        shopt -s nullglob # Ensure loop doesn't run if find returns nothing
-        while IFS= read -r -d $'\0' file; do
-          echo "Checking drawio file: $file"
-          output_dir=$(dirname "$file" | sed 's|^src/drawio|images|')
-          image_base=$(basename "$file" .drawio)
-          png_path="$output_dir/$image_base.png"
-          svg_path="$output_dir/$image_base.svg"
-
-          # Regenerate if PNG or SVG is missing, OR if the source file is newer than PNG or SVG
-          if [ ! -f "$png_path" ] || [ ! -f "$svg_path" ] || { [ -f "$png_path" ] && [ "$file" -nt "$png_path" ]; } || { [ -f "$svg_path" ] && [ "$file" -nt "$svg_path" ]; }; then
-            echo "-> Generating images for $file"
-            mkdir -p "$output_dir"
-            # Add --no-sandbox and try disabling gpu explicitly for drawio CLI in xvfb
-            xvfb-run --auto-servernum drawio --no-sandbox --disable-gpu --export --format png --output "$png_path" "$file"
-            xvfb-run --auto-servernum drawio --no-sandbox --disable-gpu --export --format svg --output "$svg_path" "$file"
-             # Verify files were created (for debugging)
-            if [ -f "$png_path" ] && [ -f "$svg_path" ]; then
-               echo "   Successfully generated: $png_path and $svg_path"
-               GENERATED_COUNT=$((GENERATED_COUNT + 1))
+      - name: Generate images from PlantUML files
+        id: generate_plantuml
+        continue-on-error: true
+        run: |
+          echo "=== Generating PlantUML images ==="
+          puml_files=$(find src/plantuml -name "*.puml" -o -name "*.plantuml" 2>/dev/null | head -20)
+          if [ -z "$puml_files" ]; then
+            echo "No PlantUML files found in src/plantuml/"
+            exit 0
+          fi
+          
+          echo "Found PlantUML files:"
+          echo "$puml_files"
+          
+          for file in $puml_files; do
+            echo "Processing: $file"
+            base=$(basename "$file" | sed 's/\.[^.]*$//')
+            
+            # Generate PNG with prefix
+            if java -jar /tmp/plantuml.jar -tpng "$file" -o "${{ env.OUTPUT_DIR }}"; then
+              # Rename with prefix
+              if [ -f "${{ env.OUTPUT_DIR }}/${base}.png" ]; then
+                mv "${{ env.OUTPUT_DIR }}/${base}.png" "${{ env.OUTPUT_DIR }}/${{ env.PLANTUML_PREFIX }}-${base}.png"
+                echo "✅ Generated PNG: ${{ env.OUTPUT_DIR }}/${{ env.PLANTUML_PREFIX }}-${base}.png"
+              fi
             else
-               echo "   ERROR: Failed to generate images for $file" >&2
-               # Consider failing the step: exit 1
+              echo "❌ Failed to generate PNG for $file"
             fi
-          else
-            echo "-> Images for $file are up-to-date."
+            
+            # Generate SVG with prefix
+            if java -jar /tmp/plantuml.jar -tsvg "$file" -o "${{ env.OUTPUT_DIR }}"; then
+              # Rename with prefix
+              if [ -f "${{ env.OUTPUT_DIR }}/${base}.svg" ]; then
+                mv "${{ env.OUTPUT_DIR }}/${base}.svg" "${{ env.OUTPUT_DIR }}/${{ env.PLANTUML_PREFIX }}-${base}.svg"
+                echo "✅ Generated SVG: ${{ env.OUTPUT_DIR }}/${{ env.PLANTUML_PREFIX }}-${base}.svg"
+              fi
+            else
+              echo "❌ Failed to generate SVG for $file"
+            fi
+          done
+
+      - name: Generate images from drawio files
+        id: generate_drawio
+        continue-on-error: true
+        run: |
+          echo "=== Generating drawio images ==="
+          drawio_files=$(find src/drawio -name "*.drawio" -o -name "*.dio" 2>/dev/null | head -20)
+          if [ -z "$drawio_files" ]; then
+            echo "No drawio files found in src/drawio/"
+            exit 0
           fi
-        done < <(find src/drawio -name "*.drawio" -print0) # Use process substitution
+          
+          echo "Found drawio files:"
+          echo "$drawio_files"
+          
+          for file in $drawio_files; do
+            echo "Processing: $file"
+            base=$(basename "$file" | sed 's/\.[^.]*$//')
+            
+            # Generate PNG with prefix
+            if xvfb-run -a drawio --export --format png --output "${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}-${base}.png" "$file"; then
+              echo "✅ Generated PNG: ${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}-${base}.png"
+            else
+              echo "❌ Failed to generate PNG for $file"
+            fi
+            
+            # Generate SVG with prefix
+            if xvfb-run -a drawio --export --format svg --output "${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}-${base}.svg" "$file"; then
+              echo "✅ Generated SVG: ${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}-${base}.svg"
+            else
+              echo "❌ Failed to generate SVG for $file"
+            fi
+          done
 
-        echo "Generated/Updated $GENERATED_COUNT drawio image sets."
-        # Set output flag if any images were generated
-        if [ "$GENERATED_COUNT" -gt 0 ]; then
-          echo "drawio_generated=true" >> $GITHUB_OUTPUT
-        else
-          echo "drawio_generated=false" >> $GITHUB_OUTPUT
-        fi
-      shell: bash # Explicitly use bash for process substitution
+      - name: Show Git Status for Images
+        run: |
+          echo "=== Git Status ==="
+          git status
+          echo "=== Generated image files in ${{ env.OUTPUT_DIR }}/ ==="
+          find ${{ env.OUTPUT_DIR }} -name "*.png" -o -name "*.svg" 2>/dev/null | grep -E '\.(png|svg)$' | head -20
 
-    - name: Show Git Status for Images
-      # Run always to see the state before commit attempt
-      run: |
-        echo "--- Git Status for images directory ---"
-        git status --porcelain images || echo "No changes or untracked files in images directory."
-        echo "--- Listing images directory ---"
-        ls -R images || echo "Images folder does not exist or is empty."
-
-    - name: Commit and push generated images
-      # Use the outputs from the generation steps. Only proceed if something was potentially generated.
-      if: steps.generate_plantuml.outputs.plantuml_generated == 'true' || steps.generate_drawio.outputs.drawio_generated == 'true'
-      run: |
-        echo "Checking for changes in 'images' directory to commit..."
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-
-        # Stage ALL changes within the 'images' directory (new, modified, deleted)
-        git add images
-
-        # Check if there's anything staged within the 'images' pathspec
-        if git diff --staged --quiet -- images; then
-          echo "No staged changes detected in 'images' directory after 'git add'. Nothing to commit."
-          exit 0
-        fi
-
-        echo "Staged changes found. Committing..."
-        git commit -m "chore: Generate/update images from source files" -m "Generated by GitHub Action."
-
-        echo "Pushing changes..."
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit and push generated images
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git add ${{ env.OUTPUT_DIR }}/
+            git commit -m "Auto-generate images from PlantUML and drawio files"
+            git push
+            echo "✅ Images committed and pushed"
+          fi
