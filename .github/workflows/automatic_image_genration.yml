@@ -81,23 +81,23 @@ jobs:
             echo "Generating PNG for: $file"
             java -jar /tmp/plantuml.jar -v -tpng "$file" -o "$output_abs" 2>&1 | tee /tmp/plantuml.log
             
-            # Check if file was created
+            # Check if file was created and add uml_ prefix
             if [ -f "$output_abs/${base}.png" ]; then
-              mv "$output_abs/${base}.png" "$output_abs/${{ env.PLANTUML_PREFIX }}-${base}.png"
-              echo "✅ Generated PNG: ${{ env.PLANTUML_PREFIX }}-${base}.png"
+              mv "$output_abs/${base}.png" "$output_abs/${{ env.PLANTUML_PREFIX }}_${base}.png"
+              echo "✅ Generated PNG: ${{ env.PLANTUML_PREFIX }}_${base}.png"
             else
               echo "❌ PNG not created for $file"
               echo "PlantUML log:"
               cat /tmp/plantuml.log || true
             fi
             
-            # Generate SVG
+            # Generate SVG and add uml_ prefix
             echo "Generating SVG for: $file"
             java -jar /tmp/plantuml.jar -v -tsvg "$file" -o "$output_abs" 2>&1
             
             if [ -f "$output_abs/${base}.svg" ]; then
-              mv "$output_abs/${base}.svg" "$output_abs/${{ env.PLANTUML_PREFIX }}-${base}.svg"
-              echo "✅ Generated SVG: ${{ env.PLANTUML_PREFIX }}-${base}.svg"
+              mv "$output_abs/${base}.svg" "$output_abs/${{ env.PLANTUML_PREFIX }}_${base}.svg"
+              echo "✅ Generated SVG: ${{ env.PLANTUML_PREFIX }}_${base}.svg"
             else
               echo "❌ SVG not created for $file"
             fi
@@ -105,10 +105,51 @@ jobs:
             echo "--- Next file ---"
           done
 
-      - name: Simple Draw.io test (skip for now)
+      # Draw.io mit bewährter Docker-Lösung
+      - name: Generate Draw.io images
+        continue-on-error: true
         run: |
-          echo "=== Skipping Draw.io for debugging ==="
-          echo "Will focus on PlantUML first"
+          echo "=== Generating drawio images ==="
+          drawio_files=$(find src/drawio -name "*.drawio" -o -name "*.dio" 2>/dev/null)
+          if [ -z "$drawio_files" ]; then
+            echo "No drawio files found in src/drawio/"
+          else
+            echo "Found drawio files:"
+            echo "$drawio_files"
+            
+            for file in $drawio_files; do
+              echo "Processing: $file"
+              base=$(basename "$file" | sed 's/\.[^.]*$//')
+              
+              # Generate PNG using rlespinasse/drawio-export (bewährte Action)
+              docker run --rm \
+                -v $(pwd):/data \
+                rlespinasse/drawio-export:4.4.0 \
+                --format png \
+                --output "${{ env.OUTPUT_DIR }}" \
+                "$file"
+              
+              # Rename with diagram_ prefix
+              if [ -f "${{ env.OUTPUT_DIR }}/${base}.png" ]; then
+                mv "${{ env.OUTPUT_DIR }}/${base}.png" "${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}_${base}.png"
+                echo "✅ Generated PNG: ${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}_${base}.png"
+              fi
+              
+              # Generate SVG
+              docker run --rm \
+                -v $(pwd):/data \
+                rlespinasse/drawio-export:4.4.0 \
+                --format svg \
+                --output "${{ env.OUTPUT_DIR }}" \
+                "$file"
+              
+              # Rename with diagram_ prefix
+              if [ -f "${{ env.OUTPUT_DIR }}/${base}.svg" ]; then
+                mv "${{ env.OUTPUT_DIR }}/${base}.svg" "${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}_${base}.svg"
+                echo "✅ Generated SVG: ${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}_${base}.svg"
+              fi
+            done
+          fi
 
       - name: Show results
         run: |
@@ -117,14 +158,14 @@ jobs:
           echo "=== Git Status ==="
           git status
 
-      - name: Commit generated images (debug version)
+      - name: Commit generated images
         run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
           
           if [ -d "${{ env.OUTPUT_DIR }}" ] && [ "$(ls -A ${{ env.OUTPUT_DIR }})" ]; then
             git add ${{ env.OUTPUT_DIR }}/
-            git commit -m "🔧 Debug: Generate images test"
+            git commit -m "🖼️ Auto-generate images from PlantUML and drawio files"
             git push
             echo "✅ Images committed"
           else
