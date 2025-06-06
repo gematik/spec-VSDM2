@@ -183,12 +183,12 @@ jobs:
             echo ""
             echo "🖼️ Generating PNG for: $file"
             
-            java -jar /tmp/plantuml.jar -tpng -scale 4 "$file" -o "$output_abs" > /tmp/plantuml.log 2>&1
+            java -jar /tmp/plantuml.jar -verbose -tpng -scale 4 "$file" -o "$output_abs" > /tmp/plantuml.log 2>&1
             
             png_exit_code=$?
             # Logdatei anzeigen
             echo "📋 PlantUML Log Output:"
-            cat /tmp/plantuml.log | sed 's/^/  | /'
+            cat /tmp/plantuml-svg.log 2>/dev/null | sed 's/^/  | /' || echo "  | No log output available"cat /tmp/plantuml-svg.log 2>/dev/null | sed 's/^/  | /' || echo "  | No log output available"
 
             echo "📊 PNG generation exit code: $png_exit_code"
             if [ -n "$png_exit_code" ] && [ "$png_exit_code" -ne 0 ]; then
@@ -217,12 +217,12 @@ jobs:
             echo ""
             echo "🎭 Generating SVG for: $file"
             
-            java -jar /tmp/plantuml.jar -tsvg "$file" -o "$output_abs" > /tmp/plantuml.log 2>&1
+            java -jar /tmp/plantuml.jar -verbose -tsvg "$file" -o "$output_abs" > /tmp/plantuml.log 2>&1
             
             png_exit_code=$?
             # Logdatei anzeigen
             echo "📋 PlantUML Log Output:"
-            cat /tmp/plantuml.log | sed 's/^/  | /'
+            cat /tmp/plantuml-svg.log 2>/dev/null | sed 's/^/  | /' || echo "  | No log output available"
             
             echo "📊 SVG generation exit code: $svg_exit_code"
             if [ -n "$svg_exit_code" ] && [ "$svg_exit_code" -ne 0 ]; then
