@@ -179,24 +179,25 @@ jobs:
             head -5 "$file" | sed 's/^/  | /'
             echo "  | ..."
             
-            # Generate PNG with full debugging
+            # Generate PNG
             echo ""
             echo "🖼️ Generating PNG for: $file"
             
-            java -jar /tmp/plantuml.jar -v -tpng "$file" -o "$output_abs" -filename "${prefix_base}" > /tmp/plantuml-png.log 2>&1
-            png_exit_code=$?
+            java -jar /tmp/plantuml.jar -tpng -scale 4 "$file" -o "$output_abs" \
+            || echo "   WARNING: PNG generation command may have failed for $file (Exit Code: $?)" >&2
             
             echo "📊 PNG generation exit code: $png_exit_code"
             if [ $png_exit_code -ne 0 ]; then
-              echo "❌ PNG generation failed! Log output:"
-              cat /tmp/plantuml-png.log | sed 's/^/  | /'
+              echo "❌ PNG generation failed!
             else
               echo "✅ PNG generation command completed"
             fi
             
-            # Check what files were actually created
-            echo "📁 Files in output directory after PNG generation:"
-            ls -la "$output_abs"/ 2>/dev/null | sed 's/^/  | /' || echo "  | No output directory found"
+            # Rename with prefix
+            if [ -f "$output_abs/${base}.png" ]; then
+              mv "$output_abs/${base}.png" "$output_abs/${prefix_base}.png"
+              echo "✅ Generated PNG: $output_abs/${prefix_base}.png"
+            fi
             
             # Look for PNG files
             if [ -f "$output_abs/${prefix_base}.png" ]; then
@@ -210,8 +211,8 @@ jobs:
             echo ""
             echo "🎭 Generating SVG for: $file"
             
-            java -jar /tmp/plantuml.jar -v -tsvg "$file" -o "$output_abs" -filename "$prefix_base" > /tmp/plantuml-svg.log 2>&1
-            svg_exit_code=$?
+            java -jar /tmp/plantuml.jar -tsvg "$file" -o "$output_abs" \
+            || echo "   WARNING: SVG generation command may have failed for $file (Exit Code: $?)" >&2
             
             echo "📊 SVG generation exit code: $svg_exit_code"
             if [ $svg_exit_code -ne 0 ]; then
@@ -221,6 +222,12 @@ jobs:
               echo "✅ SVG generation command completed"
             fi
             
+            # Rename with prefix
+            if [ -f "$output_abs/${base}.svg" ]; then
+              mv "$output_abs/${base}.svg" "$output_abs/${prefix_base}.svg"
+              echo "✅ Generated SVG: $output_abs/${prefix_base}.svg"
+            fi
+
             # Check for SVG files
             if [ -f "$output_abs/${prefix_base}.svg" ]; then
               echo "✅ Generated SVG: ${prefix_base}.svg"
