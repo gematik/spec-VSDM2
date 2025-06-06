@@ -182,8 +182,6 @@ jobs:
             # Generate PNG with full debugging
             echo ""
             echo "🖼️ Generating PNG for: $file"
-            echo "📜 Command: java -jar /tmp/plantuml.jar -v -tpng "$file" -o "$output_abs" -filename "${prefix_base}" > /tmp/plantuml-png.log 2>&1
-            png_exit_code=$?
             
             java -jar /tmp/plantuml.jar -v -tpng "$file" -o "$output_abs" -filename "${prefix_base}" > /tmp/plantuml-png.log 2>&1
             png_exit_code=$?
@@ -210,8 +208,6 @@ jobs:
             # Generate SVG with full debugging
             echo ""
             echo "🎭 Generating SVG for: $file"
-            echo "📜 Command: java -jar /tmp/plantuml.jar -v -tsvg "$file" -o "$output_abs" -filename "$prefix_base" > /tmp/plantuml-svg.log 2>&1
-            svg_exit_code=$?
             
             java -jar /tmp/plantuml.jar -v -tsvg "$file" -o "$output_abs" -filename "$prefix_base" > /tmp/plantuml-svg.log 2>&1
             svg_exit_code=$?
@@ -286,17 +282,21 @@ jobs:
               -v $(pwd):/data \
               rlespinasse/drawio-export:4.4.0 \
               --format png \
-              --output "${{ env.OUTPUT_DIR }}/"$prefix_base" \
+              --output "${{ env.OUTPUT_DIR }} \
+              "$file" \
               2>&1 | sed 's/^/  | /'
             
             png_exit_code=${PIPESTATUS[0]}
             echo "📊 Docker PNG exit code: $png_exit_code"
             
-            # Check for file
-            if [ -f "${{ env.OUTPUT_DIR }}/${prefix_base}.png" ]; then
-              echo "✅ Generated PNG: ${prefix_base}.png"
+            # Check and rename PNG
+            if [ -f "${{ env.OUTPUT_DIR }}/${base}.png" ]; then
+              mv "${{ env.OUTPUT_DIR }}/${base}.png" "${{ env.OUTPUT_DIR }}/${prefix_base}.png"
+              echo "✅ Generated PNG: ${{ env.OUTPUT_DIR }}/${prefix_base}.png"
             else
-              echo "❌ PNG not created: ${prefix_base}.png"
+              echo "❌ PNG not created: ${{ env.OUTPUT_DIR }}/${prefix_base}.png"
+              echo "📁 Current output directory contents:"
+              ls -la "${{ env.OUTPUT_DIR }}/" | sed 's/^/  | /'
             fi
             
             # Generate SVG with debugging
@@ -307,17 +307,21 @@ jobs:
               -v $(pwd):/data \
               rlespinasse/drawio-export:4.4.0 \
               --format svg \
-              --output "${{ env.OUTPUT_DIR }}/"$prefix_base" \
+              --output "${{ env.OUTPUT_DIR }} \
+              "$file" \
               2>&1 | sed 's/^/  | /'
             
             svg_exit_code=${PIPESTATUS[0]}
             echo "📊 Docker SVG exit code: $svg_exit_code"
             
-            # Check for file
-            if [ -f "${{ env.OUTPUT_DIR }}/${prefix_base}.svg" ]; then
-              echo "✅ Generated SVG: ${prefix_base}.svg (already correctly prefixed)"
+            # Check and rename SVG
+            if [ -f "${{ env.OUTPUT_DIR }}/${base}.svg" ]; then
+              mv "${{ env.OUTPUT_DIR }}/${base}.svg" "${{ env.OUTPUT_DIR }}/${prefix_base}.svg"
+              echo "✅ Generated SVG: ${{ env.OUTPUT_DIR }}/${prefix_base}.svg"
             else
-              echo "❌ SVG not created: ${prefix_base}.svg"
+              echo "❌ SVG not created: ${{ env.OUTPUT_DIR }}/${prefix_base}.svg"
+              echo "📁 Current output directory contents:"
+              ls -la "${{ env.OUTPUT_DIR }}/" | sed 's/^/  | /'
             fi
             
             echo "📁 Final output directory state:"
