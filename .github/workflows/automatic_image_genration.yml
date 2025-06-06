@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 env:
-  OUTPUT_DIR: images        
+  OUTPUT_DIR: images
   PLANTUML_PREFIX: uml
   DRAWIO_PREFIX: diagram
 
@@ -23,143 +23,138 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      # fetch-depth: 0 # Not strictly needed anymore, default checkout is usually fine
-
-      - name: Set up JDK 11
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: '11'
 
       - name: Create output directory
         run: |
           mkdir -p ${{ env.OUTPUT_DIR }}
           echo "📁 Output directory: ${{ env.OUTPUT_DIR }}"
 
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends graphviz xvfb
-          # Install drawio via snap
-          sudo snap remove drawio
-          sudo snap install drawio
-          # Wait a moment for snap changes to propagate
-          sleep 5
-
-      - name: Cache PlantUML
-        uses: actions/cache@v3
+      # PlantUML mit Java Setup (zuverlässiger als externe Action)
+      - name: Set up JDK 11
+        uses: actions/setup-java@v4
         with:
-          path: /tmp/plantuml.jar
-          key: plantuml-v1.2025.3
+          distribution: 'temurin'
+          java-version: '11'
 
-      - name: Download PlantUML jar
+      - name: Download and setup PlantUML
         run: |
-          if [ ! -f /tmp/plantuml.jar ]; then
-            echo "Downloading PlantUML..."
-            wget --timeout=300 --tries=3 --progress=dot:giga \
-              https://github.com/plantuml/plantuml/releases/latest/download/plantuml.jar \
-              -O /tmp/plantuml.jar
-          else
-            echo "PlantUML already cached"
-          fi
-          # Verify download
-          if [ ! -f /tmp/plantuml.jar ] || [ ! -s /tmp/plantuml.jar ]; then
-            echo "PlantUML download failed, trying alternative..."
-            sudo apt-get install -y plantuml
-            cp /usr/share/plantuml/plantuml.jar /tmp/plantuml.jar 2>/dev/null || true
-          fi
+          wget https://github.com/plantuml/plantuml/releases/latest/download/plantuml.jar -O /tmp/plantuml.jar
+          echo "PlantUML downloaded successfully"
 
-      - name: Generate images from PlantUML files
-        id: generate_plantuml
+      - name: Generate PlantUML images
         continue-on-error: true
         run: |
           echo "=== Generating PlantUML images ==="
-          puml_files=$(find src/plantuml -name "*.puml" -o -name "*.plantuml" 2>/dev/null | head -20)
+          puml_files=$(find src/plantuml -name "*.puml" -o -name "*.plantuml" 2>/dev/null)
           if [ -z "$puml_files" ]; then
             echo "No PlantUML files found in src/plantuml/"
-            exit 0
+          else
+            echo "Found PlantUML files:"
+            echo "$puml_files"
+            
+            for file in $puml_files; do
+              echo "Processing: $file"
+              base=$(basename "$file" | sed 's/\.[^.]*$//')
+              
+              # Generate PNG
+              if java -jar /tmp/plantuml.jar -tpng "$file" -o "${{ env.OUTPUT_DIR }}"; then
+                if [ -f "${{ env.OUTPUT_DIR }}/${base}.png" ]; then
+                  mv "${{ env.OUTPUT_DIR }}/${base}.png" "${{ env.OUTPUT_DIR }}/${{ env.PLANTUML_PREFIX }}-${base}.png"
+                  echo "✅ Generated PNG: ${{ env.OUTPUT_DIR }}/${{ env.PLANTUML_PREFIX }}-${base}.png"
+                fi
+              else
+                echo "❌ Failed to generate PNG for $file"
+              fi
+              
+              # Generate SVG
+              if java -jar /tmp/plantuml.jar -tsvg "$file" -o "${{ env.OUTPUT_DIR }}"; then
+                if [ -f "${{ env.OUTPUT_DIR }}/${base}.svg" ]; then
+                  mv "${{ env.OUTPUT_DIR }}/${base}.svg" "${{ env.OUTPUT_DIR }}/${{ env.PLANTUML_PREFIX }}-${base}.svg"
+                  echo "✅ Generated SVG: ${{ env.OUTPUT_DIR }}/${{ env.PLANTUML_PREFIX }}-${base}.svg"
+                fi
+              else
+                echo "❌ Failed to generate SVG for $file"
+              fi
+            done
           fi
-          
-          echo "Found PlantUML files:"
-          echo "$puml_files"
-          
-          for file in $puml_files; do
-            echo "Processing: $file"
-            base=$(basename "$file" | sed 's/\.[^.]*$//')
-            
-            # Generate PNG with prefix
-            if java -jar /tmp/plantuml.jar -tpng "$file" -o "${{ env.OUTPUT_DIR }}"; then
-              # Rename with prefix
-              if [ -f "${{ env.OUTPUT_DIR }}/${base}.png" ]; then
-                mv "${{ env.OUTPUT_DIR }}/${base}.png" "${{ env.OUTPUT_DIR }}/${{ env.PLANTUML_PREFIX }}-${base}.png"
-                echo "✅ Generated PNG: ${{ env.OUTPUT_DIR }}/${{ env.PLANTUML_PREFIX }}-${base}.png"
-              fi
-            else
-              echo "❌ Failed to generate PNG for $file"
-            fi
-            
-            # Generate SVG with prefix
-            if java -jar /tmp/plantuml.jar -tsvg "$file" -o "${{ env.OUTPUT_DIR }}"; then
-              # Rename with prefix
-              if [ -f "${{ env.OUTPUT_DIR }}/${base}.svg" ]; then
-                mv "${{ env.OUTPUT_DIR }}/${base}.svg" "${{ env.OUTPUT_DIR }}/${{ env.PLANTUML_PREFIX }}-${base}.svg"
-                echo "✅ Generated SVG: ${{ env.OUTPUT_DIR }}/${{ env.PLANTUML_PREFIX }}-${base}.svg"
-              fi
-            else
-              echo "❌ Failed to generate SVG for $file"
-            fi
-          done
 
-      - name: Generate images from drawio files
-        id: generate_drawio
+      # Draw.io mit bewährter Docker-Lösung
+      - name: Generate Draw.io images
         continue-on-error: true
         run: |
           echo "=== Generating drawio images ==="
-          drawio_files=$(find src/drawio -name "*.drawio" -o -name "*.dio" 2>/dev/null | head -20)
+          drawio_files=$(find src/drawio -name "*.drawio" -o -name "*.dio" 2>/dev/null)
           if [ -z "$drawio_files" ]; then
             echo "No drawio files found in src/drawio/"
-            exit 0
+          else
+            echo "Found drawio files:"
+            echo "$drawio_files"
+            
+            for file in $drawio_files; do
+              echo "Processing: $file"
+              base=$(basename "$file" | sed 's/\.[^.]*$//')
+              
+              # Generate PNG using rlespinasse/drawio-export (bewährte Action)
+              docker run --rm \
+                -v $(pwd):/data \
+                rlespinasse/drawio-export:4.4.0 \
+                --format png \
+                --output "${{ env.OUTPUT_DIR }}" \
+                "$file"
+              
+              # Rename with prefix
+              if [ -f "${{ env.OUTPUT_DIR }}/${base}.png" ]; then
+                mv "${{ env.OUTPUT_DIR }}/${base}.png" "${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}-${base}.png"
+                echo "✅ Generated PNG: ${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}-${base}.png"
+              fi
+              
+              # Generate SVG
+              docker run --rm \
+                -v $(pwd):/data \
+                rlespinasse/drawio-export:4.4.0 \
+                --format svg \
+                --output "${{ env.OUTPUT_DIR }}" \
+                "$file"
+              
+              # Rename with prefix
+              if [ -f "${{ env.OUTPUT_DIR }}/${base}.svg" ]; then
+                mv "${{ env.OUTPUT_DIR }}/${base}.svg" "${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}-${base}.svg"
+                echo "✅ Generated SVG: ${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}-${base}.svg"
+              fi
+            done
           fi
-          
-          echo "Found drawio files:"
-          echo "$drawio_files"
-          
-          for file in $drawio_files; do
-            echo "Processing: $file"
-            base=$(basename "$file" | sed 's/\.[^.]*$//')
-            
-            # Generate PNG with prefix
-            if xvfb-run -a drawio --export --format png --output "${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}-${base}.png" "$file"; then
-              echo "✅ Generated PNG: ${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}-${base}.png"
-            else
-              echo "❌ Failed to generate PNG for $file"
-            fi
-            
-            # Generate SVG with prefix
-            if xvfb-run -a drawio --export --format svg --output "${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}-${base}.svg" "$file"; then
-              echo "✅ Generated SVG: ${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}-${base}.svg"
-            else
-              echo "❌ Failed to generate SVG for $file"
-            fi
-          done
 
       - name: Show Git Status for Images
         run: |
           echo "=== Git Status ==="
           git status
           echo "=== Generated image files in ${{ env.OUTPUT_DIR }}/ ==="
-          find ${{ env.OUTPUT_DIR }} -name "*.png" -o -name "*.svg" 2>/dev/null | grep -E '\.(png|svg)$' | head -20
+          find ${{ env.OUTPUT_DIR }} -name "*.png" -o -name "*.svg" 2>/dev/null | head -20
+          echo "=== Total images generated ==="
+          find ${{ env.OUTPUT_DIR }} -name "*.png" -o -name "*.svg" 2>/dev/null | wc -l
 
       - name: Commit and push generated images
         run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
           
-          if git diff --quiet && git diff --staged --quiet; then
-            echo "No changes to commit"
+          image_count=$(find ${{ env.OUTPUT_DIR }} -name "*.png" -o -name "*.svg" 2>/dev/null | wc -l)
+          echo "Found $image_count generated images"
+          
+          if [ "$image_count" -eq 0 ]; then
+            echo "No images to commit"
+            exit 0
+          fi
+          
+          git add ${{ env.OUTPUT_DIR }}/
+          if git diff --staged --quiet; then
+            echo "No changes staged for commit"
           else
-            git add ${{ env.OUTPUT_DIR }}/
-            git commit -m "Auto-generate images from PlantUML and drawio files"
+            git commit -m "🖼️ Auto-generate $image_count images
+
+PlantUML: ${{ env.PLANTUML_PREFIX }}-*.{png,svg}
+Draw.io: ${{ env.DRAWIO_PREFIX }}-*.{png,svg}
+Generated: $(date)"
             git push
-            echo "✅ Images committed and pushed"
+            echo "✅ $image_count images committed and pushed"
           fi
