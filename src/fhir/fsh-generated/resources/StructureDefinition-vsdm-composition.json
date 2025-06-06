@@ -62,32 +62,28 @@
             "severity": "error",
             "human": "If the resource is contained in another resource, it SHALL NOT contain nested Resources",
             "expression": "contained.contained.empty()",
-            "xpath": "not(parent::f:contained and f:contained)",
-            "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
+            "xpath": "not(parent::f:contained and f:contained)"
           },
           {
             "key": "dom-3",
             "severity": "error",
             "human": "If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource",
             "expression": "contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()",
-            "xpath": "not(exists(for $id in f:contained/*/f:id/@value return $contained[not(parent::*/descendant::f:reference/@value=concat('#', $contained/*/id/@value) or descendant::f:reference[@value='#'])]))",
-            "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
+            "xpath": "not(exists(for $id in f:contained/*/f:id/@value return $contained[not(parent::*/descendant::f:reference/@value=concat('#', $contained/*/id/@value) or descendant::f:reference[@value='#'])]))"
           },
           {
             "key": "dom-4",
             "severity": "error",
             "human": "If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated",
             "expression": "contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()",
-            "xpath": "not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))",
-            "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
+            "xpath": "not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))"
           },
           {
             "key": "dom-5",
             "severity": "error",
             "human": "If a resource is contained in another resource, it SHALL NOT have a security label",
             "expression": "contained.meta.security.empty()",
-            "xpath": "not(exists(f:contained/*/f:meta/f:security))",
-            "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
+            "xpath": "not(exists(f:contained/*/f:meta/f:security))"
           },
           {
             "extension": [
@@ -104,8 +100,7 @@
             "severity": "warning",
             "human": "A resource should have narrative for robust management",
             "expression": "text.`div`.exists()",
-            "xpath": "exists(f:text/h:div)",
-            "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
+            "xpath": "exists(f:text/h:div)"
           }
         ],
         "isModifier": false,
@@ -414,6 +409,16 @@
       },
       {
         "id": "Composition.meta.security",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.meta.security",
         "short": "Security Labels applied to this resource",
         "definition": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
@@ -429,6 +434,9 @@
           {
             "code": "Coding"
           }
+        ],
+        "condition": [
+          "ele-1"
         ],
         "constraint": [
           {
@@ -456,10 +464,38 @@
           "strength": "extensible",
           "description": "Security Labels from the Healthcare Privacy and Security Classification System.",
           "valueSet": "http://hl7.org/fhir/ValueSet/security-labels"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "v2",
+            "map": "CE/CNE/CWE subset one of the sets of component 1-3 or 4-6"
+          },
+          {
+            "identity": "rim",
+            "map": "CV"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding rdfs:subClassOf dt:CDCoding"
+          }
+        ]
       },
       {
         "id": "Composition.meta.tag",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.meta.tag",
         "short": "Tags applied to this resource",
         "definition": "Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
@@ -475,6 +511,9 @@
           {
             "code": "Coding"
           }
+        ],
+        "condition": [
+          "ele-1"
         ],
         "constraint": [
           {
@@ -498,7 +537,25 @@
           "strength": "example",
           "description": "Codes that represent various types of tags, commonly workflow-related; e.g. \"Needs review by Dr. Jones\".",
           "valueSet": "http://hl7.org/fhir/ValueSet/common-tags"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "v2",
+            "map": "CE/CNE/CWE subset one of the sets of component 1-3 or 4-6"
+          },
+          {
+            "identity": "rim",
+            "map": "CV"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding rdfs:subClassOf dt:CDCoding"
+          }
+        ]
       },
       {
         "id": "Composition.implicitRules",
@@ -667,6 +724,7 @@
               "path": "url"
             }
           ],
+          "description": "Extensions are always sliced by (at least) url",
           "rules": "closed"
         },
         "short": "Additional content defined by implementations",
@@ -718,6 +776,16 @@
       {
         "id": "Composition.modifierExtension",
         "path": "Composition.modifierExtension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -768,6 +836,16 @@
       },
       {
         "id": "Composition.identifier",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.identifier",
         "short": "Version-independent identifier for the Composition",
         "definition": "A version-independent identifier for the Composition. This identifier stays constant as the composition is changed over time.",
@@ -784,6 +862,9 @@
             "code": "Identifier"
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -797,6 +878,22 @@
         "isModifier": false,
         "isSummary": true,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "v2",
+            "map": "CX / EI (occasionally, more often EI maps to a resource id or a URL)"
+          },
+          {
+            "identity": "rim",
+            "map": "II - The Identifier class is a little looser than the v3 type II because it allows URIs as well as registered OIDs or GUIDs.  Also maps to Role[classCode=IDENT]"
+          },
+          {
+            "identity": "servd",
+            "map": "Identifier"
+          },
           {
             "identity": "workflow",
             "map": "Event.identifier"
@@ -889,6 +986,16 @@
       },
       {
         "id": "Composition.type",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.type",
         "short": "Kind of composition (LOINC if possible)",
         "definition": "Specifies the particular kind of composition (e.g. History and Physical, Discharge Summary, Progress Note). This usually equates to the purpose of making the composition.",
@@ -905,6 +1012,9 @@
           {
             "code": "CodeableConcept"
           }
+        ],
+        "condition": [
+          "ele-1"
         ],
         "constraint": [
           {
@@ -931,6 +1041,22 @@
           "valueSet": "http://hl7.org/fhir/ValueSet/doc-typecodes"
         },
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "v2",
+            "map": "CE/CNE/CWE"
+          },
+          {
+            "identity": "rim",
+            "map": "CD"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+          },
           {
             "identity": "workflow",
             "map": "Event.code"
@@ -1049,6 +1175,16 @@
       },
       {
         "id": "Composition.type.coding",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.type.coding",
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
@@ -1071,6 +1207,9 @@
           "system": "http://loinc.org",
           "display": "Patient data Document"
         },
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -1084,6 +1223,22 @@
         "isModifier": false,
         "isSummary": true,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "v2",
+            "map": "CE/CNE/CWE subset one of the sets of component 1-3 or 4-6"
+          },
+          {
+            "identity": "rim",
+            "map": "CV"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding rdfs:subClassOf dt:CDCoding"
+          },
           {
             "identity": "v2",
             "map": "C*E.1-8, C*E.10-22"
@@ -1152,6 +1307,16 @@
       },
       {
         "id": "Composition.category",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.category",
         "short": "Categorization of Composition",
         "definition": "A categorization for the type of the composition - helps for indexing and searching. This may be implied by or derived from the code specified in the Composition Type.",
@@ -1168,6 +1333,9 @@
           {
             "code": "CodeableConcept"
           }
+        ],
+        "condition": [
+          "ele-1"
         ],
         "constraint": [
           {
@@ -1194,6 +1362,22 @@
         },
         "mapping": [
           {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "v2",
+            "map": "CE/CNE/CWE"
+          },
+          {
+            "identity": "rim",
+            "map": "CD"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+          },
+          {
             "identity": "workflow",
             "map": "Event.subject"
           },
@@ -1217,6 +1401,16 @@
       },
       {
         "id": "Composition.subject",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.subject",
         "short": "Who and/or what the composition is about",
         "definition": "Who or what the composition is about. The composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).",
@@ -1237,6 +1431,9 @@
             ]
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -1245,11 +1442,27 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ref-1",
+            "severity": "error",
+            "human": "SHALL have a contained resource if a local reference is provided",
+            "expression": "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
+            "xpath": "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Reference"
           }
         ],
         "isModifier": false,
         "isSummary": true,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "The target of a resource reference is a RIM entry point (Act, Role, or Entity)"
+          },
           {
             "identity": "w5",
             "map": "FiveWs.subject[x]"
@@ -1274,9 +1487,20 @@
       },
       {
         "id": "Composition.encounter",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.encounter",
         "short": "Context of the Composition",
         "definition": "Describes the clinical encounter or type of care this documentation is associated with.",
+        "comment": "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.",
         "requirements": "Provides context for the composition and supports searching.",
         "min": 0,
         "max": "1",
@@ -1293,6 +1517,9 @@
             ]
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -1301,11 +1528,27 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ref-1",
+            "severity": "error",
+            "human": "SHALL have a contained resource if a local reference is provided",
+            "expression": "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
+            "xpath": "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Reference"
           }
         ],
         "isModifier": false,
         "isSummary": true,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "The target of a resource reference is a RIM entry point (Act, Role, or Entity)"
+          },
           {
             "identity": "workflow",
             "map": "Event.context"
@@ -1385,9 +1628,20 @@
       },
       {
         "id": "Composition.author",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.author",
         "short": "Who and/or what authored the composition",
         "definition": "Identifies who is responsible for the information in the composition, not necessarily who typed it in.",
+        "comment": "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.",
         "requirements": "Identifies who is responsible for the content.",
         "min": 1,
         "max": "*",
@@ -1400,14 +1654,12 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-              "http://hl7.org/fhir/StructureDefinition/Device",
-              "http://hl7.org/fhir/StructureDefinition/Patient",
-              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-              "http://hl7.org/fhir/StructureDefinition/Organization"
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraeger"
             ]
           }
+        ],
+        "condition": [
+          "ele-1"
         ],
         "constraint": [
           {
@@ -1417,11 +1669,27 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ref-1",
+            "severity": "error",
+            "human": "SHALL have a contained resource if a local reference is provided",
+            "expression": "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
+            "xpath": "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Reference"
           }
         ],
         "isModifier": false,
         "isSummary": true,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "The target of a resource reference is a RIM entry point (Act, Role, or Entity)"
+          },
           {
             "identity": "workflow",
             "map": "Event.performer"
@@ -1441,271 +1709,6 @@
           {
             "identity": "fhirdocumentreference",
             "map": "DocumentReference.agent"
-          }
-        ]
-      },
-      {
-        "id": "Composition.author.id",
-        "path": "Composition.author.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "Unique id for inter-element referencing",
-        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "http://hl7.org/fhirpath/System.String",
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "string"
-              }
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Composition.author.extension",
-        "path": "Composition.author.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          },
-          {
-            "key": "ext-1",
-            "severity": "error",
-            "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Composition.author.reference",
-        "path": "Composition.author.reference",
-        "short": "Literal reference, Relative, internal or absolute URL",
-        "definition": "A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources.",
-        "comment": "Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure \"/[type]/[id]\" then it should be assumed that the reference is to a FHIR RESTful server.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Reference.reference",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "condition": [
-          "ref-1"
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ]
-      },
-      {
-        "id": "Composition.author.type",
-        "path": "Composition.author.type",
-        "short": "Type the reference refers to (e.g. \"Patient\")",
-        "definition": "The expected type of the target of the reference. If both Reference.type and Reference.reference are populated and Reference.reference is a FHIR URL, both SHALL be consistent.\n\nThe type is the Canonical URL of Resource Definition that is the type this reference refers to. References are URLs that are relative to http://hl7.org/fhir/StructureDefinition/ e.g. \"Patient\" is a reference to http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only allowed for logical models (and can only be used in references in logical models, not resources).",
-        "comment": "This element is used to indicate the type of  the target of the reference. This may be used which ever of the other elements are populated (or not). In some cases, the type of the target may be determined by inspection of the reference (e.g. a RESTful URL) or by resolving the target of the reference; if both the type and a reference is provided, the reference SHALL resolve to a resource of the same type as that specified.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Reference.type",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "uri"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "FHIRResourceTypeExt"
-            }
-          ],
-          "strength": "extensible",
-          "description": "Aa resource (or, for logical models, the URI of the logical model).",
-          "valueSet": "http://hl7.org/fhir/ValueSet/resource-types"
-        },
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ]
-      },
-      {
-        "id": "Composition.author.identifier",
-        "path": "Composition.author.identifier",
-        "short": "Logical reference, when literal reference is not known",
-        "definition": "An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference.",
-        "comment": "When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. \n\nWhen both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference\n\nApplications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it.\n\nReference is intended to point to a structure that can potentially be expressed as a FHIR resource, though there is no need for it to exist as an actual FHIR resource instance - except in as much as an application wishes to actual find the target of the reference. The content referred to be the identifier must meet the logical constraints implied by any limitations on what resource types are permitted for the reference.  For example, it would not be legitimate to send the identifier for a drug prescription if the type were Reference(Observation|DiagnosticReport).  One of the use-cases for Reference.identifier is the situation where no FHIR representation exists (where the type is Reference (Any).",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Reference.identifier",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-iknr"
-            ]
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".identifier"
-          }
-        ]
-      },
-      {
-        "id": "Composition.author.display",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "Composition.author.display",
-        "short": "Text alternative for the resource",
-        "definition": "Plain text narrative that identifies the resource in addition to the resource reference.",
-        "comment": "This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Reference.display",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
           }
         ]
       },
@@ -1812,6 +1815,16 @@
       },
       {
         "id": "Composition.attester",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.attester",
         "short": "Attests to accuracy of composition",
         "definition": "A participant who has attested to the accuracy of the composition/document.",
@@ -1829,6 +1842,9 @@
             "code": "BackboneElement"
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -1840,8 +1856,11 @@
           }
         ],
         "isModifier": false,
-        "isSummary": false,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
           {
             "identity": "rim",
             "map": ".participation[typeCode=\"AUTHEN\"].role[classCode=\"ASSIGNED\"]"
@@ -1894,6 +1913,16 @@
       {
         "id": "Composition.attester.extension",
         "path": "Composition.attester.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -2087,9 +2116,20 @@
       },
       {
         "id": "Composition.attester.party",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.attester.party",
         "short": "Who attested the composition",
         "definition": "Who attested the composition in the specified way.",
+        "comment": "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.",
         "requirements": "Identifies who has taken on the responsibility for accuracy of the composition content.",
         "min": 0,
         "max": "1",
@@ -2110,6 +2150,9 @@
             ]
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -2118,11 +2161,26 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ref-1",
+            "severity": "error",
+            "human": "SHALL have a contained resource if a local reference is provided",
+            "expression": "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
+            "xpath": "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Reference"
           }
         ],
         "isModifier": false,
-        "isSummary": false,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "The target of a resource reference is a RIM entry point (Act, Role, or Entity)"
+          },
           {
             "identity": "w5",
             "map": "FiveWs.witness"
@@ -2139,6 +2197,16 @@
       },
       {
         "id": "Composition.custodian",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.custodian",
         "short": "Organization which maintains the composition",
         "definition": "Identifies the organization or group who is responsible for ongoing maintenance of and access to the composition/document information.",
@@ -2159,6 +2227,9 @@
             ]
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -2167,11 +2238,27 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ref-1",
+            "severity": "error",
+            "human": "SHALL have a contained resource if a local reference is provided",
+            "expression": "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
+            "xpath": "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Reference"
           }
         ],
         "isModifier": false,
         "isSummary": true,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "The target of a resource reference is a RIM entry point (Act, Role, or Entity)"
+          },
           {
             "identity": "rim",
             "map": ".participation[typeCode=\"RCV\"].role[classCode=\"CUST\"].scoper[classCode=\"ORG\" and determinerCode=\"INST\"]"
@@ -2188,6 +2275,16 @@
       },
       {
         "id": "Composition.relatesTo",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.relatesTo",
         "short": "Relationships to other compositions/documents",
         "definition": "Relationships that this composition has with other compositions or documents that already exist.",
@@ -2204,6 +2301,9 @@
             "code": "BackboneElement"
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -2215,8 +2315,11 @@
           }
         ],
         "isModifier": false,
-        "isSummary": false,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
           {
             "identity": "rim",
             "map": ".outboundRelationship"
@@ -2269,6 +2372,16 @@
       {
         "id": "Composition.relatesTo.extension",
         "path": "Composition.relatesTo.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -2425,6 +2538,16 @@
       },
       {
         "id": "Composition.relatesTo.target[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.relatesTo.target[x]",
         "short": "Target of the relationship",
         "definition": "The target composition/document of this relationship.",
@@ -2446,6 +2569,9 @@
             ]
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -2457,8 +2583,11 @@
           }
         ],
         "isModifier": false,
-        "isSummary": false,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
           {
             "identity": "rim",
             "map": ".target[classCode=\"DOC\", moodCode=\"EVN\"].id"
@@ -2475,6 +2604,16 @@
       },
       {
         "id": "Composition.event",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.event",
         "short": "The clinical service(s) being documented",
         "definition": "The clinical service, such as a colonoscopy or an appendectomy, being documented.",
@@ -2492,6 +2631,9 @@
             "code": "BackboneElement"
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -2505,6 +2647,10 @@
         "isModifier": false,
         "isSummary": true,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
           {
             "identity": "rim",
             "map": "outboundRelationship[typeCode=\"SUBJ\"].target[classCode<'ACT']"
@@ -2557,6 +2703,16 @@
       {
         "id": "Composition.event.extension",
         "path": "Composition.event.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -2657,6 +2813,16 @@
       },
       {
         "id": "Composition.event.code",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.event.code",
         "short": "Code(s) that apply to the event being documented",
         "definition": "This list of codes represents the main clinical acts, such as a colonoscopy or an appendectomy, being documented. In some cases, the event is inherent in the typeCode, such as a \"History and Physical Report\" in which the procedure being documented is necessarily a \"History and Physical\" act.",
@@ -2672,6 +2838,9 @@
           {
             "code": "CodeableConcept"
           }
+        ],
+        "condition": [
+          "ele-1"
         ],
         "constraint": [
           {
@@ -2699,6 +2868,22 @@
         "mapping": [
           {
             "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "v2",
+            "map": "CE/CNE/CWE"
+          },
+          {
+            "identity": "rim",
+            "map": "CD"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+          },
+          {
+            "identity": "rim",
             "map": ".code"
           },
           {
@@ -2713,9 +2898,20 @@
       },
       {
         "id": "Composition.event.period",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.event.period",
         "short": "The period covered by the documentation",
         "definition": "The period of time covered by the documentation. There is no assertion that the documentation is a complete representation for this period, only that it documents events during this time.",
+        "comment": "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](datatypes.html#Duration).",
         "min": 0,
         "max": "1",
         "base": {
@@ -2728,6 +2924,9 @@
             "code": "Period"
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -2736,11 +2935,31 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "per-1",
+            "severity": "error",
+            "human": "If present, start SHALL have a lower value than end",
+            "expression": "start.hasValue().not() or end.hasValue().not() or (start <= end)",
+            "xpath": "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
+            "source": "http://hl7.org/fhir/StructureDefinition/Period"
           }
         ],
         "isModifier": false,
         "isSummary": true,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "v2",
+            "map": "DR"
+          },
+          {
+            "identity": "rim",
+            "map": "IVL<TS>[lowClosed=\"true\" and highClosed=\"true\"] or URG<TS>[lowClosed=\"true\" and highClosed=\"true\"]"
+          },
           {
             "identity": "rim",
             "map": ".effectiveTime"
@@ -2757,9 +2976,20 @@
       },
       {
         "id": "Composition.event.detail",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.event.detail",
         "short": "The event(s) being documented",
         "definition": "The description and/or reference of the event(s) being documented. For example, this could be used to document such a colonoscopy or an appendectomy.",
+        "comment": "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.",
         "min": 0,
         "max": "*",
         "base": {
@@ -2775,6 +3005,9 @@
             ]
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -2783,11 +3016,27 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ref-1",
+            "severity": "error",
+            "human": "SHALL have a contained resource if a local reference is provided",
+            "expression": "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
+            "xpath": "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Reference"
           }
         ],
         "isModifier": false,
         "isSummary": true,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "The target of a resource reference is a RIM entry point (Act, Role, or Entity)"
+          },
           {
             "identity": "rim",
             "map": ".outboundRelationship[typeCode=\"SUBJ\"].target"
@@ -2801,6 +3050,14 @@
       {
         "id": "Composition.section",
         "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
             "valueString": "Section"
@@ -2821,21 +3078,10 @@
             "code": "BackboneElement"
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
-          {
-            "key": "cmp-1",
-            "severity": "error",
-            "human": "A section must contain at least one of text, entries, or sub-sections",
-            "expression": "text.exists() or entry.exists() or section.exists()",
-            "xpath": "exists(f:text) or exists(f:entry) or exists(f:section)"
-          },
-          {
-            "key": "cmp-2",
-            "severity": "error",
-            "human": "A section can only have an emptyReason if it is empty",
-            "expression": "emptyReason.empty() or entry.empty()",
-            "xpath": "not(exists(f:emptyReason) and exists(f:entry))"
-          },
           {
             "key": "ele-1",
             "severity": "error",
@@ -2843,11 +3089,30 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "cmp-1",
+            "severity": "error",
+            "human": "A section must contain at least one of text, entries, or sub-sections",
+            "expression": "text.exists() or entry.exists() or section.exists()",
+            "xpath": "exists(f:text) or exists(f:entry) or exists(f:section)",
+            "source": "http://hl7.org/fhir/StructureDefinition/Composition"
+          },
+          {
+            "key": "cmp-2",
+            "severity": "error",
+            "human": "A section can only have an emptyReason if it is empty",
+            "expression": "emptyReason.empty() or entry.empty()",
+            "xpath": "not(exists(f:emptyReason) and exists(f:entry))",
+            "source": "http://hl7.org/fhir/StructureDefinition/Composition"
           }
         ],
         "isModifier": false,
-        "isSummary": false,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
           {
             "identity": "rim",
             "map": "./outboundRelationship[typeCode=\"COMP\" and isNormalActRelationship()]/target[moodCode=\"EVN\" and classCode=\"DOCSECT\" and isNormalAct]"
@@ -2896,6 +3161,16 @@
       {
         "id": "Composition.section.extension",
         "path": "Composition.section.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -3043,6 +3318,16 @@
       },
       {
         "id": "Composition.section.code",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.section.code",
         "short": "Classification of section (recommended)",
         "definition": "A code identifying the kind of content contained within the section. This must be consistent with the section title.",
@@ -3060,6 +3345,9 @@
             "code": "CodeableConcept"
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -3071,7 +3359,6 @@
           }
         ],
         "isModifier": false,
-        "isSummary": false,
         "binding": {
           "extension": [
             {
@@ -3086,6 +3373,22 @@
         "mapping": [
           {
             "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "v2",
+            "map": "CE/CNE/CWE"
+          },
+          {
+            "identity": "rim",
+            "map": "CD"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+          },
+          {
+            "identity": "rim",
             "map": "./code"
           },
           {
@@ -3096,9 +3399,20 @@
       },
       {
         "id": "Composition.section.author",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.section.author",
         "short": "Who and/or what authored the section",
         "definition": "Identifies who is responsible for the information in this section, not necessarily who typed it in.",
+        "comment": "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.",
         "requirements": "Identifies who is responsible for the content.",
         "min": 0,
         "max": "*",
@@ -3120,6 +3434,9 @@
             ]
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -3128,11 +3445,26 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ref-1",
+            "severity": "error",
+            "human": "SHALL have a contained resource if a local reference is provided",
+            "expression": "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
+            "xpath": "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Reference"
           }
         ],
         "isModifier": false,
-        "isSummary": false,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "The target of a resource reference is a RIM entry point (Act, Role, or Entity)"
+          },
           {
             "identity": "w5",
             "map": "FiveWs.author"
@@ -3149,6 +3481,16 @@
       },
       {
         "id": "Composition.section.focus",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.section.focus",
         "short": "Who/what the section is about, when it is not about the subject of composition",
         "definition": "The actual focus of the section when it is not the subject of the composition, but instead represents something or someone associated with the subject such as (for a patient subject) a spouse, parent, fetus, or donor. If not focus is specified, the focus is assumed to be focus of the parent section, or, for a section in the Composition itself, the subject of the composition. Sections with a focus SHALL only include resources where the logical subject (patient, subject, focus, etc.) matches the section focus, or the resources have no logical subject (few resources).",
@@ -3168,6 +3510,9 @@
             ]
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -3176,11 +3521,26 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ref-1",
+            "severity": "error",
+            "human": "SHALL have a contained resource if a local reference is provided",
+            "expression": "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
+            "xpath": "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Reference"
           }
         ],
         "isModifier": false,
-        "isSummary": false,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "The target of a resource reference is a RIM entry point (Act, Role, or Entity)"
+          },
           {
             "identity": "cda",
             "map": ".subject? (CDA did not differentiate between subject and focus)"
@@ -3189,6 +3549,16 @@
       },
       {
         "id": "Composition.section.text",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.section.text",
         "short": "Text summary of the section, for human interpretation",
         "definition": "A human-readable narrative that contains the attested content of the section, used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative.",
@@ -3206,6 +3576,7 @@
           }
         ],
         "condition": [
+          "ele-1",
           "cmp-1"
         ],
         "constraint": [
@@ -3219,8 +3590,15 @@
           }
         ],
         "isModifier": false,
-        "isSummary": false,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
           {
             "identity": "rim",
             "map": ".text"
@@ -3290,6 +3668,16 @@
       },
       {
         "id": "Composition.section.orderedBy",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.section.orderedBy",
         "short": "Order of section entries",
         "definition": "Specifies the order applied to the items in the section entries.",
@@ -3307,6 +3695,9 @@
             "code": "CodeableConcept"
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -3318,7 +3709,6 @@
           }
         ],
         "isModifier": false,
-        "isSummary": false,
         "binding": {
           "extension": [
             {
@@ -3333,6 +3723,22 @@
         "mapping": [
           {
             "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "v2",
+            "map": "CE/CNE/CWE"
+          },
+          {
+            "identity": "rim",
+            "map": "CD"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+          },
+          {
+            "identity": "rim",
             "map": ".outboundRelationship[typeCode=COMP].sequenceNumber > 1"
           },
           {
@@ -3343,6 +3749,16 @@
       },
       {
         "id": "Composition.section.entry",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.section.entry",
         "short": "A reference to data that supports this section",
         "definition": "A reference to the actual resource from which the narrative in the section is derived.",
@@ -3363,6 +3779,7 @@
           }
         ],
         "condition": [
+          "ele-1",
           "cmp-2"
         ],
         "constraint": [
@@ -3373,11 +3790,26 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ref-1",
+            "severity": "error",
+            "human": "SHALL have a contained resource if a local reference is provided",
+            "expression": "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
+            "xpath": "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Reference"
           }
         ],
         "isModifier": false,
-        "isSummary": false,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "The target of a resource reference is a RIM entry point (Act, Role, or Entity)"
+          },
           {
             "identity": "rim",
             "map": ".outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]"
@@ -3390,6 +3822,16 @@
       },
       {
         "id": "Composition.section.emptyReason",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Composition.section.emptyReason",
         "short": "Why the section is empty",
         "definition": "If the section is empty, why the list is empty. An empty section typically has some text explaining the empty reason.",
@@ -3408,6 +3850,7 @@
           }
         ],
         "condition": [
+          "ele-1",
           "cmp-2"
         ],
         "constraint": [
@@ -3421,7 +3864,6 @@
           }
         ],
         "isModifier": false,
-        "isSummary": false,
         "binding": {
           "extension": [
             {
@@ -3434,6 +3876,22 @@
           "valueSet": "http://hl7.org/fhir/ValueSet/list-empty-reason"
         },
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "v2",
+            "map": "CE/CNE/CWE"
+          },
+          {
+            "identity": "rim",
+            "map": "CD"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+          },
           {
             "identity": "rim",
             "map": ".inboundRelationship[typeCode=SUBJ,code<ListEmptyReason].value[type=CD]"
@@ -3461,18 +3919,6 @@
         "condition": [
           "cmp-1"
         ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -3510,6 +3956,7 @@
               "path": "url"
             }
           ],
+          "description": "Extensions are always sliced by (at least) url",
           "rules": "closed"
         }
       },
@@ -3541,14 +3988,13 @@
         "mustSupport": true
       },
       {
-        "id": "Composition.author.identifier",
-        "path": "Composition.author.identifier",
-        "min": 1,
+        "id": "Composition.author",
+        "path": "Composition.author",
         "type": [
           {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-iknr"
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraeger"
             ]
           }
         ]
