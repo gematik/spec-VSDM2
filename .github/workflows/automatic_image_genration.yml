@@ -150,11 +150,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes staged for commit"
           else
-            git commit -m "🖼️ Auto-generate $image_count images
-
-PlantUML: ${{ env.PLANTUML_PREFIX }}-*.{png,svg}
-Draw.io: ${{ env.DRAWIO_PREFIX }}-*.{png,svg}
-Generated: $(date)"
+            git commit -m "🖼️ Auto-generate $image_count images - PlantUML: ${{ env.PLANTUML_PREFIX }}-*.{png,svg} - Draw.io: ${{ env.DRAWIO_PREFIX }}-*.{png,svg} - Generated: $(date)"
             git push
             echo "✅ $image_count images committed and pushed"
           fi
