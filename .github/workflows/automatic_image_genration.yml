@@ -1,4 +1,4 @@
-name: Generate Images from PlantUML and drawio
+name: Generate Images from PlantUML and drawio (Debug Edition)
 
 on:
   push:
@@ -27,43 +27,111 @@ jobs:
     timeout-minutes: 30
 
     steps:
-      - name: Checkout repository
+      - name: 📋 Debug - Environment Info
+        run: |
+          echo "🐧 Runner OS: $(lsb_release -d)"
+          echo "💾 Memory: $(free -h | grep Mem)"
+          echo "💿 Disk: $(df -h /)"
+          echo "🏃 Runner: $RUNNER_NAME"
+          echo "📅 Date: $(date)"
+
+      - name: 📥 Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 2
+        
+      - name: 📋 Debug - Repository Info
+        run: |
+          echo "📁 Repository: ${{ github.repository }}"
+          echo "🌿 Branch: ${{ github.ref_name }}"
+          echo "📝 Commit: ${{ github.sha }}"
+          echo "🎯 Event: ${{ github.event_name }}"
+          echo "🔄 Regenerate all: '${{ github.event.inputs.regenerate_all }}'"
+          echo "📂 Working directory: $(pwd)"
 
-      - name: Create output directory
+      - name: 📁 Create output directory
         run: |
           mkdir -p ${{ env.OUTPUT_DIR }}
           echo "📁 Output directory: ${{ env.OUTPUT_DIR }}"
-          echo "🔄 Regenerate all: '${{ github.event.inputs.regenerate_all }}'"
-          echo "🔄 Event name: '${{ github.event_name }}'"
+          echo "📊 Prefixes: PlantUML='${{ env.PLANTUML_PREFIX }}' | Draw.io='${{ env.DRAWIO_PREFIX }}'"
 
-      - name: Set up JDK 11
+      - name: 📋 Debug - Repository Structure
+        run: |
+          echo "=== Repository structure ==="
+          find . -name "*.puml" -o -name "*.plantuml" -o -name "*.drawio" -o -name "*.dio" | head -20 || echo "No diagram files found"
+          echo ""
+          echo "=== src/plantuml contents ==="
+          if [ -d "src/plantuml" ]; then
+            ls -la src/plantuml/
+            echo "PlantUML file count: $(find src/plantuml -name "*.puml" -o -name "*.plantuml" | wc -l)"
+          else
+            echo "❌ src/plantuml directory not found"
+          fi
+          echo ""
+          echo "=== src/drawio contents ==="
+          if [ -d "src/drawio" ]; then
+            ls -la src/drawio/
+            echo "Draw.io file count: $(find src/drawio -name "*.drawio" -o -name "*.dio" | wc -l)"
+          else
+            echo "❌ src/drawio directory not found"
+          fi
+
+      - name: ☕ Set up JDK 11
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '11'
 
-      - name: Install Graphviz (for PlantUML)
+      - name: 📋 Debug - Java Info
         run: |
-          sudo apt-get update
-          sudo apt-get install -y graphviz
+          echo "☕ Java version: $(java -version 2>&1 | head -1)"
+          echo "🏠 JAVA_HOME: $JAVA_HOME"
+          echo "📁 Java location: $(which java)"
 
-      - name: Download and setup PlantUML
+      - name: ⚡ Install dependencies (optimized)
         run: |
-          wget https://github.com/plantuml/plantuml/releases/latest/download/plantuml.jar -O /tmp/plantuml.jar
-          echo "PlantUML downloaded successfully"
+          echo "🔄 Starting optimized package installation..."
+          
+          # Disable man-db auto-update to save 3-5 minutes!
+          sudo rm -f /var/lib/man-db/auto-update
+          echo "🚫 Disabled man-db auto-update"
+          
+          # Update package list
+          sudo apt-get update
+          echo "📦 Package list updated"
+          
+          # Install Graphviz without recommendations (faster)
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
+            --no-install-recommends \
+            --no-install-suggests \
+            graphviz
+          echo "🎨 Graphviz installed successfully"
+          
+          # Verify installation
+          dot -V 2>&1 || echo "❌ Graphviz verification failed"
+
+      - name: 📥 Download and setup PlantUML
+        run: |
+          echo "📥 Downloading PlantUML..."
+          wget --progress=dot:giga \
+            https://github.com/plantuml/plantuml/releases/latest/download/plantuml.jar \
+            -O /tmp/plantuml.jar
+          
+          echo "📊 PlantUML file size: $(ls -lh /tmp/plantuml.jar | awk '{print $5}')"
+          echo "✅ PlantUML downloaded successfully"
+          
+          echo "🧪 Testing PlantUML installation..."
           java -jar /tmp/plantuml.jar -version
 
-      - name: Generate PlantUML images (smart mode)
+      - name: 🎨 Generate PlantUML images (debug mode)
         continue-on-error: true
         run: |
-          echo "=== Generating PlantUML images ==="
+          echo "=== 🎨 Generating PlantUML images ==="
           
           output_abs=$(pwd)/${{ env.OUTPUT_DIR }}
+          echo "📁 Output directory: $output_abs"
           
-          # Determine if we should process all files or just changed ones
+          # Determine processing mode
           if [ "${{ github.event.inputs.regenerate_all }}" = "true" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "🔄 FULL REGENERATION MODE - Processing all files"
             puml_files=$(find $(pwd)/src/plantuml -name "*.puml" -o -name "*.plantuml" 2>/dev/null)
@@ -73,168 +141,27 @@ jobs:
               exit 0
             fi
             
-            echo "Found PlantUML files:"
+            echo "📋 Found PlantUML files:"
             echo "$puml_files"
           else
             echo "⚡ INCREMENTAL MODE - Processing only changed files"
-            # Get list of changed .puml files in this commit
             changed_puml_files=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(puml|plantuml)$' | grep '^src/plantuml/' || true)
             
             if [ -z "$changed_puml_files" ]; then
-              echo "No PlantUML files changed in this commit"
+              echo "ℹ️ No PlantUML files changed in this commit"
               exit 0
             fi
             
-            echo "Changed PlantUML files:"
+            echo "📋 Changed PlantUML files:"
             echo "$changed_puml_files"
             puml_files="$changed_puml_files"
           fi
           
+          echo "📊 Processing $(echo "$puml_files" | wc -l) PlantUML file(s)..."
+          
           for file in $puml_files; do
+            echo "===================="
+            echo "🔄 Processing: $file"
+            
             # Convert relative path to absolute if needed
-            if [[ "$file" != /* ]]; then
-              file="$(pwd)/$file"
-            fi
-            
-            # Only process if file still exists (not deleted)
-            if [ -f "$file" ]; then
-              echo "Processing: $file"
-              base=$(basename "$file" | sed 's/\.[^.]*$//')
-              
-              # Generate PNG
-              echo "Generating PNG for: $file"
-              java -jar /tmp/plantuml.jar -tpng "$file" -o "$output_abs" 2>&1
-              
-              if [ -f "$output_abs/${base}.png" ]; then
-                mv "$output_abs/${base}.png" "$output_abs/${{ env.PLANTUML_PREFIX }}_${base}.png"
-                echo "✅ Generated PNG: ${{ env.PLANTUML_PREFIX }}_${base}.png"
-              else
-                echo "❌ PNG not created for $file"
-              fi
-              
-              # Generate SVG
-              echo "Generating SVG for: $file"
-              java -jar /tmp/plantuml.jar -tsvg "$file" -o "$output_abs" 2>&1
-              
-              if [ -f "$output_abs/${base}.svg" ]; then
-                mv "$output_abs/${base}.svg" "$output_abs/${{ env.PLANTUML_PREFIX }}_${base}.svg"
-                echo "✅ Generated SVG: ${{ env.PLANTUML_PREFIX }}_${base}.svg"
-              else
-                echo "❌ SVG not created for $file"
-              fi
-            else
-              # File was deleted - remove corresponding images
-              base=$(basename "$file" | sed 's/\.[^.]*$//')
-              rm -f "$output_abs/${{ env.PLANTUML_PREFIX }}_${base}.png"
-              rm -f "$output_abs/${{ env.PLANTUML_PREFIX }}_${base}.svg"
-              echo "🗑️ Removed images for deleted file: $file"
-            fi
-            
-            echo "--- Next file ---"
-          done
-
-      - name: Generate Draw.io images (smart mode)
-        continue-on-error: true
-        run: |
-          echo "=== Generating drawio images ==="
-          
-          # Determine if we should process all files or just changed ones
-          if [ "${{ github.event.inputs.regenerate_all }}" = "true" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "🔄 FULL REGENERATION MODE - Processing all files"
-            drawio_files=$(find src/drawio -name "*.drawio" -o -name "*.dio" 2>/dev/null)
-            
-            if [ -z "$drawio_files" ]; then
-              echo "No drawio files found in src/drawio/"
-              exit 0
-            fi
-            
-            echo "Found drawio files:"
-            echo "$drawio_files"
-          else
-            echo "⚡ INCREMENTAL MODE - Processing only changed files"
-            # Get list of changed .drawio files in this commit
-            changed_drawio_files=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(drawio|dio)$' | grep '^src/drawio/' || true)
-            
-            if [ -z "$changed_drawio_files" ]; then
-              echo "No drawio files changed in this commit"
-              exit 0
-            fi
-            
-            echo "Changed drawio files:"
-            echo "$changed_drawio_files"
-            drawio_files="$changed_drawio_files"
-          fi
-          
-          for file in $drawio_files; do
-            if [ -f "$file" ]; then
-              echo "Processing: $file"
-              base=$(basename "$file" | sed 's/\.[^.]*$//')
-              
-              # Generate PNG
-              docker run --rm \
-                -v $(pwd):/data \
-                rlespinasse/drawio-export:4.4.0 \
-                --format png \
-                --output "${{ env.OUTPUT_DIR }}" \
-                "$file"
-              
-              # Rename with prefix
-              if [ -f "${{ env.OUTPUT_DIR }}/${base}.png" ]; then
-                mv "${{ env.OUTPUT_DIR }}/${base}.png" "${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}_${base}.png"
-                echo "✅ Generated PNG: ${{ env.DRAWIO_PREFIX }}_${base}.png"
-              fi
-              
-              # Generate SVG
-              docker run --rm \
-                -v $(pwd):/data \
-                rlespinasse/drawio-export:4.4.0 \
-                --format svg \
-                --output "${{ env.OUTPUT_DIR }}" \
-                "$file"
-              
-              # Rename with prefix
-              if [ -f "${{ env.OUTPUT_DIR }}/${base}.svg" ]; then
-                mv "${{ env.OUTPUT_DIR }}/${base}.svg" "${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}_${base}.svg"
-                echo "✅ Generated SVG: ${{ env.DRAWIO_PREFIX }}_${base}.svg"
-              fi
-            else
-              # File was deleted - remove corresponding images
-              base=$(basename "$file" | sed 's/\.[^.]*$//')
-              rm -f "${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}_${base}.png"
-              rm -f "${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}_${base}.svg"
-              echo "🗑️ Removed images for deleted file: $file"
-            fi
-          done
-
-      - name: Show results
-        run: |
-          echo "=== Generated files ==="
-          ls -la ${{ env.OUTPUT_DIR }}/ 2>/dev/null || echo "No images directory"
-          echo "=== Git Status ==="
-          git status
-
-      - name: Commit generated images
-        run: |
-          git config --global user.name 'GitHub Actions'
-          git config --global user.email 'actions@github.com'
-          
-          if [ -d "${{ env.OUTPUT_DIR }}" ] && [ "$(ls -A ${{ env.OUTPUT_DIR }})" ]; then
-            git add ${{ env.OUTPUT_DIR }}/
-            
-            # Count changes
-            changed_count=$(git diff --staged --name-only | wc -l)
-            
-            if [ "$changed_count" -gt 0 ]; then
-              if [ "${{ github.event.inputs.regenerate_all }}" = "true" ]; then
-                git commit -m "🔄 Regenerate all images from PlantUML and drawio files"
-              else
-                git commit -m "⚡ Auto-update images for changed PlantUML/drawio files ($changed_count files)"
-              fi
-              git push
-              echo "✅ $changed_count image files committed and pushed"
-            else
-              echo "No changes to commit"
-            fi
-          else
-            echo "❌ No images to commit"
-          fi
+            if [[ "$file" != 
