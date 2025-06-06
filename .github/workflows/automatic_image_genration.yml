@@ -203,6 +203,7 @@ jobs:
               echo "✅ Generated PNG: ${prefix_base}.png"
             else
               echo "❌ Expected PNG not found: $output_abs/${prefix_base}.png"
+              cat /tmp/plantuml-svg.log | sed 's/^/  | /'
             fi
             
             # Generate SVG with full debugging
@@ -225,6 +226,7 @@ jobs:
               echo "✅ Generated SVG: ${prefix_base}.svg"
             else
               echo "❌ Expected SVG not found: $output_abs/${prefix_base}.svg"
+              cat /tmp/plantuml-svg.log | sed 's/^/  | /'
             fi
             
             echo "📁 Final output directory state:"
@@ -276,8 +278,9 @@ jobs:
             
             # Generate PNG with debugging
             echo "🖼️ Generating PNG for: $file"
-            echo "🐳 Docker command: docker run --rm -v $(pwd):/data rlespinasse/drawio-export:4.4.0 --format png --output ${{ env.OUTPUT_DIR }} $prefix_base"
             
+            docker run -it rlespinasse/drawio-export --help
+
             docker run --rm \
               -v $(pwd):/data \
               rlespinasse/drawio-export:4.4.0 \
@@ -301,8 +304,9 @@ jobs:
             
             # Generate SVG with debugging
             echo "🎭 Generating SVG for: $file"
-            echo "🐳 Docker command: docker run --rm -v $(pwd):/data rlespinasse/drawio-export:4.4.0 --format svg --output ${{ env.OUTPUT_DIR }} $prefix_base"
             
+            docker run -it rlespinasse/drawio-export --help
+
             docker run --rm \
               -v $(pwd):/data \
               rlespinasse/drawio-export:4.4.0 \
