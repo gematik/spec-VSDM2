@@ -18,8 +18,8 @@ on:
 
 env:
   OUTPUT_DIR: images
-  PLANTUML_PREFIX: uml
-  DRAWIO_PREFIX: diagram
+  PLANTUML_PREFIX: uml_
+  DRAWIO_PREFIX: diagram_
 
 jobs:
   generate_images:
@@ -170,7 +170,8 @@ jobs:
             
             # process file
             base=$(basename "$file" | sed 's/\.[^.]*$//')
-            echo "📝 Base name: $base"
+            prefix_base="${{ env.PLANTUML_PREFIX }}${base}"
+            echo "📝 Prefix Base name: $prefix_base"
             echo "📊 File size: $(ls -lh "$file" | awk '{print $5}')"
             
             # Show file content preview
@@ -183,7 +184,7 @@ jobs:
             echo "🖼️ Generating PNG for: $file"
             echo "📜 Command: java -jar /tmp/plantuml.jar -v -tpng '$file' -o '$output_abs'"
             
-            java -jar /tmp/plantuml.jar -v -tpng "$file" -o "$output_abs" -filename "$base" > /tmp/plantuml-png.log 2>&1
+            java -jar /tmp/plantuml.jar -v -tpng "$file" -o "$output_abs" -filename "${prefix_base}" > /tmp/plantuml-png.log 2>&1
             png_exit_code=$?
             
             echo "📊 PNG generation exit code: $png_exit_code"
@@ -199,9 +200,8 @@ jobs:
             ls -la "$output_abs"/ 2>/dev/null | sed 's/^/  | /' || echo "  | No output directory found"
             
             # Look for PNG files
-            if [ -f "$output_abs/${base}.png" ]; then
-              mv "$output_abs/${base}.png" "$output_abs/${{ env.PLANTUML_PREFIX }}_${base}.png"
-              echo "✅ Generated PNG: ${{ env.PLANTUML_PREFIX }}_${base}.png"
+            if [ -f "$output_abs/${prefix_base}.png" ]; then
+              echo "✅ Generated PNG: ${{ env.PLANTUML_PREFIX }}${base}.png"
             else
               echo "❌ Expected PNG not found: $output_abs/${base}.png"
             fi
@@ -211,7 +211,7 @@ jobs:
             echo "🎭 Generating SVG for: $file"
             echo "📜 Command: java -jar /tmp/plantuml.jar -v -tsvg '$file' -o '$output_abs'"
             
-            java -jar /tmp/plantuml.jar -v -tsvg "$file" -o "$output_abs" -filename "$base" > /tmp/plantuml-svg.log 2>&1
+            java -jar /tmp/plantuml.jar -v -tsvg "$file" -o "$output_abs" -filename "$prefix_base" > /tmp/plantuml-svg.log 2>&1
             svg_exit_code=$?
             
             echo "📊 SVG generation exit code: $svg_exit_code"
@@ -223,9 +223,8 @@ jobs:
             fi
             
             # Check for SVG files
-            if [ -f "$output_abs/${base}.svg" ]; then
-              mv "$output_abs/${base}.svg" "$output_abs/${{ env.PLANTUML_PREFIX }}_${base}.svg"
-              echo "✅ Generated SVG: ${{ env.PLANTUML_PREFIX }}_${base}.svg"
+            if [ -f "$output_abs/${prefix_base}.svg" ]; then
+              echo "✅ Generated SVG: ${{ env.PLANTUML_PREFIX }}${base}.svg"
             else
               echo "❌ Expected SVG not found: $output_abs/${base}.svg"
             fi
@@ -273,49 +272,50 @@ jobs:
             echo "🔄 Processing: $file"
             
             base=$(basename "$file" | sed 's/\.[^.]*$//')
-            echo "📝 Base name: $base"
+            prefix_base="${{ env.DRAWIO_PREFIX }}${base}"
+            echo "📝 Prefix Base name: $prefix_base"
             echo "📊 File size: $(ls -lh "$file" | awk '{print $5}')"
             
             # Generate PNG with debugging
             echo "🖼️ Generating PNG for: $file"
-            echo "🐳 Docker command: docker run --rm -v $(pwd):/data rlespinasse/drawio-export:4.4.0 --format png --output ${{ env.OUTPUT_DIR }} $file"
+            echo "🐳 Docker command: docker run --rm -v $(pwd):/data rlespinasse/drawio-export:4.4.0 --format png --output ${{ env.OUTPUT_DIR }} $prefix_base"
             
             docker run --rm \
               -v $(pwd):/data \
               rlespinasse/drawio-export:4.4.0 \
               --format png \
               --output "${{ env.OUTPUT_DIR }}" \
-              "$file" 2>&1 | sed 's/^/  | /'
+              "$prefix_base" 2>&1 | sed 's/^/  | /'
             
             png_exit_code=${PIPESTATUS[0]}
             echo "📊 Docker PNG exit code: $png_exit_code"
             
             # Check for file with diagram- prefix (already created correctly!)
-            if [ -f "${{ env.OUTPUT_DIR }}/diagram-${base}.png" ]; then
-              echo "✅ Generated PNG: diagram-${base}.png (already correctly prefixed)"
+            if [ -f "${{ env.OUTPUT_DIR }}/diagram-${prefix_base}.png" ]; then
+              echo "✅ Generated PNG: diagram-${prefix_base}.png"
             else
-              echo "❌ PNG not created: diagram-${base}.png"
+              echo "❌ PNG not created: diagram-${prefix_base}.png"
             fi
             
             # Generate SVG with debugging
             echo "🎭 Generating SVG for: $file"
-            echo "🐳 Docker command: docker run --rm -v $(pwd):/data rlespinasse/drawio-export:4.4.0 --format svg --output ${{ env.OUTPUT_DIR }} $file"
+            echo "🐳 Docker command: docker run --rm -v $(pwd):/data rlespinasse/drawio-export:4.4.0 --format svg --output ${{ env.OUTPUT_DIR }} $prefix_base"
             
             docker run --rm \
               -v $(pwd):/data \
               rlespinasse/drawio-export:4.4.0 \
               --format svg \
               --output "${{ env.OUTPUT_DIR }}" \
-              "$file" 2>&1 | sed 's/^/  | /'
+              "$prefix_base" 2>&1 | sed 's/^/  | /'
             
             svg_exit_code=${PIPESTATUS[0]}
             echo "📊 Docker SVG exit code: $svg_exit_code"
             
             # Check for file with diagram- prefix (already created correctly!)
-            if [ -f "${{ env.OUTPUT_DIR }}/diagram-${base}.svg" ]; then
-              echo "✅ Generated SVG: diagram-${base}.svg (already correctly prefixed)"
+            if [ -f "${{ env.OUTPUT_DIR }}/diagram-${prefix_base}.svg" ]; then
+              echo "✅ Generated SVG: diagram-${prefix_base}.svg (already correctly prefixed)"
             else
-              echo "❌ SVG not created: diagram-${base}.svg"
+              echo "❌ SVG not created: diagram-${prefix_base}.svg"
             fi
             
             echo "📁 Final output directory state:"
@@ -334,8 +334,8 @@ jobs:
             echo "  📄 Total files: $(ls "${{ env.OUTPUT_DIR }}/" 2>/dev/null | wc -l)"
             echo "  🖼️ PNG files: $(ls "${{ env.OUTPUT_DIR }}"/*.png 2>/dev/null | wc -l)"
             echo "  🎭 SVG files: $(ls "${{ env.OUTPUT_DIR }}"/*.svg 2>/dev/null | wc -l)"
-            echo "  🎨 PlantUML files: $(ls "${{ env.OUTPUT_DIR }}/${{ env.PLANTUML_PREFIX }}_"* 2>/dev/null | wc -l)"
-            echo "  🎯 Draw.io files: $(ls "${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}_"* 2>/dev/null | wc -l)"
+            echo "  🎨 PlantUML files: $(ls "${{ env.OUTPUT_DIR }}/${{ env.PLANTUML_PREFIX }}"* 2>/dev/null | wc -l)"
+            echo "  🎯 Draw.io files: $(ls "${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}"* 2>/dev/null | wc -l)"
           else
             echo "  ❌ No images directory found"
           fi
