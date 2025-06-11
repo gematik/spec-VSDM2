@@ -19,8 +19,7 @@ VSDM 2.0 ist die Weiterentwicklung des bestehenden VSDM 1.0. Die Versichertensta
 Während bei VSDM 1.0 in den Anwendungsfällen die Komponenten Konnektor, eHealth Kartenterminals, eGK, SMC-B, Intermediär und schließlich die VSDM-Backend-Dienste des Versicherers zum Einsatz kommen, reduziert VSDM 2.0 die Abhängigkeiten von diesen Komponenten. 
 Mit der Initiative TI 2.0 wird die gesamte Infrastruktur modernisiert und auf den neuesten Stand der Sicherheits- und Architekturprinzipien gebracht.
 
-VSDM 2.0 entkoppelt den Nachweis des Versorgungskontextes mittels PoPP („**P**roof-**o**f-**P**atient-**P**resence“) vom Anwendungsfall der Bereitstellung demografischer Daten. Damit kann der PoPP auch in anderen Anwendungen eingesetzt werden.
-Die Versicherer stellen also eine einfache FHIR-REST-API bereit, mit der die Client-Software der Arztpraxis „nur“ zusätzliche Daten anfordert, indem sie ein legitimes PoPP-Token bereitstellt.
+In der TI 2.0 wird der Nachweis des Versorgungskontextes mittels PoPP („Proof-of-Patient-Presence“) von fachlichen Anwendungsfällen entkoppelt. Bei VSDM 2.0  ist dies die Bereitstellung demografischer Daten. Die Versicherer stellen also eine einfache FHIR-REST-API bereit, mit der die Client-Software der Arztpraxis „nur“ zusätzliche Daten anfordert, indem sie ein legitimes PoPP-Token bereitstellt.
 
 Im nachfolgend verlinkten Kapitel finden Sie eine Übersicht, in welchem Kontext VSDM, PoPP und Zero Trust zueinander stehen:
 
