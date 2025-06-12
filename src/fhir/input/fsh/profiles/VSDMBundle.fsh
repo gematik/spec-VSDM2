@@ -21,10 +21,13 @@ Id: vsdm-bundle
 * entry ^slicing.rules = #closed
 * entry contains
     DocumentInformation 1..1 and
+    VSDMKostentraeger 1..1 and    
     VSDMPatient 1..1 and
     VSDMCoverage 1..1
 * entry[DocumentInformation].resource 1..
 * entry[DocumentInformation].resource only VSDMComposition
+* entry[VSDMKostentraeger].resource 1..
+* entry[VSDMKostentraeger].resource only VSDMKostentraeger
 * entry[VSDMPatient].resource 1..
 * entry[VSDMPatient].resource only VSDMPatient
 * entry[VSDMCoverage].resource 1..
