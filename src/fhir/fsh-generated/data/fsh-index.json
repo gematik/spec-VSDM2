@@ -5,7 +5,7 @@
     "fshType": "Instance",
     "fshFile": "examples/ExampleVSDMBundle.fsh",
     "startLine": 1,
-    "endLine": 21
+    "endLine": 14
   },
   {
     "outputFile": "CodeSystem-vsdm-errorcode-cs.json",
@@ -93,7 +93,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMBundle.fsh",
     "startLine": 1,
-    "endLine": 39
+    "endLine": 31
   },
   {
     "outputFile": "StructureDefinition-vsdm-composition.json",
