@@ -1619,7 +1619,8 @@
       {
         "id": "Extension.extension:wahltarif.value[x].system",
         "path": "Extension.extension.value[x].system",
-        "min": 1
+        "min": 1,
+        "patternUri": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMWahltarifeCS"
       },
       {
         "id": "Extension.extension:wahltarif.value[x].code",
