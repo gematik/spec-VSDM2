@@ -192,19 +192,18 @@ jobs:
             else
               echo "✅ PNG generation command completed"
             fi
-            
-            ls "$(dirname "$file")"
 
-            # Rename with prefix
+            # search for generated output file type because plantuml's output filename ist the plantuml diagram name and not the *.puml file name
             generated_file=(`find ./ -maxdepth 1 -name "*.png"`)
-            if [ -f "$generated_file" ]; then
-              mv "$generated_file" "${output_abs}/${prefix_base}.png"
+            # Rename with prefix
+            if [ -f "${generated_file[0]}" ]; then
+              mv "${generated_file[0]}" "${output_abs}/${prefix_base}.png"
               echo "✅ Renamed PNG: ${output_abs}/${prefix_base}.png"
             else}
-              echo "❌ Original PNG not found: ${output_abs}/${base}.png"
+              echo "❌ Generated PNG not found: ${generated_file[0]}"
             fi
             
-            # Check for PNG files
+            # Check for PNG file in output directory
             if [ -f "${output_abs}/${prefix_base}.png" ]; then
               echo "✅ Generated PNG: ${output_abs}/${prefix_base}.png"
             else
@@ -225,12 +224,15 @@ jobs:
               echo "✅ SVG generation command completed"
             fi
             
+            # search for generated output file type because plantuml's output filename ist the plantuml diagram name and not the *.puml file name
+            generated_file=(`find ./ -maxdepth 1 -name "*.svg"`)
+
             # Rename with prefix
-            if [ -f "${output_abs}/${base}.svg" ]; then
-              mv "${output_abs}/${base}.svg" "${output_abs}/${prefix_base}.svg"
+            if [ -f "${generated_file[0]}" ]; then
+              mv "${generated_file[0]}" "${output_abs}/${prefix_base}.svg"
               echo "✅ Renamed SVG: ${output_abs}/${prefix_base}.svg"
             else
-              echo "❌ Original SVG not found: ${output_abs}/${base}.svg"
+              echo "❌ Generated SVG not found: ${generated_file[0]}"
             fi
 
             # Check for SVG files
