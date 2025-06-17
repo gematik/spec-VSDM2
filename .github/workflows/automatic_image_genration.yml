@@ -183,13 +183,9 @@ jobs:
             echo ""
             echo "🖼️ Generating PNG for: $file"
             
-            java -jar /tmp/plantuml.jar -tpng -nometadata -scale 4 "$file" -o "$output_abs" || echo "   WARNING: PNG generation command may have failed for $file (Exit Code: $?)" >&2
+            java -jar /tmp/plantuml.jar -tpng -nometadata -scale 4 "$file" || echo "   WARNING: PNG generation command may have failed for $file (Exit Code: $?)" >&2
             
             png_exit_code=$?
-            # Logdatei anzeigen
-            echo "📋 PlantUML Log Output:"
-            cat /tmp/plantuml-svg.log 2>/dev/null | sed 's/^/  | /' || echo "  | No log output available"
-
             echo "📊 PNG generation exit code: $png_exit_code"
             if [ -n "$png_exit_code" ] && [ "$png_exit_code" -ne 0 ]; then
               echo "❌ PNG generation failed!"
@@ -197,19 +193,22 @@ jobs:
               echo "✅ PNG generation command completed"
             fi
             
+            ls
+
             # Rename with prefix
-            if [ -f "$output_abs/${base}.png" ]; then
-              mv "$output_abs/${base}.png" "$output_abs/${prefix_base}.png"
-              echo "✅ Renamed PNG: $output_abs/${prefix_base}.png"
-            else
-              echo "❌ Original PNG not found: $output_abs/${base}.png"
+            generated_file=(`find ./ -maxdepth 1 -name "*.png"`)
+            if [ -f "$generated_file" ]; then
+              mv "$generated_file" "${output_abs}/${prefix_base}.png"
+              echo "✅ Renamed PNG: ${output_abs}/${prefix_base}.png"
+            else}
+              echo "❌ Original PNG not found: ${output_abs}/${base}.png"
             fi
             
             # Check for PNG files
-            if [ -f "$output_abs/${prefix_base}.png" ]; then
-              echo "✅ Generated PNG: $output_abs/${prefix_base}.png"
+            if [ -f "${output_abs}/${prefix_base}.png" ]; then
+              echo "✅ Generated PNG: ${output_abs}/${prefix_base}.png"
             else
-              echo "❌ Expected PNG not found: $output_abs/${prefix_base}.png"
+              echo "❌ Expected PNG not found: ${output_abs}/${prefix_base}.png"
             fi
             
             # Generate SVG with full debugging
@@ -218,11 +217,7 @@ jobs:
             
             java -jar /tmp/plantuml.jar -tsvg -nometadata "$file" -o "$output_abs" || echo "   WARNING: SVG generation command may have failed for $file (Exit Code: $?)" >&2
             
-            svg_exit_code=$?
-            # Logdatei anzeigen
-            echo "📋 PlantUML Log Output:"
-            cat /tmp/plantuml-svg.log 2>/dev/null | sed 's/^/  | /' || echo "  | No log output available"
-            
+            svg_exit_code=$?            
             echo "📊 SVG generation exit code: $svg_exit_code"
             if [ -n "$svg_exit_code" ] && [ "$svg_exit_code" -ne 0 ]; then
               echo "❌ SVG generation failed!"
@@ -231,18 +226,18 @@ jobs:
             fi
             
             # Rename with prefix
-            if [ -f "$output_abs/${base}.svg" ]; then
-              mv "$output_abs/${base}.svg" "$output_abs/${prefix_base}.svg"
-              echo "✅ Renamed SVG: $output_abs/${prefix_base}.svg"
+            if [ -f "${output_abs}/${base}.svg" ]; then
+              mv "${output_abs}/${base}.svg" "${output_abs}/${prefix_base}.svg"
+              echo "✅ Renamed SVG: ${output_abs}/${prefix_base}.svg"
             else
-              echo "❌ Original SVG not found: $output_abs/${base}.svg"
+              echo "❌ Original SVG not found: ${output_abs}/${base}.svg"
             fi
 
             # Check for SVG files
-            if [ -f "$output_abs/${prefix_base}.svg" ]; then
-              echo "✅ Generated SVG: $output_abs/${prefix_base}.svg"
+            if [ -f "${output_abs}/${prefix_base}.svg" ]; then
+              echo "✅ Generated SVG: ${output_abs}/${prefix_base}.svg"
             else
-              echo "❌ Expected SVG not found: $output_abs/${prefix_base}.svg"
+              echo "❌ Expected SVG not found: ${output_abs}/${prefix_base}.svg"
             fi
             
             echo "📁 Final output directory state:"
