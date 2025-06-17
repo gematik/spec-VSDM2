@@ -194,6 +194,8 @@ jobs:
             fi
 
             # search for generated output file type because plantuml's output filename ist the plantuml diagram name and not the *.puml file name
+            ls "$(dirname "$file")"
+            echo "(`find "$(dirname "$file")" -maxdepth 1 -name "*.png"`)"
             generated_file=(`find "$(dirname "$file")" -maxdepth 1 -name "*.png"`)
             # Rename with prefix
             if [ -f "$generated_file" ]; then
@@ -214,7 +216,7 @@ jobs:
             echo ""
             echo "🎭 Generating SVG for: $file"
             
-            java -jar /tmp/plantuml.jar -tsvg -nometadata "$file" -o "$output_abs" || echo "   WARNING: SVG generation command may have failed for $file (Exit Code: $?)" >&2
+            java -jar /tmp/plantuml.jar -tsvg -nometadata "$file" || echo "   WARNING: SVG generation command may have failed for $file (Exit Code: $?)" >&2
             
             svg_exit_code=$?            
             echo "📊 SVG generation exit code: $svg_exit_code"
