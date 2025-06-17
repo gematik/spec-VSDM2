@@ -169,7 +169,8 @@ jobs:
             fi
             
             # process file
-            base=$(basename "$file" | sed 's/\.[^.]*$//')
+            #base=$(basename "$file" | sed 's/\.[^.]*$//')
+            base=${file%.*}
             prefix_base="${{ env.PLANTUML_PREFIX }}${base}"
             echo "📝 Prefix Base name: $prefix_base"
             echo "📊 File size: $(ls -lh "$file" | awk '{print $5}')"
@@ -183,7 +184,8 @@ jobs:
             echo ""
             echo "🖼️ Generating PNG for: $file"
             
-            java -jar /tmp/plantuml.jar -tpng -nometadata -scale 4 "$file" || echo "   WARNING: PNG generation command may have failed for $file (Exit Code: $?)" >&2
+            cat "$file" | java -jar /tmp/plantuml.jar -tpng -nometadata -scale 4 -pipe > "${output_abs}/${prefix_base}.png"
+            # java -jar /tmp/plantuml.jar -tpng -nometadata -scale 4 "$file" || echo "   WARNING: PNG generation command may have failed for $file (Exit Code: $?)" >&2
             
             png_exit_code=$?
             echo "📊 PNG generation exit code: $png_exit_code"
@@ -195,8 +197,8 @@ jobs:
 
             # search for generated output file type because plantuml's output filename ist the plantuml diagram name and not the *.puml file name
             ls "$(dirname "$file")"
-            echo "(`find "$(dirname "$file")" -maxdepth 1 -name "*.png"`)"
-            generated_file=(`find "$(dirname "$file")" -maxdepth 1 -name "*.png"`)
+            echo "(`find "$(dirname "$file")" -maxdepth 1 -type f -name "*.png"`)"
+            generated_file=(`find "$(dirname "$file")" -maxdepth 1 -type f -name "*.png"`)
             # Rename with prefix
             if [ -f "$generated_file" ]; then
               mv "$generated_file" "${output_abs}/${prefix_base}.png"
@@ -227,7 +229,7 @@ jobs:
             fi
             
             # search for generated output file type because plantuml's output filename ist the plantuml diagram name and not the *.puml file name
-            generated_file=(`find "$(dirname "$file")" -maxdepth 1 -name "*.svg"`)
+            generated_file=(`find "$(dirname "$file")" -maxdepth 1 -type f -name "*.svg"`)
 
             # Rename with prefix
             if [ -f "$generated_file" ]; then
