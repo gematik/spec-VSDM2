@@ -194,18 +194,6 @@ jobs:
             else
               echo "✅ PNG generation command completed"
             fi
-
-            # search for generated output file type because plantuml's output filename ist the plantuml diagram name and not the *.puml file name
-            #ls "$(dirname "$file")"
-            #echo "(`find "$(dirname "$file")" -maxdepth 1 -type f -name "*.png"`)"
-            #generated_file=(`find "$(dirname "$file")" -maxdepth 1 -type f -name "*.png"`)
-            # Rename with prefix
-            #if [ -f "$generated_file" ]; then
-            #  mv "$generated_file" "${output_abs}/${prefix_base}.png"
-            #  echo "✅ Renamed PNG: ${output_abs}/${prefix_base}.png"
-            #else
-            #  echo "❌ Generated PNG not found: $generated_file"
-            #fi
             
             # Check for PNG file in output directory
             if [ -f "${output_abs}/${prefix_base}.png" ]; then
@@ -218,7 +206,8 @@ jobs:
             echo ""
             echo "🎭 Generating SVG for: $file"
             
-            java -jar /tmp/plantuml.jar -tsvg -nometadata -scale 4 -filename "${base}.puml" "$file" || echo "   WARNING: SVG generation command may have failed for $file (Exit Code: $?)" >&2
+            cat "$file" | java -jar /tmp/plantuml.jar -tpng -nometadata -scale 4 -pipe "$file" > "${output_abs}/${prefix_base}.png"
+            #java -jar /tmp/plantuml.jar -tsvg -nometadata -scale 4 "$file" || echo "   WARNING: SVG generation command may have failed for $file (Exit Code: $?)" >&2
             
             svg_exit_code=$?            
             echo "📊 SVG generation exit code: $svg_exit_code"
@@ -226,18 +215,6 @@ jobs:
               echo "❌ SVG generation failed!"
             else
               echo "✅ SVG generation command completed"
-            fi
-            
-            # search for generated output file type because plantuml's output filename ist the plantuml diagram name and not the *.puml file name
-            ls "$(dirname "$file")"
-            generated_file=(`find "$(dirname "$file")" -maxdepth 1 -type f -name "*.svg"`)
-
-            # Rename with prefix
-            if [ -f "$generated_file" ]; then
-              mv "$generated_file" "${output_abs}/${prefix_base}.svg"
-              echo "✅ Renamed SVG: ${output_abs}/${prefix_base}.svg"
-            else
-              echo "❌ Generated SVG not found: $generated_file"
             fi
 
             # Check for SVG files
