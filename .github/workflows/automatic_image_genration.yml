@@ -193,7 +193,7 @@ jobs:
               echo "✅ PNG generation command completed"
             fi
             
-            ls
+            ls "$(dirname "$file")"
 
             # Rename with prefix
             generated_file=(`find ./ -maxdepth 1 -name "*.png"`)
