@@ -196,16 +196,16 @@ jobs:
             fi
 
             # search for generated output file type because plantuml's output filename ist the plantuml diagram name and not the *.puml file name
-            ls "$(dirname "$file")"
-            echo "(`find "$(dirname "$file")" -maxdepth 1 -type f -name "*.png"`)"
-            generated_file=(`find "$(dirname "$file")" -maxdepth 1 -type f -name "*.png"`)
+            #ls "$(dirname "$file")"
+            #echo "(`find "$(dirname "$file")" -maxdepth 1 -type f -name "*.png"`)"
+            #generated_file=(`find "$(dirname "$file")" -maxdepth 1 -type f -name "*.png"`)
             # Rename with prefix
-            if [ -f "$generated_file" ]; then
-              mv "$generated_file" "${output_abs}/${prefix_base}.png"
-              echo "✅ Renamed PNG: ${output_abs}/${prefix_base}.png"
-            else
-              echo "❌ Generated PNG not found: $generated_file"
-            fi
+            #if [ -f "$generated_file" ]; then
+            #  mv "$generated_file" "${output_abs}/${prefix_base}.png"
+            #  echo "✅ Renamed PNG: ${output_abs}/${prefix_base}.png"
+            #else
+            #  echo "❌ Generated PNG not found: $generated_file"
+            #fi
             
             # Check for PNG file in output directory
             if [ -f "${output_abs}/${prefix_base}.png" ]; then
@@ -229,6 +229,7 @@ jobs:
             fi
             
             # search for generated output file type because plantuml's output filename ist the plantuml diagram name and not the *.puml file name
+            ls "$(dirname "$file")"
             generated_file=(`find "$(dirname "$file")" -maxdepth 1 -type f -name "*.svg"`)
 
             # Rename with prefix
