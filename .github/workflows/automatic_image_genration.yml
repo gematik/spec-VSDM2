@@ -121,7 +121,7 @@ jobs:
           echo "✅ PlantUML downloaded successfully"
           
           echo "🧪 Testing PlantUML installation..."
-          echo "PlantUML Version: (java -jar /tmp/plantuml.jar -version)"
+          echo "PlantUML Version: $(java -jar /tmp/plantuml.jar -version)"
 
       - name: 🎨 Generate PlantUML images (debug mode)
         continue-on-error: true
@@ -188,7 +188,7 @@ jobs:
             png_exit_code=$?
             # Logdatei anzeigen
             echo "📋 PlantUML Log Output:"
-            cat /tmp/plantuml-svg.log 2>/dev/null | sed 's/^/  | /' || echo "  | No log output available"cat /tmp/plantuml-svg.log 2>/dev/null | sed 's/^/  | /' || echo "  | No log output available"
+            cat /tmp/plantuml-svg.log 2>/dev/null | sed 's/^/  | /' || echo "  | No log output available"
 
             echo "📊 PNG generation exit code: $png_exit_code"
             if [ -n "$png_exit_code" ] && [ "$png_exit_code" -ne 0 ]; then
@@ -200,14 +200,14 @@ jobs:
             # Rename with prefix
             if [ -f "$output_abs/${base}.png" ]; then
               mv "$output_abs/${base}.png" "$output_abs/${prefix_base}.png"
-              echo "✅ Generated PNG: $output_abs/${prefix_base}.png"
+              echo "✅ Renamed PNG: $output_abs/${prefix_base}.png"
             else
-              echo "❌ Expected PNG not found: $output_abs/${base}.png"
+              echo "❌ Original PNG not found: $output_abs/${base}.png"
             fi
             
-            # Look for PNG files
+            # Check for PNG files
             if [ -f "$output_abs/${prefix_base}.png" ]; then
-              echo "✅ Generated PNG: ${prefix_base}.png"
+              echo "✅ Generated PNG: $output_abs/${prefix_base}.png"
             else
               echo "❌ Expected PNG not found: $output_abs/${prefix_base}.png"
             fi
@@ -218,14 +218,14 @@ jobs:
             
             java -jar /tmp/plantuml.jar -verbose -tsvg "$file" -o "$output_abs" > /tmp/plantuml.log 2>&1
             
-            png_exit_code=$?
+            svg_exit_code=$?
             # Logdatei anzeigen
             echo "📋 PlantUML Log Output:"
             cat /tmp/plantuml-svg.log 2>/dev/null | sed 's/^/  | /' || echo "  | No log output available"
             
             echo "📊 SVG generation exit code: $svg_exit_code"
             if [ -n "$svg_exit_code" ] && [ "$svg_exit_code" -ne 0 ]; then
-              echo "❌ SVG generation failed! Log output:"
+              echo "❌ SVG generation failed!"
             else
               echo "✅ SVG generation command completed"
             fi
@@ -233,14 +233,14 @@ jobs:
             # Rename with prefix
             if [ -f "$output_abs/${base}.svg" ]; then
               mv "$output_abs/${base}.svg" "$output_abs/${prefix_base}.svg"
-              echo "✅ Generated SVG: $output_abs/${prefix_base}.svg"
+              echo "✅ Renamed SVG: $output_abs/${prefix_base}.svg"
             else
-              echo "❌ Expected PNG not found: $output_abs/${base}.svg"
+              echo "❌ Original SVG not found: $output_abs/${base}.svg"
             fi
 
             # Check for SVG files
             if [ -f "$output_abs/${prefix_base}.svg" ]; then
-              echo "✅ Generated SVG: ${prefix_base}.svg"
+              echo "✅ Generated SVG: $output_abs/${prefix_base}.svg"
             else
               echo "❌ Expected SVG not found: $output_abs/${prefix_base}.svg"
             fi
