@@ -170,7 +170,6 @@ jobs:
             
             # process file
             base=$(basename "$file" | sed 's/\.[^.]*$//')
-            #base=${file%.*}
             prefix_base="${{ env.PLANTUML_PREFIX }}${base}"
             echo "📝 Prefix Base name: $prefix_base"
             echo "📊 File size: $(ls -lh "$file" | awk '{print $5}')"
@@ -206,7 +205,7 @@ jobs:
             echo ""
             echo "🎭 Generating SVG for: $file"
             
-            cat "$file" | java -jar /tmp/plantuml.jar -tpng -nometadata -scale 4 -pipe "$file" > "${output_abs}/${prefix_base}.png"
+            cat "$file" | java -jar /tmp/plantuml.jar -tsvg -nometadata -scale 4 -pipe "$file" > "${output_abs}/${prefix_base}.svg"
             #java -jar /tmp/plantuml.jar -tsvg -nometadata -scale 4 "$file" || echo "   WARNING: SVG generation command may have failed for $file (Exit Code: $?)" >&2
             
             svg_exit_code=$?            
