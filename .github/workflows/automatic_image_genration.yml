@@ -93,7 +93,7 @@ jobs:
           echo "🔄 Starting optimized package installation..."
           
           # Disable man-db auto-update to save 3-5 minutes!
-          sudo rm -f /var/lib/man-db/auto-update
+          sudo rm /var/lib/man-db/auto-update
           echo "🚫 Disabled man-db auto-update"
           
           # Update package list
@@ -121,7 +121,7 @@ jobs:
           echo "✅ PlantUML downloaded successfully"
           
           echo "🧪 Testing PlantUML installation..."
-          java -jar /tmp/plantuml.jar -version
+          echo "PlantUML Version: (java -jar /tmp/plantuml.jar -version)"
 
       - name: 🎨 Generate PlantUML images (debug mode)
         continue-on-error: true
@@ -210,7 +210,6 @@ jobs:
               echo "✅ Generated PNG: ${prefix_base}.png"
             else
               echo "❌ Expected PNG not found: $output_abs/${prefix_base}.png"
-              cat /tmp/plantuml-svg.log | sed 's/^/  | /'
             fi
             
             # Generate SVG with full debugging
@@ -227,7 +226,6 @@ jobs:
             echo "📊 SVG generation exit code: $svg_exit_code"
             if [ -n "$svg_exit_code" ] && [ "$svg_exit_code" -ne 0 ]; then
               echo "❌ SVG generation failed! Log output:"
-              cat /tmp/plantuml-svg.log | sed 's/^/  | /'
             else
               echo "✅ SVG generation command completed"
             fi
@@ -245,7 +243,6 @@ jobs:
               echo "✅ Generated SVG: ${prefix_base}.svg"
             else
               echo "❌ Expected SVG not found: $output_abs/${prefix_base}.svg"
-              cat /tmp/plantuml-svg.log | sed 's/^/  | /'
             fi
             
             echo "📁 Final output directory state:"
