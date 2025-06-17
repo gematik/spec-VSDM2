@@ -196,11 +196,11 @@ jobs:
             # search for generated output file type because plantuml's output filename ist the plantuml diagram name and not the *.puml file name
             generated_file=(`find "$(dirname "$file")" -maxdepth 1 -name "*.png"`)
             # Rename with prefix
-            if [ -f "${generated_file[0]}" ]; then
-              mv "${generated_file[0]}" "${output_abs}/${prefix_base}.png"
+            if [ -f "$generated_file" ]; then
+              mv "$generated_file" "${output_abs}/${prefix_base}.png"
               echo "✅ Renamed PNG: ${output_abs}/${prefix_base}.png"
             else
-              echo "❌ Generated PNG not found: ${generated_file[0]}"
+              echo "❌ Generated PNG not found: $generated_file"
             fi
             
             # Check for PNG file in output directory
@@ -228,11 +228,11 @@ jobs:
             generated_file=(`find "$(dirname "$file")" -maxdepth 1 -name "*.svg"`)
 
             # Rename with prefix
-            if [ -f "${generated_file[0]}" ]; then
-              mv "${generated_file[0]}" "${output_abs}/${prefix_base}.svg"
+            if [ -f "$generated_file" ]; then
+              mv "$generated_file" "${output_abs}/${prefix_base}.svg"
               echo "✅ Renamed SVG: ${output_abs}/${prefix_base}.svg"
             else
-              echo "❌ Generated SVG not found: ${generated_file[0]}"
+              echo "❌ Generated SVG not found: $generated_file"
             fi
 
             # Check for SVG files
