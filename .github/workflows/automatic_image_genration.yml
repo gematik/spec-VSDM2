@@ -169,8 +169,8 @@ jobs:
             fi
             
             # process file
-            #base=$(basename "$file" | sed 's/\.[^.]*$//')
-            base=${file%.*}
+            base=$(basename "$file" | sed 's/\.[^.]*$//')
+            #base=${file%.*}
             prefix_base="${{ env.PLANTUML_PREFIX }}${base}"
             echo "📝 Prefix Base name: $prefix_base"
             echo "📊 File size: $(ls -lh "$file" | awk '{print $5}')"
@@ -184,8 +184,8 @@ jobs:
             echo ""
             echo "🖼️ Generating PNG for: $file"
             
-            cat "$file" | java -jar /tmp/plantuml.jar -tpng -nometadata -scale 4 -pipe > "${output_abs}/${prefix_base}.png"
-            # java -jar /tmp/plantuml.jar -tpng -nometadata -scale 4 "$file" || echo "   WARNING: PNG generation command may have failed for $file (Exit Code: $?)" >&2
+            cat "$file" | java -jar /tmp/plantuml.jar -tpng -nometadata -scale 4 -pipe "$file" > "${output_abs}/${prefix_base}.png"
+            #java -jar /tmp/plantuml.jar -tpng -nometadata -scale 4 "$file" || echo "   WARNING: PNG generation command may have failed for $file (Exit Code: $?)" >&2
             
             png_exit_code=$?
             echo "📊 PNG generation exit code: $png_exit_code"
@@ -218,7 +218,7 @@ jobs:
             echo ""
             echo "🎭 Generating SVG for: $file"
             
-            java -jar /tmp/plantuml.jar -tsvg -nometadata "$file" || echo "   WARNING: SVG generation command may have failed for $file (Exit Code: $?)" >&2
+            java -jar /tmp/plantuml.jar -tsvg -nometadata -scale 4 -filename "${base}.puml" "$file" || echo "   WARNING: SVG generation command may have failed for $file (Exit Code: $?)" >&2
             
             svg_exit_code=$?            
             echo "📊 SVG generation exit code: $svg_exit_code"
