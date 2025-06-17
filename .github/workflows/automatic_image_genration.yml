@@ -183,7 +183,7 @@ jobs:
             echo ""
             echo "🖼️ Generating PNG for: $file"
             
-            java -jar /tmp/plantuml.jar -verbose -tpng -scale 4 "$file" -o "$output_abs" > /tmp/plantuml.log 2>&1
+            java -jar /tmp/plantuml.jar -verbose -nometadata -tpng $file -o "$output_abs" > /tmp/plantuml.log 2>&1
             
             png_exit_code=$?
             # Logdatei anzeigen
@@ -216,7 +216,7 @@ jobs:
             echo ""
             echo "🎭 Generating SVG for: $file"
             
-            java -jar /tmp/plantuml.jar -verbose -tsvg "$file" -o "$output_abs" > /tmp/plantuml.log 2>&1
+            java -jar /tmp/plantuml.jar -verbose -nometadata -tsvg $file -o "$output_abs" > /tmp/plantuml.log 2>&1
             
             svg_exit_code=$?
             # Logdatei anzeigen
