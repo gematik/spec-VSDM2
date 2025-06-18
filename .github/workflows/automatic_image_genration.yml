@@ -289,7 +289,7 @@ jobs:
               -v "$(pwd):/data" \
               rlespinasse/drawio-export:4.4.0 \
               --format png \
-              --output "${rel_output_dir}/${prefix_base}.png" \
+              --output "../${rel_output_dir}/${prefix_base}.png" \
               "$rel_input_file_path"
             
             png_exit_code=$?
@@ -315,7 +315,7 @@ jobs:
               -v "$(pwd):/data" \
               rlespinasse/drawio-export:4.4.0 \
               --format svg \
-              --output "${rel_output_dir}/${prefix_base}.svg" \
+              --output "../${rel_output_dir}/${prefix_base}.svg" \
               "$rel_input_file_path"
             
             svg_exit_code=$?
