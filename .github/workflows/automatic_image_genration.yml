@@ -121,7 +121,7 @@ jobs:
           echo "PlantUML Version: $(java -jar /tmp/plantuml.jar -version)"
 
       - name: 🎨 Generate PlantUML images (debug mode)
-        continue-on-error: "${{ github.event.inputs.continue_on_error }}"
+        continue-on-error: ${{ github.event.inputs.continue_on_error }}
         run: |
           echo "=== 🎨 Generating PlantUML images ==="
           
@@ -226,7 +226,7 @@ jobs:
           done
 
       - name: 🎯 Generate Draw.io images (debug mode)
-        continue-on-error: "${{ github.event.inputs.continue_on_error }}"
+        continue-on-error: ${{ github.event.inputs.continue_on_error }}
         run: |
           echo "=== 🎯 Generating Draw.io images ==="
           
