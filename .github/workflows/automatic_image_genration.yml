@@ -301,7 +301,7 @@ jobs:
             # docker output directory: src/drawio
             docker run --rm \
               -v "$(pwd):/data" \
-              rlespinasse/drawio-export:4.4.0 \
+              rlespinasse/drawio-export:latest \
               --format png \
               --output "." \
               "$rel_input_file_path"
@@ -350,7 +350,7 @@ jobs:
 
             docker run --rm \
               -v "$(pwd):/data" \
-              rlespinasse/drawio-export:4.4.0 \
+              rlespinasse/drawio-export:latest \
               --format svg \
               --output "." \
               "$rel_input_file_path"
