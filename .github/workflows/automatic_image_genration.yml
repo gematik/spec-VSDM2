@@ -60,6 +60,7 @@ jobs:
             echo "PlantUML file count: $(find ${{ env.REL_PLANTUML_INPUT_DIR }} -name "*.puml" -o -name "*.plantuml" | wc -l)"
           else
             echo "❌ ${{ env.REL_PLANTUML_INPUT_DIR }} directory not found"
+            exit 1
           fi
           echo ""
           echo "=== src/drawio contents ==="
@@ -68,6 +69,7 @@ jobs:
             echo "Draw.io file count: $(find ${{ env.REL_DRAWIO_INPUT_DIR }} -name "*.drawio" -o -name "*.dio" | wc -l)"
           else
             echo "❌ ${{ env.REL_DRAWIO_INPUT_DIR }} directory not found"
+            exit 1
           fi
 
       - name: ☕ Set up JDK 11
@@ -188,6 +190,7 @@ jobs:
             echo "📊 PlantUML PNG exit code: $png_exit_code"
             if [ -n "$png_exit_code" ] && [ "$png_exit_code" -ne 0 ]; then
               echo "❌ PNG generation failed!"
+              exit 1
             else
               echo "✅ PNG generation command completed"
             fi
@@ -197,6 +200,7 @@ jobs:
               echo "✅ Final PNG: ${output_dir}/${prefix_base}.png"
             else
               echo "❌ Expected PNG not found: ${output_dir}/${prefix_base}.png"
+              exit 1
             fi
             
             # Generate SVG with full debugging
@@ -210,6 +214,7 @@ jobs:
             echo "📊 PlantUML SVG exit code: $svg_exit_code"
             if [ -n "$svg_exit_code" ] && [ "$svg_exit_code" -ne 0 ]; then
               echo "❌ SVG generation failed!"
+              exit 1
             else
               echo "✅ SVG generation command completed"
             fi
@@ -219,6 +224,7 @@ jobs:
               echo "✅ Final SVG: ${output_dir}/${prefix_base}.svg"
             else
               echo "❌ Expected SVG not found: ${output_dir}/${prefix_base}.svg"
+              exit 1
             fi
             
             echo "📁 Final output directory state:"
@@ -304,6 +310,7 @@ jobs:
             echo "📊 Docker PNG exit code: $png_exit_code"
             if [ -n "$png_exit_code" ] && [ "$png_exit_code" -ne 0 ]; then
               echo "❌ PNG generation failed!"
+              exit 1
             else
               echo "✅ PNG generation command completed"
             fi
@@ -352,6 +359,7 @@ jobs:
             echo "📊 Docker SVG exit code: $svg_exit_code"
             if [ -n "$svg_exit_code" ] && [ "$svg_exit_code" -ne 0 ]; then
               echo "❌ SVG generation failed!"
+              exit 1
             else
               echo "✅ SVG generation command completed"
             fi
