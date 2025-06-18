@@ -121,16 +121,21 @@ jobs:
         run: |
           echo "=== 🎨 Generating PlantUML images ==="
           
-          output_dir=${{ env.OUTPUT_DIR }}
+          # Definitions
+          rel_plantuml_input_dir="src/plantuml"
+          output_dir="$(pwd)/images"
+          plantuml_prefix="uml_"
+
+          echo "📁 Input directory: $rel_plantuml_input_dir"
           echo "📁 Output directory: $output_dir"
           
           # Determine processing mode
           if [ "${{ github.event.inputs.regenerate_all }}" = "true" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "🔄 FULL REGENERATION MODE - Processing all files"
-            puml_files=$(find ${{ env.REL_PLANTUML_INPUT_DIR }} -name "*.puml" -o -name "*.plantuml" 2>/dev/null)
+            puml_files=$(find $rel_plantuml_input_dir -name "*.puml" -o -name "*.plantuml" 2>/dev/null)
             
             if [ -z "$puml_files" ]; then
-              echo "❌ No PlantUML files found in ${{ env.REL_PLANTUML_INPUT_DIR }}/"
+              echo "❌ No PlantUML files found in ${rel_plantuml_input_dir}/"
               exit 0
             fi
             
@@ -138,7 +143,7 @@ jobs:
             echo "$puml_files"
           else
             echo "⚡ INCREMENTAL MODE - Processing only changed files"
-            changed_puml_files=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(puml|plantuml)$' | grep '^${{ env.REL_PLANTUML_INPUT_DIR }}/' || true)
+            changed_puml_files=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(puml|plantuml)$' | grep '^${rel_plantuml_input_dir}/' || true)
             
             if [ -z "$changed_puml_files" ]; then
               echo "ℹ️ No PlantUML files changed in this commit"
@@ -163,7 +168,7 @@ jobs:
             
             # process file
             base=$(basename "$file" | sed 's/\.[^.]*$//')
-            prefix_base="${{ env.PLANTUML_PREFIX }}${base}"
+            prefix_base="${plantuml_prefix}${base}"
             echo "📝 Prefix Base name: $prefix_base"
             echo "📊 File size: $(ls -lh "$file" | awk '{print $5}')"
             
@@ -225,17 +230,21 @@ jobs:
         run: |
           echo "=== 🎯 Generating Draw.io images ==="
           
-          rel_input_dir=${{ env.REL_DRAWIO_INPUT_DIR }}
-          output_dir=${{ env.OUTPUT_DIR }}
+          # Definitions
+          rel_drawio_input_dir="src/drawio"
+          output_dir="$(pwd)/images"
+          drawio_prefix="diagram_"
+
+          echo "📁 Input directory: $rel_drawio_input_dir"
           echo "📁 Output directory: $output_dir"
 
           # Determine processing mode
           if [ "${{ github.event.inputs.regenerate_all }}" = "true" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "🔄 FULL REGENERATION MODE - Processing all files"
-            drawio_files=$(find ${{ env.REL_DRAWIO_INPUT_DIR }} -name "*.drawio" -o -name "*.dio" 2>/dev/null)
+            drawio_files=$(find $rel_drawio_input_dir -name "*.drawio" -o -name "*.dio" 2>/dev/null)
             
             if [ -z "$drawio_files" ]; then
-              echo "❌ No drawio files found in ${{ env.REL_DRAWIO_INPUT_DIR }}/"
+              echo "❌ No drawio files found in ${rel_drawio_input_dir}/"
               exit 0
             fi
             
@@ -243,7 +252,7 @@ jobs:
             echo "$drawio_files"
           else
             echo "⚡ INCREMENTAL MODE - Processing only changed files"
-            changed_drawio_files=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(drawio|dio)$' | grep '^${{ env.REL_DRAWIO_INPUT_DIR }}/' || true)
+            changed_drawio_files=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(drawio|dio)$' | grep '^${rel_drawio_input_dir}/' || true)
             
             if [ -z "$changed_drawio_files" ]; then
               echo "ℹ️ No drawio files changed in this commit"
@@ -268,8 +277,8 @@ jobs:
 
             # process file
             base=$(basename "$file" | sed 's/\.[^.]*$//')
-            prefix_base="${{ env.DRAWIO_PREFIX }}${base}"
-            rel_input_file_path="${rel_input_dir}/$(basename "$file")"
+            prefix_base="${drawio_prefix}${base}"
+            rel_input_file_path="${rel_drawio_input_dir}/$(basename "$file")"
             echo "📝 Prefix Base name: $prefix_base"
             echo "📝 Relative file path: $rel_input_file_path"
             echo "📊 File size: $(ls -lh "$file" | awk '{print $5}')"
@@ -300,12 +309,11 @@ jobs:
             fi
 
             # find all docker drawio generated *.png images, rename and move them to the /image folder
-            drawio_dir="${{ env.REL_DRAWIO_INPUT_DIR }}"
-            png_files=($(find "$(pwd)/$drawio_dir" -name "*.png" -type f | sort))
+            png_files=($(find "$(pwd)/$rel_drawio_input_dir" -name "*.png" -type f | sort))
     
             # Prüfung auf leeres Array
             if [ ${#png_files[@]} -eq 0 ]; then
-              echo "❌ Keine PNG-Dateien gefunden in '$(pwd)/$drawio_dir'"
+              echo "❌ Keine PNG-Dateien gefunden in '$(pwd)/$rel_drawio_input_dir'"
               exit 1
             else
               echo "📁 Gefunden: ${#png_files[@]} PNG-Datei(en)"
@@ -349,12 +357,11 @@ jobs:
             fi
             
             # find all docker drawio generated *.svg images, rename and move them to the /image folder
-            drawio_dir="${{ env.REL_DRAWIO_INPUT_DIR }}"
-            svg_files=($(find "$(pwd)/$drawio_dir" -name "*.svg" -type f | sort))
+            svg_files=($(find "$(pwd)/$rel_drawio_input_dir" -name "*.svg" -type f | sort))
     
             # Prüfung auf leeres Array
             if [ ${#svg_files[@]} -eq 0 ]; then
-              echo "❌ Keine SVG-Dateien gefunden in '$(pwd)/$drawio_dir'"
+              echo "❌ Keine SVG-Dateien gefunden in '$(pwd)/$rel_drawio_input_dir'"
               exit 1  # oder return 1 in Funktion
             else
               echo "📁 Gefunden: ${#svg_files[@]} SVG-Datei(en)"
@@ -387,7 +394,11 @@ jobs:
         run: |
           echo "=== 📊 Final Results ==="
 
-          output_dir=${{ env.OUTPUT_DIR }}
+          # Definitions
+          plantuml_prefix="uml_"
+          drawio_prefix="diagram_"
+          output_dir="$(pwd)/images"
+
           echo "📁 Output directory: $output_dir"
 
           echo "📁 Generated files in $output_dir:"
@@ -398,8 +409,8 @@ jobs:
             echo "  📄 Total files: $(ls "${output_dir}/" 2>/dev/null | wc -l)"
             echo "  🖼️ PNG files: $(ls "${output_dir}"/*.png 2>/dev/null | wc -l)"
             echo "  🎭 SVG files: $(ls "${output_dir}"/*.svg 2>/dev/null | wc -l)"
-            echo "  🎨 PlantUML files: $(ls "${output_dir}/${{ env.PLANTUML_PREFIX }}"* 2>/dev/null | wc -l)"
-            echo "  🎯 Draw.io files: $(ls "${output_dir}/${{ env.DRAWIO_PREFIX }}"* 2>/dev/null | wc -l)"
+            echo "  🎨 PlantUML files: $(ls "${output_dir}/${plantuml_prefix}"* 2>/dev/null | wc -l)"
+            echo "  🎯 Draw.io files: $(ls "${output_dir}/${drawio_prefix}"* 2>/dev/null | wc -l)"
           else
             echo "  ❌ No images directory found"
           fi
@@ -412,7 +423,7 @@ jobs:
         run: |
           echo "=== 📤 Committing generated images ==="
           
-          output_dir=${{ env.OUTPUT_DIR }}
+          output_dir="$(pwd)/images"
           echo "📁 Output directory: $output_dir"
 
           git config --global user.name 'GitHub Actions'
