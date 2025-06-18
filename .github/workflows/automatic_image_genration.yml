@@ -19,6 +19,7 @@ on:
 env:
   REL_PLANTUML_INPUT_DIR: src/plantuml
   REL_DRAWIO_INPUT_DIR: src/drawio
+  REL_OUTPUT_DIR: src/images
   OUTPUT_DIR: $(pwd)/images
   PLANTUML_PREFIX: uml_
   DRAWIO_PREFIX: diagram_
@@ -226,6 +227,7 @@ jobs:
           echo "=== 🎯 Generating Draw.io images ==="
           
           rel_input_dir=${{ env.REL_DRAWIO_INPUT_DIR }}
+          rel_output_dir=${{ env.REL_OUTPUT_DIR }}
           output_dir=${{ env.OUTPUT_DIR }}
           echo "📁 Output directory: $output_dir"
 
@@ -271,6 +273,7 @@ jobs:
             prefix_base="${{ env.DRAWIO_PREFIX }}${base}"
             rel_input_file_path="${rel_input_dir}/$(basename "$file")"
             echo "📝 Prefix Base name: $prefix_base"
+            echo "📝 Relative file path: $rel_input_file_path"
             echo "📊 File size: $(ls -lh "$file" | awk '{print $5}')"
             
             # Show file content preview
@@ -286,7 +289,7 @@ jobs:
               -v "$(pwd):/data" \
               rlespinasse/drawio-export:4.4.0 \
               --format png \
-              --output "${output_dir}/${prefix_base}.png" \
+              --output "${rel_output_dir}/${prefix_base}.png" \
               "$rel_input_file_path"
             
             png_exit_code=$?
@@ -312,7 +315,7 @@ jobs:
               -v "$(pwd):/data" \
               rlespinasse/drawio-export:4.4.0 \
               --format svg \
-              --output "${output_dir}/${prefix_base}.png" \
+              --output "${rel_output_dir}/${prefix_base}.svg" \
               "$rel_input_file_path"
             
             svg_exit_code=$?
