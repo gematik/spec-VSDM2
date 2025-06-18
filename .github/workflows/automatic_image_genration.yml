@@ -15,11 +15,6 @@ on:
         required: false
         default: false
         type: boolean
-      continue_on_error:
-        description: 'Run full script even on errors'
-        required: false
-        default: false
-        type: boolean
 
 env:
   OUTPUT_DIR: $(pwd)/images
@@ -121,7 +116,6 @@ jobs:
           echo "PlantUML Version: $(java -jar /tmp/plantuml.jar -version)"
 
       - name: 🎨 Generate PlantUML images (debug mode)
-        continue-on-error: ${{ github.event.inputs.continue_on_error }}
         run: |
           echo "=== 🎨 Generating PlantUML images ==="
           
@@ -180,6 +174,7 @@ jobs:
             echo ""
             echo "🖼️ Generating PNG for: $file"
             
+            # using "cat" because standard output name of PlantUML ist the uml diagram name (with potential problematic characters for file names) and not the name of the input file
             cat "$file" | java -jar /tmp/plantuml.jar -tpng -nometadata -scale 4 -pipe "$file" > "${output_dir}/${prefix_base}.png"
             #java -jar /tmp/plantuml.jar -tpng -nometadata -scale 4 "$file" || echo "   WARNING: PNG generation command may have failed for $file (Exit Code: $?)" >&2
             
@@ -202,6 +197,7 @@ jobs:
             echo ""
             echo "🎭 Generating SVG for: $file"
             
+            # using "cat" because standard output name of PlantUML ist the uml diagram name (with potential problematic characters for file names) and not the name of the input file
             cat "$file" | java -jar /tmp/plantuml.jar -tsvg -nometadata -scale 4 -pipe "$file" > "${output_dir}/${prefix_base}.svg"
             #java -jar /tmp/plantuml.jar -tsvg -nometadata -scale 4 "$file" || echo "   WARNING: SVG generation command may have failed for $file (Exit Code: $?)" >&2
             
@@ -226,7 +222,6 @@ jobs:
           done
 
       - name: 🎯 Generate Draw.io images (debug mode)
-        continue-on-error: ${{ github.event.inputs.continue_on_error }}
         run: |
           echo "=== 🎯 Generating Draw.io images ==="
           
@@ -285,12 +280,13 @@ jobs:
             echo ""
             echo "🖼️ Generating PNG for: $file"
 
+            echo "(docker run --rm rlespinasse/drawio-export --help)"
             docker run --rm \
               -v "$(pwd):/data" \
               rlespinasse/drawio-export:4.4.0 \
               --format png \
               --output "$output_dir" \
-              "$file"
+              $file
             
             png_exit_code=$?
             echo "📊 Docker PNG exit code: $png_exit_code"
@@ -319,8 +315,7 @@ jobs:
               rlespinasse/drawio-export:4.4.0 \
               --format svg \
               --output "$output_dir" \
-              "$file" \
-              2>&1 | sed 's/^/  | /'
+              $file
             
             svg_exit_code=$?
             echo "📊 Docker SVG exit code: $svg_exit_code"
