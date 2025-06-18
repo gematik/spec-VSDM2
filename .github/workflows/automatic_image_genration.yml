@@ -127,7 +127,7 @@ jobs:
           # Determine processing mode
           if [ "${{ github.event.inputs.regenerate_all }}" = "true" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "🔄 FULL REGENERATION MODE - Processing all files"
-            puml_files=$(find $(pwd)/${{ env.REL_PLANTUML_INPUT_DIR }} -name "*.puml" -o -name "*.plantuml" 2>/dev/null)
+            puml_files=$(find ${{ env.REL_PLANTUML_INPUT_DIR }} -name "*.puml" -o -name "*.plantuml" 2>/dev/null)
             
             if [ -z "$puml_files" ]; then
               echo "❌ No PlantUML files found in ${{ env.REL_PLANTUML_INPUT_DIR }}/"
@@ -303,6 +303,14 @@ jobs:
             drawio_dir="${{ env.REL_DRAWIO_INPUT_DIR }}"
             png_files=($(find "$(pwd)/$drawio_dir" -name "*.png" -type f | sort))
     
+            # Prüfung auf leeres Array
+            if [ ${#png_files[@]} -eq 0 ]; then
+              echo "❌ Keine PNG-Dateien gefunden in '$(pwd)/$drawio_dir'"
+              exit 1
+            else
+              echo "📁 Gefunden: ${#png_files[@]} PNG-Datei(en)"
+            fi
+
             for i in "${!png_files[@]}"; do
                 source_file="${png_files[$i]}"
                 
@@ -344,6 +352,14 @@ jobs:
             drawio_dir="${{ env.REL_DRAWIO_INPUT_DIR }}"
             svg_files=($(find "$(pwd)/$drawio_dir" -name "*.svg" -type f | sort))
     
+            # Prüfung auf leeres Array
+            if [ ${#svg_files[@]} -eq 0 ]; then
+              echo "❌ Keine SVG-Dateien gefunden in '$(pwd)/$drawio_dir'"
+              exit 1  # oder return 1 in Funktion
+            else
+              echo "📁 Gefunden: ${#svg_files[@]} SVG-Datei(en)"
+            fi
+
             for i in "${!svg_files[@]}"; do
                 source_file="${svg_files[$i]}"
                 
