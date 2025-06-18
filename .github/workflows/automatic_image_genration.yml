@@ -19,7 +19,7 @@ on:
 env:
   REL_PLANTUML_INPUT_DIR: src/plantuml
   REL_DRAWIO_INPUT_DIR: src/drawio
-  REL_OUTPUT_DIR: src/images
+  REL_OUTPUT_DIR: images
   OUTPUT_DIR: $(pwd)/images
   PLANTUML_PREFIX: uml_
   DRAWIO_PREFIX: diagram_
