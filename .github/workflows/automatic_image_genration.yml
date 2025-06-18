@@ -15,9 +15,14 @@ on:
         required: false
         default: false
         type: boolean
+      continue_on_error:
+        description: 'Run full script even on errors'
+        required: false
+        default: false
+        type: boolean
 
 env:
-  OUTPUT_DIR: images
+  OUTPUT_DIR: $(pwd)/images
   PLANTUML_PREFIX: uml_
   DRAWIO_PREFIX: diagram_
 
@@ -27,14 +32,6 @@ jobs:
     timeout-minutes: 30
 
     steps:
-      - name: 📋 Debug - Environment Info
-        run: |
-          echo "🐧 Runner OS: $(lsb_release -d)"
-          echo "💾 Memory: $(free -h | grep Mem)"
-          echo "💿 Disk: $(df -h /)"
-          echo "🏃 Runner: $RUNNER_NAME"
-          echo "📅 Date: $(date)"
-
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
         with:
@@ -124,12 +121,12 @@ jobs:
           echo "PlantUML Version: $(java -jar /tmp/plantuml.jar -version)"
 
       - name: 🎨 Generate PlantUML images (debug mode)
-        continue-on-error: true
+        continue-on-error: "${{ github.event.inputs.continue_on_error }}"
         run: |
           echo "=== 🎨 Generating PlantUML images ==="
           
-          output_abs=$(pwd)/${{ env.OUTPUT_DIR }}
-          echo "📁 Output directory: $output_abs"
+          output_dir=${{ env.OUTPUT_DIR }}
+          echo "📁 Output directory: $output_dir"
           
           # Determine processing mode
           if [ "${{ github.event.inputs.regenerate_all }}" = "true" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
@@ -183,11 +180,11 @@ jobs:
             echo ""
             echo "🖼️ Generating PNG for: $file"
             
-            cat "$file" | java -jar /tmp/plantuml.jar -tpng -nometadata -scale 4 -pipe "$file" > "${output_abs}/${prefix_base}.png"
+            cat "$file" | java -jar /tmp/plantuml.jar -tpng -nometadata -scale 4 -pipe "$file" > "${output_dir}/${prefix_base}.png"
             #java -jar /tmp/plantuml.jar -tpng -nometadata -scale 4 "$file" || echo "   WARNING: PNG generation command may have failed for $file (Exit Code: $?)" >&2
             
             png_exit_code=$?
-            echo "📊 PNG generation exit code: $png_exit_code"
+            echo "📊 PlantUML PNG exit code: $png_exit_code"
             if [ -n "$png_exit_code" ] && [ "$png_exit_code" -ne 0 ]; then
               echo "❌ PNG generation failed!"
             else
@@ -195,21 +192,21 @@ jobs:
             fi
             
             # Check for PNG file in output directory
-            if [ -f "${output_abs}/${prefix_base}.png" ]; then
-              echo "✅ Final PNG: ${output_abs}/${prefix_base}.png"
+            if [ -f "${output_dir}/${prefix_base}.png" ]; then
+              echo "✅ Final PNG: ${output_dir}/${prefix_base}.png"
             else
-              echo "❌ Expected PNG not found: ${output_abs}/${prefix_base}.png"
+              echo "❌ Expected PNG not found: ${output_dir}/${prefix_base}.png"
             fi
             
             # Generate SVG with full debugging
             echo ""
             echo "🎭 Generating SVG for: $file"
             
-            cat "$file" | java -jar /tmp/plantuml.jar -tsvg -nometadata -scale 4 -pipe "$file" > "${output_abs}/${prefix_base}.svg"
+            cat "$file" | java -jar /tmp/plantuml.jar -tsvg -nometadata -scale 4 -pipe "$file" > "${output_dir}/${prefix_base}.svg"
             #java -jar /tmp/plantuml.jar -tsvg -nometadata -scale 4 "$file" || echo "   WARNING: SVG generation command may have failed for $file (Exit Code: $?)" >&2
             
             svg_exit_code=$?            
-            echo "📊 SVG generation exit code: $svg_exit_code"
+            echo "📊 PlantUML SVG exit code: $svg_exit_code"
             if [ -n "$svg_exit_code" ] && [ "$svg_exit_code" -ne 0 ]; then
               echo "❌ SVG generation failed!"
             else
@@ -217,22 +214,25 @@ jobs:
             fi
 
             # Check for SVG files
-            if [ -f "${output_abs}/${prefix_base}.svg" ]; then
-              echo "✅ Final SVG: ${output_abs}/${prefix_base}.svg"
+            if [ -f "${output_dir}/${prefix_base}.svg" ]; then
+              echo "✅ Final SVG: ${output_dir}/${prefix_base}.svg"
             else
-              echo "❌ Expected SVG not found: ${output_abs}/${prefix_base}.svg"
+              echo "❌ Expected SVG not found: ${output_dir}/${prefix_base}.svg"
             fi
             
             echo "📁 Final output directory state:"
-            ls -la "$output_abs"/ 2>/dev/null | sed 's/^/  | /' || echo "  | No output directory"
+            ls -la "$output_dir"/ 2>/dev/null | sed 's/^/  | /' || echo "  | No output directory"
             echo "===================="
           done
 
       - name: 🎯 Generate Draw.io images (debug mode)
-        continue-on-error: true
+        continue-on-error: "${{ github.event.inputs.continue_on_error }}"
         run: |
           echo "=== 🎯 Generating Draw.io images ==="
           
+          output_dir=${{ env.OUTPUT_DIR }}
+          echo "📁 Output directory: $output_dir"
+
           # Determine processing mode
           if [ "${{ github.event.inputs.regenerate_all }}" = "true" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "🔄 FULL REGENERATION MODE - Processing all files"
@@ -265,33 +265,50 @@ jobs:
             echo "===================="
             echo "🔄 Processing: $file"
             
+            # Convert relative path to absolute if needed
+            if [[ "$file" != /* ]]; then
+              file="$(pwd)/$file"
+            fi
+
+            # process file
             base=$(basename "$file" | sed 's/\.[^.]*$//')
             prefix_base="${{ env.DRAWIO_PREFIX }}${base}"
             echo "📝 Prefix Base name: $prefix_base"
             echo "📊 File size: $(ls -lh "$file" | awk '{print $5}')"
             
-            # Generate PNG with debugging
+            # Show file content preview
+            echo "👀 File content preview (first 5 lines):"
+            head -5 "$file" | sed 's/^/  | /'
+            echo "  | ..."
+
+            # Generate PNG
+            echo ""
             echo "🖼️ Generating PNG for: $file"
 
             docker run --rm \
               -v "$(pwd):/data" \
               rlespinasse/drawio-export:4.4.0 \
               --format png \
-              --output "${{ env.OUTPUT_DIR }}" \
+              --output "$output_dir" \
               "$file" \
               2>&1 | sed 's/^/  | /'
             
             png_exit_code=$?
             echo "📊 Docker PNG exit code: $png_exit_code"
+            if [ -n "$png_exit_code" ] && [ "$png_exit_code" -ne 0 ]; then
+              echo "❌ PNG generation failed!"
+            else
+              echo "✅ PNG generation command completed"
+            fi
             
             # Check and rename PNG
-            if [ -f "${{ env.OUTPUT_DIR }}/${base}.png" ]; then
-              mv "${{ env.OUTPUT_DIR }}/${base}.png" "${{ env.OUTPUT_DIR }}/${prefix_base}.png"
-              echo "✅ Generated PNG: ${{ env.OUTPUT_DIR }}/${prefix_base}.png"
+            if [ -f "${output_dir}/${base}.png" ]; then
+              mv "${output_dir}/${base}.png" "${output_dir}/${prefix_base}.png"
+              echo "✅ Generated PNG: ${output_dir}/${prefix_base}.png"
             else
-              echo "❌ PNG not created: ${{ env.OUTPUT_DIR }}/${prefix_base}.png"
+              echo "❌ PNG not created: ${output_dir}/${prefix_base}.png"
               echo "📁 Current output directory contents:"
-              ls -la "${{ env.OUTPUT_DIR }}/" | sed 's/^/  | /'
+              ls -la "${output_dir}/" | sed 's/^/  | /'
             fi
             
             # Generate SVG with debugging
@@ -301,7 +318,7 @@ jobs:
               -v "$(pwd):/data" \
               rlespinasse/drawio-export:4.4.0 \
               --format svg \
-              --output "${{ env.OUTPUT_DIR }}" \
+              --output "$output_dir" \
               "$file" \
               2>&1 | sed 's/^/  | /'
             
@@ -309,33 +326,37 @@ jobs:
             echo "📊 Docker SVG exit code: $svg_exit_code"
             
             # Check and rename SVG
-            if [ -f "${{ env.OUTPUT_DIR }}/${base}.svg" ]; then
-              mv "${{ env.OUTPUT_DIR }}/${base}.svg" "${{ env.OUTPUT_DIR }}/${prefix_base}.svg"
-              echo "✅ Generated SVG: ${{ env.OUTPUT_DIR }}/${prefix_base}.svg"
+            if [ -f "${output_dir}/${base}.svg" ]; then
+              mv "${output_dir}/${base}.svg" "${output_dir}/${prefix_base}.svg"
+              echo "✅ Generated SVG: ${output_dir}/${prefix_base}.svg"
             else
-              echo "❌ SVG not created: ${{ env.OUTPUT_DIR }}/${prefix_base}.svg"
+              echo "❌ SVG not created: ${output_dir}/${prefix_base}.svg"
               echo "📁 Current output directory contents:"
-              ls -la "${{ env.OUTPUT_DIR }}/" | sed 's/^/  | /'
+              ls -la "${output_dir}/" | sed 's/^/  | /'
             fi
             
             echo "📁 Final output directory state:"
-            ls -la "${{ env.OUTPUT_DIR }}/" | sed 's/^/  | /'
+            ls -la "${output_dir}/" | sed 's/^/  | /'
             echo "===================="
           done
 
       - name: 📊 Show results (debug)
         run: |
           echo "=== 📊 Final Results ==="
-          echo "📁 Generated files in ${{ env.OUTPUT_DIR }}:"
-          if [ -d "${{ env.OUTPUT_DIR }}" ]; then
-            ls -la "${{ env.OUTPUT_DIR }}/" | sed 's/^/  | /'
+
+          output_dir=${{ env.OUTPUT_DIR }}
+          echo "📁 Output directory: $output_dir"
+
+          echo "📁 Generated files in $output_dir:"
+          if [ -d "$output_dir" ]; then
+            ls -la "${output_dir}/" | sed 's/^/  | /'
             echo ""
             echo "📈 Statistics:"
-            echo "  📄 Total files: $(ls "${{ env.OUTPUT_DIR }}/" 2>/dev/null | wc -l)"
-            echo "  🖼️ PNG files: $(ls "${{ env.OUTPUT_DIR }}"/*.png 2>/dev/null | wc -l)"
-            echo "  🎭 SVG files: $(ls "${{ env.OUTPUT_DIR }}"/*.svg 2>/dev/null | wc -l)"
-            echo "  🎨 PlantUML files: $(ls "${{ env.OUTPUT_DIR }}/${{ env.PLANTUML_PREFIX }}"* 2>/dev/null | wc -l)"
-            echo "  🎯 Draw.io files: $(ls "${{ env.OUTPUT_DIR }}/${{ env.DRAWIO_PREFIX }}"* 2>/dev/null | wc -l)"
+            echo "  📄 Total files: $(ls "${output_dir}/" 2>/dev/null | wc -l)"
+            echo "  🖼️ PNG files: $(ls "${output_dir}"/*.png 2>/dev/null | wc -l)"
+            echo "  🎭 SVG files: $(ls "${output_dir}"/*.svg 2>/dev/null | wc -l)"
+            echo "  🎨 PlantUML files: $(ls "${output_dir}/${{ env.PLANTUML_PREFIX }}"* 2>/dev/null | wc -l)"
+            echo "  🎯 Draw.io files: $(ls "${output_dir}/${{ env.DRAWIO_PREFIX }}"* 2>/dev/null | wc -l)"
           else
             echo "  ❌ No images directory found"
           fi
@@ -348,14 +369,17 @@ jobs:
         run: |
           echo "=== 📤 Committing generated images ==="
           
+          output_dir=${{ env.OUTPUT_DIR }}
+          echo "📁 Output directory: $output_dir"
+
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
           echo "✅ Git config set"
           
-          if [ -d "${{ env.OUTPUT_DIR }}" ] && [ "$(ls -A ${{ env.OUTPUT_DIR }})" ]; then
+          if [ -d "$output_dir" ] && [ "$(ls -A $output_dir)" ]; then
             echo "📁 Images directory exists and has content"
             
-            git add ${{ env.OUTPUT_DIR }}/
+            git add $output_dir/
             echo "✅ Added images to git staging"
             
             # Count changes
