@@ -132,7 +132,7 @@ jobs:
           echo "📁 Output directory: $output_dir"
           
           # Determine processing mode
-          if [ "${{ github.event.inputs.regenerate_all }}" = "true" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          if [ "${{ github.event.inputs.regenerate_all }}" = "true" ]; then
             echo "🔄 FULL REGENERATION MODE - Processing all files"
             puml_files=$(find $rel_plantuml_input_dir -name "*.puml" -o -name "*.plantuml" 2>/dev/null)
             
@@ -145,7 +145,7 @@ jobs:
             echo "$puml_files"
           else
             echo "⚡ INCREMENTAL MODE - Processing only changed files"
-            changed_puml_files=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(puml|plantuml)$' | grep '^${rel_plantuml_input_dir}/' || true)
+            changed_puml_files=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(puml|plantuml)$' | grep "^${rel_plantuml_input_dir}/" || true)
             
             if [ -z "$changed_puml_files" ]; then
               echo "ℹ️ No PlantUML files changed in this commit"
@@ -245,7 +245,7 @@ jobs:
           echo "📁 Output directory: $output_dir"
 
           # Determine processing mode
-          if [ "${{ github.event.inputs.regenerate_all }}" = "true" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          if [ "${{ github.event.inputs.regenerate_all }}" = "true" ]; then
             echo "🔄 FULL REGENERATION MODE - Processing all files"
             drawio_files=$(find $rel_drawio_input_dir -name "*.drawio" -o -name "*.dio" 2>/dev/null)
             
@@ -258,7 +258,7 @@ jobs:
             echo "$drawio_files"
           else
             echo "⚡ INCREMENTAL MODE - Processing only changed files"
-            changed_drawio_files=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(drawio|dio)$' | grep '^${rel_drawio_input_dir}/' || true)
+            changed_drawio_files=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(drawio|dio)$' | grep "^${rel_drawio_input_dir}/" || true)
             
             if [ -z "$changed_drawio_files" ]; then
               echo "ℹ️ No drawio files changed in this commit"
