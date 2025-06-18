@@ -290,8 +290,7 @@ jobs:
               rlespinasse/drawio-export:4.4.0 \
               --format png \
               --output "$output_dir" \
-              "$file" \
-              2>&1 | sed 's/^/  | /'
+              "$file"
             
             png_exit_code=$?
             echo "📊 Docker PNG exit code: $png_exit_code"
@@ -311,7 +310,8 @@ jobs:
               ls -la "${output_dir}/" | sed 's/^/  | /'
             fi
             
-            # Generate SVG with debugging
+            # Generate SVG
+            echo ""
             echo "🎭 Generating SVG for: $file"
 
             docker run --rm \
