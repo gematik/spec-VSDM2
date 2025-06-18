@@ -300,7 +300,8 @@ jobs:
             fi
 
             # find all docker drawio generated *.png images, rename and move them to the /image folder
-            png_files=($(find "$(pwd)/${{ env.REL_DRAWIO_INPUT_DIR }}" -name "*.png" -type f | sort))
+            drawio_dir="${{ env.REL_DRAWIO_INPUT_DIR }}"
+            png_files=($(find "$(pwd)/$drawio_dir" -name "*.png" -type f | sort))
     
             for i in "${!png_files[@]}"; do
                 source_file="${png_files[$i]}"
@@ -340,7 +341,8 @@ jobs:
             fi
             
             # find all docker drawio generated *.svg images, rename and move them to the /image folder
-            svg_files=($(find "$(pwd)/${{ env.REL_DRAWIO_INPUT_DIR }}" -name "*.svg" -type f | sort))
+            drawio_dir="${{ env.REL_DRAWIO_INPUT_DIR }}"
+            svg_files=($(find "$(pwd)/$drawio_dir" -name "*.svg" -type f | sort))
     
             for i in "${!svg_files[@]}"; do
                 source_file="${svg_files[$i]}"
