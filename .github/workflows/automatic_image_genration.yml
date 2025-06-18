@@ -19,7 +19,6 @@ on:
 env:
   REL_PLANTUML_INPUT_DIR: src/plantuml
   REL_DRAWIO_INPUT_DIR: src/drawio
-  REL_OUTPUT_DIR: images
   OUTPUT_DIR: $(pwd)/images
   PLANTUML_PREFIX: uml_
   DRAWIO_PREFIX: diagram_
@@ -227,7 +226,6 @@ jobs:
           echo "=== 🎯 Generating Draw.io images ==="
           
           rel_input_dir=${{ env.REL_DRAWIO_INPUT_DIR }}
-          rel_output_dir=${{ env.REL_OUTPUT_DIR }}
           output_dir=${{ env.OUTPUT_DIR }}
           echo "📁 Output directory: $output_dir"
 
@@ -285,11 +283,12 @@ jobs:
             echo ""
             echo "🖼️ Generating PNG for: $file"
 
+            # docker output directory: src/drawio
             docker run --rm \
               -v "$(pwd):/data" \
               rlespinasse/drawio-export:4.4.0 \
               --format png \
-              --output "../../${rel_output_dir}/${prefix_base}.png" \
+              --output "../" \
               "$rel_input_file_path"
             
             png_exit_code=$?
@@ -299,13 +298,27 @@ jobs:
             else
               echo "✅ PNG generation command completed"
             fi
-            
-            # Check for PNG file in output directory
-            if [ -f "${output_dir}/${prefix_base}.png" ]; then
-              echo "✅ Final PNG: ${output_dir}/${prefix_base}.png"
-            else
-              echo "❌ Expected PNG not found: ${output_dir}/${prefix_base}.png"
-            fi
+
+            # find all docker drawio generated *.png images, rename and move them to the /image folder
+            png_files=($(find "$SOURCE_DIR" -name "*.png" -type f | sort))
+    
+            for i in "${!png_files[@]}"; do
+                source_file="${png_files[$i]}"
+                
+                if [ ${#png_files[@]} -eq 1 ]; then
+                    target_file="${output_dir}/${prefix_base}.png"
+                else
+                    target_file="${output_dir}/${prefix_base}_$((i + 1)).png"
+                fi
+                
+                if mv "$source_file" "$target_file"; then
+                    echo "✅ Moved: $(basename "$source_file") → $(basename "$target_file")"
+                else
+                    echo "❌ Failed to move: $source_file"
+                    exit 1
+                fi
+
+            done
             
             # Generate SVG
             echo ""
@@ -315,7 +328,7 @@ jobs:
               -v "$(pwd):/data" \
               rlespinasse/drawio-export:4.4.0 \
               --format svg \
-              --output "../../${rel_output_dir}/${prefix_base}.svg" \
+              --output "../" \
               "$rel_input_file_path"
             
             svg_exit_code=$?
@@ -326,12 +339,26 @@ jobs:
               echo "✅ SVG generation command completed"
             fi
             
-            # Check for SVG files
-            if [ -f "${output_dir}/${prefix_base}.svg" ]; then
-              echo "✅ Final SVG: ${output_dir}/${prefix_base}.svg"
-            else
-              echo "❌ Expected SVG not found: ${output_dir}/${prefix_base}.svg"
-            fi
+            # find all docker drawio generated *.svg images, rename and move them to the /image folder
+            svg_files=($(find "$SOURCE_DIR" -name "*.svg" -type f | sort))
+    
+            for i in "${!svg_files[@]}"; do
+                source_file="${svg_files[$i]}"
+                
+                if [ ${#svg_files[@]} -eq 1 ]; then
+                    target_file="${output_dir}/${prefix_base}.svg"
+                else
+                    target_file="${output_dir}/${prefix_base}_$((i + 1)).svg"
+                fi
+                
+                if mv "$source_file" "$target_file"; then
+                    echo "✅ SVG File Moved: $(basename "$source_file") → $(basename "$target_file")"
+                else
+                    echo "❌ Failed to move SVG File: $source_file"
+                    exit 1
+                fi
+
+            done
             
             echo "📁 Final output directory state:"
             ls -la "${output_dir}/" | sed 's/^/  | /'
