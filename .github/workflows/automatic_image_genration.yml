@@ -17,6 +17,8 @@ on:
         type: boolean
 
 env:
+  REL_PLANTUML_INPUT_DIR: src/plantuml
+  REL_DRAWIO_INPUT_DIR: src/drawio
   OUTPUT_DIR: $(pwd)/images
   PLANTUML_PREFIX: uml_
   DRAWIO_PREFIX: diagram_
@@ -223,6 +225,7 @@ jobs:
         run: |
           echo "=== 🎯 Generating Draw.io images ==="
           
+          rel_input_dir=${{ env.REL_DRAWIO_INPUT_DIR }}
           output_dir=${{ env.OUTPUT_DIR }}
           echo "📁 Output directory: $output_dir"
 
@@ -266,6 +269,7 @@ jobs:
             # process file
             base=$(basename "$file" | sed 's/\.[^.]*$//')
             prefix_base="${{ env.DRAWIO_PREFIX }}${base}"
+            rel_input_file_path="${rel_input_dir}/$(basename "$file")"
             echo "📝 Prefix Base name: $prefix_base"
             echo "📊 File size: $(ls -lh "$file" | awk '{print $5}')"
             
@@ -283,7 +287,7 @@ jobs:
               rlespinasse/drawio-export:4.4.0 \
               --format png \
               --output "${output_dir}/${prefix_base}.png" \
-              "$file"
+              "$rel_input_file_path"
             
             png_exit_code=$?
             echo "📊 Docker PNG exit code: $png_exit_code"
@@ -309,7 +313,7 @@ jobs:
               rlespinasse/drawio-export:4.4.0 \
               --format svg \
               --output "${output_dir}/${prefix_base}.png" \
-              "$file"
+              "$rel_input_file_path"
             
             svg_exit_code=$?
             echo "📊 Docker SVG exit code: $svg_exit_code"
