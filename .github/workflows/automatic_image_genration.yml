@@ -281,9 +281,9 @@ jobs:
             docker run --rm \
               -v "$(pwd):/data" \
               rlespinasse/drawio-export:4.4.0 \
-              --path "$file" \
               --format png \
-              --output "$output_dir"
+              --output "${output_dir}/${prefix_base}.png" \
+              "$file"
             
             png_exit_code=$?
             echo "📊 Docker PNG exit code: $png_exit_code"
@@ -307,9 +307,9 @@ jobs:
             docker run --rm \
               -v "$(pwd):/data" \
               rlespinasse/drawio-export:4.4.0 \
-              --path "$file" \
               --format svg \
-              --output "$output_dir"
+              --output "${output_dir}/${prefix_base}.png" \
+              "$file"
             
             svg_exit_code=$?
             echo "📊 Docker SVG exit code: $svg_exit_code"
