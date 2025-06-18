@@ -55,19 +55,19 @@ jobs:
           find . -name "*.puml" -o -name "*.plantuml" -o -name "*.drawio" -o -name "*.dio" | head -20 || echo "No diagram files found"
           echo ""
           echo "=== src/plantuml contents ==="
-          if [ -d "${{ REL_PLANTUML_INPUT_DIR }}" ]; then
-            ls -la ${{ REL_PLANTUML_INPUT_DIR }}/
-            echo "PlantUML file count: $(find ${{ REL_PLANTUML_INPUT_DIR }} -name "*.puml" -o -name "*.plantuml" | wc -l)"
+          if [ -d "${{ env.REL_PLANTUML_INPUT_DIR }}" ]; then
+            ls -la ${{ env.REL_PLANTUML_INPUT_DIR }}/
+            echo "PlantUML file count: $(find ${{ env.REL_PLANTUML_INPUT_DIR }} -name "*.puml" -o -name "*.plantuml" | wc -l)"
           else
-            echo "❌ ${{ REL_PLANTUML_INPUT_DIR }} directory not found"
+            echo "❌ ${{ env.REL_PLANTUML_INPUT_DIR }} directory not found"
           fi
           echo ""
           echo "=== src/drawio contents ==="
-          if [ -d "${{ REL_DRAWIO_INPUT_DIR }}" ]; then
-            ls -la ${{ REL_DRAWIO_INPUT_DIR }}/
-            echo "Draw.io file count: $(find ${{ REL_DRAWIO_INPUT_DIR }} -name "*.drawio" -o -name "*.dio" | wc -l)"
+          if [ -d "${{ env.REL_DRAWIO_INPUT_DIR }}" ]; then
+            ls -la ${{ env.REL_DRAWIO_INPUT_DIR }}/
+            echo "Draw.io file count: $(find ${{ env.REL_DRAWIO_INPUT_DIR }} -name "*.drawio" -o -name "*.dio" | wc -l)"
           else
-            echo "❌ ${{ REL_DRAWIO_INPUT_DIR }} directory not found"
+            echo "❌ ${{ env.REL_DRAWIO_INPUT_DIR }} directory not found"
           fi
 
       - name: ☕ Set up JDK 11
@@ -127,10 +127,10 @@ jobs:
           # Determine processing mode
           if [ "${{ github.event.inputs.regenerate_all }}" = "true" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "🔄 FULL REGENERATION MODE - Processing all files"
-            puml_files=$(find $(pwd)/${{ REL_PLANTUML_INPUT_DIR }} -name "*.puml" -o -name "*.plantuml" 2>/dev/null)
+            puml_files=$(find $(pwd)/${{ env.REL_PLANTUML_INPUT_DIR }} -name "*.puml" -o -name "*.plantuml" 2>/dev/null)
             
             if [ -z "$puml_files" ]; then
-              echo "❌ No PlantUML files found in ${{ REL_PLANTUML_INPUT_DIR }}/"
+              echo "❌ No PlantUML files found in ${{ env.REL_PLANTUML_INPUT_DIR }}/"
               exit 0
             fi
             
@@ -138,7 +138,7 @@ jobs:
             echo "$puml_files"
           else
             echo "⚡ INCREMENTAL MODE - Processing only changed files"
-            changed_puml_files=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(puml|plantuml)$' | grep '^${{ REL_PLANTUML_INPUT_DIR }}/' || true)
+            changed_puml_files=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(puml|plantuml)$' | grep '^${{ env.REL_PLANTUML_INPUT_DIR }}/' || true)
             
             if [ -z "$changed_puml_files" ]; then
               echo "ℹ️ No PlantUML files changed in this commit"
@@ -232,10 +232,10 @@ jobs:
           # Determine processing mode
           if [ "${{ github.event.inputs.regenerate_all }}" = "true" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "🔄 FULL REGENERATION MODE - Processing all files"
-            drawio_files=$(find ${{ REL_DRAWIO_INPUT_DIR }} -name "*.drawio" -o -name "*.dio" 2>/dev/null)
+            drawio_files=$(find ${{ env.REL_DRAWIO_INPUT_DIR }} -name "*.drawio" -o -name "*.dio" 2>/dev/null)
             
             if [ -z "$drawio_files" ]; then
-              echo "❌ No drawio files found in ${{ REL_DRAWIO_INPUT_DIR }}/"
+              echo "❌ No drawio files found in ${{ env.REL_DRAWIO_INPUT_DIR }}/"
               exit 0
             fi
             
@@ -243,7 +243,7 @@ jobs:
             echo "$drawio_files"
           else
             echo "⚡ INCREMENTAL MODE - Processing only changed files"
-            changed_drawio_files=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(drawio|dio)$' | grep '^${{ REL_DRAWIO_INPUT_DIR }}/' || true)
+            changed_drawio_files=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(drawio|dio)$' | grep '^${{ env.REL_DRAWIO_INPUT_DIR }}/' || true)
             
             if [ -z "$changed_drawio_files" ]; then
               echo "ℹ️ No drawio files changed in this commit"
@@ -300,7 +300,7 @@ jobs:
             fi
 
             # find all docker drawio generated *.png images, rename and move them to the /image folder
-            png_files=($(find "$(pwd)/${{ REL_DRAWIO_INPUT_DIR }}" -name "*.png" -type f | sort))
+            png_files=($(find "$(pwd)/${{ env.REL_DRAWIO_INPUT_DIR }}" -name "*.png" -type f | sort))
     
             for i in "${!png_files[@]}"; do
                 source_file="${png_files[$i]}"
@@ -340,7 +340,7 @@ jobs:
             fi
             
             # find all docker drawio generated *.svg images, rename and move them to the /image folder
-            svg_files=($(find "$(pwd)/${{ REL_DRAWIO_INPUT_DIR }}" -name "*.svg" -type f | sort))
+            svg_files=($(find "$(pwd)/${{ env.REL_DRAWIO_INPUT_DIR }}" -name "*.svg" -type f | sort))
     
             for i in "${!svg_files[@]}"; do
                 source_file="${svg_files[$i]}"
