@@ -1,5 +1,4 @@
 Logical: VSDDatensatz
-Parent: Element
 Title: "Logisches Modell VSD-Datensatz für VSDM 2.0"
 Description: "Fachliches Modell zur Beschreibung des VSD-Datensatzes"
 * Versichertendaten 1..1 BackboneElement "Versichertendaten"
