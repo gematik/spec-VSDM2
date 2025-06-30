@@ -5,7 +5,7 @@
   "name": "VSDDatensatz",
   "title": "Logisches Modell VSD-Datensatz für VSDM 2.0",
   "status": "draft",
-  "description": "Fachliches Modell zur Beschreibung des VSD-Datensatzes",
+  "description": "Fachliches Modell zur Beschreibung des VSD-Datensatzes.\nDieses Modell setzt die Original-Angaben der BMV-Ä unverändert um. Es dient als Ausgangspunkt für die Mappings und ConceptSets, die die Abbildung auf FHIR-Ressourcen vornehmen.\nDie Modell-Elemente sind exakt in der Reihenfolge der Ausgangsvereinbarung aufgeführt. Hinweise zum Datenformat wurden in den Langtext der Beschreibung übertragen; der Kurztext wurde zur besseren Lesbarkeit angepasst.\nHinweise aus dem Originaldatensatz: \n  * TI-Messenger ID: Wird nicht aufgenommen, da keine rechtliche Grundlage existiert.\n  * Wahltarife: aktuell keine Abbildung im VSDM 2.0, aber BMV-Ä verständigen sich hierzu im Rahmen weiterer Beratungen (ggf. Protokollnotiz).",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -37,7 +37,7 @@
         "id": "VSDDatensatz",
         "path": "VSDDatensatz",
         "short": "Logisches Modell VSD-Datensatz für VSDM 2.0",
-        "definition": "Fachliches Modell zur Beschreibung des VSD-Datensatzes",
+        "definition": "Fachliches Modell zur Beschreibung des VSD-Datensatzes.\nDieses Modell setzt die Original-Angaben der BMV-Ä unverändert um. Es dient als Ausgangspunkt für die Mappings und ConceptSets, die die Abbildung auf FHIR-Ressourcen vornehmen.\nDie Modell-Elemente sind exakt in der Reihenfolge der Ausgangsvereinbarung aufgeführt. Hinweise zum Datenformat wurden in den Langtext der Beschreibung übertragen; der Kurztext wurde zur besseren Lesbarkeit angepasst.\nHinweise aus dem Originaldatensatz: \n  * TI-Messenger ID: Wird nicht aufgenommen, da keine rechtliche Grundlage existiert.\n  * Wahltarife: aktuell keine Abbildung im VSDM 2.0, aber BMV-Ä verständigen sich hierzu im Rahmen weiterer Beratungen (ggf. Protokollnotiz).",
         "min": 0,
         "max": "*",
         "base": {
@@ -91,14 +91,42 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versichertendaten.VersichertenID",
-        "path": "VSDDatensatz.Versichertendaten.VersichertenID",
-        "short": "KVNR",
-        "definition": "Die Versicherten-ID ist der 10-stellige unveraenderliche Teil der 30-stelligen Krankenversichertennummer",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter",
+        "short": "Angaben zum Versicherten",
+        "definition": "Angaben zum Versicherten",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versichertendaten.VersichertenID",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.VersichertenID",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.VersichertenID",
+        "short": "Versicherten-ID (KVNR)",
+        "definition": "Die Versicherten-ID ist der 10-stellige unveraäderliche Teil der 30-stelligen Krankenversichertennummer.\nLänge: 10\nTyp: AN",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.VersichertenID",
           "min": 1,
           "max": "1"
         },
@@ -125,48 +153,20 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter",
-        "short": "Angaben zum Versicherten",
-        "definition": "Angaben zum Versicherten",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "VSDDatensatz.Versichertendaten.Versicherter",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "BackboneElement"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.Nachname",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.Nachname",
-        "short": "Gibt den Nachnamen des Versicherten an",
-        "definition": "Gibt den Nachnamen des Versicherten an",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.Geburtsdatum",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.Geburtsdatum",
+        "short": "Geburtsdatum des Versicherten",
+        "definition": "Gibt das Geburtsdatum der Person an.\nHinweis: Das Geburtsjahr MUSS immer gefüllt werden. Bei Inländern ist immer ein logisch richtiges Geburtsdatum anzugeben. \nBei Ausländern gilt folgendes: Zumindest das Geburtsjahr ist immer anzugeben. Im Geburtstag oder im Geburtstag und im Geburtsmonat ist bei Ausländern „00“ bzw. „0000“ zulässig, wenn der Geburtstag und der Geburtsmonat nicht zu ermitteln sind. \nTyp: AN",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versichertendaten.Versicherter.Nachname",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.Geburtsdatum",
           "min": 1,
           "max": "1"
         },
         "type": [
           {
-            "code": "string"
+            "code": "date"
           }
         ],
         "constraint": [
@@ -182,15 +182,15 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.name:Name.family.extension:nachname"
+            "map": "VSDMPatient.birthDate"
           }
         ]
       },
       {
         "id": "VSDDatensatz.Versichertendaten.Versicherter.Vorname",
         "path": "VSDDatensatz.Versichertendaten.Versicherter.Vorname",
-        "short": "Gibt den Vornamen der Person an.",
-        "definition": "Alle Vornamen der Person (max. 5) werden eingegeben. Mehrere Vornamen werden durch Leerzeichen oder Bindestrich getrennt.",
+        "short": "Vorname des Versicherten",
+        "definition": "Gibt den Vornamen der Person an.\nAlle Vornamen der Person (max. 5) werden eingegeben. Mehrere Vornamen werden durch Leerzeichen oder Bindestrich getrennt.\nLänge: 45\nTyp: AN",
         "min": 1,
         "max": "1",
         "base": {
@@ -221,10 +221,78 @@
         ]
       },
       {
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.Nachname",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.Nachname",
+        "short": "Nachname des Versicherten",
+        "definition": "Gibt den Nachnamen der Person an.\nLänge: 45\nTyp: AN",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.Nachname",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.name:Name.family.extension:nachname"
+          }
+        ]
+      },
+      {
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.Geschlecht",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.Geschlecht",
+        "short": "Geschlecht des Versicherten",
+        "definition": "Gibt das Geschlecht der Person an. Wertetabelle M,W,D,X\nLänge: 1\nTyp: AN",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.Geschlecht",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.gender"
+          }
+        ]
+      },
+      {
         "id": "VSDDatensatz.Versichertendaten.Versicherter.Vorsatzwort",
         "path": "VSDDatensatz.Versichertendaten.Versicherter.Vorsatzwort",
-        "short": "Gibt die Vorsatzwoerter der Person an.",
-        "definition": "Mehrere Vorsatzwörter werden durch Leerzeichen getrennt angegeben. Anlage 6 (Tabelle der gültigen Vorsatzworte) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
+        "short": "Vorsatzwörter des Namens des Versicherten",
+        "definition": "Gibt die Vorsatzwörter der Person an.\nMehrere Vorsatzwörter werden durch Leerzeichen getrennt angegeben.\nAnlage 6 (Tabelle der gültigen Vorsatzworte) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp\nLänge: 20\nTyp: AN",
         "min": 0,
         "max": "1",
         "base": {
@@ -257,8 +325,8 @@
       {
         "id": "VSDDatensatz.Versichertendaten.Versicherter.Namenszusatz",
         "path": "VSDDatensatz.Versichertendaten.Versicherter.Namenszusatz",
-        "short": "Gibt die Namenszusaetze der Person an, z. B.: Freiherr",
-        "definition": "Anlage 7 (Tabelle der gültigen Namenszusätze) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
+        "short": "Namenszusätze des Versicherten",
+        "definition": "Gibt die Namenszusätze der Person an, z. B.: Freiherr\nMehrere Namenzusätze werden durch Leerzeichen getrennt angegeben.\nAnlage 7 (Tabelle der gültigen Namenszusätze) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp\nLänge: 20\nTyp: AN",
         "min": 0,
         "max": "1",
         "base": {
@@ -291,8 +359,8 @@
       {
         "id": "VSDDatensatz.Versichertendaten.Versicherter.Titel",
         "path": "VSDDatensatz.Versichertendaten.Versicherter.Titel",
-        "short": "Gibt die akademischen Grade der Person an.",
-        "definition": "Mehrere Titel werden durch Leerzeichen getrennt angegeben.",
+        "short": "Akademische Titel des Versicherten",
+        "definition": "Gibt die akademischen Grade der Person an.\nMehrere Titel werden durch Leerzeichen getrennt angegeben.\nLänge: 20\nTyp: AN",
         "min": 0,
         "max": "1",
         "base": {
@@ -323,20 +391,20 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.Geburtsdatum",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.Geburtsdatum",
-        "short": "Gibt das Geburtsdatum des Versicherten an",
-        "definition": "Das Geburtsjahr MUSS immer gefuellt werden. Bei Inlaendern ist immer ein logisch richtiges Geburtsdatum anzugeben. Bei Auslaendern gilt folgendes: Zumindest das Geburtsjahr ist immer anzugeben. Im Geburtstag oder im Geburtstag und im Geburtsmonat ist bei Ausländern „00“ bzw. „0000“ zulässig, wenn der Geburtstag und der Geburtsmonat nicht zu ermitteln sind. Das Geburtsdatum muss komplett gefüllt sein. Beispiel: 1990-00-00",
-        "min": 1,
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse",
+        "short": "Postfachadresse des Versicherten",
+        "definition": "Postfachadresse des Versicherten",
+        "min": 0,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versichertendaten.Versicherter.Geburtsdatum",
-          "min": 1,
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse",
+          "min": 0,
           "max": "1"
         },
         "type": [
           {
-            "code": "date"
+            "code": "BackboneElement"
           }
         ],
         "constraint": [
@@ -352,19 +420,19 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.birthDate"
+            "map": "VSDMPatient.address"
           }
         ]
       },
       {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.Geschlecht",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.Geschlecht",
-        "short": "Gibt das Geschlecht des Versicherten an",
-        "definition": "M = maennlich, W = weiblich, X = unbestimmt, D = divers",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
+        "short": "Postleitzahl der Postfachadresse",
+        "definition": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an. Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. \nIn Verbindung mit dem Wohnsitzländercode \"\"D\"\" für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. \nSoweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. \nBei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.\nLänge: 10\nTyp: AN",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versichertendaten.Versicherter.Geschlecht",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
           "min": 1,
           "max": "1"
         },
@@ -386,15 +454,117 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.gender"
+            "map": "VSDMPatient.address.postalCode"
+          }
+        ]
+      },
+      {
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Ort",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Ort",
+        "short": "Ort der Postfachadresse",
+        "definition": "Gibt den Ort zur Strassen- und oder Postfachadresse an. \nSoweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein.\nAbweichung zur Festlegung in DEÜV (Feldlänge = 34)\nLänge: 40\nTyp: AN",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Ort",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.address.city"
+          }
+        ]
+      },
+      {
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
+        "short": "Postfach des Versicherten",
+        "definition": "Gibt das Postfach der Person an.\nLänge: 8\nTyp: AN",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Postfach"
+          }
+        ]
+      },
+      {
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+        "short": "Land der Postfachadresse",
+        "definition": "Gibt das Land zu der Strassen- und oder Postfachadresse an. \nSoweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzländercode zu beiden Adressdaten vorhanden sein.\nAnlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp\nLänge: 3\nTyp: AN",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.Address.country"
           }
         ]
       },
       {
         "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse",
         "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse",
-        "short": "Gibt die Strassenadresse des Versicherten an",
-        "definition": "Gibt die Strassenadresse des Versicherten an",
+        "short": "Strassenadresse des Versicherten",
+        "definition": "Strassenadresse des Versicherten",
         "min": 0,
         "max": "1",
         "base": {
@@ -425,78 +595,10 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
-        "short": "Gibt den Namen der Strasse an",
-        "definition": "Wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Strasse"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
-        "short": "Gibt die Hausnummer in der Strasse der Person an.",
-        "definition": "Wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Hausnummer"
-          }
-        ]
-      },
-      {
         "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
         "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
-        "short": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an.",
-        "definition": "Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. In Verbindung mit dem Wohnsitzländercode D für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.",
+        "short": "Postleitzahl der Strassenadresse",
+        "definition": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an. Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. In Verbindung mit dem Wohnsitzländercode \"\"D\"\" für Deutschland MUSS die\nPostleitzahl 5-stellig numerisch sein. Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.\nLänge: 10\nTyp: AN",
         "min": 0,
         "max": "1",
         "base": {
@@ -529,8 +631,8 @@
       {
         "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Ort",
         "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Ort",
-        "short": "Gibt den Ort zur Strassen- und oder Postfachadresse an.",
-        "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein. Abweichung zur Festlegung in DEÜV (Feldlänge = 34)",
+        "short": "Ort der Strassenadresse",
+        "definition": "Gibt den Ort zur Strassen- und oder Postfachadresse an. \nSoweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein.\nAbweichung zur Festlegung in DEÜV (Feldlänge = 34)\nLänge: 40\nTyp: AN",
         "min": 1,
         "max": "1",
         "base": {
@@ -561,45 +663,10 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
-        "short": "ibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. „Hinterhaus“ angegeben werden.",
-        "definition": "ibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. „Hinterhaus“ angegeben werden.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "Gibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. Hinterhaus angegeben werden.",
-            "comment": "VSDMPatient.address.AddressDeBasis.line.extension:Adresszusatz"
-          }
-        ]
-      },
-      {
         "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
         "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
-        "short": "Gibt das Land zu der Strassen- und oder Postfachadresse an.",
-        "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzlaendercode zu beiden Adressdaten vorhanden sein.",
+        "short": "Land der Strassenadresse",
+        "definition": "Gibt das Land zu der Strassen- und oder Postfachadresse an. \nSoweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzländercode zu beiden Adressdaten vorhanden sein.\nAnlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp\nLänge: 3\nTyp: AN",
         "min": 1,
         "max": "1",
         "base": {
@@ -630,82 +697,14 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse",
-        "short": "Gibt die Postfachadresse des Versicherten an",
-        "definition": "Gibt die Postfachadresse des Versicherten an",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
+        "short": "Name der Strasse",
+        "definition": "Gibt den Namen der Strasse an.\nWenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.\nAnlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp \nLänge: 46\nTyp: AN",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "BackboneElement"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
-        "short": "Gibt das Postfach des Versicherten an",
-        "definition": "Gibt das Postfach des Versicherten an",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Postfach"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
-        "short": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an.",
-        "definition": "Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. In Verbindung mit dem Wohnsitzländercode D für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
           "min": 0,
           "max": "1"
         },
@@ -727,87 +726,19 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.postalCode"
+            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Strasse"
           }
         ]
       },
       {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Ort",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Ort",
-        "short": "Gibt den Ort zur Strassen- und oder Postfachadresse an.",
-        "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein. Abweichung zur Festlegung in DEÜV (Feldlänge = 34)",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Ort",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.city"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
-        "short": "Gibt das Land zu der Strassen- und oder Postfachadresse an.",
-        "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzlaendercode zu beiden Adressdaten vorhanden sein.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.Address.country"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.WIPTIMessengerID",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.WIPTIMessengerID",
-        "short": "Definition und Nutzung noch in Absprache - Eindeutige Identifikation einen TI-Messenger-Nutzers.",
-        "definition": "Die jeweils vollständige MXID der/des Versicherten soll dem LE zur Kommunikation mit der/dem Versicherten im Rahmen des Abrufs der VSD zur Verfügung gestellt werden können. Wenn sich der Versicherte für den TI Messenger-Dienst  registriert hat, MUSS es übertragen werden.",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
+        "short": "Hausnummer der Strassenadresse",
+        "definition": "Gibt die Hausnummer in der Strasse der Person an.\nPflichtangabe soweit bekannt, wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen. \nAnlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp \nLänge: 9\nTyp: AN",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versichertendaten.Versicherter.WIPTIMessengerID",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
           "min": 0,
           "max": "1"
         },
@@ -829,7 +760,42 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.telecom:ti-messenger"
+            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Hausnummer"
+          }
+        ]
+      },
+      {
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
+        "short": "Relevante Zusätze zur Anschrift",
+        "definition": "Gibt die relevanten Zusätze zur Anschrift an.\nAls Anschriftenzusatz kann z. B. „Hinterhaus“ angegeben werden.\nLänge: 40\nTyp: AN",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "Gibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. Hinterhaus angegeben werden.",
+            "comment": "VSDMPatient.address.AddressDeBasis.line.extension:Adresszusatz"
           }
         ]
       },
@@ -892,8 +858,8 @@
       {
         "id": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Name",
         "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Name",
-        "short": "Gibt den Namen der Institution/Organisation an.",
-        "definition": "Gibt den Namen der Institution/Organisation an.",
+        "short": "Name des Kostenträgers",
+        "definition": "Gibt den Namen der Institution/Organisation an.\nLänge: 45\nTyp: AN",
         "min": 1,
         "max": "1",
         "base": {
@@ -926,8 +892,8 @@
       {
         "id": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
         "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
-        "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
-        "definition": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
+        "short": "Kostenträgerländercode",
+        "definition": "Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an.\nLänge: 3\nTyp: AN",
         "min": 1,
         "max": "1",
         "base": {
@@ -960,8 +926,8 @@
       {
         "id": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
         "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
-        "short": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
-        "definition": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
+        "short": "Kostenträgerkennung (Institutionskennzeichen)",
+        "definition": "Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an.\nAnlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp\nLänge: 9\nTyp: AN",
         "min": 1,
         "max": "1",
         "base": {
@@ -1022,8 +988,8 @@
       {
         "id": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Name",
         "path": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Name",
-        "short": "Gibt den Namen der Institution/Organisation an.",
-        "definition": "Gibt den Namen der Institution/Organisation an.",
+        "short": "Name des Kostenträgers",
+        "definition": "Gibt den Namen der Institution/Organisation an.\nLänge: 45\nTyp: AN",
         "min": 1,
         "max": "1",
         "base": {
@@ -1056,8 +1022,8 @@
       {
         "id": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
         "path": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
-        "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
-        "definition": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
+        "short": "Kostenträgerländercode",
+        "definition": "Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an.\nAnlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp\nLänge: 3\nTyp: AN",
         "min": 1,
         "max": "1",
         "base": {
@@ -1090,8 +1056,8 @@
       {
         "id": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
         "path": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
-        "short": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
-        "definition": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
+        "short": "Kostenträgerkennung (Institutionskennzeichen)",
+        "definition": "Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an. Es handelt sich um das bundesweit gültige Institutionskennzeichen (IK) des jeweiligen Kostenträgers.\nLänge: 9\nTyp: AN",
         "min": 1,
         "max": "1",
         "base": {
@@ -1124,8 +1090,8 @@
       {
         "id": "VSDDatensatz.Versicherungsdaten.WOP",
         "path": "VSDDatensatz.Versicherungsdaten.WOP",
-        "short": "Das Kennzeichen WOP ist gemaess § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemaess Artikel 2 § 2 Abs. 2 des Gesetzes zur Einfuehrung des Wohnortprinzips bei Honorarvereinbarungen fuer Aerzte und Zahnaerzte und zur Krankenversichertenkarte gemaess § 291 Abs. 2 Fuenftes Sozialgesetzbuch (SGB V) erforderlich.",
-        "definition": "Angaben gemäß Anlage 21 BMV-Ä und EKV.",
+        "short": "Kennzeichen Wohnortprinzip",
+        "definition": "Das Kennzeichen WOP ist gemäss § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemäss Artikel 2 § 2 Abs. 2 des Gesetzes zur Einführung des Wohnortprinzips bei Honorarvereinbarungen für Ärzte und Zahnärzte und zur Krankenversichertenkarte gemäss § 291 Abs. 2 Fünftes Sozialgesetzbuch (SGB V) erforderlich.\n01 = Schleswig-Holstein\n02 = Hamburg\n03 = Bremen\n17 = Niedersachsen\n20 = Westfalen-Lippe\n38 = Nordrhein\n46 = Hessen\n51 = Rheinland-Pfalz\n52 = Baden-Württemberg\n71 = Bayerns\n72 = Berlin\n73 = Saarland\n78 = Mecklenburg-Vorpommern\n83 = Brandenburg\n88 = Sachsen-Anhalt\n93 = Thüringen\n98 = Sachsen\nGemäß Anlage 21 BMV-Ä und EKV.\nLänge: 2\nTyp: AN",
         "min": 1,
         "max": "1",
         "base": {
@@ -1156,14 +1122,14 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPBesonderePersonengruppe",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPBesonderePersonengruppe",
-        "short": "Definition und Nutzung noch in Absprache - Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
-        "definition": "Definition und Nutzung noch in Absprache - Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
+        "id": "VSDDatensatz.Versicherungsdaten.BesonderePersonengruppe",
+        "path": "VSDDatensatz.Versicherungsdaten.BesonderePersonengruppe",
+        "short": "Zuordnung besondere Personengruppe",
+        "definition": "Gibt die Zugehörigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.\n4 = BSHG (Bundessozialhilfegesetz) § 264 SGB V, \n6 = SER (Soziales Entschädigungsrecht), \n7 = SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht: - Personen mit Wohnsitz im Inland, Abrechnung nach Aufwand, \n8 = SVA-Kennzeichnung, pauschal,\n9 = Empfänger von Gesundheitsleistungen nach §§ 4 und 6 des Asylbewerberleistungsgesetzes (AsylbLG)\nLänge: 2\nTyp: N",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPBesonderePersonengruppe",
+          "path": "VSDDatensatz.Versicherungsdaten.BesonderePersonengruppe",
           "min": 0,
           "max": "1"
         },
@@ -1190,15 +1156,15 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus",
-        "short": "Definition und Nutzung noch in Absprache - Gibt den Zuzahlungsstatus des Versicherten an",
-        "definition": "Definition und Nutzung noch in Absprache - Gibt den Zuzahlungsstatus des Versicherten an",
-        "min": 1,
+        "id": "VSDDatensatz.Versicherungsdaten.Zuzahlungsstatus",
+        "path": "VSDDatensatz.Versicherungsdaten.Zuzahlungsstatus",
+        "short": "Zuzahlungsstatus des Versicherten",
+        "definition": "Zuzahlungsstatus des Versicherten",
+        "min": 0,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus",
-          "min": 1,
+          "path": "VSDDatensatz.Versicherungsdaten.Zuzahlungsstatus",
+          "min": 0,
           "max": "1"
         },
         "type": [
@@ -1224,48 +1190,14 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
-        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
-        "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
+        "id": "VSDDatensatz.Versicherungsdaten.Zuzahlungsstatus.Status",
+        "path": "VSDDatensatz.Versicherungsdaten.Zuzahlungsstatus.Status",
+        "short": "Versicherter von Zuzahlungspflicht befreit",
+        "definition": "Gibt an, ob für den Versicherten eine Befreiung von der Zuzahlungspflicht nach § 62 SGB V vorliegt.\t\n1 = von Zuzahlungspflicht befreit\nLänge: 1\nTyp: offen",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-kostentraegerAngabestatus"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.Status",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.Status",
-        "short": "Gibt an, ob fuer den Versicherten eine Befreiung von der Zuzahlungspflicht nach § 62 SGB V vorliegt.",
-        "definition": "1 true = von Zuzahlungspflicht befreit, 0 false = von Zuzahlungspflicht nicht befreit",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.Status",
+          "path": "VSDDatensatz.Versicherungsdaten.Zuzahlungsstatus.Status",
           "min": 1,
           "max": "1"
         },
@@ -1292,15 +1224,15 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
-        "short": "Gibt die Gueltigkeit der Befreiung von der Zuzahlungspflicht nach § 62 SGB V an.",
-        "definition": "Wird nur angegeben, wenn Status Zuzahlung mit 1 = befreit angegeben ist.",
-        "min": 0,
+        "id": "VSDDatensatz.Versicherungsdaten.Zuzahlungsstatus.GueltigBis",
+        "path": "VSDDatensatz.Versicherungsdaten.Zuzahlungsstatus.GueltigBis",
+        "short": "Gültigkeit des Zuzahlungsstatus",
+        "definition": "Gibt die Gültigkeit der Befreiung von der Zuzahlungspflicht nach § 62 SGB V an.\tWird nur angegeben, wenn Zuzahlungsstatus mit 1 (= befreit) angegeben ist.\n Typ: ISO8601Date",
+        "min": 1,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
-          "min": 0,
+          "path": "VSDDatensatz.Versicherungsdaten.Zuzahlungsstatus.GueltigBis",
+          "min": 1,
           "max": "1"
         },
         "type": [
@@ -1328,8 +1260,8 @@
       {
         "id": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz",
         "path": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz",
-        "short": "Angaben zum Versicherungsschutz",
-        "definition": "Angaben zum Versicherungsschutz",
+        "short": "Versicherungsschutz des Versicherten",
+        "definition": "Versicherungsschutz des Versicherten",
         "min": 1,
         "max": "1",
         "base": {
@@ -1362,8 +1294,8 @@
       {
         "id": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.Beginn",
         "path": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.Beginn",
-        "short": "Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem angegebenen Kostentraeger an.",
-        "definition": "Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem angegebenen Kostentraeger an.",
+        "short": "Beginn des Versicherungsschutzes",
+        "definition": "Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem unter Klasse Kostenträger angegebenen Kostenträger an. \nTyp: ISO8601Date",
         "min": 1,
         "max": "1",
         "base": {
@@ -1394,14 +1326,14 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.WIPEnde",
-        "path": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.WIPEnde",
-        "short": "Gibt das Datum des Endes der Mitgliedschaft des Versicherten bei dem unter Klasse Kostentraeger angegebenen Kostentraeger an oder das Datum des Fristablaufs bei befristeter Gueltigkeit der Karte.",
-        "definition": "Gibt das Datum des Endes der Mitgliedschaft des Versicherten bei dem unter Klasse Kostentraeger angegebenen Kostentraeger an oder das Datum des Fristablaufs bei befristeter Gueltigkeit der Karte.",
+        "id": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.Ende",
+        "path": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.Ende",
+        "short": "Ende des Versicherungsschutzes",
+        "definition": "Das Ende ist bei befristeter Gültigkeit der elektronischen Gesundheitskarte das Datum des Fristablaufs.\nTyp: ISO8601Date",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.WIPEnde",
+          "path": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.Ende",
           "min": 0,
           "max": "1"
         },
@@ -1428,14 +1360,14 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPDMP",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPDMP",
-        "short": "Definition und Nutzung noch in Absprache - Angaben zur Teilnahme des Versicherten an DMP-Programmen",
-        "definition": "Definition und Nutzung noch in Absprache - Angaben zur Teilnahme des Versicherten an DMP-Programmen",
+        "id": "VSDDatensatz.Versicherungsdaten.DMP",
+        "path": "VSDDatensatz.Versicherungsdaten.DMP",
+        "short": "Angaben zur Teilnahme des Versicherten an Disease Management-Programmen",
+        "definition": "Angaben zur Teilnahme des Versicherten an Disease Management-Programmen",
         "min": 0,
         "max": "*",
         "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPDMP",
+          "path": "VSDDatensatz.Versicherungsdaten.DMP",
           "min": 0,
           "max": "*"
         },
@@ -1462,48 +1394,14 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
-        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
-        "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
+        "id": "VSDDatensatz.Versicherungsdaten.DMP.DMP",
+        "path": "VSDDatensatz.Versicherungsdaten.DMP.DMP",
+        "short": "Name des DMP-Programms",
+        "definition": "Gibt den Namen des DMP an; die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.\n1 = Diabetes mellitus Typ 2 \n2 = Brustkrebs \n3 = Koronare Herzkrankheit\n4 = Diabetes mellitus Typ 1 \n5 = Asthma bronchiale \n6 = COPD (chronic obstructive pulmonary disease)\n7 = Chronische Herzinsuffizienz\n8 = Depression\n9 = Rückenschmerz\n10 = Rheuma\n11 = Osteoporose\n12 = Adipositas - Erwachsene\nLänge: zu def.\nTyp: zu def.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-kostentraegerAngabestatus"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPDMP.DMP",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.DMP",
-        "short": "Gibt den Namen des DMP-Programms an",
-        "definition": "Angaben erfolgen gemaess Schlüsseltabelle",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.DMP",
+          "path": "VSDDatensatz.Versicherungsdaten.DMP.DMP",
           "min": 1,
           "max": "1"
         },
@@ -1530,14 +1428,14 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPDMP.Beginn",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.Beginn",
-        "short": "Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.",
-        "definition": "Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.",
+        "id": "VSDDatensatz.Versicherungsdaten.DMP.Beginn",
+        "path": "VSDDatensatz.Versicherungsdaten.DMP.Beginn",
+        "short": "Beginn der Einschreibung",
+        "definition": "Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.\nTyp: ISO8601Date",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.Beginn",
+          "path": "VSDDatensatz.Versicherungsdaten.DMP.Beginn",
           "min": 1,
           "max": "1"
         },
@@ -1564,14 +1462,14 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPDMP.Ende",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.Ende",
-        "short": "Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an.",
-        "definition": "Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an.",
+        "id": "VSDDatensatz.Versicherungsdaten.DMP.Ende",
+        "path": "VSDDatensatz.Versicherungsdaten.DMP.Ende",
+        "short": "Ende der Einschreibung",
+        "definition": "Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an.\nTyp: ISO8601Date",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.Ende",
+          "path": "VSDDatensatz.Versicherungsdaten.DMP.Ende",
           "min": 0,
           "max": "1"
         },
@@ -1598,20 +1496,20 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPdigitalesDMP",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPdigitalesDMP",
-        "short": "Definition und Nutzung noch in Absprache - Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
-        "definition": "Definition und Nutzung noch in Absprache - Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
-        "min": 0,
-        "max": "*",
+        "id": "VSDDatensatz.Versicherungsdaten.DMP.digitalesDMP",
+        "path": "VSDDatensatz.Versicherungsdaten.DMP.digitalesDMP",
+        "short": "Kennzeichen digitales DMP",
+        "definition": "Beinhaltet die Information, ob das DMP als digitales DMP durchgeführt wird; Information kann je DMP bereitgestellt werden\nLänge: 1\nTyp: Bool",
+        "min": 1,
+        "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPdigitalesDMP",
-          "min": 0,
-          "max": "*"
+          "path": "VSDDatensatz.Versicherungsdaten.DMP.digitalesDMP",
+          "min": 1,
+          "max": "1"
         },
         "type": [
           {
-            "code": "string"
+            "code": "boolean"
           }
         ],
         "constraint": [
@@ -1632,14 +1530,14 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung",
-        "short": "Definition und Nutzung noch in Absprache - Angaben zur Kostenerstattung für verschiedene Sektoren",
-        "definition": "Definition und Nutzung noch in Absprache - Angaben zur Kostenerstattung für verschiedene Sektoren",
+        "id": "VSDDatensatz.Versicherungsdaten.Kostenerstattung",
+        "path": "VSDDatensatz.Versicherungsdaten.Kostenerstattung",
+        "short": "Angaben zur Kostenerstattung",
+        "definition": "Angaben zur Kostenerstattung",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung",
+          "path": "VSDDatensatz.Versicherungsdaten.Kostenerstattung",
           "min": 0,
           "max": "1"
         },
@@ -1666,48 +1564,14 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
-        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
-        "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
+        "id": "VSDDatensatz.Versicherungsdaten.Kostenerstattung.AerztlicheVersorgung",
+        "path": "VSDDatensatz.Versicherungsdaten.Kostenerstattung.AerztlicheVersorgung",
+        "short": "Ärztliche Versorgung",
+        "definition": "Gibt die vom Versicherten gewählte Kostenerstattung für die ärztliche Versorgung an.\n1 (true) = Kostenerstattung\n0 (false) = keine Kostenerstattung\nLänge: 1\nTyp: B",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-kostentraegerAngabestatus"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
-        "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer die aerztliche Versorgung an.",
-        "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
+          "path": "VSDDatensatz.Versicherungsdaten.Kostenerstattung.AerztlicheVersorgung",
           "min": 1,
           "max": "1"
         },
@@ -1734,14 +1598,14 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
-        "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer zahnaerztliche Versorgung an.",
-        "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
+        "id": "VSDDatensatz.Versicherungsdaten.Kostenerstattung.ZahnaerztlicheVersorgung",
+        "path": "VSDDatensatz.Versicherungsdaten.Kostenerstattung.ZahnaerztlicheVersorgung",
+        "short": "Zahnärztliche Versorgung",
+        "definition": "Gibt die vom Versicherten gewählte Kostenerstattung für zahnärztliche Versorgung an.\n1 (true) = Kostenerstattung\n0 (false) = keine Kostenerstattung\nLänge: 1\nTyp: B",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
+          "path": "VSDDatensatz.Versicherungsdaten.Kostenerstattung.ZahnaerztlicheVersorgung",
           "min": 1,
           "max": "1"
         },
@@ -1768,14 +1632,14 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
-        "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer den stationaeren Bereich an.",
-        "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
+        "id": "VSDDatensatz.Versicherungsdaten.Kostenerstattung.StationaererBereich",
+        "path": "VSDDatensatz.Versicherungsdaten.Kostenerstattung.StationaererBereich",
+        "short": "Stationärer Bereich",
+        "definition": "Gibt die vom Versicherten gewählte Kostenerstattung für den stationären Bereich an.\n1 (true) = Kostenerstattung\n0 (false) = keine Kostenerstattung\nLänge: 1\nTyp: B",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
+          "path": "VSDDatensatz.Versicherungsdaten.Kostenerstattung.StationaererBereich",
           "min": 1,
           "max": "1"
         },
@@ -1802,14 +1666,14 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
-        "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer veranlasste Leistungen an.",
-        "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
+        "id": "VSDDatensatz.Versicherungsdaten.Kostenerstattung.VeranlassteLeistungen",
+        "path": "VSDDatensatz.Versicherungsdaten.Kostenerstattung.VeranlassteLeistungen",
+        "short": "Veranlasste Leistungen",
+        "definition": "Gibt die vom Versicherten gewählte Kostenerstattung für veranlasste Leistungen an.\n1 (true) = Kostenerstattung\n0 (false) = keine Kostenerstattung\nLänge: 1\nTyp: B",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
+          "path": "VSDDatensatz.Versicherungsdaten.Kostenerstattung.VeranlassteLeistungen",
           "min": 1,
           "max": "1"
         },
@@ -1836,14 +1700,14 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
-        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
-        "definition": "Definition und Nutzung noch in Absprache - Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
+        "id": "VSDDatensatz.Versicherungsdaten.RuhenderLeistungsanspruch",
+        "path": "VSDDatensatz.Versicherungsdaten.RuhenderLeistungsanspruch",
+        "short": "Ruhender Leistungsanspruch",
+        "definition": "Ruhender Leistungsanspruch",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
+          "path": "VSDDatensatz.Versicherungsdaten.RuhenderLeistungsanspruch",
           "min": 0,
           "max": "1"
         },
@@ -1870,48 +1734,14 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
-        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
-        "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
+        "id": "VSDDatensatz.Versicherungsdaten.RuhenderLeistungsanspruch.Beginn",
+        "path": "VSDDatensatz.Versicherungsdaten.RuhenderLeistungsanspruch.Beginn",
+        "short": "Beginn des ruhenden Leistungsanspruchs",
+        "definition": "Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an.\nTyp: ISO8601Date",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-kostentraegerAngabestatus"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
-        "short": "Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an.",
-        "definition": "Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
+          "path": "VSDDatensatz.Versicherungsdaten.RuhenderLeistungsanspruch.Beginn",
           "min": 1,
           "max": "1"
         },
@@ -1938,14 +1768,14 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
-        "short": "Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.",
-        "definition": "Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.",
+        "id": "VSDDatensatz.Versicherungsdaten.RuhenderLeistungsanspruch.Ende",
+        "path": "VSDDatensatz.Versicherungsdaten.RuhenderLeistungsanspruch.Ende",
+        "short": "Ende des ruhenden Leistungsanspruchs",
+        "definition": "Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.\nTyp: ISO8601Date",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
+          "path": "VSDDatensatz.Versicherungsdaten.RuhenderLeistungsanspruch.Ende",
           "min": 0,
           "max": "1"
         },
@@ -1972,14 +1802,14 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
-        "short": "Gibt die Art des Ruhens an.",
-        "definition": "1 = vollständig, 2 = eingeschränkt",
+        "id": "VSDDatensatz.Versicherungsdaten.RuhenderLeistungsanspruch.Art",
+        "path": "VSDDatensatz.Versicherungsdaten.RuhenderLeistungsanspruch.Art",
+        "short": "Art des Ruhens",
+        "definition": "Gibt die Art des Ruhens an.\n1 = vollständig\n2 = eingeschränkt\nLänge: 1\nTyp: N",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
+          "path": "VSDDatensatz.Versicherungsdaten.RuhenderLeistungsanspruch.Art",
           "min": 1,
           "max": "1"
         },
@@ -2008,8 +1838,8 @@
       {
         "id": "VSDDatensatz.Versicherungsdaten.Versichertenart",
         "path": "VSDDatensatz.Versicherungsdaten.Versichertenart",
-        "short": "Gibt die Art der Versicherung an",
-        "definition": "1 = Mitglied, 3 = Familienversicherter, 5 = Rentner und ihre Familienangehörigen",
+        "short": "Art der Versicherung",
+        "definition": "1 = Mitglied\n3 = Familienversicherter\n5 = Rentner und ihre Familienangehörigen \nLänge: 1\nTyp: AN",
         "min": 1,
         "max": "1",
         "base": {
@@ -2038,40 +1868,6 @@
             "map": "VSDMCoverage.extension:versichertenart"
           }
         ]
-      },
-      {
-        "id": "VSDDatensatz.Versicherungsdaten.Versicherungsart",
-        "path": "VSDDatensatz.Versicherungsdaten.Versicherungsart",
-        "short": "Art der Versicherung: gesetzliche oder private Versicherung",
-        "definition": "GKV = gesetzlich versichert, PKV = privat versichert",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "VSDDatensatz.Versicherungsdaten.Versicherungsart",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.type"
-          }
-        ]
       }
     ]
   },
@@ -2081,7 +1877,7 @@
         "id": "VSDDatensatz",
         "path": "VSDDatensatz",
         "short": "Logisches Modell VSD-Datensatz für VSDM 2.0",
-        "definition": "Fachliches Modell zur Beschreibung des VSD-Datensatzes"
+        "definition": "Fachliches Modell zur Beschreibung des VSD-Datensatzes.\nDieses Modell setzt die Original-Angaben der BMV-Ä unverändert um. Es dient als Ausgangspunkt für die Mappings und ConceptSets, die die Abbildung auf FHIR-Ressourcen vornehmen.\nDie Modell-Elemente sind exakt in der Reihenfolge der Ausgangsvereinbarung aufgeführt. Hinweise zum Datenformat wurden in den Langtext der Beschreibung übertragen; der Kurztext wurde zur besseren Lesbarkeit angepasst.\nHinweise aus dem Originaldatensatz: \n  * TI-Messenger ID: Wird nicht aufgenommen, da keine rechtliche Grundlage existiert.\n  * Wahltarife: aktuell keine Abbildung im VSDM 2.0, aber BMV-Ä verständigen sich hierzu im Rahmen weiterer Beratungen (ggf. Protokollnotiz)."
       },
       {
         "id": "VSDDatensatz.Versichertendaten",
@@ -2097,10 +1893,23 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versichertendaten.VersichertenID",
-        "path": "VSDDatensatz.Versichertendaten.VersichertenID",
-        "short": "KVNR",
-        "definition": "Die Versicherten-ID ist der 10-stellige unveraenderliche Teil der 30-stelligen Krankenversichertennummer",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter",
+        "short": "Angaben zum Versicherten",
+        "definition": "Angaben zum Versicherten",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.VersichertenID",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.VersichertenID",
+        "short": "Versicherten-ID (KVNR)",
+        "definition": "Die Versicherten-ID ist der 10-stellige unveraäderliche Teil der 30-stelligen Krankenversichertennummer.\nLänge: 10\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
@@ -2116,42 +1925,29 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter",
-        "short": "Angaben zum Versicherten",
-        "definition": "Angaben zum Versicherten",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "BackboneElement"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.Nachname",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.Nachname",
-        "short": "Gibt den Nachnamen des Versicherten an",
-        "definition": "Gibt den Nachnamen des Versicherten an",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.Geburtsdatum",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.Geburtsdatum",
+        "short": "Geburtsdatum des Versicherten",
+        "definition": "Gibt das Geburtsdatum der Person an.\nHinweis: Das Geburtsjahr MUSS immer gefüllt werden. Bei Inländern ist immer ein logisch richtiges Geburtsdatum anzugeben. \nBei Ausländern gilt folgendes: Zumindest das Geburtsjahr ist immer anzugeben. Im Geburtstag oder im Geburtstag und im Geburtsmonat ist bei Ausländern „00“ bzw. „0000“ zulässig, wenn der Geburtstag und der Geburtsmonat nicht zu ermitteln sind. \nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "date"
           }
         ],
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.name:Name.family.extension:nachname"
+            "map": "VSDMPatient.birthDate"
           }
         ]
       },
       {
         "id": "VSDDatensatz.Versichertendaten.Versicherter.Vorname",
         "path": "VSDDatensatz.Versichertendaten.Versicherter.Vorname",
-        "short": "Gibt den Vornamen der Person an.",
-        "definition": "Alle Vornamen der Person (max. 5) werden eingegeben. Mehrere Vornamen werden durch Leerzeichen oder Bindestrich getrennt.",
+        "short": "Vorname des Versicherten",
+        "definition": "Gibt den Vornamen der Person an.\nAlle Vornamen der Person (max. 5) werden eingegeben. Mehrere Vornamen werden durch Leerzeichen oder Bindestrich getrennt.\nLänge: 45\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
@@ -2167,10 +1963,48 @@
         ]
       },
       {
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.Nachname",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.Nachname",
+        "short": "Nachname des Versicherten",
+        "definition": "Gibt den Nachnamen der Person an.\nLänge: 45\nTyp: AN",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.name:Name.family.extension:nachname"
+          }
+        ]
+      },
+      {
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.Geschlecht",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.Geschlecht",
+        "short": "Geschlecht des Versicherten",
+        "definition": "Gibt das Geschlecht der Person an. Wertetabelle M,W,D,X\nLänge: 1\nTyp: AN",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.gender"
+          }
+        ]
+      },
+      {
         "id": "VSDDatensatz.Versichertendaten.Versicherter.Vorsatzwort",
         "path": "VSDDatensatz.Versichertendaten.Versicherter.Vorsatzwort",
-        "short": "Gibt die Vorsatzwoerter der Person an.",
-        "definition": "Mehrere Vorsatzwörter werden durch Leerzeichen getrennt angegeben. Anlage 6 (Tabelle der gültigen Vorsatzworte) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
+        "short": "Vorsatzwörter des Namens des Versicherten",
+        "definition": "Gibt die Vorsatzwörter der Person an.\nMehrere Vorsatzwörter werden durch Leerzeichen getrennt angegeben.\nAnlage 6 (Tabelle der gültigen Vorsatzworte) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp\nLänge: 20\nTyp: AN",
         "min": 0,
         "max": "1",
         "type": [
@@ -2188,8 +2022,8 @@
       {
         "id": "VSDDatensatz.Versichertendaten.Versicherter.Namenszusatz",
         "path": "VSDDatensatz.Versichertendaten.Versicherter.Namenszusatz",
-        "short": "Gibt die Namenszusaetze der Person an, z. B.: Freiherr",
-        "definition": "Anlage 7 (Tabelle der gültigen Namenszusätze) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
+        "short": "Namenszusätze des Versicherten",
+        "definition": "Gibt die Namenszusätze der Person an, z. B.: Freiherr\nMehrere Namenzusätze werden durch Leerzeichen getrennt angegeben.\nAnlage 7 (Tabelle der gültigen Namenszusätze) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp\nLänge: 20\nTyp: AN",
         "min": 0,
         "max": "1",
         "type": [
@@ -2207,8 +2041,8 @@
       {
         "id": "VSDDatensatz.Versichertendaten.Versicherter.Titel",
         "path": "VSDDatensatz.Versichertendaten.Versicherter.Titel",
-        "short": "Gibt die akademischen Grade der Person an.",
-        "definition": "Mehrere Titel werden durch Leerzeichen getrennt angegeben.",
+        "short": "Akademische Titel des Versicherten",
+        "definition": "Gibt die akademischen Grade der Person an.\nMehrere Titel werden durch Leerzeichen getrennt angegeben.\nLänge: 20\nTyp: AN",
         "min": 0,
         "max": "1",
         "type": [
@@ -2224,48 +2058,10 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.Geburtsdatum",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.Geburtsdatum",
-        "short": "Gibt das Geburtsdatum des Versicherten an",
-        "definition": "Das Geburtsjahr MUSS immer gefuellt werden. Bei Inlaendern ist immer ein logisch richtiges Geburtsdatum anzugeben. Bei Auslaendern gilt folgendes: Zumindest das Geburtsjahr ist immer anzugeben. Im Geburtstag oder im Geburtstag und im Geburtsmonat ist bei Ausländern „00“ bzw. „0000“ zulässig, wenn der Geburtstag und der Geburtsmonat nicht zu ermitteln sind. Das Geburtsdatum muss komplett gefüllt sein. Beispiel: 1990-00-00",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "date"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.birthDate"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.Geschlecht",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.Geschlecht",
-        "short": "Gibt das Geschlecht des Versicherten an",
-        "definition": "M = maennlich, W = weiblich, X = unbestimmt, D = divers",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.gender"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse",
-        "short": "Gibt die Strassenadresse des Versicherten an",
-        "definition": "Gibt die Strassenadresse des Versicherten an",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse",
+        "short": "Postfachadresse des Versicherten",
+        "definition": "Postfachadresse des Versicherten",
         "min": 0,
         "max": "1",
         "type": [
@@ -2281,11 +2077,11 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
-        "short": "Gibt den Namen der Strasse an",
-        "definition": "Wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.",
-        "min": 0,
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
+        "short": "Postleitzahl der Postfachadresse",
+        "definition": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an. Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. \nIn Verbindung mit dem Wohnsitzländercode \"\"D\"\" für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. \nSoweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. \nBei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.\nLänge: 10\nTyp: AN",
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -2295,16 +2091,16 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Strasse"
+            "map": "VSDMPatient.address.postalCode"
           }
         ]
       },
       {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
-        "short": "Gibt die Hausnummer in der Strasse der Person an.",
-        "definition": "Wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.",
-        "min": 0,
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Ort",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Ort",
+        "short": "Ort der Postfachadresse",
+        "definition": "Gibt den Ort zur Strassen- und oder Postfachadresse an. \nSoweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein.\nAbweichung zur Festlegung in DEÜV (Feldlänge = 34)\nLänge: 40\nTyp: AN",
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -2314,15 +2110,72 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Hausnummer"
+            "map": "VSDMPatient.address.city"
+          }
+        ]
+      },
+      {
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
+        "short": "Postfach des Versicherten",
+        "definition": "Gibt das Postfach der Person an.\nLänge: 8\nTyp: AN",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Postfach"
+          }
+        ]
+      },
+      {
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+        "short": "Land der Postfachadresse",
+        "definition": "Gibt das Land zu der Strassen- und oder Postfachadresse an. \nSoweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzländercode zu beiden Adressdaten vorhanden sein.\nAnlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp\nLänge: 3\nTyp: AN",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.Address.country"
+          }
+        ]
+      },
+      {
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse",
+        "short": "Strassenadresse des Versicherten",
+        "definition": "Strassenadresse des Versicherten",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.address"
           }
         ]
       },
       {
         "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
         "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
-        "short": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an.",
-        "definition": "Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. In Verbindung mit dem Wohnsitzländercode D für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.",
+        "short": "Postleitzahl der Strassenadresse",
+        "definition": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an. Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. In Verbindung mit dem Wohnsitzländercode \"\"D\"\" für Deutschland MUSS die\nPostleitzahl 5-stellig numerisch sein. Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.\nLänge: 10\nTyp: AN",
         "min": 0,
         "max": "1",
         "type": [
@@ -2340,8 +2193,8 @@
       {
         "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Ort",
         "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Ort",
-        "short": "Gibt den Ort zur Strassen- und oder Postfachadresse an.",
-        "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein. Abweichung zur Festlegung in DEÜV (Feldlänge = 34)",
+        "short": "Ort der Strassenadresse",
+        "definition": "Gibt den Ort zur Strassen- und oder Postfachadresse an. \nSoweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein.\nAbweichung zur Festlegung in DEÜV (Feldlänge = 34)\nLänge: 40\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
@@ -2357,30 +2210,10 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
-        "short": "ibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. „Hinterhaus“ angegeben werden.",
-        "definition": "ibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. „Hinterhaus“ angegeben werden.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "Gibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. Hinterhaus angegeben werden.",
-            "comment": "VSDMPatient.address.AddressDeBasis.line.extension:Adresszusatz"
-          }
-        ]
-      },
-      {
         "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
         "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
-        "short": "Gibt das Land zu der Strassen- und oder Postfachadresse an.",
-        "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzlaendercode zu beiden Adressdaten vorhanden sein.",
+        "short": "Land der Strassenadresse",
+        "definition": "Gibt das Land zu der Strassen- und oder Postfachadresse an. \nSoweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzländercode zu beiden Adressdaten vorhanden sein.\nAnlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp\nLänge: 3\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
@@ -2396,48 +2229,10 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse",
-        "short": "Gibt die Postfachadresse des Versicherten an",
-        "definition": "Gibt die Postfachadresse des Versicherten an",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "BackboneElement"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
-        "short": "Gibt das Postfach des Versicherten an",
-        "definition": "Gibt das Postfach des Versicherten an",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Postfach"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
-        "short": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an.",
-        "definition": "Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. In Verbindung mit dem Wohnsitzländercode D für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
+        "short": "Name der Strasse",
+        "definition": "Gibt den Namen der Strasse an.\nWenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.\nAnlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp \nLänge: 46\nTyp: AN",
         "min": 0,
         "max": "1",
         "type": [
@@ -2448,53 +2243,15 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.postalCode"
+            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Strasse"
           }
         ]
       },
       {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Ort",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Ort",
-        "short": "Gibt den Ort zur Strassen- und oder Postfachadresse an.",
-        "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein. Abweichung zur Festlegung in DEÜV (Feldlänge = 34)",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.city"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
-        "short": "Gibt das Land zu der Strassen- und oder Postfachadresse an.",
-        "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzlaendercode zu beiden Adressdaten vorhanden sein.",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.Address.country"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versichertendaten.Versicherter.WIPTIMessengerID",
-        "path": "VSDDatensatz.Versichertendaten.Versicherter.WIPTIMessengerID",
-        "short": "Definition und Nutzung noch in Absprache - Eindeutige Identifikation einen TI-Messenger-Nutzers.",
-        "definition": "Die jeweils vollständige MXID der/des Versicherten soll dem LE zur Kommunikation mit der/dem Versicherten im Rahmen des Abrufs der VSD zur Verfügung gestellt werden können. Wenn sich der Versicherte für den TI Messenger-Dienst  registriert hat, MUSS es übertragen werden.",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
+        "short": "Hausnummer der Strassenadresse",
+        "definition": "Gibt die Hausnummer in der Strasse der Person an.\nPflichtangabe soweit bekannt, wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen. \nAnlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp \nLänge: 9\nTyp: AN",
         "min": 0,
         "max": "1",
         "type": [
@@ -2505,7 +2262,27 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.telecom:ti-messenger"
+            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Hausnummer"
+          }
+        ]
+      },
+      {
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
+        "short": "Relevante Zusätze zur Anschrift",
+        "definition": "Gibt die relevanten Zusätze zur Anschrift an.\nAls Anschriftenzusatz kann z. B. „Hinterhaus“ angegeben werden.\nLänge: 40\nTyp: AN",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "Gibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. Hinterhaus angegeben werden.",
+            "comment": "VSDMPatient.address.AddressDeBasis.line.extension:Adresszusatz"
           }
         ]
       },
@@ -2538,8 +2315,8 @@
       {
         "id": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Name",
         "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Name",
-        "short": "Gibt den Namen der Institution/Organisation an.",
-        "definition": "Gibt den Namen der Institution/Organisation an.",
+        "short": "Name des Kostenträgers",
+        "definition": "Gibt den Namen der Institution/Organisation an.\nLänge: 45\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
@@ -2557,8 +2334,8 @@
       {
         "id": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
         "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
-        "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
-        "definition": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
+        "short": "Kostenträgerländercode",
+        "definition": "Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an.\nLänge: 3\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
@@ -2576,8 +2353,8 @@
       {
         "id": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
         "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
-        "short": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
-        "definition": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
+        "short": "Kostenträgerkennung (Institutionskennzeichen)",
+        "definition": "Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an.\nAnlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp\nLänge: 9\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
@@ -2608,8 +2385,8 @@
       {
         "id": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Name",
         "path": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Name",
-        "short": "Gibt den Namen der Institution/Organisation an.",
-        "definition": "Gibt den Namen der Institution/Organisation an.",
+        "short": "Name des Kostenträgers",
+        "definition": "Gibt den Namen der Institution/Organisation an.\nLänge: 45\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
@@ -2627,8 +2404,8 @@
       {
         "id": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
         "path": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
-        "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
-        "definition": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
+        "short": "Kostenträgerländercode",
+        "definition": "Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an.\nAnlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp\nLänge: 3\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
@@ -2646,8 +2423,8 @@
       {
         "id": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
         "path": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
-        "short": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
-        "definition": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
+        "short": "Kostenträgerkennung (Institutionskennzeichen)",
+        "definition": "Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an. Es handelt sich um das bundesweit gültige Institutionskennzeichen (IK) des jeweiligen Kostenträgers.\nLänge: 9\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
@@ -2665,8 +2442,8 @@
       {
         "id": "VSDDatensatz.Versicherungsdaten.WOP",
         "path": "VSDDatensatz.Versicherungsdaten.WOP",
-        "short": "Das Kennzeichen WOP ist gemaess § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemaess Artikel 2 § 2 Abs. 2 des Gesetzes zur Einfuehrung des Wohnortprinzips bei Honorarvereinbarungen fuer Aerzte und Zahnaerzte und zur Krankenversichertenkarte gemaess § 291 Abs. 2 Fuenftes Sozialgesetzbuch (SGB V) erforderlich.",
-        "definition": "Angaben gemäß Anlage 21 BMV-Ä und EKV.",
+        "short": "Kennzeichen Wohnortprinzip",
+        "definition": "Das Kennzeichen WOP ist gemäss § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemäss Artikel 2 § 2 Abs. 2 des Gesetzes zur Einführung des Wohnortprinzips bei Honorarvereinbarungen für Ärzte und Zahnärzte und zur Krankenversichertenkarte gemäss § 291 Abs. 2 Fünftes Sozialgesetzbuch (SGB V) erforderlich.\n01 = Schleswig-Holstein\n02 = Hamburg\n03 = Bremen\n17 = Niedersachsen\n20 = Westfalen-Lippe\n38 = Nordrhein\n46 = Hessen\n51 = Rheinland-Pfalz\n52 = Baden-Württemberg\n71 = Bayerns\n72 = Berlin\n73 = Saarland\n78 = Mecklenburg-Vorpommern\n83 = Brandenburg\n88 = Sachsen-Anhalt\n93 = Thüringen\n98 = Sachsen\nGemäß Anlage 21 BMV-Ä und EKV.\nLänge: 2\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
@@ -2682,10 +2459,10 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPBesonderePersonengruppe",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPBesonderePersonengruppe",
-        "short": "Definition und Nutzung noch in Absprache - Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
-        "definition": "Definition und Nutzung noch in Absprache - Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
+        "id": "VSDDatensatz.Versicherungsdaten.BesonderePersonengruppe",
+        "path": "VSDDatensatz.Versicherungsdaten.BesonderePersonengruppe",
+        "short": "Zuordnung besondere Personengruppe",
+        "definition": "Gibt die Zugehörigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.\n4 = BSHG (Bundessozialhilfegesetz) § 264 SGB V, \n6 = SER (Soziales Entschädigungsrecht), \n7 = SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht: - Personen mit Wohnsitz im Inland, Abrechnung nach Aufwand, \n8 = SVA-Kennzeichnung, pauschal,\n9 = Empfänger von Gesundheitsleistungen nach §§ 4 und 6 des Asylbewerberleistungsgesetzes (AsylbLG)\nLänge: 2\nTyp: N",
         "min": 0,
         "max": "1",
         "type": [
@@ -2701,11 +2478,11 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus",
-        "short": "Definition und Nutzung noch in Absprache - Gibt den Zuzahlungsstatus des Versicherten an",
-        "definition": "Definition und Nutzung noch in Absprache - Gibt den Zuzahlungsstatus des Versicherten an",
-        "min": 1,
+        "id": "VSDDatensatz.Versicherungsdaten.Zuzahlungsstatus",
+        "path": "VSDDatensatz.Versicherungsdaten.Zuzahlungsstatus",
+        "short": "Zuzahlungsstatus des Versicherten",
+        "definition": "Zuzahlungsstatus des Versicherten",
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -2720,29 +2497,10 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
-        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
-        "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-kostentraegerAngabestatus"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.Status",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.Status",
-        "short": "Gibt an, ob fuer den Versicherten eine Befreiung von der Zuzahlungspflicht nach § 62 SGB V vorliegt.",
-        "definition": "1 true = von Zuzahlungspflicht befreit, 0 false = von Zuzahlungspflicht nicht befreit",
+        "id": "VSDDatensatz.Versicherungsdaten.Zuzahlungsstatus.Status",
+        "path": "VSDDatensatz.Versicherungsdaten.Zuzahlungsstatus.Status",
+        "short": "Versicherter von Zuzahlungspflicht befreit",
+        "definition": "Gibt an, ob für den Versicherten eine Befreiung von der Zuzahlungspflicht nach § 62 SGB V vorliegt.\t\n1 = von Zuzahlungspflicht befreit\nLänge: 1\nTyp: offen",
         "min": 1,
         "max": "1",
         "type": [
@@ -2758,11 +2516,11 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
-        "short": "Gibt die Gueltigkeit der Befreiung von der Zuzahlungspflicht nach § 62 SGB V an.",
-        "definition": "Wird nur angegeben, wenn Status Zuzahlung mit 1 = befreit angegeben ist.",
-        "min": 0,
+        "id": "VSDDatensatz.Versicherungsdaten.Zuzahlungsstatus.GueltigBis",
+        "path": "VSDDatensatz.Versicherungsdaten.Zuzahlungsstatus.GueltigBis",
+        "short": "Gültigkeit des Zuzahlungsstatus",
+        "definition": "Gibt die Gültigkeit der Befreiung von der Zuzahlungspflicht nach § 62 SGB V an.\tWird nur angegeben, wenn Zuzahlungsstatus mit 1 (= befreit) angegeben ist.\n Typ: ISO8601Date",
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -2779,8 +2537,8 @@
       {
         "id": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz",
         "path": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz",
-        "short": "Angaben zum Versicherungsschutz",
-        "definition": "Angaben zum Versicherungsschutz",
+        "short": "Versicherungsschutz des Versicherten",
+        "definition": "Versicherungsschutz des Versicherten",
         "min": 1,
         "max": "1",
         "type": [
@@ -2798,8 +2556,8 @@
       {
         "id": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.Beginn",
         "path": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.Beginn",
-        "short": "Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem angegebenen Kostentraeger an.",
-        "definition": "Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem angegebenen Kostentraeger an.",
+        "short": "Beginn des Versicherungsschutzes",
+        "definition": "Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem unter Klasse Kostenträger angegebenen Kostenträger an. \nTyp: ISO8601Date",
         "min": 1,
         "max": "1",
         "type": [
@@ -2815,10 +2573,10 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.WIPEnde",
-        "path": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.WIPEnde",
-        "short": "Gibt das Datum des Endes der Mitgliedschaft des Versicherten bei dem unter Klasse Kostentraeger angegebenen Kostentraeger an oder das Datum des Fristablaufs bei befristeter Gueltigkeit der Karte.",
-        "definition": "Gibt das Datum des Endes der Mitgliedschaft des Versicherten bei dem unter Klasse Kostentraeger angegebenen Kostentraeger an oder das Datum des Fristablaufs bei befristeter Gueltigkeit der Karte.",
+        "id": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.Ende",
+        "path": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.Ende",
+        "short": "Ende des Versicherungsschutzes",
+        "definition": "Das Ende ist bei befristeter Gültigkeit der elektronischen Gesundheitskarte das Datum des Fristablaufs.\nTyp: ISO8601Date",
         "min": 0,
         "max": "1",
         "type": [
@@ -2834,10 +2592,10 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPDMP",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPDMP",
-        "short": "Definition und Nutzung noch in Absprache - Angaben zur Teilnahme des Versicherten an DMP-Programmen",
-        "definition": "Definition und Nutzung noch in Absprache - Angaben zur Teilnahme des Versicherten an DMP-Programmen",
+        "id": "VSDDatensatz.Versicherungsdaten.DMP",
+        "path": "VSDDatensatz.Versicherungsdaten.DMP",
+        "short": "Angaben zur Teilnahme des Versicherten an Disease Management-Programmen",
+        "definition": "Angaben zur Teilnahme des Versicherten an Disease Management-Programmen",
         "min": 0,
         "max": "*",
         "type": [
@@ -2853,29 +2611,10 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
-        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
-        "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-kostentraegerAngabestatus"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPDMP.DMP",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.DMP",
-        "short": "Gibt den Namen des DMP-Programms an",
-        "definition": "Angaben erfolgen gemaess Schlüsseltabelle",
+        "id": "VSDDatensatz.Versicherungsdaten.DMP.DMP",
+        "path": "VSDDatensatz.Versicherungsdaten.DMP.DMP",
+        "short": "Name des DMP-Programms",
+        "definition": "Gibt den Namen des DMP an; die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.\n1 = Diabetes mellitus Typ 2 \n2 = Brustkrebs \n3 = Koronare Herzkrankheit\n4 = Diabetes mellitus Typ 1 \n5 = Asthma bronchiale \n6 = COPD (chronic obstructive pulmonary disease)\n7 = Chronische Herzinsuffizienz\n8 = Depression\n9 = Rückenschmerz\n10 = Rheuma\n11 = Osteoporose\n12 = Adipositas - Erwachsene\nLänge: zu def.\nTyp: zu def.",
         "min": 1,
         "max": "1",
         "type": [
@@ -2891,10 +2630,10 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPDMP.Beginn",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.Beginn",
-        "short": "Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.",
-        "definition": "Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.",
+        "id": "VSDDatensatz.Versicherungsdaten.DMP.Beginn",
+        "path": "VSDDatensatz.Versicherungsdaten.DMP.Beginn",
+        "short": "Beginn der Einschreibung",
+        "definition": "Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.\nTyp: ISO8601Date",
         "min": 1,
         "max": "1",
         "type": [
@@ -2910,10 +2649,10 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPDMP.Ende",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.Ende",
-        "short": "Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an.",
-        "definition": "Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an.",
+        "id": "VSDDatensatz.Versicherungsdaten.DMP.Ende",
+        "path": "VSDDatensatz.Versicherungsdaten.DMP.Ende",
+        "short": "Ende der Einschreibung",
+        "definition": "Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an.\nTyp: ISO8601Date",
         "min": 0,
         "max": "1",
         "type": [
@@ -2929,15 +2668,15 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPdigitalesDMP",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPdigitalesDMP",
-        "short": "Definition und Nutzung noch in Absprache - Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
-        "definition": "Definition und Nutzung noch in Absprache - Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
-        "min": 0,
-        "max": "*",
+        "id": "VSDDatensatz.Versicherungsdaten.DMP.digitalesDMP",
+        "path": "VSDDatensatz.Versicherungsdaten.DMP.digitalesDMP",
+        "short": "Kennzeichen digitales DMP",
+        "definition": "Beinhaltet die Information, ob das DMP als digitales DMP durchgeführt wird; Information kann je DMP bereitgestellt werden\nLänge: 1\nTyp: Bool",
+        "min": 1,
+        "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "boolean"
           }
         ],
         "mapping": [
@@ -2948,10 +2687,10 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung",
-        "short": "Definition und Nutzung noch in Absprache - Angaben zur Kostenerstattung für verschiedene Sektoren",
-        "definition": "Definition und Nutzung noch in Absprache - Angaben zur Kostenerstattung für verschiedene Sektoren",
+        "id": "VSDDatensatz.Versicherungsdaten.Kostenerstattung",
+        "path": "VSDDatensatz.Versicherungsdaten.Kostenerstattung",
+        "short": "Angaben zur Kostenerstattung",
+        "definition": "Angaben zur Kostenerstattung",
         "min": 0,
         "max": "1",
         "type": [
@@ -2967,29 +2706,10 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
-        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
-        "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-kostentraegerAngabestatus"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
-        "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer die aerztliche Versorgung an.",
-        "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
+        "id": "VSDDatensatz.Versicherungsdaten.Kostenerstattung.AerztlicheVersorgung",
+        "path": "VSDDatensatz.Versicherungsdaten.Kostenerstattung.AerztlicheVersorgung",
+        "short": "Ärztliche Versorgung",
+        "definition": "Gibt die vom Versicherten gewählte Kostenerstattung für die ärztliche Versorgung an.\n1 (true) = Kostenerstattung\n0 (false) = keine Kostenerstattung\nLänge: 1\nTyp: B",
         "min": 1,
         "max": "1",
         "type": [
@@ -3005,10 +2725,10 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
-        "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer zahnaerztliche Versorgung an.",
-        "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
+        "id": "VSDDatensatz.Versicherungsdaten.Kostenerstattung.ZahnaerztlicheVersorgung",
+        "path": "VSDDatensatz.Versicherungsdaten.Kostenerstattung.ZahnaerztlicheVersorgung",
+        "short": "Zahnärztliche Versorgung",
+        "definition": "Gibt die vom Versicherten gewählte Kostenerstattung für zahnärztliche Versorgung an.\n1 (true) = Kostenerstattung\n0 (false) = keine Kostenerstattung\nLänge: 1\nTyp: B",
         "min": 1,
         "max": "1",
         "type": [
@@ -3024,10 +2744,10 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
-        "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer den stationaeren Bereich an.",
-        "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
+        "id": "VSDDatensatz.Versicherungsdaten.Kostenerstattung.StationaererBereich",
+        "path": "VSDDatensatz.Versicherungsdaten.Kostenerstattung.StationaererBereich",
+        "short": "Stationärer Bereich",
+        "definition": "Gibt die vom Versicherten gewählte Kostenerstattung für den stationären Bereich an.\n1 (true) = Kostenerstattung\n0 (false) = keine Kostenerstattung\nLänge: 1\nTyp: B",
         "min": 1,
         "max": "1",
         "type": [
@@ -3043,10 +2763,10 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
-        "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer veranlasste Leistungen an.",
-        "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
+        "id": "VSDDatensatz.Versicherungsdaten.Kostenerstattung.VeranlassteLeistungen",
+        "path": "VSDDatensatz.Versicherungsdaten.Kostenerstattung.VeranlassteLeistungen",
+        "short": "Veranlasste Leistungen",
+        "definition": "Gibt die vom Versicherten gewählte Kostenerstattung für veranlasste Leistungen an.\n1 (true) = Kostenerstattung\n0 (false) = keine Kostenerstattung\nLänge: 1\nTyp: B",
         "min": 1,
         "max": "1",
         "type": [
@@ -3062,10 +2782,10 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
-        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
-        "definition": "Definition und Nutzung noch in Absprache - Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
+        "id": "VSDDatensatz.Versicherungsdaten.RuhenderLeistungsanspruch",
+        "path": "VSDDatensatz.Versicherungsdaten.RuhenderLeistungsanspruch",
+        "short": "Ruhender Leistungsanspruch",
+        "definition": "Ruhender Leistungsanspruch",
         "min": 0,
         "max": "1",
         "type": [
@@ -3081,29 +2801,10 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
-        "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
-        "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-kostentraegerAngabestatus"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
-        "short": "Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an.",
-        "definition": "Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an.",
+        "id": "VSDDatensatz.Versicherungsdaten.RuhenderLeistungsanspruch.Beginn",
+        "path": "VSDDatensatz.Versicherungsdaten.RuhenderLeistungsanspruch.Beginn",
+        "short": "Beginn des ruhenden Leistungsanspruchs",
+        "definition": "Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an.\nTyp: ISO8601Date",
         "min": 1,
         "max": "1",
         "type": [
@@ -3119,10 +2820,10 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
-        "short": "Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.",
-        "definition": "Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.",
+        "id": "VSDDatensatz.Versicherungsdaten.RuhenderLeistungsanspruch.Ende",
+        "path": "VSDDatensatz.Versicherungsdaten.RuhenderLeistungsanspruch.Ende",
+        "short": "Ende des ruhenden Leistungsanspruchs",
+        "definition": "Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.\nTyp: ISO8601Date",
         "min": 0,
         "max": "1",
         "type": [
@@ -3138,10 +2839,10 @@
         ]
       },
       {
-        "id": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
-        "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
-        "short": "Gibt die Art des Ruhens an.",
-        "definition": "1 = vollständig, 2 = eingeschränkt",
+        "id": "VSDDatensatz.Versicherungsdaten.RuhenderLeistungsanspruch.Art",
+        "path": "VSDDatensatz.Versicherungsdaten.RuhenderLeistungsanspruch.Art",
+        "short": "Art des Ruhens",
+        "definition": "Gibt die Art des Ruhens an.\n1 = vollständig\n2 = eingeschränkt\nLänge: 1\nTyp: N",
         "min": 1,
         "max": "1",
         "type": [
@@ -3159,8 +2860,8 @@
       {
         "id": "VSDDatensatz.Versicherungsdaten.Versichertenart",
         "path": "VSDDatensatz.Versicherungsdaten.Versichertenart",
-        "short": "Gibt die Art der Versicherung an",
-        "definition": "1 = Mitglied, 3 = Familienversicherter, 5 = Rentner und ihre Familienangehörigen",
+        "short": "Art der Versicherung",
+        "definition": "1 = Mitglied\n3 = Familienversicherter\n5 = Rentner und ihre Familienangehörigen \nLänge: 1\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
@@ -3172,25 +2873,6 @@
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
             "map": "VSDMCoverage.extension:versichertenart"
-          }
-        ]
-      },
-      {
-        "id": "VSDDatensatz.Versicherungsdaten.Versicherungsart",
-        "path": "VSDDatensatz.Versicherungsdaten.Versicherungsart",
-        "short": "Art der Versicherung: gesetzliche oder private Versicherung",
-        "definition": "GKV = gesetzlich versichert, PKV = privat versichert",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.type"
           }
         ]
       }
