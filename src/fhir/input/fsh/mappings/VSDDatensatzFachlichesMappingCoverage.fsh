@@ -1,5 +1,5 @@
 Mapping: VSDDatensatzFachlichesMappingCoverage
-Source: GEM_VSDM2_LOG_VSD_Confirmation
+Source: VSDDatensatz
 Target: "VSDMCoverage"
 Id: VSD-Datensatz-Fachliches-Mapping-Coverage
 Title: "VSD-Datensatz Fachliches Mapping Coverage"

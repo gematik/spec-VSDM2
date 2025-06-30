@@ -1,7 +1,6 @@
-Logical: GEM_VSDM2_LOG_VSD_Confirmation
+Logical: VSDDatensatz
 Parent: Element
-Id: gem-vsdm2-log-vsd-confirmation
-Title: "Logical Model VSD-Datensatz für VSDM 2.0"
+Title: "Logisches Modell VSD-Datensatz für VSDM 2.0"
 Description: "Fachliches Modell zur Beschreibung des VSD-Datensatzes"
 * Versichertendaten 1..1 BackboneElement "Versichertendaten"
   * VersichertenID 1..1 Identifier "KVNR" "Die Versicherten-ID ist der 10-stellige unveraenderliche Teil der 30-stelligen Krankenversichertennummer"

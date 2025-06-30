@@ -1,5 +1,5 @@
 Mapping: VSDDatensatzFachlichesMappingPatient
-Source: GEM_VSDM2_LOG_VSD_Confirmation
+Source: VSDDatensatz
 Target: "VSDMPatient"
 Id: VSD-Datensatz-Fachliches-Mapping-Patient
 Title: "VSD-Datensatz Fachliches Mapping Patient"

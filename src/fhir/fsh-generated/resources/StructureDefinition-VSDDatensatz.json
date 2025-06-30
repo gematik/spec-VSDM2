@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "gem-vsdm2-log-vsd-confirmation",
-  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/gem-vsdm2-log-vsd-confirmation",
-  "name": "GEM_VSDM2_LOG_VSD_Confirmation",
-  "title": "Logical Model VSD-Datensatz für VSDM 2.0",
+  "id": "VSDDatensatz",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDDatensatz",
+  "name": "VSDDatensatz",
+  "title": "Logisches Modell VSD-Datensatz für VSDM 2.0",
   "status": "draft",
   "description": "Fachliches Modell zur Beschreibung des VSD-Datensatzes",
   "fhirVersion": "4.0.1",
@@ -28,20 +28,20 @@
   ],
   "kind": "logical",
   "abstract": false,
-  "type": "https://gematik.de/fhir/vsdm2/StructureDefinition/gem-vsdm2-log-vsd-confirmation",
+  "type": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDDatensatz",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "snapshot": {
     "element": [
       {
-        "id": "gem-vsdm2-log-vsd-confirmation",
-        "path": "gem-vsdm2-log-vsd-confirmation",
-        "short": "Logical Model VSD-Datensatz für VSDM 2.0",
+        "id": "VSDDatensatz",
+        "path": "VSDDatensatz",
+        "short": "Logisches Modell VSD-Datensatz für VSDM 2.0",
         "definition": "Fachliches Modell zur Beschreibung des VSD-Datensatzes",
         "min": 0,
         "max": "*",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation",
+          "path": "VSDDatensatz",
           "min": 0,
           "max": "*"
         },
@@ -54,10 +54,10 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div"
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "isModifier": false,
         "mapping": [
           {
             "identity": "rim",
@@ -66,8 +66,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.id",
-        "path": "gem-vsdm2-log-vsd-confirmation.id",
+        "id": "VSDDatensatz.id",
+        "path": "VSDDatensatz.id",
         "representation": [
           "xmlAttr"
         ],
@@ -91,8 +91,6 @@
             ]
           }
         ],
-        "isModifier": false,
-        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -101,8 +99,18 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.extension",
-        "path": "gem-vsdm2-log-vsd-confirmation.extension",
+        "id": "VSDDatensatz.extension",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "VSDDatensatz.extension",
         "slicing": {
           "discriminator": [
             {
@@ -132,6 +140,9 @@
             "code": "Extension"
           }
         ],
+        "condition": [
+          "ele-1"
+        ],
         "constraint": [
           {
             "key": "ele-1",
@@ -146,28 +157,31 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
-        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
             "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
           }
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten",
+        "id": "VSDDatensatz.Versichertendaten",
+        "path": "VSDDatensatz.Versichertendaten",
         "short": "Versichertendaten",
         "definition": "Versichertendaten",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten",
+          "path": "VSDDatensatz.Versichertendaten",
           "min": 1,
           "max": "1"
         },
@@ -188,14 +202,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.VersichertenID",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.VersichertenID",
+        "id": "VSDDatensatz.Versichertendaten.VersichertenID",
+        "path": "VSDDatensatz.Versichertendaten.VersichertenID",
         "short": "KVNR",
         "definition": "Die Versicherten-ID ist der 10-stellige unveraenderliche Teil der 30-stelligen Krankenversichertennummer",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.VersichertenID",
+          "path": "VSDDatensatz.Versichertendaten.VersichertenID",
           "min": 1,
           "max": "1"
         },
@@ -222,14 +236,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter",
         "short": "Angaben zum Versicherten",
         "definition": "Angaben zum Versicherten",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter",
           "min": 0,
           "max": "1"
         },
@@ -250,14 +264,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Nachname",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Nachname",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.Nachname",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.Nachname",
         "short": "Gibt den Nachnamen des Versicherten an",
         "definition": "Gibt den Nachnamen des Versicherten an",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Nachname",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.Nachname",
           "min": 1,
           "max": "1"
         },
@@ -284,14 +298,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorname",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorname",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.Vorname",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.Vorname",
         "short": "Gibt den Vornamen der Person an.",
         "definition": "Alle Vornamen der Person (max. 5) werden eingegeben. Mehrere Vornamen werden durch Leerzeichen oder Bindestrich getrennt.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorname",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.Vorname",
           "min": 1,
           "max": "1"
         },
@@ -318,14 +332,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorsatzwort",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorsatzwort",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.Vorsatzwort",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.Vorsatzwort",
         "short": "Gibt die Vorsatzwoerter der Person an.",
         "definition": "Mehrere Vorsatzwörter werden durch Leerzeichen getrennt angegeben. Anlage 6 (Tabelle der gültigen Vorsatzworte) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorsatzwort",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.Vorsatzwort",
           "min": 0,
           "max": "1"
         },
@@ -352,14 +366,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Namenszusatz",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Namenszusatz",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.Namenszusatz",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.Namenszusatz",
         "short": "Gibt die Namenszusaetze der Person an, z. B.: Freiherr",
         "definition": "Anlage 7 (Tabelle der gültigen Namenszusätze) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Namenszusatz",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.Namenszusatz",
           "min": 0,
           "max": "1"
         },
@@ -386,14 +400,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Titel",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Titel",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.Titel",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.Titel",
         "short": "Gibt die akademischen Grade der Person an.",
         "definition": "Mehrere Titel werden durch Leerzeichen getrennt angegeben.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Titel",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.Titel",
           "min": 0,
           "max": "1"
         },
@@ -420,14 +434,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geburtsdatum",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geburtsdatum",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.Geburtsdatum",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.Geburtsdatum",
         "short": "Gibt das Geburtsdatum des Versicherten an",
         "definition": "Das Geburtsjahr MUSS immer gefuellt werden. Bei Inlaendern ist immer ein logisch richtiges Geburtsdatum anzugeben. Bei Auslaendern gilt folgendes: Zumindest das Geburtsjahr ist immer anzugeben. Im Geburtstag oder im Geburtstag und im Geburtsmonat ist bei Ausländern „00“ bzw. „0000“ zulässig, wenn der Geburtstag und der Geburtsmonat nicht zu ermitteln sind. Das Geburtsdatum muss komplett gefüllt sein. Beispiel: 1990-00-00",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geburtsdatum",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.Geburtsdatum",
           "min": 1,
           "max": "1"
         },
@@ -454,14 +468,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geschlecht",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geschlecht",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.Geschlecht",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.Geschlecht",
         "short": "Gibt das Geschlecht des Versicherten an",
         "definition": "M = maennlich, W = weiblich, X = unbestimmt, D = divers",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geschlecht",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.Geschlecht",
           "min": 1,
           "max": "1"
         },
@@ -488,14 +502,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse",
         "short": "Gibt die Strassenadresse des Versicherten an",
         "definition": "Gibt die Strassenadresse des Versicherten an",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse",
           "min": 0,
           "max": "1"
         },
@@ -522,14 +536,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
         "short": "Gibt den Namen der Strasse an",
         "definition": "Wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
           "min": 0,
           "max": "1"
         },
@@ -556,14 +570,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
         "short": "Gibt die Hausnummer in der Strasse der Person an.",
         "definition": "Wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
           "min": 0,
           "max": "1"
         },
@@ -590,14 +604,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
         "short": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an.",
         "definition": "Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. In Verbindung mit dem Wohnsitzländercode D für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
           "min": 0,
           "max": "1"
         },
@@ -624,14 +638,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Ort",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Ort",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Ort",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Ort",
         "short": "Gibt den Ort zur Strassen- und oder Postfachadresse an.",
         "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein. Abweichung zur Festlegung in DEÜV (Feldlänge = 34)",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Ort",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Ort",
           "min": 1,
           "max": "1"
         },
@@ -658,14 +672,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
         "short": "ibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. „Hinterhaus“ angegeben werden.",
         "definition": "ibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. „Hinterhaus“ angegeben werden.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
           "min": 0,
           "max": "1"
         },
@@ -693,14 +707,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
         "short": "Gibt das Land zu der Strassen- und oder Postfachadresse an.",
         "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzlaendercode zu beiden Adressdaten vorhanden sein.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
           "min": 1,
           "max": "1"
         },
@@ -727,14 +741,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse",
         "short": "Gibt die Postfachadresse des Versicherten an",
         "definition": "Gibt die Postfachadresse des Versicherten an",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse",
           "min": 0,
           "max": "1"
         },
@@ -761,14 +775,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
         "short": "Gibt das Postfach des Versicherten an",
         "definition": "Gibt das Postfach des Versicherten an",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
           "min": 1,
           "max": "1"
         },
@@ -795,14 +809,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
         "short": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an.",
         "definition": "Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. In Verbindung mit dem Wohnsitzländercode D für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
           "min": 0,
           "max": "1"
         },
@@ -829,14 +843,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Ort",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Ort",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Ort",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Ort",
         "short": "Gibt den Ort zur Strassen- und oder Postfachadresse an.",
         "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein. Abweichung zur Festlegung in DEÜV (Feldlänge = 34)",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Ort",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Ort",
           "min": 1,
           "max": "1"
         },
@@ -863,14 +877,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
         "short": "Gibt das Land zu der Strassen- und oder Postfachadresse an.",
         "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzlaendercode zu beiden Adressdaten vorhanden sein.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
           "min": 1,
           "max": "1"
         },
@@ -897,14 +911,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.WIPTIMessengerID",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.WIPTIMessengerID",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.WIPTIMessengerID",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.WIPTIMessengerID",
         "short": "Definition und Nutzung noch in Absprache - Eindeutige Identifikation einen TI-Messenger-Nutzers.",
         "definition": "Die jeweils vollständige MXID der/des Versicherten soll dem LE zur Kommunikation mit der/dem Versicherten im Rahmen des Abrufs der VSD zur Verfügung gestellt werden können. Wenn sich der Versicherte für den TI Messenger-Dienst  registriert hat, MUSS es übertragen werden.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.WIPTIMessengerID",
+          "path": "VSDDatensatz.Versichertendaten.Versicherter.WIPTIMessengerID",
           "min": 0,
           "max": "1"
         },
@@ -931,14 +945,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten",
+        "id": "VSDDatensatz.Versicherungsdaten",
+        "path": "VSDDatensatz.Versicherungsdaten",
         "short": "Angaben zum Versicherungsverhältnis",
         "definition": "Angaben zum Versicherungsverhältnis",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten",
+          "path": "VSDDatensatz.Versicherungsdaten",
           "min": 1,
           "max": "1"
         },
@@ -959,14 +973,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger",
+        "id": "VSDDatensatz.Versicherungsdaten.Kostentraeger",
+        "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger",
         "short": "Angaben zum Kostenträger",
         "definition": "Angaben zum Kostenträger",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger",
+          "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger",
           "min": 1,
           "max": "1"
         },
@@ -987,14 +1001,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Name",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Name",
+        "id": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Name",
+        "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Name",
         "short": "Gibt den Namen der Institution/Organisation an.",
         "definition": "Gibt den Namen der Institution/Organisation an.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Name",
+          "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Name",
           "min": 1,
           "max": "1"
         },
@@ -1021,14 +1035,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
+        "id": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
+        "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
         "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
         "definition": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
+          "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
           "min": 1,
           "max": "1"
         },
@@ -1055,14 +1069,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
+        "id": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
+        "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
         "short": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
         "definition": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
+          "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
           "min": 1,
           "max": "1"
         },
@@ -1089,14 +1103,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger",
+        "id": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger",
+        "path": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger",
         "short": "Angaben zum abrechnenden Kostenträger",
         "definition": "Angaben zum abrechnenden Kostenträger",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger",
+          "path": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger",
           "min": 0,
           "max": "1"
         },
@@ -1117,14 +1131,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Name",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Name",
+        "id": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Name",
+        "path": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Name",
         "short": "Gibt den Namen der Institution/Organisation an.",
         "definition": "Gibt den Namen der Institution/Organisation an.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Name",
+          "path": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Name",
           "min": 1,
           "max": "1"
         },
@@ -1151,14 +1165,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
+        "id": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
+        "path": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
         "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
         "definition": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
+          "path": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
           "min": 1,
           "max": "1"
         },
@@ -1185,14 +1199,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
+        "id": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
+        "path": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
         "short": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
         "definition": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
+          "path": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
           "min": 1,
           "max": "1"
         },
@@ -1219,14 +1233,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WOP",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WOP",
+        "id": "VSDDatensatz.Versicherungsdaten.WOP",
+        "path": "VSDDatensatz.Versicherungsdaten.WOP",
         "short": "Das Kennzeichen WOP ist gemaess § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemaess Artikel 2 § 2 Abs. 2 des Gesetzes zur Einfuehrung des Wohnortprinzips bei Honorarvereinbarungen fuer Aerzte und Zahnaerzte und zur Krankenversichertenkarte gemaess § 291 Abs. 2 Fuenftes Sozialgesetzbuch (SGB V) erforderlich.",
         "definition": "Angaben gemäß Anlage 21 BMV-Ä und EKV.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WOP",
+          "path": "VSDDatensatz.Versicherungsdaten.WOP",
           "min": 1,
           "max": "1"
         },
@@ -1253,14 +1267,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPBesonderePersonengruppe",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPBesonderePersonengruppe",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPBesonderePersonengruppe",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPBesonderePersonengruppe",
         "short": "Definition und Nutzung noch in Absprache - Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
         "definition": "Definition und Nutzung noch in Absprache - Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPBesonderePersonengruppe",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPBesonderePersonengruppe",
           "min": 0,
           "max": "1"
         },
@@ -1287,14 +1301,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus",
         "short": "Definition und Nutzung noch in Absprache - Gibt den Zuzahlungsstatus des Versicherten an",
         "definition": "Definition und Nutzung noch in Absprache - Gibt den Zuzahlungsstatus des Versicherten an",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus",
           "min": 1,
           "max": "1"
         },
@@ -1321,14 +1335,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
         "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
           "min": 1,
           "max": "1"
         },
@@ -1355,14 +1369,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.Status",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.Status",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.Status",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.Status",
         "short": "Gibt an, ob fuer den Versicherten eine Befreiung von der Zuzahlungspflicht nach § 62 SGB V vorliegt.",
         "definition": "1 true = von Zuzahlungspflicht befreit, 0 false = von Zuzahlungspflicht nicht befreit",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.Status",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.Status",
           "min": 1,
           "max": "1"
         },
@@ -1389,14 +1403,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
         "short": "Gibt die Gueltigkeit der Befreiung von der Zuzahlungspflicht nach § 62 SGB V an.",
         "definition": "Wird nur angegeben, wenn Status Zuzahlung mit 1 = befreit angegeben ist.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
           "min": 0,
           "max": "1"
         },
@@ -1423,14 +1437,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz",
+        "id": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz",
+        "path": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz",
         "short": "Angaben zum Versicherungsschutz",
         "definition": "Angaben zum Versicherungsschutz",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz",
+          "path": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz",
           "min": 1,
           "max": "1"
         },
@@ -1457,14 +1471,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Beginn",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Beginn",
+        "id": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.Beginn",
+        "path": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.Beginn",
         "short": "Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem angegebenen Kostentraeger an.",
         "definition": "Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem angegebenen Kostentraeger an.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Beginn",
+          "path": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.Beginn",
           "min": 1,
           "max": "1"
         },
@@ -1491,14 +1505,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.WIPEnde",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.WIPEnde",
+        "id": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.WIPEnde",
+        "path": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.WIPEnde",
         "short": "Gibt das Datum des Endes der Mitgliedschaft des Versicherten bei dem unter Klasse Kostentraeger angegebenen Kostentraeger an oder das Datum des Fristablaufs bei befristeter Gueltigkeit der Karte.",
         "definition": "Gibt das Datum des Endes der Mitgliedschaft des Versicherten bei dem unter Klasse Kostentraeger angegebenen Kostentraeger an oder das Datum des Fristablaufs bei befristeter Gueltigkeit der Karte.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.WIPEnde",
+          "path": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.WIPEnde",
           "min": 0,
           "max": "1"
         },
@@ -1525,14 +1539,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPDMP",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPDMP",
         "short": "Definition und Nutzung noch in Absprache - Angaben zur Teilnahme des Versicherten an DMP-Programmen",
         "definition": "Definition und Nutzung noch in Absprache - Angaben zur Teilnahme des Versicherten an DMP-Programmen",
         "min": 0,
         "max": "*",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPDMP",
           "min": 0,
           "max": "*"
         },
@@ -1559,14 +1573,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
         "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
           "min": 1,
           "max": "1"
         },
@@ -1593,14 +1607,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.DMP",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.DMP",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPDMP.DMP",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.DMP",
         "short": "Gibt den Namen des DMP-Programms an",
         "definition": "Angaben erfolgen gemaess Schlüsseltabelle",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.DMP",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.DMP",
           "min": 1,
           "max": "1"
         },
@@ -1627,14 +1641,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Beginn",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Beginn",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPDMP.Beginn",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.Beginn",
         "short": "Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.",
         "definition": "Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Beginn",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.Beginn",
           "min": 1,
           "max": "1"
         },
@@ -1661,14 +1675,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Ende",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Ende",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPDMP.Ende",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.Ende",
         "short": "Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an.",
         "definition": "Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Ende",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.Ende",
           "min": 0,
           "max": "1"
         },
@@ -1695,14 +1709,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPdigitalesDMP",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPdigitalesDMP",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPdigitalesDMP",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPdigitalesDMP",
         "short": "Definition und Nutzung noch in Absprache - Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
         "definition": "Definition und Nutzung noch in Absprache - Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
         "min": 0,
         "max": "*",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPdigitalesDMP",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPdigitalesDMP",
           "min": 0,
           "max": "*"
         },
@@ -1729,14 +1743,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung",
         "short": "Definition und Nutzung noch in Absprache - Angaben zur Kostenerstattung für verschiedene Sektoren",
         "definition": "Definition und Nutzung noch in Absprache - Angaben zur Kostenerstattung für verschiedene Sektoren",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung",
           "min": 0,
           "max": "1"
         },
@@ -1763,14 +1777,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
         "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
           "min": 1,
           "max": "1"
         },
@@ -1797,14 +1811,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
         "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer die aerztliche Versorgung an.",
         "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
           "min": 1,
           "max": "1"
         },
@@ -1831,14 +1845,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
         "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer zahnaerztliche Versorgung an.",
         "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
           "min": 1,
           "max": "1"
         },
@@ -1865,14 +1879,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
         "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer den stationaeren Bereich an.",
         "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
           "min": 1,
           "max": "1"
         },
@@ -1899,14 +1913,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
         "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer veranlasste Leistungen an.",
         "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
           "min": 1,
           "max": "1"
         },
@@ -1933,14 +1947,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
         "short": "Definition und Nutzung noch in Absprache - Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
         "definition": "Definition und Nutzung noch in Absprache - Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
           "min": 0,
           "max": "1"
         },
@@ -1967,14 +1981,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
         "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
           "min": 1,
           "max": "1"
         },
@@ -2001,14 +2015,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
         "short": "Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an.",
         "definition": "Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
           "min": 1,
           "max": "1"
         },
@@ -2035,14 +2049,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
         "short": "Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.",
         "definition": "Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
           "min": 0,
           "max": "1"
         },
@@ -2069,14 +2083,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
         "short": "Gibt die Art des Ruhens an.",
         "definition": "1 = vollständig, 2 = eingeschränkt",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
+          "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
           "min": 1,
           "max": "1"
         },
@@ -2103,14 +2117,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versichertenart",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versichertenart",
+        "id": "VSDDatensatz.Versicherungsdaten.Versichertenart",
+        "path": "VSDDatensatz.Versicherungsdaten.Versichertenart",
         "short": "Gibt die Art der Versicherung an",
         "definition": "1 = Mitglied, 3 = Familienversicherter, 5 = Rentner und ihre Familienangehörigen",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versichertenart",
+          "path": "VSDDatensatz.Versicherungsdaten.Versichertenart",
           "min": 1,
           "max": "1"
         },
@@ -2137,14 +2151,14 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsart",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsart",
+        "id": "VSDDatensatz.Versicherungsdaten.Versicherungsart",
+        "path": "VSDDatensatz.Versicherungsdaten.Versicherungsart",
         "short": "Art der Versicherung: gesetzliche oder private Versicherung",
         "definition": "GKV = gesetzlich versichert, PKV = privat versichert",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsart",
+          "path": "VSDDatensatz.Versicherungsdaten.Versicherungsart",
           "min": 1,
           "max": "1"
         },
@@ -2175,14 +2189,14 @@
   "differential": {
     "element": [
       {
-        "id": "gem-vsdm2-log-vsd-confirmation",
-        "path": "gem-vsdm2-log-vsd-confirmation",
-        "short": "Logical Model VSD-Datensatz für VSDM 2.0",
+        "id": "VSDDatensatz",
+        "path": "VSDDatensatz",
+        "short": "Logisches Modell VSD-Datensatz für VSDM 2.0",
         "definition": "Fachliches Modell zur Beschreibung des VSD-Datensatzes"
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten",
+        "id": "VSDDatensatz.Versichertendaten",
+        "path": "VSDDatensatz.Versichertendaten",
         "short": "Versichertendaten",
         "definition": "Versichertendaten",
         "min": 1,
@@ -2194,8 +2208,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.VersichertenID",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.VersichertenID",
+        "id": "VSDDatensatz.Versichertendaten.VersichertenID",
+        "path": "VSDDatensatz.Versichertendaten.VersichertenID",
         "short": "KVNR",
         "definition": "Die Versicherten-ID ist der 10-stellige unveraenderliche Teil der 30-stelligen Krankenversichertennummer",
         "min": 1,
@@ -2213,8 +2227,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter",
         "short": "Angaben zum Versicherten",
         "definition": "Angaben zum Versicherten",
         "min": 0,
@@ -2226,8 +2240,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Nachname",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Nachname",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.Nachname",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.Nachname",
         "short": "Gibt den Nachnamen des Versicherten an",
         "definition": "Gibt den Nachnamen des Versicherten an",
         "min": 1,
@@ -2245,8 +2259,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorname",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorname",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.Vorname",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.Vorname",
         "short": "Gibt den Vornamen der Person an.",
         "definition": "Alle Vornamen der Person (max. 5) werden eingegeben. Mehrere Vornamen werden durch Leerzeichen oder Bindestrich getrennt.",
         "min": 1,
@@ -2264,8 +2278,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorsatzwort",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Vorsatzwort",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.Vorsatzwort",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.Vorsatzwort",
         "short": "Gibt die Vorsatzwoerter der Person an.",
         "definition": "Mehrere Vorsatzwörter werden durch Leerzeichen getrennt angegeben. Anlage 6 (Tabelle der gültigen Vorsatzworte) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
         "min": 0,
@@ -2283,8 +2297,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Namenszusatz",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Namenszusatz",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.Namenszusatz",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.Namenszusatz",
         "short": "Gibt die Namenszusaetze der Person an, z. B.: Freiherr",
         "definition": "Anlage 7 (Tabelle der gültigen Namenszusätze) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp",
         "min": 0,
@@ -2302,8 +2316,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Titel",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Titel",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.Titel",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.Titel",
         "short": "Gibt die akademischen Grade der Person an.",
         "definition": "Mehrere Titel werden durch Leerzeichen getrennt angegeben.",
         "min": 0,
@@ -2321,8 +2335,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geburtsdatum",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geburtsdatum",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.Geburtsdatum",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.Geburtsdatum",
         "short": "Gibt das Geburtsdatum des Versicherten an",
         "definition": "Das Geburtsjahr MUSS immer gefuellt werden. Bei Inlaendern ist immer ein logisch richtiges Geburtsdatum anzugeben. Bei Auslaendern gilt folgendes: Zumindest das Geburtsjahr ist immer anzugeben. Im Geburtstag oder im Geburtstag und im Geburtsmonat ist bei Ausländern „00“ bzw. „0000“ zulässig, wenn der Geburtstag und der Geburtsmonat nicht zu ermitteln sind. Das Geburtsdatum muss komplett gefüllt sein. Beispiel: 1990-00-00",
         "min": 1,
@@ -2340,8 +2354,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geschlecht",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.Geschlecht",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.Geschlecht",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.Geschlecht",
         "short": "Gibt das Geschlecht des Versicherten an",
         "definition": "M = maennlich, W = weiblich, X = unbestimmt, D = divers",
         "min": 1,
@@ -2359,8 +2373,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse",
         "short": "Gibt die Strassenadresse des Versicherten an",
         "definition": "Gibt die Strassenadresse des Versicherten an",
         "min": 0,
@@ -2378,8 +2392,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
         "short": "Gibt den Namen der Strasse an",
         "definition": "Wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.",
         "min": 0,
@@ -2397,8 +2411,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
         "short": "Gibt die Hausnummer in der Strasse der Person an.",
         "definition": "Wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.",
         "min": 0,
@@ -2416,8 +2430,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Postleitzahl",
         "short": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an.",
         "definition": "Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. In Verbindung mit dem Wohnsitzländercode D für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.",
         "min": 0,
@@ -2435,8 +2449,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Ort",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Ort",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Ort",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Ort",
         "short": "Gibt den Ort zur Strassen- und oder Postfachadresse an.",
         "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein. Abweichung zur Festlegung in DEÜV (Feldlänge = 34)",
         "min": 1,
@@ -2454,8 +2468,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Anschriftenzusatz",
         "short": "ibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. „Hinterhaus“ angegeben werden.",
         "definition": "ibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. „Hinterhaus“ angegeben werden.",
         "min": 0,
@@ -2474,8 +2488,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
         "short": "Gibt das Land zu der Strassen- und oder Postfachadresse an.",
         "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzlaendercode zu beiden Adressdaten vorhanden sein.",
         "min": 1,
@@ -2493,8 +2507,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse",
         "short": "Gibt die Postfachadresse des Versicherten an",
         "definition": "Gibt die Postfachadresse des Versicherten an",
         "min": 0,
@@ -2512,8 +2526,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postfach",
         "short": "Gibt das Postfach des Versicherten an",
         "definition": "Gibt das Postfach des Versicherten an",
         "min": 1,
@@ -2531,8 +2545,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
         "short": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an.",
         "definition": "Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. In Verbindung mit dem Wohnsitzländercode D für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.",
         "min": 0,
@@ -2550,8 +2564,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Ort",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Ort",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Ort",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Ort",
         "short": "Gibt den Ort zur Strassen- und oder Postfachadresse an.",
         "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein. Abweichung zur Festlegung in DEÜV (Feldlänge = 34)",
         "min": 1,
@@ -2569,8 +2583,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
         "short": "Gibt das Land zu der Strassen- und oder Postfachadresse an.",
         "definition": "Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzlaendercode zu beiden Adressdaten vorhanden sein.",
         "min": 1,
@@ -2588,8 +2602,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.WIPTIMessengerID",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versichertendaten.Versicherter.WIPTIMessengerID",
+        "id": "VSDDatensatz.Versichertendaten.Versicherter.WIPTIMessengerID",
+        "path": "VSDDatensatz.Versichertendaten.Versicherter.WIPTIMessengerID",
         "short": "Definition und Nutzung noch in Absprache - Eindeutige Identifikation einen TI-Messenger-Nutzers.",
         "definition": "Die jeweils vollständige MXID der/des Versicherten soll dem LE zur Kommunikation mit der/dem Versicherten im Rahmen des Abrufs der VSD zur Verfügung gestellt werden können. Wenn sich der Versicherte für den TI Messenger-Dienst  registriert hat, MUSS es übertragen werden.",
         "min": 0,
@@ -2607,8 +2621,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten",
+        "id": "VSDDatensatz.Versicherungsdaten",
+        "path": "VSDDatensatz.Versicherungsdaten",
         "short": "Angaben zum Versicherungsverhältnis",
         "definition": "Angaben zum Versicherungsverhältnis",
         "min": 1,
@@ -2620,8 +2634,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger",
+        "id": "VSDDatensatz.Versicherungsdaten.Kostentraeger",
+        "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger",
         "short": "Angaben zum Kostenträger",
         "definition": "Angaben zum Kostenträger",
         "min": 1,
@@ -2633,8 +2647,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Name",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Name",
+        "id": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Name",
+        "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Name",
         "short": "Gibt den Namen der Institution/Organisation an.",
         "definition": "Gibt den Namen der Institution/Organisation an.",
         "min": 1,
@@ -2652,8 +2666,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
+        "id": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
+        "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
         "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
         "definition": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
         "min": 1,
@@ -2671,8 +2685,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
+        "id": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
+        "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
         "short": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
         "definition": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
         "min": 1,
@@ -2690,8 +2704,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger",
+        "id": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger",
+        "path": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger",
         "short": "Angaben zum abrechnenden Kostenträger",
         "definition": "Angaben zum abrechnenden Kostenträger",
         "min": 0,
@@ -2703,8 +2717,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Name",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Name",
+        "id": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Name",
+        "path": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Name",
         "short": "Gibt den Namen der Institution/Organisation an.",
         "definition": "Gibt den Namen der Institution/Organisation an.",
         "min": 1,
@@ -2722,8 +2736,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
+        "id": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
+        "path": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerlaendercode",
         "short": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
         "definition": "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an.",
         "min": 1,
@@ -2741,8 +2755,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
+        "id": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
+        "path": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
         "short": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
         "definition": "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers.",
         "min": 1,
@@ -2760,8 +2774,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WOP",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WOP",
+        "id": "VSDDatensatz.Versicherungsdaten.WOP",
+        "path": "VSDDatensatz.Versicherungsdaten.WOP",
         "short": "Das Kennzeichen WOP ist gemaess § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemaess Artikel 2 § 2 Abs. 2 des Gesetzes zur Einfuehrung des Wohnortprinzips bei Honorarvereinbarungen fuer Aerzte und Zahnaerzte und zur Krankenversichertenkarte gemaess § 291 Abs. 2 Fuenftes Sozialgesetzbuch (SGB V) erforderlich.",
         "definition": "Angaben gemäß Anlage 21 BMV-Ä und EKV.",
         "min": 1,
@@ -2779,8 +2793,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPBesonderePersonengruppe",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPBesonderePersonengruppe",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPBesonderePersonengruppe",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPBesonderePersonengruppe",
         "short": "Definition und Nutzung noch in Absprache - Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
         "definition": "Definition und Nutzung noch in Absprache - Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle.",
         "min": 0,
@@ -2798,8 +2812,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus",
         "short": "Definition und Nutzung noch in Absprache - Gibt den Zuzahlungsstatus des Versicherten an",
         "definition": "Definition und Nutzung noch in Absprache - Gibt den Zuzahlungsstatus des Versicherten an",
         "min": 1,
@@ -2817,8 +2831,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.WIPKostentraegerAngabestatus",
         "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
@@ -2836,8 +2850,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.Status",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.Status",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.Status",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.Status",
         "short": "Gibt an, ob fuer den Versicherten eine Befreiung von der Zuzahlungspflicht nach § 62 SGB V vorliegt.",
         "definition": "1 true = von Zuzahlungspflicht befreit, 0 false = von Zuzahlungspflicht nicht befreit",
         "min": 1,
@@ -2855,8 +2869,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPZuzahlungsstatus.GueltigBis",
         "short": "Gibt die Gueltigkeit der Befreiung von der Zuzahlungspflicht nach § 62 SGB V an.",
         "definition": "Wird nur angegeben, wenn Status Zuzahlung mit 1 = befreit angegeben ist.",
         "min": 0,
@@ -2874,8 +2888,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz",
+        "id": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz",
+        "path": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz",
         "short": "Angaben zum Versicherungsschutz",
         "definition": "Angaben zum Versicherungsschutz",
         "min": 1,
@@ -2893,8 +2907,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Beginn",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.Beginn",
+        "id": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.Beginn",
+        "path": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.Beginn",
         "short": "Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem angegebenen Kostentraeger an.",
         "definition": "Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem angegebenen Kostentraeger an.",
         "min": 1,
@@ -2912,8 +2926,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.WIPEnde",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsschutz.WIPEnde",
+        "id": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.WIPEnde",
+        "path": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.WIPEnde",
         "short": "Gibt das Datum des Endes der Mitgliedschaft des Versicherten bei dem unter Klasse Kostentraeger angegebenen Kostentraeger an oder das Datum des Fristablaufs bei befristeter Gueltigkeit der Karte.",
         "definition": "Gibt das Datum des Endes der Mitgliedschaft des Versicherten bei dem unter Klasse Kostentraeger angegebenen Kostentraeger an oder das Datum des Fristablaufs bei befristeter Gueltigkeit der Karte.",
         "min": 0,
@@ -2931,8 +2945,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPDMP",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPDMP",
         "short": "Definition und Nutzung noch in Absprache - Angaben zur Teilnahme des Versicherten an DMP-Programmen",
         "definition": "Definition und Nutzung noch in Absprache - Angaben zur Teilnahme des Versicherten an DMP-Programmen",
         "min": 0,
@@ -2950,8 +2964,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.WIPKostentraegerAngabestatus",
         "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
@@ -2969,8 +2983,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.DMP",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.DMP",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPDMP.DMP",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.DMP",
         "short": "Gibt den Namen des DMP-Programms an",
         "definition": "Angaben erfolgen gemaess Schlüsseltabelle",
         "min": 1,
@@ -2988,8 +3002,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Beginn",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Beginn",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPDMP.Beginn",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.Beginn",
         "short": "Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.",
         "definition": "Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.",
         "min": 1,
@@ -3007,8 +3021,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Ende",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPDMP.Ende",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPDMP.Ende",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPDMP.Ende",
         "short": "Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an.",
         "definition": "Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an.",
         "min": 0,
@@ -3026,8 +3040,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPdigitalesDMP",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPdigitalesDMP",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPdigitalesDMP",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPdigitalesDMP",
         "short": "Definition und Nutzung noch in Absprache - Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
         "definition": "Definition und Nutzung noch in Absprache - Beinhaltet die Information, ob ein digitales DMP vorhanden ist",
         "min": 0,
@@ -3045,8 +3059,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung",
         "short": "Definition und Nutzung noch in Absprache - Angaben zur Kostenerstattung für verschiedene Sektoren",
         "definition": "Definition und Nutzung noch in Absprache - Angaben zur Kostenerstattung für verschiedene Sektoren",
         "min": 0,
@@ -3064,8 +3078,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.WIPKostentraegerAngabestatus",
         "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
@@ -3083,8 +3097,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.AerztlicheVersorgung",
         "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer die aerztliche Versorgung an.",
         "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
         "min": 1,
@@ -3102,8 +3116,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.ZahnaerztlicheVersorgung",
         "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer zahnaerztliche Versorgung an.",
         "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
         "min": 1,
@@ -3121,8 +3135,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.StationaererBereich",
         "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer den stationaeren Bereich an.",
         "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
         "min": 1,
@@ -3140,8 +3154,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPKostenerstattung.VeranlassteLeistungen",
         "short": "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer veranlasste Leistungen an.",
         "definition": "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung",
         "min": 1,
@@ -3159,8 +3173,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch",
         "short": "Definition und Nutzung noch in Absprache - Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
         "definition": "Definition und Nutzung noch in Absprache - Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt",
         "min": 0,
@@ -3178,8 +3192,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.WIPKostentraegerAngabestatus",
         "short": "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt",
         "definition": "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt",
         "min": 1,
@@ -3197,8 +3211,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Beginn",
         "short": "Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an.",
         "definition": "Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an.",
         "min": 1,
@@ -3216,8 +3230,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.Ende",
         "short": "Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.",
         "definition": "Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.",
         "min": 0,
@@ -3235,8 +3249,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
+        "id": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
+        "path": "VSDDatensatz.Versicherungsdaten.WIPRuhenderLeistungsanspruch.ArtDesRuhens",
         "short": "Gibt die Art des Ruhens an.",
         "definition": "1 = vollständig, 2 = eingeschränkt",
         "min": 1,
@@ -3254,8 +3268,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versichertenart",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versichertenart",
+        "id": "VSDDatensatz.Versicherungsdaten.Versichertenart",
+        "path": "VSDDatensatz.Versicherungsdaten.Versichertenart",
         "short": "Gibt die Art der Versicherung an",
         "definition": "1 = Mitglied, 3 = Familienversicherter, 5 = Rentner und ihre Familienangehörigen",
         "min": 1,
@@ -3273,8 +3287,8 @@
         ]
       },
       {
-        "id": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsart",
-        "path": "gem-vsdm2-log-vsd-confirmation.Versicherungsdaten.Versicherungsart",
+        "id": "VSDDatensatz.Versicherungsdaten.Versicherungsart",
+        "path": "VSDDatensatz.Versicherungsdaten.Versicherungsart",
         "short": "Art der Versicherung: gesetzliche oder private Versicherung",
         "definition": "GKV = gesetzlich versichert, PKV = privat versichert",
         "min": 1,

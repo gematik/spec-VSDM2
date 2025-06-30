@@ -80,12 +80,12 @@
     "endLine": 30
   },
   {
-    "outputFile": "StructureDefinition-gem-vsdm2-log-vsd-confirmation.json",
-    "fshName": "GEM_VSDM2_LOG_VSD_Confirmation",
+    "outputFile": "StructureDefinition-VSDDatensatz.json",
+    "fshName": "VSDDatensatz",
     "fshType": "Logical",
     "fshFile": "logicalmodel/logical_VSD_Datensatz.fsh",
     "startLine": 1,
-    "endLine": 65
+    "endLine": 64
   },
   {
     "outputFile": "StructureDefinition-vsdm-bundle.json",
