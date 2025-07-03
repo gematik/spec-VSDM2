@@ -350,7 +350,13 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.name:Name.family.extension:nachname"
+            "map": "VSDMPatient.name:Name.family",
+            "comment": "Nachname mit Vorsatzwort und Namenszusatz. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
+          },
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.name:Name.family.extension:nachname",
+            "comment": "Nachname ohne Vorsatzwort und Namenszusatz. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
           }
         ]
       },
@@ -418,7 +424,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.name:Name.family.extension:vorsatzwort"
+            "map": "VSDMPatient.name:Name.family.extension:vorsatzwort",
+            "comment": "Vorsatzwort zum Nachnamen. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
           }
         ]
       },
@@ -452,7 +459,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.name:Name.family.extension:namenszusatz"
+            "map": "VSDMPatient.name:Name.family.extension:namenszusatz",
+            "comment": "Zusatz zum Nachnamen. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
           }
         ]
       },
@@ -2080,7 +2088,13 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.name:Name.family.extension:nachname"
+            "map": "VSDMPatient.name:Name.family",
+            "comment": "Nachname mit Vorsatzwort und Namenszusatz. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
+          },
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.name:Name.family.extension:nachname",
+            "comment": "Nachname ohne Vorsatzwort und Namenszusatz. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
           }
         ]
       },
@@ -2118,7 +2132,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.name:Name.family.extension:vorsatzwort"
+            "map": "VSDMPatient.name:Name.family.extension:vorsatzwort",
+            "comment": "Vorsatzwort zum Nachnamen. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
           }
         ]
       },
@@ -2137,7 +2152,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.name:Name.family.extension:namenszusatz"
+            "map": "VSDMPatient.name:Name.family.extension:namenszusatz",
+            "comment": "Zusatz zum Nachnamen. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
           }
         ]
       },

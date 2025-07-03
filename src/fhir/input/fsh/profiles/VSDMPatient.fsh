@@ -18,15 +18,65 @@ Description: "Der VSDMPatient bildet einen Versicherten im Versichertenstammdate
 // Zuordnung aus Versichertendaten -> Versicherter -> VersichertenID
 * identifier[KVNR] 1..1
   * ^short = "Versichertennummer (KVNR)"
-  * ^definition = "Es wird der zehnstellig (unveränderliche) Teil der KVNR verwendet. Zur eindeutigen Identifikation muss genau eine KVNR angegeben werden."
-  * ^comment = "Hinweise zur Verwendung und Beispiele siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-LebenslangeKrankenversichertennummer10-stelligeKVID-Identifier?version=current."
+  * ^definition = """
+      Es wird der zehnstellig (unveränderliche) Teil der KVNR verwendet. 
+      Zur eindeutigen Identifikation muss genau eine KVNR angegeben werden.
+    """
+  * ^comment = """
+      Hinweise zur Verwendung und Beispiele siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-LebenslangeKrankenversichertennummer10-stelligeKVID-Identifier?version=current.
+    """
   * ^requirements = "Die KVNR identifiziert den Versicherten, auf den sich die bereitgestellten Stammdaten beziehen."
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Geburtsdatum
 * birthDate
   * ^short = "Geburtsdatum"
-  * ^definition = "Das Geburtsdatum des Versicherten ist in den VSD eine Pflichtangabe. Partielle Datumsangaben sind allerdings zulässig."
-  * ^comment = "Hinweise insbesondere zur Angabe unvollständiger Datumswerte siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Geburtsdatum."
+  * ^definition = """
+      Das Geburtsdatum des Versicherten ist in den VSD eine Pflichtangabe. 
+      Partielle Datumsangaben sind allerdings zulässig.
+    """
+  * ^comment = """
+      Hinweise insbesondere zur Angabe unvollständiger Datumswerte siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Geburtsdatum.
+    """
+
+// Zuordnung aus Versichertendaten -> Versicherter -> Nachname, Vorsatzwort und Namenszusatz
+* name[Name].family
+  * ^comment = """
+      Hinweise zur Bildung des gesamten Namenamens siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.
+      Verwender müssen mindestens 87 Zeichen verarbeiten können.
+    """
+    // 45 Zeichen Nachname + 20 Zeichen Vorsatzwort + 20 Zeichen Namenszusatz + max. 2 Leerzeichen = 87 Zeichen
+
+// Zuordnung aus Versichertendaten -> Versicherter -> Namenszusatz
+* name[Name].family.extension[namenszusatz]
+  * ^comment = """
+      Hinweise zum Umgang mit dieser Erweiterung siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.
+      Eine Tabelle der gültigen Namenszusätze findet sich in Anlage 7 zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp.
+      Verwender müssen mindestens 20 Zeichen verarbeiten können.
+    """
+
+// Zuordnung aus Versichertendaten -> Versicherter -> Nachname
+* name[Name].family.extension[nachname]
+  * ^short = "Nachname ohne Vorsatzwort und Zusätze"
+  * ^definition = """
+      Diese Erweiterung kann den Nachnamen ohne Vorsatzworte und Zusätze aufnehmen.
+      Wenn weder Vorsatzworte noch Namenszusätze existieren, kann die Erweiterung entfallen.
+    """
+  * ^comment = """
+      Hinweise zum Umgang mit dieser Erweiterung siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.
+      Verwender müssen mindestens 45 Zeichen verarbeiten können.
+    """
+
+// Zuordnung aus Versichertendaten -> Versicherter -> Vorsatzwort
+* name[Name].family.extension[vorsatzwort]
+  * ^short = "Vorsatzwort"
+  * ^definition = """
+      Vorsatzwort zum Nachnamen des Patienten (z.B. \"van\" in \"Ludwig van Beethoven\").
+    """
+  * ^comment = """
+      Hinweise zum Umgang mit dieser Erweiterung siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.
+      Eine Tabelle der gültigen Vorsatzworte findet sich in Anlage 6 zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp.
+      Verwender müssen mindestens 20 Zeichen verarbeiten können.
+    """
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Vorname
 * name[Name].given
@@ -39,9 +89,6 @@ Description: "Der VSDMPatient bildet einen Versicherten im Versichertenstammdate
 // -----
 
 * address only address-de-basis
-
-* name[Name].family.extension[nachname]
-  * ^comment = "Gibt den Nachnamen der Person an"
 
 // TODO: Slicing Testen mit Beipsielinstanz
 * telecom
