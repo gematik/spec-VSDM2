@@ -2,16 +2,14 @@ Mapping: VSDDatensatzFachlichesMappingPatient
 Source: VSDDatensatz
 Target: "VSDMPatient"
 Id: VSD-Datensatz-Fachliches-Mapping-Patient
-Title: "VSD-Datensatz Fachliches Mapping Patient"
-Description: "Mapping des Fachmodells aus GEM_VSDM2_LOG_VSD_Confirmation auf das FHIR-Profil Patient"
+Title: "Mapping VSD-Datensatz zu Patient"
+Description: "Zuordnung der Versichertendaten des VSD-Datensatzes zum FHIR-Profil VSDMPatient"
 
-// Metadaten
-
-
-// Versicherteninformationen
 * Versichertendaten
   * Versicherter
     * VersichertenID -> "VSDMPatient.identifier:KVNR.value"
+      "Die KVNR wird in Übereinstimmung mit dem deutschen Basisprofils kodiert und ist verpflichtend anzugeben."
+
     * Nachname -> "VSDMPatient.name:Name.family.extension:nachname"
     * Vorname -> "VSDMPatient.name:Name.given"
     * Vorsatzwort -> "VSDMPatient.name:Name.family.extension:vorsatzwort"

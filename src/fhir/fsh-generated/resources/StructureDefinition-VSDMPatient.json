@@ -816,9 +816,10 @@
         "id": "Patient.identifier:KVNR",
         "path": "Patient.identifier",
         "sliceName": "KVNR",
-        "short": "An identifier for this patient",
-        "definition": "An identifier for this patient.",
-        "requirements": "Patients are almost always assigned specific numerical identifiers.",
+        "short": "Versichertennummer (KVNR)",
+        "definition": "Es wird der zehnstellig (unveränderliche) Teil der KVNR verwendet. Zur eindeutigen Identifikation muss genau eine KVNR angegeben werden.",
+        "comment": "Hinweise zur Verwendung und Beispiele siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-LebenslangeKrankenversichertennummer10-stelligeKVID-Identifier?version=current.",
+        "requirements": "Die KVNR identifiziert den Versicherten, auf den sich die bereitgestellten Stammdaten beziehen.",
         "min": 1,
         "max": "1",
         "base": {
@@ -4866,6 +4867,10 @@
         "id": "Patient.identifier:KVNR",
         "path": "Patient.identifier",
         "sliceName": "KVNR",
+        "short": "Versichertennummer (KVNR)",
+        "definition": "Es wird der zehnstellig (unveränderliche) Teil der KVNR verwendet. Zur eindeutigen Identifikation muss genau eine KVNR angegeben werden.",
+        "comment": "Hinweise zur Verwendung und Beispiele siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-LebenslangeKrankenversichertennummer10-stelligeKVID-Identifier?version=current.",
+        "requirements": "Die KVNR identifiziert den Versicherten, auf den sich die bereitgestellten Stammdaten beziehen.",
         "min": 1
       },
       {
