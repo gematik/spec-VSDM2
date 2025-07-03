@@ -1,65 +1,309 @@
-Logical: GEM_VSDM2_LOG_VSD_Confirmation
-Parent: Element
-Id: gem-vsdm2-log-vsd-confirmation
-Title: "Logical Model VSD-Datensatz für VSDM 2.0"
-Description: "Fachliches Modell zur Beschreibung des VSD-Datensatzes"
+Logical: VSDDatensatz
+Title: "Logisches Modell VSD-Datensatz für VSDM 2.0"
+Description: """
+  Fachliches Modell zur Beschreibung des VSD-Datensatzes.
+  Dieses Modell setzt die Original-Angaben der BMV-Ä unverändert um. Es dient als Ausgangspunkt für die Mappings und ConceptSets, die die Abbildung auf FHIR-Ressourcen vornehmen.
+  Die Modell-Elemente sind exakt in der Reihenfolge der Ausgangsvereinbarung aufgeführt. Hinweise zum Datenformat wurden in den Langtext der Beschreibung übertragen; der Kurztext wurde zur besseren Lesbarkeit angepasst.
+  Hinweise aus dem Originaldatensatz: 
+    * TI-Messenger ID: Wird nicht aufgenommen, da keine rechtliche Grundlage existiert.
+    * Wahltarife: aktuell keine Abbildung im VSDM 2.0, aber BMV-Ä verständigen sich hierzu im Rahmen weiterer Beratungen (ggf. Protokollnotiz).
+"""
+
 * Versichertendaten 1..1 BackboneElement "Versichertendaten"
-  * VersichertenID 1..1 Identifier "KVNR" "Die Versicherten-ID ist der 10-stellige unveraenderliche Teil der 30-stelligen Krankenversichertennummer"
-  * Versicherter 0..1 BackboneElement "Angaben zum Versicherten" "Angaben zum Versicherten"
-    * Nachname 1..1 string "Gibt den Nachnamen des Versicherten an"
-    * Vorname 1..1 string "Gibt den Vornamen der Person an." "Alle Vornamen der Person (max. 5) werden eingegeben. Mehrere Vornamen werden durch Leerzeichen oder Bindestrich getrennt."
-    * Vorsatzwort 0..1 string "Gibt die Vorsatzwoerter der Person an." "Mehrere Vorsatzwörter werden durch Leerzeichen getrennt angegeben. Anlage 6 (Tabelle der gültigen Vorsatzworte) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp"
-    * Namenszusatz 0..1 string "Gibt die Namenszusaetze der Person an, z. B.: Freiherr" "Anlage 7 (Tabelle der gültigen Namenszusätze) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp"
-    * Titel 0..1 string "Gibt die akademischen Grade der Person an." "Mehrere Titel werden durch Leerzeichen getrennt angegeben."
-    * Geburtsdatum 1..1 date "Gibt das Geburtsdatum des Versicherten an" "Das Geburtsjahr MUSS immer gefuellt werden. Bei Inlaendern ist immer ein logisch richtiges Geburtsdatum anzugeben. Bei Auslaendern gilt folgendes: Zumindest das Geburtsjahr ist immer anzugeben. Im Geburtstag oder im Geburtstag und im Geburtsmonat ist bei Ausländern „00“ bzw. „0000“ zulässig, wenn der Geburtstag und der Geburtsmonat nicht zu ermitteln sind. Das Geburtsdatum muss komplett gefüllt sein. Beispiel: 1990-00-00"
-    * Geschlecht 1..1 string "Gibt das Geschlecht des Versicherten an" "M = maennlich, W = weiblich, X = unbestimmt, D = divers"
-    * StrassenAdresse 0..1 BackboneElement "Gibt die Strassenadresse des Versicherten an"
-      * Strasse 0..1 string "Gibt den Namen der Strasse an" "Wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen."
-      * Hausnummer 0..1 string "Gibt die Hausnummer in der Strasse der Person an." "Wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen."
-      * Postleitzahl 0..1 string "Gibt die Postleitzahl der Strassen- oder Postfachadresse an." "Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. In Verbindung mit dem Wohnsitzländercode D für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet."
-      * Ort 1..1 string "Gibt den Ort zur Strassen- und oder Postfachadresse an." "Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein. Abweichung zur Festlegung in DEÜV (Feldlänge = 34)"
-      * Anschriftenzusatz 0..1 string "ibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. „Hinterhaus“ angegeben werden."
-      * Wohnsitzlaendercode 1..1 string "Gibt das Land zu der Strassen- und oder Postfachadresse an." "Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzlaendercode zu beiden Adressdaten vorhanden sein."
-    * PostfachAdresse 0..1 BackboneElement "Gibt die Postfachadresse des Versicherten an"
-      * Postfach 1..1 string "Gibt das Postfach des Versicherten an"
-      * Postleitzahl 0..1 string "Gibt die Postleitzahl der Strassen- oder Postfachadresse an." "Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. In Verbindung mit dem Wohnsitzländercode D für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet."
-      * Ort 1..1 string "Gibt den Ort zur Strassen- und oder Postfachadresse an." "Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein. Abweichung zur Festlegung in DEÜV (Feldlänge = 34)"
-      * Wohnsitzlaendercode 1..1 string "Gibt das Land zu der Strassen- und oder Postfachadresse an." "Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzlaendercode zu beiden Adressdaten vorhanden sein."
-    * WIPTIMessengerID 0..1 string "Definition und Nutzung noch in Absprache - Eindeutige Identifikation einen TI-Messenger-Nutzers." "Die jeweils vollständige MXID der/des Versicherten soll dem LE zur Kommunikation mit der/dem Versicherten im Rahmen des Abrufs der VSD zur Verfügung gestellt werden können. Wenn sich der Versicherte für den TI Messenger-Dienst  registriert hat, MUSS es übertragen werden."
+
+  * Versicherter 1..1 BackboneElement "Angaben zum Versicherten" 
+    * VersichertenID 1..1 Identifier "Versicherten-ID (KVNR)" """
+        Die Versicherten-ID ist der 10-stellige unveraäderliche Teil der 30-stelligen Krankenversichertennummer.
+        Länge: 10
+        Typ: AN
+      """
+    * Geburtsdatum 1..1 date "Geburtsdatum des Versicherten" """
+        Gibt das Geburtsdatum der Person an.
+        Hinweis: Das Geburtsjahr MUSS immer gefüllt werden. Bei Inländern ist immer ein logisch richtiges Geburtsdatum anzugeben. 
+        Bei Ausländern gilt folgendes: Zumindest das Geburtsjahr ist immer anzugeben. Im Geburtstag oder im Geburtstag und im Geburtsmonat ist bei Ausländern „00“ bzw. „0000“ zulässig, wenn der Geburtstag und der Geburtsmonat nicht zu ermitteln sind. 
+        Typ: AN
+      """
+      // Typ AN ist hier auf den ersten Blick unerwartet, hängt aber vielleicht mit der Definition von ISO8601Date zusammen.
+    * Vorname 1..1 string "Vorname des Versicherten" """
+        Gibt den Vornamen der Person an.
+        Alle Vornamen der Person (max. 5) werden eingegeben. Mehrere Vornamen werden durch Leerzeichen oder Bindestrich getrennt.
+        Länge: 45
+        Typ: AN
+      """
+    * Nachname 1..1 string "Nachname des Versicherten" """
+        Gibt den Nachnamen der Person an.
+        Länge: 45
+        Typ: AN
+      """
+    * Geschlecht 1..1 string "Geschlecht des Versicherten" """
+        Gibt das Geschlecht der Person an. Wertetabelle M,W,D,X
+        Länge: 1
+        Typ: AN
+      """
+    * Vorsatzwort 0..1 string "Vorsatzwörter des Namens des Versicherten" """
+        Gibt die Vorsatzwörter der Person an.
+        Mehrere Vorsatzwörter werden durch Leerzeichen getrennt angegeben.
+        Anlage 6 (Tabelle der gültigen Vorsatzworte) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp
+        Länge: 20
+        Typ: AN
+      """
+    * Namenszusatz 0..1 string "Namenszusätze des Versicherten" """
+        Gibt die Namenszusätze der Person an, z. B.: Freiherr
+        Mehrere Namenzusätze werden durch Leerzeichen getrennt angegeben.
+        Anlage 7 (Tabelle der gültigen Namenszusätze) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp
+        Länge: 20
+        Typ: AN
+      """
+    * Titel 0..1 string "Akademische Titel des Versicherten" """
+        Gibt die akademischen Grade der Person an.
+        Mehrere Titel werden durch Leerzeichen getrennt angegeben.
+        Länge: 20
+        Typ: AN
+      """
+
+    * PostfachAdresse 0..1 BackboneElement "Postfachadresse des Versicherten"
+      * Postleitzahl 1..1 string "Postleitzahl der Postfachadresse" """
+          Gibt die Postleitzahl der Strassen- oder Postfachadresse an. Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. 
+          In Verbindung mit dem Wohnsitzländercode ""D"" für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. 
+          Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. 
+          Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.
+          Länge: 10
+          Typ: AN
+        """
+      * Ort 1..1 string "Ort der Postfachadresse" """
+          Gibt den Ort zur Strassen- und oder Postfachadresse an. 
+          Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein.
+          Abweichung zur Festlegung in DEÜV (Feldlänge = 34)
+          Länge: 40
+          Typ: AN
+        """
+      * Postfach 1..1 string "Postfach des Versicherten" """
+          Gibt das Postfach der Person an.
+          Länge: 8
+          Typ: AN
+        """
+      * Wohnsitzlaendercode 1..1 string "Land der Postfachadresse" """
+          Gibt das Land zu der Strassen- und oder Postfachadresse an. 
+          Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzländercode zu beiden Adressdaten vorhanden sein.
+          Anlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp
+          Länge: 3
+          Typ: AN
+        """
+
+    * StrassenAdresse 0..1 BackboneElement "Strassenadresse des Versicherten"
+      * Postleitzahl 0..1 string "Postleitzahl der Strassenadresse" """
+          Gibt die Postleitzahl der Strassen- oder Postfachadresse an. Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. In Verbindung mit dem Wohnsitzländercode ""D"" für Deutschland MUSS die
+          Postleitzahl 5-stellig numerisch sein. Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.
+          Länge: 10
+          Typ: AN
+        """
+      * Ort 1..1 string "Ort der Strassenadresse" """
+          Gibt den Ort zur Strassen- und oder Postfachadresse an. 
+          Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein.
+          Abweichung zur Festlegung in DEÜV (Feldlänge = 34)
+          Länge: 40
+          Typ: AN
+        """
+      * Wohnsitzlaendercode 1..1 string "Land der Strassenadresse" """
+          Gibt das Land zu der Strassen- und oder Postfachadresse an. 
+          Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzländercode zu beiden Adressdaten vorhanden sein.
+          Anlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp
+          Länge: 3
+          Typ: AN
+        """
+      * Strasse 0..1 string "Name der Strasse" """
+          Gibt den Namen der Strasse an.
+          Wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.
+          Anlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp 
+          Länge: 46
+          Typ: AN
+        """
+      * Hausnummer 0..1 string "Hausnummer der Strassenadresse" """
+          Gibt die Hausnummer in der Strasse der Person an.
+          Pflichtangabe soweit bekannt, wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen. 
+          Anlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp 
+          Länge: 9
+          Typ: AN
+        """
+      * Anschriftenzusatz 0..1 string "Relevante Zusätze zur Anschrift" """
+          Gibt die relevanten Zusätze zur Anschrift an.
+          Als Anschriftenzusatz kann z. B. „Hinterhaus“ angegeben werden.
+          Länge: 40
+          Typ: AN
+        """
+
 * Versicherungsdaten 1..1 BackboneElement "Angaben zum Versicherungsverhältnis"
   * Kostentraeger 1..1 BackboneElement "Angaben zum Kostenträger"
-    * Name 1..1 string "Gibt den Namen der Institution/Organisation an."
-    * Kostentraegerlaendercode 1..1 string "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an."
-    * Kostentraegerkennung 1..1 string "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers."
+    * Name 1..1 string "Name des Kostenträgers" """
+        Gibt den Namen der Institution/Organisation an.
+        Länge: 45
+        Typ: AN
+      """
+    * Kostentraegerlaendercode 1..1 string "Kostenträgerländercode" """
+        Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an.
+        Länge: 3
+        Typ: AN
+      """
+    * Kostentraegerkennung 1..1 string "Kostenträgerkennung (Institutionskennzeichen)" """
+        Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an.
+        Anlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp
+        Länge: 9
+        Typ: AN
+      """
+      // TODO Zelle D26: Hinweis auf Anlage 8 gehört vermutlich eine Zeile höher, also zum Kostenträgerländercode? Hinweis auf IK (wie in Zelle D29) fehlt.
   * AbrechnenderKostentraeger 0..1 BackboneElement "Angaben zum abrechnenden Kostenträger"
-    * Name 1..1 string "Gibt den Namen der Institution/Organisation an."
-    * Kostentraegerlaendercode 1..1 string "Gibt den Kostentraegerlaendercode vom Kostentraeger des Versicherten an."
-    * Kostentraegerkennung 1..1 string "Gibt den Kostentraeger des Versicherten an. Es handelt sich um das bundesweit gueltige Institutionskennzeichen (IK) des jeweiligen Kostentraegers."
-  * WOP 1..1 string "Das Kennzeichen WOP ist gemaess § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemaess Artikel 2 § 2 Abs. 2 des Gesetzes zur Einfuehrung des Wohnortprinzips bei Honorarvereinbarungen fuer Aerzte und Zahnaerzte und zur Krankenversichertenkarte gemaess § 291 Abs. 2 Fuenftes Sozialgesetzbuch (SGB V) erforderlich." "Angaben gemäß Anlage 21 BMV-Ä und EKV."
-  * WIPBesonderePersonengruppe 0..1 string "Definition und Nutzung noch in Absprache - Gibt die Zugehoerigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemaess der Schluesseltabelle."
-  * WIPZuzahlungsstatus 1..1 BackboneElement "Definition und Nutzung noch in Absprache - Gibt den Zuzahlungsstatus des Versicherten an"
-    * WIPKostentraegerAngabestatus 1..1 boolean "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt" "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt"
-    * Status 1..1 boolean "Gibt an, ob fuer den Versicherten eine Befreiung von der Zuzahlungspflicht nach § 62 SGB V vorliegt." "1 true = von Zuzahlungspflicht befreit, 0 false = von Zuzahlungspflicht nicht befreit"
-    * GueltigBis 0..1 date "Gibt die Gueltigkeit der Befreiung von der Zuzahlungspflicht nach § 62 SGB V an." "Wird nur angegeben, wenn Status Zuzahlung mit 1 = befreit angegeben ist."
-  * Versicherungsschutz 1..1 BackboneElement "Angaben zum Versicherungsschutz"
-    * Beginn 1..1 date "Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem angegebenen Kostentraeger an."
-    * WIPEnde 0..1 date "Gibt das Datum des Endes der Mitgliedschaft des Versicherten bei dem unter Klasse Kostentraeger angegebenen Kostentraeger an oder das Datum des Fristablaufs bei befristeter Gueltigkeit der Karte."
-  * WIPDMP 0..* BackboneElement "Definition und Nutzung noch in Absprache - Angaben zur Teilnahme des Versicherten an DMP-Programmen"
-    * WIPKostentraegerAngabestatus 1..1 boolean "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt" "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt"
-    * DMP 1..1 string "Gibt den Namen des DMP-Programms an" "Angaben erfolgen gemaess Schlüsseltabelle"
-    * Beginn 1..1 date "Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an."
-    * Ende 0..1 date "Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an."
-  * WIPdigitalesDMP 0..* string "Definition und Nutzung noch in Absprache - Beinhaltet die Information, ob ein digitales DMP vorhanden ist"
-  * WIPKostenerstattung 0..1 BackboneElement "Definition und Nutzung noch in Absprache - Angaben zur Kostenerstattung für verschiedene Sektoren"
-    * WIPKostentraegerAngabestatus 1..1 boolean "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt" "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt"
-    * AerztlicheVersorgung 1..1 boolean "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer die aerztliche Versorgung an." "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung"
-    * ZahnaerztlicheVersorgung 1..1 boolean "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer zahnaerztliche Versorgung an." "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung"
-    * StationaererBereich 1..1 boolean "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer den stationaeren Bereich an." "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung"
-    * VeranlassteLeistungen 1..1 boolean "Gibt die vom Versicherten gewaehlte Kostenerstattung fuer veranlasste Leistungen an." "1 (true) = Kostenerstattung, 0 (false) = keine Kostenerstattung"
-  * WIPRuhenderLeistungsanspruch 0..1 BackboneElement "Definition und Nutzung noch in Absprache - Gibt an, ob für den Versicherten ein ruhender Leistungsanspruch vorliegt"
-    * WIPKostentraegerAngabestatus 1..1 boolean "Definition und Nutzung noch in Absprache - Gibt an, ob der Kostenträger die Informationen zum Versicherten angibt" "1 (true) = Informationen werden durch den Kostenträger bereitgestellt, 0 (false) = Informationen werden durch den Kostenträger nicht bereitgestellt"
-    * Beginn 1..1 date "Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an."
-    * Ende 0..1 date "Gibt das Ende-Datum des ruhenden Leistungsanspruchs an."
-    * ArtDesRuhens 1..1 string "Gibt die Art des Ruhens an." "1 = vollständig, 2 = eingeschränkt"
-  * Versichertenart 1..1 string "Gibt die Art der Versicherung an" "1 = Mitglied, 3 = Familienversicherter, 5 = Rentner und ihre Familienangehörigen"
-  * Versicherungsart 1..1 string "Art der Versicherung: gesetzliche oder private Versicherung" "GKV = gesetzlich versichert, PKV = privat versichert"
+    * Name 1..1 string "Name des Kostenträgers" """
+        Gibt den Namen der Institution/Organisation an.
+        Länge: 45
+        Typ: AN
+      """
+    * Kostentraegerlaendercode 1..1 string "Kostenträgerländercode" """
+        Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an.
+        Anlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp
+        Länge: 3
+        Typ: AN
+      """
+    * Kostentraegerkennung 1..1 string "Kostenträgerkennung (Institutionskennzeichen)" """
+        Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an. Es handelt sich um das bundesweit gültige Institutionskennzeichen (IK) des jeweiligen Kostenträgers.
+        Länge: 9
+        Typ: AN
+      """
+  * WOP 1..1 string "Kennzeichen Wohnortprinzip" """
+      Das Kennzeichen WOP ist gemäss § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemäss Artikel 2 § 2 Abs. 2 des Gesetzes zur Einführung des Wohnortprinzips bei Honorarvereinbarungen für Ärzte und Zahnärzte und zur Krankenversichertenkarte gemäss § 291 Abs. 2 Fünftes Sozialgesetzbuch (SGB V) erforderlich.
+      01 = Schleswig-Holstein
+      02 = Hamburg
+      03 = Bremen
+      17 = Niedersachsen
+      20 = Westfalen-Lippe
+      38 = Nordrhein
+      46 = Hessen
+      51 = Rheinland-Pfalz
+      52 = Baden-Württemberg
+      71 = Bayerns
+      72 = Berlin
+      73 = Saarland
+      78 = Mecklenburg-Vorpommern
+      83 = Brandenburg
+      88 = Sachsen-Anhalt
+      93 = Thüringen
+      98 = Sachsen
+      Gemäß Anlage 21 BMV-Ä und EKV.
+      Länge: 2
+      Typ: AN
+    """
+  * BesonderePersonengruppe 0..1 string "Zuordnung besondere Personengruppe" """
+      Gibt die Zugehörigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.
+      4 = BSHG (Bundessozialhilfegesetz) § 264 SGB V, 
+      6 = SER (Soziales Entschädigungsrecht), 
+      7 = SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht: - Personen mit Wohnsitz im Inland, Abrechnung nach Aufwand, 
+      8 = SVA-Kennzeichnung, pauschal,
+      9 = Empfänger von Gesundheitsleistungen nach §§ 4 und 6 des Asylbewerberleistungsgesetzes (AsylbLG)
+      Länge: 2
+      Typ: N
+    """
+  * Zuzahlungsstatus 0..1 BackboneElement "Zuzahlungsstatus des Versicherten"
+    * Status 1..1 boolean "Versicherter von Zuzahlungspflicht befreit" """
+        Gibt an, ob für den Versicherten eine Befreiung von der Zuzahlungspflicht nach § 62 SGB V vorliegt.	
+        1 = von Zuzahlungspflicht befreit
+        Länge: 1
+        Typ: offen
+      """
+      // TODO Zelle C32: Typ "offen"
+    * GueltigBis 1..1 date "Gültigkeit des Zuzahlungsstatus" """
+	      Gibt die Gültigkeit der Befreiung von der Zuzahlungspflicht nach § 62 SGB V an.	Wird nur angegeben, wenn Zuzahlungsstatus mit 1 (= befreit) angegeben ist.
+        Typ: ISO8601Date
+      """
+  * Versicherungsschutz 1..1 BackboneElement "Versicherungsschutz des Versicherten"
+    * Beginn 1..1 date "Beginn des Versicherungsschutzes" """
+        Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem unter Klasse Kostenträger angegebenen Kostenträger an. 
+        Typ: ISO8601Date
+      """
+    * Ende 0..1 date "Ende des Versicherungsschutzes" """
+        Das Ende ist bei befristeter Gültigkeit der elektronischen Gesundheitskarte das Datum des Fristablaufs.
+        Typ: ISO8601Date
+      """
+      // TODO Zelle D36: Das Gültigkeitsende der eGK lisgt nicht in allen Fällen vor (eID!) und könnte ohnehin nicht ausgegeben werden, weil kein Kartenbezug vorliegt.
+  * DMP 0..* BackboneElement "Angaben zur Teilnahme des Versicherten an Disease Management-Programmen"
+    * DMP 1..1 string "Name des DMP-Programms" """
+        Gibt den Namen des DMP an; die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.
+        1 = Diabetes mellitus Typ 2 
+        2 = Brustkrebs 
+        3 = Koronare Herzkrankheit
+        4 = Diabetes mellitus Typ 1 
+        5 = Asthma bronchiale 
+        6 = COPD (chronic obstructive pulmonary disease)
+        7 = Chronische Herzinsuffizienz
+        8 = Depression
+        9 = Rückenschmerz
+        10 = Rheuma
+        11 = Osteoporose
+        12 = Adipositas - Erwachsene
+        Länge: zu def.
+        Typ: zu def.
+      """
+      // TODO Zeile C37: Typ und Länge noch "zu def."
+    * Beginn 1..1 date "Beginn der Einschreibung" """
+        Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.
+        Typ: ISO8601Date
+      """
+    * Ende 0..1 date "Ende der Einschreibung" """
+        Gibt das Datum des Endes der Einschreibung des Versicherten in ein DMP-Programm an.
+        Typ: ISO8601Date
+      """
+    * digitalesDMP 1..1 boolean "Kennzeichen digitales DMP" """
+        Beinhaltet die Information, ob das DMP als digitales DMP durchgeführt wird; Information kann je DMP bereitgestellt werden
+        Länge: 1
+        Typ: Bool
+      """
+  * Kostenerstattung 0..1 BackboneElement "Angaben zur Kostenerstattung"
+    * AerztlicheVersorgung 1..1 boolean "Ärztliche Versorgung" """
+        Gibt die vom Versicherten gewählte Kostenerstattung für die ärztliche Versorgung an.
+        1 (true) = Kostenerstattung
+        0 (false) = keine Kostenerstattung
+        Länge: 1
+        Typ: B
+      """
+    * ZahnaerztlicheVersorgung 1..1 boolean "Zahnärztliche Versorgung" """
+        Gibt die vom Versicherten gewählte Kostenerstattung für zahnärztliche Versorgung an.
+        1 (true) = Kostenerstattung
+        0 (false) = keine Kostenerstattung
+        Länge: 1
+        Typ: B
+      """
+    * StationaererBereich 1..1 boolean "Stationärer Bereich" """
+        Gibt die vom Versicherten gewählte Kostenerstattung für den stationären Bereich an.
+        1 (true) = Kostenerstattung
+        0 (false) = keine Kostenerstattung
+        Länge: 1
+        Typ: B
+      """
+    * VeranlassteLeistungen 1..1 boolean "Veranlasste Leistungen" """
+        Gibt die vom Versicherten gewählte Kostenerstattung für veranlasste Leistungen an.
+        1 (true) = Kostenerstattung
+        0 (false) = keine Kostenerstattung
+        Länge: 1
+        Typ: B
+      """
+  * RuhenderLeistungsanspruch 0..1 BackboneElement "Ruhender Leistungsanspruch"
+    * Beginn 1..1 date "Beginn des ruhenden Leistungsanspruchs" """
+        Gibt das Beginn-Datum des ruhenden Leistungsanspruchs an.
+        Typ: ISO8601Date
+      """
+    * Ende 0..1 date "Ende des ruhenden Leistungsanspruchs" """
+        Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.
+        Typ: ISO8601Date
+      """
+    * Art 1..1 string "Art des Ruhens" """
+        Gibt die Art des Ruhens an.
+        1 = vollständig
+        2 = eingeschränkt
+        Länge: 1
+        Typ: N
+      """
+  * Versichertenart 1..1 string "Art der Versicherung" """
+      1 = Mitglied
+      3 = Familienversicherter
+      5 = Rentner und ihre Familienangehörigen 
+      Länge: 1
+      Typ: AN
+    """

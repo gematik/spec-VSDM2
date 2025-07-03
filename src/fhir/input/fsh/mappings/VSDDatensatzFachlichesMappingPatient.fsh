@@ -1,5 +1,5 @@
 Mapping: VSDDatensatzFachlichesMappingPatient
-Source: GEM_VSDM2_LOG_VSD_Confirmation
+Source: VSDDatensatz
 Target: "VSDMPatient"
 Id: VSD-Datensatz-Fachliches-Mapping-Patient
 Title: "VSD-Datensatz Fachliches Mapping Patient"
@@ -10,8 +10,8 @@ Description: "Mapping des Fachmodells aus GEM_VSDM2_LOG_VSD_Confirmation auf das
 
 // Versicherteninformationen
 * Versichertendaten
-  * VersichertenID -> "VSDMPatient.identifier:KVNR.value"
   * Versicherter
+    * VersichertenID -> "VSDMPatient.identifier:KVNR.value"
     * Nachname -> "VSDMPatient.name:Name.family.extension:nachname"
     * Vorname -> "VSDMPatient.name:Name.given"
     * Vorsatzwort -> "VSDMPatient.name:Name.family.extension:vorsatzwort"
@@ -31,4 +31,3 @@ Description: "Mapping des Fachmodells aus GEM_VSDM2_LOG_VSD_Confirmation auf das
       * Postleitzahl -> "VSDMPatient.address.postalCode"
       * Ort -> "VSDMPatient.address.city"
       * Wohnsitzlaendercode -> "VSDMPatient.Address.country"
-    * WIPTIMessengerID -> "VSDMPatient.telecom:ti-messenger"
