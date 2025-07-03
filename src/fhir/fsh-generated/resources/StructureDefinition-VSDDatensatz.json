@@ -16,9 +16,9 @@
     },
     {
       "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-      "name": "VSD-Datensatz Fachliches Mapping Patient",
+      "name": "Mapping VSD-Datensatz zu Patient",
       "uri": "VSDMPatient",
-      "comment": "Mapping des Fachmodells aus GEM_VSDM2_LOG_VSD_Confirmation auf das FHIR-Profil Patient"
+      "comment": "Zuordnung der Versichertendaten des VSD-Datensatzes zum FHIR-Profil VSDMPatient"
     },
     {
       "identity": "rim",
@@ -245,7 +245,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.identifier:KVNR.value"
+            "map": "VSDMPatient.identifier:KVNR.value",
+            "comment": "Die KVNR wird in Übereinstimmung mit dem deutschen Basisprofils kodiert und ist verpflichtend anzugeben."
           }
         ]
       },
@@ -279,7 +280,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.birthDate"
+            "map": "VSDMPatient.birthDate",
+            "comment": "Die Angabe des partiellen Geburtsdatums wird vom FHIR-nativen Datentyp date bereits unterstützt."
           }
         ]
       },
@@ -2017,7 +2019,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.identifier:KVNR.value"
+            "map": "VSDMPatient.identifier:KVNR.value",
+            "comment": "Die KVNR wird in Übereinstimmung mit dem deutschen Basisprofils kodiert und ist verpflichtend anzugeben."
           }
         ]
       },
@@ -2036,7 +2039,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.birthDate"
+            "map": "VSDMPatient.birthDate",
+            "comment": "Die Angabe des partiellen Geburtsdatums wird vom FHIR-nativen Datentyp date bereits unterstützt."
           }
         ]
       },

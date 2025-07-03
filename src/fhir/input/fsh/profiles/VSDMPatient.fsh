@@ -22,6 +22,14 @@ Description: "Der VSDMPatient bildet einen Versicherten im Versichertenstammdate
   * ^comment = "Hinweise zur Verwendung und Beispiele siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-LebenslangeKrankenversichertennummer10-stelligeKVID-Identifier?version=current."
   * ^requirements = "Die KVNR identifiziert den Versicherten, auf den sich die bereitgestellten Stammdaten beziehen."
 
+// Zuordnung aus Versichertendaten -> Versicherter -> Geburtsdatum
+* birthDate
+  * ^short = "Geburtsdatum"
+  * ^definition = "Das Geburtsdatum des Versicherten ist in den VSD eine Pflichtangabe. Partielle Datumsangaben sind allerdings zulässig."
+  * ^comment = "Hinweise insbesondere zur Angabe unvollständiger Datumswerte siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Geburtsdatum."
+
+// -----
+
 * address only address-de-basis
 
 * name[Name].family.extension[nachname]
