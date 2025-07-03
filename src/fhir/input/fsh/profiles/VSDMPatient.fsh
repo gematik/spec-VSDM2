@@ -1,6 +1,16 @@
 Profile: VSDMPatient
 Parent: TIPatient
+Title: "Versicherter im VSDM"
+Description: "Der VSDMPatient bildet einen Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0 ab."
+
+// Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen. Ausnahme: 
+
+// Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
+* . 
+  * ^short = "Versicherter im VSDM"
+  * ^definition = "Der VSDMPatient bildet einen Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0 ab."
+
 * meta 1..1
 * meta.profile 1..1
 * meta.profile = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient" (exactly)

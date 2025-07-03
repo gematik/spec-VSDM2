@@ -5,6 +5,8 @@ Id: VSD-Datensatz-Fachliches-Mapping-Patient
 Title: "Mapping VSD-Datensatz zu Patient"
 Description: "Zuordnung der Versichertendaten des VSD-Datensatzes zum FHIR-Profil VSDMPatient"
 
+// Die Reihenfolge der Elemente in diesem Mapping folgt der Reihenfolge der Elemente im logischen Modell.
+
 * Versichertendaten
   * Versicherter
     * VersichertenID -> "VSDMPatient.identifier:KVNR.value"
