@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "vsdm-patient",
+  "id": "VSDMPatient",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient",
   "name": "VSDMPatient",
   "status": "draft",

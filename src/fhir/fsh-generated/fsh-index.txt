@@ -4,9 +4,10 @@ CodeSystem-vsdm-versicherungsart-cs.json                    VSDMVersicherungsart
 CodeSystem-vsdm-wahltarife-cs.json                          VSDMWahltarifeCS                 CodeSystem  codesystems/VSDMWahltarifeCS.fsh                 1 - 13
 CodeSystem-vsdmkostentraeger-angabestatus-cs.json           VSDMKostentraegerAngabestatusCS  CodeSystem  codesystems/VSDMKostentraegerAngabestatusCS.fsh  1 - 14
 OperationOutcome-example-vsdm-operationoutcome.json         ExampleOperationOutcome          Instance    examples/ExampleOperationOutcome.fsh             1 - 15
-Patient-437f2555-2396-4c64-a656-e9553161ca3c.json           VSDMPatientSample                Instance    profiles/VSDMPatient.fsh                         37 - 60
+Patient-437f2555-2396-4c64-a656-e9553161ca3c.json           VSDMPatientSample                Instance    profiles/VSDMPatient.fsh                         35 - 58
 Patient-Valid-437f2555-2396-4c64-a656-e9553161ca3c.json     ValidExampleVSDMPatient          Instance    examples/ExampleVSDMPatient.fsh                  1 - 30
 StructureDefinition-VSDDatensatz.json                       VSDDatensatz                     Logical     logicalmodel/VSDDatensatz.fsh                    1 - 304
+StructureDefinition-VSDMPatient.json                        VSDMPatient                      Profile     profiles/VSDMPatient.fsh                         1 - 25
 StructureDefinition-vsdm-bundle.json                        VSDMBundle                       Profile     profiles/VSDMBundle.fsh                          1 - 31
 StructureDefinition-vsdm-composition.json                   VSDMComposition                  Profile     profiles/VSDMComposition.fsh                     1 - 20
 StructureDefinition-vsdm-contactpoint-timessenger.json      VSDMContactPointTIMessenger      Profile     profiles/VSDMContactPointTIMessenger.fsh         1 - 7
@@ -14,7 +15,6 @@ StructureDefinition-vsdm-dmp-kennzeichen-basis-ex.json      VSDMDMPKennzeichenBa
 StructureDefinition-vsdm-dmpKennzeichen-ex.json             VSDMDMPKennzeichenEX             Extension   extensions/VSDMDMPKennzeichen.fsh                1 - 25
 StructureDefinition-vsdm-kostentraeger-laendercode-ex.json  VSDMKostentraegerLaendercodeEX   Extension   extensions/VSDMKostentraegerLaendercodeEX.fsh    1 - 15
 StructureDefinition-vsdm-operationoutcome.json              VSDMOperationOutcome             Profile     profiles/VSDMOperationOutcome.fsh                1 - 34
-StructureDefinition-vsdm-patient.json                       VSDMPatient                      Profile     profiles/VSDMPatient.fsh                         1 - 27
 StructureDefinition-vsdm-wahltarife-ex.json                 VSDMWahltarifeEX                 Extension   extensions/VSDMWahltarifeEX.fsh                  1 - 36
 StructureDefinition-vsdmkostentraeger-angabestatus-ex.json  VSDMKostentraegerAngabestatusEX  Extension   extensions/VSDMKostentraegerAngabestatusEX.fsh   1 - 11
 ValueSet-vsdm-errorcode-vs.json                             VSDMErrorcodeVS                  ValueSet    valuesets/VSDMErrorcodeVS.fsh                    1 - 8

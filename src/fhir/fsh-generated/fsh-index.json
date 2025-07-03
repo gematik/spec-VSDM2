@@ -44,8 +44,8 @@
     "fshName": "VSDMPatientSample",
     "fshType": "Instance",
     "fshFile": "profiles/VSDMPatient.fsh",
-    "startLine": 37,
-    "endLine": 60
+    "startLine": 35,
+    "endLine": 58
   },
   {
     "outputFile": "Patient-Valid-437f2555-2396-4c64-a656-e9553161ca3c.json",
@@ -62,6 +62,14 @@
     "fshFile": "logicalmodel/VSDDatensatz.fsh",
     "startLine": 1,
     "endLine": 304
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMPatient.json",
+    "fshName": "VSDMPatient",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMPatient.fsh",
+    "startLine": 1,
+    "endLine": 25
   },
   {
     "outputFile": "StructureDefinition-vsdm-bundle.json",
@@ -118,14 +126,6 @@
     "fshFile": "profiles/VSDMOperationOutcome.fsh",
     "startLine": 1,
     "endLine": 34
-  },
-  {
-    "outputFile": "StructureDefinition-vsdm-patient.json",
-    "fshName": "VSDMPatient",
-    "fshType": "Profile",
-    "fshFile": "profiles/VSDMPatient.fsh",
-    "startLine": 1,
-    "endLine": 27
   },
   {
     "outputFile": "StructureDefinition-vsdm-wahltarife-ex.json",

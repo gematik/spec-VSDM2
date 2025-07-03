@@ -1,7 +1,5 @@
 Profile: VSDMPatient
 Parent: TIPatient
-Id: vsdm-patient
-* ^url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
 * insert Meta
 * meta 1..1
 * meta.profile 1..1
