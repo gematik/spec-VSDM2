@@ -315,7 +315,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.name:Name.given"
+            "map": "VSDMPatient.name:Name.given",
+            "comment": "FHIR lässt die Angabe mehrerer Vornamen in wiederholten Elementen zu. Davon wird hier kein Gebrauch gemacht."
           }
         ]
       },
@@ -2059,7 +2060,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.name:Name.given"
+            "map": "VSDMPatient.name:Name.given",
+            "comment": "FHIR lässt die Angabe mehrerer Vornamen in wiederholten Elementen zu. Davon wird hier kein Gebrauch gemacht."
           }
         ]
       },

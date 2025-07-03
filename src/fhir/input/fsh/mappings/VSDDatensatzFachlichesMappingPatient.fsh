@@ -15,8 +15,10 @@ Description: "Zuordnung der Versichertendaten des VSD-Datensatzes zum FHIR-Profi
     * Geburtsdatum -> "VSDMPatient.birthDate"
       "Die Angabe des partiellen Geburtsdatums wird vom FHIR-nativen Datentyp date bereits unterstützt."
 
-    * Nachname -> "VSDMPatient.name:Name.family.extension:nachname"
     * Vorname -> "VSDMPatient.name:Name.given"
+      "FHIR lässt die Angabe mehrerer Vornamen in wiederholten Elementen zu. Davon wird hier kein Gebrauch gemacht."
+
+    * Nachname -> "VSDMPatient.name:Name.family.extension:nachname"
     * Vorsatzwort -> "VSDMPatient.name:Name.family.extension:vorsatzwort"
     * Namenszusatz -> "VSDMPatient.name:Name.family.extension:namenszusatz"
     * Titel -> "VSDMPatient.name:Name.prefix.extension:prefix-qualifier"
