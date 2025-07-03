@@ -3353,9 +3353,9 @@
       {
         "id": "Patient.birthDate",
         "path": "Patient.birthDate",
-        "short": "The date of birth for the individual",
-        "definition": "The date of birth for the individual.",
-        "comment": "At least an estimated year should be provided as a guess if the real DOB is unknown  There is a standard extension \"patient-birthTime\" available that should be used where Time is required (such as in maternity/infant care systems).",
+        "short": "Geburtsdatum",
+        "definition": "Das Geburtsdatum des Versicherten ist in den VSD eine Pflichtangabe. Partielle Datumsangaben sind allerdings zulässig.",
+        "comment": "Hinweise insbesondere zur Angabe unvollständiger Datumswerte siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Geburtsdatum.",
         "requirements": "Age of the individual drives many clinical processes.",
         "min": 1,
         "max": "1",
@@ -4923,6 +4923,13 @@
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "Patient.birthDate",
+        "path": "Patient.birthDate",
+        "short": "Geburtsdatum",
+        "definition": "Das Geburtsdatum des Versicherten ist in den VSD eine Pflichtangabe. Partielle Datumsangaben sind allerdings zulässig.",
+        "comment": "Hinweise insbesondere zur Angabe unvollständiger Datumswerte siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Geburtsdatum."
       },
       {
         "id": "Patient.address",
