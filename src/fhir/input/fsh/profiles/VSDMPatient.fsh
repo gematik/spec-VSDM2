@@ -5,7 +5,12 @@ Parent: TIPatient
 * meta.profile 1..1
 * meta.profile = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient" (exactly)
 
+// Zuordnung aus Versichertendaten -> Versicherter -> VersichertenID
 * identifier[KVNR] 1..1
+  * ^short = "Versichertennummer (KVNR)"
+  * ^definition = "Es wird der zehnstellig (unveränderliche) Teil der KVNR verwendet. Zur eindeutigen Identifikation muss genau eine KVNR angegeben werden."
+  * ^comment = "Hinweise zur Verwendung und Beispiele siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-LebenslangeKrankenversichertennummer10-stelligeKVID-Identifier?version=current."
+  * ^requirements = "Die KVNR identifiziert den Versicherten, auf den sich die bereitgestellten Stammdaten beziehen."
 
 * address only address-de-basis
 
