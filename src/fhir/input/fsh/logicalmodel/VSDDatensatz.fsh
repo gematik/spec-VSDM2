@@ -1,5 +1,6 @@
 Logical: VSDDatensatz
 Title: "Logisches Modell VSD-Datensatz für VSDM 2.0"
+Parent: Element // Base würde besser passen, gibt es aber in R4 noch nicht. FSH/SUSHI können mit Base umgehen (siehe https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html#defining-logical-models), aber Simplifier.net hat damit Probleme.
 Description: """
   Fachliches Modell zur Beschreibung des VSD-Datensatzes.
   Dieses Modell setzt die Original-Angaben der BMV-Ä unverändert um. Es dient als Ausgangspunkt für die Mappings und ConceptSets, die die Abbildung auf FHIR-Ressourcen vornehmen.
