@@ -59,7 +59,7 @@
     "outputFile": "StructureDefinition-VSDDatensatz.json",
     "fshName": "VSDDatensatz",
     "fshType": "Logical",
-    "fshFile": "logicalmodel/logical_VSD_Datensatz.fsh",
+    "fshFile": "logicalmodel/VSDDatensatz.fsh",
     "startLine": 1,
     "endLine": 303
   },
