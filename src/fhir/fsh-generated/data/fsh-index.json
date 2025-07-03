@@ -85,7 +85,7 @@
     "fshType": "Logical",
     "fshFile": "logicalmodel/VSDDatensatz.fsh",
     "startLine": 1,
-    "endLine": 303
+    "endLine": 304
   },
   {
     "outputFile": "StructureDefinition-vsdm-bundle.json",
