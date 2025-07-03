@@ -1228,7 +1228,7 @@
         "path": "Patient.name.family",
         "short": "Familienname",
         "definition": "Der vollständige Familienname, einschließlich aller Vorsatz- und Zusatzwörter, mit Leerzeichen getrennt.",
-        "comment": "Family Name may be decomposed into specific parts using extensions (de, nl, es related cultures).",
+        "comment": "Hinweise zur Bildung des gesamten Namenamens siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.\nVerwender müssen mindestens 87 Zeichen verarbeiten können.",
         "alias": [
           "surname"
         ],
@@ -1360,7 +1360,7 @@
         "sliceName": "namenszusatz",
         "short": "Namenszusatz gemäß VSDM (Versichertenstammdatenmanagement, \"eGK\")",
         "definition": "Namenszusatz als Bestandteil das Nachnamens, wie in VSDM (Versichertenstammdatenmanagement, \"eGK\") definiert.\r\nBeispiele: Gräfin, Prinz oder Fürst",
-        "comment": "Die Extension wurde erstellt aufgrund der Anforderung, die auf der eGK vorhandenen Patientenstammdaten in FHIR abbilden zu können. Auf der eGK werden die Namensbestandteile \"Namenszusatz\" und \"Vorsatzwort\" getrennt vom Nachnamen gespeichert. Anhand der Liste der zulässigen Namenszusätze ist deutlich erkennbar, dass es sich hierbei sinngemäß um Adelstitel handelt.\r\nDas Vorsatzwort kann durch die Core-Extension own-prefix\t(Canonical: http://hl7.org/fhir/StructureDefinition/humanname-own-prefix) abgebildet werden, für den Namenszusatz ergibt sich jedoch die Notwendikeit einer nationalen Extension, da in andern Ländern Adelstitel entweder gar nicht oder als reguläres Namenspräfix erfasst werden.",
+        "comment": "Hinweise zum Umgang mit dieser Erweiterung siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.\nEine Tabelle der gültigen Namenszusätze findet sich in Anlage 7 zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp.\nVerwender müssen mindestens 20 Zeichen verarbeiten können.",
         "min": 0,
         "max": "1",
         "base": {
@@ -1415,9 +1415,9 @@
         "id": "Patient.name:Name.family.extension:nachname",
         "path": "Patient.name.family.extension",
         "sliceName": "nachname",
-        "short": "Portion derived from person's own surname",
-        "definition": "The portion of the family name that is derived from the person's own surname, as distinguished from any portion that is derived from the surname of the person's partner or spouse.",
-        "comment": "Gibt den Nachnamen der Person an",
+        "short": "Nachname ohne Vorsatzwort und Zusätze",
+        "definition": "Diese Erweiterung kann den Nachnamen ohne Vorsatzworte und Zusätze aufnehmen.\nWenn weder Vorsatzworte noch Namenszusätze existieren, kann die Erweiterung entfallen.",
+        "comment": "Hinweise zum Umgang mit dieser Erweiterung siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.\nVerwender müssen mindestens 45 Zeichen verarbeiten können.",
         "min": 0,
         "max": "1",
         "base": {
@@ -1472,9 +1472,9 @@
         "id": "Patient.name:Name.family.extension:vorsatzwort",
         "path": "Patient.name.family.extension",
         "sliceName": "vorsatzwort",
-        "short": "Voorvoegsel derived from person's own surname",
-        "definition": "The prefix portion (e.g. voorvoegsel) of the family name that is derived from the person's own surname, as distinguished from any portion that is derived from the surname of the person's partner or spouse.",
-        "comment": "An example of a voorvoegsel is the \"van\" in \"Ludwig van Beethoven\". Since the voorvoegsel doesn't sort completely alphabetically, it is reasonable to specify it as a separate sub-component.",
+        "short": "Vorsatzwort",
+        "definition": "Vorsatzwort zum Nachnamen des Patienten (z.B. \\\"van\\\" in \\\"Ludwig van Beethoven\\\").",
+        "comment": "Hinweise zum Umgang mit dieser Erweiterung siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.\nEine Tabelle der gültigen Vorsatzworte findet sich in Anlage 6 zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp.\nVerwender müssen mindestens 20 Zeichen verarbeiten können.",
         "min": 0,
         "max": "1",
         "base": {
@@ -4887,10 +4887,31 @@
         "sliceName": "Name"
       },
       {
+        "id": "Patient.name:Name.family",
+        "path": "Patient.name.family",
+        "comment": "Hinweise zur Bildung des gesamten Namenamens siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.\nVerwender müssen mindestens 87 Zeichen verarbeiten können."
+      },
+      {
+        "id": "Patient.name:Name.family.extension:namenszusatz",
+        "path": "Patient.name.family.extension",
+        "sliceName": "namenszusatz",
+        "comment": "Hinweise zum Umgang mit dieser Erweiterung siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.\nEine Tabelle der gültigen Namenszusätze findet sich in Anlage 7 zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp.\nVerwender müssen mindestens 20 Zeichen verarbeiten können."
+      },
+      {
         "id": "Patient.name:Name.family.extension:nachname",
         "path": "Patient.name.family.extension",
         "sliceName": "nachname",
-        "comment": "Gibt den Nachnamen der Person an"
+        "short": "Nachname ohne Vorsatzwort und Zusätze",
+        "definition": "Diese Erweiterung kann den Nachnamen ohne Vorsatzworte und Zusätze aufnehmen.\nWenn weder Vorsatzworte noch Namenszusätze existieren, kann die Erweiterung entfallen.",
+        "comment": "Hinweise zum Umgang mit dieser Erweiterung siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.\nVerwender müssen mindestens 45 Zeichen verarbeiten können."
+      },
+      {
+        "id": "Patient.name:Name.family.extension:vorsatzwort",
+        "path": "Patient.name.family.extension",
+        "sliceName": "vorsatzwort",
+        "short": "Vorsatzwort",
+        "definition": "Vorsatzwort zum Nachnamen des Patienten (z.B. \\\"van\\\" in \\\"Ludwig van Beethoven\\\").",
+        "comment": "Hinweise zum Umgang mit dieser Erweiterung siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.\nEine Tabelle der gültigen Vorsatzworte findet sich in Anlage 6 zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp.\nVerwender müssen mindestens 20 Zeichen verarbeiten können."
       },
       {
         "id": "Patient.name:Name.given",

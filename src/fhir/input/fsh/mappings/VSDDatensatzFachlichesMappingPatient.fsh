@@ -18,11 +18,21 @@ Description: "Zuordnung der Versichertendaten des VSD-Datensatzes zum FHIR-Profi
     * Vorname -> "VSDMPatient.name:Name.given"
       "FHIR lässt die Angabe mehrerer Vornamen in wiederholten Elementen zu. Davon wird hier kein Gebrauch gemacht."
 
+    * Nachname -> "VSDMPatient.name:Name.family"
+      "Nachname mit Vorsatzwort und Namenszusatz. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
+
     * Nachname -> "VSDMPatient.name:Name.family.extension:nachname"
-    * Vorsatzwort -> "VSDMPatient.name:Name.family.extension:vorsatzwort"
-    * Namenszusatz -> "VSDMPatient.name:Name.family.extension:namenszusatz"
-    * Titel -> "VSDMPatient.name:Name.prefix.extension:prefix-qualifier"
+      "Nachname ohne Vorsatzwort und Namenszusatz. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
+
     * Geschlecht -> "VSDMPatient.gender"
+    
+    * Vorsatzwort -> "VSDMPatient.name:Name.family.extension:vorsatzwort"
+      "Vorsatzwort zum Nachnamen. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
+
+    * Namenszusatz -> "VSDMPatient.name:Name.family.extension:namenszusatz"
+      "Zusatz zum Nachnamen. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
+
+    * Titel -> "VSDMPatient.name:Name.prefix.extension:prefix-qualifier"
     * StrassenAdresse -> "VSDMPatient.address"
       * Strasse -> "VSDMPatient.address.AddressDeBasis.line.extension:Strasse"
       * Hausnummer -> "VSDMPatient.address.AddressDeBasis.line.extension:Hausnummer"
