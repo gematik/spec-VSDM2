@@ -1564,7 +1564,7 @@
         "path": "Patient.name.given",
         "short": "Vorname",
         "definition": "Vorname der Person",
-        "comment": "If only initials are recorded, they may be used in place of the full name parts. Initials may be separated into multiple given names but often aren't due to paractical limitations.  This element is not called \"first name\" since given names do not always come first.",
+        "comment": "Mehrere Vornamen können durch Leerzeichen oder Bindestrich getrennt in einem Wert angegeben werden. \nVon der Wiederholung des given-Elemente SOLL kein Gebrauch gemacht werden; es wird zur besseren Interoperabilität allerdings nicht technisch verboten.\nVerwender müssen mindestens 45 Zeichen verarbeiten können.",
         "alias": [
           "first name",
           "middle name"
@@ -4891,6 +4891,11 @@
         "path": "Patient.name.family.extension",
         "sliceName": "nachname",
         "comment": "Gibt den Nachnamen der Person an"
+      },
+      {
+        "id": "Patient.name:Name.given",
+        "path": "Patient.name.given",
+        "comment": "Mehrere Vornamen können durch Leerzeichen oder Bindestrich getrennt in einem Wert angegeben werden. \nVon der Wiederholung des given-Elemente SOLL kein Gebrauch gemacht werden; es wird zur besseren Interoperabilität allerdings nicht technisch verboten.\nVerwender müssen mindestens 45 Zeichen verarbeiten können."
       },
       {
         "id": "Patient.telecom",

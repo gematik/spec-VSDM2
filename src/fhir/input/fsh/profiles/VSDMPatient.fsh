@@ -28,6 +28,14 @@ Description: "Der VSDMPatient bildet einen Versicherten im Versichertenstammdate
   * ^definition = "Das Geburtsdatum des Versicherten ist in den VSD eine Pflichtangabe. Partielle Datumsangaben sind allerdings zulässig."
   * ^comment = "Hinweise insbesondere zur Angabe unvollständiger Datumswerte siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Geburtsdatum."
 
+// Zuordnung aus Versichertendaten -> Versicherter -> Vorname
+* name[Name].given
+  * ^comment = """
+      Mehrere Vornamen können durch Leerzeichen oder Bindestrich getrennt in einem Wert angegeben werden. 
+      Von der Wiederholung des given-Elemente SOLL kein Gebrauch gemacht werden; es wird zur besseren Interoperabilität allerdings nicht technisch verboten.
+      Verwender müssen mindestens 45 Zeichen verarbeiten können.
+    """
+
 // -----
 
 * address only address-de-basis
