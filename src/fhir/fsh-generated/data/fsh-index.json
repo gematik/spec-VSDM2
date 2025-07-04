@@ -68,8 +68,8 @@
     "fshName": "VSDMPatientSample",
     "fshType": "Instance",
     "fshFile": "profiles/VSDMPatient.fsh",
-    "startLine": 156,
-    "endLine": 180
+    "startLine": 145,
+    "endLine": 168
   },
   {
     "outputFile": "Patient-Valid-437f2555-2396-4c64-a656-e9553161ca3c.json",
@@ -77,7 +77,7 @@
     "fshType": "Instance",
     "fshFile": "examples/ExampleVSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 30
+    "endLine": 29
   },
   {
     "outputFile": "StructureDefinition-VSDDatensatz.json",
@@ -93,7 +93,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 146
+    "endLine": 134
   },
   {
     "outputFile": "StructureDefinition-vsdm-bundle.json",
@@ -110,14 +110,6 @@
     "fshFile": "profiles/VSDMComposition.fsh",
     "startLine": 1,
     "endLine": 20
-  },
-  {
-    "outputFile": "StructureDefinition-vsdm-contactpoint-timessenger.json",
-    "fshName": "VSDMContactPointTIMessenger",
-    "fshType": "Profile",
-    "fshFile": "profiles/VSDMContactPointTIMessenger.fsh",
-    "startLine": 1,
-    "endLine": 7
   },
   {
     "outputFile": "StructureDefinition-vsdm-coverage.json",

@@ -27,4 +27,3 @@ Usage: #example
 * address.city = "Berlin"
 * address.postalCode = "12345"
 * address.country = $cs-iso3166-1-2#DE
-* telecom = ContactPointAOKMXID

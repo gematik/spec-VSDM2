@@ -3023,22 +3023,11 @@
       {
         "id": "Patient.telecom",
         "path": "Patient.telecom",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "system"
-            }
-          ],
-          "rules": "open",
-          "description": "Slices for Patient contact information",
-          "ordered": false
-        },
         "short": "A contact detail for the individual",
         "definition": "A contact detail (e.g. a telephone number or an email address) by which the individual may be contacted.",
         "comment": "A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address might not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone).",
         "requirements": "People have (primary) ways to contact them in some way such as phone, email.",
-        "min": 1,
+        "min": 0,
         "max": "*",
         "base": {
           "path": "Patient.telecom",
@@ -3060,57 +3049,6 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "PID-13, PID-14, PID-40"
-          },
-          {
-            "identity": "rim",
-            "map": "telecom"
-          },
-          {
-            "identity": "cda",
-            "map": ".telecom"
-          }
-        ]
-      },
-      {
-        "id": "Patient.telecom:ti-messenger",
-        "path": "Patient.telecom",
-        "sliceName": "ti-messenger",
-        "short": "A contact detail for the individual",
-        "definition": "A contact detail (e.g. a telephone number or an email address) by which the individual may be contacted.",
-        "comment": "A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address might not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone).",
-        "requirements": "People have (primary) ways to contact them in some way such as phone, email.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Patient.telecom",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "ContactPoint",
-            "profile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/vsdm-contactpoint-timessenger"
-            ]
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -4933,38 +4871,6 @@
         "short": "Art des Namenspräfix",
         "definition": "Kodierte Angabe der Art des Namenspräfix zur technischen Unterscheidung zwischen verschieden Präfixen wie akademischem Titel.\nAchtung: Für das Vorsatzwort ist das Attribut family.extension[vorsatzwort] zu verwenden.\nFür akademische Titel ist verpflichtend die Kennzeichnung AC (academic) zu verwenden.",
         "comment": "Beispiele zur Verwendung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name."
-      },
-      {
-        "id": "Patient.telecom",
-        "path": "Patient.telecom",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "system"
-            }
-          ],
-          "rules": "open",
-          "description": "Slices for Patient contact information",
-          "ordered": false
-        },
-        "min": 1
-      },
-      {
-        "id": "Patient.telecom:ti-messenger",
-        "path": "Patient.telecom",
-        "sliceName": "ti-messenger",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "ContactPoint",
-            "profile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/vsdm-contactpoint-timessenger"
-            ]
-          }
-        ],
-        "mustSupport": true
       },
       {
         "id": "Patient.gender",
