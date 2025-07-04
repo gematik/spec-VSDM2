@@ -3130,11 +3130,11 @@
       {
         "id": "Patient.gender",
         "path": "Patient.gender",
-        "short": "male | female | other | unknown",
-        "definition": "Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes.",
-        "comment": "The gender might not match the biological sex as determined by genetics or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than male and female, though the vast majority of systems and contexts only support male and female.  Systems providing decision support or enforcing business rules should ideally do this on the basis of Observations dealing with the specific sex or gender aspect of interest (anatomical, chromosomal, social, etc.)  However, because these observations are infrequently recorded, defaulting to the administrative gender is common practice.  Where such defaulting occurs, rule enforcement should allow for the variation between administrative and biological, chromosomal and other gender aspects.  For example, an alert about a hysterectomy on a male should be handled as a warning or overridable error, not a \"hard\" error.  See the Patient Gender and Sex section for additional information about communicating patient gender and sex.",
+        "short": "Administrative Geschlechtsangabe (FHIR-Kodierung)",
+        "definition": "Administrative Geschlechtsangabe gemäß den Unterlagen des Kostenträgers, kodiert nach FHIR-Standard.",
+        "comment": "Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht.",
         "requirements": "Needed for identification of the individual, in combination with (at least) name and birth date.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "base": {
           "path": "Patient.gender",
@@ -3266,8 +3266,9 @@
         "id": "Patient.gender.extension:other-amtlich",
         "path": "Patient.gender.extension",
         "sliceName": "other-amtlich",
-        "short": "Optional Extensions Element",
-        "definition": "Optional Extension Element - found in all resources.",
+        "short": "Administrative Geschlechtsangabe (deutsche Kodierung)",
+        "definition": "Administrative Geschlechtsangabe gemäß den Unterlagen des Kostenträgers, kodiert nach Wertetabelle zur Unterscheidung zwischen \"divers\" und \"unbestimmt\".",
+        "comment": "Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht.\nNur bei FHIR-Kodierung \"other\" zu verwenden (vgl. Constraint pat-de-1).",
         "min": 0,
         "max": "1",
         "base": {
@@ -4951,10 +4952,26 @@
         "mustSupport": true
       },
       {
+        "id": "Patient.gender",
+        "path": "Patient.gender",
+        "short": "Administrative Geschlechtsangabe (FHIR-Kodierung)",
+        "definition": "Administrative Geschlechtsangabe gemäß den Unterlagen des Kostenträgers, kodiert nach FHIR-Standard.",
+        "comment": "Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht.",
+        "min": 1
+      },
+      {
+        "id": "Patient.gender.extension:other-amtlich",
+        "path": "Patient.gender.extension",
+        "sliceName": "other-amtlich",
+        "short": "Administrative Geschlechtsangabe (deutsche Kodierung)",
+        "definition": "Administrative Geschlechtsangabe gemäß den Unterlagen des Kostenträgers, kodiert nach Wertetabelle zur Unterscheidung zwischen \"divers\" und \"unbestimmt\".",
+        "comment": "Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht.\nNur bei FHIR-Kodierung \"other\" zu verwenden (vgl. Constraint pat-de-1)."
+      },
+      {
         "id": "Patient.birthDate",
         "path": "Patient.birthDate",
         "short": "Geburtsdatum",
-        "definition": "Das Geburtsdatum des Versicherten ist in den VSD eine Pflichtangabe. Partielle Datumsangaben sind allerdings zulässig.",
+        "definition": "Das Geburtsdatum des Versicherten ist in den VSD eine Pflichtangabe. \nPartielle Datumsangaben sind allerdings zulässig.",
         "comment": "Hinweise insbesondere zur Angabe unvollständiger Datumswerte siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Geburtsdatum."
       },
       {

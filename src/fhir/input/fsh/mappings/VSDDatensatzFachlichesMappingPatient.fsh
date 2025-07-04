@@ -25,6 +25,10 @@ Description: "Zuordnung der Versichertendaten des VSD-Datensatzes zum FHIR-Profi
       "Nachname ohne Vorsatzwort und Namenszusatz. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
 
     * Geschlecht -> "VSDMPatient.gender"
+      "Das Geschlecht wird auf die standardisierten FHIR-Werte abgebildet. Da damit nicht alle Werte abgebildet werden können, kommt eine Erweiterung zum Einsatz."
+    
+    * Geschlecht -> "VSDMPatient.gender.extension:other-amtlich"
+      "Diese Erweiterung nimmt die Geschlechtsangabe gemäß der geforderten Wertetabelle auf."
     
     * Vorsatzwort -> "VSDMPatient.name:Name.family.extension:vorsatzwort"
       "Vorsatzwort zum Nachnamen. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."

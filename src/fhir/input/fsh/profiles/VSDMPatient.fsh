@@ -88,6 +88,25 @@ Description: "Der VSDMPatient bildet einen Versicherten im Versichertenstammdate
       Verwender müssen mindestens 45 Zeichen verarbeiten können.
     """
 
+// Zuordnung aus Versichertendaten -> Versicherter -> Geschlecht
+* gender 1..1
+  * ^short = "Administrative Geschlechtsangabe (FHIR-Kodierung)"
+  * ^definition = """
+      Administrative Geschlechtsangabe gemäß den Unterlagen des Kostenträgers, kodiert nach FHIR-Standard.
+    """
+  * ^comment = """
+      Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht.
+    """
+  * extension[other-amtlich]
+    * ^short = "Administrative Geschlechtsangabe (deutsche Kodierung)"
+    * ^definition = """
+        Administrative Geschlechtsangabe gemäß den Unterlagen des Kostenträgers, kodiert nach Wertetabelle zur Unterscheidung zwischen "divers" und "unbestimmt".
+      """
+    * ^comment = """
+        Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht.
+        Nur bei FHIR-Kodierung "other" zu verwenden (vgl. Constraint pat-de-1).
+      """
+
 // -----
 
 * address only address-de-basis
@@ -125,6 +144,7 @@ Usage: #example
 * name[Name].family.extension[nachname].url = "http://hl7.org/fhir/StructureDefinition/humanname-own-name"
 * name[Name].family.extension[nachname].valueString = "Königstein"
 * name[Name].given = "Ludger"
+* gender = #male
 * birthDate = "1935-06-22"
 * address.type = #both
 * address.line = "Blumenweg 14"

@@ -390,7 +390,13 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.gender"
+            "map": "VSDMPatient.gender",
+            "comment": "Das Geschlecht wird auf die standardisierten FHIR-Werte abgebildet. Da damit nicht alle Werte abgebildet werden können, kommt eine Erweiterung zum Einsatz."
+          },
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.gender.extension:other-amtlich",
+            "comment": "Diese Erweiterung nimmt die Geschlechtsangabe gemäß der geforderten Wertetabelle auf."
           }
         ]
       },
@@ -2113,7 +2119,13 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.gender"
+            "map": "VSDMPatient.gender",
+            "comment": "Das Geschlecht wird auf die standardisierten FHIR-Werte abgebildet. Da damit nicht alle Werte abgebildet werden können, kommt eine Erweiterung zum Einsatz."
+          },
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
+            "map": "VSDMPatient.gender.extension:other-amtlich",
+            "comment": "Diese Erweiterung nimmt die Geschlechtsangabe gemäß der geforderten Wertetabelle auf."
           }
         ]
       },
