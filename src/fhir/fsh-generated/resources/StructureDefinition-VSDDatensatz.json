@@ -535,7 +535,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address"
+            "map": "VSDMPatient.address:PostfachAdresse",
+            "comment": "Postfachadressen werden mit dem Typ \"postal\" gekennzeichnet."
           }
         ]
       },
@@ -569,7 +570,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.postalCode"
+            "map": "VSDMPatient.address:PostfachAdresse.postalCode"
           }
         ]
       },
@@ -603,7 +604,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.city"
+            "map": "VSDMPatient.address:PostfachAdresse.city"
           }
         ]
       },
@@ -637,7 +638,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Postfach"
+            "map": "VSDMPatient.address:PostfachAdresse.line.extension:Postfach",
+            "comment": "Hinweise zur Bildung der Adresszeilen beachten."
           }
         ]
       },
@@ -671,7 +673,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.Address.country"
+            "map": "VSDMPatient.address:PostfachAdresse.country",
+            "comment": "Hinweise zur Befüllung der Extensions beachten."
           }
         ]
       },
@@ -705,7 +708,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address"
+            "map": "VSDMPatient.address:StrassenAdresse",
+            "comment": "Strassenadressen (Meldeadressen) werden mit dem Typ \"physical\" gekennzeichnet."
           }
         ]
       },
@@ -739,7 +743,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.postalCode"
+            "map": "VSDMPatient.address:StrassenAdresse.postalCode"
           }
         ]
       },
@@ -773,7 +777,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.city"
+            "map": "VSDMPatient.address:StrassenAdresse.city"
           }
         ]
       },
@@ -807,7 +811,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.country"
+            "map": "VSDMPatient.address.country",
+            "comment": "Hinweise zur Befüllung der Extensions beachten."
           }
         ]
       },
@@ -841,7 +846,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Strasse"
+            "map": "VSDMPatient.address:StrassenAdresse.line.extension:Strasse",
+            "comment": "Hinweise zur Bildung der Adresszeilen beachten."
           }
         ]
       },
@@ -875,7 +881,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Hausnummer"
+            "map": "VSDMPatient.address:StrassenAdresse.line.extension:Hausnummer",
+            "comment": "Hinweise zur Bildung der Adresszeilen beachten."
           }
         ]
       },
@@ -909,8 +916,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "Gibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. Hinterhaus angegeben werden.",
-            "comment": "VSDMPatient.address.AddressDeBasis.line.extension:Adresszusatz"
+            "map": "VSDMPatient.address:StrassenAdresse.line.extension:Adresszusatz",
+            "comment": "Hinweise zur Bildung der Adresszeilen beachten."
           }
         ]
       },
@@ -2205,7 +2212,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address"
+            "map": "VSDMPatient.address:PostfachAdresse",
+            "comment": "Postfachadressen werden mit dem Typ \"postal\" gekennzeichnet."
           }
         ]
       },
@@ -2224,7 +2232,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.postalCode"
+            "map": "VSDMPatient.address:PostfachAdresse.postalCode"
           }
         ]
       },
@@ -2243,7 +2251,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.city"
+            "map": "VSDMPatient.address:PostfachAdresse.city"
           }
         ]
       },
@@ -2262,7 +2270,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Postfach"
+            "map": "VSDMPatient.address:PostfachAdresse.line.extension:Postfach",
+            "comment": "Hinweise zur Bildung der Adresszeilen beachten."
           }
         ]
       },
@@ -2281,7 +2290,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.Address.country"
+            "map": "VSDMPatient.address:PostfachAdresse.country",
+            "comment": "Hinweise zur Befüllung der Extensions beachten."
           }
         ]
       },
@@ -2300,7 +2310,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address"
+            "map": "VSDMPatient.address:StrassenAdresse",
+            "comment": "Strassenadressen (Meldeadressen) werden mit dem Typ \"physical\" gekennzeichnet."
           }
         ]
       },
@@ -2319,7 +2330,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.postalCode"
+            "map": "VSDMPatient.address:StrassenAdresse.postalCode"
           }
         ]
       },
@@ -2338,7 +2349,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.city"
+            "map": "VSDMPatient.address:StrassenAdresse.city"
           }
         ]
       },
@@ -2357,7 +2368,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.country"
+            "map": "VSDMPatient.address.country",
+            "comment": "Hinweise zur Befüllung der Extensions beachten."
           }
         ]
       },
@@ -2376,7 +2388,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Strasse"
+            "map": "VSDMPatient.address:StrassenAdresse.line.extension:Strasse",
+            "comment": "Hinweise zur Bildung der Adresszeilen beachten."
           }
         ]
       },
@@ -2395,7 +2408,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.address.AddressDeBasis.line.extension:Hausnummer"
+            "map": "VSDMPatient.address:StrassenAdresse.line.extension:Hausnummer",
+            "comment": "Hinweise zur Bildung der Adresszeilen beachten."
           }
         ]
       },
@@ -2414,8 +2428,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "Gibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. Hinterhaus angegeben werden.",
-            "comment": "VSDMPatient.address.AddressDeBasis.line.extension:Adresszusatz"
+            "map": "VSDMPatient.address:StrassenAdresse.line.extension:Adresszusatz",
+            "comment": "Hinweise zur Bildung der Adresszeilen beachten."
           }
         ]
       },

@@ -68,8 +68,8 @@
     "fshName": "VSDMPatientSample",
     "fshType": "Instance",
     "fshFile": "examples/ExampleVSDMPatient.fsh",
-    "startLine": 32,
-    "endLine": 61
+    "startLine": 31,
+    "endLine": 68
   },
   {
     "outputFile": "Patient-Valid-437f2555-2396-4c64-a656-e9553161ca3c.json",
@@ -77,7 +77,7 @@
     "fshType": "Instance",
     "fshFile": "examples/ExampleVSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 29
+    "endLine": 27
   },
   {
     "outputFile": "StructureDefinition-VSDDatensatz.json",
@@ -88,12 +88,20 @@
     "endLine": 304
   },
   {
+    "outputFile": "StructureDefinition-VSDMLaenderkennzeichen.json",
+    "fshName": "VSDMLaenderkennzeichen",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMLaenderkennzeichen.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
     "outputFile": "StructureDefinition-VSDMPatient.json",
     "fshName": "VSDMPatient",
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 145
+    "endLine": 201
   },
   {
     "outputFile": "StructureDefinition-vsdm-bundle.json",

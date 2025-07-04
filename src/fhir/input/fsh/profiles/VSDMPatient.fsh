@@ -140,6 +140,64 @@ Description: "Der VSDMPatient bildet einen Versicherten im Versichertenstammdate
         Nur bei FHIR-Kodierung "other" zu verwenden (vgl. Constraint pat-de-1).
       """
 
-// -----
+// Slicing der Adresse, um die geforderten Kardinalitäten festzulegen
+* address 
+  * ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.path = type
+  * ^slicing.rules = #open
+  * ^slicing.description = "foo"
+* address contains StrassenAdresse 0..1 and PostfachAdresse 0..1
 
-* address only address-de-basis
+// Zuordnung aus Versichertendaten -> Versicherter -> PostfachAdresse
+* address[PostfachAdresse] only AddressDeBasis // address-de-basis
+* address[PostfachAdresse]
+  * type = #postal
+  * line
+    * ^comment = """
+        Hinweise zur Abbildung von Adressen und Beispiele siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Addresse.
+      """
+  * country
+    * ^short = "Staat"
+    * ^definition = """
+        Staatsangabe kodiert nach ISO-3166-1-2
+      """
+    * ^comment = """
+        Die Kodierung ist durch den FHIR-Standard empfohlen, aber nicht erzwungen. 
+        Durch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.
+      """
+    * extension contains VSDMLaenderkennzeichen named Laenderkennzeichen 1..1
+    * extension[Laenderkennzeichen] 
+      * ^short = "Länderkennzeichen nach DEÜV Anlage 8"
+      * ^definition = """
+          Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8. 
+        """
+      * ^comment = """
+          Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.
+        """
+
+// Zuordnung aus Versichertendaten -> Versicherter -> StrassenAdresse
+* address[StrassenAdresse] only AddressDeBasis // address-de-basis
+* address[StrassenAdresse]
+  * type = #physical
+  * line
+    * ^comment = """
+        Hinweise zur Abbildung von Adressen und Beispiele siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Addresse.
+      """
+  * country
+    * ^short = "Staat"
+    * ^definition = """
+        Staatsangabe kodiert nach ISO-3166-1-2
+      """
+    * ^comment = """
+        Die Kodierung ist durch den FHIR-Standard empfohlen, aber nicht erzwungen. 
+        Durch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.
+      """
+    * extension contains VSDMLaenderkennzeichen named Laenderkennzeichen 1..1
+    * extension[Laenderkennzeichen] 
+      * ^short = "Länderkennzeichen nach DEÜV Anlage 8"
+      * ^definition = """
+          Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8. 
+        """
+      * ^comment = """
+          Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.
+        """

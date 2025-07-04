@@ -53,8 +53,10 @@
   ],
   "address": [
     {
+      "type": "physical",
       "line": [
-        "Blumenweg 14"
+        "Blumenweg 14",
+        "Hinterhaus links"
       ],
       "_line": [
         {
@@ -68,12 +70,62 @@
               "valueString": "Blumenweg"
             }
           ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
+              "valueString": "Hinterhaus links"
+            }
+          ]
         }
       ],
-      "type": "both",
       "city": "Esens",
       "postalCode": "26427",
-      "country": "DE"
+      "country": "DE",
+      "_country": {
+        "extension": [
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen",
+            "valueCoding": {
+              "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+              "code": "D",
+              "display": "Deutschland"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "postal",
+      "line": [
+        "Postfach 123456"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox",
+              "valueString": "Postfach 12345"
+            }
+          ]
+        }
+      ],
+      "city": "Esens",
+      "postalCode": "26429",
+      "country": "DE",
+      "_country": {
+        "extension": [
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen",
+            "valueCoding": {
+              "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+              "code": "D",
+              "display": "Deutschland"
+            }
+          }
+        ]
+      }
     }
   ],
   "gender": "male",

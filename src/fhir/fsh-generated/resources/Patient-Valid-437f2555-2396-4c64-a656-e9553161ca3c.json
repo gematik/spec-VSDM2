@@ -45,6 +45,7 @@
   ],
   "address": [
     {
+      "type": "physical",
       "line": [
         "Blumenweg 14"
       ],
@@ -62,10 +63,16 @@
           ]
         }
       ],
-      "type": "both",
       "city": "Berlin",
       "postalCode": "12345",
-      "country": "DE"
+      "country": "DE",
+      "_country": {
+        "extension": [
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen"
+          }
+        ]
+      }
     }
   ],
   "gender": "female",
