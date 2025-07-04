@@ -16,7 +16,7 @@ Usage: #example
 * name[Name].prefix.extension[prefix-qualifier].url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
 
 
-
+* gender = #female
 * birthDate = "1970"
 * address.type = #both
 * address.line = "Blumenweg 14"
