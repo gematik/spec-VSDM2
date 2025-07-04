@@ -18,15 +18,14 @@ Usage: #example
 
 * gender = #female
 * birthDate = "1970"
-* address.type = #both
-* address.line = "Blumenweg 14"
-* address.line.extension[0][Hausnummer].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"
-* address.line.extension[=][Hausnummer].valueString = "14"
-* address.line.extension[+][Strasse].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"
-* address.line.extension[=][Strasse].valueString = "Blumenweg"
-* address.city = "Berlin"
-* address.postalCode = "12345"
-* address.country = $cs-iso3166-1-2#DE
+* address[StrassenAdresse]
+  * line[+] = "Blumenweg 14"
+    * extension[Hausnummer].valueString = "14"
+    * extension[Strasse].valueString = "Blumenweg"
+  * city = "Berlin"
+  * postalCode = "12345"
+  * country = $cs-iso3166-1-2#DE
+    //* extension[Laenderkennzeichen].valueCoding = $anlage-8-laenderkennzeichen#D "Deutschland"
 
 
 Instance: VSDMPatientSample
@@ -50,12 +49,20 @@ Usage: #example
 
 * gender = #male
 * birthDate = "1935-06-22"
-* address.type = #both
-* address.line = "Blumenweg 14"
-* address.line.extension[0][Hausnummer].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"
-* address.line.extension[=][Hausnummer].valueString = "14"
-* address.line.extension[+][Strasse].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"
-* address.line.extension[=][Strasse].valueString = "Blumenweg"
-* address.city = "Esens"
-* address.postalCode = "26427"
-* address.country = $cs-iso3166-1-2#DE
+* address[StrassenAdresse]
+  * line[+] = "Blumenweg 14"
+    * extension[Hausnummer].valueString = "14"
+    * extension[Strasse].valueString = "Blumenweg"
+  * line[+] = "Hinterhaus links"
+    * extension[Adresszusatz].valueString = "Hinterhaus links"
+  * city = "Esens"
+  * postalCode = "26427"
+  * country = $cs-iso3166-1-2#DE
+    * extension[Laenderkennzeichen].valueCoding = $anlage-8-laenderkennzeichen#D "Deutschland"
+* address[PostfachAdresse]
+  * line[+] = "Postfach 123456"
+    * extension[Postfach].valueString = "Postfach 12345"
+  * city = "Esens"
+  * postalCode = "26429"
+  * country = $cs-iso3166-1-2#DE
+    * extension[Laenderkennzeichen].valueCoding = $anlage-8-laenderkennzeichen#D "Deutschland"

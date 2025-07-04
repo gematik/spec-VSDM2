@@ -11,6 +11,7 @@ Alias: $operationoutcomecodes = http://terminology.hl7.org/CodeSystem/operation-
 Alias: $identifier-kvid-10 = http://fhir.de/StructureDefinition/identifier-kvid-10
 Alias: $identifier-pkv = http://fhir.de/StructureDefinition/identifier-pkv
 Alias: $iso21090-EN-qualifier = http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier
+Alias: $anlage-8-laenderkennzeichen = http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen
 
 // in Coverage, Bundle
 Alias: $versicherungsart-de-basis = http://fhir.de/ValueSet/versicherungsart-de-basis
@@ -27,6 +28,7 @@ Alias: $iso3166-1-2 = http://hl7.org/fhir/ValueSet/iso3166-1-2
 Alias: $cs-iso3166-1-2 = http://hl7.org/fhir/CodeSystem/iso3166-1-2
 
 // KBV Schlüsseltabellen
+Alias: $KBV_VS_Base_Deuev_Anlage_8 = https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8
 Alias: $KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS
 Alias: $KBV_CS_SFHIR_ITA_WOP = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP
 Alias: $KBV_CS_SFHIR_KBV_PERSONENGRUPPE = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE

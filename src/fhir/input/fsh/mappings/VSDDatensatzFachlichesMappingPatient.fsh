@@ -39,15 +39,34 @@ Description: "Zuordnung der Versichertendaten des VSD-Datensatzes zum FHIR-Profi
     * Titel -> "VSDMPatient.name:Name.prefix"
       "Kennzeichnung des akademischen Titels mittels Erweiterung siehe Elementdokumentation."
 
-    * StrassenAdresse -> "VSDMPatient.address"
-      * Strasse -> "VSDMPatient.address.AddressDeBasis.line.extension:Strasse"
-      * Hausnummer -> "VSDMPatient.address.AddressDeBasis.line.extension:Hausnummer"
-      * Postleitzahl -> "VSDMPatient.address.postalCode"
-      * Ort -> "VSDMPatient.address.city"
-      * Anschriftenzusatz -> "Gibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. Hinterhaus angegeben werden." "VSDMPatient.address.AddressDeBasis.line.extension:Adresszusatz"
+    * PostfachAdresse -> "VSDMPatient.address:PostfachAdresse"
+      "Postfachadressen werden mit dem Typ \"postal\" gekennzeichnet."
+
+      * Postleitzahl -> "VSDMPatient.address:PostfachAdresse.postalCode"
+        
+      * Ort -> "VSDMPatient.address:PostfachAdresse.city"
+
+      * Postfach -> "VSDMPatient.address:PostfachAdresse.line.extension:Postfach"
+        "Hinweise zur Bildung der Adresszeilen beachten."
+
+      * Wohnsitzlaendercode -> "VSDMPatient.address:PostfachAdresse.country"
+        "Hinweise zur Befüllung der Extensions beachten."
+
+    * StrassenAdresse -> "VSDMPatient.address:StrassenAdresse"
+      "Strassenadressen (Meldeadressen) werden mit dem Typ \"physical\" gekennzeichnet."
+
+      * Postleitzahl -> "VSDMPatient.address:StrassenAdresse.postalCode"
+
+      * Ort -> "VSDMPatient.address:StrassenAdresse.city"
+
       * Wohnsitzlaendercode -> "VSDMPatient.address.country"
-    * PostfachAdresse -> "VSDMPatient.address"
-      * Postfach -> "VSDMPatient.address.AddressDeBasis.line.extension:Postfach"
-      * Postleitzahl -> "VSDMPatient.address.postalCode"
-      * Ort -> "VSDMPatient.address.city"
-      * Wohnsitzlaendercode -> "VSDMPatient.Address.country"
+        "Hinweise zur Befüllung der Extensions beachten."
+
+      * Strasse -> "VSDMPatient.address:StrassenAdresse.line.extension:Strasse"
+        "Hinweise zur Bildung der Adresszeilen beachten."
+
+      * Hausnummer -> "VSDMPatient.address:StrassenAdresse.line.extension:Hausnummer"
+        "Hinweise zur Bildung der Adresszeilen beachten."
+      
+      * Anschriftenzusatz -> "VSDMPatient.address:StrassenAdresse.line.extension:Adresszusatz"
+        "Hinweise zur Bildung der Adresszeilen beachten."
