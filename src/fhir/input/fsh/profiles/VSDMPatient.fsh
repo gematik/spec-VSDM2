@@ -133,17 +133,6 @@ Description: "Der VSDMPatient bildet einen Versicherten im Versichertenstammdate
 
 * address only address-de-basis
 
-// TODO: Slicing Testen mit Beipsielinstanz
-* telecom
-  * ^slicing.discriminator.type = #pattern
-  * ^slicing.discriminator.path = "system"
-  * ^slicing.rules = #open
-  * ^slicing.description = "Slices for Patient contact information"
-  * ^slicing.ordered = false
-
-* telecom contains ti-messenger 1..1 MS
-
-* telecom[ti-messenger] only VSDMContactPointTIMessenger
 
 
 
@@ -177,5 +166,4 @@ Usage: #example
 * address.city = "Esens"
 * address.postalCode = "26427"
 * address.country = $cs-iso3166-1-2#DE
-* telecom = ContactPointAOKMXID
 

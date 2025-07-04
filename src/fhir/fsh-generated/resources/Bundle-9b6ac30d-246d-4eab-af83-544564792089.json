@@ -120,13 +120,7 @@
           }
         ],
         "gender": "male",
-        "birthDate": "1935-06-22",
-        "telecom": [
-          {
-            "system": "url",
-            "value": "matrix:@T024791905:aok-nord.de"
-          }
-        ]
+        "birthDate": "1935-06-22"
       }
     },
     {
