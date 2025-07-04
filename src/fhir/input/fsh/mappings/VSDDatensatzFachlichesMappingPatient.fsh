@@ -36,7 +36,9 @@ Description: "Zuordnung der Versichertendaten des VSD-Datensatzes zum FHIR-Profi
     * Namenszusatz -> "VSDMPatient.name:Name.family.extension:namenszusatz"
       "Zusatz zum Nachnamen. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
 
-    * Titel -> "VSDMPatient.name:Name.prefix.extension:prefix-qualifier"
+    * Titel -> "VSDMPatient.name:Name.prefix"
+      "Kennzeichnung des akademischen Titels mittels Erweiterung siehe Elementdokumentation."
+
     * StrassenAdresse -> "VSDMPatient.address"
       * Strasse -> "VSDMPatient.address.AddressDeBasis.line.extension:Strasse"
       * Hausnummer -> "VSDMPatient.address.AddressDeBasis.line.extension:Hausnummer"
