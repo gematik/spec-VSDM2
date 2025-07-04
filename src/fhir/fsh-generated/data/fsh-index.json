@@ -67,9 +67,9 @@
     "outputFile": "Patient-437f2555-2396-4c64-a656-e9553161ca3c.json",
     "fshName": "VSDMPatientSample",
     "fshType": "Instance",
-    "fshFile": "profiles/VSDMPatient.fsh",
-    "startLine": 145,
-    "endLine": 168
+    "fshFile": "examples/ExampleVSDMPatient.fsh",
+    "startLine": 32,
+    "endLine": 55
   },
   {
     "outputFile": "Patient-Valid-437f2555-2396-4c64-a656-e9553161ca3c.json",
