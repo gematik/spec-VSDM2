@@ -53,6 +53,7 @@ Description: "Der VSDMPatient bildet einen Versicherten im Versichertenstammdate
       Eine Tabelle der gültigen Namenszusätze findet sich in Anlage 7 zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp.
       Verwender müssen mindestens 20 Zeichen verarbeiten können.
     """
+    // TODO zu diskutieren: Wertetabelle ist als CodeSystem im deutschen Basisprofil vorhanden - Binding?
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Nachname
 * name[Name].family.extension[nachname]
@@ -70,13 +71,14 @@ Description: "Der VSDMPatient bildet einen Versicherten im Versichertenstammdate
 * name[Name].family.extension[vorsatzwort]
   * ^short = "Vorsatzwort"
   * ^definition = """
-      Vorsatzwort zum Nachnamen des Patienten (z.B. \"van\" in \"Ludwig van Beethoven\").
+      Vorsatzwort zum Nachnamen des Patienten (z.B. "van" in "Ludwig van Beethoven").
     """
   * ^comment = """
       Hinweise zum Umgang mit dieser Erweiterung siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.
       Eine Tabelle der gültigen Vorsatzworte findet sich in Anlage 6 zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp.
       Verwender müssen mindestens 20 Zeichen verarbeiten können.
     """
+    // TODO zu diskutieren: Wertetabelle ist als CodeSystem im deutschen Basisprofil vorhanden - Binding?
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Vorname
 * name[Name].given
