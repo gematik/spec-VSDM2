@@ -1614,7 +1614,8 @@
         "id": "Patient.name:Name.prefix",
         "path": "Patient.name.prefix",
         "short": "Namensteile vor dem Vornamen",
-        "definition": "Namensteile vor dem Vornamen, z.B. akademischer Titel.",
+        "definition": "Namensteile vor dem Vornamen, z.B. akademischer Titel.\nWenn dieses Attribut zur Angabe des akademischen Titels verwendet wird, ist die Erweiterung prefix-qualifier mit dem Wert AC (academic) verpflichtend anzugeben.\nMehrere Titel werden durch Leerzeichen getrennt angegeben. \nVerwender müssen mindestens 20 Zeichen verarbeiten können.",
+        "comment": "Beispiele zur Verwendung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name.",
         "min": 0,
         "max": "*",
         "base": {
@@ -1742,9 +1743,9 @@
         "id": "Patient.name:Name.prefix.extension:prefix-qualifier",
         "path": "Patient.name.prefix.extension",
         "sliceName": "prefix-qualifier",
-        "short": "LS | AC | NB | PR | HON | BR | AD | SP | MID | CL | IN | VV",
-        "definition": "A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type.",
-        "comment": "Used to indicate additional information about the name part and how it should be used.",
+        "short": "Art des Namenspräfix",
+        "definition": "Kodierte Angabe der Art des Namenspräfix zur technischen Unterscheidung zwischen verschieden Präfixen wie akademischem Titel.\nAchtung: Für das Vorsatzwort ist das Attribut family.extension[vorsatzwort] zu verwenden.\nFür akademische Titel ist verpflichtend die Kennzeichnung AC (academic) zu verwenden.",
+        "comment": "Beispiele zur Verwendung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name.",
         "min": 0,
         "max": "1",
         "base": {
@@ -4918,6 +4919,20 @@
         "id": "Patient.name:Name.given",
         "path": "Patient.name.given",
         "comment": "Mehrere Vornamen können durch Leerzeichen oder Bindestrich getrennt in einem Wert angegeben werden. \nVon der Wiederholung des given-Elemente SOLL kein Gebrauch gemacht werden; es wird zur besseren Interoperabilität allerdings nicht technisch verboten.\nVerwender müssen mindestens 45 Zeichen verarbeiten können."
+      },
+      {
+        "id": "Patient.name:Name.prefix",
+        "path": "Patient.name.prefix",
+        "definition": "Namensteile vor dem Vornamen, z.B. akademischer Titel.\nWenn dieses Attribut zur Angabe des akademischen Titels verwendet wird, ist die Erweiterung prefix-qualifier mit dem Wert AC (academic) verpflichtend anzugeben.\nMehrere Titel werden durch Leerzeichen getrennt angegeben. \nVerwender müssen mindestens 20 Zeichen verarbeiten können.",
+        "comment": "Beispiele zur Verwendung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name."
+      },
+      {
+        "id": "Patient.name:Name.prefix.extension:prefix-qualifier",
+        "path": "Patient.name.prefix.extension",
+        "sliceName": "prefix-qualifier",
+        "short": "Art des Namenspräfix",
+        "definition": "Kodierte Angabe der Art des Namenspräfix zur technischen Unterscheidung zwischen verschieden Präfixen wie akademischem Titel.\nAchtung: Für das Vorsatzwort ist das Attribut family.extension[vorsatzwort] zu verwenden.\nFür akademische Titel ist verpflichtend die Kennzeichnung AC (academic) zu verwenden.",
+        "comment": "Beispiele zur Verwendung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name."
       },
       {
         "id": "Patient.telecom",

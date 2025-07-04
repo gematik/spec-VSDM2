@@ -16,8 +16,8 @@
         {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
-              "valueCode": "AC"
+              "valueCode": "AC",
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
             }
           ]
         }

@@ -13,7 +13,7 @@ Usage: #example
 * name[Name].given = "Maria"
 
 * name[Name].prefix = "Dr."
-* name[Name].prefix.extension[prefix-qualifier].url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
+* name[Name].prefix.extension[prefix-qualifier].valueCode = #AC
 
 
 * gender = #female

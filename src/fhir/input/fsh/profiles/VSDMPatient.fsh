@@ -88,6 +88,28 @@ Description: "Der VSDMPatient bildet einen Versicherten im Versichertenstammdate
       Verwender müssen mindestens 45 Zeichen verarbeiten können.
     """
 
+// Zuordnung aus Versichertendaten -> Versicherter -> Titel
+* name[Name].prefix
+  * ^definition = """
+      Namensteile vor dem Vornamen, z.B. akademischer Titel.
+      Wenn dieses Attribut zur Angabe des akademischen Titels verwendet wird, ist die Erweiterung prefix-qualifier mit dem Wert AC (academic) verpflichtend anzugeben.
+      Mehrere Titel werden durch Leerzeichen getrennt angegeben. 
+      Verwender müssen mindestens 20 Zeichen verarbeiten können.
+    """
+  * ^comment = """
+      Beispiele zur Verwendung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name.
+    """
+  * extension[prefix-qualifier]
+    * ^short = "Art des Namenspräfix"
+    * ^definition = """
+        Kodierte Angabe der Art des Namenspräfix zur technischen Unterscheidung zwischen verschieden Präfixen wie akademischem Titel.
+        Achtung: Für das Vorsatzwort ist das Attribut family.extension[vorsatzwort] zu verwenden.
+        Für akademische Titel ist verpflichtend die Kennzeichnung AC (academic) zu verwenden.
+      """
+    * ^comment = """
+        Beispiele zur Verwendung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name.
+      """
+
 // Zuordnung aus Versichertendaten -> Versicherter -> Geschlecht
 * gender 1..1
   * ^short = "Administrative Geschlechtsangabe (FHIR-Kodierung)"

@@ -500,7 +500,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.name:Name.prefix.extension:prefix-qualifier"
+            "map": "VSDMPatient.name:Name.prefix",
+            "comment": "Kennzeichnung des akademischen Titels mittels Erweiterung siehe Elementdokumentation."
           }
         ]
       },
@@ -2184,7 +2185,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",
-            "map": "VSDMPatient.name:Name.prefix.extension:prefix-qualifier"
+            "map": "VSDMPatient.name:Name.prefix",
+            "comment": "Kennzeichnung des akademischen Titels mittels Erweiterung siehe Elementdokumentation."
           }
         ]
       },
