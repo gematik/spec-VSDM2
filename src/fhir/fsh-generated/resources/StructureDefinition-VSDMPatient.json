@@ -1184,9 +1184,9 @@
       {
         "id": "Patient.name:Name.text",
         "path": "Patient.name.text",
-        "short": "Text representation of the full name",
-        "definition": "Specifies the entire name as it should be displayed e.g. on an application UI. This may be provided instead of or as well as the specific parts.",
-        "comment": "Can provide both a text representation and parts. Applications updating a name SHALL ensure that when both text and parts are present,  no content is included in the text that isn't found in a part.",
+        "short": "vollständiger zusammengesetzter Name",
+        "definition": "Zur besseren Lesbarkeit sowie zur leichteren Verarbeitung für Systeme, die die einzelnen Namensbestandteile nicht getrennt benötigen, SOLL dieses Attribut den gesamten Namen mit Titel, Vorsatzwort und Namenszusätzen enthalten.\nDie Bildungsregel ist dabei [Titel] [Vornamen] [Namenszusätze] [Vorsatzworte] [Nachnamen].",
+        "comment": "Hinweise und Beispiele siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name",
         "requirements": "A renderable, unencoded form.",
         "min": 0,
         "max": "1",
@@ -4825,6 +4825,13 @@
         "id": "Patient.name:Name",
         "path": "Patient.name",
         "sliceName": "Name"
+      },
+      {
+        "id": "Patient.name:Name.text",
+        "path": "Patient.name.text",
+        "short": "vollständiger zusammengesetzter Name",
+        "definition": "Zur besseren Lesbarkeit sowie zur leichteren Verarbeitung für Systeme, die die einzelnen Namensbestandteile nicht getrennt benötigen, SOLL dieses Attribut den gesamten Namen mit Titel, Vorsatzwort und Namenszusätzen enthalten.\nDie Bildungsregel ist dabei [Titel] [Vornamen] [Namenszusätze] [Vorsatzworte] [Nachnamen].",
+        "comment": "Hinweise und Beispiele siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name"
       },
       {
         "id": "Patient.name:Name.family",

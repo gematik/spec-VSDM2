@@ -38,6 +38,17 @@ Description: "Der VSDMPatient bildet einen Versicherten im Versichertenstammdate
       Hinweise insbesondere zur Angabe unvollständiger Datumswerte siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Geburtsdatum.
     """
 
+// Bildung aus den in der Folge spezifizierten Einzelwerten
+* name[Name].text
+  * ^short = "vollständiger zusammengesetzter Name"
+  * ^definition = """
+      Zur besseren Lesbarkeit sowie zur leichteren Verarbeitung für Systeme, die die einzelnen Namensbestandteile nicht getrennt benötigen, SOLL dieses Attribut den gesamten Namen mit Titel, Vorsatzwort und Namenszusätzen enthalten.
+      Die Bildungsregel ist dabei [Titel] [Vornamen] [Namenszusätze] [Vorsatzworte] [Nachnamen].
+    """
+  * ^comment = """
+      Hinweise und Beispiele siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name
+    """
+
 // Zuordnung aus Versichertendaten -> Versicherter -> Nachname, Vorsatzwort und Namenszusatz
 * name[Name].family
   * ^comment = """

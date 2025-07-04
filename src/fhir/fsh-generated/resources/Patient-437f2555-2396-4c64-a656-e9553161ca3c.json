@@ -9,18 +9,40 @@
   "name": [
     {
       "use": "official",
-      "family": "Königstein",
+      "prefix": [
+        "Prof. Dr. med. Dr. rer. nat."
+      ],
+      "_prefix": [
+        {
+          "extension": [
+            {
+              "valueCode": "AC",
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
+            }
+          ]
+        }
+      ],
+      "family": "Graf von und zu Königstein",
       "_family": {
         "extension": [
           {
+            "url": "http://fhir.de/StructureDefinition/humanname-namenszusatz",
+            "valueString": "Graf"
+          },
+          {
             "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
             "valueString": "Königstein"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+            "valueString": "von und zu"
           }
         ]
       },
       "given": [
         "Ludger"
-      ]
+      ],
+      "text": "Prof. Dr. med. Dr. rer. nat. Ludger Graf von und zu Königstein"
     }
   ],
   "identifier": [
