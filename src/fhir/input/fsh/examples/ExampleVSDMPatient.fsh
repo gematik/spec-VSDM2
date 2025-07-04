@@ -7,13 +7,13 @@ Usage: #example
 
 * identifier[KVNR].value = "T024791905"
 
-* name[Name].family = "Fernández"
-* name[Name].family.extension[nachname].url = "http://hl7.org/fhir/StructureDefinition/humanname-own-name"
-* name[Name].family.extension[nachname].valueString = "Fernández"
-* name[Name].given = "Maria"
-
-* name[Name].prefix = "Dr."
-* name[Name].prefix.extension[prefix-qualifier].valueCode = #AC
+* name[Name]
+  * family = "Fernández"
+    * extension[nachname].valueString = "Fernández"
+  * given = "Maria"
+  * prefix = "Dr."
+    * extension[prefix-qualifier].valueCode = #AC
+  * text = "Dr. Maria Fernández"
 
 
 * gender = #female
@@ -38,10 +38,16 @@ Usage: #example
 
 * identifier[KVNR].value = "T024791905"
 
-* name[Name].family = "Königstein"
-* name[Name].family.extension[nachname].url = "http://hl7.org/fhir/StructureDefinition/humanname-own-name"
-* name[Name].family.extension[nachname].valueString = "Königstein"
-* name[Name].given = "Ludger"
+* name[Name]
+  * family = "Graf von und zu Königstein"
+    * extension[namenszusatz].valueString = "Graf"
+    * extension[nachname].valueString = "Königstein"
+    * extension[vorsatzwort].valueString = "von und zu"
+  * given = "Ludger"
+  * prefix = "Prof. Dr. med. Dr. rer. nat."
+    * extension[prefix-qualifier].valueCode = #AC
+  * text = "Prof. Dr. med. Dr. rer. nat. Ludger Graf von und zu Königstein"
+
 * gender = #male
 * birthDate = "1935-06-22"
 * address.type = #both
