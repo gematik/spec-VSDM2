@@ -1255,7 +1255,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:wop"
+            "map": "VSDMCoverage.extension:WOP",
+            "comment": "Die Schlüsseltabelle wird unverändert abgebildet."
           }
         ]
       },
@@ -2633,7 +2634,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:wop"
+            "map": "VSDMCoverage.extension:WOP",
+            "comment": "Die Schlüsseltabelle wird unverändert abgebildet."
           }
         ]
       },
