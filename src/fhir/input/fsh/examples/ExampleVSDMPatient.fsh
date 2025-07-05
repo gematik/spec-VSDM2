@@ -25,7 +25,7 @@ Usage: #example
   * city = "Berlin"
   * postalCode = "12345"
   * country = $cs-iso3166-1-2#DE
-    //* extension[Laenderkennzeichen].valueCoding = $anlage-8-laenderkennzeichen#D "Deutschland"
+    * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"
 
 
 Instance: VSDMPatientSample
@@ -58,11 +58,11 @@ Usage: #example
   * city = "Esens"
   * postalCode = "26427"
   * country = $cs-iso3166-1-2#DE
-    * extension[Laenderkennzeichen].valueCoding = $anlage-8-laenderkennzeichen#D "Deutschland"
+    * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"
 * address[PostfachAdresse]
   * line[+] = "Postfach 123456"
     * extension[Postfach].valueString = "Postfach 12345"
   * city = "Esens"
   * postalCode = "26429"
   * country = $cs-iso3166-1-2#DE
-    * extension[Laenderkennzeichen].valueCoding = $anlage-8-laenderkennzeichen#D "Deutschland"
+    * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"
