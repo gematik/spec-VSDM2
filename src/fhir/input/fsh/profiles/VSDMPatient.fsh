@@ -11,10 +11,6 @@ Description: "Der VSDMPatient bildet einen Versicherten im Versichertenstammdate
   * ^short = "Versicherter im VSDM"
   * ^definition = "Der VSDMPatient bildet einen Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0 ab."
 
-* meta 1..1
-* meta.profile 1..1
-* meta.profile = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient" (exactly)
-
 // Zuordnung aus Versichertendaten -> Versicherter -> VersichertenID
 * identifier[KVNR] 1..1
   * ^short = "Versichertennummer (KVNR)"

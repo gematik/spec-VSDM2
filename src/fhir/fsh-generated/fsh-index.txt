@@ -7,7 +7,7 @@ CodeSystem-vsdmkostentraeger-angabestatus-cs.json           VSDMKostentraegerAng
 Coverage-2d4da53a-413a-48fe-b908-2e67b5761523.json          VSDMCoverageSample               Instance    examples/ExampleVSDMCoverage.fsh                 2 - 9
 Coverage-VALID-413a-48fe-b908-2e67b5761523.json             VALID-VSDMCoverageSample         Instance    examples/ExampleVSDMCoverage.fsh                 13 - 19
 OperationOutcome-example-vsdm-operationoutcome.json         ExampleOperationOutcome          Instance    examples/ExampleOperationOutcome.fsh             1 - 15
-Patient-437f2555-2396-4c64-a656-e9553161ca3c.json           VSDMPatientSample                Instance    examples/ExampleVSDMPatient.fsh                  31 - 68
+Patient-437f2555-2396-4c64-a656-e9553161ca3c.json           VSDMPatientSample                Instance    examples/ExampleVSDMPatient.fsh                  30 - 66
 Patient-Valid-437f2555-2396-4c64-a656-e9553161ca3c.json     ValidExampleVSDMPatient          Instance    examples/ExampleVSDMPatient.fsh                  1 - 27
 StructureDefinition-VSDDatensatz.json                       VSDDatensatz                     Logical     logicalmodel/VSDDatensatz.fsh                    1 - 304
 StructureDefinition-VSDMLaenderkennzeichen.json             VSDMLaenderkennzeichen           Extension   extensions/VSDMLaenderkennzeichen.fsh            1 - 10

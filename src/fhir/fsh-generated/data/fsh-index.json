@@ -68,8 +68,8 @@
     "fshName": "VSDMPatientSample",
     "fshType": "Instance",
     "fshFile": "examples/ExampleVSDMPatient.fsh",
-    "startLine": 31,
-    "endLine": 68
+    "startLine": 30,
+    "endLine": 66
   },
   {
     "outputFile": "Patient-Valid-437f2555-2396-4c64-a656-e9553161ca3c.json",
@@ -101,7 +101,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 201
+    "endLine": 197
   },
   {
     "outputFile": "StructureDefinition-vsdm-bundle.json",
