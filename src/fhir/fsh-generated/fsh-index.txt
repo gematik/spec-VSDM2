@@ -7,12 +7,15 @@ CodeSystem-vsdmkostentraeger-angabestatus-cs.json           VSDMKostentraegerAng
 Coverage-2d4da53a-413a-48fe-b908-2e67b5761523.json          VSDMCoverageSample               Instance    examples/ExampleVSDMCoverage.fsh                 2 - 9
 Coverage-VALID-413a-48fe-b908-2e67b5761523.json             VALID-VSDMCoverageSample         Instance    examples/ExampleVSDMCoverage.fsh                 13 - 19
 OperationOutcome-example-vsdm-operationoutcome.json         ExampleOperationOutcome          Instance    examples/ExampleOperationOutcome.fsh             1 - 15
+Organization-2a6924bf-6e6a-4ef3-b79f-c2138c10712f.json      VSDMHauptkostentraeger           Instance    examples/ExampleVSDMPayorOrganization.fsh        1 - 12
+Organization-d1f7b106-7f99-40d6-9f21-50b051301127.json      VSDMAbrechnenderKostentrarger    Instance    examples/ExampleVSDMPayorOrganization.fsh        14 - 37
 Patient-437f2555-2396-4c64-a656-e9553161ca3c.json           VSDMPatientSample                Instance    examples/ExampleVSDMPatient.fsh                  30 - 66
 Patient-Valid-437f2555-2396-4c64-a656-e9553161ca3c.json     ValidExampleVSDMPatient          Instance    examples/ExampleVSDMPatient.fsh                  1 - 27
 StructureDefinition-VSDDatensatz.json                       VSDDatensatz                     Logical     logicalmodel/VSDDatensatz.fsh                    1 - 304
 StructureDefinition-VSDMCoverage.json                       VSDMCoverage                     Profile     profiles/VSDMCoverage.fsh                        1 - 63
 StructureDefinition-VSDMLaenderkennzeichen.json             VSDMLaenderkennzeichen           Extension   extensions/VSDMLaenderkennzeichen.fsh            1 - 10
-StructureDefinition-VSDMPatient.json                        VSDMPatient                      Profile     profiles/VSDMPatient.fsh                         1 - 197
+StructureDefinition-VSDMPatient.json                        VSDMPatient                      Profile     profiles/VSDMPatient.fsh                         1 - 196
+StructureDefinition-VSDMPayorOrganization.json              VSDMPayorOrganization            Profile     profiles/VSDMPayorOrganization.fsh               1 - 77
 StructureDefinition-vsdm-bundle.json                        VSDMBundle                       Profile     profiles/VSDMBundle.fsh                          1 - 31
 StructureDefinition-vsdm-composition.json                   VSDMComposition                  Profile     profiles/VSDMComposition.fsh                     1 - 20
 StructureDefinition-vsdm-dmp-kennzeichen-basis-ex.json      VSDMDMPKennzeichenBasisEX        Extension   extensions/VSDMDMPKennzeichenBasis.fsh           1 - 12

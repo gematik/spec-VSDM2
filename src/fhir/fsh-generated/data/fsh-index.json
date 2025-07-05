@@ -64,6 +64,22 @@
     "endLine": 15
   },
   {
+    "outputFile": "Organization-2a6924bf-6e6a-4ef3-b79f-c2138c10712f.json",
+    "fshName": "VSDMHauptkostentraeger",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleVSDMPayorOrganization.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "Organization-d1f7b106-7f99-40d6-9f21-50b051301127.json",
+    "fshName": "VSDMAbrechnenderKostentrarger",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleVSDMPayorOrganization.fsh",
+    "startLine": 14,
+    "endLine": 37
+  },
+  {
     "outputFile": "Patient-437f2555-2396-4c64-a656-e9553161ca3c.json",
     "fshName": "VSDMPatientSample",
     "fshType": "Instance",
@@ -109,7 +125,15 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 197
+    "endLine": 196
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMPayorOrganization.json",
+    "fshName": "VSDMPayorOrganization",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMPayorOrganization.fsh",
+    "startLine": 1,
+    "endLine": 77
   },
   {
     "outputFile": "StructureDefinition-vsdm-bundle.json",
