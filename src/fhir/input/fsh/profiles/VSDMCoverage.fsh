@@ -29,6 +29,22 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
   * ^requirements = """
       Das Kennzeichen WOP ist gemäss § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemäss Artikel 2 § 2 Abs. 2 des Gesetzes zur Einführung des Wohnortprinzips bei Honorarvereinbarungen für Ärzte und Zahnärzte und zur Krankenversichertenkarte gemäss § 291 Abs. 2 Fünftes Sozialgesetzbuch (SGB V) erforderlich.
     """
+// TODO ggf. eigenes ValueSet einführen, um Werte 00, 50, 55, 60, 61, 62 auszuschließen?
+
+// Zuordnung aus Versicherungsdaten -> BesonderePersonengruppe
+* extension contains $besondere-personengruppe named besonderePersonengruppe 0..1
+* extension[besonderePersonengruppe]
+  * ^short = "Besondere Personengruppe"
+  * ^definition = """
+      Gibt die Zugehörigkeit des Versicherten zu einer besonderen Personengruppe an.
+    """
+  * ^comment = """
+      Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html
+    """
+  * ^requirements = """
+      Die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.
+    """
+// TODO ggf. eigenes ValueSet einführen, um Wert 00 auszuschließen? Texte sind auch unzureichend, führende Null?
 
 // Zuordnung aus Versicherungsdaten -> [Abrechnender]Kostentraeger 
 * payor
@@ -45,7 +61,6 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
 
 * extension contains
     $versichertenart named versichertenart 1..1 MS and
-    $besondere-personengruppe named besonderePersonengruppe 0..1 MS and
     $kostenerstattung named gkv-kostenerstattung 0..1 MS and
     $ruhender-leistungsanspruch named ruhenderLeistungsanspruch 1..1 MS and
     $zuzahlungsstatus named zuzahlungsstatus 1..1 MS and
