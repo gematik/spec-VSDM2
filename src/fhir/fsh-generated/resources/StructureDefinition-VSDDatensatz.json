@@ -10,9 +10,9 @@
   "mapping": [
     {
       "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-      "name": "VSD-Datensatz Fachliches Mapping Coverage",
+      "name": "Mapping VSD-Datensatz zu Coverage",
       "uri": "VSDMCoverage",
-      "comment": "Mapping des Fachmodells aus GEM_VSDM2_LOG_VSD_Confirmation auf das FHIR-Profil Coverage"
+      "comment": "Zuordnung der Versicherungsinformationen des VSD-Datensatzes zum FHIR-Profil VSDMCoverage"
     },
     {
       "identity": "VSD-Datensatz-Fachliches-Mapping-Patient",

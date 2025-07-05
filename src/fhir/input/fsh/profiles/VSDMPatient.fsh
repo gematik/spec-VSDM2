@@ -3,7 +3,7 @@ Parent: TIPatient
 Title: "Versicherter im VSDM"
 Description: "Der VSDMPatient bildet einen Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0 ab."
 
-// Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen. Ausnahme: 
+// Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen. 
 
 // Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
