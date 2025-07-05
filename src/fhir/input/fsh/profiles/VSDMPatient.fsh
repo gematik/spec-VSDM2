@@ -141,7 +141,6 @@ Description: "Der VSDMPatient bildet einen Versicherten im Versichertenstammdate
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = type
   * ^slicing.rules = #open
-  * ^slicing.description = "foo"
 * address contains StrassenAdresse 0..1 and PostfachAdresse 0..1
 
 // Zuordnung aus Versichertendaten -> Versicherter -> PostfachAdresse

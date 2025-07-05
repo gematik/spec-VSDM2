@@ -3400,8 +3400,7 @@
               "path": "type"
             }
           ],
-          "rules": "open",
-          "description": "foo"
+          "rules": "open"
         },
         "short": "An address for the individual",
         "definition": "An address for the individual.",
@@ -7476,8 +7475,7 @@
               "path": "type"
             }
           ],
-          "rules": "open",
-          "description": "foo"
+          "rules": "open"
         }
       },
       {
