@@ -88,6 +88,14 @@
     "endLine": 304
   },
   {
+    "outputFile": "StructureDefinition-VSDMCoverage.json",
+    "fshName": "VSDMCoverage",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMCoverage.fsh",
+    "startLine": 1,
+    "endLine": 63
+  },
+  {
     "outputFile": "StructureDefinition-VSDMLaenderkennzeichen.json",
     "fshName": "VSDMLaenderkennzeichen",
     "fshType": "Extension",
@@ -118,14 +126,6 @@
     "fshFile": "profiles/VSDMComposition.fsh",
     "startLine": 1,
     "endLine": 20
-  },
-  {
-    "outputFile": "StructureDefinition-vsdm-coverage.json",
-    "fshName": "VSDMCoverage",
-    "fshType": "Profile",
-    "fshFile": "profiles/VSDMCoverage.fsh",
-    "startLine": 1,
-    "endLine": 50
   },
   {
     "outputFile": "StructureDefinition-vsdm-dmp-kennzeichen-basis-ex.json",

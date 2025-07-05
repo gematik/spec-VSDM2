@@ -2,13 +2,11 @@ Mapping: VSDDatensatzFachlichesMappingCoverage
 Source: VSDDatensatz
 Target: "VSDMCoverage"
 Id: VSD-Datensatz-Fachliches-Mapping-Coverage
-Title: "VSD-Datensatz Fachliches Mapping Coverage"
-Description: "Mapping des Fachmodells aus GEM_VSDM2_LOG_VSD_Confirmation auf das FHIR-Profil Coverage"
+Title: "Mapping VSD-Datensatz zu Coverage"
+Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes zum FHIR-Profil VSDMCoverage"
 
-// Metadaten
+// Die Reihenfolge der Elemente in diesem Mapping folgt der Reihenfolge der Elemente im logischen Modell.
 
-
-// Versicherungsinformationen
 * Versicherungsdaten
   * Kostentraeger
     * Name -> "VSDMCoverage.payor"

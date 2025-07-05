@@ -1,10 +1,23 @@
 Profile: VSDMCoverage
-Parent: coverage-de-basis
-Id: vsdm-coverage
-* ^url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+Parent: CoverageDeBasis
+Title: "Versicherungsdaten"
+Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0"
+
+// Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen. 
+
+// Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
-* meta 1..1
-* meta.profile = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage" (exactly)
+* . 
+  * ^short = "Versicherungsdaten"
+  * ^definition = """
+      Angaben zum Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0
+    """
+  * ^comment = """
+      Die Struktur wird unabhängig von der Versicherungsart (GKV/PKV) definiert.
+    """
+
+// ---
+
 * status = #active (exactly)
 * type 1..1
 * type from VSDMVersicherungsartVS (required)
