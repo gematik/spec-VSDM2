@@ -176,6 +176,14 @@
     "endLine": 11
   },
   {
+    "outputFile": "ValueSet-VSDMKostentraegerTypVS.json",
+    "fshName": "VSDMKostentraegerTypVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMKostentraegerTypVS.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
     "outputFile": "ValueSet-vsdm-errorcode-vs.json",
     "fshName": "VSDMErrorcodeVS",
     "fshType": "ValueSet",

@@ -21,6 +21,7 @@ StructureDefinition-vsdm-kostentraeger-laendercode-ex.json  VSDMKostentraegerLae
 StructureDefinition-vsdm-operationoutcome.json              VSDMOperationOutcome             Profile     profiles/VSDMOperationOutcome.fsh                1 - 34
 StructureDefinition-vsdm-wahltarife-ex.json                 VSDMWahltarifeEX                 Extension   extensions/VSDMWahltarifeEX.fsh                  1 - 36
 StructureDefinition-vsdmkostentraeger-angabestatus-ex.json  VSDMKostentraegerAngabestatusEX  Extension   extensions/VSDMKostentraegerAngabestatusEX.fsh   1 - 11
+ValueSet-VSDMKostentraegerTypVS.json                        VSDMKostentraegerTypVS           ValueSet    valuesets/VSDMKostentraegerTypVS.fsh             1 - 8
 ValueSet-vsdm-errorcode-vs.json                             VSDMErrorcodeVS                  ValueSet    valuesets/VSDMErrorcodeVS.fsh                    1 - 8
 ValueSet-vsdm-versicherungsart-vs.json                      VSDMVersicherungsartVS           ValueSet    valuesets/VSDMVersicherungsartVS.fsh             1 - 7
 ValueSet-vsdm-wahltarife-vs.json                            VSDMWahltarifeVS                 ValueSet    valuesets/VSDMWahltarifeVS.fsh                   1 - 7

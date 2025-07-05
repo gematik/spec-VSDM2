@@ -6,6 +6,7 @@ Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $loinc = http://loinc.org
 Alias: $versichertenart-de-basis-cs = http://fhir.de/CodeSystem/versicherungsart-de-basis
 Alias: $operationoutcomecodes = http://terminology.hl7.org/CodeSystem/operation-outcome
+Alias: $organizationtype = http://terminology.hl7.org/CodeSystem/organization-type
 
 // in Patient
 Alias: $identifier-kvid-10 = http://fhir.de/StructureDefinition/identifier-kvid-10
