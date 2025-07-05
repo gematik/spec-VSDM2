@@ -210,17 +210,18 @@
         "status": "active",
         "extension": [
           {
+            "url": "http://fhir.de/StructureDefinition/gkv/wop",
+            "valueCoding": {
+              "code": "17",
+              "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+              "display": "Niedersachsen"
+            }
+          },
+          {
             "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
             "valueCoding": {
               "code": "1",
               "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS"
-            }
-          },
-          {
-            "url": "http://fhir.de/StructureDefinition/gkv/wop",
-            "valueCoding": {
-              "code": "72",
-              "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP"
             }
           },
           {
@@ -332,6 +333,16 @@
             "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMWahltarifeEX"
           }
         ],
+        "payor": [
+          {
+            "reference": "Organization/2a6924bf-6e6a-4ef3-b79f-c2138c10712f",
+            "display": "Hauptkostenträger"
+          },
+          {
+            "reference": "Organization/d1f7b106-7f99-40d6-9f21-50b051301127",
+            "display": "abrechnender Kostenträger"
+          }
+        ],
         "type": {
           "coding": [
             {
@@ -346,17 +357,7 @@
         },
         "beneficiary": {
           "reference": "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
-        },
-        "payor": [
-          {
-            "reference": "Organization/2a6924bf-6e6a-4ef3-b79f-c2138c10712f",
-            "display": "Hauptkostenträger"
-          },
-          {
-            "reference": "Organization/d1f7b106-7f99-40d6-9f21-50b051301127",
-            "display": "abrechnender Kostenträger"
-          }
-        ]
+        }
       }
     },
     {

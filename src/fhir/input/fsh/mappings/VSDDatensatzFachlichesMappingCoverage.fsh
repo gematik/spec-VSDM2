@@ -29,7 +29,9 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes zum F
 
     * Kostentraegerkennung -> "VSDMPayorOrganization.identifier:IKNR"
 
-  * WOP -> "VSDMCoverage.extension:wop"
+  * WOP -> "VSDMCoverage.extension:WOP"
+    "Die Schlüsseltabelle wird unverändert abgebildet."
+
   * BesonderePersonengruppe -> "VSDMCoverage.extension:besonderePersonengruppe"
   * Zuzahlungsstatus -> "VSDMCoverage.extension:zuzahlungsstatus"
     * Status -> "VSDMCoverage.extension:zuzahlungsstatus.extension:status"

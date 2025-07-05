@@ -21,8 +21,8 @@ Usage: #example
   * line[+] = "Blumenweg 14"
     * extension[Hausnummer].valueString = "14"
     * extension[Strasse].valueString = "Blumenweg"
-  * city = "Berlin"
-  * postalCode = "12345"
+  * city = "Esens"
+  * postalCode = "26427"
   * country = $cs-iso3166-1-2#DE
     * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"
 
