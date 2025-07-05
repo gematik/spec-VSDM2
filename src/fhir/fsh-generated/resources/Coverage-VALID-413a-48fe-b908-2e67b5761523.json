@@ -127,15 +127,6 @@
       "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMWahltarifeEX"
     }
   ],
-  "payor": [
-    {
-      "identifier": {
-        "system": "http://fhir.de/sid/arge-ik/iknr",
-        "value": "12345678"
-      },
-      "display": "Test GKV Krankenkasse"
-    }
-  ],
   "type": {
     "coding": [
       {
@@ -150,5 +141,15 @@
   },
   "beneficiary": {
     "reference": "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
-  }
+  },
+  "payor": [
+    {
+      "reference": "Organization/2a6924bf-6e6a-4ef3-b79f-c2138c10712f",
+      "display": "Hauptkostenträger"
+    },
+    {
+      "reference": "Organization/d1f7b106-7f99-40d6-9f21-50b051301127",
+      "display": "abrechnender Kostenträger"
+    }
+  ]
 }
