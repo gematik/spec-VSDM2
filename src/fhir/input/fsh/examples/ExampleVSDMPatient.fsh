@@ -3,7 +3,6 @@ InstanceOf: VSDMPatient
 Title: "Beispiel-Patient für VSDM 2.0"
 Usage: #example
 * id = "Valid-437f2555-2396-4c64-a656-e9553161ca3c"
-* meta.profile = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
 
 * identifier[KVNR].value = "T024791905"
 
@@ -33,7 +32,6 @@ InstanceOf: VSDMPatient
 Title: "Patient for VSDM 2"
 Usage: #example
 * id = "437f2555-2396-4c64-a656-e9553161ca3c"
-* meta.profile = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
 
 * identifier[KVNR].value = "T024791905"
 
