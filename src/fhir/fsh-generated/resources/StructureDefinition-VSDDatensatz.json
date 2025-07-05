@@ -1290,7 +1290,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:besonderePersonengruppe"
+            "map": "VSDMCoverage.extension:besonderePersonengruppe",
+            "comment": "Die Schlüsseltabelle wird unverändert abgebildet."
           }
         ]
       },
@@ -2654,7 +2655,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:besonderePersonengruppe"
+            "map": "VSDMCoverage.extension:besonderePersonengruppe",
+            "comment": "Die Schlüsseltabelle wird unverändert abgebildet."
           }
         ]
       },

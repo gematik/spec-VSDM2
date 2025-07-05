@@ -33,6 +33,8 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes zum F
     "Die Schlüsseltabelle wird unverändert abgebildet."
 
   * BesonderePersonengruppe -> "VSDMCoverage.extension:besonderePersonengruppe"
+    "Die Schlüsseltabelle wird unverändert abgebildet."
+
   * Zuzahlungsstatus -> "VSDMCoverage.extension:zuzahlungsstatus"
     * Status -> "VSDMCoverage.extension:zuzahlungsstatus.extension:status"
     * GueltigBis -> "VSDMCoverage.extension:zuzahlungsstatus.extension:gueltigBis"
