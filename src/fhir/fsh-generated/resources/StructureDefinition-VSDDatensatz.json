@@ -975,6 +975,13 @@
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.payor",
+            "comment": "Der Haupt-Kostenträger wird als Referenz auf eine VSDMPayorOrganization mit dem Typ \"ins\" (Haupt-Kostenträger) abgebildet."
+          }
         ]
       },
       {
@@ -1007,7 +1014,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.payor"
+            "map": "VSDMPayorOrganization.name"
           }
         ]
       },
@@ -1041,7 +1048,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-kostentraegerlaendercode"
+            "map": "VSDMPayorOrganization.address.country",
+            "comment": "Hinweise zur Befüllung der Extensions beachten."
           }
         ]
       },
@@ -1075,7 +1083,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.payor.identifier"
+            "map": "VSDMPayorOrganization.identifier:IKNR"
           }
         ]
       },
@@ -1104,6 +1112,13 @@
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.payor",
+            "comment": "Der abrechnende Kostenträger wird als Referenz auf eine VSDMPayorOrganization mit dem Typ \"pay\" (abrechnender Kostenträger) abgebildet."
           }
         ]
       },
@@ -1137,7 +1152,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.payor"
+            "map": "VSDMPayorOrganization.name"
           }
         ]
       },
@@ -1171,7 +1186,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-kostentraegerlaendercode"
+            "map": "VSDMPayorOrganization.address.country",
+            "comment": "Hinweise zur Befüllung der Extensions beachten."
           }
         ]
       },
@@ -1205,7 +1221,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.payor.extension:abrechnendeIK"
+            "map": "VSDMPayorOrganization.identifier:IKNR"
           }
         ]
       },
@@ -2457,6 +2473,13 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.payor",
+            "comment": "Der Haupt-Kostenträger wird als Referenz auf eine VSDMPayorOrganization mit dem Typ \"ins\" (Haupt-Kostenträger) abgebildet."
+          }
         ]
       },
       {
@@ -2474,7 +2497,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.payor"
+            "map": "VSDMPayorOrganization.name"
           }
         ]
       },
@@ -2493,7 +2516,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-kostentraegerlaendercode"
+            "map": "VSDMPayorOrganization.address.country",
+            "comment": "Hinweise zur Befüllung der Extensions beachten."
           }
         ]
       },
@@ -2512,7 +2536,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.payor.identifier"
+            "map": "VSDMPayorOrganization.identifier:IKNR"
           }
         ]
       },
@@ -2526,6 +2550,13 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
+            "map": "VSDMCoverage.payor",
+            "comment": "Der abrechnende Kostenträger wird als Referenz auf eine VSDMPayorOrganization mit dem Typ \"pay\" (abrechnender Kostenträger) abgebildet."
           }
         ]
       },
@@ -2544,7 +2575,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.payor"
+            "map": "VSDMPayorOrganization.name"
           }
         ]
       },
@@ -2563,7 +2594,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-kostentraegerlaendercode"
+            "map": "VSDMPayorOrganization.address.country",
+            "comment": "Hinweise zur Befüllung der Extensions beachten."
           }
         ]
       },
@@ -2582,7 +2614,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.payor.extension:abrechnendeIK"
+            "map": "VSDMPayorOrganization.identifier:IKNR"
           }
         ]
       },

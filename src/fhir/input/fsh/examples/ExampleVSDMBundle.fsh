@@ -12,3 +12,7 @@ Usage: #example
 * entry[VSDMPatient][=].resource = VSDMPatientSample
 * entry[VSDMCoverage][+].fullUrl = "https://gematik.de/fhir/Coverage/2d4da53a-413a-48fe-b908-2e67b5761523"
 * entry[VSDMCoverage][=].resource = VSDMCoverageSample
+* entry[VSDMPayorOrganization][+].fullUrl = "https://gematik.de/fhir/Organization/2a6924bf-6e6a-4ef3-b79f-c2138c10712f"
+* entry[VSDMPayorOrganization][=].resource = VSDMHauptkostentraeger
+* entry[VSDMPayorOrganization][+].fullUrl = "https://gematik.de/fhir/Organization/d1f7b106-7f99-40d6-9f21-50b051301127"
+* entry[VSDMPayorOrganization][=].resource = VSDMAbrechnenderKostentrarger

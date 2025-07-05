@@ -5,7 +5,7 @@
     "fshType": "Instance",
     "fshFile": "examples/ExampleVSDMBundle.fsh",
     "startLine": 1,
-    "endLine": 14
+    "endLine": 18
   },
   {
     "outputFile": "CodeSystem-vsdm-errorcode-cs.json",
@@ -69,15 +69,15 @@
     "fshType": "Instance",
     "fshFile": "examples/ExampleVSDMPayorOrganization.fsh",
     "startLine": 1,
-    "endLine": 12
+    "endLine": 11
   },
   {
     "outputFile": "Organization-d1f7b106-7f99-40d6-9f21-50b051301127.json",
     "fshName": "VSDMAbrechnenderKostentrarger",
     "fshType": "Instance",
     "fshFile": "examples/ExampleVSDMPayorOrganization.fsh",
-    "startLine": 14,
-    "endLine": 37
+    "startLine": 13,
+    "endLine": 35
   },
   {
     "outputFile": "Patient-437f2555-2396-4c64-a656-e9553161ca3c.json",
@@ -109,7 +109,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
-    "endLine": 63
+    "endLine": 62
   },
   {
     "outputFile": "StructureDefinition-VSDMLaenderkennzeichen.json",
@@ -141,7 +141,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMBundle.fsh",
     "startLine": 1,
-    "endLine": 31
+    "endLine": 34
   },
   {
     "outputFile": "StructureDefinition-vsdm-composition.json",

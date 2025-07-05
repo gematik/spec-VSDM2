@@ -8,14 +8,27 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes zum F
 // Die Reihenfolge der Elemente in diesem Mapping folgt der Reihenfolge der Elemente im logischen Modell.
 
 * Versicherungsdaten
-  * Kostentraeger
-    * Name -> "VSDMCoverage.payor"
-    * Kostentraegerlaendercode -> "VSDMCoverage.extension:vsdm-kostentraegerlaendercode"
-    * Kostentraegerkennung -> "VSDMCoverage.payor.identifier"
-  * AbrechnenderKostentraeger
-    * Name -> "VSDMCoverage.payor"
-    * Kostentraegerlaendercode -> "VSDMCoverage.extension:vsdm-kostentraegerlaendercode"
-    * Kostentraegerkennung -> "VSDMCoverage.payor.extension:abrechnendeIK"
+
+  * Kostentraeger -> "VSDMCoverage.payor"
+    "Der Haupt-Kostenträger wird als Referenz auf eine VSDMPayorOrganization mit dem Typ \"ins\" (Haupt-Kostenträger) abgebildet."
+
+    * Name -> "VSDMPayorOrganization.name"
+
+    * Kostentraegerlaendercode -> "VSDMPayorOrganization.address.country"
+      "Hinweise zur Befüllung der Extensions beachten."
+
+    * Kostentraegerkennung -> "VSDMPayorOrganization.identifier:IKNR"
+
+  * AbrechnenderKostentraeger -> "VSDMCoverage.payor"
+    "Der abrechnende Kostenträger wird als Referenz auf eine VSDMPayorOrganization mit dem Typ \"pay\" (abrechnender Kostenträger) abgebildet."
+  
+    * Name -> "VSDMPayorOrganization.name"
+
+    * Kostentraegerlaendercode -> "VSDMPayorOrganization.address.country"
+      "Hinweise zur Befüllung der Extensions beachten."
+
+    * Kostentraegerkennung -> "VSDMPayorOrganization.identifier:IKNR"
+
   * WOP -> "VSDMCoverage.extension:wop"
   * BesonderePersonengruppe -> "VSDMCoverage.extension:besonderePersonengruppe"
   * Zuzahlungsstatus -> "VSDMCoverage.extension:zuzahlungsstatus"

@@ -22,10 +22,13 @@ Id: vsdm-bundle
 * entry contains
     DocumentInformation 1..1 and
     VSDMPatient 1..1 and
-    VSDMCoverage 1..1
+    VSDMCoverage 1..1 and 
+    VSDMPayorOrganization 1..2  
 * entry[DocumentInformation].resource 1..
 * entry[DocumentInformation].resource only VSDMComposition
 * entry[VSDMPatient].resource 1..
 * entry[VSDMPatient].resource only VSDMPatient
 * entry[VSDMCoverage].resource 1..
 * entry[VSDMCoverage].resource only VSDMCoverage
+* entry[VSDMPayorOrganization].resource 1..
+* entry[VSDMPayorOrganization].resource only VSDMPayorOrganization

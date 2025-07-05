@@ -16,6 +16,11 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
       Die Struktur wird unabhängig von der Versicherungsart (GKV/PKV) definiert.
     """
 
+// Zuordnung aus Versicherungsdaten -> [Abrechnender]Kostentraeger 
+* payor
+  * ^short = "Kostenträger"
+// FIXME: Typreferenzen und Kardinalitäten von Haupt- und abrechnendem Kostenträger müssen noch in das Profil eingearbeitet werden
+
 // ---
 
 * status = #active (exactly)
@@ -55,10 +60,3 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
 * period 1..1
   * start 1..1
   * end 1..1
-* payor 1..1
-  * extension contains $AbrechnendeIK named abrechnendeIK 0..1
-  * identifier 1..1
-  * identifier only IdentifierIknr
-  * display 1..1
-    * ^short = "Name des Kostenträgers"
-
