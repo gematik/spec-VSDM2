@@ -6,7 +6,6 @@
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
     ]
   },
-  "status": "active",
   "extension": [
     {
       "url": "http://fhir.de/StructureDefinition/gkv/wop",
@@ -39,28 +38,6 @@
           }
         }
       ]
-    },
-    {
-      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerAngabestatusEX",
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "dmp",
-            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerAngabestatusCS"
-          },
-          {
-            "code": "wahltarife",
-            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerAngabestatusCS"
-          }
-        ]
-      }
-    },
-    {
-      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerLaendercodeEX",
-      "valueCoding": {
-        "system": "http://hl7.org/fhir/CodeSystem/iso3166-1-2",
-        "code": "DE"
-      }
     },
     {
       "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe",
@@ -126,26 +103,16 @@
         }
       ],
       "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung"
-    },
-    {
-      "extension": [
-        {
-          "url": "wahltarif-zeitraum",
-          "valuePeriod": {
-            "start": "2022-05-05"
-          }
-        },
-        {
-          "url": "wahltarif",
-          "valueCoding": {
-            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMWahltarifeCS",
-            "code": "2"
-          }
-        }
-      ],
-      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMWahltarifeEX"
     }
   ],
+  "status": "active",
+  "type": {
+    "coding": [
+      {
+        "code": "GKV"
+      }
+    ]
+  },
   "payor": [
     {
       "reference": "Organization/2a6924bf-6e6a-4ef3-b79f-c2138c10712f",
@@ -156,14 +123,6 @@
       "display": "abrechnender Kostenträger"
     }
   ],
-  "type": {
-    "coding": [
-      {
-        "code": "GKV",
-        "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis"
-      }
-    ]
-  },
   "period": {
     "start": "2022-04-01",
     "end": "2027-07-31"
