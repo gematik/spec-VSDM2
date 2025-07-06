@@ -9091,8 +9091,8 @@
       {
         "id": "Coverage.period",
         "path": "Coverage.period",
-        "short": "Coverage start and end dates",
-        "definition": "Time period during which the coverage is in force. A missing start date indicates the start date isn't known, a missing end date means the coverage is continuing to be in force.",
+        "short": "Gültigkeitszeitraum des Versicherungsschutzes",
+        "definition": "Gibt den Beginn und, sofern anwendbar, das Ende des Versicherungsschutzes an.",
         "requirements": "Some insurers require the submission of the coverage term.",
         "min": 1,
         "max": "1",
@@ -9234,8 +9234,8 @@
       {
         "id": "Coverage.period.start",
         "path": "Coverage.period.start",
-        "short": "Starting time with inclusive boundary",
-        "definition": "The start of the period. The boundary is inclusive.",
+        "short": "Beginn des Versicherungsschutzes",
+        "definition": "Gibt den Beginn des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an. ",
         "comment": "If the low element is missing, the meaning is that the low boundary is not known.",
         "min": 1,
         "max": "1",
@@ -9278,10 +9278,10 @@
       {
         "id": "Coverage.period.end",
         "path": "Coverage.period.end",
-        "short": "End time with inclusive boundary, if not ongoing",
-        "definition": "The end of the period. If the end of the period is missing, it means no end was known or planned at the time the instance was created. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time.",
-        "comment": "The high value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has an end value of 2012-02-03.",
-        "min": 1,
+        "short": "Ende des Versicherungsschutzes",
+        "definition": "Gibt das Ende des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an, wenn ein Endedatum festgelegt ist. ",
+        "comment": "Hier kann nicht das Ende der Gültigkeit einer konkreten eGK angegeben werden, weil der VSDM 2.0 Resource Server keine Kenntnis davon erlangt, welche konkrete eGK verwendet wurde.\nFür den Fall der Authentifikation mit einer elektronischen Identität liegt ohnehin kein eGK-Gültigkeitsdatum vor.",
+        "min": 0,
         "max": "1",
         "base": {
           "path": "Period.end",
@@ -10658,17 +10658,23 @@
       {
         "id": "Coverage.period",
         "path": "Coverage.period",
+        "short": "Gültigkeitszeitraum des Versicherungsschutzes",
+        "definition": "Gibt den Beginn und, sofern anwendbar, das Ende des Versicherungsschutzes an.",
         "min": 1
       },
       {
         "id": "Coverage.period.start",
         "path": "Coverage.period.start",
+        "short": "Beginn des Versicherungsschutzes",
+        "definition": "Gibt den Beginn des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an. ",
         "min": 1
       },
       {
         "id": "Coverage.period.end",
         "path": "Coverage.period.end",
-        "min": 1
+        "short": "Ende des Versicherungsschutzes",
+        "definition": "Gibt das Ende des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an, wenn ein Endedatum festgelegt ist. ",
+        "comment": "Hier kann nicht das Ende der Gültigkeit einer konkreten eGK angegeben werden, weil der VSDM 2.0 Resource Server keine Kenntnis davon erlangt, welche konkrete eGK verwendet wurde.\nFür den Fall der Authentifikation mit einer elektronischen Identität liegt ohnehin kein eGK-Gültigkeitsdatum vor."
       },
       {
         "id": "Coverage.payor",

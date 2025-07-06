@@ -45,8 +45,13 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes zum F
       "Da die Angabe ein Pflichtfeld ist, aber nur erfolgen kann und soll, wenn eine Zuzahlungsbefreiung vorliegt, beeinflusst das die gesamte Struktur."
 
   * Versicherungsschutz -> "VSDMCoverage.period"
+    "Zur Abbildung werden die Standard-Felder der FHIR-Ressource verwendet."
+    
     * Beginn -> "VSDMCoverage.period.start"
+
     * Ende -> "VSDMCoverage.period.end"
+      "Da der VSDM 2.0 Resource Server keine Kenntnis von der eingesetzten eGK haben kann, wird immer das Gültigkeitsende des Versicherungsverhältnisses gemeldet, wenn anwendbar."
+
   * DMP -> "VSDMCoverage.extension:vsdm-dmpKennzeichen"
     * DMP -> "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmpKennzeichen"
     * Beginn -> "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmp-zeitraum.value[x].start"

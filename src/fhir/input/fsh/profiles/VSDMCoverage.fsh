@@ -69,6 +69,27 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
   * extension[gueltigBis] 1..1
   * extension[gueltigBis].valueDate 1..1
 
+// Zuordnung aus Versicherungsdaten -> Versicherungsschutz
+* period 1..1
+  * ^short = "Gültigkeitszeitraum des Versicherungsschutzes"
+  * ^definition = """
+      Gibt den Beginn und, sofern anwendbar, das Ende des Versicherungsschutzes an.
+    """
+  * start 1..1
+    * ^short = "Beginn des Versicherungsschutzes"
+    * ^definition = """
+        Gibt den Beginn des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an. 
+      """
+  * end 0..1
+    * ^short = "Ende des Versicherungsschutzes"
+    * ^definition = """
+        Gibt das Ende des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an, wenn ein Endedatum festgelegt ist. 
+      """
+    * ^comment = """
+        Hier kann nicht das Ende der Gültigkeit einer konkreten eGK angegeben werden, weil der VSDM 2.0 Resource Server keine Kenntnis davon erlangt, welche konkrete eGK verwendet wurde.
+        Für den Fall der Authentifikation mit einer elektronischen Identität liegt ohnehin kein eGK-Gültigkeitsdatum vor.
+      """
+
 // Zuordnung aus Versicherungsdaten -> [Abrechnender]Kostentraeger 
 * payor
   * ^short = "Kostenträger"
@@ -105,6 +126,3 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
 * beneficiary only Reference(VSDMPatient)
 * beneficiary 1..1
 * beneficiary.reference 1..1
-* period 1..1
-  * start 1..1
-  * end 1..1
