@@ -109,7 +109,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
-    "endLine": 110
+    "endLine": 128
   },
   {
     "outputFile": "StructureDefinition-VSDMLaenderkennzeichen.json",

@@ -1430,7 +1430,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.period"
+            "map": "VSDMCoverage.period",
+            "comment": "Zur Abbildung werden die Standard-Felder der FHIR-Ressource verwendet."
           }
         ]
       },
@@ -1498,7 +1499,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.period.end"
+            "map": "VSDMCoverage.period.end",
+            "comment": "Da der VSDM 2.0 Resource Server keine Kenntnis von der eingesetzten eGK haben kann, wird immer das Gültigkeitsende des Versicherungsverhältnisses gemeldet, wenn anwendbar."
           }
         ]
       },
@@ -2738,7 +2740,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.period"
+            "map": "VSDMCoverage.period",
+            "comment": "Zur Abbildung werden die Standard-Felder der FHIR-Ressource verwendet."
           }
         ]
       },
@@ -2776,7 +2779,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.period.end"
+            "map": "VSDMCoverage.period.end",
+            "comment": "Da der VSDM 2.0 Resource Server keine Kenntnis von der eingesetzten eGK haben kann, wird immer das Gültigkeitsende des Versicherungsverhältnisses gemeldet, wenn anwendbar."
           }
         ]
       },
