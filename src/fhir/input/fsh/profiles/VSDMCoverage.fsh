@@ -4,6 +4,7 @@ Title: "Versicherungsdaten"
 Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0"
 
 // Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen. 
+// Die Extensions sind in der Reihenfolge der Nennung der Attribute im logischen Modell aufgeführt.
 
 // Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
@@ -46,6 +47,28 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
     """
 // TODO ggf. eigenes ValueSet einführen, um Wert 00 auszuschließen? Texte sind auch unzureichend, führende Null?
 
+// Zuordnung aus Versicherungsdaten -> Zuzahlungsstatus
+* extension contains $zuzahlungsstatus named zuzahlungsstatus 0..1
+* extension[zuzahlungsstatus]
+  * ^short = "Zuzahlungsstatus"
+  * ^definition = """
+      Kennzeichnet die Befreiung des Versicherten von der Zuzahlungspflicht nach § 62 Abs. 3 SGB V.
+      Achtung: Wenn keine Zuzahlungsbefreiung vorliegt, entfällt die gesamte Extension.
+    """
+  * ^comment = """
+      Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html
+    """
+  * ^requirements = """
+      Befreiung des Versicherten von der Zuzahlungspflicht nach § 62 Abs. 3 SGB V.
+    """ 
+  * extension[status]
+    * ^comment = """
+        Wenn keine Zuzahlungsbefreiung vorliegt (der Wert also false wäre), entfällt die gesamte Extension.
+      """
+    * valueBoolean = true
+  * extension[gueltigBis] 1..1
+  * extension[gueltigBis].valueDate 1..1
+
 // Zuordnung aus Versicherungsdaten -> [Abrechnender]Kostentraeger 
 * payor
   * ^short = "Kostenträger"
@@ -63,7 +86,6 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
     $versichertenart named versichertenart 1..1 MS and
     $kostenerstattung named gkv-kostenerstattung 0..1 MS and
     $ruhender-leistungsanspruch named ruhenderLeistungsanspruch 1..1 MS and
-    $zuzahlungsstatus named zuzahlungsstatus 1..1 MS and
     VSDMDMPKennzeichenEX named vsdm-dmpKennzeichen 0..* MS and
     VSDMWahltarifeEX named vsdm-wahltarife 0..* MS and
     VSDMKostentraegerAngabestatusEX named vsdm-kostentraegerAngabestatus 1..1 MS and
@@ -75,7 +97,6 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
 * extension[besonderePersonengruppe].url MS
 * extension[gkv-kostenerstattung].url MS
 * extension[ruhenderLeistungsanspruch].url MS
-* extension[zuzahlungsstatus].url MS
 * extension[vsdm-wahltarife].url MS
 * extension[vsdm-dmpKennzeichen].url MS
 * extension[vsdm-kostentraegerAngabestatus].url MS

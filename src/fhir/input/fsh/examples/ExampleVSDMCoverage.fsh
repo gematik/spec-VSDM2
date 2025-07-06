@@ -25,6 +25,10 @@ RuleSet: ExampleCoverage
 
 * extension[besonderePersonengruppe].valueCoding = $KBV_CS_SFHIR_KBV_PERSONENGRUPPE#06 "SER (Soziales Entschädigungsrecht)"
 
+* extension[zuzahlungsstatus] 
+  * extension[status].valueBoolean = true
+  * extension[gueltigBis].valueDate = 2026-12-31
+
 
 * payor[+]
   * reference = "Organization/2a6924bf-6e6a-4ef3-b79f-c2138c10712f"
@@ -49,7 +53,6 @@ RuleSet: ExampleCoverage
 * extension[ruhenderLeistungsanspruch].extension[art].valueCoding.code = #1
 * extension[ruhenderLeistungsanspruch].extension[dauer].valuePeriod.start = "2022-05-05"
 
-* extension[zuzahlungsstatus].extension[status].valueBoolean = true
 
 * extension[vsdm-dmpKennzeichen].extension[dmpKennzeichen].valueCoding = $KBV_CS_SFHIR_KBV_DMP#01
 * extension[vsdm-dmpKennzeichen].extension[dmp-zeitraum].valuePeriod.start = "2022-05-05"
