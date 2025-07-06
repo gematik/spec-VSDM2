@@ -1705,7 +1705,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:gkv-kostenerstattung"
+            "map": "VSDMCoverage.extension:kostenerstattung"
           }
         ]
       },
@@ -1739,7 +1739,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:gkv-kostenerstattung.extension:aerztlicheVersorgung"
+            "map": "VSDMCoverage.extension:kostenerstattung.extension:aerztlicheVersorgung"
           }
         ]
       },
@@ -1773,7 +1773,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:gkv-kostenerstattung.extension:zahnaerztlicheVersorgung"
+            "map": "VSDMCoverage.extension:kostenerstattung.extension:zahnaerztlicheVersorgung"
           }
         ]
       },
@@ -1807,7 +1807,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:gkv-kostenerstattung.extension:stationaererBereich"
+            "map": "VSDMCoverage.extension:kostenerstattung.extension:stationaererBereich"
           }
         ]
       },
@@ -2896,7 +2896,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:gkv-kostenerstattung"
+            "map": "VSDMCoverage.extension:kostenerstattung"
           }
         ]
       },
@@ -2915,7 +2915,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:gkv-kostenerstattung.extension:aerztlicheVersorgung"
+            "map": "VSDMCoverage.extension:kostenerstattung.extension:aerztlicheVersorgung"
           }
         ]
       },
@@ -2934,7 +2934,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:gkv-kostenerstattung.extension:zahnaerztlicheVersorgung"
+            "map": "VSDMCoverage.extension:kostenerstattung.extension:zahnaerztlicheVersorgung"
           }
         ]
       },
@@ -2953,7 +2953,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:gkv-kostenerstattung.extension:stationaererBereich"
+            "map": "VSDMCoverage.extension:kostenerstattung.extension:stationaererBereich"
           }
         ]
       },
