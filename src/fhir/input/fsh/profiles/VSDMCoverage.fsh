@@ -69,6 +69,21 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
   * extension[gueltigBis] 1..1
   * extension[gueltigBis].valueDate 1..1
 
+// Zuordnung aus Versicherungsdaten -> DMP
+* extension contains VSDMDMPTeilnahme named dmp 0..*
+* extension[dmp]
+  * ^short = "DMP-Teilnahme"
+  * ^definition = """
+      Angaben zur Teilnahme des Versicherten an Disease Management-Programmen.
+    """
+  // * ^comment = """
+  //     Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html
+  //   """
+  // * ^requirements = """
+  //     Befreiung des Versicherten von der Zuzahlungspflicht nach § 62 Abs. 3 SGB V.
+  //   """ 
+
+
 // Zuordnung aus Versicherungsdaten -> Versicherungsschutz
 * period 1..1
   * ^short = "Gültigkeitszeitraum des Versicherungsschutzes"
@@ -106,8 +121,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
 * extension contains
     $versichertenart named versichertenart 1..1 MS and
     $kostenerstattung named gkv-kostenerstattung 0..1 MS and
-    $ruhender-leistungsanspruch named ruhenderLeistungsanspruch 1..1 MS and
-    VSDMDMPKennzeichenEX named vsdm-dmpKennzeichen 0..* MS and
+    $ruhender-leistungsanspruch named ruhenderLeistungsanspruch 1..1 MS and    
     VSDMWahltarifeEX named vsdm-wahltarife 0..* MS and
     VSDMKostentraegerAngabestatusEX named vsdm-kostentraegerAngabestatus 1..1 MS and
     VSDMKostentraegerLaendercodeEX named vsdm-kostentraegerlaendercode 1..1 MS
@@ -119,7 +133,6 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
 * extension[gkv-kostenerstattung].url MS
 * extension[ruhenderLeistungsanspruch].url MS
 * extension[vsdm-wahltarife].url MS
-* extension[vsdm-dmpKennzeichen].url MS
 * extension[vsdm-kostentraegerAngabestatus].url MS
 * extension[vsdm-kostentraegerlaendercode].url MS
 

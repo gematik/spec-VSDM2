@@ -1534,7 +1534,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen"
+            "map": "VSDMCoverage.extension:dmp"
           }
         ]
       },
@@ -1568,7 +1568,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmpKennzeichen"
+            "map": "VSDMCoverage.extension:dmp.extension:dmp",
+            "comment": "Anstelle des Namens wird der Schlüssel aus der vorgegebenen Wertetabelle angegeben."
           }
         ]
       },
@@ -1602,7 +1603,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmp-zeitraum.value[x].start"
+            "map": "VSDMCoverage.extension:dmp.extension:zeitraum.value[x].start"
           }
         ]
       },
@@ -1636,7 +1637,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmp-zeitraum.value[x].end"
+            "map": "VSDMCoverage.extension:dmp.extension:zeitraum.value[x].end"
           }
         ]
       },
@@ -1670,7 +1671,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:digitales-dmp"
+            "map": "VSDMCoverage.extension:dmp.extension:digitalesDMP"
           }
         ]
       },
@@ -2799,7 +2800,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen"
+            "map": "VSDMCoverage.extension:dmp"
           }
         ]
       },
@@ -2818,7 +2819,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmpKennzeichen"
+            "map": "VSDMCoverage.extension:dmp.extension:dmp",
+            "comment": "Anstelle des Namens wird der Schlüssel aus der vorgegebenen Wertetabelle angegeben."
           }
         ]
       },
@@ -2837,7 +2839,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmp-zeitraum.value[x].start"
+            "map": "VSDMCoverage.extension:dmp.extension:zeitraum.value[x].start"
           }
         ]
       },
@@ -2856,7 +2858,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmp-zeitraum.value[x].end"
+            "map": "VSDMCoverage.extension:dmp.extension:zeitraum.value[x].end"
           }
         ]
       },
@@ -2875,7 +2877,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:digitales-dmp"
+            "map": "VSDMCoverage.extension:dmp.extension:digitalesDMP"
           }
         ]
       },

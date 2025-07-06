@@ -109,7 +109,15 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
-    "endLine": 128
+    "endLine": 141
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMDMPTeilnahme.json",
+    "fshName": "VSDMDMPTeilnahme",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMDMPTeilnahme.fsh",
+    "startLine": 1,
+    "endLine": 52
   },
   {
     "outputFile": "StructureDefinition-VSDMLaenderkennzeichen.json",
@@ -150,22 +158,6 @@
     "fshFile": "profiles/VSDMComposition.fsh",
     "startLine": 1,
     "endLine": 20
-  },
-  {
-    "outputFile": "StructureDefinition-vsdm-dmp-kennzeichen-basis-ex.json",
-    "fshName": "VSDMDMPKennzeichenBasisEX",
-    "fshType": "Extension",
-    "fshFile": "extensions/VSDMDMPKennzeichenBasis.fsh",
-    "startLine": 1,
-    "endLine": 12
-  },
-  {
-    "outputFile": "StructureDefinition-vsdm-dmpKennzeichen-ex.json",
-    "fshName": "VSDMDMPKennzeichenEX",
-    "fshType": "Extension",
-    "fshFile": "extensions/VSDMDMPKennzeichen.fsh",
-    "startLine": 1,
-    "endLine": 25
   },
   {
     "outputFile": "StructureDefinition-vsdm-kostentraeger-laendercode-ex.json",

@@ -86,33 +86,34 @@
     {
       "extension": [
         {
-          "url": "aerztlicheVersorgung",
-          "valueBoolean": true
-        }
-      ],
-      "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung"
-    },
-    {
-      "extension": [
-        {
           "valueCoding": {
             "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
-            "code": "01"
+            "code": "01",
+            "display": "Diabetes mellitus Typ 2"
           },
-          "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenBasisEX"
+          "url": "dmp"
         },
         {
-          "url": "dmp-zeitraum",
+          "url": "zeitraum",
           "valuePeriod": {
             "start": "2022-05-05"
           }
         },
         {
-          "url": "digitales-dmp",
+          "url": "digitalesDMP",
           "valueBoolean": true
         }
       ],
-      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenEX"
+      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme"
+    },
+    {
+      "extension": [
+        {
+          "url": "aerztlicheVersorgung",
+          "valueBoolean": true
+        }
+      ],
+      "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung"
     },
     {
       "extension": [
