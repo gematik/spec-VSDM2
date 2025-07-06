@@ -52,11 +52,17 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes zum F
     * Ende -> "VSDMCoverage.period.end"
       "Da der VSDM 2.0 Resource Server keine Kenntnis von der eingesetzten eGK haben kann, wird immer das Gültigkeitsende des Versicherungsverhältnisses gemeldet, wenn anwendbar."
 
-  * DMP -> "VSDMCoverage.extension:vsdm-dmpKennzeichen"
-    * DMP -> "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmpKennzeichen"
-    * Beginn -> "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmp-zeitraum.value[x].start"
-    * Ende -> "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmp-zeitraum.value[x].end"
-    * digitalesDMP -> "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:digitales-dmp"
+  * DMP -> "VSDMCoverage.extension:dmp"
+
+    * DMP -> "VSDMCoverage.extension:dmp.extension:dmp"
+      "Anstelle des Namens wird der Schlüssel aus der vorgegebenen Wertetabelle angegeben."
+
+    * Beginn -> "VSDMCoverage.extension:dmp.extension:zeitraum.value[x].start"
+
+    * Ende -> "VSDMCoverage.extension:dmp.extension:zeitraum.value[x].end"
+
+    * digitalesDMP -> "VSDMCoverage.extension:dmp.extension:digitalesDMP"
+
   * Kostenerstattung -> "VSDMCoverage.extension:gkv-kostenerstattung"
     * AerztlicheVersorgung -> "VSDMCoverage.extension:gkv-kostenerstattung.extension:aerztlicheVersorgung"
     * ZahnaerztlicheVersorgung -> "VSDMCoverage.extension:gkv-kostenerstattung.extension:zahnaerztlicheVersorgung"

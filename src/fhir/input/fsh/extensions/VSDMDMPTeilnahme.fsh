@@ -1,0 +1,52 @@
+Extension: VSDMDMPTeilnahme
+Context: Coverage
+Title: "Teilnahme an Disease Management-Programm"
+Description: "Angaben zur Teilnahme eines Versicherten an einem Disease Management-Programm"
+
+// Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
+* insert Meta
+* . 
+  * ^short = "Teilnahme an Disease Management-Programm"
+  * ^definition = """
+      Angaben zur Teilnahme eines Versicherten an einem Disease Management-Programm
+    """
+
+// Zuordnung aus Versicherungsdaten -> DMP -> DMP
+* extension contains dmp 1..1
+* extension[dmp]
+  * ^short = "Schlüssel des DMP"
+  * ^definition = """
+      Gibt den Schlüssel des DMP an, in das der Versicherte eingeschrieben ist.
+	"""
+  * value[x] 1..1 
+  * value[x] only Coding
+  * value[x] from $KBV_VS_SFHIR_KBV_DMP (required)
+    * system 1..
+    * system = $KBV_CS_SFHIR_KBV_DMP
+    * code 1..
+// TODO zu diskutieren: eigenes ValueSet einführen, um nur Einzelwerte zuzulassen?
+
+// Zuordnung aus Versicherungsdaten -> DMP -> Beginn/Ende
+* extension contains zeitraum 1..1
+* extension[zeitraum]
+  * ^short = "Einschreibezeitraum"
+  * ^definition = """
+      Gibt den Zeitraum der Einschreibung des Versicherten in das DMP an.
+	"""
+  * value[x] only Period
+  * valuePeriod
+    * start 1..1
+      * obeys date-precision-1
+    * end 0..1
+      * obeys date-precision-1
+
+// Zuordnung aus Versicherungsdaten -> DMP -> digitalesDMP
+* extension contains digitalesDMP 1..1 
+* extension[digitalesDMP]
+  * ^short = "digitales DMP"
+  * ^definition = """
+      Gibt an, ob das DMP als digitales DMP durchgeführt wird.
+    """
+  * value[x] 1..1 
+  * value[x] only boolean
+  * value[x] ^short = "Information, ob ein digitales DMP vorhanden ist"
