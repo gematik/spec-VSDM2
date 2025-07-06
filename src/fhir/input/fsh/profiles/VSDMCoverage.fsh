@@ -100,6 +100,21 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
     * ^short = "Veranlasste Leistungen"
     * value[x] 1..1
 
+// Zuordnung aus Versicherungsdaten -> RuhenderLeistungsanspruch
+* extension contains $ruhender-leistungsanspruch named ruhenderLeistungsanspruch 1..1 
+* extension[ruhenderLeistungsanspruch]
+  * ^short = "Ruhender Leistungsanspruch"
+  * ^definition = """
+      Angaben zum ruhenden Leistungsanspruch des Versicherten
+    """
+  * ^comment = """
+      Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html
+    """
+  * extension[art]
+    * value[x] 1..1
+    * valueCoding from VSDMRuhenderLeistungsanspruchArtVS
+  * extension[dauer].value[x] 1..1
+
 // Zuordnung aus Versicherungsdaten -> Versicherungsschutz
 * period 1..1
   * ^short = "Gültigkeitszeitraum des Versicherungsschutzes"
@@ -129,12 +144,10 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
 // ---
 
 * extension contains
-    $versichertenart named versichertenart 1..1 MS and
-    $ruhender-leistungsanspruch named ruhenderLeistungsanspruch 1..1 MS 
+    $versichertenart named versichertenart 1..1 MS 
 
 // For better display on simplifier
 * extension[versichertenart].url MS
-* extension[ruhenderLeistungsanspruch].url MS
 
 * beneficiary only Reference(VSDMPatient)
 * beneficiary 1..1

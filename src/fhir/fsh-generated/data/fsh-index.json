@@ -8,6 +8,14 @@
     "endLine": 18
   },
   {
+    "outputFile": "CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json",
+    "fshName": "VSDMRuhenderLeistungsanspruchArtCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
     "outputFile": "CodeSystem-vsdm-errorcode-cs.json",
     "fshName": "VSDMErrorcodeCS",
     "fshType": "CodeSystem",
@@ -93,7 +101,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
-    "endLine": 141
+    "endLine": 154
   },
   {
     "outputFile": "StructureDefinition-VSDMDMPTeilnahme.json",
@@ -158,6 +166,14 @@
     "fshFile": "valuesets/VSDMKostentraegerTypVS.fsh",
     "startLine": 1,
     "endLine": 8
+  },
+  {
+    "outputFile": "ValueSet-VSDMRuhenderLeistungsanspruchArtVS.json",
+    "fshName": "VSDMRuhenderLeistungsanspruchArtVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMRuhenderLeistungsanspruchArtVS.fsh",
+    "startLine": 1,
+    "endLine": 7
   },
   {
     "outputFile": "ValueSet-vsdm-errorcode-vs.json",
