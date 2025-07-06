@@ -74,8 +74,12 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes zum F
     * VeranlassteLeistungen -> "VSDMCoverage.extension:gkv-kostenerstattung.extension:veranlassteLeistungen"
 
   * RuhenderLeistungsanspruch -> "VSDMCoverage.extension:ruhenderLeistungsanspruch"
+
     * Beginn -> "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:dauer.value[x].start"
+
     * Ende -> "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:dauer.value[x].end"
+
     * Art -> "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:art"
+    
   * Versichertenart -> "VSDMCoverage.extension:versichertenart"
   

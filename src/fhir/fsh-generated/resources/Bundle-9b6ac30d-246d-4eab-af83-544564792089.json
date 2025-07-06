@@ -217,13 +217,6 @@
             }
           },
           {
-            "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
-            "valueCoding": {
-              "code": "1",
-              "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS"
-            }
-          },
-          {
             "url": "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch",
             "extension": [
               {
@@ -239,6 +232,13 @@
                 }
               }
             ]
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
+            "valueCoding": {
+              "code": "1",
+              "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS"
+            }
           },
           {
             "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe",
