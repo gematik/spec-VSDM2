@@ -1,3 +1,4 @@
+// TODO mehr / praxisnähere Beispiele aufbauen
 
 Instance: VSDMCoverageSample
 InstanceOf: VSDMCoverage
@@ -5,8 +6,6 @@ Title:   "Coverage for VSDM 2 Query"
 Usage: #example
 * id = "2d4da53a-413a-48fe-b908-2e67b5761523"
 * insert ExampleCoverage
-* extension[vsdm-wahltarife].extension[wahltarif].valueCoding = VSDMWahltarifeCS#1
-* extension[vsdm-wahltarife].extension[wahltarif-vertragskennzeichen].valueString = "Test Kommentar"
 
 
 
@@ -16,7 +15,6 @@ Title:   "Coverage for VSDM 2 Query"
 Usage: #example
 * id = "VALID-413a-48fe-b908-2e67b5761523"
 * insert ExampleCoverage
-* extension[vsdm-wahltarife].extension[wahltarif].valueCoding = VSDMWahltarifeCS#2
 
 
 RuleSet: ExampleCoverage
@@ -40,6 +38,9 @@ RuleSet: ExampleCoverage
   * extension[stationaererBereich].valueBoolean = true
   * extension[veranlassteLeistungen].valueBoolean = false
 
+// TODO Pflichtfelder aus deutschem Basisprofil - noch kommentieren / beschreiben?
+* status = #active
+* type = #GKV
 
 * payor[+]
   * reference = "Organization/2a6924bf-6e6a-4ef3-b79f-c2138c10712f"
@@ -50,20 +51,13 @@ RuleSet: ExampleCoverage
 
 // ---
 
-* type.coding = $versichertenart-de-basis-cs#GKV
 * period.start = "2022-04-01"
 * period.end = "2027-07-31"
 * beneficiary.reference =  "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
-
-* extension[vsdm-kostentraegerAngabestatus].valueCodeableConcept.coding[+] = VSDMKostentraegerAngabestatusCS#dmp
-* extension[vsdm-kostentraegerAngabestatus].valueCodeableConcept.coding[+] = VSDMKostentraegerAngabestatusCS#wahltarife
 
 * extension[versichertenart].valueCoding = $KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS#1
 
 * extension[ruhenderLeistungsanspruch].extension[art].valueCoding.code = #1
 * extension[ruhenderLeistungsanspruch].extension[dauer].valuePeriod.start = "2022-05-05"
 
-
-* extension[vsdm-wahltarife].extension[wahltarif-zeitraum].valuePeriod.start = "2022-05-05"
-* extension[vsdm-kostentraegerlaendercode].valueCoding = $cs-iso3166-1-2#DE
 

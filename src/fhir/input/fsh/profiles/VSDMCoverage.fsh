@@ -128,26 +128,13 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
 
 // ---
 
-* status = #active (exactly)
-* type 1..1
-* type from VSDMVersicherungsartVS (required)
-  * ^short = "Versicherungsart"
-  * ^definition = "Art der Versicherung: gesetzliche oder private Versicherung"
-
 * extension contains
     $versichertenart named versichertenart 1..1 MS and
-    $ruhender-leistungsanspruch named ruhenderLeistungsanspruch 1..1 MS and    
-    VSDMWahltarifeEX named vsdm-wahltarife 0..* MS and
-    VSDMKostentraegerAngabestatusEX named vsdm-kostentraegerAngabestatus 1..1 MS and
-    VSDMKostentraegerLaendercodeEX named vsdm-kostentraegerlaendercode 1..1 MS
+    $ruhender-leistungsanspruch named ruhenderLeistungsanspruch 1..1 MS 
 
 // For better display on simplifier
-* extension[vsdm-kostentraegerAngabestatus].url MS
 * extension[versichertenart].url MS
 * extension[ruhenderLeistungsanspruch].url MS
-* extension[vsdm-wahltarife].url MS
-* extension[vsdm-kostentraegerAngabestatus].url MS
-* extension[vsdm-kostentraegerlaendercode].url MS
 
 * beneficiary only Reference(VSDMPatient)
 * beneficiary 1..1
