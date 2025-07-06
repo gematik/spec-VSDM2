@@ -34,6 +34,13 @@ RuleSet: ExampleCoverage
   * extension[zeitraum].valuePeriod.start = "2022-05-05"
   * extension[digitalesDMP].valueBoolean = true
 
+* extension[kostenerstattung]
+  * extension[aerztlicheVersorgung].valueBoolean = true
+  * extension[zahnaerztlicheVersorgung].valueBoolean = true
+  * extension[stationaererBereich].valueBoolean = true
+  * extension[veranlassteLeistungen].valueBoolean = false
+
+
 * payor[+]
   * reference = "Organization/2a6924bf-6e6a-4ef3-b79f-c2138c10712f"
   * display = "Hauptkostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit
@@ -52,7 +59,6 @@ RuleSet: ExampleCoverage
 * extension[vsdm-kostentraegerAngabestatus].valueCodeableConcept.coding[+] = VSDMKostentraegerAngabestatusCS#wahltarife
 
 * extension[versichertenart].valueCoding = $KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS#1
-* extension[kostenerstattung].extension[aerztlicheVersorgung].valueBoolean = true
 
 * extension[ruhenderLeistungsanspruch].extension[art].valueCoding.code = #1
 * extension[ruhenderLeistungsanspruch].extension[dauer].valuePeriod.start = "2022-05-05"

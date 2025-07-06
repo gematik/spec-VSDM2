@@ -312,6 +312,18 @@
               {
                 "url": "aerztlicheVersorgung",
                 "valueBoolean": true
+              },
+              {
+                "url": "zahnaerztlicheVersorgung",
+                "valueBoolean": true
+              },
+              {
+                "url": "stationaererBereich",
+                "valueBoolean": true
+              },
+              {
+                "url": "veranlassteLeistungen",
+                "valueBoolean": false
               }
             ],
             "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung"

@@ -63,11 +63,16 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes zum F
 
     * digitalesDMP -> "VSDMCoverage.extension:dmp.extension:digitalesDMP"
 
-  * Kostenerstattung -> "VSDMCoverage.extension:gkv-kostenerstattung"
-    * AerztlicheVersorgung -> "VSDMCoverage.extension:gkv-kostenerstattung.extension:aerztlicheVersorgung"
-    * ZahnaerztlicheVersorgung -> "VSDMCoverage.extension:gkv-kostenerstattung.extension:zahnaerztlicheVersorgung"
-    * StationaererBereich -> "VSDMCoverage.extension:gkv-kostenerstattung.extension:stationaererBereich"
+  * Kostenerstattung -> "VSDMCoverage.extension:kostenerstattung"
+
+    * AerztlicheVersorgung -> "VSDMCoverage.extension:kostenerstattung.extension:aerztlicheVersorgung"
+
+    * ZahnaerztlicheVersorgung -> "VSDMCoverage.extension:kostenerstattung.extension:zahnaerztlicheVersorgung"
+
+    * StationaererBereich -> "VSDMCoverage.extension:kostenerstattung.extension:stationaererBereich"
+
     * VeranlassteLeistungen -> "VSDMCoverage.extension:gkv-kostenerstattung.extension:veranlassteLeistungen"
+
   * RuhenderLeistungsanspruch -> "VSDMCoverage.extension:ruhenderLeistungsanspruch"
     * Beginn -> "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:dauer.value[x].start"
     * Ende -> "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:dauer.value[x].end"
