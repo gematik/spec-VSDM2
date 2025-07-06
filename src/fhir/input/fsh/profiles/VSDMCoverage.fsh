@@ -115,6 +115,21 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
     * valueCoding from VSDMRuhenderLeistungsanspruchArtVS
   * extension[dauer].value[x] 1..1
 
+// Zuordnung aus Versicherungsdaten -> Versichertenart
+* extension contains $versichertenart named versichertenart 1..1
+* extension[versichertenart]
+  * ^short = "Art des Versicherten"
+  * ^definition = """
+      Art des Versicherten
+    """
+  * ^comment = """
+      Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html
+    """
+    * value[x] 1..1
+
+// Bezug zum Versicherten
+* beneficiary only Reference(VSDMPatient)
+
 // Zuordnung aus Versicherungsdaten -> Versicherungsschutz
 * period 1..1
   * ^short = "Gültigkeitszeitraum des Versicherungsschutzes"
@@ -140,15 +155,3 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
 * payor
   * ^short = "Kostenträger"
 // FIXME: Typreferenzen und Kardinalitäten von Haupt- und abrechnendem Kostenträger müssen noch in das Profil eingearbeitet werden
-
-// ---
-
-* extension contains
-    $versichertenart named versichertenart 1..1 MS 
-
-// For better display on simplifier
-* extension[versichertenart].url MS
-
-* beneficiary only Reference(VSDMPatient)
-* beneficiary 1..1
-* beneficiary.reference 1..1

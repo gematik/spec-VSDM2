@@ -37,15 +37,15 @@
     "fshType": "Instance",
     "fshFile": "examples/ExampleVSDMCoverage.fsh",
     "startLine": 3,
-    "endLine": 8
+    "endLine": 9
   },
   {
     "outputFile": "Coverage-VALID-413a-48fe-b908-2e67b5761523.json",
     "fshName": "VALID-VSDMCoverageSample",
     "fshType": "Instance",
     "fshFile": "examples/ExampleVSDMCoverage.fsh",
-    "startLine": 12,
-    "endLine": 17
+    "startLine": 13,
+    "endLine": 19
   },
   {
     "outputFile": "OperationOutcome-example-vsdm-operationoutcome.json",
@@ -101,7 +101,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
-    "endLine": 154
+    "endLine": 156
   },
   {
     "outputFile": "StructureDefinition-VSDMDMPTeilnahme.json",

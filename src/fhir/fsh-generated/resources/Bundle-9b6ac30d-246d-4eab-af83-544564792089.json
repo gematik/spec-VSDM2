@@ -237,7 +237,8 @@
             "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
             "valueCoding": {
               "code": "1",
-              "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS"
+              "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
+              "display": "Mitglied"
             }
           },
           {
@@ -314,6 +315,10 @@
             }
           ]
         },
+        "period": {
+          "start": "2022-04-01",
+          "end": "2027-07-31"
+        },
         "payor": [
           {
             "reference": "Organization/2a6924bf-6e6a-4ef3-b79f-c2138c10712f",
@@ -324,10 +329,6 @@
             "display": "abrechnender Kostenträger"
           }
         ],
-        "period": {
-          "start": "2022-04-01",
-          "end": "2027-07-31"
-        },
         "beneficiary": {
           "reference": "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
         }
