@@ -144,14 +144,6 @@
     "endLine": 20
   },
   {
-    "outputFile": "StructureDefinition-vsdm-kostentraeger-laendercode-ex.json",
-    "fshName": "VSDMKostentraegerLaendercodeEX",
-    "fshType": "Extension",
-    "fshFile": "extensions/VSDMKostentraegerLaendercodeEX.fsh",
-    "startLine": 1,
-    "endLine": 15
-  },
-  {
     "outputFile": "StructureDefinition-vsdm-operationoutcome.json",
     "fshName": "VSDMOperationOutcome",
     "fshType": "Profile",
