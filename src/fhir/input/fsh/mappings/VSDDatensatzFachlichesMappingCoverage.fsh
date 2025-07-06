@@ -36,8 +36,14 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes zum F
     "Die Schlüsseltabelle wird unverändert abgebildet."
 
   * Zuzahlungsstatus -> "VSDMCoverage.extension:zuzahlungsstatus"
+    "Die gesamte Erweiterung darf nur angegeben werden, wenn eine Zuzahlungsbefreiung vorliegt."
+
     * Status -> "VSDMCoverage.extension:zuzahlungsstatus.extension:status"
+      "Der Wert \"von Zuzahlungspflicht befreit\" wird auf \"true\" abgebildet."
+
     * GueltigBis -> "VSDMCoverage.extension:zuzahlungsstatus.extension:gueltigBis"
+      "Da die Angabe ein Pflichtfeld ist, aber nur erfolgen kann und soll, wenn eine Zuzahlungsbefreiung vorliegt, beeinflusst das die gesamte Struktur."
+
   * Versicherungsschutz -> "VSDMCoverage.period"
     * Beginn -> "VSDMCoverage.period.start"
     * Ende -> "VSDMCoverage.period.end"

@@ -1325,7 +1325,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:zuzahlungsstatus"
+            "map": "VSDMCoverage.extension:zuzahlungsstatus",
+            "comment": "Die gesamte Erweiterung darf nur angegeben werden, wenn eine Zuzahlungsbefreiung vorliegt."
           }
         ]
       },
@@ -1359,7 +1360,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:zuzahlungsstatus.extension:status"
+            "map": "VSDMCoverage.extension:zuzahlungsstatus.extension:status",
+            "comment": "Der Wert \"von Zuzahlungspflicht befreit\" wird auf \"true\" abgebildet."
           }
         ]
       },
@@ -1393,7 +1395,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:zuzahlungsstatus.extension:gueltigBis"
+            "map": "VSDMCoverage.extension:zuzahlungsstatus.extension:gueltigBis",
+            "comment": "Da die Angabe ein Pflichtfeld ist, aber nur erfolgen kann und soll, wenn eine Zuzahlungsbefreiung vorliegt, beeinflusst das die gesamte Struktur."
           }
         ]
       },
@@ -2675,7 +2678,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:zuzahlungsstatus"
+            "map": "VSDMCoverage.extension:zuzahlungsstatus",
+            "comment": "Die gesamte Erweiterung darf nur angegeben werden, wenn eine Zuzahlungsbefreiung vorliegt."
           }
         ]
       },
@@ -2694,7 +2698,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:zuzahlungsstatus.extension:status"
+            "map": "VSDMCoverage.extension:zuzahlungsstatus.extension:status",
+            "comment": "Der Wert \"von Zuzahlungspflicht befreit\" wird auf \"true\" abgebildet."
           }
         ]
       },
@@ -2713,7 +2718,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
-            "map": "VSDMCoverage.extension:zuzahlungsstatus.extension:gueltigBis"
+            "map": "VSDMCoverage.extension:zuzahlungsstatus.extension:gueltigBis",
+            "comment": "Da die Angabe ein Pflichtfeld ist, aber nur erfolgen kann und soll, wenn eine Zuzahlungsbefreiung vorliegt, beeinflusst das die gesamte Struktur."
           }
         ]
       },
