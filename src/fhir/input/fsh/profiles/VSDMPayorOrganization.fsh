@@ -28,21 +28,6 @@ Description: "Angaben zum Kostenträger im Versichertenstammdatenmanagement (VSD
       Eindeutige Identifikation des Kostenträgers über das Institutionskennzeichen (IKNR).
     """
 
-// Typ zur Unterscheidung zwischen Hauptkostenträger und abrechnendem Kostenträger
-* type 
-  * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = coding.system
-  * ^slicing.rules = #open
-* type contains KostentraegerTyp 1..1
-* type[KostentraegerTyp]
-  * ^short = "Kostenträgertyp"
-  * ^definition = """
-      Wird zur Unterscheidung zwischen Haupt-Kostenträger (ins) und abrechnendem Kostenträger (pay) verwendet.
-    """
-  * coding from VSDMKostentraegerTypVS (required)
-    * system = $csOrganizationType
-    * code 1..1
-
 // Zuordnung aus Versicherungsdaten -> [Abrechnender]Kostentraeger -> Kostentraeger
 * name 1..1 
   * ^short = "Name des Kostenträgers"

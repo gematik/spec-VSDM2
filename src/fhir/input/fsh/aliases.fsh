@@ -43,10 +43,6 @@ Alias: $csLOINC = http://loinc.org
 //     - VSDMOperationOutcome.issue[vsdm-error].details.coding
 Alias: $csOperationOutcomeCodes = http://terminology.hl7.org/CodeSystem/operation-outcome
 
-// Organization type, verwendet für
-//   - VSDMPayorOrganization.type
-Alias: $csOrganizationType = http://terminology.hl7.org/CodeSystem/organization-type
-
 // besondere Personengruppe, verwendet für
 //   - VSDMBesonderePersonengruppeVS
 //     - VSDMCoverage.extension[besonderePersonengruppe]
