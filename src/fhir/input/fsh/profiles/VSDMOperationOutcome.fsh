@@ -1,9 +1,19 @@
 Profile: VSDMOperationOutcome
 Parent: OperationOutcome
-Id: vsdm-operationoutcome // TODO auf automatische ID- und URL-Vergabe umstellen, Metadaten setzen
-* ^url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome"
+Title: "Fehlermeldung des VSDM Resource Servers"
+Description: "Strukturierte Fehlermeldung im Versichertenstammdatenmanagement (VSDM) 2.0"
+
+// Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen. 
+
+// Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
-* meta.profile = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome" (exactly)
+* . 
+  * ^short = "Fehlermeldung des VSDM Resource Servers"
+  * ^definition = """
+      Strukturierte Fehlermeldung im Versichertenstammdatenmanagement (VSDM) 2.0
+    """
+
+// TODO Inhalte noch prüfen
 
 * issue MS
   * ^slicing.discriminator.type = #pattern

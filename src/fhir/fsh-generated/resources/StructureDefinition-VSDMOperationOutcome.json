@@ -1,12 +1,14 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "vsdm-operationoutcome",
+  "id": "VSDMOperationOutcome",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome",
   "name": "VSDMOperationOutcome",
+  "title": "Fehlermeldung des VSDM Resource Servers",
   "status": "draft",
   "experimental": false,
   "date": "2023-12-31",
   "publisher": "gematik GmbH",
+  "description": "Strukturierte Fehlermeldung im Versichertenstammdatenmanagement (VSDM) 2.0",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -30,8 +32,8 @@
       {
         "id": "OperationOutcome",
         "path": "OperationOutcome",
-        "short": "Information about the success/failure of an action",
-        "definition": "A collection of error, warning, or information messages that result from a system action.",
+        "short": "Fehlermeldung des VSDM Resource Servers",
+        "definition": "Strukturierte Fehlermeldung im Versichertenstammdatenmanagement (VSDM) 2.0",
         "comment": "Can result from the failure of a REST call or be part of the response message returned from a request message.",
         "min": 0,
         "max": "*",
@@ -161,316 +163,6 @@
         ],
         "isModifier": false,
         "isSummary": true
-      },
-      {
-        "id": "OperationOutcome.meta.id",
-        "path": "OperationOutcome.meta.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "Unique id for inter-element referencing",
-        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "http://hl7.org/fhirpath/System.String",
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "string"
-              }
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "OperationOutcome.meta.extension",
-        "path": "OperationOutcome.meta.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          },
-          {
-            "key": "ext-1",
-            "severity": "error",
-            "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "OperationOutcome.meta.versionId",
-        "path": "OperationOutcome.meta.versionId",
-        "short": "Version specific identifier",
-        "definition": "The version specific identifier, as it appears in the version portion of the URL. This value changes when the resource is created, updated, or deleted.",
-        "comment": "The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Meta.versionId",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "id"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true
-      },
-      {
-        "id": "OperationOutcome.meta.lastUpdated",
-        "path": "OperationOutcome.meta.lastUpdated",
-        "short": "When the resource version last changed",
-        "definition": "When the resource last changed - e.g. when the version changed.",
-        "comment": "This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant. This is equivalent to the HTTP Last-Modified and SHOULD have the same value on a [read](http.html#read) interaction.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Meta.lastUpdated",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "instant"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true
-      },
-      {
-        "id": "OperationOutcome.meta.source",
-        "path": "OperationOutcome.meta.source",
-        "short": "Identifies where the resource comes from",
-        "definition": "A uri that identifies the source system of the resource. This provides a minimal amount of [Provenance](provenance.html#) information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.",
-        "comment": "In the provenance resource, this corresponds to Provenance.entity.what[x]. The exact use of the source (and the implied Provenance.entity.role) is left to implementer discretion. Only one nominated source is allowed; for additional provenance details, a full Provenance resource should be used. \n\nThis element can be used to indicate where the current master source of a resource that has a canonical URL if the resource is no longer hosted at the canonical URL.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Meta.source",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "uri"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true
-      },
-      {
-        "id": "OperationOutcome.meta.profile",
-        "path": "OperationOutcome.meta.profile",
-        "short": "Profiles this resource claims to conform to",
-        "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url](structuredefinition-definitions.html#StructureDefinition.url).",
-        "comment": "It is up to the server and/or other infrastructure of policy to determine whether/how these claims are verified and/or updated over time.  The list of profile URLs is a set.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Meta.profile",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "canonical",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/StructureDefinition"
-            ]
-          }
-        ],
-        "fixedCanonical": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome",
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true
-      },
-      {
-        "id": "OperationOutcome.meta.security",
-        "path": "OperationOutcome.meta.security",
-        "short": "Security Labels applied to this resource",
-        "definition": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
-        "comment": "The security labels can be updated without changing the stated version of the resource. The list of security labels is a set. Uniqueness is based the system/code, and version and display are ignored.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Meta.security",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "SecurityLabels"
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding",
-              "valueBoolean": true
-            }
-          ],
-          "strength": "extensible",
-          "description": "Security Labels from the Healthcare Privacy and Security Classification System.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/security-labels"
-        }
-      },
-      {
-        "id": "OperationOutcome.meta.tag",
-        "path": "OperationOutcome.meta.tag",
-        "short": "Tags applied to this resource",
-        "definition": "Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
-        "comment": "The tags can be updated without changing the stated version of the resource. The list of tags is a set. Uniqueness is based the system/code, and version and display are ignored.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Meta.tag",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "Tags"
-            }
-          ],
-          "strength": "example",
-          "description": "Codes that represent various types of tags, commonly workflow-related; e.g. \"Needs review by Dr. Jones\".",
-          "valueSet": "http://hl7.org/fhir/ValueSet/common-tags"
-        }
       },
       {
         "id": "OperationOutcome.implicitRules",
@@ -2201,9 +1893,10 @@
   "differential": {
     "element": [
       {
-        "id": "OperationOutcome.meta.profile",
-        "path": "OperationOutcome.meta.profile",
-        "fixedCanonical": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome"
+        "id": "OperationOutcome",
+        "path": "OperationOutcome",
+        "short": "Fehlermeldung des VSDM Resource Servers",
+        "definition": "Strukturierte Fehlermeldung im Versichertenstammdatenmanagement (VSDM) 2.0"
       },
       {
         "id": "OperationOutcome.issue",

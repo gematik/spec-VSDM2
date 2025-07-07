@@ -1,7 +1,7 @@
 Extension: VSDMKostentraegerRolle
 Context: Coverage.payor
 Title: "Rolle des Kostenträgers"
-Description: "Rolle des Kostenträgers"
+Description: "Rolle des Kostenträgers (Haupt-/abrechnender Kostenträger)"
 
 // Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta

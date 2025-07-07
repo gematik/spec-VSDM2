@@ -3,12 +3,12 @@
   "id": "VSDMPatient",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient",
   "name": "VSDMPatient",
-  "title": "Versicherter im VSDM",
+  "title": "Versicherter",
   "status": "draft",
   "experimental": false,
   "date": "2023-12-31",
   "publisher": "gematik GmbH",
-  "description": "Der VSDMPatient bildet einen Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0 ab.",
+  "description": "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

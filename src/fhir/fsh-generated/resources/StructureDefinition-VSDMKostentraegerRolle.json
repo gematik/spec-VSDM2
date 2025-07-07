@@ -8,7 +8,7 @@
   "experimental": false,
   "date": "2023-12-31",
   "publisher": "gematik GmbH",
-  "description": "Rolle des Kostenträgers",
+  "description": "Rolle des Kostenträgers (Haupt-/abrechnender Kostenträger)",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

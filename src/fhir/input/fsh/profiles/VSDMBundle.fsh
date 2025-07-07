@@ -1,12 +1,20 @@
 Profile: VSDMBundle
 Parent: Bundle
-Id: vsdm-bundle // TODO auf automatische ID- und URL-Vergabe umstellen, Metadaten setzen
-* ^url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle"
+Title: "Bundle der VSDM 2.0-Ressourcen"
+Description: "Bundle zur Übermittlung der Ressourcen im Versichertenstammdatenmanagement (VSDM) 2.0"
+
+// Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen. 
+
+// Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
+* . 
+  * ^short = "Bundle der VSDM 2.0-Ressourcen"
+  * ^definition = """
+      Bundle zur Übermittlung der Ressourcen im Versichertenstammdatenmanagement (VSDM) 2.0
+    """
+
+// TODO Inhalte noch prüfen
 * id 1..1
-* meta 1..1
-  * profile 1..1
-  * profile = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle" (exactly)
 * identifier 1..1
   * system 1..1
   * system = "urn:ietf:rfc:3986" (exactly)
