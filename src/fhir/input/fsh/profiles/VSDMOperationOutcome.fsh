@@ -1,6 +1,6 @@
 Profile: VSDMOperationOutcome
 Parent: OperationOutcome
-Id: vsdm-operationoutcome
+Id: vsdm-operationoutcome // TODO auf automatische ID- und URL-Vergabe umstellen, Metadaten setzen
 * ^url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome"
 * insert Meta
 * meta.profile = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome" (exactly)
@@ -24,7 +24,6 @@ Id: vsdm-operationoutcome
     * coding 1..1
     * coding from VSDMErrorcodeVS (required)
       * system 1..1
-      * system = "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS"
       * code 1..1
         * ^short = "Errorcode"
         * ^definition = "Errorcode"

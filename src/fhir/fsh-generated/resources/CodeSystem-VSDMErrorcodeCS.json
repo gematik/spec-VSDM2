@@ -3,9 +3,9 @@
   "status": "draft",
   "content": "complete",
   "name": "VSDMErrorcodeCS",
-  "id": "vsdm-errorcode-cs",
-  "title": "CodeSystem for VSDM errors",
-  "description": "VSDM errors if Kostentraeger cant provide VSD",
+  "id": "VSDMErrorcodeCS",
+  "title": "VSDM-Fehlercodes",
+  "description": "VSDM-spezifische Fehlercodes",
   "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
   "concept": [
     {
@@ -45,7 +45,7 @@
       "display": "Der angefragte Endpunkt <endpoint> wird nicht unterstützt."
     },
     {
-      "code": "VSD_SERVICE_INTERNAL_SERVER_ERROR",
+      "code": "VSDSERVICE_INTERNAL_SERVER_ERROR",
       "display": "Unerwarteter interner Fehler des Fachdienstes VSDM."
     },
     {

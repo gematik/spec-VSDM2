@@ -1,6 +1,6 @@
 Profile: VSDMBundle
 Parent: Bundle
-Id: vsdm-bundle
+Id: vsdm-bundle // TODO auf automatische ID- und URL-Vergabe umstellen, Metadaten setzen
 * ^url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle"
 * insert Meta
 * id 1..1

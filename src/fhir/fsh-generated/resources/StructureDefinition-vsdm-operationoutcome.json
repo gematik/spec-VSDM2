@@ -1799,7 +1799,6 @@
             "code": "uri"
           }
         ],
-        "patternUri": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
         "constraint": [
           {
             "key": "ele-1",
@@ -2260,8 +2259,7 @@
       {
         "id": "OperationOutcome.issue:vsdm-error.details.coding.system",
         "path": "OperationOutcome.issue.details.coding.system",
-        "min": 1,
-        "patternUri": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS"
+        "min": 1
       },
       {
         "id": "OperationOutcome.issue:vsdm-error.details.coding.code",

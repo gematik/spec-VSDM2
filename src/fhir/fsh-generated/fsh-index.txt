@@ -1,8 +1,8 @@
 Output File                                              Name                                Type        FSH File                                            Lines
 Bundle-9b6ac30d-246d-4eab-af83-544564792089.json         Vsdm2BundleSample                   Instance    examples/ExampleVSDMBundle.fsh                      1 - 18
-CodeSystem-VSDMKostentraegerRolleCS.json                 VSDMKostentraegerRolleCS            CodeSystem  codesystems/VSDMKostentraegerRolleCS.fsh            1 - 9
-CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json       VSDMRuhenderLeistungsanspruchArtCS  CodeSystem  codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh  1 - 8
-CodeSystem-vsdm-errorcode-cs.json                        VSDMErrorcodeCS                     CodeSystem  codesystems/VSDMErrorcodeCS.fsh                     1 - 23
+CodeSystem-VSDMErrorcodeCS.json                          VSDMErrorcodeCS                     CodeSystem  codesystems/VSDMErrorcodeCS.fsh                     1 - 23
+CodeSystem-VSDMKostentraegerRolleCS.json                 VSDMKostentraegerRolleCS            CodeSystem  codesystems/VSDMKostentraegerRolleCS.fsh            1 - 10
+CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json       VSDMRuhenderLeistungsanspruchArtCS  CodeSystem  codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh  1 - 9
 Coverage-2d4da53a-413a-48fe-b908-2e67b5761523.json       VSDMCoverageSample                  Instance    examples/ExampleVSDMCoverage.fsh                    3 - 9
 Coverage-VALID-413a-48fe-b908-2e67b5761523.json          VALID-VSDMCoverageSample            Instance    examples/ExampleVSDMCoverage.fsh                    13 - 19
 OperationOutcome-example-vsdm-operationoutcome.json      ExampleOperationOutcome             Instance    examples/ExampleOperationOutcome.fsh                1 - 15
@@ -19,12 +19,12 @@ StructureDefinition-VSDMPatient.json                     VSDMPatient            
 StructureDefinition-VSDMPayorOrganization.json           VSDMPayorOrganization               Profile     profiles/VSDMPayorOrganization.fsh                  1 - 62
 StructureDefinition-vsdm-bundle.json                     VSDMBundle                          Profile     profiles/VSDMBundle.fsh                             1 - 34
 StructureDefinition-vsdm-composition.json                VSDMComposition                     Profile     profiles/VSDMComposition.fsh                        1 - 20
-StructureDefinition-vsdm-operationoutcome.json           VSDMOperationOutcome                Profile     profiles/VSDMOperationOutcome.fsh                   1 - 34
+StructureDefinition-vsdm-operationoutcome.json           VSDMOperationOutcome                Profile     profiles/VSDMOperationOutcome.fsh                   1 - 33
 ValueSet-VSDMBesonderePersonengruppeVS.json              VSDMBesonderePersonengruppeVS       ValueSet    valuesets/VSDMBesonderePersonengruppeVS.fsh         1 - 11
 ValueSet-VSDMDMPVS.json                                  VSDMDMPVS                           ValueSet    valuesets/VSDMDMPVS.fsh                             1 - 18
+ValueSet-VSDMErrorcodeVS.json                            VSDMErrorcodeVS                     ValueSet    valuesets/VSDMErrorcodeVS.fsh                       1 - 8
 ValueSet-VSDMKostentraegerRolleVS.json                   VSDMKostentraegerRolleVS            ValueSet    valuesets/VSDMKostentraegerRolleVS.fsh              1 - 7
 ValueSet-VSDMNamenszusatzVS.json                         VSDMNamenszusatzVS                  ValueSet    valuesets/VSDMNamenszusatzVS.fsh                    1 - 7
 ValueSet-VSDMRuhenderLeistungsanspruchArtVS.json         VSDMRuhenderLeistungsanspruchArtVS  ValueSet    valuesets/VSDMRuhenderLeistungsanspruchArtVS.fsh    1 - 7
 ValueSet-VSDMVorsatzwortVS.json                          VSDMVorsatzwortVS                   ValueSet    valuesets/VSDMVorsatzwortVS.fsh                     1 - 7
 ValueSet-VSDMWohnortprinzipVS.json                       VSDMWohnortprinzipVS                ValueSet    valuesets/VSDMWohnortprinzipVS.fsh                  1 - 23
-ValueSet-vsdm-errorcode-vs.json                          VSDMErrorcodeVS                     ValueSet    valuesets/VSDMErrorcodeVS.fsh                       1 - 8
