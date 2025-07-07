@@ -40,7 +40,7 @@ Description: "Angaben zum Kostenträger im Versichertenstammdatenmanagement (VSD
       Wird zur Unterscheidung zwischen Haupt-Kostenträger (ins) und abrechnendem Kostenträger (pay) verwendet.
     """
   * coding from VSDMKostentraegerTypVS (required)
-    * system = $organizationtype
+    * system = $csOrganizationType
     * code 1..1
 
 // Zuordnung aus Versicherungsdaten -> [Abrechnender]Kostentraeger -> Kostentraeger

@@ -18,7 +18,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
     """
 
 // Zuordnung aus Versicherungsdaten -> WOP
-* extension contains $wop named WOP 1..1
+* extension contains $extWOP named WOP 1..1
 * extension[wop]
   * ^short = "Wohnortprinzip (WOP)"
   * ^definition = """
@@ -33,7 +33,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
 // TODO ggf. eigenes ValueSet einführen, um Werte 00, 50, 55, 60, 61, 62 auszuschließen?
 
 // Zuordnung aus Versicherungsdaten -> BesonderePersonengruppe
-* extension contains $besondere-personengruppe named besonderePersonengruppe 0..1
+* extension contains $extBesonderePersonengruppe named besonderePersonengruppe 0..1
 * extension[besonderePersonengruppe]
   * ^short = "Besondere Personengruppe"
   * ^definition = """
@@ -48,7 +48,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
 // TODO ggf. eigenes ValueSet einführen, um Wert 00 auszuschließen? Texte sind auch unzureichend, führende Null?
 
 // Zuordnung aus Versicherungsdaten -> Zuzahlungsstatus
-* extension contains $zuzahlungsstatus named zuzahlungsstatus 0..1
+* extension contains $extZuzahlungsstatus named zuzahlungsstatus 0..1
 * extension[zuzahlungsstatus]
   * ^short = "Zuzahlungsstatus"
   * ^definition = """
@@ -78,7 +78,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
     """
 
 // Zuordnung aus Versicherungsdaten -> Kostenerstattung
-* extension contains $kostenerstattung named kostenerstattung 0..1
+* extension contains $extKostenerstattung named kostenerstattung 0..1
 * extension[kostenerstattung]
   * ^short = "Kostenerstattung"
   * ^definition = """
@@ -101,7 +101,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
     * value[x] 1..1
 
 // Zuordnung aus Versicherungsdaten -> RuhenderLeistungsanspruch
-* extension contains $ruhender-leistungsanspruch named ruhenderLeistungsanspruch 1..1 
+* extension contains $extRuhenderLeistungsanspruch named ruhenderLeistungsanspruch 1..1 
 * extension[ruhenderLeistungsanspruch]
   * ^short = "Ruhender Leistungsanspruch"
   * ^definition = """
@@ -116,7 +116,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
   * extension[dauer].value[x] 1..1
 
 // Zuordnung aus Versicherungsdaten -> Versichertenart
-* extension contains $versichertenart named versichertenart 1..1
+* extension contains $extVersichertenart named versichertenart 1..1
 * extension[versichertenart]
   * ^short = "Art des Versicherten"
   * ^definition = """

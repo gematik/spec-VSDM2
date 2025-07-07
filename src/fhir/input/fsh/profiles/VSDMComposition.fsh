@@ -14,7 +14,7 @@ Title: "VSDM 2 Composition for VSDM 2 Bundle"
 * status MS
 * type MS
 * type.coding 1..1
-* type.coding = $loinc#55188-7 "Patient data Document"
+* type.coding = $csLOINC#55188-7 "Patient data Document"
 * date MS
 * author.identifier 1..1
 * author.identifier only IdentifierIknr

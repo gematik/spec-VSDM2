@@ -21,16 +21,16 @@ Usage: #example
 
 RuleSet: ExampleCoverage
 
-* extension[WOP].valueCoding = $KBV_CS_SFHIR_ITA_WOP#17 "Niedersachsen"
+* extension[WOP].valueCoding = $csWOP#17 "Niedersachsen" 
 
-* extension[besonderePersonengruppe].valueCoding = $KBV_CS_SFHIR_KBV_PERSONENGRUPPE#06 "SER (Soziales Entschädigungsrecht)"
+* extension[besonderePersonengruppe].valueCoding = $csPersonengruppe#06 "SER (Soziales Entschädigungsrecht)"
 
 * extension[zuzahlungsstatus] 
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = 2026-12-31
 
 * extension[dmp][+]
-  * extension[dmp].valueCoding = $KBV_CS_SFHIR_KBV_DMP#01 "Diabetes mellitus Typ 2"
+  * extension[dmp].valueCoding = #01 "Diabetes mellitus Typ 2"
   * extension[zeitraum].valuePeriod.start = "2022-05-05"
   * extension[digitalesDMP].valueBoolean = true
 
@@ -44,7 +44,7 @@ RuleSet: ExampleCoverage
   * extension[art].valueCoding = #1
   * extension[dauer].valuePeriod.start = "2022-05-05"
 
-* extension[versichertenart].valueCoding = $KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS#1 "Mitglied"
+* extension[versichertenart].valueCoding = $csVersichertenart#1 "Mitglied"
 
 // TODO Pflichtfelder aus deutschem Basisprofil - noch kommentieren / beschreiben?
 * status = #active
