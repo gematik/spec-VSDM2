@@ -96,6 +96,22 @@
     "endLine": 304
   },
   {
+    "outputFile": "StructureDefinition-VSDMBundle.json",
+    "fshName": "VSDMBundle",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMBundle.fsh",
+    "startLine": 1,
+    "endLine": 42
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMComposition.json",
+    "fshName": "VSDMComposition",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMComposition.fsh",
+    "startLine": 1,
+    "endLine": 28
+  },
+  {
     "outputFile": "StructureDefinition-VSDMCoverage.json",
     "fshName": "VSDMCoverage",
     "fshType": "Profile",
@@ -128,12 +144,20 @@
     "endLine": 19
   },
   {
+    "outputFile": "StructureDefinition-VSDMOperationOutcome.json",
+    "fshName": "VSDMOperationOutcome",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMOperationOutcome.fsh",
+    "startLine": 1,
+    "endLine": 43
+  },
+  {
     "outputFile": "StructureDefinition-VSDMPatient.json",
     "fshName": "VSDMPatient",
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 198
+    "endLine": 200
   },
   {
     "outputFile": "StructureDefinition-VSDMPayorOrganization.json",
@@ -142,30 +166,6 @@
     "fshFile": "profiles/VSDMPayorOrganization.fsh",
     "startLine": 1,
     "endLine": 62
-  },
-  {
-    "outputFile": "StructureDefinition-vsdm-bundle.json",
-    "fshName": "VSDMBundle",
-    "fshType": "Profile",
-    "fshFile": "profiles/VSDMBundle.fsh",
-    "startLine": 1,
-    "endLine": 34
-  },
-  {
-    "outputFile": "StructureDefinition-vsdm-composition.json",
-    "fshName": "VSDMComposition",
-    "fshType": "Profile",
-    "fshFile": "profiles/VSDMComposition.fsh",
-    "startLine": 1,
-    "endLine": 20
-  },
-  {
-    "outputFile": "StructureDefinition-vsdm-operationoutcome.json",
-    "fshName": "VSDMOperationOutcome",
-    "fshType": "Profile",
-    "fshFile": "profiles/VSDMOperationOutcome.fsh",
-    "startLine": 1,
-    "endLine": 33
   },
   {
     "outputFile": "ValueSet-VSDMBesonderePersonengruppeVS.json",

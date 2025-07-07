@@ -1,7 +1,7 @@
 Profile: VSDMPatient
 Parent: TIPatient
-Title: "Versicherter im VSDM"
-Description: "Der VSDMPatient bildet einen Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0 ab."
+Title: "Versicherter"
+Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0"
 
 // Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen. 
 
@@ -9,7 +9,9 @@ Description: "Der VSDMPatient bildet einen Versicherten im Versichertenstammdate
 * insert Meta
 * . 
   * ^short = "Versicherter im VSDM"
-  * ^definition = "Der VSDMPatient bildet einen Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0 ab."
+  * ^definition = """
+      Der VSDMPatient bildet einen Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0 ab.
+    """
 
 // Zuordnung aus Versichertendaten -> Versicherter -> VersichertenID
 * identifier[KVNR] 1..1
