@@ -46,7 +46,8 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
   * ^requirements = """
       Die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.
     """
-// TODO ggf. eigenes ValueSet einführen, um Wert 00 auszuschließen? Texte sind auch unzureichend, führende Null?
+  * value[x] from VSDMBesonderePersonengruppeVS (required)
+  * valueCoding.system = $csPersonengruppe (exactly)
 
 // Zuordnung aus Versicherungsdaten -> Zuzahlungsstatus
 * extension contains $extZuzahlungsstatus named zuzahlungsstatus 0..1

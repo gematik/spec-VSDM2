@@ -1291,7 +1291,7 @@
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
             "map": "VSDMCoverage.extension:besonderePersonengruppe",
-            "comment": "Die Schlüsseltabelle wird unverändert abgebildet."
+            "comment": "Es werden die zweistelligen Werte aus der Schlüsseltabelle (mit führenden Nullen) verwendet."
           }
         ]
       },
@@ -2662,7 +2662,7 @@
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
             "map": "VSDMCoverage.extension:besonderePersonengruppe",
-            "comment": "Die Schlüsseltabelle wird unverändert abgebildet."
+            "comment": "Es werden die zweistelligen Werte aus der Schlüsseltabelle (mit führenden Nullen) verwendet."
           }
         ]
       },

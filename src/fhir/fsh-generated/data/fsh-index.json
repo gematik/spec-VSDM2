@@ -101,7 +101,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
-    "endLine": 157
+    "endLine": 158
   },
   {
     "outputFile": "StructureDefinition-VSDMDMPTeilnahme.json",
@@ -158,6 +158,14 @@
     "fshFile": "profiles/VSDMOperationOutcome.fsh",
     "startLine": 1,
     "endLine": 34
+  },
+  {
+    "outputFile": "ValueSet-VSDMBesonderePersonengruppeVS.json",
+    "fshName": "VSDMBesonderePersonengruppeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMBesonderePersonengruppeVS.fsh",
+    "startLine": 1,
+    "endLine": 11
   },
   {
     "outputFile": "ValueSet-VSDMDMPVS.json",
