@@ -1,12 +1,13 @@
 Profile: VSDMPatient
-Parent: EPAPatient
+Parent: TIPatient
 Id: vsdm-patient
 * ^url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
 * insert Meta
 * meta 1..1
 * meta.profile 1..1
 * meta.profile = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient" (exactly)
-* identifier 1..1
+
+* identifier[KVNR] 1..1
 
 * address only address-de-basis
 
