@@ -125,7 +125,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 196
+    "endLine": 198
   },
   {
     "outputFile": "StructureDefinition-VSDMPayorOrganization.json",
@@ -168,10 +168,26 @@
     "endLine": 8
   },
   {
+    "outputFile": "ValueSet-VSDMNamenszusatzVS.json",
+    "fshName": "VSDMNamenszusatzVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMNamenszusatzVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
     "outputFile": "ValueSet-VSDMRuhenderLeistungsanspruchArtVS.json",
     "fshName": "VSDMRuhenderLeistungsanspruchArtVS",
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMRuhenderLeistungsanspruchArtVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-VSDMVorsatzwortVS.json",
+    "fshName": "VSDMVorsatzwortVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMVorsatzwortVS.fsh",
     "startLine": 1,
     "endLine": 7
   },
