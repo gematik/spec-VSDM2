@@ -58,9 +58,10 @@ Description: "Der VSDMPatient bildet einen Versicherten im Versichertenstammdate
   * ^comment = """
       Hinweise zum Umgang mit dieser Erweiterung siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.
       Eine Tabelle der gültigen Namenszusätze findet sich in Anlage 7 zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp.
+      Um die Verarbeitung ausländischer Namensangaben nicht zu verhindern, ist die Wertetabelle nur als "preferred binding" hinterlegt.
       Verwender müssen mindestens 20 Zeichen verarbeiten können.
     """
-    // TODO zu diskutieren: Wertetabelle ist als CodeSystem im deutschen Basisprofil vorhanden - Binding?
+  * valueString from VSDMNamenszusatzVS (preferred)
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Nachname
 * name[Name].family.extension[nachname]
@@ -83,9 +84,10 @@ Description: "Der VSDMPatient bildet einen Versicherten im Versichertenstammdate
   * ^comment = """
       Hinweise zum Umgang mit dieser Erweiterung siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.
       Eine Tabelle der gültigen Vorsatzworte findet sich in Anlage 6 zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp.
+      Um die Verarbeitung ausländischer Namensangaben nicht zu verhindern, ist die Wertetabelle nur als "preferred binding" hinterlegt.
       Verwender müssen mindestens 20 Zeichen verarbeiten können.
     """
-    // TODO zu diskutieren: Wertetabelle ist als CodeSystem im deutschen Basisprofil vorhanden - Binding?
+  * valueString from VSDMVorsatzwortVS (preferred)
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Vorname
 * name[Name].given

@@ -14,11 +14,13 @@ StructureDefinition-VSDDatensatz.json                    VSDDatensatz           
 StructureDefinition-VSDMCoverage.json                    VSDMCoverage                        Profile     profiles/VSDMCoverage.fsh                           1 - 156
 StructureDefinition-VSDMDMPTeilnahme.json                VSDMDMPTeilnahme                    Extension   extensions/VSDMDMPTeilnahme.fsh                     1 - 52
 StructureDefinition-VSDMLaenderkennzeichen.json          VSDMLaenderkennzeichen              Extension   extensions/VSDMLaenderkennzeichen.fsh               1 - 10
-StructureDefinition-VSDMPatient.json                     VSDMPatient                         Profile     profiles/VSDMPatient.fsh                            1 - 196
+StructureDefinition-VSDMPatient.json                     VSDMPatient                         Profile     profiles/VSDMPatient.fsh                            1 - 198
 StructureDefinition-VSDMPayorOrganization.json           VSDMPayorOrganization               Profile     profiles/VSDMPayorOrganization.fsh                  1 - 77
 StructureDefinition-vsdm-bundle.json                     VSDMBundle                          Profile     profiles/VSDMBundle.fsh                             1 - 34
 StructureDefinition-vsdm-composition.json                VSDMComposition                     Profile     profiles/VSDMComposition.fsh                        1 - 20
 StructureDefinition-vsdm-operationoutcome.json           VSDMOperationOutcome                Profile     profiles/VSDMOperationOutcome.fsh                   1 - 34
 ValueSet-VSDMKostentraegerTypVS.json                     VSDMKostentraegerTypVS              ValueSet    valuesets/VSDMKostentraegerTypVS.fsh                1 - 8
+ValueSet-VSDMNamenszusatzVS.json                         VSDMNamenszusatzVS                  ValueSet    valuesets/VSDMNamenszusatzVS.fsh                    1 - 7
 ValueSet-VSDMRuhenderLeistungsanspruchArtVS.json         VSDMRuhenderLeistungsanspruchArtVS  ValueSet    valuesets/VSDMRuhenderLeistungsanspruchArtVS.fsh    1 - 7
+ValueSet-VSDMVorsatzwortVS.json                          VSDMVorsatzwortVS                   ValueSet    valuesets/VSDMVorsatzwortVS.fsh                     1 - 7
 ValueSet-vsdm-errorcode-vs.json                          VSDMErrorcodeVS                     ValueSet    valuesets/VSDMErrorcodeVS.fsh                       1 - 8

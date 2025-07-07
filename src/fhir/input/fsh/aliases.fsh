@@ -13,6 +13,8 @@ Alias: $contactentitytype = http://terminology.hl7.org/CodeSystem/contactentity-
 Alias: $identifier-kvid-10 = http://fhir.de/StructureDefinition/identifier-kvid-10
 Alias: $identifier-pkv = http://fhir.de/StructureDefinition/identifier-pkv
 Alias: $iso21090-EN-qualifier = http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier
+Alias: $anlage-6-vorsatzworte = http://fhir.de/CodeSystem/deuev/anlage-6-vorsatzworte
+Alias: $anlage-7-namenszusaetze = http://fhir.de/CodeSystem/deuev/anlage-7-namenszusaetze
 Alias: $anlage-8-laenderkennzeichen = http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen
 
 // in Coverage, Bundle
