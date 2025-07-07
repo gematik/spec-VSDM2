@@ -23,7 +23,7 @@ Usage: #example
     * extension[Strasse].valueString = "Blumenweg"
   * city = "Esens"
   * postalCode = "26427"
-  * country = $cs-iso3166-1-2#DE
+  * country = $csCountryCodeISO3166#DE
     * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"
 
 
@@ -55,12 +55,12 @@ Usage: #example
     * extension[Adresszusatz].valueString = "Hinterhaus links"
   * city = "Esens"
   * postalCode = "26427"
-  * country = $cs-iso3166-1-2#DE
+  * country = $csCountryCodeISO3166#DE
     * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"
 * address[PostfachAdresse]
   * line[+] = "Postfach 123456"
     * extension[Postfach].valueString = "Postfach 12345"
   * city = "Esens"
   * postalCode = "26429"
-  * country = $cs-iso3166-1-2#DE
+  * country = $csCountryCodeISO3166#DE
     * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"

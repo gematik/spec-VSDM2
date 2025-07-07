@@ -20,9 +20,9 @@ Description: "Angaben zur Teilnahme eines Versicherten an einem Disease Manageme
 	"""
   * value[x] 1..1 
   * value[x] only Coding
-  * value[x] from $KBV_VS_SFHIR_KBV_DMP (required)
+  * value[x] from $vsDMP (required)
     * system 1..
-    * system = $KBV_CS_SFHIR_KBV_DMP
+    * system = $csDMP
     * code 1..
 // TODO zu diskutieren: eigenes ValueSet einführen, um nur Einzelwerte zuzulassen?
 

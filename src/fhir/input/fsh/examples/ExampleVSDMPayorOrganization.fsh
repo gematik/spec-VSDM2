@@ -7,7 +7,7 @@ Usage: #example
 * type[KostentraegerTyp].coding = #ins "Hauptkostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit
 * name = "Beispiel-Hauptkostenträger"
 * address
-  * country = $cs-iso3166-1-2#DE
+  * country = $csCountryCodeISO3166#DE
     * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"
 
 Instance: VSDMAbrechnenderKostentrarger
@@ -19,13 +19,13 @@ Usage: #example
 * type[KostentraegerTyp].coding = #pay "abrechnender Kostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit
 * name = "abrechnender Beispiel-Kostenträger"
 * address
-  * country = $cs-iso3166-1-2#DE
+  * country = $csCountryCodeISO3166#DE
     * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"
 
 // Beispiel zur Übertragung weitergehender (nicht verpflichtender) Informationen zum Kostenträger
 * contact[+]
   * purpose
-    * coding = $contactentitytype#BILL
+    * coding = $csContactEntityType#BILL
     * text = "Kontakt für Abrechnungsfragen"
   * telecom[+]
     * system = #phone

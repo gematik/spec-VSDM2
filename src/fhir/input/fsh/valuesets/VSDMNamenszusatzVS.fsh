@@ -4,4 +4,4 @@ Description: "Namenszusatz nach DEÜV Anlage 7"
 
 * insert Meta
 
-* include codes from system $anlage-7-namenszusaetze
+* include codes from system $csAnlage7Namenszusaetze
