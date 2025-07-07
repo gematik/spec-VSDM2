@@ -417,6 +417,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -970,6 +971,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -1523,6 +1525,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -2325,6 +2328,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -2378,6 +2382,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -3613,6 +3618,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -4935,6 +4941,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -6011,6 +6018,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -6627,6 +6635,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -7496,6 +7505,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -9361,7 +9371,8 @@
               "http://fhir.de/StructureDefinition/gkv/wop"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:WOP.value[x]",
@@ -9393,7 +9404,8 @@
               "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:besonderePersonengruppe.value[x]",
@@ -9425,7 +9437,8 @@
               "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:zuzahlungsstatus.extension",
@@ -9470,7 +9483,8 @@
               "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:kostenerstattung",
@@ -9488,7 +9502,8 @@
               "http://fhir.de/StructureDefinition/gkv/kostenerstattung"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:kostenerstattung.extension",
@@ -9559,7 +9574,8 @@
               "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:ruhenderLeistungsanspruch.extension:art",
@@ -9601,7 +9617,8 @@
               "http://fhir.de/StructureDefinition/gkv/versichertenart"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:versichertenart.value[x]",
@@ -9625,7 +9642,8 @@
         "path": "Coverage.period",
         "short": "Gültigkeitszeitraum des Versicherungsschutzes",
         "definition": "Gibt den Beginn und, sofern anwendbar, das Ende des Versicherungsschutzes an.",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Coverage.period.start",
@@ -9685,7 +9703,8 @@
               "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.payor:Hauptkostentraeger.extension:kostentraegerRolle",
@@ -9722,7 +9741,8 @@
               "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.payor:abrechnenderKostentraeger.extension:kostentraegerRolle",

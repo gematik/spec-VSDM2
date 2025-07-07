@@ -21,7 +21,7 @@ Description: "Angaben zum Kostenträger im Versichertenstammdatenmanagement (VSD
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = system
   * ^slicing.rules = #open
-* identifier contains IKNR 1..1
+* identifier contains IKNR 1..1 MS
 * identifier[IKNR] only IdentifierIknr 
   * ^short = "Institutionskennzeichen (IKNR)"
   * ^definition = """
@@ -29,7 +29,7 @@ Description: "Angaben zum Kostenträger im Versichertenstammdatenmanagement (VSD
     """
 
 // Zuordnung aus Versicherungsdaten -> [Abrechnender]Kostentraeger -> Kostentraeger
-* name 1..1 
+* name 1..1 MS
   * ^short = "Name des Kostenträgers"
   * ^definition = """
       Name des Kostenträgers.
@@ -44,7 +44,7 @@ Description: "Angaben zum Kostenträger im Versichertenstammdatenmanagement (VSD
       Die meisten Adressfelder sind optional; verpflichtend ist die Angabe des Staats (Ländercode).
       Hinweise zur Abbildung von Adressen und Beispiele siehe https://ig.fhir.de/basisprofile-de/1.0.0-RC1/Datentypen-Address.html.
     """
-  * country
+  * country MS
     * ^short = "Staat"
     * ^definition = """
         Staatsangabe kodiert nach ISO-3166-1-2.
@@ -53,7 +53,7 @@ Description: "Angaben zum Kostenträger im Versichertenstammdatenmanagement (VSD
         Die Kodierung ist durch den FHIR-Standard empfohlen, aber nicht erzwungen. 
         Durch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.
       """
-    * extension contains VSDMLaenderkennzeichen named Laenderkennzeichen 1..1
+    * extension contains VSDMLaenderkennzeichen named Laenderkennzeichen 1..1 MS
     * extension[Laenderkennzeichen] 
       * ^short = "Länderkennzeichen nach DEÜV Anlage 8"
       * ^definition = """
