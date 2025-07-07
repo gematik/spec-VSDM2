@@ -31,7 +31,7 @@ Alias: $csCountryCodeISO3166 = http://hl7.org/fhir/CodeSystem/iso3166-1-2
 // DMP-Schlüssel, verwendet für
 //   - VSDMDMPVS
 //     - VSDMDMPTeilnahme
-//       - VSDMCoverage
+//       - VSDMCoverage.extension[dmp]
 Alias: $csDMP = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP
 
 // LOINC, verwendet für 
@@ -48,7 +48,8 @@ Alias: $csOperationOutcomeCodes = http://terminology.hl7.org/CodeSystem/operatio
 Alias: $csOrganizationType = http://terminology.hl7.org/CodeSystem/organization-type
 
 // besondere Personengruppe, verwendet für
-//   - Beispiel für VSDMCoverage
+//   - VSDMBesonderePersonengruppeVS
+//     - VSDMCoverage.extension[besonderePersonengruppe]
 Alias: $csPersonengruppe = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE
 
 // Versichertenstatus / Versichertenart, verwendet für
@@ -70,11 +71,6 @@ Alias: $csWOP = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP
 //     - VSDMPatient.address.country.extension[Laenderkennzeichen]
 //     - VSDMPayorOrganization.address.country.extension[Laenderkennzeichen]
 Alias: $vsAnlage8Laenderkennzeichen = https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8
-
-// DMP-Schlüssel, verwendet für
-//   - VSDMDMPTeilnahme
-//     - VSDMCoverage
-Alias: $vsDMP = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_DMP
 
 // ================================================================================================
 // 

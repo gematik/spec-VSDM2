@@ -41,12 +41,12 @@
       }
     },
     {
-      "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe",
       "valueCoding": {
-        "code": "06",
         "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
+        "code": "06",
         "display": "SER (Soziales Entschädigungsrecht)"
-      }
+      },
+      "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
     },
     {
       "extension": [

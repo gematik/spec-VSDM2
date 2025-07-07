@@ -23,7 +23,7 @@ RuleSet: ExampleCoverage
 
 * extension[WOP].valueCoding = #17 "Niedersachsen" 
 
-* extension[besonderePersonengruppe].valueCoding = $csPersonengruppe#06 "SER (Soziales Entschädigungsrecht)"
+* extension[besonderePersonengruppe].valueCoding = #06 "SER (Soziales Entschädigungsrecht)"
 
 * extension[zuzahlungsstatus] 
   * extension[status].valueBoolean = true
