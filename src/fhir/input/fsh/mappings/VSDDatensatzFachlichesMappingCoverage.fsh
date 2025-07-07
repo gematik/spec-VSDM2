@@ -30,7 +30,7 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes zum F
     * Kostentraegerkennung -> "VSDMPayorOrganization.identifier:IKNR"
 
   * WOP -> "VSDMCoverage.extension:WOP"
-    "Die Schlüsseltabelle wird unverändert abgebildet."
+    "Die KBV-Schlüsseltabelle wird durch ein VSDM-spezifisches ValueSet auf die zulässigen Werte eingeschränkt."
 
   * BesonderePersonengruppe -> "VSDMCoverage.extension:besonderePersonengruppe"
     "Die Schlüsseltabelle wird unverändert abgebildet."

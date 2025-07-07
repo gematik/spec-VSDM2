@@ -21,7 +21,7 @@ Usage: #example
 
 RuleSet: ExampleCoverage
 
-* extension[WOP].valueCoding = $csWOP#17 "Niedersachsen" 
+* extension[WOP].valueCoding = #17 "Niedersachsen" 
 
 * extension[besonderePersonengruppe].valueCoding = $csPersonengruppe#06 "SER (Soziales Entschädigungsrecht)"
 

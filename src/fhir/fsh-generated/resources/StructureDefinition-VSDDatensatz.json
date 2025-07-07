@@ -1256,7 +1256,7 @@
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
             "map": "VSDMCoverage.extension:WOP",
-            "comment": "Die Schlüsseltabelle wird unverändert abgebildet."
+            "comment": "Die KBV-Schlüsseltabelle wird durch ein VSDM-spezifisches ValueSet auf die zulässigen Werte eingeschränkt."
           }
         ]
       },
@@ -2642,7 +2642,7 @@
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
             "map": "VSDMCoverage.extension:WOP",
-            "comment": "Die Schlüsseltabelle wird unverändert abgebildet."
+            "comment": "Die KBV-Schlüsseltabelle wird durch ein VSDM-spezifisches ValueSet auf die zulässigen Werte eingeschränkt."
           }
         ]
       },
