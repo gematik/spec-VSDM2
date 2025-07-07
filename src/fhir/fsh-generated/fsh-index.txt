@@ -13,8 +13,8 @@ Patient-Valid-437f2555-2396-4c64-a656-e9553161ca3c.json  ValidExampleVSDMPatient
 StructureDefinition-VSDDatensatz.json                    VSDDatensatz                        Logical     logicalmodel/VSDDatensatz.fsh                       1 - 304
 StructureDefinition-VSDMCoverage.json                    VSDMCoverage                        Profile     profiles/VSDMCoverage.fsh                           1 - 177
 StructureDefinition-VSDMDMPTeilnahme.json                VSDMDMPTeilnahme                    Extension   extensions/VSDMDMPTeilnahme.fsh                     1 - 51
-StructureDefinition-VSDMKostentraegerRolle.json          VSDMKostentraegerRolle              Extension   extensions/VSDMKostentraegerRolle.fsh               1 - 10
-StructureDefinition-VSDMLaenderkennzeichen.json          VSDMLaenderkennzeichen              Extension   extensions/VSDMLaenderkennzeichen.fsh               1 - 10
+StructureDefinition-VSDMKostentraegerRolle.json          VSDMKostentraegerRolle              Extension   extensions/VSDMKostentraegerRolle.fsh               1 - 19
+StructureDefinition-VSDMLaenderkennzeichen.json          VSDMLaenderkennzeichen              Extension   extensions/VSDMLaenderkennzeichen.fsh               1 - 19
 StructureDefinition-VSDMPatient.json                     VSDMPatient                         Profile     profiles/VSDMPatient.fsh                            1 - 198
 StructureDefinition-VSDMPayorOrganization.json           VSDMPayorOrganization               Profile     profiles/VSDMPayorOrganization.fsh                  1 - 62
 StructureDefinition-vsdm-bundle.json                     VSDMBundle                          Profile     profiles/VSDMBundle.fsh                             1 - 34

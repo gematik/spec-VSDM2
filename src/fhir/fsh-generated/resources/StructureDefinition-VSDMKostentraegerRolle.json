@@ -33,8 +33,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Optional Extensions Element",
-        "definition": "Optional Extension Element - found in all resources.",
+        "short": "Rolle des Kostenträgers",
+        "definition": "Die Rolle des Kostenträgers im Versicherungsverhältnis dient der Unterscheidung zwischen Haupt- und abrechnendem Kostenträger.",
         "min": 0,
         "max": "*",
         "base": {
@@ -577,6 +577,12 @@
   },
   "differential": {
     "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Rolle des Kostenträgers",
+        "definition": "Die Rolle des Kostenträgers im Versicherungsverhältnis dient der Unterscheidung zwischen Haupt- und abrechnendem Kostenträger."
+      },
       {
         "id": "Extension.extension",
         "path": "Extension.extension",
