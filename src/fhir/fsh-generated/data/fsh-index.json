@@ -117,7 +117,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMKostentraegerRolle.fsh",
     "startLine": 1,
-    "endLine": 10
+    "endLine": 19
   },
   {
     "outputFile": "StructureDefinition-VSDMLaenderkennzeichen.json",
@@ -125,7 +125,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMLaenderkennzeichen.fsh",
     "startLine": 1,
-    "endLine": 10
+    "endLine": 19
   },
   {
     "outputFile": "StructureDefinition-VSDMPatient.json",

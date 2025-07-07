@@ -33,8 +33,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Optional Extensions Element",
-        "definition": "Optional Extension Element - found in all resources.",
+        "short": "Länderkennzeichen nach DEÜV Anlage 8",
+        "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8.\nDiese Erweiterung ergänzt die Landesangabe nach internationalem Standard ISO3166-1-2.",
         "min": 0,
         "max": "*",
         "base": {
@@ -577,6 +577,12 @@
   },
   "differential": {
     "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Länderkennzeichen nach DEÜV Anlage 8",
+        "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8.\nDiese Erweiterung ergänzt die Landesangabe nach internationalem Standard ISO3166-1-2."
+      },
       {
         "id": "Extension.extension",
         "path": "Extension.extension",
