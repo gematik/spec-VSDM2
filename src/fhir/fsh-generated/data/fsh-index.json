@@ -32,14 +32,6 @@
     "endLine": 23
   },
   {
-    "outputFile": "CodeSystem-vsdm-versicherungsart-cs.json",
-    "fshName": "VSDMVersicherungsartCS",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMVersicherungsartCS.fsh",
-    "startLine": 1,
-    "endLine": 12
-  },
-  {
     "outputFile": "Coverage-2d4da53a-413a-48fe-b908-2e67b5761523.json",
     "fshName": "VSDMCoverageSample",
     "fshType": "Instance",
