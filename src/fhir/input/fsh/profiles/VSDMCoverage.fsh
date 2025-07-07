@@ -18,7 +18,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
     """
 
 // Zuordnung aus Versicherungsdaten -> WOP
-* extension contains $extWOP named WOP 1..1
+* extension contains $extWOP named WOP 1..1 MS
 * extension[wop]
   * ^short = "Wohnortprinzip (WOP)"
   * ^definition = """
@@ -34,7 +34,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
   * valueCoding.system = $csWOP (exactly)
 
 // Zuordnung aus Versicherungsdaten -> BesonderePersonengruppe
-* extension contains $extBesonderePersonengruppe named besonderePersonengruppe 0..1
+* extension contains $extBesonderePersonengruppe named besonderePersonengruppe 0..1 MS
 * extension[besonderePersonengruppe]
   * ^short = "Besondere Personengruppe"
   * ^definition = """
@@ -50,7 +50,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
   * valueCoding.system = $csPersonengruppe (exactly)
 
 // Zuordnung aus Versicherungsdaten -> Zuzahlungsstatus
-* extension contains $extZuzahlungsstatus named zuzahlungsstatus 0..1
+* extension contains $extZuzahlungsstatus named zuzahlungsstatus 0..1 MS
 * extension[zuzahlungsstatus]
   * ^short = "Zuzahlungsstatus"
   * ^definition = """
@@ -72,7 +72,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
   * extension[gueltigBis].valueDate 1..1
 
 // Zuordnung aus Versicherungsdaten -> DMP
-* extension contains VSDMDMPTeilnahme named dmp 0..*
+* extension contains VSDMDMPTeilnahme named dmp 0..* MS
 * extension[dmp]
   * ^short = "DMP-Teilnahme"
   * ^definition = """
@@ -80,7 +80,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
     """
 
 // Zuordnung aus Versicherungsdaten -> Kostenerstattung
-* extension contains $extKostenerstattung named kostenerstattung 0..1
+* extension contains $extKostenerstattung named kostenerstattung 0..1 MS
 * extension[kostenerstattung]
   * ^short = "Kostenerstattung"
   * ^definition = """
@@ -103,7 +103,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
     * value[x] 1..1
 
 // Zuordnung aus Versicherungsdaten -> RuhenderLeistungsanspruch
-* extension contains $extRuhenderLeistungsanspruch named ruhenderLeistungsanspruch 1..1 
+* extension contains $extRuhenderLeistungsanspruch named ruhenderLeistungsanspruch 1..1 MS
 * extension[ruhenderLeistungsanspruch]
   * ^short = "Ruhender Leistungsanspruch"
   * ^definition = """
@@ -118,7 +118,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
   * extension[dauer].value[x] 1..1
 
 // Zuordnung aus Versicherungsdaten -> Versichertenart
-* extension contains $extVersichertenart named versichertenart 1..1
+* extension contains $extVersichertenart named versichertenart 1..1 MS
 * extension[versichertenart]
   * ^short = "Art des Versicherten"
   * ^definition = """
@@ -130,10 +130,10 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
     * value[x] 1..1
 
 // Bezug zum Versicherten
-* beneficiary only Reference(VSDMPatient)
+* beneficiary only Reference(VSDMPatient) 
 
 // Zuordnung aus Versicherungsdaten -> Versicherungsschutz
-* period 1..1
+* period 1..1 MS
   * ^short = "Gültigkeitszeitraum des Versicherungsschutzes"
   * ^definition = """
       Gibt den Beginn und, sofern anwendbar, das Ende des Versicherungsschutzes an.
@@ -167,11 +167,11 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
       """
 
 // Zuordnung aus Versicherungsdaten -> Kostentraeger 
-* payor contains Hauptkostentraeger 1..1
+* payor contains Hauptkostentraeger 1..1 MS
 * payor[Hauptkostentraeger] only Reference(VSDMPayorOrganization)
   * extension[kostentraegerRolle].valueCoding.code = #H "Hauptkostenträger"
 
 // Zuordnung aus Versicherungsdaten -> AbrechnenderKostentraeger 
-* payor contains abrechnenderKostentraeger 0..1
+* payor contains abrechnenderKostentraeger 0..1 MS
 * payor[abrechnenderKostentraeger] only Reference(VSDMPayorOrganization)
   * extension[kostentraegerRolle].valueCoding.code = #A "abrechnender Kostentraeger"

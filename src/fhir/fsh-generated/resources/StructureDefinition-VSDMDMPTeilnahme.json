@@ -209,6 +209,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -758,6 +759,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -1172,6 +1174,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -1590,7 +1593,8 @@
         "short": "Schlüssel des DMP",
         "definition": "Gibt den Schlüssel des DMP an, in das der Versicherte eingeschrieben ist.",
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "Extension.extension:dmp.extension",
@@ -1634,7 +1638,8 @@
         "short": "Einschreibezeitraum",
         "definition": "Gibt den Zeitraum der Einschreibung des Versicherten in das DMP an.",
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "Extension.extension:zeitraum.extension",
@@ -1689,7 +1694,8 @@
         "short": "digitales DMP",
         "definition": "Gibt an, ob das DMP als digitales DMP durchgeführt wird.",
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "Extension.extension:digitalesDMP.extension",

@@ -3574,6 +3574,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Patient"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -3809,6 +3810,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -4970,6 +4972,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -5094,6 +5097,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -6255,6 +6259,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -7803,7 +7808,8 @@
         "sliceName": "other-amtlich",
         "short": "Administrative Geschlechtsangabe (deutsche Kodierung)",
         "definition": "Administrative Geschlechtsangabe gemäß den Unterlagen des Kostenträgers, kodiert nach Wertetabelle zur Unterscheidung zwischen \"divers\" und \"unbestimmt\".",
-        "comment": "Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht.\nNur bei FHIR-Kodierung \"other\" zu verwenden (vgl. Constraint pat-de-1)."
+        "comment": "Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht.\nNur bei FHIR-Kodierung \"other\" zu verwenden (vgl. Constraint pat-de-1).",
+        "mustSupport": true
       },
       {
         "id": "Patient.birthDate",
@@ -7838,7 +7844,8 @@
               "http://fhir.de/StructureDefinition/address-de-basis"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Patient.address:StrassenAdresse.type",
@@ -7888,7 +7895,8 @@
               "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Patient.address:PostfachAdresse",
@@ -7903,7 +7911,8 @@
               "http://fhir.de/StructureDefinition/address-de-basis"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Patient.address:PostfachAdresse.type",
@@ -7953,7 +7962,8 @@
               "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       }
     ]
   }

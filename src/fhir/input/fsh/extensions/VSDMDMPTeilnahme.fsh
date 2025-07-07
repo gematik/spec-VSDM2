@@ -12,7 +12,7 @@ Description: "Angaben zur Teilnahme eines Versicherten an einem Disease Manageme
     """
 
 // Zuordnung aus Versicherungsdaten -> DMP -> DMP
-* extension contains dmp 1..1
+* extension contains dmp 1..1 MS
 * extension[dmp]
   * ^short = "Schlüssel des DMP"
   * ^definition = """
@@ -26,7 +26,7 @@ Description: "Angaben zur Teilnahme eines Versicherten an einem Disease Manageme
     * code 1..
 
 // Zuordnung aus Versicherungsdaten -> DMP -> Beginn/Ende
-* extension contains zeitraum 1..1
+* extension contains zeitraum 1..1 MS
 * extension[zeitraum]
   * ^short = "Einschreibezeitraum"
   * ^definition = """
@@ -40,7 +40,7 @@ Description: "Angaben zur Teilnahme eines Versicherten an einem Disease Manageme
       * obeys date-precision-1
 
 // Zuordnung aus Versicherungsdaten -> DMP -> digitalesDMP
-* extension contains digitalesDMP 1..1 
+* extension contains digitalesDMP 1..1  MS
 * extension[digitalesDMP]
   * ^short = "digitales DMP"
   * ^definition = """

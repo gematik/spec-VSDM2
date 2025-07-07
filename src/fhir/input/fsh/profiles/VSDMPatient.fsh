@@ -14,7 +14,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
     """
 
 // Zuordnung aus Versichertendaten -> Versicherter -> VersichertenID
-* identifier[KVNR] 1..1
+* identifier[KVNR] 1..1 MS
   * ^short = "Versichertennummer (KVNR)"
   * ^definition = """
       Es wird der zehnstellig (unveränderliche) Teil der KVNR verwendet. 
@@ -26,7 +26,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
   * ^requirements = "Die KVNR identifiziert den Versicherten, auf den sich die bereitgestellten Stammdaten beziehen."
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Geburtsdatum
-* birthDate
+* birthDate MS
   * ^short = "Geburtsdatum"
   * ^definition = """
       Das Geburtsdatum des Versicherten ist in den VSD eine Pflichtangabe. 
@@ -48,7 +48,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
     """
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Nachname, Vorsatzwort und Namenszusatz
-* name[Name].family
+* name[Name].family MS
   * ^comment = """
       Hinweise zur Bildung des gesamten Namenamens siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.
       Verwender müssen mindestens 87 Zeichen verarbeiten können.
@@ -56,7 +56,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
     // 45 Zeichen Nachname + 20 Zeichen Vorsatzwort + 20 Zeichen Namenszusatz + max. 2 Leerzeichen = 87 Zeichen
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Namenszusatz
-* name[Name].family.extension[namenszusatz]
+* name[Name].family.extension[namenszusatz] MS
   * ^comment = """
       Hinweise zum Umgang mit dieser Erweiterung siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.
       Eine Tabelle der gültigen Namenszusätze findet sich in Anlage 7 zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp.
@@ -66,7 +66,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
   * valueString from VSDMNamenszusatzVS (preferred)
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Nachname
-* name[Name].family.extension[nachname]
+* name[Name].family.extension[nachname] MS
   * ^short = "Nachname ohne Vorsatzwort und Zusätze"
   * ^definition = """
       Diese Erweiterung kann den Nachnamen ohne Vorsatzworte und Zusätze aufnehmen.
@@ -78,7 +78,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
     """
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Vorsatzwort
-* name[Name].family.extension[vorsatzwort]
+* name[Name].family.extension[vorsatzwort] MS
   * ^short = "Vorsatzwort"
   * ^definition = """
       Vorsatzwort zum Nachnamen des Patienten (z.B. "van" in "Ludwig van Beethoven").
@@ -92,7 +92,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
   * valueString from VSDMVorsatzwortVS (preferred)
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Vorname
-* name[Name].given
+* name[Name].given MS
   * ^comment = """
       Mehrere Vornamen können durch Leerzeichen oder Bindestrich getrennt in einem Wert angegeben werden. 
       Von der Wiederholung des given-Elemente SOLL kein Gebrauch gemacht werden; es wird zur besseren Interoperabilität allerdings nicht technisch verboten.
@@ -100,7 +100,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
     """
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Titel
-* name[Name].prefix
+* name[Name].prefix MS
   * ^definition = """
       Namensteile vor dem Vornamen, z.B. akademischer Titel.
       Wenn dieses Attribut zur Angabe des akademischen Titels verwendet wird, ist die Erweiterung prefix-qualifier mit dem Wert AC (academic) verpflichtend anzugeben.
@@ -110,7 +110,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
   * ^comment = """
       Beispiele zur Verwendung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name.
     """
-  * extension[prefix-qualifier]
+  * extension[prefix-qualifier] MS
     * ^short = "Art des Namenspräfix"
     * ^definition = """
         Kodierte Angabe der Art des Namenspräfix zur technischen Unterscheidung zwischen verschieden Präfixen wie akademischem Titel.
@@ -122,7 +122,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
       """
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Geschlecht
-* gender 1..1
+* gender 1..1 MS
   * ^short = "Administrative Geschlechtsangabe (FHIR-Kodierung)"
   * ^definition = """
       Administrative Geschlechtsangabe gemäß den Unterlagen des Kostenträgers, kodiert nach FHIR-Standard.
@@ -130,7 +130,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
   * ^comment = """
       Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht.
     """
-  * extension[other-amtlich]
+  * extension[other-amtlich] MS
     * ^short = "Administrative Geschlechtsangabe (deutsche Kodierung)"
     * ^definition = """
         Administrative Geschlechtsangabe gemäß den Unterlagen des Kostenträgers, kodiert nach Wertetabelle zur Unterscheidung zwischen "divers" und "unbestimmt".
@@ -149,7 +149,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
 
 // Zuordnung aus Versichertendaten -> Versicherter -> PostfachAdresse
 * address[PostfachAdresse] only AddressDeBasis // address-de-basis
-* address[PostfachAdresse]
+* address[PostfachAdresse] MS
   * type = #postal
   * line
     * ^comment = """
@@ -164,7 +164,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
         Die Kodierung ist durch den FHIR-Standard empfohlen, aber nicht erzwungen. 
         Durch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.
       """
-    * extension contains VSDMLaenderkennzeichen named Laenderkennzeichen 1..1
+    * extension contains VSDMLaenderkennzeichen named Laenderkennzeichen 1..1 MS
     * extension[Laenderkennzeichen] 
       * ^short = "Länderkennzeichen nach DEÜV Anlage 8"
       * ^definition = """
@@ -176,7 +176,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
 
 // Zuordnung aus Versichertendaten -> Versicherter -> StrassenAdresse
 * address[StrassenAdresse] only AddressDeBasis // address-de-basis
-* address[StrassenAdresse]
+* address[StrassenAdresse] MS
   * type = #physical
   * line
     * ^comment = """
@@ -191,7 +191,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
         Die Kodierung ist durch den FHIR-Standard empfohlen, aber nicht erzwungen. 
         Durch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.
       """
-    * extension contains VSDMLaenderkennzeichen named Laenderkennzeichen 1..1
+    * extension contains VSDMLaenderkennzeichen named Laenderkennzeichen 1..1 MS
     * extension[Laenderkennzeichen] 
       * ^short = "Länderkennzeichen nach DEÜV Anlage 8"
       * ^definition = """
