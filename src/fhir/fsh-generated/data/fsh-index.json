@@ -109,7 +109,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMDMPTeilnahme.fsh",
     "startLine": 1,
-    "endLine": 52
+    "endLine": 51
   },
   {
     "outputFile": "StructureDefinition-VSDMLaenderkennzeichen.json",
@@ -158,6 +158,14 @@
     "fshFile": "profiles/VSDMOperationOutcome.fsh",
     "startLine": 1,
     "endLine": 34
+  },
+  {
+    "outputFile": "ValueSet-VSDMDMPVS.json",
+    "fshName": "VSDMDMPVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMDMPVS.fsh",
+    "startLine": 1,
+    "endLine": 18
   },
   {
     "outputFile": "ValueSet-VSDMKostentraegerTypVS.json",

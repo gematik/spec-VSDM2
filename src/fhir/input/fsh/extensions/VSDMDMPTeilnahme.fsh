@@ -20,11 +20,10 @@ Description: "Angaben zur Teilnahme eines Versicherten an einem Disease Manageme
 	"""
   * value[x] 1..1 
   * value[x] only Coding
-  * value[x] from $vsDMP (required)
+  * value[x] from VSDMDMPVS (required)
     * system 1..
     * system = $csDMP
     * code 1..
-// TODO zu diskutieren: eigenes ValueSet einführen, um nur Einzelwerte zuzulassen?
 
 // Zuordnung aus Versicherungsdaten -> DMP -> Beginn/Ende
 * extension contains zeitraum 1..1

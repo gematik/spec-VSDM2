@@ -1,0 +1,69 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "VSDMDMPVS",
+  "id": "VSDMDMPVS",
+  "title": "Disease-Management-Programm (DMP)",
+  "description": "Disease-Management-Programm (Einschränkung auf im VSDM 2.0 gültige Werte)",
+  "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMDMPVS",
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "date": "2023-12-31",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+        "concept": [
+          {
+            "code": "01",
+            "display": "Diabetes mellitus Typ 2 "
+          },
+          {
+            "code": "02",
+            "display": "Brustkrebs "
+          },
+          {
+            "code": "03",
+            "display": "Koronare Herzkrankheit"
+          },
+          {
+            "code": "04",
+            "display": "Diabetes mellitus Typ 1 "
+          },
+          {
+            "code": "05",
+            "display": "Asthma bronchiale "
+          },
+          {
+            "code": "06",
+            "display": "COPD (chronic obstructive pulmonary disease)"
+          },
+          {
+            "code": "07",
+            "display": "Chronische Herzinsuffizienz"
+          },
+          {
+            "code": "08",
+            "display": "Depression"
+          },
+          {
+            "code": "09",
+            "display": "Rückenschmerz"
+          },
+          {
+            "code": "10",
+            "display": "Rheuma"
+          },
+          {
+            "code": "11",
+            "display": "Osteoporose"
+          },
+          {
+            "code": "12",
+            "display": "Adipositas - Erwachsene"
+          }
+        ]
+      }
+    ]
+  }
+}
