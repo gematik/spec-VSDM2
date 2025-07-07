@@ -153,7 +153,25 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
         Für den Fall der Authentifikation mit einer elektronischen Identität liegt ohnehin kein eGK-Gültigkeitsdatum vor.
       """
 
-// Zuordnung aus Versicherungsdaten -> [Abrechnender]Kostentraeger 
+// Extension und Slicing zur Unterscheidung von Haupt- und abrechnendem Kostenträger
 * payor
   * ^short = "Kostenträger"
-// FIXME: Typreferenzen und Kardinalitäten von Haupt- und abrechnendem Kostenträger müssen noch in das Profil eingearbeitet werden
+  * extension contains VSDMKostentraegerRolle named kostentraegerRolle 0..1 
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "extension[kostentraegerRolle].valueCoding"
+  * ^slicing.rules = #open
+  * extension[kostentraegerRolle]
+    * ^short = "Rolle des Kostenträgers"
+    * ^definition = """
+        Rolle des Kostenträgers (Haupt- oder abrechnender Kostenträger)
+      """
+
+// Zuordnung aus Versicherungsdaten -> Kostentraeger 
+* payor contains Hauptkostentraeger 1..1
+* payor[Hauptkostentraeger] only Reference(VSDMPayorOrganization)
+  * extension[kostentraegerRolle].valueCoding.code = #H "Hauptkostenträger"
+
+// Zuordnung aus Versicherungsdaten -> AbrechnenderKostentraeger 
+* payor contains abrechnenderKostentraeger 0..1
+* payor[abrechnenderKostentraeger] only Reference(VSDMPayorOrganization)
+  * extension[kostentraegerRolle].valueCoding.code = #A "abrechnender Kostentraeger"

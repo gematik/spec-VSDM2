@@ -9,25 +9,25 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes zum F
 
 * Versicherungsdaten
 
-  * Kostentraeger -> "VSDMCoverage.payor"
-    "Der Haupt-Kostenträger wird als Referenz auf eine VSDMPayorOrganization mit dem Typ \"ins\" (Haupt-Kostenträger) abgebildet."
+  * Kostentraeger -> "VSDMCoverage.payor:Hauptkostentraeger"
+    "Der Hauptkostenträger wird als Referenz auf eine VSDMPayorOrganization abgebildet. Die Referenz ist mit einer Erweiterung zur Kennzeichnung der Rolle des Kostenträgers versehen."
 
-    * Name -> "VSDMPayorOrganization.name"
+    * Name -> "VSDMPayorOrganization:Hauptkostentraeger.name"
 
-    * Kostentraegerlaendercode -> "VSDMPayorOrganization.address.country"
+    * Kostentraegerlaendercode -> "VSDMPayorOrganization:Hauptkostentraeger.address.country"
       "Hinweise zur Befüllung der Extensions beachten."
 
-    * Kostentraegerkennung -> "VSDMPayorOrganization.identifier:IKNR"
+    * Kostentraegerkennung -> "VSDMPayorOrganization:Hauptkostentraeger.identifier:IKNR"
 
-  * AbrechnenderKostentraeger -> "VSDMCoverage.payor"
-    "Der abrechnende Kostenträger wird als Referenz auf eine VSDMPayorOrganization mit dem Typ \"pay\" (abrechnender Kostenträger) abgebildet."
+  * AbrechnenderKostentraeger -> "VSDMCoverage.payor:abrechnenderKostentraeger"
+    "Der abrechnende Kostenträger wird als Referenz auf eine VSDMPayorOrganization abgebildet. Die Referenz ist mit einer Erweiterung zur Kennzeichnung der Rolle des Kostenträgers versehen."
   
-    * Name -> "VSDMPayorOrganization.name"
+    * Name -> "VSDMPayorOrganization:abrechnenderKostentraeger.name"
 
-    * Kostentraegerlaendercode -> "VSDMPayorOrganization.address.country"
+    * Kostentraegerlaendercode -> "VSDMPayorOrganization:abrechnenderKostentraeger.address.country"
       "Hinweise zur Befüllung der Extensions beachten."
 
-    * Kostentraegerkennung -> "VSDMPayorOrganization.identifier:IKNR"
+    * Kostentraegerkennung -> "VSDMPayorOrganization:abrechnenderKostentraeger.identifier:IKNR"
 
   * WOP -> "VSDMCoverage.extension:WOP"
     "Die KBV-Schlüsseltabelle wird durch ein VSDM-spezifisches ValueSet auf die zulässigen Werte eingeschränkt."

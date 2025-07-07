@@ -55,10 +55,10 @@ RuleSet: ExampleCoverage
 
 * payor[+]
   * reference = "Organization/2a6924bf-6e6a-4ef3-b79f-c2138c10712f"
-  * display = "Hauptkostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit
+  * extension[kostentraegerRolle].valueCoding = #H "Hauptkostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit
 * payor[+]
   * reference = "Organization/d1f7b106-7f99-40d6-9f21-50b051301127"
-  * display = "abrechnender Kostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit
+  * extension[kostentraegerRolle].valueCoding = #A "abrechnender Kostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit
 
 
 

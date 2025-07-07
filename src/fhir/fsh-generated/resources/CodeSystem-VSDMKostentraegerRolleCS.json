@@ -1,0 +1,25 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "VSDMKostentraegerRolleCS",
+  "id": "VSDMKostentraegerRolleCS",
+  "title": "Rolle des Kostenträgers",
+  "description": "Rolle des Kostenträgers im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
+  "concept": [
+    {
+      "code": "H",
+      "display": "Haupt-Kostenträger"
+    },
+    {
+      "code": "A",
+      "display": "abrechnender Kostenträger"
+    }
+  ],
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "date": "2023-12-31",
+  "caseSensitive": true,
+  "count": 2
+}

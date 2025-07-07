@@ -8,6 +8,14 @@
     "endLine": 18
   },
   {
+    "outputFile": "CodeSystem-VSDMKostentraegerRolleCS.json",
+    "fshName": "VSDMKostentraegerRolleCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMKostentraegerRolleCS.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
     "outputFile": "CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json",
     "fshName": "VSDMRuhenderLeistungsanspruchArtCS",
     "fshType": "CodeSystem",
@@ -61,15 +69,15 @@
     "fshType": "Instance",
     "fshFile": "examples/ExampleVSDMPayorOrganization.fsh",
     "startLine": 1,
-    "endLine": 11
+    "endLine": 10
   },
   {
     "outputFile": "Organization-d1f7b106-7f99-40d6-9f21-50b051301127.json",
     "fshName": "VSDMAbrechnenderKostentrarger",
     "fshType": "Instance",
     "fshFile": "examples/ExampleVSDMPayorOrganization.fsh",
-    "startLine": 13,
-    "endLine": 35
+    "startLine": 12,
+    "endLine": 33
   },
   {
     "outputFile": "Patient-437f2555-2396-4c64-a656-e9553161ca3c.json",
@@ -101,7 +109,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
-    "endLine": 158
+    "endLine": 177
   },
   {
     "outputFile": "StructureDefinition-VSDMDMPTeilnahme.json",
@@ -110,6 +118,14 @@
     "fshFile": "extensions/VSDMDMPTeilnahme.fsh",
     "startLine": 1,
     "endLine": 51
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMKostentraegerRolle.json",
+    "fshName": "VSDMKostentraegerRolle",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMKostentraegerRolle.fsh",
+    "startLine": 1,
+    "endLine": 10
   },
   {
     "outputFile": "StructureDefinition-VSDMLaenderkennzeichen.json",
@@ -133,7 +149,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPayorOrganization.fsh",
     "startLine": 1,
-    "endLine": 77
+    "endLine": 62
   },
   {
     "outputFile": "StructureDefinition-vsdm-bundle.json",
@@ -176,12 +192,12 @@
     "endLine": 18
   },
   {
-    "outputFile": "ValueSet-VSDMKostentraegerTypVS.json",
-    "fshName": "VSDMKostentraegerTypVS",
+    "outputFile": "ValueSet-VSDMKostentraegerRolleVS.json",
+    "fshName": "VSDMKostentraegerRolleVS",
     "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMKostentraegerTypVS.fsh",
+    "fshFile": "valuesets/VSDMKostentraegerRolleVS.fsh",
     "startLine": 1,
-    "endLine": 8
+    "endLine": 7
   },
   {
     "outputFile": "ValueSet-VSDMNamenszusatzVS.json",

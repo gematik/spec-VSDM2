@@ -307,6 +307,34 @@
             "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung"
           }
         ],
+        "payor": [
+          {
+            "extension": [
+              {
+                "valueCoding": {
+                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
+                  "code": "H",
+                  "display": "Hauptkostenträger"
+                },
+                "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+              }
+            ],
+            "reference": "Organization/2a6924bf-6e6a-4ef3-b79f-c2138c10712f"
+          },
+          {
+            "extension": [
+              {
+                "valueCoding": {
+                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
+                  "code": "A",
+                  "display": "abrechnender Kostenträger"
+                },
+                "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+              }
+            ],
+            "reference": "Organization/d1f7b106-7f99-40d6-9f21-50b051301127"
+          }
+        ],
         "status": "active",
         "type": {
           "coding": [
@@ -319,16 +347,6 @@
           "start": "2022-04-01",
           "end": "2027-07-31"
         },
-        "payor": [
-          {
-            "reference": "Organization/2a6924bf-6e6a-4ef3-b79f-c2138c10712f",
-            "display": "Hauptkostenträger"
-          },
-          {
-            "reference": "Organization/d1f7b106-7f99-40d6-9f21-50b051301127",
-            "display": "abrechnender Kostenträger"
-          }
-        ],
         "beneficiary": {
           "reference": "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
         }
@@ -348,17 +366,6 @@
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
             "value": "12345678"
-          }
-        ],
-        "type": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
-                "code": "ins",
-                "display": "Hauptkostenträger"
-              }
-            ]
           }
         ],
         "address": [
@@ -395,17 +402,6 @@
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
             "value": "18765432"
-          }
-        ],
-        "type": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
-                "code": "pay",
-                "display": "abrechnender Kostenträger"
-              }
-            ]
           }
         ],
         "address": [
