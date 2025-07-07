@@ -8,12 +8,20 @@
     "endLine": 18
   },
   {
+    "outputFile": "CodeSystem-VSDMErrorcodeCS.json",
+    "fshName": "VSDMErrorcodeCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMErrorcodeCS.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
     "outputFile": "CodeSystem-VSDMKostentraegerRolleCS.json",
     "fshName": "VSDMKostentraegerRolleCS",
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMKostentraegerRolleCS.fsh",
     "startLine": 1,
-    "endLine": 9
+    "endLine": 10
   },
   {
     "outputFile": "CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json",
@@ -21,15 +29,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh",
     "startLine": 1,
-    "endLine": 8
-  },
-  {
-    "outputFile": "CodeSystem-vsdm-errorcode-cs.json",
-    "fshName": "VSDMErrorcodeCS",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMErrorcodeCS.fsh",
-    "startLine": 1,
-    "endLine": 23
+    "endLine": 9
   },
   {
     "outputFile": "Coverage-2d4da53a-413a-48fe-b908-2e67b5761523.json",
@@ -165,7 +165,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMOperationOutcome.fsh",
     "startLine": 1,
-    "endLine": 34
+    "endLine": 33
   },
   {
     "outputFile": "ValueSet-VSDMBesonderePersonengruppeVS.json",
@@ -182,6 +182,14 @@
     "fshFile": "valuesets/VSDMDMPVS.fsh",
     "startLine": 1,
     "endLine": 18
+  },
+  {
+    "outputFile": "ValueSet-VSDMErrorcodeVS.json",
+    "fshName": "VSDMErrorcodeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMErrorcodeVS.fsh",
+    "startLine": 1,
+    "endLine": 8
   },
   {
     "outputFile": "ValueSet-VSDMKostentraegerRolleVS.json",
@@ -222,13 +230,5 @@
     "fshFile": "valuesets/VSDMWohnortprinzipVS.fsh",
     "startLine": 1,
     "endLine": 23
-  },
-  {
-    "outputFile": "ValueSet-vsdm-errorcode-vs.json",
-    "fshName": "VSDMErrorcodeVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMErrorcodeVS.fsh",
-    "startLine": 1,
-    "endLine": 8
   }
 ]

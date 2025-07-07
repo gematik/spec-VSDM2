@@ -1,6 +1,6 @@
 Profile: VSDMComposition
 Parent: Composition
-Id: vsdm-composition
+Id: vsdm-composition // TODO auf automatische ID- und URL-Vergabe umstellen, Metadaten setzen
 Title: "VSDM 2 Composition for VSDM 2 Bundle"
 * ^url = "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMComposition"
 * insert Meta
