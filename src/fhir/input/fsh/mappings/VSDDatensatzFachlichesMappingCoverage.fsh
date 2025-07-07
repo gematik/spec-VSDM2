@@ -55,7 +55,7 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes zum F
   * DMP -> "VSDMCoverage.extension:dmp"
 
     * DMP -> "VSDMCoverage.extension:dmp.extension:dmp"
-      "Anstelle des Namens wird der Schlüssel aus der vorgegebenen Wertetabelle angegeben."
+      "Anstelle des Namens wird der Schlüssel aus der vorgegebenen Wertetabelle angegeben. Zur Einschränkung auf die erlaubten Werte (keine Kombi-Werte) wird ein eigenes ValueSet verwendet."
 
     * Beginn -> "VSDMCoverage.extension:dmp.extension:zeitraum.value[x].start"
 

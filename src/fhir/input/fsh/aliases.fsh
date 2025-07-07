@@ -29,9 +29,9 @@ Alias: $csContactEntityType = http://terminology.hl7.org/CodeSystem/contactentit
 Alias: $csCountryCodeISO3166 = http://hl7.org/fhir/CodeSystem/iso3166-1-2
 
 // DMP-Schlüssel, verwendet für
-//   - Beispiel für VSDMCoverage
-//   - VSDMDMPTeilnahme
-//     - VSDMCoverage
+//   - VSDMDMPVS
+//     - VSDMDMPTeilnahme
+//       - VSDMCoverage
 Alias: $csDMP = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP
 
 // LOINC, verwendet für 

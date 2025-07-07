@@ -380,7 +380,7 @@
         "isSummary": false,
         "binding": {
           "strength": "required",
-          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_DMP"
+          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMDMPVS"
         },
         "mapping": [
           {
@@ -1613,7 +1613,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_DMP"
+          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMDMPVS"
         }
       },
       {
