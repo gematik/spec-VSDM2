@@ -364,6 +364,7 @@
             "code": "uri"
           }
         ],
+        "patternUri": "http://hl7.org/fhir/CodeSystem/iso3166-1-2",
         "constraint": [
           {
             "key": "ele-1",

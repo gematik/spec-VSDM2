@@ -508,6 +508,7 @@
             "code": "uri"
           }
         ],
+        "patternUri": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMWahltarifeCS",
         "constraint": [
           {
             "key": "ele-1",

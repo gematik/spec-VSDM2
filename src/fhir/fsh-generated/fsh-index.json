@@ -1,13 +1,5 @@
 [
   {
-    "outputFile": "Bundle-9b6ac30d-246d-4eab-af83-544564792089.json",
-    "fshName": "Vsdm2BundleSample",
-    "fshType": "Instance",
-    "fshFile": "examples/ExampleVSDMBundle.fsh",
-    "startLine": 1,
-    "endLine": 14
-  },
-  {
     "outputFile": "CodeSystem-vsdm-errorcode-cs.json",
     "fshName": "VSDMErrorcodeCS",
     "fshType": "CodeSystem",
@@ -38,22 +30,6 @@
     "fshFile": "codesystems/VSDMKostentraegerAngabestatusCS.fsh",
     "startLine": 1,
     "endLine": 14
-  },
-  {
-    "outputFile": "Coverage-2d4da53a-413a-48fe-b908-2e67b5761523.json",
-    "fshName": "VSDMCoverageSample",
-    "fshType": "Instance",
-    "fshFile": "examples/ExampleVSDMCoverage.fsh",
-    "startLine": 2,
-    "endLine": 9
-  },
-  {
-    "outputFile": "Coverage-VALID-413a-48fe-b908-2e67b5761523.json",
-    "fshName": "VALID-VSDMCoverageSample",
-    "fshType": "Instance",
-    "fshFile": "examples/ExampleVSDMCoverage.fsh",
-    "startLine": 13,
-    "endLine": 19
   },
   {
     "outputFile": "OperationOutcome-example-vsdm-operationoutcome.json",
@@ -110,14 +86,6 @@
     "fshFile": "profiles/VSDMContactPointTIMessenger.fsh",
     "startLine": 1,
     "endLine": 7
-  },
-  {
-    "outputFile": "StructureDefinition-vsdm-coverage.json",
-    "fshName": "VSDMCoverage",
-    "fshType": "Profile",
-    "fshFile": "profiles/VSDMCoverage.fsh",
-    "startLine": 1,
-    "endLine": 50
   },
   {
     "outputFile": "StructureDefinition-vsdm-dmp-kennzeichen-basis-ex.json",

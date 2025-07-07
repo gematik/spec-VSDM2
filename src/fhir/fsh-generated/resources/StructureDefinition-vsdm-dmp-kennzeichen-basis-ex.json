@@ -356,6 +356,7 @@
             "code": "uri"
           }
         ],
+        "patternUri": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
         "constraint": [
           {
             "key": "ele-1",
