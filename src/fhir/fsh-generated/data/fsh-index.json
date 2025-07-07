@@ -101,7 +101,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
-    "endLine": 156
+    "endLine": 157
   },
   {
     "outputFile": "StructureDefinition-VSDMDMPTeilnahme.json",
@@ -190,6 +190,14 @@
     "fshFile": "valuesets/VSDMVorsatzwortVS.fsh",
     "startLine": 1,
     "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-VSDMWohnortprinzipVS.json",
+    "fshName": "VSDMWohnortprinzipVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMWohnortprinzipVS.fsh",
+    "startLine": 1,
+    "endLine": 23
   },
   {
     "outputFile": "ValueSet-vsdm-errorcode-vs.json",

@@ -30,7 +30,8 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
   * ^requirements = """
       Das Kennzeichen WOP ist gemäss § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemäss Artikel 2 § 2 Abs. 2 des Gesetzes zur Einführung des Wohnortprinzips bei Honorarvereinbarungen für Ärzte und Zahnärzte und zur Krankenversichertenkarte gemäss § 291 Abs. 2 Fünftes Sozialgesetzbuch (SGB V) erforderlich.
     """
-// TODO ggf. eigenes ValueSet einführen, um Werte 00, 50, 55, 60, 61, 62 auszuschließen?
+  * value[x] from VSDMWohnortprinzipVS (required)
+  * valueCoding.system = $csWOP (exactly)
 
 // Zuordnung aus Versicherungsdaten -> BesonderePersonengruppe
 * extension contains $extBesonderePersonengruppe named besonderePersonengruppe 0..1
