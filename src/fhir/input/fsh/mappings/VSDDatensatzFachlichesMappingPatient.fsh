@@ -2,32 +2,71 @@ Mapping: VSDDatensatzFachlichesMappingPatient
 Source: VSDDatensatz
 Target: "VSDMPatient"
 Id: VSD-Datensatz-Fachliches-Mapping-Patient
-Title: "VSD-Datensatz Fachliches Mapping Patient"
-Description: "Mapping des Fachmodells aus GEM_VSDM2_LOG_VSD_Confirmation auf das FHIR-Profil Patient"
+Title: "Mapping VSD-Datensatz zu Patient"
+Description: "Zuordnung der Versichertendaten des VSD-Datensatzes zum FHIR-Profil VSDMPatient"
 
-// Metadaten
+// Die Reihenfolge der Elemente in diesem Mapping folgt der Reihenfolge der Elemente im logischen Modell.
 
-
-// Versicherteninformationen
 * Versichertendaten
   * Versicherter
     * VersichertenID -> "VSDMPatient.identifier:KVNR.value"
-    * Nachname -> "VSDMPatient.name:Name.family.extension:nachname"
-    * Vorname -> "VSDMPatient.name:Name.given"
-    * Vorsatzwort -> "VSDMPatient.name:Name.family.extension:vorsatzwort"
-    * Namenszusatz -> "VSDMPatient.name:Name.family.extension:namenszusatz"
-    * Titel -> "VSDMPatient.name:Name.prefix.extension:prefix-qualifier"
+      "Die KVNR wird in Übereinstimmung mit dem deutschen Basisprofils kodiert und ist verpflichtend anzugeben."
+
     * Geburtsdatum -> "VSDMPatient.birthDate"
+      "Die Angabe des partiellen Geburtsdatums wird vom FHIR-nativen Datentyp date bereits unterstützt."
+
+    * Vorname -> "VSDMPatient.name:Name.given"
+      "FHIR lässt die Angabe mehrerer Vornamen in wiederholten Elementen zu. Davon wird hier kein Gebrauch gemacht."
+
+    * Nachname -> "VSDMPatient.name:Name.family"
+      "Nachname mit Vorsatzwort und Namenszusatz. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
+
+    * Nachname -> "VSDMPatient.name:Name.family.extension:nachname"
+      "Nachname ohne Vorsatzwort und Namenszusatz. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
+
     * Geschlecht -> "VSDMPatient.gender"
-    * StrassenAdresse -> "VSDMPatient.address"
-      * Strasse -> "VSDMPatient.address.AddressDeBasis.line.extension:Strasse"
-      * Hausnummer -> "VSDMPatient.address.AddressDeBasis.line.extension:Hausnummer"
-      * Postleitzahl -> "VSDMPatient.address.postalCode"
-      * Ort -> "VSDMPatient.address.city"
-      * Anschriftenzusatz -> "Gibt die relevanten Zusaetze zur Anschrift an. Als Anschriftenzusatz kann z. B. Hinterhaus angegeben werden." "VSDMPatient.address.AddressDeBasis.line.extension:Adresszusatz"
+      "Das Geschlecht wird auf die standardisierten FHIR-Werte abgebildet. Da damit nicht alle Werte abgebildet werden können, kommt eine Erweiterung zum Einsatz."
+    
+    * Geschlecht -> "VSDMPatient.gender.extension:other-amtlich"
+      "Diese Erweiterung nimmt die Geschlechtsangabe gemäß der geforderten Wertetabelle auf."
+    
+    * Vorsatzwort -> "VSDMPatient.name:Name.family.extension:vorsatzwort"
+      "Vorsatzwort zum Nachnamen. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
+
+    * Namenszusatz -> "VSDMPatient.name:Name.family.extension:namenszusatz"
+      "Zusatz zum Nachnamen. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
+
+    * Titel -> "VSDMPatient.name:Name.prefix"
+      "Kennzeichnung des akademischen Titels mittels Erweiterung siehe Elementdokumentation."
+
+    * PostfachAdresse -> "VSDMPatient.address:PostfachAdresse"
+      "Postfachadressen werden mit dem Typ \"postal\" gekennzeichnet."
+
+      * Postleitzahl -> "VSDMPatient.address:PostfachAdresse.postalCode"
+        
+      * Ort -> "VSDMPatient.address:PostfachAdresse.city"
+
+      * Postfach -> "VSDMPatient.address:PostfachAdresse.line.extension:Postfach"
+        "Hinweise zur Bildung der Adresszeilen beachten."
+
+      * Wohnsitzlaendercode -> "VSDMPatient.address:PostfachAdresse.country"
+        "Hinweise zur Befüllung der Extensions beachten."
+
+    * StrassenAdresse -> "VSDMPatient.address:StrassenAdresse"
+      "Strassenadressen (Meldeadressen) werden mit dem Typ \"physical\" gekennzeichnet."
+
+      * Postleitzahl -> "VSDMPatient.address:StrassenAdresse.postalCode"
+
+      * Ort -> "VSDMPatient.address:StrassenAdresse.city"
+
       * Wohnsitzlaendercode -> "VSDMPatient.address.country"
-    * PostfachAdresse -> "VSDMPatient.address"
-      * Postfach -> "VSDMPatient.address.AddressDeBasis.line.extension:Postfach"
-      * Postleitzahl -> "VSDMPatient.address.postalCode"
-      * Ort -> "VSDMPatient.address.city"
-      * Wohnsitzlaendercode -> "VSDMPatient.Address.country"
+        "Hinweise zur Befüllung der Extensions beachten."
+
+      * Strasse -> "VSDMPatient.address:StrassenAdresse.line.extension:Strasse"
+        "Hinweise zur Bildung der Adresszeilen beachten."
+
+      * Hausnummer -> "VSDMPatient.address:StrassenAdresse.line.extension:Hausnummer"
+        "Hinweise zur Bildung der Adresszeilen beachten."
+      
+      * Anschriftenzusatz -> "VSDMPatient.address:StrassenAdresse.line.extension:Adresszusatz"
+        "Hinweise zur Bildung der Adresszeilen beachten."

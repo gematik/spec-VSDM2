@@ -1,0 +1,234 @@
+[
+  {
+    "outputFile": "Bundle-9b6ac30d-246d-4eab-af83-544564792089.json",
+    "fshName": "Vsdm2BundleSample",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleVSDMBundle.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "CodeSystem-VSDMErrorcodeCS.json",
+    "fshName": "VSDMErrorcodeCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMErrorcodeCS.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "CodeSystem-VSDMKostentraegerRolleCS.json",
+    "fshName": "VSDMKostentraegerRolleCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMKostentraegerRolleCS.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json",
+    "fshName": "VSDMRuhenderLeistungsanspruchArtCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "Coverage-2d4da53a-413a-48fe-b908-2e67b5761523.json",
+    "fshName": "VSDMCoverageSample",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleVSDMCoverage.fsh",
+    "startLine": 3,
+    "endLine": 9
+  },
+  {
+    "outputFile": "Coverage-VALID-413a-48fe-b908-2e67b5761523.json",
+    "fshName": "VALID-VSDMCoverageSample",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleVSDMCoverage.fsh",
+    "startLine": 13,
+    "endLine": 19
+  },
+  {
+    "outputFile": "OperationOutcome-example-vsdm-operationoutcome.json",
+    "fshName": "ExampleOperationOutcome",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleOperationOutcome.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "Organization-2a6924bf-6e6a-4ef3-b79f-c2138c10712f.json",
+    "fshName": "VSDMHauptkostentraeger",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleVSDMPayorOrganization.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "Organization-d1f7b106-7f99-40d6-9f21-50b051301127.json",
+    "fshName": "VSDMAbrechnenderKostentrarger",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleVSDMPayorOrganization.fsh",
+    "startLine": 12,
+    "endLine": 33
+  },
+  {
+    "outputFile": "Patient-437f2555-2396-4c64-a656-e9553161ca3c.json",
+    "fshName": "VSDMPatientSample",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleVSDMPatient.fsh",
+    "startLine": 30,
+    "endLine": 66
+  },
+  {
+    "outputFile": "Patient-Valid-437f2555-2396-4c64-a656-e9553161ca3c.json",
+    "fshName": "ValidExampleVSDMPatient",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleVSDMPatient.fsh",
+    "startLine": 1,
+    "endLine": 27
+  },
+  {
+    "outputFile": "StructureDefinition-VSDDatensatz.json",
+    "fshName": "VSDDatensatz",
+    "fshType": "Logical",
+    "fshFile": "logicalmodel/VSDDatensatz.fsh",
+    "startLine": 1,
+    "endLine": 304
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMBundle.json",
+    "fshName": "VSDMBundle",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMBundle.fsh",
+    "startLine": 1,
+    "endLine": 42
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMComposition.json",
+    "fshName": "VSDMComposition",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMComposition.fsh",
+    "startLine": 1,
+    "endLine": 28
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMCoverage.json",
+    "fshName": "VSDMCoverage",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMCoverage.fsh",
+    "startLine": 1,
+    "endLine": 177
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMDMPTeilnahme.json",
+    "fshName": "VSDMDMPTeilnahme",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMDMPTeilnahme.fsh",
+    "startLine": 1,
+    "endLine": 51
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMKostentraegerRolle.json",
+    "fshName": "VSDMKostentraegerRolle",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMKostentraegerRolle.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMLaenderkennzeichen.json",
+    "fshName": "VSDMLaenderkennzeichen",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMLaenderkennzeichen.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMOperationOutcome.json",
+    "fshName": "VSDMOperationOutcome",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMOperationOutcome.fsh",
+    "startLine": 1,
+    "endLine": 43
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMPatient.json",
+    "fshName": "VSDMPatient",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMPatient.fsh",
+    "startLine": 1,
+    "endLine": 200
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMPayorOrganization.json",
+    "fshName": "VSDMPayorOrganization",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMPayorOrganization.fsh",
+    "startLine": 1,
+    "endLine": 62
+  },
+  {
+    "outputFile": "ValueSet-VSDMBesonderePersonengruppeVS.json",
+    "fshName": "VSDMBesonderePersonengruppeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMBesonderePersonengruppeVS.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
+    "outputFile": "ValueSet-VSDMDMPVS.json",
+    "fshName": "VSDMDMPVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMDMPVS.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "ValueSet-VSDMErrorcodeVS.json",
+    "fshName": "VSDMErrorcodeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMErrorcodeVS.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "ValueSet-VSDMKostentraegerRolleVS.json",
+    "fshName": "VSDMKostentraegerRolleVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMKostentraegerRolleVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-VSDMNamenszusatzVS.json",
+    "fshName": "VSDMNamenszusatzVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMNamenszusatzVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-VSDMRuhenderLeistungsanspruchArtVS.json",
+    "fshName": "VSDMRuhenderLeistungsanspruchArtVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMRuhenderLeistungsanspruchArtVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-VSDMVorsatzwortVS.json",
+    "fshName": "VSDMVorsatzwortVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMVorsatzwortVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-VSDMWohnortprinzipVS.json",
+    "fshName": "VSDMWohnortprinzipVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMWohnortprinzipVS.fsh",
+    "startLine": 1,
+    "endLine": 23
+  }
+]

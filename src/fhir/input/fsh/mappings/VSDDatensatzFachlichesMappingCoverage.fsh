@@ -2,43 +2,84 @@ Mapping: VSDDatensatzFachlichesMappingCoverage
 Source: VSDDatensatz
 Target: "VSDMCoverage"
 Id: VSD-Datensatz-Fachliches-Mapping-Coverage
-Title: "VSD-Datensatz Fachliches Mapping Coverage"
-Description: "Mapping des Fachmodells aus GEM_VSDM2_LOG_VSD_Confirmation auf das FHIR-Profil Coverage"
+Title: "Mapping VSD-Datensatz zu Coverage"
+Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes zum FHIR-Profil VSDMCoverage"
 
-// Metadaten
+// Die Reihenfolge der Elemente in diesem Mapping folgt der Reihenfolge der Elemente im logischen Modell.
 
-
-// Versicherungsinformationen
 * Versicherungsdaten
-  * Kostentraeger
-    * Name -> "VSDMCoverage.payor"
-    * Kostentraegerlaendercode -> "VSDMCoverage.extension:vsdm-kostentraegerlaendercode"
-    * Kostentraegerkennung -> "VSDMCoverage.payor.identifier"
-  * AbrechnenderKostentraeger
-    * Name -> "VSDMCoverage.payor"
-    * Kostentraegerlaendercode -> "VSDMCoverage.extension:vsdm-kostentraegerlaendercode"
-    * Kostentraegerkennung -> "VSDMCoverage.payor.extension:abrechnendeIK"
-  * WOP -> "VSDMCoverage.extension:wop"
+
+  * Kostentraeger -> "VSDMCoverage.payor:Hauptkostentraeger"
+    "Der Hauptkostenträger wird als Referenz auf eine VSDMPayorOrganization abgebildet. Die Referenz ist mit einer Erweiterung zur Kennzeichnung der Rolle des Kostenträgers versehen."
+
+    * Name -> "VSDMPayorOrganization:Hauptkostentraeger.name"
+
+    * Kostentraegerlaendercode -> "VSDMPayorOrganization:Hauptkostentraeger.address.country"
+      "Hinweise zur Befüllung der Extensions beachten."
+
+    * Kostentraegerkennung -> "VSDMPayorOrganization:Hauptkostentraeger.identifier:IKNR"
+
+  * AbrechnenderKostentraeger -> "VSDMCoverage.payor:abrechnenderKostentraeger"
+    "Der abrechnende Kostenträger wird als Referenz auf eine VSDMPayorOrganization abgebildet. Die Referenz ist mit einer Erweiterung zur Kennzeichnung der Rolle des Kostenträgers versehen."
+  
+    * Name -> "VSDMPayorOrganization:abrechnenderKostentraeger.name"
+
+    * Kostentraegerlaendercode -> "VSDMPayorOrganization:abrechnenderKostentraeger.address.country"
+      "Hinweise zur Befüllung der Extensions beachten."
+
+    * Kostentraegerkennung -> "VSDMPayorOrganization:abrechnenderKostentraeger.identifier:IKNR"
+
+  * WOP -> "VSDMCoverage.extension:WOP"
+    "Die KBV-Schlüsseltabelle wird durch ein VSDM-spezifisches ValueSet auf die zulässigen Werte eingeschränkt."
+
   * BesonderePersonengruppe -> "VSDMCoverage.extension:besonderePersonengruppe"
+    "Es werden die zweistelligen Werte aus der Schlüsseltabelle (mit führenden Nullen) verwendet."
+
   * Zuzahlungsstatus -> "VSDMCoverage.extension:zuzahlungsstatus"
+    "Die gesamte Erweiterung darf nur angegeben werden, wenn eine Zuzahlungsbefreiung vorliegt."
+
     * Status -> "VSDMCoverage.extension:zuzahlungsstatus.extension:status"
+      "Der Wert \"von Zuzahlungspflicht befreit\" wird auf \"true\" abgebildet."
+
     * GueltigBis -> "VSDMCoverage.extension:zuzahlungsstatus.extension:gueltigBis"
+      "Da die Angabe ein Pflichtfeld ist, aber nur erfolgen kann und soll, wenn eine Zuzahlungsbefreiung vorliegt, beeinflusst das die gesamte Struktur."
+
   * Versicherungsschutz -> "VSDMCoverage.period"
+    "Zur Abbildung werden die Standard-Felder der FHIR-Ressource verwendet."
+    
     * Beginn -> "VSDMCoverage.period.start"
+
     * Ende -> "VSDMCoverage.period.end"
-  * DMP -> "VSDMCoverage.extension:vsdm-dmpKennzeichen"
-    * DMP -> "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmpKennzeichen"
-    * Beginn -> "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmp-zeitraum.value[x].start"
-    * Ende -> "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:dmp-zeitraum.value[x].end"
-    * digitalesDMP -> "VSDMCoverage.extension:vsdm-dmpKennzeichen.extension:digitales-dmp"
-  * Kostenerstattung -> "VSDMCoverage.extension:gkv-kostenerstattung"
-    * AerztlicheVersorgung -> "VSDMCoverage.extension:gkv-kostenerstattung.extension:aerztlicheVersorgung"
-    * ZahnaerztlicheVersorgung -> "VSDMCoverage.extension:gkv-kostenerstattung.extension:zahnaerztlicheVersorgung"
-    * StationaererBereich -> "VSDMCoverage.extension:gkv-kostenerstattung.extension:stationaererBereich"
+      "Da der VSDM 2.0 Resource Server keine Kenntnis von der eingesetzten eGK haben kann, wird immer das Gültigkeitsende des Versicherungsverhältnisses gemeldet, wenn anwendbar."
+
+  * DMP -> "VSDMCoverage.extension:dmp"
+
+    * DMP -> "VSDMCoverage.extension:dmp.extension:dmp"
+      "Anstelle des Namens wird der Schlüssel aus der vorgegebenen Wertetabelle angegeben. Zur Einschränkung auf die erlaubten Werte (keine Kombi-Werte) wird ein eigenes ValueSet verwendet."
+
+    * Beginn -> "VSDMCoverage.extension:dmp.extension:zeitraum.value[x].start"
+
+    * Ende -> "VSDMCoverage.extension:dmp.extension:zeitraum.value[x].end"
+
+    * digitalesDMP -> "VSDMCoverage.extension:dmp.extension:digitalesDMP"
+
+  * Kostenerstattung -> "VSDMCoverage.extension:kostenerstattung"
+
+    * AerztlicheVersorgung -> "VSDMCoverage.extension:kostenerstattung.extension:aerztlicheVersorgung"
+
+    * ZahnaerztlicheVersorgung -> "VSDMCoverage.extension:kostenerstattung.extension:zahnaerztlicheVersorgung"
+
+    * StationaererBereich -> "VSDMCoverage.extension:kostenerstattung.extension:stationaererBereich"
+
     * VeranlassteLeistungen -> "VSDMCoverage.extension:gkv-kostenerstattung.extension:veranlassteLeistungen"
+
   * RuhenderLeistungsanspruch -> "VSDMCoverage.extension:ruhenderLeistungsanspruch"
+
     * Beginn -> "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:dauer.value[x].start"
+
     * Ende -> "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:dauer.value[x].end"
+
     * Art -> "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:art"
+    
   * Versichertenart -> "VSDMCoverage.extension:versichertenart"
   

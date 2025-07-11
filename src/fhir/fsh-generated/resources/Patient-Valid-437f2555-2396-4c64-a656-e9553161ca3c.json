@@ -1,6 +1,6 @@
 {
   "resourceType": "Patient",
-  "id": "437f2555-2396-4c64-a656-e9553161ca3c",
+  "id": "Valid-437f2555-2396-4c64-a656-e9553161ca3c",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
@@ -10,7 +10,7 @@
     {
       "use": "official",
       "prefix": [
-        "Prof. Dr. med. Dr. rer. nat."
+        "Dr."
       ],
       "_prefix": [
         {
@@ -22,27 +22,19 @@
           ]
         }
       ],
-      "family": "Graf von und zu Königstein",
+      "family": "Fernández",
       "_family": {
         "extension": [
           {
-            "url": "http://fhir.de/StructureDefinition/humanname-namenszusatz",
-            "valueString": "Graf"
-          },
-          {
             "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-            "valueString": "Königstein"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
-            "valueString": "von und zu"
+            "valueString": "Fernández"
           }
         ]
       },
       "given": [
-        "Ludger"
+        "Maria"
       ],
-      "text": "Prof. Dr. med. Dr. rer. nat. Ludger Graf von und zu Königstein"
+      "text": "Dr. Maria Fernández"
     }
   ],
   "identifier": [
@@ -55,8 +47,7 @@
     {
       "type": "physical",
       "line": [
-        "Blumenweg 14",
-        "Hinterhaus links"
+        "Blumenweg 14"
       ],
       "_line": [
         {
@@ -68,14 +59,6 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
               "valueString": "Blumenweg"
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
-              "valueString": "Hinterhaus links"
             }
           ]
         }
@@ -95,39 +78,8 @@
           }
         ]
       }
-    },
-    {
-      "type": "postal",
-      "line": [
-        "Postfach 123456"
-      ],
-      "_line": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox",
-              "valueString": "Postfach 12345"
-            }
-          ]
-        }
-      ],
-      "city": "Esens",
-      "postalCode": "26429",
-      "country": "DE",
-      "_country": {
-        "extension": [
-          {
-            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen",
-            "valueCoding": {
-              "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
-              "code": "D",
-              "display": "Deutschland"
-            }
-          }
-        ]
-      }
     }
   ],
-  "gender": "male",
-  "birthDate": "1935-06-22"
+  "gender": "female",
+  "birthDate": "1970"
 }

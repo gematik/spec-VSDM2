@@ -1,0 +1,24 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "VSDMRuhenderLeistungsanspruchArtCS",
+  "id": "VSDMRuhenderLeistungsanspruchArtCS",
+  "title": "Art des ruhenden Leistungsanspruchs",
+  "description": "Art des ruhenden Leistungsanspruchs",
+  "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMRuhenderLeistungsanspruchArtCS",
+  "concept": [
+    {
+      "code": "1",
+      "display": "vollständig"
+    },
+    {
+      "code": "2",
+      "display": "eingeschränkt"
+    }
+  ],
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "date": "2023-12-31",
+  "count": 2
+}

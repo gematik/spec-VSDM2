@@ -1,0 +1,41 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "VSDMBesonderePersonengruppeVS",
+  "id": "VSDMBesonderePersonengruppeVS",
+  "title": "Besondere Personengruppe",
+  "description": "Besondere Personengruppe",
+  "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMBesonderePersonengruppeVS",
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "date": "2023-12-31",
+  "compose": {
+    "include": [
+      {
+        "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
+        "concept": [
+          {
+            "code": "04",
+            "display": "BSHG (Bundessozialhilfegesetz) § 264 SGB V"
+          },
+          {
+            "code": "06",
+            "display": "SER (Soziales Entschädigungsrecht)"
+          },
+          {
+            "code": "07",
+            "display": "SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht: - Personen mit Wohnsitz im Inland, Abrechnung nach Aufwand"
+          },
+          {
+            "code": "08",
+            "display": "SVA-Kennzeichnung, pauschal"
+          },
+          {
+            "code": "09",
+            "display": "Empfänger von Gesundheitsleistungen nach §§ 4 und 6 des Asylbewerberleistungsgesetzes (AsylbLG)"
+          }
+        ]
+      }
+    ]
+  }
+}

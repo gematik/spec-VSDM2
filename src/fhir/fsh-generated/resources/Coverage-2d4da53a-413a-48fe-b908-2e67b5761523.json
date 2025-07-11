@@ -6,20 +6,13 @@
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
     ]
   },
-  "status": "active",
   "extension": [
-    {
-      "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
-      "valueCoding": {
-        "code": "1",
-        "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS"
-      }
-    },
     {
       "url": "http://fhir.de/StructureDefinition/gkv/wop",
       "valueCoding": {
-        "code": "72",
-        "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP"
+        "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+        "code": "17",
+        "display": "Niedersachsen"
       }
     },
     {
@@ -40,111 +33,112 @@
       ]
     },
     {
-      "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
+      "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
+      "valueCoding": {
+        "code": "1",
+        "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
+        "display": "Mitglied"
+      }
+    },
+    {
+      "valueCoding": {
+        "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
+        "code": "06",
+        "display": "SER (Soziales Entschädigungsrecht)"
+      },
+      "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
+    },
+    {
       "extension": [
         {
-          "url": "status",
+          "valueBoolean": true,
+          "url": "status"
+        },
+        {
+          "url": "gueltigBis",
+          "valueDate": "2026-12-31"
+        }
+      ],
+      "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus"
+    },
+    {
+      "extension": [
+        {
+          "valueCoding": {
+            "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+            "code": "01",
+            "display": "Diabetes mellitus Typ 2"
+          },
+          "url": "dmp"
+        },
+        {
+          "url": "zeitraum",
+          "valuePeriod": {
+            "start": "2022-05-05"
+          }
+        },
+        {
+          "url": "digitalesDMP",
           "valueBoolean": true
         }
-      ]
-    },
-    {
-      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerAngabestatusEX",
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "dmp",
-            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerAngabestatusCS"
-          },
-          {
-            "code": "wahltarife",
-            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerAngabestatusCS"
-          }
-        ]
-      }
-    },
-    {
-      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerLaendercodeEX",
-      "valueCoding": {
-        "system": "http://hl7.org/fhir/CodeSystem/iso3166-1-2",
-        "code": "DE"
-      }
-    },
-    {
-      "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe",
-      "valueCoding": {
-        "code": "06",
-        "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE"
-      }
+      ],
+      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme"
     },
     {
       "extension": [
         {
           "url": "aerztlicheVersorgung",
           "valueBoolean": true
+        },
+        {
+          "url": "zahnaerztlicheVersorgung",
+          "valueBoolean": true
+        },
+        {
+          "url": "stationaererBereich",
+          "valueBoolean": true
+        },
+        {
+          "url": "veranlassteLeistungen",
+          "valueBoolean": false
         }
       ],
       "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung"
-    },
-    {
-      "extension": [
-        {
-          "valueCoding": {
-            "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
-            "code": "01"
-          },
-          "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenBasisEX"
-        },
-        {
-          "url": "dmp-zeitraum",
-          "valuePeriod": {
-            "start": "2022-05-05"
-          }
-        },
-        {
-          "url": "digitales-dmp",
-          "valueBoolean": true
-        }
-      ],
-      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenEX"
-    },
-    {
-      "extension": [
-        {
-          "url": "wahltarif-zeitraum",
-          "valuePeriod": {
-            "start": "2022-05-05"
-          }
-        },
-        {
-          "url": "wahltarif",
-          "valueCoding": {
-            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMWahltarifeCS",
-            "code": "1"
-          }
-        },
-        {
-          "url": "wahltarif-vertragskennzeichen",
-          "valueString": "Test Kommentar"
-        }
-      ],
-      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMWahltarifeEX"
     }
   ],
   "payor": [
     {
-      "identifier": {
-        "system": "http://fhir.de/sid/arge-ik/iknr",
-        "value": "12345678"
-      },
-      "display": "Test GKV Krankenkasse"
+      "extension": [
+        {
+          "valueCoding": {
+            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
+            "code": "H",
+            "display": "Hauptkostenträger"
+          },
+          "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+        }
+      ],
+      "reference": "Organization/2a6924bf-6e6a-4ef3-b79f-c2138c10712f"
+    },
+    {
+      "extension": [
+        {
+          "valueCoding": {
+            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
+            "code": "A",
+            "display": "abrechnender Kostenträger"
+          },
+          "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+        }
+      ],
+      "reference": "Organization/d1f7b106-7f99-40d6-9f21-50b051301127"
     }
   ],
+  "status": "active",
   "type": {
     "coding": [
       {
-        "code": "GKV",
-        "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis"
+        "code": "GKV"
       }
     ]
   },
