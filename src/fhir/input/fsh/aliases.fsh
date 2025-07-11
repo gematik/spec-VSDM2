@@ -26,13 +26,13 @@ Alias: $csContactEntityType = http://terminology.hl7.org/CodeSystem/contactentit
 // Länderkennzeichen nach ISO 3166-1-2, verwendet für
 //   - Beispiel für VSDMPatient
 //   - Beispiel für VSDMPayorOrganization
-Alias: $csCountryCodeISO3166 = http://hl7.org/fhir/CodeSystem/iso3166-1-2
+Alias: $csCountryCodeISO3166 = urn:iso:std:iso:3166
 
 // DMP-Schlüssel, verwendet für
 //   - VSDMDMPVS
 //     - VSDMDMPTeilnahme
 //       - VSDMCoverage.extension[dmp]
-Alias: $csDMP = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP
+Alias: $csDMP = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP
 
 // LOINC, verwendet für 
 //   - VSDMComposition.type.coding
@@ -46,16 +46,16 @@ Alias: $csOperationOutcomeCodes = http://terminology.hl7.org/CodeSystem/operatio
 // besondere Personengruppe, verwendet für
 //   - VSDMBesonderePersonengruppeVS
 //     - VSDMCoverage.extension[besonderePersonengruppe]
-Alias: $csPersonengruppe = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE
+Alias: $csPersonengruppe = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE
 
 // Versichertenstatus / Versichertenart, verwendet für
 //   - Beispiel für VSDMCoverage
-Alias: $csVersichertenart = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS
+Alias: $csVersichertenart = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS
 
 // Wohnortprinzip, verwendet für
 //   - VSDMWohnortprinzipVS
 //     - VSDMCoverage.extension[wop]
-Alias: $csWOP = http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP
+Alias: $csWOP = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP
 
 // ================================================================================================
 // 

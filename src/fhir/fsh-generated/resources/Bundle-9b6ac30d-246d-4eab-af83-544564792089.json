@@ -211,7 +211,7 @@
           {
             "url": "http://fhir.de/StructureDefinition/gkv/wop",
             "valueCoding": {
-              "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
               "code": "17",
               "display": "Niedersachsen"
             }
@@ -237,13 +237,13 @@
             "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
             "valueCoding": {
               "code": "1",
-              "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
               "display": "Mitglied"
             }
           },
           {
             "valueCoding": {
-              "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
               "code": "06",
               "display": "SER (Soziales Entschädigungsrecht)"
             },
@@ -266,7 +266,7 @@
             "extension": [
               {
                 "valueCoding": {
-                  "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+                  "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
                   "code": "01",
                   "display": "Diabetes mellitus Typ 2"
                 },
