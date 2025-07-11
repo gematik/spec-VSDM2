@@ -23,6 +23,37 @@
       ]
     }
   ],
+  "identifier": [
+    {
+      "system": "http://fhir.de/sid/gkv/kvid-10",
+      "value": "T024791905"
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "Blumenweg 14"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString": "14"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString": "Blumenweg"
+            }
+          ]
+        }
+      ],
+      "type": "both",
+      "city": "Esens",
+      "postalCode": "26427",
+      "country": "DE"
+    }
+  ],
   "birthDate": "1935-06-22",
   "telecom": [
     {
