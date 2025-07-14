@@ -26,7 +26,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         
-      # Java and .NET are already installed on ubuntu-latest
+      # Install .NET runtime
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      
+      # Install Java runtime (only needed if you want to run the offical HL7 Java validator)
+      - name: Setup Java JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
         
       - name: Firely.Terminal (GitHub Actions)
         uses: FirelyTeam/firely-terminal-pipeline@v0.4.0
@@ -38,7 +49,7 @@ jobs:
           JAVA_VALIDATION_ENABLED: true
           OUTPUT_FORMAT: RAW
           JAVA_VALIDATION_OPTIONS: -allow-example-urls true
-          JAVA_VALIDATOR_VERSION: 6.0.11
+          #JAVA_VALIDATOR_VERSION: 6.0.11
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
           SUSHI_ENABLED: true
