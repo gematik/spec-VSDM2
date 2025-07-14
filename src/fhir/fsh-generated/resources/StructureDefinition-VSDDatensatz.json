@@ -229,7 +229,7 @@
         },
         "type": [
           {
-            "code": "Identifier"
+            "code": "string"
           }
         ],
         "constraint": [
@@ -374,7 +374,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ],
         "constraint": [
@@ -657,7 +657,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ],
         "constraint": [
@@ -795,7 +795,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ],
         "constraint": [
@@ -1032,7 +1032,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ],
         "constraint": [
@@ -1170,7 +1170,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ],
         "constraint": [
@@ -1239,7 +1239,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ],
         "constraint": [
@@ -1274,7 +1274,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ],
         "constraint": [
@@ -1552,7 +1552,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ],
         "constraint": [
@@ -1961,7 +1961,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ],
         "constraint": [
@@ -1995,7 +1995,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ],
         "constraint": [
@@ -2060,7 +2060,7 @@
         "max": "1",
         "type": [
           {
-            "code": "Identifier"
+            "code": "string"
           }
         ],
         "mapping": [
@@ -2145,7 +2145,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ],
         "mapping": [
@@ -2308,7 +2308,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ],
         "mapping": [
@@ -2386,7 +2386,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ],
         "mapping": [
@@ -2518,7 +2518,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ],
         "mapping": [
@@ -2596,7 +2596,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ],
         "mapping": [
@@ -2635,7 +2635,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ],
         "mapping": [
@@ -2655,7 +2655,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ],
         "mapping": [
@@ -2813,7 +2813,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ],
         "mapping": [
@@ -3042,7 +3042,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ],
         "mapping": [
@@ -3061,7 +3061,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ],
         "mapping": [

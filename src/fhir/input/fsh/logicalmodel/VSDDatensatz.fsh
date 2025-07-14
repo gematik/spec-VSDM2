@@ -13,7 +13,7 @@ Description: """
 * Versichertendaten 1..1 BackboneElement "Versichertendaten"
 
   * Versicherter 1..1 BackboneElement "Angaben zum Versicherten" 
-    * VersichertenID 1..1 Identifier "Versicherten-ID (KVNR)" """
+    * VersichertenID 1..1 string "Versicherten-ID (KVNR)" """
         Die Versicherten-ID ist der 10-stellige unveraäderliche Teil der 30-stelligen Krankenversichertennummer.
         Länge: 10
         Typ: AN
@@ -36,7 +36,7 @@ Description: """
         Länge: 45
         Typ: AN
       """
-    * Geschlecht 1..1 string "Geschlecht des Versicherten" """
+    * Geschlecht 1..1 code "Geschlecht des Versicherten" """
         Gibt das Geschlecht der Person an. Wertetabelle M,W,D,X
         Länge: 1
         Typ: AN
@@ -83,7 +83,7 @@ Description: """
           Länge: 8
           Typ: AN
         """
-      * Wohnsitzlaendercode 1..1 string "Land der Postfachadresse" """
+      * Wohnsitzlaendercode 1..1 code "Land der Postfachadresse" """
           Gibt das Land zu der Strassen- und oder Postfachadresse an. 
           Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzländercode zu beiden Adressdaten vorhanden sein.
           Anlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp
@@ -105,7 +105,7 @@ Description: """
           Länge: 40
           Typ: AN
         """
-      * Wohnsitzlaendercode 1..1 string "Land der Strassenadresse" """
+      * Wohnsitzlaendercode 1..1 code "Land der Strassenadresse" """
           Gibt das Land zu der Strassen- und oder Postfachadresse an. 
           Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzländercode zu beiden Adressdaten vorhanden sein.
           Anlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp
@@ -140,7 +140,7 @@ Description: """
         Länge: 45
         Typ: AN
       """
-    * Kostentraegerlaendercode 1..1 string "Kostenträgerländercode" """
+    * Kostentraegerlaendercode 1..1 code "Kostenträgerländercode" """
         Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an.
         Länge: 3
         Typ: AN
@@ -158,7 +158,7 @@ Description: """
         Länge: 45
         Typ: AN
       """
-    * Kostentraegerlaendercode 1..1 string "Kostenträgerländercode" """
+    * Kostentraegerlaendercode 1..1 code "Kostenträgerländercode" """
         Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an.
         Anlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp
         Länge: 3
@@ -169,7 +169,7 @@ Description: """
         Länge: 9
         Typ: AN
       """
-  * WOP 1..1 string "Kennzeichen Wohnortprinzip" """
+  * WOP 1..1 code "Kennzeichen Wohnortprinzip" """
       Das Kennzeichen WOP ist gemäss § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemäss Artikel 2 § 2 Abs. 2 des Gesetzes zur Einführung des Wohnortprinzips bei Honorarvereinbarungen für Ärzte und Zahnärzte und zur Krankenversichertenkarte gemäss § 291 Abs. 2 Fünftes Sozialgesetzbuch (SGB V) erforderlich.
       01 = Schleswig-Holstein
       02 = Hamburg
@@ -192,7 +192,7 @@ Description: """
       Länge: 2
       Typ: AN
     """
-  * BesonderePersonengruppe 0..1 string "Zuordnung besondere Personengruppe" """
+  * BesonderePersonengruppe 0..1 code "Zuordnung besondere Personengruppe" """
       Gibt die Zugehörigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.
       4 = BSHG (Bundessozialhilfegesetz) § 264 SGB V, 
       6 = SER (Soziales Entschädigungsrecht), 
@@ -225,7 +225,7 @@ Description: """
       """
       // TODO Zelle D36: Das Gültigkeitsende der eGK lisgt nicht in allen Fällen vor (eID!) und könnte ohnehin nicht ausgegeben werden, weil kein Kartenbezug vorliegt.
   * DMP 0..* BackboneElement "Angaben zur Teilnahme des Versicherten an Disease Management-Programmen"
-    * DMP 1..1 string "Name des DMP-Programms" """
+    * DMP 1..1 code "Name des DMP-Programms" """
         Gibt den Namen des DMP an; die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.
         1 = Diabetes mellitus Typ 2 
         2 = Brustkrebs 
@@ -294,14 +294,14 @@ Description: """
         Gibt das Ende-Datum des ruhenden Leistungsanspruchs an.
         Typ: ISO8601Date
       """
-    * Art 1..1 string "Art des Ruhens" """
+    * Art 1..1 code "Art des Ruhens" """
         Gibt die Art des Ruhens an.
         1 = vollständig
         2 = eingeschränkt
         Länge: 1
         Typ: N
       """
-  * Versichertenart 1..1 string "Art der Versicherung" """
+  * Versichertenart 1..1 code "Art der Versicherung" """
       1 = Mitglied
       3 = Familienversicherter
       5 = Rentner und ihre Familienangehörigen 
