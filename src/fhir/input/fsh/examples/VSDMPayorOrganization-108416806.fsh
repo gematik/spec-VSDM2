@@ -1,0 +1,23 @@
+Instance: VSDMPayorOrganization-108416806
+InstanceOf: VSDMPayorOrganization
+Title: "Beispielkostenträger München-Stadt"
+Description: "Beispielkostenträger München-Stadt"
+Usage: #example
+
+* identifier[IKNR].value = "108416806"
+* name = "Beispielkostenträger München-Stadt"
+* address
+  * country = #DE
+    * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"
+
+// Beispiel zur Übertragung weitergehender (nicht verpflichtender) Informationen zum Kostenträger
+* contact[+]
+  * purpose
+    * coding = #BILL
+    * text = "Kontakt für Abrechnungsfragen"
+  * telecom[+]
+    * system = #phone
+    * value = "+4952116391643"
+  * telecom[+]
+    * system = #email
+    * value = "contact@kostentraeger.invalid"

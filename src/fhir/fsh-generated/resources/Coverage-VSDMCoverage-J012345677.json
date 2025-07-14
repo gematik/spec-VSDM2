@@ -1,0 +1,152 @@
+{
+  "resourceType": "Coverage",
+  "id": "VSDMCoverage-J012345677",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/wop",
+      "valueCoding": {
+        "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+        "code": "52",
+        "display": "Baden-Württemberg"
+      }
+    },
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
+      "valueCoding": {
+        "code": "5",
+        "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
+        "display": "Rentner und ihre Familienangehörigen"
+      }
+    },
+    {
+      "valueCoding": {
+        "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
+        "code": "09",
+        "display": "Empfänger von Gesundheitsleistungen nach §§ 4 und 6 des Asylbewerberleistungsgesetzes (AsylbLG)"
+      },
+      "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
+    },
+    {
+      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
+      "extension": [
+        {
+          "url": "dmp",
+          "valueCoding": {
+            "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+            "code": "06",
+            "display": "COPD"
+          }
+        },
+        {
+          "url": "zeitraum",
+          "valuePeriod": {
+            "start": "2001-01-11"
+          }
+        },
+        {
+          "url": "digitalesDMP",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
+      "extension": [
+        {
+          "url": "dmp",
+          "valueCoding": {
+            "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+            "code": "09",
+            "display": "Rückenschmerz"
+          }
+        },
+        {
+          "url": "zeitraum",
+          "valuePeriod": {
+            "start": "2002-02-12"
+          }
+        },
+        {
+          "url": "digitalesDMP",
+          "valueBoolean": true
+        }
+      ]
+    },
+    {
+      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
+      "extension": [
+        {
+          "url": "dmp",
+          "valueCoding": {
+            "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+            "code": "10",
+            "display": "Rheuma"
+          }
+        },
+        {
+          "url": "zeitraum",
+          "valuePeriod": {
+            "start": "2003-03-13"
+          }
+        },
+        {
+          "url": "digitalesDMP",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch",
+      "extension": [
+        {
+          "url": "art",
+          "valueCoding": {
+            "code": "1",
+            "display": "vollständig"
+          }
+        },
+        {
+          "url": "dauer",
+          "valuePeriod": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          }
+        }
+      ]
+    }
+  ],
+  "payor": [
+    {
+      "extension": [
+        {
+          "valueCoding": {
+            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
+            "code": "H",
+            "display": "Hauptkostenträger"
+          },
+          "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+        }
+      ],
+      "reference": "Organization/VSDMPayorOrganization106877150"
+    }
+  ],
+  "status": "active",
+  "type": {
+    "coding": [
+      {
+        "code": "GKV"
+      }
+    ]
+  },
+  "beneficiary": {
+    "reference": "Patient/VSDMPatient-J012345677"
+  },
+  "period": {
+    "start": "1964-05-01"
+  }
+}

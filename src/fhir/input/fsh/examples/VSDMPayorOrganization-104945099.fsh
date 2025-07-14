@@ -1,0 +1,23 @@
+Instance: VSDMPayorOrganization-104945099
+InstanceOf: VSDMPayorOrganization
+Title: "Beispielkostenträger Wuppertal"
+Description: "Beispielkostenträger Wuppertal"
+Usage: #example
+
+* identifier[IKNR].value = "104945099"
+* name = "Beispielkostenträger Wuppertal"
+* address
+  * country = #DE
+    * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"
+
+// Beispiel zur Übertragung weitergehender (nicht verpflichtender) Informationen zum Kostenträger
+* contact[+]
+  * purpose
+    * coding = #BILL
+    * text = "Kontakt für Abrechnungsfragen"
+  * telecom[+]
+    * system = #phone
+    * value = "+4952116391643"
+  * telecom[+]
+    * system = #email
+    * value = "contact@kostentraeger.invalid"

@@ -1,0 +1,103 @@
+{
+  "resourceType": "Coverage",
+  "id": "VSDMCoverage-N456789014",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/wop",
+      "valueCoding": {
+        "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+        "code": "52",
+        "display": "Baden-Württemberg"
+      }
+    },
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
+      "valueCoding": {
+        "code": "3",
+        "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
+        "display": "Familienversicherter"
+      }
+    },
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
+      "extension": [
+        {
+          "url": "status",
+          "valueBoolean": true
+        },
+        {
+          "url": "gueltigBis",
+          "valueDate": "2029-06-22"
+        }
+      ]
+    },
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung",
+      "extension": [
+        {
+          "url": "aerztlicheVersorgung",
+          "valueBoolean": true
+        },
+        {
+          "url": "zahnaerztlicheVersorgung",
+          "valueBoolean": true
+        },
+        {
+          "url": "stationaererBereich",
+          "valueBoolean": true
+        },
+        {
+          "url": "veranlassteLeistungen",
+          "valueBoolean": true
+        }
+      ]
+    }
+  ],
+  "payor": [
+    {
+      "extension": [
+        {
+          "valueCoding": {
+            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
+            "code": "H",
+            "display": "Hauptkostenträger"
+          },
+          "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+        }
+      ],
+      "reference": "Organization/VSDMPayorOrganization108028771"
+    },
+    {
+      "extension": [
+        {
+          "valueCoding": {
+            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
+            "code": "A",
+            "display": "abrechnender Kostenträger"
+          },
+          "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+        }
+      ],
+      "reference": "Organization/VSDMPayorOrganization109083613"
+    }
+  ],
+  "status": "active",
+  "type": {
+    "coding": [
+      {
+        "code": "GKV"
+      }
+    ]
+  },
+  "beneficiary": {
+    "reference": "Patient/VSDMPatient-N456789014"
+  },
+  "period": {
+    "start": "2011-06-22"
+  }
+}

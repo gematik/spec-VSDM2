@@ -1,0 +1,69 @@
+{
+  "resourceType": "Coverage",
+  "id": "VSDMCoverage-M345678909",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/wop",
+      "valueCoding": {
+        "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+        "code": "71",
+        "display": "Bayern"
+      }
+    },
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
+      "valueCoding": {
+        "code": "3",
+        "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
+        "display": "Familienversicherter"
+      }
+    },
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
+      "extension": [
+        {
+          "url": "status",
+          "valueBoolean": true
+        },
+        {
+          "url": "gueltigBis",
+          "valueDate": "2038-04-28"
+        }
+      ]
+    }
+  ],
+  "payor": [
+    {
+      "extension": [
+        {
+          "valueCoding": {
+            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
+            "code": "H",
+            "display": "Hauptkostenträger"
+          },
+          "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+        }
+      ],
+      "reference": "Organization/VSDMPayorOrganization108416806"
+    }
+  ],
+  "status": "active",
+  "type": {
+    "coding": [
+      {
+        "code": "GKV"
+      }
+    ]
+  },
+  "beneficiary": {
+    "reference": "Patient/VSDMPatient-M345678909"
+  },
+  "period": {
+    "start": "2020-04-27"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "resourceType": "Organization",
+  "id": "VSDMPayorOrganization-106145699",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://fhir.de/sid/arge-ik/iknr",
+      "value": "106145699"
+    }
+  ],
+  "address": [
+    {
+      "country": "DE",
+      "_country": {
+        "extension": [
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen",
+            "valueCoding": {
+              "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+              "code": "D",
+              "display": "Deutschland"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "name": "Beispielkostenträger Suhl",
+  "contact": [
+    {
+      "purpose": {
+        "coding": [
+          {
+            "code": "BILL"
+          }
+        ],
+        "text": "Kontakt für Abrechnungsfragen"
+      },
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "+4952116391643"
+        },
+        {
+          "system": "email",
+          "value": "contact@kostentraeger.invalid"
+        }
+      ]
+    }
+  ]
+}

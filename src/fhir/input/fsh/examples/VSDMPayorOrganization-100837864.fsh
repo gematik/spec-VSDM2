@@ -1,0 +1,23 @@
+Instance: VSDMPayorOrganization-100837864
+InstanceOf: VSDMPayorOrganization
+Title: "Beispielkostenträger Frankfurt an der Oder"
+Description: "Beispielkostenträger Frankfurt an der Oder"
+Usage: #example
+
+* identifier[IKNR].value = "100837864"
+* name = "Beispielkostenträger Frankfurt an der Oder"
+* address
+  * country = #DE
+    * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"
+
+// Beispiel zur Übertragung weitergehender (nicht verpflichtender) Informationen zum Kostenträger
+* contact[+]
+  * purpose
+    * coding = #BILL
+    * text = "Kontakt für Abrechnungsfragen"
+  * telecom[+]
+    * system = #phone
+    * value = "+4952116391643"
+  * telecom[+]
+    * system = #email
+    * value = "contact@kostentraeger.invalid"

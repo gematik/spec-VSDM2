@@ -1,0 +1,37 @@
+{
+  "resourceType": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDDatensatz",
+  "id": "VSDDatensatz-M345678909",
+  "Versichertendaten": {
+    "Versicherter": {
+      "VersichertenID": "M345678909",
+      "Geburtsdatum": "2020-04-27",
+      "Vorname": "Michael-Martin",
+      "Nachname": "Mittelspecht",
+      "Geschlecht": "M",
+      "StrassenAdresse": {
+        "Postleitzahl": "80331",
+        "Ort": "München",
+        "Wohnsitzlaendercode": "D",
+        "Strasse": "Spechtstraße",
+        "Hausnummer": "130",
+        "Anschriftenzusatz": "c/o Baumklopfer"
+      }
+    }
+  },
+  "Versicherungsdaten": {
+    "Kostentraeger": {
+      "Name": "Beispielkostenträger München-Stadt",
+      "Kostentraegerlaendercode": "D",
+      "Kostentraegerkennung": "108416806"
+    },
+    "WOP": "71",
+    "Zuzahlungsstatus": {
+      "Status": true,
+      "GueltigBis": "2038-04-28"
+    },
+    "Versicherungsschutz": {
+      "Beginn": "2020-04-27"
+    },
+    "Versichertenart": "3"
+  }
+}

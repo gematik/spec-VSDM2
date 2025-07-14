@@ -1,0 +1,80 @@
+{
+  "resourceType": "Patient",
+  "id": "VSDMPatient-G789012344",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
+    ]
+  },
+  "name": [
+    {
+      "use": "official",
+      "text": "Gabriele Edle von der Graugans",
+      "family": "Edle von der Graugans",
+      "_family": {
+        "extension": [
+          {
+            "url": "http://fhir.de/StructureDefinition/humanname-namenszusatz",
+            "valueString": "Edle"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+            "valueString": "Graugans"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+            "valueString": "von der"
+          }
+        ]
+      },
+      "given": [
+        "Gabriele"
+      ]
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://fhir.de/sid/gkv/kvid-10",
+      "value": "G789012344"
+    }
+  ],
+  "address": [
+    {
+      "type": "physical",
+      "line": [
+        "Am Gänseweiher 66"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString": "66"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString": "Am Gänseweiher"
+            }
+          ]
+        }
+      ],
+      "city": "Gießen",
+      "postalCode": "35392",
+      "country": "DE",
+      "_country": {
+        "extension": [
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen",
+            "valueCoding": {
+              "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+              "code": "D",
+              "display": "Deutschland"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "birthDate": "1974-02-12",
+  "gender": "female"
+}

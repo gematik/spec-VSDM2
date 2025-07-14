@@ -1,0 +1,298 @@
+{
+  "resourceType": "Bundle",
+  "id": "VSDMBundle-L234567896",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle"
+    ]
+  },
+  "type": "document",
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:51f2f2ce-908c-4706-af44-0ee5e18cfc33"
+  },
+  "timestamp": "2025-07-14T15:16:17.890+01:00",
+  "entry": [
+    {
+      "fullUrl": "https://gematik.de/fhir/Composition/b04bf9f2-b167-40ad-86e2-44334b23080d",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "b04bf9f2-b167-40ad-86e2-44334b23080d",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMComposition"
+          ]
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "code": "55188-7",
+              "system": "http://loinc.org",
+              "display": "Patient data Document"
+            }
+          ]
+        },
+        "author": [
+          {
+            "identifier": {
+              "system": "http://fhir.de/sid/arge-ik/iknr",
+              "value": "102343996"
+            }
+          }
+        ],
+        "date": "2025-07-14T05:06:07.890+01:00",
+        "title": "VSDM 2.0-Daten L234567896 Lachmöwe, Lisa",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "Patient/VSDMPatient-L234567896"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Coverage/VSDMCoverage-L234567896"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Organization/VSDMPayorOrganization102343996"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-L234567896",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "VSDMPatient-L234567896",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
+          ]
+        },
+        "name": [
+          {
+            "use": "official",
+            "text": "Lisa Lachmöwe",
+            "family": "Lachmöwe",
+            "_family": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                  "valueString": "Lachmöwe"
+                }
+              ]
+            },
+            "given": [
+              "Lisa"
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "L234567896"
+          }
+        ],
+        "address": [
+          {
+            "type": "physical",
+            "line": [
+              "Möwenstraße 12b"
+            ],
+            "_line": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                    "valueString": "12b"
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                    "valueString": "Möwenstraße"
+                  }
+                ]
+              }
+            ],
+            "city": "Lüneburg",
+            "postalCode": "21337",
+            "country": "DE",
+            "_country": {
+              "extension": [
+                {
+                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen",
+                  "valueCoding": {
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+                    "code": "D",
+                    "display": "Deutschland"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "birthDate": "2022-07-02",
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverage-L234567896",
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "VSDMCoverage-L234567896",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/wop",
+            "valueCoding": {
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+              "code": "17",
+              "display": "Niedersachsen"
+            }
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
+            "valueCoding": {
+              "code": "3",
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
+              "display": "Familienversicherter"
+            }
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
+            "extension": [
+              {
+                "url": "status",
+                "valueBoolean": true
+              },
+              {
+                "url": "gueltigBis",
+                "valueDate": "2040-07-02"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung",
+            "extension": [
+              {
+                "url": "aerztlicheVersorgung",
+                "valueBoolean": true
+              },
+              {
+                "url": "zahnaerztlicheVersorgung",
+                "valueBoolean": true
+              },
+              {
+                "url": "stationaererBereich",
+                "valueBoolean": true
+              },
+              {
+                "url": "veranlassteLeistungen",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ],
+        "payor": [
+          {
+            "extension": [
+              {
+                "valueCoding": {
+                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
+                  "code": "H",
+                  "display": "Hauptkostenträger"
+                },
+                "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+              }
+            ],
+            "reference": "Organization/VSDMPayorOrganization102343996"
+          }
+        ],
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "code": "GKV"
+            }
+          ]
+        },
+        "beneficiary": {
+          "reference": "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
+        },
+        "period": {
+          "start": "2022-07-02"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization102343996",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "VSDMPayorOrganization-102343996",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.de/sid/arge-ik/iknr",
+            "value": "102343996"
+          }
+        ],
+        "address": [
+          {
+            "country": "DE",
+            "_country": {
+              "extension": [
+                {
+                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen",
+                  "valueCoding": {
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+                    "code": "D",
+                    "display": "Deutschland"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "name": "Beispielkostenträger Lüneburg",
+        "contact": [
+          {
+            "purpose": {
+              "coding": [
+                {
+                  "code": "BILL"
+                }
+              ],
+              "text": "Kontakt für Abrechnungsfragen"
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "+4952116391643"
+              },
+              {
+                "system": "email",
+                "value": "contact@kostentraeger.invalid"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

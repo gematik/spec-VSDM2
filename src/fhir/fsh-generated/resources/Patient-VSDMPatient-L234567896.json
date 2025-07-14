@@ -1,0 +1,72 @@
+{
+  "resourceType": "Patient",
+  "id": "VSDMPatient-L234567896",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
+    ]
+  },
+  "name": [
+    {
+      "use": "official",
+      "text": "Lisa Lachmöwe",
+      "family": "Lachmöwe",
+      "_family": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+            "valueString": "Lachmöwe"
+          }
+        ]
+      },
+      "given": [
+        "Lisa"
+      ]
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://fhir.de/sid/gkv/kvid-10",
+      "value": "L234567896"
+    }
+  ],
+  "address": [
+    {
+      "type": "physical",
+      "line": [
+        "Möwenstraße 12b"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString": "12b"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString": "Möwenstraße"
+            }
+          ]
+        }
+      ],
+      "city": "Lüneburg",
+      "postalCode": "21337",
+      "country": "DE",
+      "_country": {
+        "extension": [
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen",
+            "valueCoding": {
+              "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+              "code": "D",
+              "display": "Deutschland"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "birthDate": "2022-07-02",
+  "gender": "female"
+}

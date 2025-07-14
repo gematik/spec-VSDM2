@@ -1,0 +1,53 @@
+{
+  "resourceType": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDDatensatz",
+  "id": "VSDDatensatz-D456789013",
+  "Versichertendaten": {
+    "Versicherter": {
+      "VersichertenID": "D456789013",
+      "Geburtsdatum": "1970-01-20",
+      "Vorname": "Dara",
+      "Nachname": "Dohle",
+      "Geschlecht": "X",
+      "Titel": "Dr. rer. nat.",
+      "PostfachAdresse": {
+        "Postleitzahl": "64283",
+        "Ort": "Darmstadt",
+        "Postfach": "405060",
+        "Wohnsitzlaendercode": "D"
+      },
+      "StrassenAdresse": {
+        "Postleitzahl": "64297",
+        "Ort": "Darmstadt",
+        "Wohnsitzlaendercode": "D",
+        "Strasse": "Dohlenallee",
+        "Hausnummer": "4-6"
+      }
+    }
+  },
+  "Versicherungsdaten": {
+    "Kostentraeger": {
+      "Name": "Beispielkostenträger Darmstadt",
+      "Kostentraegerlaendercode": "D",
+      "Kostentraegerkennung": "105266989"
+    },
+    "WOP": "46",
+    "BesonderePersonengruppe": "6",
+    "Versicherungsschutz": {
+      "Beginn": "2021-10-01"
+    },
+    "DMP": [
+      {
+        "DMP": "5",
+        "Beginn": "2022-01-01",
+        "digitalesDMP": false
+      }
+    ],
+    "Kostenerstattung": {
+      "AerztlicheVersorgung": true,
+      "ZahnaerztlicheVersorgung": true,
+      "StationaererBereich": true,
+      "VeranlassteLeistungen": true
+    },
+    "Versichertenart": "3"
+  }
+}

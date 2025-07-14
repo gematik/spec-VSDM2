@@ -1,0 +1,38 @@
+Instance: VSDMCoverage-E567890127
+InstanceOf: VSDMCoverage
+Title: "E567890127 Freifrau an der Elster, Elke"
+Description: "Versicherungsdaten E567890127 Freifrau an der Elster, Elke"
+Usage: #example
+
+* extension[WOP].valueCoding = $csWOP#93 "Thüringen"
+* extension[zuzahlungsstatus] 
+  * extension[status].valueBoolean = true
+  * extension[gueltigBis].valueDate = "2026-06-30"
+* extension[dmp][+]
+  * extension[dmp].valueCoding = #01 "Diabetes mellitus Typ 2"
+  * extension[zeitraum].valuePeriod.start = "2001-01-01"
+  * extension[digitalesDMP].valueBoolean = false
+* extension[dmp][+]
+  * extension[dmp].valueCoding = #09 "Rückenschmerz"
+  * extension[zeitraum].valuePeriod
+    * start = "2020-01-01"
+    * end = "2023-12-31"
+  * extension[digitalesDMP].valueBoolean = true
+* extension[kostenerstattung]
+  * extension[aerztlicheVersorgung].valueBoolean = true
+  * extension[zahnaerztlicheVersorgung].valueBoolean = true
+  * extension[stationaererBereich].valueBoolean = true
+  * extension[veranlassteLeistungen].valueBoolean = false
+* extension[versichertenart].valueCoding = $csVersichertenart#1 "Mitglied"
+* status = #active
+* type = #GKV
+* beneficiary.reference = "Patient/VSDMPatient-E567890127"
+* period
+  * start = "1992-11-13"
+  * end = "2026-12-31"
+* payor[+]
+  * reference = "Organization/VSDMPayorOrganization105929412"
+  * extension[kostentraegerRolle].valueCoding = #H "Hauptkostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit
+* payor[+]
+  * reference = "Organization/VSDMPayorOrganization104547224"
+  * extension[kostentraegerRolle].valueCoding = #A "abrechnender Kostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit
