@@ -103,7 +103,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
     * value[x] 1..1
 
 // Zuordnung aus Versicherungsdaten -> RuhenderLeistungsanspruch
-* extension contains $extRuhenderLeistungsanspruch named ruhenderLeistungsanspruch 1..1 MS
+* extension contains $extRuhenderLeistungsanspruch named ruhenderLeistungsanspruch 0..1 MS
 * extension[ruhenderLeistungsanspruch]
   * ^short = "Ruhender Leistungsanspruch"
   * ^definition = """

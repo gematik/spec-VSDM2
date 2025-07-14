@@ -180,7 +180,7 @@ Description: """
       46 = Hessen
       51 = Rheinland-Pfalz
       52 = Baden-Württemberg
-      71 = Bayerns
+      71 = Bayern
       72 = Berlin
       73 = Saarland
       78 = Mecklenburg-Vorpommern

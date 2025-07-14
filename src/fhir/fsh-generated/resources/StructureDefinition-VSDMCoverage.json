@@ -333,7 +333,7 @@
           "extensions",
           "user content"
         ],
-        "min": 3,
+        "min": 2,
         "max": "*",
         "base": {
           "path": "DomainResource.extension",
@@ -3585,7 +3585,7 @@
           "extensions",
           "user content"
         ],
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "DomainResource.extension",
@@ -9352,7 +9352,7 @@
           "ordered": false,
           "rules": "open"
         },
-        "min": 3
+        "min": 2
       },
       {
         "id": "Coverage.extension:WOP",
@@ -9565,7 +9565,7 @@
         "short": "Ruhender Leistungsanspruch",
         "definition": "Angaben zum ruhenden Leistungsanspruch des Versicherten",
         "comment": "Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
