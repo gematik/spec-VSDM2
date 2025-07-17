@@ -30,7 +30,7 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes zum F
     * Kostentraegerkennung -> "VSDMPayorOrganization:abrechnenderKostentraeger.identifier:IKNR"
 
   * WOP -> "VSDMCoverage.extension:WOP"
-    "Die KBV-Schlüsseltabelle wird durch ein VSDM-spezifisches ValueSet auf die zulässigen Werte eingeschränkt."
+    "Die KBV-Schlüsseltabelle wird ggf. durch ein VSDM-spezifisches ValueSet auf die zulässigen Werte eingeschränkt."
 
   * BesonderePersonengruppe -> "VSDMCoverage.extension:besonderePersonengruppe"
     "Es werden die zweistelligen Werte aus der Schlüsseltabelle (mit führenden Nullen) verwendet."
@@ -55,7 +55,7 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes zum F
   * DMP -> "VSDMCoverage.extension:dmp"
 
     * DMP -> "VSDMCoverage.extension:dmp.extension:dmp"
-      "Anstelle des Namens wird der Schlüssel aus der vorgegebenen Wertetabelle angegeben. Zur Einschränkung auf die erlaubten Werte (keine Kombi-Werte) wird ein eigenes ValueSet verwendet."
+      "Anstelle des Namens wird der Schlüssel aus der vorgegebenen Wertetabelle, ergänzt um führende Nullen, angegeben. Zur Einschränkung auf die erlaubten Werte (keine Kombi-Werte) wird ein eigenes ValueSet verwendet."
 
     * Beginn -> "VSDMCoverage.extension:dmp.extension:zeitraum.value[x].start"
 

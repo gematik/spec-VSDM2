@@ -142,16 +142,15 @@ Description: """
       """
     * Kostentraegerlaendercode 1..1 code "Kostenträgerländercode" """
         Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an.
+        Anlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp
         Länge: 3
         Typ: AN
       """
     * Kostentraegerkennung 1..1 string "Kostenträgerkennung (Institutionskennzeichen)" """
-        Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an.
-        Anlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp
+        Gibt den Kostenträger des Versicherten an. Es handelt sich um das bundesweit gültige Institutionskennzeichen (IK) des jeweiligen Kostenträgers.
         Länge: 9
         Typ: AN
       """
-      // TODO Zelle D26: Hinweis auf Anlage 8 gehört vermutlich eine Zeile höher, also zum Kostenträgerländercode? Hinweis auf IK (wie in Zelle D29) fehlt.
   * AbrechnenderKostentraeger 0..1 BackboneElement "Angaben zum abrechnenden Kostenträger"
     * Name 1..1 string "Name des Kostenträgers" """
         Gibt den Namen der Institution/Organisation an.
@@ -165,7 +164,7 @@ Description: """
         Typ: AN
       """
     * Kostentraegerkennung 1..1 string "Kostenträgerkennung (Institutionskennzeichen)" """
-        Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an. Es handelt sich um das bundesweit gültige Institutionskennzeichen (IK) des jeweiligen Kostenträgers.
+        Gibt den Kostenträger des Versicherten an. Es handelt sich um das bundesweit gültige Institutionskennzeichen (IK) des jeweiligen Kostenträgers.
         Länge: 9
         Typ: AN
       """
@@ -220,10 +219,9 @@ Description: """
         Typ: ISO8601Date
       """
     * Ende 0..1 date "Ende des Versicherungsschutzes" """
-        Das Ende ist bei befristeter Gültigkeit der elektronischen Gesundheitskarte das Datum des Fristablaufs.
+        Das Ende ist bei befristeter Gültigkeit der elektronischen Gesundheitskarte das Datum des Fristablaufs. (Definition aus §291a Abs. 2 Nr. 10 SGB V)
         Typ: ISO8601Date
       """
-      // TODO Zelle D36: Das Gültigkeitsende der eGK lisgt nicht in allen Fällen vor (eID!) und könnte ohnehin nicht ausgegeben werden, weil kein Kartenbezug vorliegt.
   * DMP 0..* BackboneElement "Angaben zur Teilnahme des Versicherten an Disease Management-Programmen"
     * DMP 1..1 code "Name des DMP-Programms" """
         Gibt den Namen des DMP an; die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.
@@ -242,7 +240,6 @@ Description: """
         Länge: zu def.
         Typ: zu def.
       """
-      // TODO Zeile C37: Typ und Länge noch "zu def."
     * Beginn 1..1 date "Beginn der Einschreibung" """
         Gibt das Datum des Beginns der Einschreibung des Versicherten in ein DMP-Programm an.
         Typ: ISO8601Date

@@ -132,7 +132,7 @@ Patient-VSDMPatient-L234567896.json                  VSDMPatient-L234567896     
 Patient-VSDMPatient-M345678909.json                  VSDMPatient-M345678909              Instance    examples/VSDMPatient-M345678909.fsh                 1 - 24
 Patient-VSDMPatient-N456789014.json                  VSDMPatient-N456789014              Instance    examples/VSDMPatient-N456789014.fsh                 1 - 22
 Patient-VSDMPatient-O567890128.json                  VSDMPatient-O567890128              Instance    examples/VSDMPatient-O567890128.fsh                 1 - 24
-StructureDefinition-VSDDatensatz.json                VSDDatensatz                        Logical     logicalmodel/VSDDatensatz.fsh                       1 - 304
+StructureDefinition-VSDDatensatz.json                VSDDatensatz                        Logical     logicalmodel/VSDDatensatz.fsh                       1 - 301
 StructureDefinition-VSDMBundle.json                  VSDMBundle                          Profile     profiles/VSDMBundle.fsh                             1 - 42
 StructureDefinition-VSDMComposition.json             VSDMComposition                     Profile     profiles/VSDMComposition.fsh                        1 - 28
 StructureDefinition-VSDMCoverage.json                VSDMCoverage                        Profile     profiles/VSDMCoverage.fsh                           1 - 177
@@ -149,4 +149,4 @@ ValueSet-VSDMKostentraegerRolleVS.json               VSDMKostentraegerRolleVS   
 ValueSet-VSDMNamenszusatzVS.json                     VSDMNamenszusatzVS                  ValueSet    valuesets/VSDMNamenszusatzVS.fsh                    1 - 7
 ValueSet-VSDMRuhenderLeistungsanspruchArtVS.json     VSDMRuhenderLeistungsanspruchArtVS  ValueSet    valuesets/VSDMRuhenderLeistungsanspruchArtVS.fsh    1 - 7
 ValueSet-VSDMVorsatzwortVS.json                      VSDMVorsatzwortVS                   ValueSet    valuesets/VSDMVorsatzwortVS.fsh                     1 - 7
-ValueSet-VSDMWohnortprinzipVS.json                   VSDMWohnortprinzipVS                ValueSet    valuesets/VSDMWohnortprinzipVS.fsh                  1 - 23
+ValueSet-VSDMWohnortprinzipVS.json                   VSDMWohnortprinzipVS                ValueSet    valuesets/VSDMWohnortprinzipVS.fsh                  1 - 39

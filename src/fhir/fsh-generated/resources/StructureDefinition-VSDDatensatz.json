@@ -1022,7 +1022,7 @@
         "id": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
         "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
         "short": "Kostenträgerländercode",
-        "definition": "Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an.\nLänge: 3\nTyp: AN",
+        "definition": "Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an.\nAnlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp\nLänge: 3\nTyp: AN",
         "min": 1,
         "max": "1",
         "base": {
@@ -1057,7 +1057,7 @@
         "id": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
         "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
         "short": "Kostenträgerkennung (Institutionskennzeichen)",
-        "definition": "Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an.\nAnlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp\nLänge: 9\nTyp: AN",
+        "definition": "Gibt den Kostenträger des Versicherten an. Es handelt sich um das bundesweit gültige Institutionskennzeichen (IK) des jeweiligen Kostenträgers.\nLänge: 9\nTyp: AN",
         "min": 1,
         "max": "1",
         "base": {
@@ -1195,7 +1195,7 @@
         "id": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
         "path": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
         "short": "Kostenträgerkennung (Institutionskennzeichen)",
-        "definition": "Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an. Es handelt sich um das bundesweit gültige Institutionskennzeichen (IK) des jeweiligen Kostenträgers.\nLänge: 9\nTyp: AN",
+        "definition": "Gibt den Kostenträger des Versicherten an. Es handelt sich um das bundesweit gültige Institutionskennzeichen (IK) des jeweiligen Kostenträgers.\nLänge: 9\nTyp: AN",
         "min": 1,
         "max": "1",
         "base": {
@@ -1256,7 +1256,7 @@
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
             "map": "VSDMCoverage.extension:WOP",
-            "comment": "Die KBV-Schlüsseltabelle wird durch ein VSDM-spezifisches ValueSet auf die zulässigen Werte eingeschränkt."
+            "comment": "Die KBV-Schlüsseltabelle wird ggf. durch ein VSDM-spezifisches ValueSet auf die zulässigen Werte eingeschränkt."
           }
         ]
       },
@@ -1473,7 +1473,7 @@
         "id": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.Ende",
         "path": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.Ende",
         "short": "Ende des Versicherungsschutzes",
-        "definition": "Das Ende ist bei befristeter Gültigkeit der elektronischen Gesundheitskarte das Datum des Fristablaufs.\nTyp: ISO8601Date",
+        "definition": "Das Ende ist bei befristeter Gültigkeit der elektronischen Gesundheitskarte das Datum des Fristablaufs. (Definition aus §291a Abs. 2 Nr. 10 SGB V)\nTyp: ISO8601Date",
         "min": 0,
         "max": "1",
         "base": {
@@ -1569,7 +1569,7 @@
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
             "map": "VSDMCoverage.extension:dmp.extension:dmp",
-            "comment": "Anstelle des Namens wird der Schlüssel aus der vorgegebenen Wertetabelle angegeben. Zur Einschränkung auf die erlaubten Werte (keine Kombi-Werte) wird ein eigenes ValueSet verwendet."
+            "comment": "Anstelle des Namens wird der Schlüssel aus der vorgegebenen Wertetabelle, ergänzt um führende Nullen, angegeben. Zur Einschränkung auf die erlaubten Werte (keine Kombi-Werte) wird ein eigenes ValueSet verwendet."
           }
         ]
       },
@@ -2513,7 +2513,7 @@
         "id": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
         "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerlaendercode",
         "short": "Kostenträgerländercode",
-        "definition": "Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an.\nLänge: 3\nTyp: AN",
+        "definition": "Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an.\nAnlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp\nLänge: 3\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
@@ -2533,7 +2533,7 @@
         "id": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
         "path": "VSDDatensatz.Versicherungsdaten.Kostentraeger.Kostentraegerkennung",
         "short": "Kostenträgerkennung (Institutionskennzeichen)",
-        "definition": "Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an.\nAnlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp\nLänge: 9\nTyp: AN",
+        "definition": "Gibt den Kostenträger des Versicherten an. Es handelt sich um das bundesweit gültige Institutionskennzeichen (IK) des jeweiligen Kostenträgers.\nLänge: 9\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
@@ -2611,7 +2611,7 @@
         "id": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
         "path": "VSDDatensatz.Versicherungsdaten.AbrechnenderKostentraeger.Kostentraegerkennung",
         "short": "Kostenträgerkennung (Institutionskennzeichen)",
-        "definition": "Gibt den Kostenträgerländercode vom Kostenträger des Versicherten an. Es handelt sich um das bundesweit gültige Institutionskennzeichen (IK) des jeweiligen Kostenträgers.\nLänge: 9\nTyp: AN",
+        "definition": "Gibt den Kostenträger des Versicherten an. Es handelt sich um das bundesweit gültige Institutionskennzeichen (IK) des jeweiligen Kostenträgers.\nLänge: 9\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
@@ -2642,7 +2642,7 @@
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
             "map": "VSDMCoverage.extension:WOP",
-            "comment": "Die KBV-Schlüsseltabelle wird durch ein VSDM-spezifisches ValueSet auf die zulässigen Werte eingeschränkt."
+            "comment": "Die KBV-Schlüsseltabelle wird ggf. durch ein VSDM-spezifisches ValueSet auf die zulässigen Werte eingeschränkt."
           }
         ]
       },
@@ -2769,7 +2769,7 @@
         "id": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.Ende",
         "path": "VSDDatensatz.Versicherungsdaten.Versicherungsschutz.Ende",
         "short": "Ende des Versicherungsschutzes",
-        "definition": "Das Ende ist bei befristeter Gültigkeit der elektronischen Gesundheitskarte das Datum des Fristablaufs.\nTyp: ISO8601Date",
+        "definition": "Das Ende ist bei befristeter Gültigkeit der elektronischen Gesundheitskarte das Datum des Fristablaufs. (Definition aus §291a Abs. 2 Nr. 10 SGB V)\nTyp: ISO8601Date",
         "min": 0,
         "max": "1",
         "type": [
@@ -2820,7 +2820,7 @@
           {
             "identity": "VSD-Datensatz-Fachliches-Mapping-Coverage",
             "map": "VSDMCoverage.extension:dmp.extension:dmp",
-            "comment": "Anstelle des Namens wird der Schlüssel aus der vorgegebenen Wertetabelle angegeben. Zur Einschränkung auf die erlaubten Werte (keine Kombi-Werte) wird ein eigenes ValueSet verwendet."
+            "comment": "Anstelle des Namens wird der Schlüssel aus der vorgegebenen Wertetabelle, ergänzt um führende Nullen, angegeben. Zur Einschränkung auf die erlaubten Werte (keine Kombi-Werte) wird ein eigenes ValueSet verwendet."
           }
         ]
       },

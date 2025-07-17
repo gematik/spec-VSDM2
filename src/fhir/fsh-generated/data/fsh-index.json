@@ -1069,7 +1069,7 @@
     "fshType": "Logical",
     "fshFile": "logicalmodel/VSDDatensatz.fsh",
     "startLine": 1,
-    "endLine": 304
+    "endLine": 301
   },
   {
     "outputFile": "StructureDefinition-VSDMBundle.json",
@@ -1205,6 +1205,6 @@
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMWohnortprinzipVS.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 39
   }
 ]
