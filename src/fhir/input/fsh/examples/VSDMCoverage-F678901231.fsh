@@ -10,7 +10,7 @@ Usage: #example
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = "2026-09-30"
 * extension[ruhenderLeistungsanspruch]
-  * extension[art].valueCoding = #1 "vollst#ndig"
+  * extension[art].valueCoding = #1 "vollständig"
   * extension[dauer].valuePeriod.start = "2025-01-01"
 * extension[versichertenart].valueCoding = $csVersichertenart#3 "Familienversicherter"
 * status = #active
