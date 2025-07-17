@@ -120,6 +120,14 @@
     "endLine": 60
   },
   {
+    "outputFile": "Binary-VSDDatensatz-Z987654321.json",
+    "fshName": "VSDDatensatz-Z987654321",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDDatensatz-Z987654321.fsh",
+    "startLine": 1,
+    "endLine": 65
+  },
+  {
     "outputFile": "Bundle-VSDMBundle-A123456780.json",
     "fshName": "VSDMBundle-A123456780",
     "fshType": "Instance",
@@ -238,6 +246,14 @@
     "fshFile": "examples/VSDMBundle-O567890128.fsh",
     "startLine": 1,
     "endLine": 17
+  },
+  {
+    "outputFile": "Bundle-VSDMBundle-Z987654321.json",
+    "fshName": "VSDMBundle-Z987654321",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMBundle-Z987654321.fsh",
+    "startLine": 1,
+    "endLine": 19
   },
   {
     "outputFile": "CodeSystem-VSDMErrorcodeCS.json",
@@ -382,6 +398,14 @@
     "fshFile": "examples/VSDMCoverage-O567890128.fsh",
     "startLine": 1,
     "endLine": 19
+  },
+  {
+    "outputFile": "Coverage-VSDMCoverage-Z987654321.json",
+    "fshName": "VSDMCoverage-Z987654321",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMCoverage-Z987654321.fsh",
+    "startLine": 1,
+    "endLine": 44
   },
   {
     "outputFile": "OperationOutcome-example-vsdm-operationoutcome.json",
@@ -1062,6 +1086,14 @@
     "fshFile": "examples/VSDMPatient-O567890128.fsh",
     "startLine": 1,
     "endLine": 24
+  },
+  {
+    "outputFile": "Patient-VSDMPatient-Z987654321.json",
+    "fshName": "VSDMPatient-Z987654321",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMPatient-Z987654321.fsh",
+    "startLine": 1,
+    "endLine": 36
   },
   {
     "outputFile": "StructureDefinition-VSDDatensatz.json",

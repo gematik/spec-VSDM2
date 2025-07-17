@@ -14,6 +14,7 @@ Binary-VSDDatensatz-L234567896.json                  VSDDatensatz-L234567896    
 Binary-VSDDatensatz-M345678909.json                  VSDDatensatz-M345678909             Instance    examples/VSDDatensatz-M345678909.fsh                1 - 60
 Binary-VSDDatensatz-N456789014.json                  VSDDatensatz-N456789014             Instance    examples/VSDDatensatz-N456789014.fsh                1 - 60
 Binary-VSDDatensatz-O567890128.json                  VSDDatensatz-O567890128             Instance    examples/VSDDatensatz-O567890128.fsh                1 - 60
+Binary-VSDDatensatz-Z987654321.json                  VSDDatensatz-Z987654321             Instance    examples/VSDDatensatz-Z987654321.fsh                1 - 65
 Bundle-VSDMBundle-A123456780.json                    VSDMBundle-A123456780               Instance    examples/VSDMBundle-A123456780.fsh                  1 - 17
 Bundle-VSDMBundle-B234567895.json                    VSDMBundle-B234567895               Instance    examples/VSDMBundle-B234567895.fsh                  1 - 19
 Bundle-VSDMBundle-C345678908.json                    VSDMBundle-C345678908               Instance    examples/VSDMBundle-C345678908.fsh                  1 - 17
@@ -29,6 +30,7 @@ Bundle-VSDMBundle-L234567896.json                    VSDMBundle-L234567896      
 Bundle-VSDMBundle-M345678909.json                    VSDMBundle-M345678909               Instance    examples/VSDMBundle-M345678909.fsh                  1 - 17
 Bundle-VSDMBundle-N456789014.json                    VSDMBundle-N456789014               Instance    examples/VSDMBundle-N456789014.fsh                  1 - 19
 Bundle-VSDMBundle-O567890128.json                    VSDMBundle-O567890128               Instance    examples/VSDMBundle-O567890128.fsh                  1 - 17
+Bundle-VSDMBundle-Z987654321.json                    VSDMBundle-Z987654321               Instance    examples/VSDMBundle-Z987654321.fsh                  1 - 19
 CodeSystem-VSDMErrorcodeCS.json                      VSDMErrorcodeCS                     CodeSystem  codesystems/VSDMErrorcodeCS.fsh                     1 - 23
 CodeSystem-VSDMKostentraegerRolleCS.json             VSDMKostentraegerRolleCS            CodeSystem  codesystems/VSDMKostentraegerRolleCS.fsh            1 - 10
 CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json   VSDMRuhenderLeistungsanspruchArtCS  CodeSystem  codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh  1 - 9
@@ -47,6 +49,7 @@ Coverage-VSDMCoverage-L234567896.json                VSDMCoverage-L234567896    
 Coverage-VSDMCoverage-M345678909.json                VSDMCoverage-M345678909             Instance    examples/VSDMCoverage-M345678909.fsh                1 - 19
 Coverage-VSDMCoverage-N456789014.json                VSDMCoverage-N456789014             Instance    examples/VSDMCoverage-N456789014.fsh                1 - 27
 Coverage-VSDMCoverage-O567890128.json                VSDMCoverage-O567890128             Instance    examples/VSDMCoverage-O567890128.fsh                1 - 19
+Coverage-VSDMCoverage-Z987654321.json                VSDMCoverage-Z987654321             Instance    examples/VSDMCoverage-Z987654321.fsh                1 - 44
 OperationOutcome-example-vsdm-operationoutcome.json  ExampleOperationOutcome             Instance    examples/ExampleOperationOutcome.fsh                1 - 15
 Organization-VSDMPayorOrganization-100293710.json    VSDMPayorOrganization-100293710     Instance    examples/VSDMPayorOrganization-100293710.fsh        1 - 23
 Organization-VSDMPayorOrganization-100390876.json    VSDMPayorOrganization-100390876     Instance    examples/VSDMPayorOrganization-100390876.fsh        1 - 23
@@ -132,6 +135,7 @@ Patient-VSDMPatient-L234567896.json                  VSDMPatient-L234567896     
 Patient-VSDMPatient-M345678909.json                  VSDMPatient-M345678909              Instance    examples/VSDMPatient-M345678909.fsh                 1 - 24
 Patient-VSDMPatient-N456789014.json                  VSDMPatient-N456789014              Instance    examples/VSDMPatient-N456789014.fsh                 1 - 22
 Patient-VSDMPatient-O567890128.json                  VSDMPatient-O567890128              Instance    examples/VSDMPatient-O567890128.fsh                 1 - 24
+Patient-VSDMPatient-Z987654321.json                  VSDMPatient-Z987654321              Instance    examples/VSDMPatient-Z987654321.fsh                 1 - 36
 StructureDefinition-VSDDatensatz.json                VSDDatensatz                        Logical     logicalmodel/VSDDatensatz.fsh                       1 - 301
 StructureDefinition-VSDMBundle.json                  VSDMBundle                          Profile     profiles/VSDMBundle.fsh                             1 - 42
 StructureDefinition-VSDMComposition.json             VSDMComposition                     Profile     profiles/VSDMComposition.fsh                        1 - 28
