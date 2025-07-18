@@ -4,6 +4,8 @@ Title: "J012345677 Junko, Jens-Jörg"
 Description: "Versicherungsdaten J012345677 Junko, Jens-Jörg"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+
 * extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"
 * extension[besonderePersonengruppe].valueCoding = #09 "Empfänger von Gesundheitsleistungen nach §§ 4 und 6 des Asylbewerberleistungsgesetzes (AsylbLG)"
 * extension[dmp][+]

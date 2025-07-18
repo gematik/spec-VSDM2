@@ -4,6 +4,8 @@ Title: "B234567895 Graf von und zu Buntspecht, Bernd Benjamin"
 Description: "Versichertendaten B234567895 Graf von und zu Buntspecht, Bernd Benjamin"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0)
+
 * identifier[KVNR].value = "B234567895"
 * birthDate = "1988-06-22"
 * name[Name]

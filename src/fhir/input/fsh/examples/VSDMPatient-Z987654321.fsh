@@ -4,6 +4,8 @@ Title: "Z987654321 Graf von und zu Zaunkönig, Zacharias"
 Description: "Versichertendaten Z987654321 Graf von und zu Zaunkönig, Zacharias"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0)
+
 * identifier[KVNR].value = "Z987654321"
 * birthDate = "1987-05-16"
 * name[Name]

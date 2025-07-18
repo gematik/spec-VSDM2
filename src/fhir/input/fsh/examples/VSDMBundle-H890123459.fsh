@@ -4,6 +4,8 @@ Title: "H890123459 vorm Habicht, Hans"
 Description: "VSDM 2.0-Daten H890123459 vorm Habicht, Hans"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMBundle|1.0.0)
+
 * identifier.value = "urn:uuid:15a9288a-19d3-47fe-9c54-9a33af6f1491"
 * type = #document
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -23,6 +25,8 @@ InstanceOf: VSDMComposition
 Title: "H890123459 vorm Habicht, Hans"
 Description: "Composition für VSDM 2.0-Daten H890123459 vorm Habicht, Hans"
 Usage: #inline
+
+* meta.profile[0] = Canonical(VSDMComposition|1.0.0)
 
 * id = "224d3914-d9ff-42f1-b790-c208329251d2"
 * status = #final

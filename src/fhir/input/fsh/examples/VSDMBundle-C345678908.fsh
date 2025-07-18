@@ -4,6 +4,8 @@ Title: "C345678908 Carolinataube, Charlie"
 Description: "VSDM 2.0-Daten C345678908 Carolinataube, Charlie"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMBundle|1.0.0)
+
 * identifier.value = "urn:uuid:c9218485-6991-4f10-b6f9-4352476b2bcb"
 * type = #document
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -21,6 +23,8 @@ InstanceOf: VSDMComposition
 Title: "C345678908 Carolinataube, Charlie"
 Description: "Composition für VSDM 2.0-Daten C345678908 Carolinataube, Charlie"
 Usage: #inline
+
+* meta.profile[0] = Canonical(VSDMComposition|1.0.0)
 
 * id = "d905365b-3e7d-432d-a4e3-ca52d7275bab"
 * status = #final

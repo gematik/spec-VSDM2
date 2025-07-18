@@ -4,6 +4,8 @@ Title: "K123456781 Kiebitz, Karin"
 Description: "Versichertendaten K123456781 Kiebitz, Karin"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0)
+
 * identifier[KVNR].value = "K123456781"
 * birthDate = "1933"
 * name[Name]

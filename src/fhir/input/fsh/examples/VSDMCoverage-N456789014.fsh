@@ -4,6 +4,8 @@ Title: "N456789014 Nachtigall, Nina Nicole"
 Description: "Versicherungsdaten N456789014 Nachtigall, Nina Nicole"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+
 * extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"
 * extension[zuzahlungsstatus] 
   * extension[status].valueBoolean = true

@@ -4,6 +4,8 @@ Title: "K123456781 Kiebitz, Karin"
 Description: "Versicherungsdaten K123456781 Kiebitz, Karin"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+
 * extension[WOP].valueCoding = $csWOP#46 "Hessen"
 * extension[kostenerstattung]
   * extension[aerztlicheVersorgung].valueBoolean = true

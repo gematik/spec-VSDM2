@@ -4,6 +4,8 @@ Title: "Beispielkostenträger Gera"
 Description: "Beispielkostenträger Gera"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
+
 * identifier[IKNR].value = "106044960"
 * name = "Beispielkostenträger Gera"
 * address

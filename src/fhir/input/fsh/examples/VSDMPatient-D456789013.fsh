@@ -4,6 +4,8 @@ Title: "D456789013 Dohle, Dara"
 Description: "Versichertendaten D456789013 Dohle, Dara"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0)
+
 * identifier[KVNR].value = "D456789013"
 * birthDate = "1970-01-20"
 * name[Name]

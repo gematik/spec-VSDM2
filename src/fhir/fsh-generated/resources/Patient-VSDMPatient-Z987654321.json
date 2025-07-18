@@ -3,7 +3,7 @@
   "id": "VSDMPatient-Z987654321",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
     ]
   },
   "name": [

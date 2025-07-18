@@ -4,6 +4,8 @@ Title: "O567890128 Ortolan, Oliver"
 Description: "Versicherungsdaten O567890128 Ortolan, Oliver"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+
 * extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"
 * extension[zuzahlungsstatus] 
   * extension[status].valueBoolean = true

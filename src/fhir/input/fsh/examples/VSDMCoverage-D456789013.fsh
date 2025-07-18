@@ -4,6 +4,8 @@ Title: "D456789013 Dohle, Dara"
 Description: "Versicherungsdaten D456789013 Dohle, Dara"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+
 * extension[WOP].valueCoding = $csWOP#46 "Hessen"
 * extension[besonderePersonengruppe].valueCoding = #06 "SER (Soziales Entschädigungsrecht)"
 * extension[dmp][+]

@@ -133,7 +133,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-A123456780.fsh",
     "startLine": 1,
-    "endLine": 17
+    "endLine": 19
   },
   {
     "outputFile": "Bundle-VSDMBundle-B234567895.json",
@@ -141,7 +141,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-B234567895.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 21
   },
   {
     "outputFile": "Bundle-VSDMBundle-C345678908.json",
@@ -149,7 +149,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-C345678908.fsh",
     "startLine": 1,
-    "endLine": 17
+    "endLine": 19
   },
   {
     "outputFile": "Bundle-VSDMBundle-D456789013.json",
@@ -157,7 +157,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-D456789013.fsh",
     "startLine": 1,
-    "endLine": 17
+    "endLine": 19
   },
   {
     "outputFile": "Bundle-VSDMBundle-E567890127.json",
@@ -165,7 +165,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-E567890127.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 21
   },
   {
     "outputFile": "Bundle-VSDMBundle-F678901231.json",
@@ -173,7 +173,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-F678901231.fsh",
     "startLine": 1,
-    "endLine": 17
+    "endLine": 19
   },
   {
     "outputFile": "Bundle-VSDMBundle-G789012344.json",
@@ -181,7 +181,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-G789012344.fsh",
     "startLine": 1,
-    "endLine": 17
+    "endLine": 19
   },
   {
     "outputFile": "Bundle-VSDMBundle-H890123459.json",
@@ -189,7 +189,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-H890123459.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 21
   },
   {
     "outputFile": "Bundle-VSDMBundle-I901234562.json",
@@ -197,7 +197,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-I901234562.fsh",
     "startLine": 1,
-    "endLine": 17
+    "endLine": 19
   },
   {
     "outputFile": "Bundle-VSDMBundle-J012345677.json",
@@ -205,7 +205,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-J012345677.fsh",
     "startLine": 1,
-    "endLine": 17
+    "endLine": 19
   },
   {
     "outputFile": "Bundle-VSDMBundle-K123456781.json",
@@ -213,7 +213,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-K123456781.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 21
   },
   {
     "outputFile": "Bundle-VSDMBundle-L234567896.json",
@@ -221,7 +221,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-L234567896.fsh",
     "startLine": 1,
-    "endLine": 17
+    "endLine": 19
   },
   {
     "outputFile": "Bundle-VSDMBundle-M345678909.json",
@@ -229,7 +229,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-M345678909.fsh",
     "startLine": 1,
-    "endLine": 17
+    "endLine": 19
   },
   {
     "outputFile": "Bundle-VSDMBundle-N456789014.json",
@@ -237,7 +237,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-N456789014.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 21
   },
   {
     "outputFile": "Bundle-VSDMBundle-O567890128.json",
@@ -245,7 +245,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-O567890128.fsh",
     "startLine": 1,
-    "endLine": 17
+    "endLine": 19
   },
   {
     "outputFile": "Bundle-VSDMBundle-Z987654321.json",
@@ -253,7 +253,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-Z987654321.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 21
   },
   {
     "outputFile": "CodeSystem-VSDMErrorcodeCS.json",
@@ -285,7 +285,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMCoverage-A123456780.fsh",
     "startLine": 1,
-    "endLine": 16
+    "endLine": 18
   },
   {
     "outputFile": "Coverage-VSDMCoverage-B234567895.json",
@@ -293,7 +293,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMCoverage-B234567895.fsh",
     "startLine": 1,
-    "endLine": 21
+    "endLine": 23
   },
   {
     "outputFile": "Coverage-VSDMCoverage-C345678908.json",
@@ -301,7 +301,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMCoverage-C345678908.fsh",
     "startLine": 1,
-    "endLine": 32
+    "endLine": 34
   },
   {
     "outputFile": "Coverage-VSDMCoverage-D456789013.json",
@@ -309,7 +309,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMCoverage-D456789013.fsh",
     "startLine": 1,
-    "endLine": 26
+    "endLine": 28
   },
   {
     "outputFile": "Coverage-VSDMCoverage-E567890127.json",
@@ -317,7 +317,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMCoverage-E567890127.fsh",
     "startLine": 1,
-    "endLine": 38
+    "endLine": 40
   },
   {
     "outputFile": "Coverage-VSDMCoverage-F678901231.json",
@@ -325,7 +325,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMCoverage-F678901231.fsh",
     "startLine": 1,
-    "endLine": 24
+    "endLine": 26
   },
   {
     "outputFile": "Coverage-VSDMCoverage-G789012344.json",
@@ -333,7 +333,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMCoverage-G789012344.fsh",
     "startLine": 1,
-    "endLine": 29
+    "endLine": 31
   },
   {
     "outputFile": "Coverage-VSDMCoverage-H890123459.json",
@@ -341,7 +341,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMCoverage-H890123459.fsh",
     "startLine": 1,
-    "endLine": 36
+    "endLine": 38
   },
   {
     "outputFile": "Coverage-VSDMCoverage-I901234562.json",
@@ -349,7 +349,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMCoverage-I901234562.fsh",
     "startLine": 1,
-    "endLine": 28
+    "endLine": 30
   },
   {
     "outputFile": "Coverage-VSDMCoverage-J012345677.json",
@@ -357,7 +357,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMCoverage-J012345677.fsh",
     "startLine": 1,
-    "endLine": 34
+    "endLine": 36
   },
   {
     "outputFile": "Coverage-VSDMCoverage-K123456781.json",
@@ -365,7 +365,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMCoverage-K123456781.fsh",
     "startLine": 1,
-    "endLine": 28
+    "endLine": 30
   },
   {
     "outputFile": "Coverage-VSDMCoverage-L234567896.json",
@@ -373,7 +373,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMCoverage-L234567896.fsh",
     "startLine": 1,
-    "endLine": 24
+    "endLine": 26
   },
   {
     "outputFile": "Coverage-VSDMCoverage-M345678909.json",
@@ -381,7 +381,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMCoverage-M345678909.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 21
   },
   {
     "outputFile": "Coverage-VSDMCoverage-N456789014.json",
@@ -389,7 +389,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMCoverage-N456789014.fsh",
     "startLine": 1,
-    "endLine": 27
+    "endLine": 29
   },
   {
     "outputFile": "Coverage-VSDMCoverage-O567890128.json",
@@ -397,7 +397,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMCoverage-O567890128.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 21
   },
   {
     "outputFile": "Coverage-VSDMCoverage-Z987654321.json",
@@ -405,7 +405,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMCoverage-Z987654321.fsh",
     "startLine": 1,
-    "endLine": 44
+    "endLine": 46
   },
   {
     "outputFile": "OperationOutcome-example-vsdm-operationoutcome.json",
@@ -421,7 +421,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-100293710.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-100390876.json",
@@ -429,7 +429,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-100390876.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-100412075.json",
@@ -437,7 +437,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-100412075.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-100629189.json",
@@ -445,7 +445,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-100629189.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-100767109.json",
@@ -453,7 +453,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-100767109.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-100837864.json",
@@ -461,7 +461,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-100837864.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-101084423.json",
@@ -469,7 +469,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-101084423.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-101138358.json",
@@ -477,7 +477,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-101138358.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-101229542.json",
@@ -485,7 +485,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-101229542.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-101316991.json",
@@ -493,7 +493,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-101316991.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-101593043.json",
@@ -501,7 +501,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-101593043.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-101831688.json",
@@ -509,7 +509,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-101831688.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-101904345.json",
@@ -517,7 +517,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-101904345.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-102060928.json",
@@ -525,7 +525,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-102060928.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-102186348.json",
@@ -533,7 +533,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-102186348.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-102249844.json",
@@ -541,7 +541,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-102249844.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-102343996.json",
@@ -549,7 +549,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-102343996.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-102462343.json",
@@ -557,7 +557,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-102462343.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-102546957.json",
@@ -565,7 +565,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-102546957.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-102618749.json",
@@ -573,7 +573,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-102618749.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-102722735.json",
@@ -581,7 +581,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-102722735.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-102828457.json",
@@ -589,7 +589,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-102828457.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-103169760.json",
@@ -597,7 +597,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-103169760.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-103215857.json",
@@ -605,7 +605,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-103215857.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-103539039.json",
@@ -613,7 +613,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-103539039.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-103707692.json",
@@ -621,7 +621,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-103707692.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-104178397.json",
@@ -629,7 +629,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-104178397.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-104252310.json",
@@ -637,7 +637,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-104252310.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-104487108.json",
@@ -645,7 +645,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-104487108.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-104547224.json",
@@ -653,7 +653,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-104547224.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-104686063.json",
@@ -661,7 +661,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-104686063.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-104812556.json",
@@ -669,7 +669,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-104812556.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-104945099.json",
@@ -677,7 +677,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-104945099.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-105266989.json",
@@ -685,7 +685,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-105266989.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-105395861.json",
@@ -693,7 +693,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-105395861.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-105413578.json",
@@ -701,7 +701,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-105413578.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-105532787.json",
@@ -709,7 +709,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-105532787.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-105698629.json",
@@ -717,7 +717,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-105698629.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-105763413.json",
@@ -725,7 +725,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-105763413.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-105816575.json",
@@ -733,7 +733,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-105816575.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-105929412.json",
@@ -741,7 +741,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-105929412.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-106044960.json",
@@ -749,7 +749,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-106044960.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-106145699.json",
@@ -757,7 +757,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-106145699.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-106270260.json",
@@ -765,7 +765,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-106270260.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-106339922.json",
@@ -773,7 +773,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-106339922.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-106498173.json",
@@ -781,7 +781,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-106498173.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-106597231.json",
@@ -789,7 +789,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-106597231.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-106877150.json",
@@ -797,7 +797,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-106877150.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-106967901.json",
@@ -805,7 +805,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-106967901.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-107078689.json",
@@ -813,7 +813,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-107078689.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-107170568.json",
@@ -821,7 +821,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-107170568.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-107403308.json",
@@ -829,7 +829,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-107403308.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-107546344.json",
@@ -837,7 +837,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-107546344.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-107668422.json",
@@ -845,7 +845,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-107668422.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-107723372.json",
@@ -853,7 +853,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-107723372.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-107837745.json",
@@ -861,7 +861,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-107837745.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-107933230.json",
@@ -869,7 +869,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-107933230.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-108028771.json",
@@ -877,7 +877,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-108028771.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-108213958.json",
@@ -885,7 +885,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-108213958.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-108416806.json",
@@ -893,7 +893,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-108416806.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-108546756.json",
@@ -901,7 +901,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-108546756.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-108606009.json",
@@ -909,7 +909,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-108606009.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-108750061.json",
@@ -917,7 +917,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-108750061.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-108846691.json",
@@ -925,7 +925,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-108846691.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-108918482.json",
@@ -933,7 +933,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-108918482.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-109083613.json",
@@ -941,7 +941,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-109083613.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-109149007.json",
@@ -949,7 +949,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-109149007.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-109323112.json",
@@ -957,7 +957,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-109323112.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-109504155.json",
@@ -965,7 +965,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPayorOrganization-109504155.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "Patient-VSDMPatient-A123456780.json",
@@ -973,7 +973,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPatient-A123456780.fsh",
     "startLine": 1,
-    "endLine": 22
+    "endLine": 24
   },
   {
     "outputFile": "Patient-VSDMPatient-B234567895.json",
@@ -981,7 +981,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPatient-B234567895.fsh",
     "startLine": 1,
-    "endLine": 26
+    "endLine": 28
   },
   {
     "outputFile": "Patient-VSDMPatient-C345678908.json",
@@ -989,7 +989,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPatient-C345678908.fsh",
     "startLine": 1,
-    "endLine": 25
+    "endLine": 27
   },
   {
     "outputFile": "Patient-VSDMPatient-D456789013.json",
@@ -997,7 +997,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPatient-D456789013.fsh",
     "startLine": 1,
-    "endLine": 32
+    "endLine": 34
   },
   {
     "outputFile": "Patient-VSDMPatient-E567890127.json",
@@ -1005,7 +1005,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPatient-E567890127.fsh",
     "startLine": 1,
-    "endLine": 31
+    "endLine": 33
   },
   {
     "outputFile": "Patient-VSDMPatient-F678901231.json",
@@ -1013,7 +1013,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPatient-F678901231.fsh",
     "startLine": 1,
-    "endLine": 25
+    "endLine": 27
   },
   {
     "outputFile": "Patient-VSDMPatient-G789012344.json",
@@ -1021,7 +1021,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPatient-G789012344.fsh",
     "startLine": 1,
-    "endLine": 24
+    "endLine": 26
   },
   {
     "outputFile": "Patient-VSDMPatient-H890123459.json",
@@ -1029,7 +1029,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPatient-H890123459.fsh",
     "startLine": 1,
-    "endLine": 27
+    "endLine": 29
   },
   {
     "outputFile": "Patient-VSDMPatient-I901234562.json",
@@ -1037,7 +1037,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPatient-I901234562.fsh",
     "startLine": 1,
-    "endLine": 22
+    "endLine": 24
   },
   {
     "outputFile": "Patient-VSDMPatient-J012345677.json",
@@ -1045,7 +1045,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPatient-J012345677.fsh",
     "startLine": 1,
-    "endLine": 29
+    "endLine": 31
   },
   {
     "outputFile": "Patient-VSDMPatient-K123456781.json",
@@ -1053,7 +1053,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPatient-K123456781.fsh",
     "startLine": 1,
-    "endLine": 21
+    "endLine": 23
   },
   {
     "outputFile": "Patient-VSDMPatient-L234567896.json",
@@ -1061,7 +1061,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPatient-L234567896.fsh",
     "startLine": 1,
-    "endLine": 22
+    "endLine": 24
   },
   {
     "outputFile": "Patient-VSDMPatient-M345678909.json",
@@ -1069,7 +1069,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPatient-M345678909.fsh",
     "startLine": 1,
-    "endLine": 24
+    "endLine": 26
   },
   {
     "outputFile": "Patient-VSDMPatient-N456789014.json",
@@ -1077,7 +1077,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPatient-N456789014.fsh",
     "startLine": 1,
-    "endLine": 22
+    "endLine": 24
   },
   {
     "outputFile": "Patient-VSDMPatient-O567890128.json",
@@ -1085,7 +1085,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPatient-O567890128.fsh",
     "startLine": 1,
-    "endLine": 24
+    "endLine": 26
   },
   {
     "outputFile": "Patient-VSDMPatient-Z987654321.json",
@@ -1093,7 +1093,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMPatient-Z987654321.fsh",
     "startLine": 1,
-    "endLine": 36
+    "endLine": 38
   },
   {
     "outputFile": "StructureDefinition-VSDDatensatz.json",

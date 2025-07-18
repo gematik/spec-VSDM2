@@ -4,6 +4,8 @@ Title: "C345678908 Carolinataube, Charlie"
 Description: "Versichertendaten C345678908 Carolinataube, Charlie"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0)
+
 * identifier[KVNR].value = "C345678908"
 * birthDate = "1979-06-11"
 * name[Name]

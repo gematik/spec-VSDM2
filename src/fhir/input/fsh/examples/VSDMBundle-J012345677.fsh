@@ -4,6 +4,8 @@ Title: "J012345677 Junko, Jens-Jörg"
 Description: "VSDM 2.0-Daten J012345677 Junko, Jens-Jörg"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMBundle|1.0.0)
+
 * identifier.value = "urn:uuid:a3acb244-31cc-462a-9fae-03eca9c52e93"
 * type = #document
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -21,6 +23,8 @@ InstanceOf: VSDMComposition
 Title: "J012345677 Junko, Jens-Jörg"
 Description: "Composition für VSDM 2.0-Daten J012345677 Junko, Jens-Jörg"
 Usage: #inline
+
+* meta.profile[0] = Canonical(VSDMComposition|1.0.0)
 
 * id = "339221d1-85b4-45b4-9ded-503fe1aab14d"
 * status = #final

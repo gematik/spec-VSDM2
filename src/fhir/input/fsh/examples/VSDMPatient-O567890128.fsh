@@ -4,6 +4,8 @@ Title: "O567890128 Ortolan, Oliver"
 Description: "Versichertendaten O567890128 Ortolan, Oliver"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0)
+
 * identifier[KVNR].value = "O567890128"
 * birthDate = "2009-06-08"
 * name[Name]

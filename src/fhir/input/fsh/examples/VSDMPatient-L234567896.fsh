@@ -4,6 +4,8 @@ Title: "L234567896 Lachmöwe, Lisa"
 Description: "Versichertendaten L234567896 Lachmöwe, Lisa"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0)
+
 * identifier[KVNR].value = "L234567896"
 * birthDate = "2022-07-02"
 * name[Name]

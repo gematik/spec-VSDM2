@@ -4,6 +4,8 @@ Title: "E567890127 Freifrau an der Elster, Elke"
 Description: "Versichertendaten E567890127 Freifrau an der Elster, Elke"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0)
+
 * identifier[KVNR].value = "E567890127"
 * birthDate = "1992-11-13"
 * name[Name]

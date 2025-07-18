@@ -4,6 +4,8 @@ Title: "G789012344 Edle von der Graugans, Gabriele"
 Description: "VSDM 2.0-Daten G789012344 Edle von der Graugans, Gabriele"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMBundle|1.0.0)
+
 * identifier.value = "urn:uuid:b8aab485-0cf4-4600-9e47-db2177236ae7"
 * type = #document
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -21,6 +23,8 @@ InstanceOf: VSDMComposition
 Title: "G789012344 Edle von der Graugans, Gabriele"
 Description: "Composition für VSDM 2.0-Daten G789012344 Edle von der Graugans, Gabriele"
 Usage: #inline
+
+* meta.profile[0] = Canonical(VSDMComposition|1.0.0)
 
 * id = "7023f33d-f186-42b9-8ac0-12f8386e1e0b"
 * status = #final

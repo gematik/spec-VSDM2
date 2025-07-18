@@ -4,6 +4,8 @@ Title: "I901234562 Ibis, Ingrid"
 Description: "VSDM 2.0-Daten I901234562 Ibis, Ingrid"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMBundle|1.0.0)
+
 * identifier.value = "urn:uuid:e0f90f2d-2361-46c6-b201-58dc06bf3bf4"
 * type = #document
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -21,6 +23,8 @@ InstanceOf: VSDMComposition
 Title: "I901234562 Ibis, Ingrid"
 Description: "Composition für VSDM 2.0-Daten I901234562 Ibis, Ingrid"
 Usage: #inline
+
+* meta.profile[0] = Canonical(VSDMComposition|1.0.0)
 
 * id = "685ac434-11ec-40d7-b372-934205397f7f"
 * status = #final

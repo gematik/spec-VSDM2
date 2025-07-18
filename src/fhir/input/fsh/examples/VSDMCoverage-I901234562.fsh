@@ -4,6 +4,8 @@ Title: "I901234562 Ibis, Ingrid"
 Description: "Versicherungsdaten I901234562 Ibis, Ingrid"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+
 * extension[WOP].valueCoding = $csWOP#98 "Sachsen"
 * extension[dmp][+]
   * extension[dmp].valueCoding = #01 "Diabetes mellitus Typ 2"

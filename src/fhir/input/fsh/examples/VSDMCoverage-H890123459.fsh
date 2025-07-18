@@ -4,6 +4,8 @@ Title: "H890123459 vorm Habicht, Hans"
 Description: "Versicherungsdaten H890123459 vorm Habicht, Hans"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+
 * extension[WOP].valueCoding = $csWOP#17 "Niedersachsen" 
 * extension[besonderePersonengruppe].valueCoding = #07 "SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht: - Personen mit Wohnsitz im Inland, Abrechnung nach Aufwand"
 * extension[zuzahlungsstatus] 

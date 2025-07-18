@@ -4,6 +4,8 @@ Title: "D456789013 Dohle, Dara"
 Description: "VSDM 2.0-Daten D456789013 Dohle, Dara"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMBundle|1.0.0)
+
 * identifier.value = "urn:uuid:46c3dab3-919d-4d29-891d-a11859a20b91"
 * type = #document
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -21,6 +23,8 @@ InstanceOf: VSDMComposition
 Title: "D456789013 Dohle, Dara"
 Description: "Composition für VSDM 2.0-Daten D456789013 Dohle, Dara"
 Usage: #inline
+
+* meta.profile[0] = Canonical(VSDMComposition|1.0.0)
 
 * id = "48194abf-838b-4862-b4af-927ebaca1f14"
 * status = #final

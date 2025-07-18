@@ -4,6 +4,8 @@ Title: "F678901231 von Fasan, Frank Florian"
 Description: "Versicherungsdaten F678901231 von Fasan, Frank Florian"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+
 * extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"
 * extension[besonderePersonengruppe].valueCoding = #08 "SVA-Kennzeichnung, pauschal"
 * extension[zuzahlungsstatus] 

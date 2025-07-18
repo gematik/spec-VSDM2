@@ -4,6 +4,8 @@ Title: "N456789014 Nachtigall, Nina Nicole"
 Description: "Versichertendaten N456789014 Nachtigall, Nina Nicole"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0)
+
 * identifier[KVNR].value = "N456789014"
 * birthDate = "2011-06-22"
 * name[Name]

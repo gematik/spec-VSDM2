@@ -3,7 +3,7 @@
   "id": "VSDMPayorOrganization-107723372",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization"
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
     ]
   },
   "identifier": [

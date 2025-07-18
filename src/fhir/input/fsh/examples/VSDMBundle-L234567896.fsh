@@ -4,6 +4,8 @@ Title: "L234567896 Lachmöwe, Lisa"
 Description: "VSDM 2.0-Daten L234567896 Lachmöwe, Lisa"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMBundle|1.0.0)
+
 * identifier.value = "urn:uuid:51f2f2ce-908c-4706-af44-0ee5e18cfc33"
 * type = #document
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -21,6 +23,8 @@ InstanceOf: VSDMComposition
 Title: "L234567896 Lachmöwe, Lisa"
 Description: "Composition für VSDM 2.0-Daten L234567896 Lachmöwe, Lisa"
 Usage: #inline
+
+* meta.profile[0] = Canonical(VSDMComposition|1.0.0)
 
 * id = "b04bf9f2-b167-40ad-86e2-44334b23080d"
 * status = #final

@@ -4,6 +4,8 @@ Title: "A123456780 Amsel, Andrea"
 Description: "VSDM 2.0-Daten A123456780 Amsel, Andrea"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMBundle|1.0.0)
+
 * identifier.value = "urn:uuid:4aec5cba-62eb-42e6-b7d4-f60077c19122"
 * type = #document
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -21,6 +23,8 @@ InstanceOf: VSDMComposition
 Title: "A123456780 Amsel, Andrea"
 Description: "Composition für VSDM 2.0-Daten A123456780 Amsel, Andrea"
 Usage: #inline
+
+* meta.profile[0] = Canonical(VSDMComposition|1.0.0)
 
 * id = "0fc3cb38-b4c4-4833-add9-c42182cece37"
 * status = #final

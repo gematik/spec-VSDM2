@@ -3,7 +3,7 @@
   "id": "VSDMCoverage-N456789014",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage|1.0.0"
     ]
   },
   "extension": [

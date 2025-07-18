@@ -4,6 +4,8 @@ Title: "E567890127 Freifrau an der Elster, Elke"
 Description: "Versicherungsdaten E567890127 Freifrau an der Elster, Elke"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+
 * extension[WOP].valueCoding = $csWOP#93 "Thüringen"
 * extension[zuzahlungsstatus] 
   * extension[status].valueBoolean = true

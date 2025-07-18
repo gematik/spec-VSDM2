@@ -4,6 +4,8 @@ Title: "G789012344 Edle von der Graugans, Gabriele"
 Description: "Versichertendaten G789012344 Edle von der Graugans, Gabriele"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0)
+
 * identifier[KVNR].value = "G789012344"
 * birthDate = "1974-02-12"
 * name[Name]

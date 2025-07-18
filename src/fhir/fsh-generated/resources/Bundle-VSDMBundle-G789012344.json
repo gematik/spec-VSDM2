@@ -3,7 +3,7 @@
   "id": "VSDMBundle-G789012344",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle"
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
     ]
   },
   "type": "document",
@@ -20,7 +20,7 @@
         "id": "7023f33d-f186-42b9-8ac0-12f8386e1e0b",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMComposition"
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMComposition|1.0.0"
           ]
         },
         "status": "final",
@@ -75,7 +75,7 @@
         "id": "VSDMPatient-G789012344",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
           ]
         },
         "name": [
@@ -158,7 +158,7 @@
         "id": "VSDMCoverage-G789012344",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage|1.0.0"
           ]
         },
         "extension": [
@@ -270,7 +270,7 @@
         "id": "VSDMPayorOrganization-105413578",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization"
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
           ]
         },
         "identifier": [

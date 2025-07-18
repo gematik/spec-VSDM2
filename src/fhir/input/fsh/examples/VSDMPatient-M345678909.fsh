@@ -4,6 +4,8 @@ Title: "M345678909 Mittelspecht, Michael-Martin"
 Description: "Versichertendaten M345678909 Mittelspecht, Michael-Martin"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0)
+
 * identifier[KVNR].value = "M345678909"
 * birthDate = "2020-04-27"
 * name[Name]

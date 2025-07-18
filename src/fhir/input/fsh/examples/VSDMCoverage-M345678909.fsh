@@ -4,6 +4,8 @@ Title: "M345678909 Mittelspecht, Michael-Martin"
 Description: "Versicherungsdaten M345678909 Mittelspecht, Michael-Martin"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+
 * extension[WOP].valueCoding = $csWOP#71 "Bayern"
 * extension[zuzahlungsstatus] 
   * extension[status].valueBoolean = true

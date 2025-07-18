@@ -4,6 +4,8 @@ Title: "I901234562 Ibis, Ingrid"
 Description: "Versichertendaten I901234562 Ibis, Ingrid"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0)
+
 * identifier[KVNR].value = "I901234562"
 * birthDate = "1942-02-28"
 * name[Name]

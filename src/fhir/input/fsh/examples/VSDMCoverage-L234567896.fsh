@@ -4,6 +4,8 @@ Title: "L234567896 Lachmöwe, Lisa"
 Description: "Versicherungsdaten L234567896 Lachmöwe, Lisa"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+
 * extension[WOP].valueCoding = $csWOP#17 "Niedersachsen" 
 * extension[zuzahlungsstatus] 
   * extension[status].valueBoolean = true

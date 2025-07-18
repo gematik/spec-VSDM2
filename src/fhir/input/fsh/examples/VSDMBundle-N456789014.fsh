@@ -4,6 +4,8 @@ Title: "N456789014 Nachtigall, Nina Nicole"
 Description: "VSDM 2.0-Daten N456789014 Nachtigall, Nina Nicole"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMBundle|1.0.0)
+
 * identifier.value = "urn:uuid:46962573-171b-45cf-82b1-9847688fbf02"
 * type = #document
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -23,6 +25,8 @@ InstanceOf: VSDMComposition
 Title: "N456789014 Nachtigall, Nina Nicole"
 Description: "Composition für VSDM 2.0-Daten N456789014 Nachtigall, Nina Nicole"
 Usage: #inline
+
+* meta.profile[0] = Canonical(VSDMComposition|1.0.0)
 
 * id = "bd5c24ca-1a53-45d3-aeb3-7b7875f3750e"
 * status = #final

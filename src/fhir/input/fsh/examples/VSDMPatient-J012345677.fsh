@@ -4,6 +4,8 @@ Title: "J012345677 Junko, Jens-Jörg"
 Description: "Versichertendaten J012345677 Junko, Jens-Jörg"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0)
+
 * identifier[KVNR].value = "J012345677"
 * birthDate = "1958-12"
 * name[Name]

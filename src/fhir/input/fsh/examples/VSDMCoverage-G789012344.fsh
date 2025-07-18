@@ -4,6 +4,8 @@ Title: "G789012344 Edle von der Graugans, Gabriele"
 Description: "Versicherungsdaten G789012344 Edle von der Graugans, Gabriele"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+
 * extension[WOP].valueCoding = $csWOP#46 "Hessen"
 * extension[zuzahlungsstatus] 
   * extension[status].valueBoolean = true

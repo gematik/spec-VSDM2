@@ -4,6 +4,8 @@ Title: "M345678909 Mittelspecht, Michael-Martin"
 Description: "VSDM 2.0-Daten M345678909 Mittelspecht, Michael-Martin"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMBundle|1.0.0)
+
 * identifier.value = "urn:uuid:f04453e8-99b2-4745-b92e-8d1277a0268d"
 * type = #document
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -21,6 +23,8 @@ InstanceOf: VSDMComposition
 Title: "M345678909 Mittelspecht, Michael-Martin"
 Description: "Composition für VSDM 2.0-Daten M345678909 Mittelspecht, Michael-Martin"
 Usage: #inline
+
+* meta.profile[0] = Canonical(VSDMComposition|1.0.0)
 
 * id = "3cc87a24-5e9f-4b2e-a5c8-99e48bedfb38"
 * status = #final

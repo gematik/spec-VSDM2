@@ -4,6 +4,8 @@ Title: "K123456781 Kiebitz, Karin"
 Description: "VSDM 2.0-Daten K123456781 Kiebitz, Karin"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMBundle|1.0.0)
+
 * identifier.value = "urn:uuid:40e95420-b46e-4e5e-937c-5b707af9ac49"
 * type = #document
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -23,6 +25,8 @@ InstanceOf: VSDMComposition
 Title: "K123456781 Kiebitz, Karin"
 Description: "Composition für VSDM 2.0-Daten K123456781 Kiebitz, Karin"
 Usage: #inline
+
+* meta.profile[0] = Canonical(VSDMComposition|1.0.0)
 
 * id = "5c6c5fef-9cf1-4149-901e-e24df8a19eba"
 * status = #final

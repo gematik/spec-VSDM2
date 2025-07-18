@@ -4,6 +4,8 @@ Title: "H890123459 vorm Habicht, Hans"
 Description: "Versichertendaten H890123459 vorm Habicht, Hans"
 Usage: #example
 
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0)
+
 * identifier[KVNR].value = "H890123459"
 * birthDate = "1953-07-29"
 * name[Name]
