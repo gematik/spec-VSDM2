@@ -5,6 +5,7 @@
   "id": "VSDMNamenszusatzVS",
   "title": "Namenszusatz",
   "description": "Namenszusatz nach DEÜV Anlage 7",
+  "version": "1.0.0",
   "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMNamenszusatzVS",
   "experimental": false,
   "publisher": "gematik GmbH",

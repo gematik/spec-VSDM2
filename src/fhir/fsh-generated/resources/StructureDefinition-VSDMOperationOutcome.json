@@ -2,6 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMOperationOutcome",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome",
+  "version": "1.0.0",
   "name": "VSDMOperationOutcome",
   "title": "Fehlermeldung des VSDM Resource Servers",
   "status": "draft",

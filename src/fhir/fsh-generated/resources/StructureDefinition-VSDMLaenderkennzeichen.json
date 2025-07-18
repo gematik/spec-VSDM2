@@ -2,6 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMLaenderkennzeichen",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen",
+  "version": "1.0.0",
   "name": "VSDMLaenderkennzeichen",
   "title": "Länderkennzeichen nach DEÜV Anlage 8",
   "status": "draft",

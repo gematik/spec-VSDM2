@@ -5,6 +5,7 @@
   "id": "VSDMVorsatzwortVS",
   "title": "Namensvorsatzwort",
   "description": "Namensvorsatzwort nach DEÜV Anlage 6",
+  "version": "1.0.0",
   "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMVorsatzwortVS",
   "experimental": false,
   "publisher": "gematik GmbH",

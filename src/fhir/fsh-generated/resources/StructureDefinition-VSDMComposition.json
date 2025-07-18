@@ -2,6 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMComposition",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMComposition",
+  "version": "1.0.0",
   "name": "VSDMComposition",
   "title": "Composition eines VSDM 2.0 Document Bundle",
   "status": "draft",

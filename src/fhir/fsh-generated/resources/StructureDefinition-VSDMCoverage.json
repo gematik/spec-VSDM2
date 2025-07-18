@@ -2,6 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMCoverage",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage",
+  "version": "1.0.0",
   "name": "VSDMCoverage",
   "title": "Versicherungsdaten",
   "status": "draft",

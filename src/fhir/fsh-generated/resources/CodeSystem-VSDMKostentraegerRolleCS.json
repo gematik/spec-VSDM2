@@ -6,6 +6,7 @@
   "id": "VSDMKostentraegerRolleCS",
   "title": "Rolle des Kostenträgers",
   "description": "Rolle des Kostenträgers im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "version": "1.0.0",
   "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
   "concept": [
     {

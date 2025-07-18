@@ -2,6 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMPatient",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient",
+  "version": "1.0.0",
   "name": "VSDMPatient",
   "title": "Versicherter",
   "status": "draft",

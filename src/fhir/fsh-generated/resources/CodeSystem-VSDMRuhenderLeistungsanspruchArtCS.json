@@ -6,6 +6,7 @@
   "id": "VSDMRuhenderLeistungsanspruchArtCS",
   "title": "Art des ruhenden Leistungsanspruchs",
   "description": "Art des ruhenden Leistungsanspruchs",
+  "version": "1.0.0",
   "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMRuhenderLeistungsanspruchArtCS",
   "concept": [
     {

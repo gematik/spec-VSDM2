@@ -5,6 +5,7 @@
   "id": "VSDMBesonderePersonengruppeVS",
   "title": "Besondere Personengruppe",
   "description": "Besondere Personengruppe",
+  "version": "1.0.0",
   "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMBesonderePersonengruppeVS",
   "experimental": false,
   "publisher": "gematik GmbH",

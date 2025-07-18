@@ -5,6 +5,7 @@
   "id": "VSDMDMPVS",
   "title": "Disease-Management-Programm (DMP)",
   "description": "Disease-Management-Programm (Einschränkung auf im VSDM 2.0 gültige Werte)",
+  "version": "1.0.0",
   "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMDMPVS",
   "experimental": false,
   "publisher": "gematik GmbH",

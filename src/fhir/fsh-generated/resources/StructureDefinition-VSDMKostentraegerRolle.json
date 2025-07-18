@@ -2,6 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMKostentraegerRolle",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle",
+  "version": "1.0.0",
   "name": "VSDMKostentraegerRolle",
   "title": "Rolle des Kostenträgers",
   "status": "draft",

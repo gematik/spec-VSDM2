@@ -2,6 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMBundle",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle",
+  "version": "1.0.0",
   "name": "VSDMBundle",
   "title": "Bundle der VSDM 2.0-Ressourcen",
   "status": "draft",
