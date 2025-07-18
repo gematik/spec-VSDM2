@@ -61,7 +61,7 @@
           {
             "entry": [
               {
-                "reference": "Organization/VSDMPayorOrganization106877150"
+                "reference": "Organization/VSDMPayorOrganization-106877150"
               }
             ]
           }
@@ -305,12 +305,12 @@
                 "valueCoding": {
                   "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
                   "code": "H",
-                  "display": "Hauptkostenträger"
+                  "display": "Haupt-Kostenträger"
                 },
                 "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
               }
             ],
-            "reference": "Organization/VSDMPayorOrganization106877150"
+            "reference": "Organization/VSDMPayorOrganization-106877150"
           }
         ],
         "status": "active",
@@ -330,7 +330,7 @@
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization106877150",
+      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-106877150",
       "resource": {
         "resourceType": "Organization",
         "id": "VSDMPayorOrganization-106877150",

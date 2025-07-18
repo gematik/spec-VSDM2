@@ -14,8 +14,8 @@ Usage: #example
   * start = "2011-04-01"
   * end = "2024-12-31"
 * payor[+]
-  * reference = "Organization/VSDMPayorOrganization103169760"
-  * extension[kostentraegerRolle].valueCoding = #H "Hauptkostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit
+  * reference = "Organization/VSDMPayorOrganization-103169760"
+  * extension[kostentraegerRolle].valueCoding = #H "Haupt-Kostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit
 * payor[+]
-  * reference = "Organization/VSDMPayorOrganization103215857"
+  * reference = "Organization/VSDMPayorOrganization-103215857"
   * extension[kostentraegerRolle].valueCoding = #A "abrechnender Kostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit

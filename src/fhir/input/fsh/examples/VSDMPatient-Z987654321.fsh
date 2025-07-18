@@ -12,7 +12,7 @@ Usage: #example
     * extension[namenszusatz].valueString = "Graf"
     * extension[nachname].valueString = "Zaunkönig"
     * extension[vorsatzwort].valueString = "von und zu"
-  * given = "Zaunkönig"
+  * given = "Zacharias"
   * prefix = "Prof. Dr. rer. nat."
     * extension[prefix-qualifier].valueCode = #AC
 * gender = #other

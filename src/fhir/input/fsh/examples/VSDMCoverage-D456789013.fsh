@@ -22,5 +22,5 @@ Usage: #example
 * period
   * start = "2021-10-01"
 * payor[+]
-  * reference = "Organization/VSDMPayorOrganization105266989"
+  * reference = "Organization/VSDMPayorOrganization-105266989"
   * extension[kostentraegerRolle].valueCoding = #A "abrechnender Kostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit

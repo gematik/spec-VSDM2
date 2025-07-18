@@ -13,9 +13,9 @@ Usage: #example
 * entry[VSDMPatient][=].resource = VSDMPatient-K123456781
 * entry[VSDMCoverage][+].fullUrl = "https://gematik.de/fhir/Coverage/VSDMCoverage-K123456781"
 * entry[VSDMCoverage][=].resource = VSDMCoverage-K123456781
-* entry[VSDMPayorOrganization][+].fullUrl = "https://gematik.de/fhir/Organization/VSDMPayorOrganization105532787"
+* entry[VSDMPayorOrganization][+].fullUrl = "https://gematik.de/fhir/Organization/VSDMPayorOrganization-105532787"
 * entry[VSDMPayorOrganization][=].resource = VSDMPayorOrganization-105532787
-* entry[VSDMPayorOrganization][+].fullUrl = "https://gematik.de/fhir/Organization/VSDMPayorOrganization106339922"
+* entry[VSDMPayorOrganization][+].fullUrl = "https://gematik.de/fhir/Organization/VSDMPayorOrganization-106339922"
 * entry[VSDMPayorOrganization][=].resource = VSDMPayorOrganization-106339922
 
 Instance: VSDMComposition-K123456781
@@ -33,6 +33,6 @@ Usage: #inline
   * value = "105532787"
 * section[+].entry.reference = "Patient/VSDMPatient-K123456781"
 * section[+].entry.reference = "Coverage/VSDMCoverage-K123456781"
-* section[+].entry.reference = "Organization/VSDMPayorOrganization105532787"
-* section[+].entry.reference = "Organization/VSDMPayorOrganization106339922"
+* section[+].entry.reference = "Organization/VSDMPayorOrganization-105532787"
+* section[+].entry.reference = "Organization/VSDMPayorOrganization-106339922"
 

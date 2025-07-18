@@ -61,14 +61,14 @@
           {
             "entry": [
               {
-                "reference": "Organization/VSDMPayorOrganization102249844"
+                "reference": "Organization/VSDMPayorOrganization-102249844"
               }
             ]
           },
           {
             "entry": [
               {
-                "reference": "Organization/VSDMPayorOrganization102186348"
+                "reference": "Organization/VSDMPayorOrganization-102186348"
               }
             ]
           }
@@ -280,12 +280,12 @@
                 "valueCoding": {
                   "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
                   "code": "H",
-                  "display": "Hauptkostenträger"
+                  "display": "Haupt-Kostenträger"
                 },
                 "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
               }
             ],
-            "reference": "Organization/VSDMPayorOrganization102249844"
+            "reference": "Organization/VSDMPayorOrganization-102249844"
           },
           {
             "extension": [
@@ -298,7 +298,7 @@
                 "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
               }
             ],
-            "reference": "Organization/VSDMPayorOrganization102186348"
+            "reference": "Organization/VSDMPayorOrganization-102186348"
           }
         ],
         "status": "active",
@@ -319,7 +319,7 @@
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization102249844",
+      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-102249844",
       "resource": {
         "resourceType": "Organization",
         "id": "VSDMPayorOrganization-102249844",
@@ -377,7 +377,7 @@
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization102186348",
+      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-102186348",
       "resource": {
         "resourceType": "Organization",
         "id": "VSDMPayorOrganization-102186348",

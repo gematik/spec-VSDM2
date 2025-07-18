@@ -35,10 +35,10 @@ Usage: #example
 * beneficiary.reference = "Patient/VSDMPatient-Z987654321"
 * period
   * start = "2000-01-01"
-  * end = "2025-12-31"
+  * end = "2029-12-31"
 * payor[+]
-  * reference = "Organization/VSDMPayorOrganization108213958"
-  * extension[kostentraegerRolle].valueCoding = #H "Hauptkostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit
+  * reference = "Organization/VSDMPayorOrganization-108213958"
+  * extension[kostentraegerRolle].valueCoding = #H "Haupt-Kostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit
 * payor[+]
-  * reference = "Organization/VSDMPayorOrganization100293710"
+  * reference = "Organization/VSDMPayorOrganization-100293710"
   * extension[kostentraegerRolle].valueCoding = #A "abrechnender Kostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit

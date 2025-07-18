@@ -139,12 +139,12 @@
           "valueCoding": {
             "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
             "code": "H",
-            "display": "Hauptkostenträger"
+            "display": "Haupt-Kostenträger"
           },
           "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
         }
       ],
-      "reference": "Organization/VSDMPayorOrganization108213958"
+      "reference": "Organization/VSDMPayorOrganization-108213958"
     },
     {
       "extension": [
@@ -157,7 +157,7 @@
           "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
         }
       ],
-      "reference": "Organization/VSDMPayorOrganization100293710"
+      "reference": "Organization/VSDMPayorOrganization-100293710"
     }
   ],
   "status": "active",
@@ -173,6 +173,6 @@
   },
   "period": {
     "start": "2000-01-01",
-    "end": "2025-12-31"
+    "end": "2029-12-31"
   }
 }

@@ -169,7 +169,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
 // Zuordnung aus Versicherungsdaten -> Kostentraeger 
 * payor contains Hauptkostentraeger 1..1 MS
 * payor[Hauptkostentraeger] only Reference(VSDMPayorOrganization)
-  * extension[kostentraegerRolle].valueCoding.code = #H "Hauptkostenträger"
+  * extension[kostentraegerRolle].valueCoding.code = #H "Haupt-Kostenträger"
 
 // Zuordnung aus Versicherungsdaten -> AbrechnenderKostentraeger 
 * payor contains abrechnenderKostentraeger 0..1 MS
