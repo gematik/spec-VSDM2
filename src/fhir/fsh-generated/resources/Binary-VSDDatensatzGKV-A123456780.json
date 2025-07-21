@@ -1,0 +1,32 @@
+{
+  "resourceType": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDDatensatzGKV",
+  "id": "VSDDatensatzGKV-A123456780",
+  "Versichertendaten": {
+    "Versicherter": {
+      "VersichertenID": "A123456780",
+      "Geburtsdatum": "1997-12-28",
+      "Vorname": "Andrea",
+      "Nachname": "Amsel",
+      "Geschlecht": "W",
+      "StrassenAdresse": {
+        "Postleitzahl": "52070",
+        "Ort": "Aachen",
+        "Wohnsitzlaendercode": "D",
+        "Strasse": "Amselweg",
+        "Hausnummer": "1"
+      }
+    }
+  },
+  "Versicherungsdaten": {
+    "Kostentraeger": {
+      "Name": "Beispielkostenträger Aachen",
+      "Kostentraegerlaendercode": "D",
+      "Kostentraegerkennung": "104178397"
+    },
+    "WOP": "38",
+    "Versicherungsschutz": {
+      "Beginn": "1997-12-28"
+    },
+    "Versichertenart": "1"
+  }
+}
