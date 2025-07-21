@@ -4,11 +4,11 @@ Description: "Disease-Management-Programm (Einschränkung auf im VSDM 2.0 gülti
 
 * insert Meta
 
-* include $csDMP#01 "Diabetes mellitus Typ 2 "
-* include $csDMP#02 "Brustkrebs "
+* include $csDMP#01 "Diabetes mellitus Typ 2"
+* include $csDMP#02 "Brustkrebs"
 * include $csDMP#03 "Koronare Herzkrankheit"
-* include $csDMP#04 "Diabetes mellitus Typ 1 "
-* include $csDMP#05 "Asthma bronchiale "
+* include $csDMP#04 "Diabetes mellitus Typ 1"
+* include $csDMP#05 "Asthma bronchiale"
 * include $csDMP#06 "COPD (chronic obstructive pulmonary disease)"
 * include $csDMP#07 "Chronische Herzinsuffizienz"
 * include $csDMP#08 "Depression"

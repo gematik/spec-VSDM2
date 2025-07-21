@@ -17,11 +17,11 @@
         "concept": [
           {
             "code": "01",
-            "display": "Diabetes mellitus Typ 2 "
+            "display": "Diabetes mellitus Typ 2"
           },
           {
             "code": "02",
-            "display": "Brustkrebs "
+            "display": "Brustkrebs"
           },
           {
             "code": "03",
@@ -29,11 +29,11 @@
           },
           {
             "code": "04",
-            "display": "Diabetes mellitus Typ 1 "
+            "display": "Diabetes mellitus Typ 1"
           },
           {
             "code": "05",
-            "display": "Asthma bronchiale "
+            "display": "Asthma bronchiale"
           },
           {
             "code": "06",

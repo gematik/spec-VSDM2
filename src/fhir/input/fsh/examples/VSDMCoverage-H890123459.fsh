@@ -23,7 +23,7 @@ Usage: #example
     * start = "2020-01-01"
     * end = "2023-12-31"
   * extension[digitalesDMP].valueBoolean = true
-* extension[versichertenart].valueCoding = $csVersichertenart#5 "Rentner und ihre Familienangehörigen "
+* extension[versichertenart].valueCoding = $csVersichertenart#5 "Rentner und ihre Familienangehörigen"
 * status = #active
 * type = #GKV
 * beneficiary.reference = "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
