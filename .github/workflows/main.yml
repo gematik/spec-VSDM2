@@ -47,7 +47,6 @@ jobs:
           PATH_TO_QUALITY_CONTROL_RULES: qc/custom
           DOTNET_VALIDATION_ENABLED: true
           JAVA_VALIDATION_ENABLED: true
-          OUTPUT_FORMAT: RAW
           JAVA_VALIDATION_OPTIONS: -allow-example-urls true
           #JAVA_VALIDATOR_VERSION: 6.0.11
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
