@@ -144,7 +144,7 @@ StructureDefinition-VSDMDMPTeilnahme.json            VSDMDMPTeilnahme           
 StructureDefinition-VSDMKostentraegerRolle.json      VSDMKostentraegerRolle              Extension   extensions/VSDMKostentraegerRolle.fsh               1 - 19
 StructureDefinition-VSDMLaenderkennzeichen.json      VSDMLaenderkennzeichen              Extension   extensions/VSDMLaenderkennzeichen.fsh               1 - 19
 StructureDefinition-VSDMOperationOutcome.json        VSDMOperationOutcome                Profile     profiles/VSDMOperationOutcome.fsh                   1 - 43
-StructureDefinition-VSDMPatient.json                 VSDMPatient                         Profile     profiles/VSDMPatient.fsh                            1 - 200
+StructureDefinition-VSDMPatient.json                 VSDMPatient                         Profile     profiles/VSDMPatient.fsh                            1 - 225
 StructureDefinition-VSDMPayorOrganization.json       VSDMPayorOrganization               Profile     profiles/VSDMPayorOrganization.fsh                  1 - 62
 ValueSet-VSDMBesonderePersonengruppeVS.json          VSDMBesonderePersonengruppeVS       ValueSet    valuesets/VSDMBesonderePersonengruppeVS.fsh         1 - 11
 ValueSet-VSDMDMPVS.json                              VSDMDMPVS                           ValueSet    valuesets/VSDMDMPVS.fsh                             1 - 18

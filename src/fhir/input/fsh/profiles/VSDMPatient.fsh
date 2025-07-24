@@ -11,10 +11,35 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
   * ^short = "Versicherter im VSDM"
   * ^definition = """
       Der VSDMPatient bildet einen Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0 ab.
+      Der VSDMPatient ist vom zentralen TIPatient abgeleitet. 
+      Der Ressource Server des VSDM stellt allerdings keinen FHIR Data Service im Sinne des Implementation Guide TI Common dar, so dass die meisten Anforderungen dieses IG auf den VSDMPatient nicht zutreffen.
+      Dieser Sachverhalt wird in einer Folgeversion des IG klargestellt.
     """
 
+* id
+  * ^comment = """
+      HINWEIS: Das Attribut id ist aktuell durch das übergeordneter Profil TIPatient als "must support" gekennzeichnet.
+      Diese Kennzeichnung wird in einer Folgeversion aufgehoben.
+    """
+* meta
+  * ^comment = """
+      HINWEIS: Das Attribut meta ist aktuell durch das übergeordneter Profil TIPatient als "must support" gekennzeichnet.
+      Diese Kennzeichnung wird in einer Folgeversion aufgehoben.
+    """
+  * versionId
+    * ^comment = """
+        HINWEIS: Das Attribut meta.versionId ist aktuell durch das übergeordneter Profil TIPatient als "must support" gekennzeichnet.
+        Diese Kennzeichnung wird in einer Folgeversion aufgehoben.
+      """
+  * lastUpdated
+    * ^comment = """
+        HINWEIS: Das Attribut meta.versionId ist aktuell durch das übergeordneter Profil TIPatient als "must support" gekennzeichnet.
+        Diese Kennzeichnung wird in einer Folgeversion aufgehoben.
+      """
+    // TODO Falls das Bundle von Document auf Collection umgestellt wird, können wir lastUpdated als Datum der letzten inhaltlichen Änderung / Aktualisierung verwenden.
+
 // Zuordnung aus Versichertendaten -> Versicherter -> VersichertenID
-* identifier[KVNR] 1..1 MS
+* identifier[KVNR] 1..1 // MS bereits durch TIPatient vorgegeben
   * ^short = "Versichertennummer (KVNR)"
   * ^definition = """
       Es wird der zehnstellig (unveränderliche) Teil der KVNR verwendet. 
@@ -24,17 +49,6 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
       Hinweise zur Verwendung und Beispiele siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-LebenslangeKrankenversichertennummer10-stelligeKVID-Identifier?version=current.
     """
   * ^requirements = "Die KVNR identifiziert den Versicherten, auf den sich die bereitgestellten Stammdaten beziehen."
-
-// Zuordnung aus Versichertendaten -> Versicherter -> Geburtsdatum
-* birthDate MS
-  * ^short = "Geburtsdatum"
-  * ^definition = """
-      Das Geburtsdatum des Versicherten ist in den VSD eine Pflichtangabe. 
-      Partielle Datumsangaben sind allerdings zulässig.
-    """
-  * ^comment = """
-      Hinweise insbesondere zur Angabe unvollständiger Datumswerte siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Geburtsdatum.
-    """
 
 // Bildung aus den in der Folge spezifizierten Einzelwerten
 * name[Name].text
@@ -48,7 +62,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
     """
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Nachname, Vorsatzwort und Namenszusatz
-* name[Name].family MS
+* name[Name].family // 1..1 MS bereits durch TIPatient vorgegeben
   * ^comment = """
       Hinweise zur Bildung des gesamten Namenamens siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.
       Verwender müssen mindestens 87 Zeichen verarbeiten können.
@@ -56,7 +70,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
     // 45 Zeichen Nachname + 20 Zeichen Vorsatzwort + 20 Zeichen Namenszusatz + max. 2 Leerzeichen = 87 Zeichen
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Namenszusatz
-* name[Name].family.extension[namenszusatz] MS
+* name[Name].family.extension[namenszusatz] // MS bereits durch TIPatient vorgegeben
   * ^comment = """
       Hinweise zum Umgang mit dieser Erweiterung siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.
       Eine Tabelle der gültigen Namenszusätze findet sich in Anlage 7 zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp.
@@ -66,7 +80,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
   * valueString from VSDMNamenszusatzVS (preferred)
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Nachname
-* name[Name].family.extension[nachname] MS
+* name[Name].family.extension[nachname] // MS bereits durch TIPatient vorgegeben
   * ^short = "Nachname ohne Vorsatzwort und Zusätze"
   * ^definition = """
       Diese Erweiterung kann den Nachnamen ohne Vorsatzworte und Zusätze aufnehmen.
@@ -78,7 +92,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
     """
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Vorsatzwort
-* name[Name].family.extension[vorsatzwort] MS
+* name[Name].family.extension[vorsatzwort] // MS bereits durch TIPatient vorgegeben
   * ^short = "Vorsatzwort"
   * ^definition = """
       Vorsatzwort zum Nachnamen des Patienten (z.B. "van" in "Ludwig van Beethoven").
@@ -92,7 +106,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
   * valueString from VSDMVorsatzwortVS (preferred)
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Vorname
-* name[Name].given MS
+* name[Name].given // 1..* MS bereits durch TIPatient vorgegeben
   * ^comment = """
       Mehrere Vornamen können durch Leerzeichen oder Bindestrich getrennt in einem Wert angegeben werden. 
       Von der Wiederholung des given-Elemente SOLL kein Gebrauch gemacht werden; es wird zur besseren Interoperabilität allerdings nicht technisch verboten.
@@ -100,7 +114,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
     """
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Titel
-* name[Name].prefix MS
+* name[Name].prefix // MS bereits durch TIPatient vorgegeben
   * ^definition = """
       Namensteile vor dem Vornamen, z.B. akademischer Titel.
       Wenn dieses Attribut zur Angabe des akademischen Titels verwendet wird, ist die Erweiterung prefix-qualifier mit dem Wert AC (academic) verpflichtend anzugeben.
@@ -110,7 +124,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
   * ^comment = """
       Beispiele zur Verwendung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name.
     """
-  * extension[prefix-qualifier] MS
+  * extension[prefix-qualifier] // MS bereits durch TIPatient vorgegeben
     * ^short = "Art des Namenspräfix"
     * ^definition = """
         Kodierte Angabe der Art des Namenspräfix zur technischen Unterscheidung zwischen verschieden Präfixen wie akademischem Titel.
@@ -122,7 +136,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
       """
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Geschlecht
-* gender 1..1 MS
+* gender 1..1 // MS bereits durch TIPatient vorgegeben
   * ^short = "Administrative Geschlechtsangabe (FHIR-Kodierung)"
   * ^definition = """
       Administrative Geschlechtsangabe gemäß den Unterlagen des Kostenträgers, kodiert nach FHIR-Standard.
@@ -139,6 +153,17 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
         Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht.
         Nur bei FHIR-Kodierung "other" zu verwenden (vgl. Constraint pat-de-1).
       """
+
+// Zuordnung aus Versichertendaten -> Versicherter -> Geburtsdatum
+* birthDate // 1..1 MS bereits durch TIPatient vorgegeben
+  * ^short = "Geburtsdatum"
+  * ^definition = """
+      Das Geburtsdatum des Versicherten ist in den VSD eine Pflichtangabe. 
+      Partielle Datumsangaben sind allerdings zulässig.
+    """
+  * ^comment = """
+      Hinweise insbesondere zur Angabe unvollständiger Datumswerte siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Geburtsdatum.
+    """
 
 // Slicing der Adresse, um die geforderten Kardinalitäten festzulegen
 * address 
