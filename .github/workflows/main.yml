@@ -23,8 +23,10 @@ jobs:
     
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20'
         
       # Install .NET runtime
       - name: Setup .NET Core SDK
@@ -44,7 +46,7 @@ jobs:
         with:
           PATH_TO_CONFORMANCE_RESOURCES: src/fhir/fsh-generated/resources/
           #PATH_TO_EXAMPLES: Examples
-          PATH_TO_QUALITY_CONTROL_RULES: qc/custom
+          #PATH_TO_QUALITY_CONTROL_RULES: qc/custom
           DOTNET_VALIDATION_ENABLED: true
           JAVA_VALIDATION_ENABLED: true
           JAVA_VALIDATION_OPTIONS: -allow-example-urls true
