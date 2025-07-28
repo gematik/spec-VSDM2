@@ -1,8 +1,8 @@
 ValueSet: VSDMErrorcodeVS
-Id: vsdm-errorcode-vs
-Title: "ValueSet for VSDM errors"
-Description: "VSDM errors if Kostentraeger cant provide VSD"
-* ^url = "https://gematik.de/fhir/vsdm2/ValueSet/VSDMErrorcodeVS"
+Title: "VSDM-Fehlercodes"
+Description: "allgemeine und VSDM-spezifische Fehlercodes"
+
 * insert Meta
+
+* include codes from system $csOperationOutcomeCodes
 * include codes from system VSDMErrorcodeCS
-* include codes from system $operationoutcomecodes

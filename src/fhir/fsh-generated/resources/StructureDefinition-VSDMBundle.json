@@ -1,0 +1,155 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "VSDMBundle",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle",
+  "version": "1.0.0",
+  "name": "VSDMBundle",
+  "title": "Bundle der VSDM 2.0-Ressourcen",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-12-31",
+  "publisher": "gematik GmbH",
+  "description": "Bundle zur Übermittlung der Ressourcen im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Bundle",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Bundle",
+        "path": "Bundle",
+        "short": "Bundle der VSDM 2.0-Ressourcen",
+        "definition": "Bundle zur Übermittlung der Ressourcen im Versichertenstammdatenmanagement (VSDM) 2.0"
+      },
+      {
+        "id": "Bundle.id",
+        "path": "Bundle.id",
+        "min": 1
+      },
+      {
+        "id": "Bundle.identifier",
+        "path": "Bundle.identifier",
+        "min": 1
+      },
+      {
+        "id": "Bundle.identifier.system",
+        "path": "Bundle.identifier.system",
+        "min": 1,
+        "fixedUri": "urn:ietf:rfc:3986"
+      },
+      {
+        "id": "Bundle.identifier.value",
+        "path": "Bundle.identifier.value",
+        "short": "a unique bundle identifier",
+        "min": 1
+      },
+      {
+        "id": "Bundle.type",
+        "path": "Bundle.type",
+        "fixedCode": "document"
+      },
+      {
+        "id": "Bundle.timestamp",
+        "path": "Bundle.timestamp",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry",
+        "path": "Bundle.entry",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "resource"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 4
+      },
+      {
+        "id": "Bundle.entry:DocumentInformation",
+        "path": "Bundle.entry",
+        "sliceName": "DocumentInformation",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Bundle.entry:DocumentInformation.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Composition",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMComposition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:VSDMPatient",
+        "path": "Bundle.entry",
+        "sliceName": "VSDMPatient",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Bundle.entry:VSDMPatient.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Patient",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:VSDMCoverage",
+        "path": "Bundle.entry",
+        "sliceName": "VSDMCoverage",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Bundle.entry:VSDMCoverage.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Coverage",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:VSDMPayorOrganization",
+        "path": "Bundle.entry",
+        "sliceName": "VSDMPayorOrganization",
+        "min": 1,
+        "max": "2"
+      },
+      {
+        "id": "Bundle.entry:VSDMPayorOrganization.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Organization",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

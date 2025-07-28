@@ -1,0 +1,38 @@
+Instance: VSDMPatient-Z987654321
+InstanceOf: VSDMPatient
+Title: "Z987654321 Graf von und zu Zaunkönig, Zacharias"
+Description: "Versichertendaten Z987654321 Graf von und zu Zaunkönig, Zacharias"
+Usage: #example
+
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0)
+
+* identifier[KVNR].value = "Z987654321"
+* birthDate = "1987-05-16"
+* name[Name]
+  * text = "Prof. Dr. rer. nat. Zacharias Graf von und zu Zaunkönig"
+  * family = "Graf von und zu Zaunkönig"
+    * extension[namenszusatz].valueString = "Graf"
+    * extension[nachname].valueString = "Zaunkönig"
+    * extension[vorsatzwort].valueString = "von und zu"
+  * given = "Zacharias"
+  * prefix = "Prof. Dr. rer. nat."
+    * extension[prefix-qualifier].valueCode = #AC
+* gender = #other
+  * extension[other-amtlich].valueCoding = #X "unbestimmt"
+* address[StrassenAdresse]
+  * line[+] = "Zaunkönigpfad 99x"
+    * extension[Hausnummer].valueString = "99x"
+    * extension[Strasse].valueString = "Zaunkönigpfad"
+  * line[+] = "zweites Nest rechter Ast"
+    * extension[Adresszusatz].valueString = "zweites Nest rechter Ast"
+  * city = "Zwickau"
+  * postalCode = "08066"
+  * country = $csCountryCodeISO3166#DE
+    * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"
+* address[PostfachAdresse]
+  * line[+] = "Postfach 885522"
+    * extension[Postfach].valueString = "Postfach 885522"
+  * city = "Zwickau"
+  * postalCode = "08062"
+  * country = $csCountryCodeISO3166#DE
+    * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"

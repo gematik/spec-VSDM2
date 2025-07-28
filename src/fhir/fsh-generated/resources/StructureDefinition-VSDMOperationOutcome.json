@@ -1,0 +1,103 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "VSDMOperationOutcome",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome",
+  "version": "1.0.0",
+  "name": "VSDMOperationOutcome",
+  "title": "Fehlermeldung des VSDM Resource Servers",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-12-31",
+  "publisher": "gematik GmbH",
+  "description": "Strukturierte Fehlermeldung im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "OperationOutcome",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/OperationOutcome",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "OperationOutcome",
+        "path": "OperationOutcome",
+        "short": "Fehlermeldung des VSDM Resource Servers",
+        "definition": "Strukturierte Fehlermeldung im Versichertenstammdatenmanagement (VSDM) 2.0"
+      },
+      {
+        "id": "OperationOutcome.issue",
+        "path": "OperationOutcome.issue",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "details.coding.system"
+            }
+          ],
+          "rules": "open",
+          "description": "Slicing der OperationOutcome Issues",
+          "ordered": false
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "OperationOutcome.issue:vsdm-error",
+        "path": "OperationOutcome.issue",
+        "sliceName": "vsdm-error",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "OperationOutcome.issue:vsdm-error.severity",
+        "path": "OperationOutcome.issue.severity",
+        "definition": "Angabe der Schwere des Fehlers",
+        "fixedCode": "fatal"
+      },
+      {
+        "id": "OperationOutcome.issue:vsdm-error.code",
+        "path": "OperationOutcome.issue.code",
+        "mustSupport": true
+      },
+      {
+        "id": "OperationOutcome.issue:vsdm-error.details",
+        "path": "OperationOutcome.issue.details",
+        "definition": "Nähere Beschreibung des Fehlers",
+        "min": 1
+      },
+      {
+        "id": "OperationOutcome.issue:vsdm-error.details.coding",
+        "path": "OperationOutcome.issue.details.coding",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMErrorcodeVS"
+        }
+      },
+      {
+        "id": "OperationOutcome.issue:vsdm-error.details.coding.system",
+        "path": "OperationOutcome.issue.details.coding.system",
+        "min": 1
+      },
+      {
+        "id": "OperationOutcome.issue:vsdm-error.details.coding.code",
+        "path": "OperationOutcome.issue.details.coding.code",
+        "short": "Errorcode",
+        "definition": "Errorcode",
+        "min": 1
+      },
+      {
+        "id": "OperationOutcome.issue:vsdm-error.details.coding.display",
+        "path": "OperationOutcome.issue.details.coding.display",
+        "short": "Errortext",
+        "min": 1
+      },
+      {
+        "id": "OperationOutcome.issue:vsdm-error.details.text",
+        "path": "OperationOutcome.issue.details.text",
+        "short": "Errortext für Entwickler"
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "VSDMComposition",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMComposition",
+  "version": "1.0.0",
+  "name": "VSDMComposition",
+  "title": "Composition eines VSDM 2.0 Document Bundle",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-12-31",
+  "publisher": "gematik GmbH",
+  "description": "Composition zur Beschreibung eines Document Bundle im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Composition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Composition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Composition",
+        "path": "Composition",
+        "short": "Composition eines VSDM 2.0 Document Bundle",
+        "definition": "Composition zur Beschreibung eines Document Bundle im Versichertenstammdatenmanagement (VSDM) 2.0#"
+      },
+      {
+        "id": "Composition.extension",
+        "path": "Composition.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "closed"
+        }
+      },
+      {
+        "id": "Composition.status",
+        "path": "Composition.status",
+        "fixedCode": "final",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type",
+        "path": "Composition.type",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type.coding",
+        "path": "Composition.type.coding",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "55188-7",
+          "system": "http://loinc.org",
+          "display": "Patient data Document"
+        }
+      },
+      {
+        "id": "Composition.date",
+        "path": "Composition.date",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.author.identifier",
+        "path": "Composition.author.identifier",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-iknr"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

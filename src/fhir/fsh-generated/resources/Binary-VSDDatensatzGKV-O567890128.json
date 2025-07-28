@@ -1,0 +1,37 @@
+{
+  "resourceType": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDDatensatzGKV",
+  "id": "VSDDatensatzGKV-O567890128",
+  "Versichertendaten": {
+    "Versicherter": {
+      "VersichertenID": "O567890128",
+      "Geburtsdatum": "2009-06-08",
+      "Vorname": "Oliver",
+      "Nachname": "Ortolan",
+      "Geschlecht": "M",
+      "StrassenAdresse": {
+        "Postleitzahl": "77654",
+        "Ort": "Offenburg",
+        "Wohnsitzlaendercode": "D",
+        "Strasse": "Gartenammerstraße",
+        "Hausnummer": "15",
+        "Anschriftenzusatz": "Vorderhaus"
+      }
+    }
+  },
+  "Versicherungsdaten": {
+    "Kostentraeger": {
+      "Name": "Beispielkostenträger Offenburg",
+      "Kostentraegerlaendercode": "D",
+      "Kostentraegerkennung": "107668422"
+    },
+    "WOP": "52",
+    "Zuzahlungsstatus": {
+      "Status": true,
+      "GueltigBis": "2027-06-09"
+    },
+    "Versicherungsschutz": {
+      "Beginn": "2009-06-08"
+    },
+    "Versichertenart": "3"
+  }
+}

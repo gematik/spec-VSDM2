@@ -1,0 +1,111 @@
+{
+  "resourceType": "Patient",
+  "id": "VSDMPatient-E567890127",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
+    ]
+  },
+  "name": [
+    {
+      "use": "official",
+      "text": "Elke Freifrau an der Elster",
+      "family": "Freifrau an der Elster",
+      "_family": {
+        "extension": [
+          {
+            "url": "http://fhir.de/StructureDefinition/humanname-namenszusatz",
+            "valueString": "Freifrau"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+            "valueString": "Elster"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+            "valueString": "an der"
+          }
+        ]
+      },
+      "given": [
+        "Elke"
+      ]
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://fhir.de/sid/gkv/kvid-10",
+      "value": "E567890127"
+    }
+  ],
+  "address": [
+    {
+      "type": "physical",
+      "line": [
+        "Elsterstraße 5"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString": "5"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString": "Elsterstraße"
+            }
+          ]
+        }
+      ],
+      "city": "Erfurt",
+      "postalCode": "99095",
+      "country": "DE",
+      "_country": {
+        "extension": [
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen",
+            "valueCoding": {
+              "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+              "code": "D",
+              "display": "Deutschland"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "postal",
+      "line": [
+        "Postfach 9821"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox",
+              "valueString": "Postfach 9821"
+            }
+          ]
+        }
+      ],
+      "city": "Graz",
+      "postalCode": "8055",
+      "country": "AT",
+      "_country": {
+        "extension": [
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen",
+            "valueCoding": {
+              "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+              "code": "A",
+              "display": "Österreich"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "birthDate": "1992-11-13",
+  "gender": "female"
+}

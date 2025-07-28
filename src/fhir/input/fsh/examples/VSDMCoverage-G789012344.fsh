@@ -1,0 +1,32 @@
+Instance: VSDMCoverage-G789012344
+InstanceOf: VSDMCoverage
+Title: "G789012344 Edle von der Graugans, Gabriele"
+Description: "Versicherungsdaten G789012344 Edle von der Graugans, Gabriele"
+Usage: #example
+
+* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+
+* extension[WOP].valueCoding = $csWOP#46 "Hessen"
+* extension[zuzahlungsstatus] 
+  * extension[status].valueBoolean = true
+  * extension[gueltigBis].valueDate = "2026-12-31"
+* extension[kostenerstattung]
+  * extension[aerztlicheVersorgung].valueBoolean = true
+  * extension[zahnaerztlicheVersorgung].valueBoolean = true
+  * extension[stationaererBereich].valueBoolean = true
+  * extension[veranlassteLeistungen].valueBoolean = true
+* extension[ruhenderLeistungsanspruch]
+  * extension[art].valueCoding = #2 "eingeschränkt"
+  * extension[dauer].valuePeriod
+    * start = "2025-06-01"
+    * end = "2027-12-31"
+* extension[versichertenart].valueCoding = $csVersichertenart#1 "Mitglied"
+* status = #active
+* type = #GKV
+* beneficiary.reference = "Patient/VSDMPatient-G789012344"
+* period
+  * start = "1974-02-12"
+* payor[+]
+  * reference = "Organization/VSDMPayorOrganization-105413578"
+  * extension[kostentraegerRolle].valueCoding = #H "Haupt-Kostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit
+

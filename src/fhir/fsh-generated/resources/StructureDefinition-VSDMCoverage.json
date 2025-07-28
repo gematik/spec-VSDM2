@@ -1,0 +1,446 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "VSDMCoverage",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage",
+  "version": "1.0.0",
+  "name": "VSDMCoverage",
+  "title": "Versicherungsdaten",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-12-31",
+  "publisher": "gematik GmbH",
+  "description": "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Coverage",
+  "baseDefinition": "http://fhir.de/StructureDefinition/coverage-de-basis",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Coverage",
+        "path": "Coverage",
+        "definition": "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0",
+        "comment": "Die Struktur wird unabhängig von der Versicherungsart (GKV/PKV) definiert."
+      },
+      {
+        "id": "Coverage.extension",
+        "path": "Coverage.extension",
+        "min": 2
+      },
+      {
+        "id": "Coverage.extension:WOP",
+        "path": "Coverage.extension",
+        "sliceName": "WOP",
+        "short": "Wohnortprinzip (WOP)",
+        "definition": "Kennzeichen zur Umsetzung des Wohnortprinzips (WOP).",
+        "comment": "Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html",
+        "requirements": "Das Kennzeichen WOP ist gemäss § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemäss Artikel 2 § 2 Abs. 2 des Gesetzes zur Einführung des Wohnortprinzips bei Honorarvereinbarungen für Ärzte und Zahnärzte und zur Krankenversichertenkarte gemäss § 291 Abs. 2 Fünftes Sozialgesetzbuch (SGB V) erforderlich.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/wop"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.extension:WOP.value[x]",
+        "path": "Coverage.extension.value[x]",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMWohnortprinzipVS"
+        }
+      },
+      {
+        "id": "Coverage.extension:WOP.value[x].system",
+        "path": "Coverage.extension.value[x].system",
+        "fixedUri": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP"
+      },
+      {
+        "id": "Coverage.extension:besonderePersonengruppe",
+        "path": "Coverage.extension",
+        "sliceName": "besonderePersonengruppe",
+        "short": "Besondere Personengruppe",
+        "definition": "Gibt die Zugehörigkeit des Versicherten zu einer besonderen Personengruppe an.",
+        "comment": "Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html",
+        "requirements": "Die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.extension:besonderePersonengruppe.value[x]",
+        "path": "Coverage.extension.value[x]",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMBesonderePersonengruppeVS"
+        }
+      },
+      {
+        "id": "Coverage.extension:besonderePersonengruppe.value[x].system",
+        "path": "Coverage.extension.value[x].system",
+        "fixedUri": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE"
+      },
+      {
+        "id": "Coverage.extension:zuzahlungsstatus",
+        "path": "Coverage.extension",
+        "sliceName": "zuzahlungsstatus",
+        "short": "Zuzahlungsstatus",
+        "definition": "Kennzeichnet die Befreiung des Versicherten von der Zuzahlungspflicht nach § 62 Abs. 3 SGB V.\nAchtung: Wenn keine Zuzahlungsbefreiung vorliegt, entfällt die gesamte Extension.",
+        "comment": "Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html",
+        "requirements": "Befreiung des Versicherten von der Zuzahlungspflicht nach § 62 Abs. 3 SGB V.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.extension:zuzahlungsstatus.extension",
+        "path": "Coverage.extension.extension",
+        "min": 2
+      },
+      {
+        "id": "Coverage.extension:zuzahlungsstatus.extension:status",
+        "path": "Coverage.extension.extension",
+        "sliceName": "status",
+        "comment": "Wenn keine Zuzahlungsbefreiung vorliegt (der Wert also false wäre), entfällt die gesamte Extension."
+      },
+      {
+        "id": "Coverage.extension:zuzahlungsstatus.extension:status.value[x]",
+        "path": "Coverage.extension.extension.value[x]",
+        "patternBoolean": true
+      },
+      {
+        "id": "Coverage.extension:zuzahlungsstatus.extension:gueltigBis",
+        "path": "Coverage.extension.extension",
+        "sliceName": "gueltigBis",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Coverage.extension:zuzahlungsstatus.extension:gueltigBis.value[x]",
+        "path": "Coverage.extension.extension.value[x]",
+        "min": 1
+      },
+      {
+        "id": "Coverage.extension:dmp",
+        "path": "Coverage.extension",
+        "sliceName": "dmp",
+        "short": "DMP-Teilnahme",
+        "definition": "Angaben zur Teilnahme des Versicherten an Disease Management-Programmen.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.extension:kostenerstattung",
+        "path": "Coverage.extension",
+        "sliceName": "kostenerstattung",
+        "short": "Kostenerstattung",
+        "definition": "Gibt die vom Versicherten gewählte Kostenerstattung für den jeweiligen Bereich an.",
+        "comment": "Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/kostenerstattung"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.extension:kostenerstattung.extension",
+        "path": "Coverage.extension.extension",
+        "min": 4
+      },
+      {
+        "id": "Coverage.extension:kostenerstattung.extension:aerztlicheVersorgung",
+        "path": "Coverage.extension.extension",
+        "sliceName": "aerztlicheVersorgung",
+        "short": "Ärztliche Versorgung",
+        "min": 1
+      },
+      {
+        "id": "Coverage.extension:kostenerstattung.extension:aerztlicheVersorgung.value[x]",
+        "path": "Coverage.extension.extension.value[x]",
+        "min": 1
+      },
+      {
+        "id": "Coverage.extension:kostenerstattung.extension:zahnaerztlicheVersorgung",
+        "path": "Coverage.extension.extension",
+        "sliceName": "zahnaerztlicheVersorgung",
+        "short": "Zahnärztliche Versorgung",
+        "min": 1
+      },
+      {
+        "id": "Coverage.extension:kostenerstattung.extension:zahnaerztlicheVersorgung.value[x]",
+        "path": "Coverage.extension.extension.value[x]",
+        "min": 1
+      },
+      {
+        "id": "Coverage.extension:kostenerstattung.extension:stationaererBereich",
+        "path": "Coverage.extension.extension",
+        "sliceName": "stationaererBereich",
+        "short": "Stationärer Bereich",
+        "min": 1
+      },
+      {
+        "id": "Coverage.extension:kostenerstattung.extension:stationaererBereich.value[x]",
+        "path": "Coverage.extension.extension.value[x]",
+        "min": 1
+      },
+      {
+        "id": "Coverage.extension:kostenerstattung.extension:veranlassteLeistungen",
+        "path": "Coverage.extension.extension",
+        "sliceName": "veranlassteLeistungen",
+        "short": "Veranlasste Leistungen",
+        "min": 1
+      },
+      {
+        "id": "Coverage.extension:kostenerstattung.extension:veranlassteLeistungen.value[x]",
+        "path": "Coverage.extension.extension.value[x]",
+        "min": 1
+      },
+      {
+        "id": "Coverage.extension:ruhenderLeistungsanspruch",
+        "path": "Coverage.extension",
+        "sliceName": "ruhenderLeistungsanspruch",
+        "short": "Ruhender Leistungsanspruch",
+        "definition": "Angaben zum ruhenden Leistungsanspruch des Versicherten",
+        "comment": "Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.extension:ruhenderLeistungsanspruch.extension:art",
+        "path": "Coverage.extension.extension",
+        "sliceName": "art"
+      },
+      {
+        "id": "Coverage.extension:ruhenderLeistungsanspruch.extension:art.value[x]",
+        "path": "Coverage.extension.extension.value[x]",
+        "min": 1,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMRuhenderLeistungsanspruchArtVS"
+        }
+      },
+      {
+        "id": "Coverage.extension:ruhenderLeistungsanspruch.extension:dauer",
+        "path": "Coverage.extension.extension",
+        "sliceName": "dauer"
+      },
+      {
+        "id": "Coverage.extension:ruhenderLeistungsanspruch.extension:dauer.value[x]",
+        "path": "Coverage.extension.extension.value[x]",
+        "min": 1
+      },
+      {
+        "id": "Coverage.extension:versichertenart",
+        "path": "Coverage.extension",
+        "sliceName": "versichertenart",
+        "short": "Art des Versicherten",
+        "definition": "Art des Versicherten",
+        "comment": "Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/gkv/versichertenart"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.extension:versichertenart.value[x]",
+        "path": "Coverage.extension.value[x]",
+        "min": 1
+      },
+      {
+        "id": "Coverage.beneficiary",
+        "path": "Coverage.beneficiary",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.period",
+        "path": "Coverage.period",
+        "short": "Gültigkeitszeitraum des Versicherungsschutzes",
+        "definition": "Gibt den Beginn und, sofern anwendbar, das Ende des Versicherungsschutzes an.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.period.start",
+        "path": "Coverage.period.start",
+        "short": "Beginn des Versicherungsschutzes",
+        "definition": "Gibt den Beginn des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an. ",
+        "min": 1
+      },
+      {
+        "id": "Coverage.period.end",
+        "path": "Coverage.period.end",
+        "short": "Ende des Versicherungsschutzes",
+        "definition": "Gibt das Ende des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an, wenn ein Endedatum festgelegt ist. ",
+        "comment": "Hier kann nicht das Ende der Gültigkeit einer konkreten eGK angegeben werden, weil der VSDM 2.0 Resource Server keine Kenntnis davon erlangt, welche konkrete eGK verwendet wurde.\nFür den Fall der Authentifikation mit einer elektronischen Identität liegt ohnehin kein eGK-Gültigkeitsdatum vor."
+      },
+      {
+        "id": "Coverage.payor",
+        "path": "Coverage.payor",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "extension[kostentraegerRolle].valueCoding"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "Kostenträger"
+      },
+      {
+        "id": "Coverage.payor.extension:kostentraegerRolle",
+        "path": "Coverage.payor.extension",
+        "sliceName": "kostentraegerRolle",
+        "short": "Rolle des Kostenträgers",
+        "definition": "Rolle des Kostenträgers (Haupt- oder abrechnender Kostenträger)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.payor:Hauptkostentraeger",
+        "path": "Coverage.payor",
+        "sliceName": "Hauptkostentraeger",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.payor:Hauptkostentraeger.extension:kostentraegerRolle",
+        "path": "Coverage.payor.extension",
+        "sliceName": "kostentraegerRolle",
+        "short": "Rolle des Kostenträgers",
+        "definition": "Rolle des Kostenträgers (Haupt- oder abrechnender Kostenträger)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.payor:Hauptkostentraeger.extension:kostentraegerRolle.value[x].code",
+        "path": "Coverage.payor.extension.value[x].code",
+        "patternCode": "H"
+      },
+      {
+        "id": "Coverage.payor:abrechnenderKostentraeger",
+        "path": "Coverage.payor",
+        "sliceName": "abrechnenderKostentraeger",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.payor:abrechnenderKostentraeger.extension:kostentraegerRolle",
+        "path": "Coverage.payor.extension",
+        "sliceName": "kostentraegerRolle",
+        "short": "Rolle des Kostenträgers",
+        "definition": "Rolle des Kostenträgers (Haupt- oder abrechnender Kostenträger)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.payor:abrechnenderKostentraeger.extension:kostentraegerRolle.value[x].code",
+        "path": "Coverage.payor.extension.value[x].code",
+        "patternCode": "A"
+      }
+    ]
+  }
+}
