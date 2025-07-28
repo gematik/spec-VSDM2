@@ -36,15 +36,16 @@ jobs:
       
       # Install Java runtime (only needed if you want to run the offical HL7 Java validator)
       - name: Setup Java JDK
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'
-          java-version: '21'
+          distribution: 'microsoft'
+          java-version: '17'
         
       - name: Firely.Terminal (GitHub Actions)
-        uses: FirelyTeam/firely-terminal-pipeline@v0.7.4
+        uses: FirelyTeam/firely-terminal-pipeline@v0.6.29
         with:
           PATH_TO_CONFORMANCE_RESOURCES: src/fhir/fsh-generated/resources/
+          FIRELY_TERMINAL_VERSION: 3.4.0
           #PATH_TO_EXAMPLES: Examples
           #PATH_TO_QUALITY_CONTROL_RULES: qc/custom
           DOTNET_VALIDATION_ENABLED: true
