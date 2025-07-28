@@ -48,7 +48,6 @@ Im Rahmen der Anwendungsfälle finden im Primärsystem weitere Abläufe im Zusam
 
 [Primärsystem-Interaktionen](docs/vsdm_psinteraktionen.md)
 
-
 ## Informationsmodell VSD
 Hier geht es zur Informationsseite zum neuen Informationsmodell für VSDM 2.0.
 
