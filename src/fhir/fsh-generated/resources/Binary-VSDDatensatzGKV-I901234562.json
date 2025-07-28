@@ -1,0 +1,47 @@
+{
+  "resourceType": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDDatensatzGKV",
+  "id": "VSDDatensatzGKV-I901234562",
+  "Versichertendaten": {
+    "Versicherter": {
+      "VersichertenID": "I901234562",
+      "Geburtsdatum": "1942-02-28",
+      "Vorname": "Ingrid",
+      "Nachname": "Ibis",
+      "Geschlecht": "W",
+      "StrassenAdresse": {
+        "Postleitzahl": "7430",
+        "Ort": "Fischbach",
+        "Wohnsitzlaendercode": "L",
+        "Strasse": "Im Balz",
+        "Hausnummer": "95"
+      }
+    }
+  },
+  "Versicherungsdaten": {
+    "Kostentraeger": {
+      "Name": "Beispielkostenträger Dresden",
+      "Kostentraegerlaendercode": "D",
+      "Kostentraegerkennung": "107933230"
+    },
+    "WOP": "98",
+    "Versicherungsschutz": {
+      "Beginn": "1942-02-28",
+      "Ende": "2028-02-15"
+    },
+    "DMP": [
+      {
+        "DMP": "1",
+        "Beginn": "2021-02-07",
+        "Ende": "2028-02-15",
+        "digitalesDMP": false
+      }
+    ],
+    "Kostenerstattung": {
+      "AerztlicheVersorgung": true,
+      "ZahnaerztlicheVersorgung": true,
+      "StationaererBereich": true,
+      "VeranlassteLeistungen": true
+    },
+    "Versichertenart": "5"
+  }
+}

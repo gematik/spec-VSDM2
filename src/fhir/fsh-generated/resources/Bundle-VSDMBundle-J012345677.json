@@ -1,0 +1,391 @@
+{
+  "resourceType": "Bundle",
+  "id": "VSDMBundle-J012345677",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
+    ]
+  },
+  "type": "document",
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:a3acb244-31cc-462a-9fae-03eca9c52e93"
+  },
+  "timestamp": "2025-07-14T15:16:17.890+01:00",
+  "entry": [
+    {
+      "fullUrl": "https://gematik.de/fhir/Composition/339221d1-85b4-45b4-9ded-503fe1aab14d",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "339221d1-85b4-45b4-9ded-503fe1aab14d",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMComposition|1.0.0"
+          ]
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "code": "55188-7",
+              "system": "http://loinc.org",
+              "display": "Patient data Document"
+            }
+          ]
+        },
+        "author": [
+          {
+            "identifier": {
+              "system": "http://fhir.de/sid/arge-ik/iknr",
+              "value": "106877150"
+            }
+          }
+        ],
+        "date": "2025-07-14T05:06:07.890+01:00",
+        "title": "VSDM 2.0-Daten J012345677 Junko, Jens-Jörg",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "Patient/VSDMPatient-J012345677"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Coverage/VSDMCoverage-J012345677"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Organization/VSDMPayorOrganization-106877150"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-J012345677",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "VSDMPatient-J012345677",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
+          ]
+        },
+        "name": [
+          {
+            "use": "official",
+            "text": "Jens-Jörg Junko",
+            "family": "Junko",
+            "_family": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                  "valueString": "Junko"
+                }
+              ]
+            },
+            "given": [
+              "Jens-Jörg"
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "J012345677"
+          }
+        ],
+        "address": [
+          {
+            "type": "physical",
+            "line": [
+              "Winterammerstraße 10d"
+            ],
+            "_line": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                    "valueString": "10d"
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                    "valueString": "Winterammerstraße"
+                  }
+                ]
+              }
+            ],
+            "city": "Baden-Baden",
+            "postalCode": "77815",
+            "country": "DE",
+            "_country": {
+              "extension": [
+                {
+                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen",
+                  "valueCoding": {
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+                    "code": "D",
+                    "display": "Deutschland"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "postal",
+            "line": [
+              "Postfach 98765"
+            ],
+            "_line": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox",
+                    "valueString": "Postfach 98765"
+                  }
+                ]
+              }
+            ],
+            "city": "Baden-Baden",
+            "postalCode": "76530",
+            "country": "DE",
+            "_country": {
+              "extension": [
+                {
+                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen",
+                  "valueCoding": {
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+                    "code": "D",
+                    "display": "Deutschland"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "birthDate": "1958-12",
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverage-J012345677",
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "VSDMCoverage-J012345677",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage|1.0.0"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/wop",
+            "valueCoding": {
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+              "code": "52",
+              "display": "Baden-Württemberg"
+            }
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
+            "valueCoding": {
+              "code": "5",
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
+              "display": "Rentner und ihre Familienangehörigen"
+            }
+          },
+          {
+            "valueCoding": {
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
+              "code": "09",
+              "display": "Empfänger von Gesundheitsleistungen nach §§ 4 und 6 des Asylbewerberleistungsgesetzes (AsylbLG)"
+            },
+            "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
+          },
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
+            "extension": [
+              {
+                "url": "dmp",
+                "valueCoding": {
+                  "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+                  "code": "06",
+                  "display": "COPD"
+                }
+              },
+              {
+                "url": "zeitraum",
+                "valuePeriod": {
+                  "start": "2001-01-11"
+                }
+              },
+              {
+                "url": "digitalesDMP",
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
+            "extension": [
+              {
+                "url": "dmp",
+                "valueCoding": {
+                  "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+                  "code": "09",
+                  "display": "Rückenschmerz"
+                }
+              },
+              {
+                "url": "zeitraum",
+                "valuePeriod": {
+                  "start": "2002-02-12"
+                }
+              },
+              {
+                "url": "digitalesDMP",
+                "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
+            "extension": [
+              {
+                "url": "dmp",
+                "valueCoding": {
+                  "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+                  "code": "10",
+                  "display": "Rheuma"
+                }
+              },
+              {
+                "url": "zeitraum",
+                "valuePeriod": {
+                  "start": "2003-03-13"
+                }
+              },
+              {
+                "url": "digitalesDMP",
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch",
+            "extension": [
+              {
+                "url": "art",
+                "valueCoding": {
+                  "code": "1",
+                  "display": "vollständig"
+                }
+              },
+              {
+                "url": "dauer",
+                "valuePeriod": {
+                  "start": "2025-01-01",
+                  "end": "2025-12-31"
+                }
+              }
+            ]
+          }
+        ],
+        "payor": [
+          {
+            "extension": [
+              {
+                "valueCoding": {
+                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
+                  "code": "H",
+                  "display": "Haupt-Kostenträger"
+                },
+                "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+              }
+            ],
+            "reference": "Organization/VSDMPayorOrganization-106877150"
+          }
+        ],
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "code": "GKV"
+            }
+          ]
+        },
+        "beneficiary": {
+          "reference": "Patient/VSDMPatient-J012345677"
+        },
+        "period": {
+          "start": "1964-05-01"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-106877150",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "VSDMPayorOrganization-106877150",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.de/sid/arge-ik/iknr",
+            "value": "106877150"
+          }
+        ],
+        "address": [
+          {
+            "country": "DE",
+            "_country": {
+              "extension": [
+                {
+                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen",
+                  "valueCoding": {
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+                    "code": "D",
+                    "display": "Deutschland"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "name": "Beispielkostenträger Baden-Baden",
+        "contact": [
+          {
+            "purpose": {
+              "coding": [
+                {
+                  "code": "BILL"
+                }
+              ],
+              "text": "Kontakt für Abrechnungsfragen"
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "+4952116391643"
+              },
+              {
+                "system": "email",
+                "value": "contact@kostentraeger.invalid"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

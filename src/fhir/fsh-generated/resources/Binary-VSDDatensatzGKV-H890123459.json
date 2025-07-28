@@ -1,0 +1,60 @@
+{
+  "resourceType": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDDatensatzGKV",
+  "id": "VSDDatensatzGKV-H890123459",
+  "Versichertendaten": {
+    "Versicherter": {
+      "VersichertenID": "H890123459",
+      "Geburtsdatum": "1953-07-29",
+      "Vorname": "Hans",
+      "Nachname": "Habicht",
+      "Geschlecht": "M",
+      "Vorsatzwort": "vorm",
+      "Titel": "Dr.-Ing.",
+      "StrassenAdresse": {
+        "Postleitzahl": "31135",
+        "Ort": "Hildesheim",
+        "Wohnsitzlaendercode": "D",
+        "Strasse": "Habichtpfad",
+        "Hausnummer": "7c",
+        "Anschriftenzusatz": "zweite Laube rechts"
+      }
+    }
+  },
+  "Versicherungsdaten": {
+    "Kostentraeger": {
+      "Name": "Beispielkostenträger Hildesheim",
+      "Kostentraegerlaendercode": "D",
+      "Kostentraegerkennung": "102249844"
+    },
+    "AbrechnenderKostentraeger": {
+      "Name": "Beispielkostenträger Hannover",
+      "Kostentraegerlaendercode": "D",
+      "Kostentraegerkennung": "102186348"
+    },
+    "WOP": "17",
+    "BesonderePersonengruppe": "7",
+    "Zuzahlungsstatus": {
+      "Status": true,
+      "GueltigBis": "2024-03-31"
+    },
+    "Versicherungsschutz": {
+      "Beginn": "1953-01-01",
+      "Ende": "2024-03-31"
+    },
+    "DMP": [
+      {
+        "DMP": "1",
+        "Beginn": "2001-01-01",
+        "Ende": "2024-03-31",
+        "digitalesDMP": false
+      },
+      {
+        "DMP": "6",
+        "Beginn": "2020-01-01",
+        "Ende": "2023-12-31",
+        "digitalesDMP": true
+      }
+    ],
+    "Versichertenart": "5"
+  }
+}

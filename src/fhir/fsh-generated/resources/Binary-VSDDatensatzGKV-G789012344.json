@@ -1,0 +1,49 @@
+{
+  "resourceType": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDDatensatzGKV",
+  "id": "VSDDatensatzGKV-G789012344",
+  "Versichertendaten": {
+    "Versicherter": {
+      "VersichertenID": "G789012344",
+      "Geburtsdatum": "1974-02-12",
+      "Vorname": "Gabriele",
+      "Nachname": "Graugans",
+      "Geschlecht": "W",
+      "Vorsatzwort": "von der",
+      "Namenszusatz": "Edle",
+      "StrassenAdresse": {
+        "Postleitzahl": "35392",
+        "Ort": "Gießen",
+        "Wohnsitzlaendercode": "D",
+        "Strasse": "Am Gänseweiher",
+        "Hausnummer": "66"
+      }
+    }
+  },
+  "Versicherungsdaten": {
+    "Kostentraeger": {
+      "Name": "Beispielkostenträger Gießen",
+      "Kostentraegerlaendercode": "D",
+      "Kostentraegerkennung": "105413578"
+    },
+    "WOP": "46",
+    "Zuzahlungsstatus": {
+      "Status": true,
+      "GueltigBis": "2026-12-31"
+    },
+    "Versicherungsschutz": {
+      "Beginn": "1974-02-12"
+    },
+    "Kostenerstattung": {
+      "AerztlicheVersorgung": true,
+      "ZahnaerztlicheVersorgung": true,
+      "StationaererBereich": true,
+      "VeranlassteLeistungen": true
+    },
+    "RuhenderLeistungsanspruch": {
+      "Beginn": "2025-06-01",
+      "Ende": "2027-12-31",
+      "Art": "2"
+    },
+    "Versichertenart": "1"
+  }
+}

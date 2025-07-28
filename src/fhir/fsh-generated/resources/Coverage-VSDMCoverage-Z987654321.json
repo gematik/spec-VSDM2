@@ -1,0 +1,178 @@
+{
+  "resourceType": "Coverage",
+  "id": "VSDMCoverage-Z987654321",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage|1.0.0"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/wop",
+      "valueCoding": {
+        "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+        "code": "98",
+        "display": "Sachsen"
+      }
+    },
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
+      "valueCoding": {
+        "code": "3",
+        "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
+        "display": "Familienversicherter"
+      }
+    },
+    {
+      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
+      "extension": [
+        {
+          "url": "dmp",
+          "valueCoding": {
+            "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+            "code": "01",
+            "display": "Diabetes mellitus Typ 2"
+          }
+        },
+        {
+          "url": "zeitraum",
+          "valuePeriod": {
+            "start": "2001-01-01"
+          }
+        },
+        {
+          "url": "digitalesDMP",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
+      "extension": [
+        {
+          "url": "dmp",
+          "valueCoding": {
+            "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+            "code": "08",
+            "display": "Depression"
+          }
+        },
+        {
+          "url": "zeitraum",
+          "valuePeriod": {
+            "start": "2020-01-01",
+            "end": "2023-12-31"
+          }
+        },
+        {
+          "url": "digitalesDMP",
+          "valueBoolean": true
+        }
+      ]
+    },
+    {
+      "valueCoding": {
+        "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
+        "code": "07",
+        "display": "SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht"
+      },
+      "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
+    },
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
+      "extension": [
+        {
+          "url": "status",
+          "valueBoolean": true
+        },
+        {
+          "url": "gueltigBis",
+          "valueDate": "2025-12-31"
+        }
+      ]
+    },
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung",
+      "extension": [
+        {
+          "url": "aerztlicheVersorgung",
+          "valueBoolean": true
+        },
+        {
+          "url": "zahnaerztlicheVersorgung",
+          "valueBoolean": true
+        },
+        {
+          "url": "stationaererBereich",
+          "valueBoolean": true
+        },
+        {
+          "url": "veranlassteLeistungen",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch",
+      "extension": [
+        {
+          "url": "art",
+          "valueCoding": {
+            "code": "1",
+            "display": "vollständig"
+          }
+        },
+        {
+          "url": "dauer",
+          "valuePeriod": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          }
+        }
+      ]
+    }
+  ],
+  "payor": [
+    {
+      "extension": [
+        {
+          "valueCoding": {
+            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
+            "code": "H",
+            "display": "Haupt-Kostenträger"
+          },
+          "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+        }
+      ],
+      "reference": "Organization/VSDMPayorOrganization-108213958"
+    },
+    {
+      "extension": [
+        {
+          "valueCoding": {
+            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
+            "code": "A",
+            "display": "abrechnender Kostenträger"
+          },
+          "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+        }
+      ],
+      "reference": "Organization/VSDMPayorOrganization-100293710"
+    }
+  ],
+  "status": "active",
+  "type": {
+    "coding": [
+      {
+        "code": "GKV"
+      }
+    ]
+  },
+  "beneficiary": {
+    "reference": "Patient/VSDMPatient-Z987654321"
+  },
+  "period": {
+    "start": "2000-01-01",
+    "end": "2029-12-31"
+  }
+}

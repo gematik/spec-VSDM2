@@ -1,0 +1,92 @@
+{
+  "resourceType": "Patient",
+  "id": "VSDMPatient-C345678908",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
+    ]
+  },
+  "name": [
+    {
+      "use": "official",
+      "text": "Charlie Carolinataube",
+      "family": "Carolinataube",
+      "_family": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+            "valueString": "Carolinataube"
+          }
+        ]
+      },
+      "given": [
+        "Charlie"
+      ]
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://fhir.de/sid/gkv/kvid-10",
+      "value": "C345678908"
+    }
+  ],
+  "address": [
+    {
+      "type": "physical",
+      "line": [
+        "Taubenweg 3c",
+        "zweites Hinterhaus links"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString": "3c"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString": "Taubenweg"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
+              "valueString": "Hinterhaus links"
+            }
+          ]
+        }
+      ],
+      "city": "Chemnitz",
+      "postalCode": "09128",
+      "country": "DE",
+      "_country": {
+        "extension": [
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen",
+            "valueCoding": {
+              "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+              "code": "D",
+              "display": "Deutschland"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "birthDate": "1979-06-11",
+  "gender": "other",
+  "_gender": {
+    "extension": [
+      {
+        "url": "http://fhir.de/StructureDefinition/gender-amtlich-de",
+        "valueCoding": {
+          "code": "D",
+          "display": "divers"
+        }
+      }
+    ]
+  }
+}
