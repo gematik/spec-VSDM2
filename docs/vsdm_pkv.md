@@ -9,6 +9,10 @@ Die VSD, die ein Leistungserbringer für einen privat versicherten Patienten erh
 
 Die nachfolgenden Logical Models "Versichertendaten" und "Versicherungsdaten" dienen zur Beschreibung der VSD für die PKV und als Grundlage zur Definition der FHIR-Profile für VSDM 2.0.
 
+
+
 [Bild Logical Model PKV]
 
-[Link simplifier zu FHIR Profilen]
+
+Link Simplifier
+[LogicalModelVSDM2.0](https://simplifier.net/vsdm2/gem_vsdm2_log_vsd_confirmation)
