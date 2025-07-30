@@ -1,0 +1,202 @@
+[
+  {
+    "outputFile": "Bundle-9b6ac30d-246d-4eab-af83-544564792089.json",
+    "fshName": "Vsdm2BundleSample",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleVSDMBundle.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "CodeSystem-vsdm-errorcode-cs.json",
+    "fshName": "VSDMErrorcodeCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMErrorcodeCS.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "CodeSystem-vsdm-versicherungsart-cs.json",
+    "fshName": "VSDMVersicherungsartCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMVersicherungsartCS.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "CodeSystem-vsdm-wahltarife-cs.json",
+    "fshName": "VSDMWahltarifeCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMWahltarifeCS.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "CodeSystem-vsdmkostentraeger-angabestatus-cs.json",
+    "fshName": "VSDMKostentraegerAngabestatusCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMKostentraegerAngabestatusCS.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "Coverage-2d4da53a-413a-48fe-b908-2e67b5761523.json",
+    "fshName": "VSDMCoverageSample",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleVSDMCoverage.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "Coverage-VALID-413a-48fe-b908-2e67b5761523.json",
+    "fshName": "VALID-VSDMCoverageSample",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleVSDMCoverage.fsh",
+    "startLine": 13,
+    "endLine": 19
+  },
+  {
+    "outputFile": "OperationOutcome-example-vsdm-operationoutcome.json",
+    "fshName": "ExampleOperationOutcome",
+    "fshType": "Instance",
+    "fshFile": "examples/ExampleOperationOutcome.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "Patient-437f2555-2396-4c64-a656-e9553161ca3c.json",
+    "fshName": "VSDMPatientSample",
+    "fshType": "Instance",
+    "fshFile": "profiles/VSDMPatient.fsh",
+    "startLine": 37,
+    "endLine": 60
+  },
+  {
+    "outputFile": "StructureDefinition-VSDDatensatz.json",
+    "fshName": "VSDDatensatz",
+    "fshType": "Logical",
+    "fshFile": "logicalmodel/logical_VSD_Datensatz.fsh",
+    "startLine": 1,
+    "endLine": 303
+  },
+  {
+    "outputFile": "StructureDefinition-vsdm-bundle.json",
+    "fshName": "VSDMBundle",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMBundle.fsh",
+    "startLine": 1,
+    "endLine": 31
+  },
+  {
+    "outputFile": "StructureDefinition-vsdm-composition.json",
+    "fshName": "VSDMComposition",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMComposition.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "StructureDefinition-vsdm-contactpoint-timessenger.json",
+    "fshName": "VSDMContactPointTIMessenger",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMContactPointTIMessenger.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "StructureDefinition-vsdm-coverage.json",
+    "fshName": "VSDMCoverage",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMCoverage.fsh",
+    "startLine": 1,
+    "endLine": 50
+  },
+  {
+    "outputFile": "StructureDefinition-vsdm-dmp-kennzeichen-basis-ex.json",
+    "fshName": "VSDMDMPKennzeichenBasisEX",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMDMPKennzeichenBasis.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-vsdm-dmpKennzeichen-ex.json",
+    "fshName": "VSDMDMPKennzeichenEX",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMDMPKennzeichen.fsh",
+    "startLine": 1,
+    "endLine": 25
+  },
+  {
+    "outputFile": "StructureDefinition-vsdm-kostentraeger-laendercode-ex.json",
+    "fshName": "VSDMKostentraegerLaendercodeEX",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMKostentraegerLaendercodeEX.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "StructureDefinition-vsdm-operationoutcome.json",
+    "fshName": "VSDMOperationOutcome",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMOperationOutcome.fsh",
+    "startLine": 1,
+    "endLine": 34
+  },
+  {
+    "outputFile": "StructureDefinition-vsdm-patient.json",
+    "fshName": "VSDMPatient",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMPatient.fsh",
+    "startLine": 1,
+    "endLine": 27
+  },
+  {
+    "outputFile": "StructureDefinition-vsdm-wahltarife-ex.json",
+    "fshName": "VSDMWahltarifeEX",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMWahltarifeEX.fsh",
+    "startLine": 1,
+    "endLine": 36
+  },
+  {
+    "outputFile": "StructureDefinition-vsdmkostentraeger-angabestatus-ex.json",
+    "fshName": "VSDMKostentraegerAngabestatusEX",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMKostentraegerAngabestatusEX.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
+    "outputFile": "ValueSet-vsdm-errorcode-vs.json",
+    "fshName": "VSDMErrorcodeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMErrorcodeVS.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "ValueSet-vsdm-versicherungsart-vs.json",
+    "fshName": "VSDMVersicherungsartVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMVersicherungsartVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-vsdm-wahltarife-vs.json",
+    "fshName": "VSDMWahltarifeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMWahltarifeVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-vsdmkostentraeger-angabestatus-vs.json",
+    "fshName": "VSDMKostentraegerAngabestatusVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMKostentraegerAngabestatusVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  }
+]

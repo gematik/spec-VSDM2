@@ -1,0 +1,29 @@
+# user-info-vsdm2.yaml
+# Schema for the extended user-info json object (VSDM2).
+# This schema inherits from user-info.yaml and adds new attributes.
+# The VSDM2 Resource Server uses the schema to validate the ZETA-user-info HTTP header.
+#
+$schema: "http://json-schema.org/draft-07/schema#"
+
+type: object
+allOf:
+  # 1. Referenz auf das Basis-Schema
+  #    Stellt sicher, dass alle Eigenschaften und Anforderungen von user-info.yaml erfüllt sind.
+  #    Der Pfad "#/user_info" zeigt auf den "user_info" Schlüssel in der user-info.yaml Datei.
+  #    Stellen Sie sicher, dass der Pfad zur user-info.yaml korrekt ist (hier angenommen im selben Verzeichnis).
+  - $ref: "https://raw.githubusercontent.com/gematik/spec-t20r/refs/heads/main/src/schemas/user-info.yaml#/user_info"
+
+  # 2. Zusätzliche Eigenschaften und Anforderungen für user-info-vsdm2
+  - type: object
+    properties:
+      organizationName:
+        type: string
+        description: "Name of the organization"
+      commonName:
+        type: string
+        description: "Common name of the organization"
+    required:
+      # Nur die *zusätzlich* erforderlichen Felder werden hier aufgelistet.
+      # Die 'required' Felder aus dem Basis-Schema (subject, identifier, professionOID)
+      # werden durch die $ref-Referenz oben bereits implizit gefordert.
+      - commonName

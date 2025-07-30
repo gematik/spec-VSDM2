@@ -1,0 +1,475 @@
+name: Generate Images from PlantUML and drawio (Debug Edition)
+
+on:
+  push:
+    paths:
+      - 'src/plantuml/**'
+      - 'src/drawio/**'
+    branches: 
+      - main
+      - github_action_test
+  workflow_dispatch:
+    inputs:
+      regenerate_all:
+        description: 'Regenerate all images (not just changed ones)'
+        required: false
+        default: false
+        type: boolean
+
+env:
+  REL_PLANTUML_INPUT_DIR: src/plantuml
+  REL_DRAWIO_INPUT_DIR: src/drawio
+  OUTPUT_DIR: $(pwd)/images
+  PLANTUML_PREFIX: uml_
+  DRAWIO_PREFIX: diagram_
+
+jobs:
+  generate_images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+        
+      - name: 📋 Debug - Repository Info
+        run: |
+          echo "📁 Repository: ${{ github.repository }}"
+          echo "🌿 Branch: ${{ github.ref_name }}"
+          echo "📝 Commit: ${{ github.sha }}"
+          echo "🎯 Event: ${{ github.event_name }}"
+          echo "🔄 Regenerate all: '${{ github.event.inputs.regenerate_all }}'"
+          echo "📂 Working directory: $(pwd)"
+
+      - name: 📁 Create output directory
+        run: |
+          mkdir -p ${{ env.OUTPUT_DIR }}
+          echo "📁 Output directory: ${{ env.OUTPUT_DIR }}"
+          echo "📊 Prefixes: PlantUML='${{ env.PLANTUML_PREFIX }}' | Draw.io='${{ env.DRAWIO_PREFIX }}'"
+
+      - name: 📋 Debug - Repository Structure
+        run: |
+          echo "=== Repository structure ==="
+          find . -name "*.puml" -o -name "*.plantuml" -o -name "*.drawio" -o -name "*.dio" | head -20 || echo "No diagram files found"
+          echo ""
+          echo "=== src/plantuml contents ==="
+          if [ -d "${{ env.REL_PLANTUML_INPUT_DIR }}" ]; then
+            ls -la ${{ env.REL_PLANTUML_INPUT_DIR }}/
+            echo "PlantUML file count: $(find ${{ env.REL_PLANTUML_INPUT_DIR }} -name "*.puml" -o -name "*.plantuml" | wc -l)"
+          else
+            echo "❌ ${{ env.REL_PLANTUML_INPUT_DIR }} directory not found"
+            exit 1
+          fi
+          echo ""
+          echo "=== src/drawio contents ==="
+          if [ -d "${{ env.REL_DRAWIO_INPUT_DIR }}" ]; then
+            ls -la ${{ env.REL_DRAWIO_INPUT_DIR }}/
+            echo "Draw.io file count: $(find ${{ env.REL_DRAWIO_INPUT_DIR }} -name "*.drawio" -o -name "*.dio" | wc -l)"
+          else
+            echo "❌ ${{ env.REL_DRAWIO_INPUT_DIR }} directory not found"
+            exit 1
+          fi
+
+      - name: ☕ Set up JDK 11
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+
+      - name: 📋 Debug - Java Info
+        run: |
+          echo "☕ Java version: $(java -version 2>&1 | head -1)"
+          echo "🏠 JAVA_HOME: $JAVA_HOME"
+          echo "📁 Java location: $(which java)"
+
+      - name: ⚡ Install dependencies (optimized)
+        run: |
+          echo "🔄 Starting optimized package installation..."
+          
+          # Disable man-db auto-update to save 3-5 minutes!
+          sudo rm /var/lib/man-db/auto-update
+          echo "🚫 Disabled man-db auto-update"
+          
+          # Update package list
+          sudo apt-get update
+          echo "📦 Package list updated"
+          
+          # Install Graphviz without recommendations (faster)
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
+            --no-install-recommends \
+            --no-install-suggests \
+            graphviz
+          echo "🎨 Graphviz installed successfully"
+          
+          # Verify installation
+          dot -V 2>&1 || echo "❌ Graphviz verification failed"
+
+      - name: 📥 Download and setup PlantUML
+        run: |
+          echo "📥 Downloading PlantUML..."
+          wget --progress=dot:giga \
+            https://github.com/plantuml/plantuml/releases/latest/download/plantuml.jar \
+            -O /tmp/plantuml.jar
+          
+          echo "📊 PlantUML file size: $(ls -lh /tmp/plantuml.jar | awk '{print $5}')"
+          echo "✅ PlantUML downloaded successfully"
+          
+          echo "🧪 Testing PlantUML installation..."
+          echo "PlantUML Version: $(java -jar /tmp/plantuml.jar -version)"
+
+      - name: 🎨 Generate PlantUML images (debug mode)
+        run: |
+          echo "=== 🎨 Generating PlantUML images ==="
+          
+          # Definitions
+          rel_plantuml_input_dir="src/plantuml"
+          output_dir="$(pwd)/images"
+          plantuml_prefix="uml_"
+
+          echo "📁 Input directory: $rel_plantuml_input_dir"
+          echo "📁 Output directory: $output_dir"
+          
+          # Determine processing mode
+          if [ "${{ github.event.inputs.regenerate_all }}" = "true" ]; then
+            echo "🔄 FULL REGENERATION MODE - Processing all files"
+            puml_files=$(find $rel_plantuml_input_dir -name "*.puml" -o -name "*.plantuml" 2>/dev/null)
+            
+            if [ -z "$puml_files" ]; then
+              echo "❌ No PlantUML files found in ${rel_plantuml_input_dir}/"
+              exit 0
+            fi
+            
+            echo "📋 Found PlantUML files:"
+            echo "$puml_files"
+          else
+            echo "⚡ INCREMENTAL MODE - Processing only changed files"
+            changed_puml_files=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(puml|plantuml)$' | grep "^${rel_plantuml_input_dir}/" || true)
+            
+            if [ -z "$changed_puml_files" ]; then
+              echo "ℹ️ No PlantUML files changed in this commit"
+              exit 0
+            fi
+            
+            echo "📋 Changed PlantUML files:"
+            echo "$changed_puml_files"
+            puml_files="$changed_puml_files"
+          fi
+          
+          echo "📊 Processing $(echo "$puml_files" | wc -l) PlantUML file(s)..."
+          
+          for file in $puml_files; do
+            echo "===================="
+            echo "🔄 Processing: $file"
+            
+            # Convert relative path to absolute if needed
+            if [[ "$file" != /* ]]; then
+              file="$(pwd)/$file"
+            fi
+            
+            # process file
+            base=$(basename "$file" | sed 's/\.[^.]*$//')
+            prefix_base="${plantuml_prefix}${base}"
+            echo "📝 Prefix Base name: $prefix_base"
+            echo "📊 File size: $(ls -lh "$file" | awk '{print $5}')"
+            
+            # Show file content preview
+            echo "👀 File content preview (first 5 lines):"
+            head -5 "$file" | sed 's/^/  | /'
+            echo "  | ..."
+            
+            # Generate PNG
+            echo ""
+            echo "🖼️ Generating PNG for: $file"
+            
+            # using "cat" because standard output name of PlantUML ist the uml diagram name (with potential problematic characters for file names) and not the name of the input file
+            cat "$file" | java -jar /tmp/plantuml.jar -tpng -nometadata -scale 4 -pipe "$file" > "${output_dir}/${prefix_base}.png"
+            
+            png_exit_code=$?
+            echo "📊 PlantUML PNG exit code: $png_exit_code"
+            if [ -n "$png_exit_code" ] && [ "$png_exit_code" -ne 0 ]; then
+              echo "❌ PNG generation failed!"
+              exit 1
+            else
+              echo "✅ PNG generation command completed"
+            fi
+            
+            # Check for PNG file in output directory
+            if [ -f "${output_dir}/${prefix_base}.png" ]; then
+              echo "✅ Final PNG: ${output_dir}/${prefix_base}.png"
+            else
+              echo "❌ Expected PNG not found: ${output_dir}/${prefix_base}.png"
+              exit 1
+            fi
+            
+            # Generate SVG with full debugging
+            echo ""
+            echo "🎭 Generating SVG for: $file"
+            
+            # using "cat" because standard output name of PlantUML ist the uml diagram name (with potential problematic characters for file names) and not the name of the input file
+            cat "$file" | java -jar /tmp/plantuml.jar -tsvg -nometadata -scale 4 -pipe "$file" > "${output_dir}/${prefix_base}.svg"
+            
+            svg_exit_code=$?            
+            echo "📊 PlantUML SVG exit code: $svg_exit_code"
+            if [ -n "$svg_exit_code" ] && [ "$svg_exit_code" -ne 0 ]; then
+              echo "❌ SVG generation failed!"
+              exit 1
+            else
+              echo "✅ SVG generation command completed"
+            fi
+
+            # Check for SVG files
+            if [ -f "${output_dir}/${prefix_base}.svg" ]; then
+              echo "✅ Final SVG: ${output_dir}/${prefix_base}.svg"
+            else
+              echo "❌ Expected SVG not found: ${output_dir}/${prefix_base}.svg"
+              exit 1
+            fi
+            
+            echo "📁 Final output directory state:"
+            ls -la "$output_dir"/ 2>/dev/null | sed 's/^/  | /' || echo "  | No output directory"
+            echo "===================="
+          done
+
+      - name: 🎯 Generate Draw.io images (debug mode)
+        run: |
+          echo "=== 🎯 Generating Draw.io images ==="
+          
+          # Definitions
+          rel_drawio_input_dir="src/drawio"
+          output_dir="$(pwd)/images"
+          drawio_prefix="diagram_"
+
+          echo "📁 Input directory: $rel_drawio_input_dir"
+          echo "📁 Output directory: $output_dir"
+
+          # Determine processing mode
+          if [ "${{ github.event.inputs.regenerate_all }}" = "true" ]; then
+            echo "🔄 FULL REGENERATION MODE - Processing all files"
+            drawio_files=$(find $rel_drawio_input_dir -name "*.drawio" -o -name "*.dio" 2>/dev/null)
+            
+            if [ -z "$drawio_files" ]; then
+              echo "❌ No drawio files found in ${rel_drawio_input_dir}/"
+              exit 0
+            fi
+            
+            echo "📋 Found drawio files:"
+            echo "$drawio_files"
+          else
+            echo "⚡ INCREMENTAL MODE - Processing only changed files"
+            changed_drawio_files=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(drawio|dio)$' | grep "^${rel_drawio_input_dir}/" || true)
+            
+            if [ -z "$changed_drawio_files" ]; then
+              echo "ℹ️ No drawio files changed in this commit"
+              exit 0
+            fi
+            
+            echo "📋 Changed drawio files:"
+            echo "$changed_drawio_files"
+            drawio_files="$changed_drawio_files"
+          fi
+          
+          echo "📊 Processing $(echo "$drawio_files" | wc -l) Draw.io file(s)..."
+          
+          for file in $drawio_files; do
+            echo "===================="
+            echo "🔄 Processing: $file"
+            
+            # Convert relative path to absolute if needed
+            if [[ "$file" != /* ]]; then
+              file="$(pwd)/$file"
+            fi
+
+            # process file
+            base=$(basename "$file" | sed 's/\.[^.]*$//')
+            prefix_base="${drawio_prefix}${base}"
+            rel_input_file_path="${rel_drawio_input_dir}/$(basename "$file")"
+            echo "📝 Prefix Base name: $prefix_base"
+            echo "📝 Relative file path: $rel_input_file_path"
+            echo "📊 File size: $(ls -lh "$file" | awk '{print $5}')"
+            
+            # Show file content preview
+            echo "👀 File content preview (first 5 lines):"
+            head -5 "$file" | sed 's/^/  | /'
+            echo "  | ..."
+
+            # Generate PNG
+            echo ""
+            echo "🖼️ Generating PNG for: $file"
+
+            # docker output directory: src/drawio
+            docker run --rm \
+              -v "$(pwd):/data" \
+              rlespinasse/drawio-export:latest \
+              --format png \
+              --output "." \
+              "$rel_input_file_path"
+            
+            png_exit_code=$?
+            echo "📊 Docker PNG exit code: $png_exit_code"
+            if [ -n "$png_exit_code" ] && [ "$png_exit_code" -ne 0 ]; then
+              echo "❌ PNG generation failed!"
+              exit 1
+            else
+              echo "✅ PNG generation command completed"
+            fi
+
+            # find all docker drawio generated *.png images, rename and move them to the /image folder
+            png_files=($(find "$(pwd)/$rel_drawio_input_dir" -name "*.png" -type f | sort))
+    
+            # Prüfung auf leeres Array
+            if [ ${#png_files[@]} -eq 0 ]; then
+              echo "❌ Keine PNG-Dateien gefunden in '$(pwd)/$rel_drawio_input_dir'"
+              exit 1
+            else
+              echo "📁 Gefunden: ${#png_files[@]} PNG-Datei(en)"
+            fi
+
+            for i in "${!png_files[@]}"; do
+                source_file="${png_files[$i]}"
+                
+                if [ ${#png_files[@]} -eq 1 ]; then
+                    target_file="${output_dir}/${prefix_base}.png"
+                else
+                    target_file="${output_dir}/${prefix_base}_$((i + 1)).png"
+                fi
+                
+                if mv "$source_file" "$target_file"; then
+                    echo "✅ Moved: $(basename "$source_file") → $(basename "$target_file")"
+                else
+                    echo "❌ Failed to move: $source_file"
+                    exit 1
+                fi
+
+            done
+            
+            # Generate SVG
+            echo ""
+            echo "🎭 Generating SVG for: $file"
+
+            docker run --rm \
+              -v "$(pwd):/data" \
+              rlespinasse/drawio-export:latest \
+              --format svg \
+              --output "." \
+              "$rel_input_file_path"
+            
+            svg_exit_code=$?
+            echo "📊 Docker SVG exit code: $svg_exit_code"
+            if [ -n "$svg_exit_code" ] && [ "$svg_exit_code" -ne 0 ]; then
+              echo "❌ SVG generation failed!"
+              exit 1
+            else
+              echo "✅ SVG generation command completed"
+            fi
+            
+            # find all docker drawio generated *.svg images, rename and move them to the /image folder
+            svg_files=($(find "$(pwd)/$rel_drawio_input_dir" -name "*.svg" -type f | sort))
+    
+            # Prüfung auf leeres Array
+            if [ ${#svg_files[@]} -eq 0 ]; then
+              echo "❌ Keine SVG-Dateien gefunden in '$(pwd)/$rel_drawio_input_dir'"
+              exit 1  # oder return 1 in Funktion
+            else
+              echo "📁 Gefunden: ${#svg_files[@]} SVG-Datei(en)"
+            fi
+
+            for i in "${!svg_files[@]}"; do
+                source_file="${svg_files[$i]}"
+                
+                if [ ${#svg_files[@]} -eq 1 ]; then
+                    target_file="${output_dir}/${prefix_base}.svg"
+                else
+                    target_file="${output_dir}/${prefix_base}_$((i + 1)).svg"
+                fi
+                
+                if mv "$source_file" "$target_file"; then
+                    echo "✅ SVG File Moved: $(basename "$source_file") → $(basename "$target_file")"
+                else
+                    echo "❌ Failed to move SVG File: $source_file"
+                    exit 1
+                fi
+
+            done
+            
+            echo "📁 Final output directory state:"
+            ls -la "${output_dir}/" | sed 's/^/  | /'
+            echo "===================="
+          done
+
+      - name: 📊 Show results (debug)
+        run: |
+          echo "=== 📊 Final Results ==="
+
+          # Definitions
+          plantuml_prefix="uml_"
+          drawio_prefix="diagram_"
+          output_dir="$(pwd)/images"
+
+          echo "📁 Output directory: $output_dir"
+
+          echo "📁 Generated files in $output_dir:"
+          if [ -d "$output_dir" ]; then
+            ls -la "${output_dir}/" | sed 's/^/  | /'
+            echo ""
+            echo "📈 Statistics:"
+            echo "  📄 Total files: $(ls "${output_dir}/" 2>/dev/null | wc -l)"
+            echo "  🖼️ PNG files: $(ls "${output_dir}"/*.png 2>/dev/null | wc -l)"
+            echo "  🎭 SVG files: $(ls "${output_dir}"/*.svg 2>/dev/null | wc -l)"
+            echo "  🎨 PlantUML files: $(ls "${output_dir}/${plantuml_prefix}"* 2>/dev/null | wc -l)"
+            echo "  🎯 Draw.io files: $(ls "${output_dir}/${drawio_prefix}"* 2>/dev/null | wc -l)"
+          else
+            echo "  ❌ No images directory found"
+          fi
+          
+          echo ""
+          echo "=== 📋 Git Status ==="
+          git status | sed 's/^/  | /'
+
+      - name: 📤 Commit generated images (debug)
+        run: |
+          echo "=== 📤 Committing generated images ==="
+          
+          output_dir="$(pwd)/images"
+          echo "📁 Output directory: $output_dir"
+
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          echo "✅ Git config set"
+          
+          if [ -d "$output_dir" ] && [ "$(ls -A $output_dir)" ]; then
+            echo "📁 Images directory exists and has content"
+            
+            git add $output_dir/
+            echo "✅ Added images to git staging"
+            
+            # Count changes
+            changed_count=$(git diff --staged --name-only | wc -l)
+            echo "📊 Files staged for commit: $changed_count"
+            
+            if [ "$changed_count" -gt 0 ]; then
+              echo "📋 Files to be committed:"
+              git diff --staged --name-only | sed 's/^/  | /'
+              
+              if [ "${{ github.event.inputs.regenerate_all }}" = "true" ]; then
+                commit_msg="🔄 Regenerate all images from PlantUML and drawio files"
+              else
+                commit_msg="⚡ Auto-update images for changed PlantUML/drawio files ($changed_count files)"
+              fi
+              
+              echo "📝 Commit message: $commit_msg"
+              git commit -m "$commit_msg"
+              echo "✅ Committed successfully"
+              
+              echo "📤 Pushing to remote..."
+              git push
+              echo "✅ $changed_count image files committed and pushed to ${{ github.ref_name }}"
+            else
+              echo "ℹ️ No changes to commit"
+            fi
+          else
+            echo "❌ No images to commit (directory empty or doesn't exist)"
+          fi
+          
+          echo "=== 🏁 Workflow completed ==="

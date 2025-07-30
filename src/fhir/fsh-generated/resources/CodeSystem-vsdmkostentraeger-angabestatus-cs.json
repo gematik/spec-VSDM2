@@ -1,0 +1,37 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "VSDMKostentraegerAngabestatusCS",
+  "id": "vsdmkostentraeger-angabestatus-cs",
+  "title": "VSDM Kostentraeger Angabestatus CS",
+  "description": "Codes zur Angabe, ob der Kostenträger die Information zum Versicherten angibt.",
+  "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerAngabestatusCS",
+  "concept": [
+    {
+      "code": "zuzahlungsstatus",
+      "display": "Zuzahlungsstatus"
+    },
+    {
+      "code": "wahltarife",
+      "display": "Wahltarife"
+    },
+    {
+      "code": "dmp",
+      "display": "DMP"
+    },
+    {
+      "code": "ruhenderLeistungsanspruch",
+      "display": "Ruhender Leistungsanspruch"
+    },
+    {
+      "code": "kostenerstattung",
+      "display": "Kostenerstattung"
+    }
+  ],
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "date": "2023-12-31",
+  "caseSensitive": true,
+  "count": 5
+}

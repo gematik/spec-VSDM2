@@ -1,120 +1,452 @@
 openapi: 3.1.0
 info:
   title: VSDM2
-  description: RESTful Kostentraeger interface to request Versichertenstammdaten
-              Via this interface practitioners software clients (primary systems) can request data about patients to support a current treatment.
-  version: 0.0.1
+  description: HTTP-based "Versichertenstammdatendienst" (VSDD) interface to request "Versichertenstammdaten" (vsd). 
+    This API document specifies the contract between a vsdm-client ("Primaersystem") and the resource server of the "Versichertenstammdatendienst". 
+    The ressource server ist protected by a proxy component. Details about the interface description of the proxy component can be found (soon) at a separate GitHub project https://github.com/gematik/spec-t20r/tree/develop/src/openapi.
+    Practitioners software clients "Primaersysteme" can request data about patients by using this interface to support a current treatment.
+  contact:
+    name: gematik GmbH
+    url: 'https://www.gematik.de'
+  license:
+    name: Apache 2.0
+    url: "https://www.apache.org/licenses/LICENSE-2.0"
 
-    # Changes in 0.0.1
-    #  - initial version
+  version: 1.0.0
+
+  # Changes in 0.0.1
+  #  - initial version
 
 externalDocs:
   description: FHIR Specification VSDM 2
   url: https://simplifier.net/vsdm2
 servers:
-- url: https://101575519.vsdm2.ti-dienste.de
-  description: TK Production server (PU)
-- url: https://109723913.vsdm2.ti-dienste.de
-  description: BKK VBU Production server (PU)
-- url: https://<iknummer>.vsdm2.ti-dienste.de
-  description: address schema vsdm backends
-
+  - url: https://101575519.prod.vsdm2.ti-dienste.de
+    description: TK Production server (PU)
+  - url: https://109723913.prod.vsdm2.ti-dienste.de
+    description: BKK VBU Production server (PU)
+  - url: https://{iknummer}.prod.vsdm2.ti-dienste.de
+    description: address schema vsdm backends - productive environment
+    variables:
+      iknummer:
+        default: "111111111"
+        description: Institutional identifier for a specific health insurer.
+  - url: https://{iknummer}.ref.vsdm2.ti-dienste.de
+    description: address schema vsdm backends - reference environment
+    variables:
+      iknummer:
+        default: "111111111"
+        description: Institutional identifier for a specific health insurer.
+  - url: https://{iknummer}.test.vsdm2.ti-dienste.de
+    description: address schema vsdm backends - test environment
+    variables:
+      iknummer:
+        default: "111111111"
+        description: Institutional identifier for a specific health insurer.
+  - url: https://{iknummer}.dev.vsdm2.ti-dienste.de
+    description: address schema vsdm backends - development environment
+    variables:
+      iknummer:
+        default: "111111111"
+        description: Institutional identifier for a specific health insurer.
+tags:
+  - name: Vsdm
+    description: Endpoint of the application "Versichertenstammdatenmanagement" (VSDM) to retrieve a VSDMBundle FHIR-Resource (Versichertenstammdaten; VSD) of a specific patient.
+      VSDMBundle contains the VSDMPatient and VSDMCoverage FHIR-Resources.
 paths:
-  /v1/metadata:
+  /vsdservice/v1/vsdmbundle:
     get:
-      summary: This path returns the servers FHIR capability statement
-      description: This path returns the servers FHIR capability statement
-      operationId: getMetadata
-      responses:
-        200:
-          description: OK
-          content:
-            application/json:
-              schema:
-                  $ref: '#/components/schemas/CapabilityStatement'
-        401:
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-        403:
-          description: Forbidden
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-
-  /v1/:
-    get:
-      summary:  the root path returns a Vsdm2Bundle
-      description: the root path returns a Vsdm2Bundle with VSD about a specific patient that is addressed within a PoP-X-Token in the request header
-      operationId: getVsdm2Bundle
+      tags:
+        - Vsdm
+      summary: Returns a VSDMBundle for the specified patient.
+      description: Returns a VSDMBundle with VSD about a specific patient that is addressed within the PoPP-Token in the request header.
+      operationId: getVSDMBundle
+      security:
+        - oAuthVsdm: [ vsdservice ]
       parameters:
-      - name: Authorization
-        in: header
-        description: the PoP-X-Token is used as AccessToken
-      - name: DPoP
-        in: header
-        description: the DPoP-Header holds the DPoP-JWT to demonstrate possesssion of local client key
+        - name: Authorization
+          in: header
+          description: OAuth2 Bearer AccessToken granting access to the VSDService-API. 
+            The Access-Token is verified by the HTTP-Proxy component of the "Versichertenstammdatendienst".
+            The Access-Token is bound via "demonstrating proof of possession" (DPoP) to the requesting client, according to RFC 9449 6.1. JWK Thumbprint Confirmation Method.
+          schema:
+            type: string
+        - name: PoPP
+          in: header
+          description: Bearer Token containing proof of patient presence (Versorgungskontextnachweis). 
+            This token represents the proof of an actual encounter between patient and practitioner as a resource access condition.
+            The HTTP-Proxy verifies the Token and sends the Token-Payload within the custom header "ZETA-PoPP-Token-Content" to the resource server.
+            The Header contains the "Krankenversichertennummer" (KVNR) as the identifier for the corresponding VSDMBundle instance.
+          schema:
+            type: string
+        - name: DPoP
+          in: header
+          description: The DPoP-Header holds the DPoP-JWT to demonstrate possession of a local client key and to bind a local client to his oauth2 AccessToken according to RFC 9449. 
+            The DPoP is verified by the HTTP-Proxy component of the "Versichertenstammdatendienst".
+          schema:
+            type: string
+        - name: If-None-Match
+          description: Header for conditional resource response
+          in: header
+          schema:
+            type: string
+        - name: Accept
+          in: header
+          description: Specifies the format of the FHIR response requested by a client which could be application/fhir+json or application/fhir+xml.
+          schema:
+            type: string
       responses:
-        200:
+        '200':
           description: OK
           content:
             application/json:
               schema:
-                  $ref: '#/components/schemas/Vsdm2Bundle'
-        303:
-          description: see other
-          content:
-            header: Location
-        401:
-          description: Unauthorized
+                $ref: '#/components/schemas/GetVSDMBundleResponse'
+          headers:
+            ETag:
+              $ref: '#/components/parameters/ETag'
+            VSDM-Pz:
+              $ref: '#/components/parameters/VSDM-Pz'
+        '304':
+          description: Bundle was found but not modified
+          headers:
+            ETag:
+              $ref: '#/components/parameters/ETag'
+            VSDM-Pz:
+              $ref: '#/components/parameters/VSDM-Pz'
+        '400':
+          description: Bad Request
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
-        403:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
+        '403':
           description: Forbidden
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                $ref: '#/components/schemas/VSDMOperationOutcome'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
+        '405':
+          description: Method Not Allowed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
+        '428':
+          description: Precondition Required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
+        '502':
+          description: Bad Gateway
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
+        '504':
+          description: Gateway Timeout
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
 
 components:
-
+  parameters:
+    ETag:
+      name: ETag
+      in: header
+      description: Value according rfc7232 to represent the version of the VSDMBundle.
+      schema:
+        type: string
+      example: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    VSDM-Pz:
+      name: VSDM-Pz
+      in: header
+      description: Base64URL encoded "Pruefziffer"
+      schema:
+        type: string
+      example: VDAyMzU5MDA1MDE3MjY3Mzc2MDFVVDLYyBOm-EDF0oe1aW_ndQe2p36MGAzvyBk
   schemas:
-
-    Error:
+    GetVSDMBundleResponse:
+      description: Response including the requested VSDMBundle
       type: object
       properties:
-        message:
-          type: string
-          description: error message (optional)
-        errors:
-          maxItems: 50
-          minItems: 0
-          type: array
-          items:
-            $ref: '#/components/schemas/InnerError'
-
-    InnerError:
+        VSDMBundle:
+          $ref: '#/components/schemas/VSDMBundle'
+    VSDMBundle:
+      type: object
+      description: 'https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle'
+      examples:
+        [
+          {
+            "resourceType": "Bundle",
+            "id": "9b6ac30d-246d-4eab-af83-544564792089",
+            "meta": {
+              "profile": [
+                "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle"
+              ]
+            },
+            "type": "document",
+            "identifier": {
+              "system": "urn:ietf:rfc:3986",
+              "value": "urn:uuid:9b6ac30d-246d-4eab-af83-544564792089"
+            },
+            "signature": {
+              "sigFormat": "application/pkcs7-mime",
+              "who": {
+                "identifier": {
+                  "system": "https://fhir.de/sid/arge-ik/iknr",
+                  "value": "12345678"
+                }
+              },
+              "type": [
+                {
+                  "system": "urn:iso-astm:E1762-95:2013",
+                  "code": "1.2.840.10065.1.12.1.7",
+                  "display": "Consent Signature"
+                }
+              ],
+              "when": "2023-11-03T12:02:23.157+01:00",
+              "data": "dGhpcyBibG9iIGlzIHNuaXBwZWQ="
+            },
+            "timestamp": "2023-11-03T12:02:23.157+01:00",
+            "entry": [
+              {
+                "fullUrl": "https://gematik.de/fhir/Composition/c624cf47-e235-4624-af71-0a09dc9254dc",
+                "resource": {
+                  "resourceType": "Composition",
+                  "id": "c624cf47-e235-4624-af71-0a09dc9254dc",
+                  "meta": {
+                    "profile": [
+                      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMComposition"
+                    ]
+                  },
+                  "status": "final",
+                  "author": [
+                    {
+                      "identifier": {
+                        "system": "https://fhir.de/sid/arge-ik/iknr",
+                        "value": "12345678"
+                      }
+                    }
+                  ],
+                  "type": {
+                    "coding": [
+                      {
+                        "code": "not-applicable",
+                        "system": "https://terminology.hl7.org/CodeSystem/data-absent-reason"
+                      }
+                    ]
+                  },
+                  "date": "2023-11-03T12:02:23.157+01:00",
+                  "title": "VSDM 2 data",
+                  "section": [
+                    {
+                      "entry": [
+                        {
+                          "reference": "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
+                        }
+                      ]
+                    },
+                    {
+                      "entry": [
+                        {
+                          "reference": "Coverage/2d4da53a-413a-48fe-b908-2e67b5761523"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "fullUrl": "https://gematik.de/fhir/Patient/437f2555-2396-4c64-a656-e9553161ca3c",
+                "resource": {
+                  "resourceType": "Patient",
+                  "id": "437f2555-2396-4c64-a656-e9553161ca3c",
+                  "meta": {
+                    "profile": [
+                      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
+                    ]
+                  },
+                  "name": [
+                    {
+                      "use": "official",
+                      "family": "Königstein",
+                      "_family": {
+                        "extension": [
+                          {
+                            "url": "https://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                            "valueString": "Königstein"
+                          }
+                        ]
+                      },
+                      "given": [
+                        "Ludger"
+                      ]
+                    }
+                  ],
+                  "identifier": [
+                    {
+                      "system": "https://fhir.de/sid/gkv/kvid-10",
+                      "value": "T024791905"
+                    }
+                  ],
+                  "address": [
+                    {
+                      "line": [
+                        "Blumenweg 14"
+                      ],
+                      "_line": [
+                        {
+                          "extension": [
+                            {
+                              "url": "https://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                              "valueString": "14"
+                            },
+                            {
+                              "url": "https://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                              "valueString": "Blumenweg"
+                            }
+                          ]
+                        }
+                      ],
+                      "type": "both",
+                      "city": "Esens",
+                      "postalCode": "26427",
+                      "country": "D"
+                    }
+                  ],
+                  "birthDate": "1935-06-22",
+                  "telecom": [
+                    {
+                      "system": "url",
+                      "value": "matrix:@T024791905:aok-nord.de"
+                    }
+                  ],
+                  "photo": [
+                    {
+                      "contentType": "image/gif",
+                      "data": "R0lGODlhEwARAPcAAAAAAAAA/+"
+                    }
+                  ]
+                }
+              },
+              {
+                "fullUrl": "https://gematik.de/fhir/Coverage/2d4da53a-413a-48fe-b908-2e67b5761523",
+                "resource": {
+                  "resourceType": "Coverage",
+                  "id": "2d4da53a-413a-48fe-b908-2e67b5761523",
+                  "meta": {
+                    "profile": [
+                      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+                    ]
+                  },
+                  "status": "active",
+                  "payor": [
+                    {
+                      "identifier": {
+                        "system": "https://fhir.de/sid/arge-ik/iknr",
+                        "value": "12345678"
+                      },
+                      "display": "Test GKV Krankenkasse"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMFestzuschusshoeheEX",
+                      "valueCoding": {
+                        "code": "1",
+                        "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMFestzuschusshoeheCS",
+                        "display": "70 % / fünf Jahre durchgehend"
+                      }
+                    }
+                  ],
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "https://fhir.de/CodeSystem/versicherungsart-de-basis",
+                        "code": "GKV",
+                        "display": "Gesetzliche Krankenversicherung"
+                      }
+                    ]
+                  },
+                  "period": {
+                    "start": "2022-04-01",
+                    "end": "2027-07-31"
+                  },
+                  "beneficiary": {
+                    "reference": "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+    VSDMOperationOutcome:
+      type: object
+      description: 'https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome'
+      examples:
+        [
+          {
+              "resourceType": "OperationOutcome",
+              "id": "example-vsdm-operationoutcome",
+              "meta": {
+                  "profile":  [
+                      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome"
+                  ]
+              },
+              "issue":  [
+                  {
+                      "severity": "fatal",
+                      "code": "invalid",
+                      "details": {
+                          "coding":  [
+                              {
+                                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
+                                  "code": "VSDSERVICE_INVALID_IK",
+                                  "display": "Ungültige oder nicht bekannte Institutionskennung <ik>."
+                              }
+                          ],
+                          "text": "Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service 1 x erneuern. Bei erneutem Fehler: Abbruch, da wahrscheinlich ein Implementierungsfehler vorliegt (Clientsystem oder PoPP-Service) oder die KTR gar nicht bei diesem FD-Anbieter ist (fehlerhafter DNS-Eintrag)."
+                      }
+                  }
+              ]
+          }
+        ]
+    ErrorType:
+      description: Error object with additional information about the occurred error
       type: object
       properties:
-        attributeName:
-          description: attribute name that caused an error
+        errorCode:
+          description: Error condition specifier
           type: string
-        attributeError:
-          description: error details
+          examples: [unauthorized, forbidden, internalError]
+        errorDetail:
+          description: Additional details regarding the error condition (if applicable)
           type: string
-
+          examples: [User is not authorized, Request is forbidden, Server cannot handle request for now]
+      required:
+        - errorCode
   securitySchemes:
     oAuthVsdm:
       type: oauth2
-      description: This API uses OAuth 2, to gain access clients need to proof Versorgungskontext with a PoP-X token
+      description: This API uses OAuth 2, to gain access clients need an Access-Token and to proof "Versorgungskontext" with a PoPP-Token in addition
       flows:
         authorizationCode:
-          authorizationUrl: https://popp-service.ti-dienste.de/oauth2/authorize
-          tokenUrl: https://popp-service.ti-dienste.de/token
+          authorizationUrl: https://101575519.prod.vsdm2.ti-dienste.de/auth
+          tokenUrl: https://101575519.prod.vsdm2.ti-dienste.de/token
           scopes:
-            read_vsd: allows practitioners to read VSD
+            vsdservice: allows practitioners to access the VSDService API of the "Versichertenstammdatendienst"

@@ -6,20 +6,6 @@
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
     ]
   },
-  "identifier": [
-    {
-      "type": {
-        "coding": [
-          {
-            "system": "http://fhir.de/CodeSystem/identifier-type-de-basis",
-            "code": "GKV"
-          }
-        ]
-      },
-      "system": "http://fhir.de/sid/gkv/kvid-10",
-      "value": "T024791905"
-    }
-  ],
   "name": [
     {
       "use": "official",
@@ -35,6 +21,12 @@
       "given": [
         "Ludger"
       ]
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://fhir.de/sid/gkv/kvid-10",
+      "value": "T024791905"
     }
   ],
   "address": [
@@ -59,7 +51,7 @@
       "type": "both",
       "city": "Esens",
       "postalCode": "26427",
-      "country": "D"
+      "country": "DE"
     }
   ],
   "birthDate": "1935-06-22",
@@ -67,12 +59,6 @@
     {
       "system": "url",
       "value": "matrix:@T024791905:aok-nord.de"
-    }
-  ],
-  "photo": [
-    {
-      "contentType": "image/gif",
-      "data": "R0lGODlhEwARAPcAAAAAAAAA/+9aAO+1AP/WAP/eAP/eCP/eEP/eGP/nAP/nCP/nEP/nIf/nKf/nUv/nWv/vAP/vCP/vEP/vGP/vIf/vKf/vMf/vOf/vWv/vY//va//vjP/3c//3lP/3nP//tf//vf///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEAAAEALAAAAAATABEAAAi+AAMIDDCgYMGBCBMSvMCQ4QCFCQcwDBGCA4cLDyEGECDxAoAQHjxwyKhQAMeGIUOSJJjRpIAGDS5wCDly4AALFlYOgHlBwwOSNydM0AmzwYGjBi8IHWoTgQYORg8QIGDAwAKhESI8HIDgwQaRDI1WXXAhK9MBBzZ8/XDxQoUFZC9IiCBh6wEHGz6IbNuwQoSpWxEgyLCXL8O/gAnylNlW6AUEBRIL7Og3KwQIiCXb9HsZQoIEUzUjNEiaNMKAAAA7"
     }
   ]
 }

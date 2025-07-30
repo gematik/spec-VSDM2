@@ -104,7 +104,7 @@ nichtvorhanden = Nachweis wird nicht genutzt</xs:documentation>
 																		</xs:sequence>
 																	</xs:complexType>
 																</xs:element>
-																<xs:element name="WOP" type="VSD:numberWithLeadingZero" minOccurs="0">
+																<xs:element name="WOP" type="VSD:numberWithLeadingZero">
 																	<xs:annotation>
 																		<xs:documentation>Das Kennzeichen WOP ist gemaess § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemaess Artikel 2 § 2 Abs. 2 des Gesetzes zur Einfuehrung des Wohnortprinzips bei Honorarvereinbarungen fuer Aerzte und Zahnaerzte und zur Krankenversichertenkarte gemaess § 291 Abs. 2 Fuenftes Sozialgesetzbuch (SGB V) erforderlich.
 01 = Schleswig-Holstein

@@ -7,6 +7,130 @@
     ]
   },
   "status": "active",
+  "extension": [
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
+      "valueCoding": {
+        "code": "1",
+        "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS"
+      }
+    },
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/wop",
+      "valueCoding": {
+        "code": "72",
+        "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP"
+      }
+    },
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch",
+      "extension": [
+        {
+          "url": "art",
+          "valueCoding": {
+            "code": "1"
+          }
+        },
+        {
+          "url": "dauer",
+          "valuePeriod": {
+            "start": "2022-05-05"
+          }
+        }
+      ]
+    },
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
+      "extension": [
+        {
+          "url": "status",
+          "valueBoolean": true
+        }
+      ]
+    },
+    {
+      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerAngabestatusEX",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "dmp",
+            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerAngabestatusCS"
+          },
+          {
+            "code": "wahltarife",
+            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerAngabestatusCS"
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerLaendercodeEX",
+      "valueCoding": {
+        "system": "http://hl7.org/fhir/CodeSystem/iso3166-1-2",
+        "code": "DE"
+      }
+    },
+    {
+      "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe",
+      "valueCoding": {
+        "code": "06",
+        "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE"
+      }
+    },
+    {
+      "extension": [
+        {
+          "url": "aerztlicheVersorgung",
+          "valueBoolean": true
+        }
+      ],
+      "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung"
+    },
+    {
+      "extension": [
+        {
+          "valueCoding": {
+            "system": "http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+            "code": "01"
+          },
+          "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenBasisEX"
+        },
+        {
+          "url": "dmp-zeitraum",
+          "valuePeriod": {
+            "start": "2022-05-05"
+          }
+        },
+        {
+          "url": "digitales-dmp",
+          "valueBoolean": true
+        }
+      ],
+      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPKennzeichenEX"
+    },
+    {
+      "extension": [
+        {
+          "url": "wahltarif-zeitraum",
+          "valuePeriod": {
+            "start": "2022-05-05"
+          }
+        },
+        {
+          "url": "wahltarif",
+          "valueCoding": {
+            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMWahltarifeCS",
+            "code": "1"
+          }
+        },
+        {
+          "url": "wahltarif-vertragskennzeichen",
+          "valueString": "Test Kommentar"
+        }
+      ],
+      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMWahltarifeEX"
+    }
+  ],
   "payor": [
     {
       "identifier": {
@@ -16,22 +140,11 @@
       "display": "Test GKV Krankenkasse"
     }
   ],
-  "extension": [
-    {
-      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMFestzuschusshoeheEX",
-      "valueCoding": {
-        "code": "1",
-        "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMFestzuschusshoeheCS",
-        "display": "70 % / fünf Jahre durchgehend"
-      }
-    }
-  ],
   "type": {
     "coding": [
       {
-        "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
         "code": "GKV",
-        "display": "gesetzliche Krankenversicherung"
+        "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis"
       }
     ]
   },
