@@ -21,6 +21,8 @@ Mit der Initiative TI 2.0 wird die gesamte Infrastruktur modernisiert und auf de
 
 In der TI 2.0 wird der Nachweis des Versorgungskontextes mittels PoPP („Proof-of-Patient-Presence“) von fachlichen Anwendungsfällen entkoppelt. Bei VSDM 2.0  ist dies die Bereitstellung demografischer Daten. Die Versicherer stellen also eine einfache FHIR-REST-API bereit, mit der die Client-Software der Arztpraxis „nur“ zusätzliche Daten anfordert, indem sie ein legitimes PoPP-Token bereitstellt.
 
+## Mit VSDM 2.0 werden auch die privaten Krankenversicherer (PKV) die Vorteile der Bereitstellung der Versichertenstammdaten für die Versicherten und die Leistungserbringer nutzen, z.B. Wegfall manueller Datenübernahmen in das Primärsystem und sofortige Übersicht aller vertraglichen Leistungen.
+
 Im nachfolgend verlinkten Kapitel finden Sie eine Übersicht, in welchem Kontext VSDM, PoPP und Zero Trust zueinander stehen:
 
 [Kontext VSDM/PoPP/ZeroTrust](docs/vsdm_kontext_popp_zt.md)
