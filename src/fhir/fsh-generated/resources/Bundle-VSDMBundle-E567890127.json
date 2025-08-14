@@ -382,7 +382,8 @@
             "purpose": {
               "coding": [
                 {
-                  "code": "BILL"
+                  "code": "BILL",
+                  "system": "http://terminology.hl7.org/CodeSystem/contactentity-type"
                 }
               ],
               "text": "Kontakt für Abrechnungsfragen"
@@ -440,7 +441,8 @@
             "purpose": {
               "coding": [
                 {
-                  "code": "BILL"
+                  "code": "BILL",
+                  "system": "http://terminology.hl7.org/CodeSystem/contactentity-type"
                 }
               ],
               "text": "Kontakt für Abrechnungsfragen"

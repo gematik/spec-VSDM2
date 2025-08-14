@@ -15,7 +15,7 @@ Usage: #example
 // Beispiel zur Übertragung weitergehender (nicht verpflichtender) Informationen zum Kostenträger
 * contact[+]
   * purpose
-    * coding = #BILL
+    * coding = $csContactEntityType#BILL
     * text = "Kontakt für Abrechnungsfragen"
   * telecom[+]
     * system = #phone
