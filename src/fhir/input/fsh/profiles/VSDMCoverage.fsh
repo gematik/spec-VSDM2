@@ -158,7 +158,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
   * ^short = "Kostenträger"
   * extension contains VSDMKostentraegerRolle named kostentraegerRolle 0..1 
   * ^slicing.discriminator.type = #pattern
-  * ^slicing.discriminator.path = "extension[kostentraegerRolle].valueCoding"
+  * ^slicing.discriminator.path = "extension[kostentraegerRolle].value.code"
   * ^slicing.rules = #open
   * extension[kostentraegerRolle]
     * ^short = "Rolle des Kostenträgers"

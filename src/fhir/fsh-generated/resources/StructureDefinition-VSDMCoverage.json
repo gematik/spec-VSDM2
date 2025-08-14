@@ -27,6 +27,16 @@
       {
         "id": "Coverage.extension",
         "path": "Coverage.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "min": 2
       },
       {
@@ -341,7 +351,7 @@
           "discriminator": [
             {
               "type": "pattern",
-              "path": "extension[kostentraegerRolle].valueCoding"
+              "path": "extension[kostentraegerRolle].value.code"
             }
           ],
           "rules": "open"
