@@ -50,7 +50,7 @@ jobs:
           #PATH_TO_QUALITY_CONTROL_RULES: qc/custom
           DOTNET_VALIDATION_ENABLED: true
           JAVA_VALIDATION_ENABLED: true
-          JAVA_VALIDATION_OPTIONS: -allow-example-urls true
+          JAVA_VALIDATION_OPTIONS: -allow-example-urls true -ig kbv.all.st#1.24.0
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
           SUSHI_ENABLED: true
