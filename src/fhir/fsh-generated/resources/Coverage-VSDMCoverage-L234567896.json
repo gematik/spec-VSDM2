@@ -83,7 +83,7 @@
     ]
   },
   "beneficiary": {
-    "reference": "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
+    "reference": "Patient/VSDMPatient-L234567896"
   },
   "period": {
     "start": "2022-07-02"

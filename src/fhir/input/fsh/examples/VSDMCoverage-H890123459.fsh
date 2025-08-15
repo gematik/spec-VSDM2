@@ -26,7 +26,7 @@ Usage: #example
 * extension[versichertenart].valueCoding = $csVersichertenart#5 "Rentner"
 * status = #active
 * type = $csVersicherungsart#GKV
-* beneficiary.reference = "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
+* beneficiary.reference = "Patient/VSDMPatient-H890123459"
 * period
   * start = "1953-01-01"
   * end = "2024-03-31"
