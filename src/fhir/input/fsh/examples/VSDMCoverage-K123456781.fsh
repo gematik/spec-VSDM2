@@ -15,7 +15,7 @@ Usage: #example
 * extension[ruhenderLeistungsanspruch]
   * extension[art].valueCoding = #2 "eingeschränkt"
   * extension[dauer].valuePeriod.start = "2024-06-15"
-* extension[versichertenart].valueCoding = $csVersichertenart#5 "Rentner und ihre Familienangehörigen"
+* extension[versichertenart].valueCoding = $csVersichertenart#5 "Rentner"
 * status = #active
 * type = #GKV
 * beneficiary.reference = "Patient/VSDMPatient-K123456781"

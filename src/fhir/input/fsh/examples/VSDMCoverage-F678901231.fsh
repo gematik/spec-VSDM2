@@ -7,14 +7,14 @@ Usage: #example
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"
-* extension[besonderePersonengruppe].valueCoding = #08 "SVA-Kennzeichnung, pauschal"
+* extension[besonderePersonengruppe].valueCoding = #08 "SVA2" // "SVA-Kennzeichnung, pauschal"
 * extension[zuzahlungsstatus] 
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = "2026-09-30"
 * extension[ruhenderLeistungsanspruch]
   * extension[art].valueCoding = #1 "vollständig"
   * extension[dauer].valuePeriod.start = "2025-01-01"
-* extension[versichertenart].valueCoding = $csVersichertenart#3 "Familienversicherter"
+* extension[versichertenart].valueCoding = $csVersichertenart#3 "Familienangehoerige"
 * status = #active
 * type = #GKV
 * beneficiary.reference = "Patient/VSDMPatient-F678901231"

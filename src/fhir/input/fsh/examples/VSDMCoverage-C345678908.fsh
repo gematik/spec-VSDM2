@@ -8,7 +8,7 @@ Usage: #example
 
 * extension[WOP].valueCoding = $csWOP#98 "Sachsen"
 * extension[dmp][+]
-  * extension[dmp].valueCoding = #01 "Diabetes mellitus Typ 2"
+  * extension[dmp].valueCoding = #01 "DM2" // "Diabetes mellitus Typ 2"
   * extension[zeitraum].valuePeriod.start = "2001-01-01"
   * extension[digitalesDMP].valueBoolean = false
 * extension[dmp][+]
@@ -22,7 +22,7 @@ Usage: #example
   * extension[zahnaerztlicheVersorgung].valueBoolean = true
   * extension[stationaererBereich].valueBoolean = true
   * extension[veranlassteLeistungen].valueBoolean = true
-* extension[versichertenart].valueCoding = $csVersichertenart#1 "Mitglied"
+* extension[versichertenart].valueCoding = $csVersichertenart#1 "Mitglieder"
 * status = #active
 * type = #GKV
 * beneficiary.reference = "Patient/VSDMPatient-C345678908"

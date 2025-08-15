@@ -8,7 +8,7 @@ Usage: #example
 
 * extension[WOP].valueCoding = $csWOP#98 "Sachsen"
 * extension[dmp][+]
-  * extension[dmp].valueCoding = #01 "Diabetes mellitus Typ 2"
+  * extension[dmp].valueCoding = #01 "DM2" // "Diabetes mellitus Typ 2"
   * extension[zeitraum].valuePeriod.start = "2001-01-01"
   * extension[digitalesDMP].valueBoolean = false
 * extension[dmp][+]
@@ -17,8 +17,8 @@ Usage: #example
     * start = "2020-01-01"
     * end = "2023-12-31"
   * extension[digitalesDMP].valueBoolean = true
-* extension[besonderePersonengruppe].valueCoding = #07 "SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht"
-* extension[versichertenart].valueCoding = $csVersichertenart#3 "Familienversicherter"
+* extension[besonderePersonengruppe].valueCoding = #07 "SVA1" // "SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht"
+* extension[versichertenart].valueCoding = $csVersichertenart#3 "Familienangehoerige"
 * extension[zuzahlungsstatus] 
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = "2025-12-31"

@@ -7,7 +7,7 @@ Usage: #example
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#38 "Nordrhein"
-* extension[versichertenart].valueCoding = $csVersichertenart#1 "Mitglied"
+* extension[versichertenart].valueCoding = $csVersichertenart#1 "Mitglieder"
 * status = #active
 * type = #GKV
 * beneficiary.reference = "Patient/VSDMPatient-A123456780"

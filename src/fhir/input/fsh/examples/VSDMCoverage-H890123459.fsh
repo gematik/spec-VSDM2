@@ -7,12 +7,12 @@ Usage: #example
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#17 "Niedersachsen" 
-* extension[besonderePersonengruppe].valueCoding = #07 "SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht: - Personen mit Wohnsitz im Inland, Abrechnung nach Aufwand"
+* extension[besonderePersonengruppe].valueCoding = #07 "SVA1" // "SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht: - Personen mit Wohnsitz im Inland, Abrechnung nach Aufwand"
 * extension[zuzahlungsstatus] 
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = "2024-03-31"
 * extension[dmp][+]
-  * extension[dmp].valueCoding = #01 "Diabetes mellitus Typ 2"
+  * extension[dmp].valueCoding = #01 "DM2" // "Diabetes mellitus Typ 2"
   * extension[zeitraum].valuePeriod
     * start = "2001-01-01"
     * end = "2024-03-31"
@@ -23,7 +23,7 @@ Usage: #example
     * start = "2020-01-01"
     * end = "2023-12-31"
   * extension[digitalesDMP].valueBoolean = true
-* extension[versichertenart].valueCoding = $csVersichertenart#5 "Rentner und ihre Familienangehörigen"
+* extension[versichertenart].valueCoding = $csVersichertenart#5 "Rentner"
 * status = #active
 * type = #GKV
 * beneficiary.reference = "Patient/437f2555-2396-4c64-a656-e9553161ca3c"

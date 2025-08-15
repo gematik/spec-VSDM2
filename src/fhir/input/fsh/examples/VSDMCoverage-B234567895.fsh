@@ -7,8 +7,8 @@ Usage: #example
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#03 "Bremen"
-* extension[besonderePersonengruppe].valueCoding = #04 "BSHG (Bundessozialhilfegesetz) § 264 SGB V"
-* extension[versichertenart].valueCoding = $csVersichertenart#3 "Familienversicherter"
+* extension[besonderePersonengruppe].valueCoding = #04 "SOZ" // "BSHG (Bundessozialhilfegesetz) § 264 SGB V"
+* extension[versichertenart].valueCoding = $csVersichertenart#3 "Familienangehoerige"
 * status = #active
 * type = #GKV
 * beneficiary.reference = "Patient/VSDMPatient-B234567895"

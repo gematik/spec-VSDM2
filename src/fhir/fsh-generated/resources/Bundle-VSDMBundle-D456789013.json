@@ -222,14 +222,14 @@
             "valueCoding": {
               "code": "3",
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
-              "display": "Familienversicherter"
+              "display": "Familienangehoerige"
             }
           },
           {
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
               "code": "06",
-              "display": "SER (Soziales Entschädigungsrecht)"
+              "display": "SER"
             },
             "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
           },
@@ -241,7 +241,7 @@
                 "valueCoding": {
                   "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
                   "code": "05",
-                  "display": "Asthma bronchiale"
+                  "display": "Asthma"
                 }
               },
               {

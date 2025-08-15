@@ -20,14 +20,14 @@
       "valueCoding": {
         "code": "5",
         "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
-        "display": "Rentner und ihre Familienangehörigen"
+        "display": "Rentner"
       }
     },
     {
       "valueCoding": {
         "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
         "code": "07",
-        "display": "SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht: - Personen mit Wohnsitz im Inland, Abrechnung nach Aufwand"
+        "display": "SVA1"
       },
       "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
     },
@@ -52,7 +52,7 @@
           "valueCoding": {
             "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
             "code": "01",
-            "display": "Diabetes mellitus Typ 2"
+            "display": "DM2"
           }
         },
         {

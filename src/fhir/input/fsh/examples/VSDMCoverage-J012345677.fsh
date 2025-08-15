@@ -7,13 +7,13 @@ Usage: #example
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"
-* extension[besonderePersonengruppe].valueCoding = #09 "Empfänger von Gesundheitsleistungen nach §§ 4 und 6 des Asylbewerberleistungsgesetzes (AsylbLG)"
+* extension[besonderePersonengruppe].valueCoding = #09 "ASY" // "Empfänger von Gesundheitsleistungen nach §§ 4 und 6 des Asylbewerberleistungsgesetzes (AsylbLG)"
 * extension[dmp][+]
   * extension[dmp].valueCoding = #06 "COPD"
   * extension[zeitraum].valuePeriod.start =  "2001-01-11"
   * extension[digitalesDMP].valueBoolean = false
 * extension[dmp][+]
-  * extension[dmp].valueCoding = #09 "Rückenschmerz"
+  * extension[dmp].valueCoding = #09 "Rueckenschmerz"
   * extension[zeitraum].valuePeriod.start = "2002-02-12"
   * extension[digitalesDMP].valueBoolean = true
 * extension[dmp][+]
@@ -25,7 +25,7 @@ Usage: #example
   * extension[dauer].valuePeriod
     * start = "2025-01-01"
     * end = "2025-12-31"
-* extension[versichertenart].valueCoding = $csVersichertenart#5 "Rentner und ihre Familienangehörigen"
+* extension[versichertenart].valueCoding = $csVersichertenart#5 "Rentner"
 * status = #active
 * type = #GKV
 * beneficiary.reference = "Patient/VSDMPatient-J012345677"

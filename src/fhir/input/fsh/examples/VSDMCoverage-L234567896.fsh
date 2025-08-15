@@ -15,7 +15,7 @@ Usage: #example
   * extension[zahnaerztlicheVersorgung].valueBoolean = true
   * extension[stationaererBereich].valueBoolean = true
   * extension[veranlassteLeistungen].valueBoolean = true
-* extension[versichertenart].valueCoding = $csVersichertenart#3 "Familienversicherter"
+* extension[versichertenart].valueCoding = $csVersichertenart#3 "Familienangehoerige"
 * status = #active
 * type = #GKV
 * beneficiary.reference = "Patient/437f2555-2396-4c64-a656-e9553161ca3c"

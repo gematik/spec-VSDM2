@@ -11,11 +11,11 @@ Usage: #example
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = "2026-06-30"
 * extension[dmp][+]
-  * extension[dmp].valueCoding = #01 "Diabetes mellitus Typ 2"
+  * extension[dmp].valueCoding = #01 "DM2" // "Diabetes mellitus Typ 2"
   * extension[zeitraum].valuePeriod.start = "2001-01-01"
   * extension[digitalesDMP].valueBoolean = false
 * extension[dmp][+]
-  * extension[dmp].valueCoding = #09 "Rückenschmerz"
+  * extension[dmp].valueCoding = #09 "Rueckenschmerz"
   * extension[zeitraum].valuePeriod
     * start = "2020-01-01"
     * end = "2023-12-31"
@@ -25,7 +25,7 @@ Usage: #example
   * extension[zahnaerztlicheVersorgung].valueBoolean = true
   * extension[stationaererBereich].valueBoolean = true
   * extension[veranlassteLeistungen].valueBoolean = false
-* extension[versichertenart].valueCoding = $csVersichertenart#1 "Mitglied"
+* extension[versichertenart].valueCoding = $csVersichertenart#1 "Mitglieder"
 * status = #active
 * type = #GKV
 * beneficiary.reference = "Patient/VSDMPatient-E567890127"

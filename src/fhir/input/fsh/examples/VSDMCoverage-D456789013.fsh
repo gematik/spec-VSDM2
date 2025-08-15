@@ -7,9 +7,9 @@ Usage: #example
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#46 "Hessen"
-* extension[besonderePersonengruppe].valueCoding = #06 "SER (Soziales Entschädigungsrecht)"
+* extension[besonderePersonengruppe].valueCoding = #06 "SER" // "SER (Soziales Entschädigungsrecht)"
 * extension[dmp][+]
-  * extension[dmp].valueCoding = #05 "Asthma bronchiale"
+  * extension[dmp].valueCoding = #05 "Asthma" // "Asthma bronchiale"
   * extension[zeitraum].valuePeriod.start = "2022-01-01"
   * extension[digitalesDMP].valueBoolean = false
 * extension[kostenerstattung]
@@ -17,7 +17,7 @@ Usage: #example
   * extension[zahnaerztlicheVersorgung].valueBoolean = true
   * extension[stationaererBereich].valueBoolean = true
   * extension[veranlassteLeistungen].valueBoolean = true
-* extension[versichertenart].valueCoding = $csVersichertenart#3 "Familienversicherter"
+* extension[versichertenart].valueCoding = $csVersichertenart#3 "Familienangehoerige"
 * status = #active
 * type = #GKV
 * beneficiary.reference = "Patient/VSDMPatient-D456789013"
