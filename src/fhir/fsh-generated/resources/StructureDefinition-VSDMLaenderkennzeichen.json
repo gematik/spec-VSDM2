@@ -15,7 +15,7 @@
   "abstract": false,
   "context": [
     {
-      "expression": "http://fhir.de/StructureDefinition/address-de-basis#Address.country",
+      "expression": "Address.country",
       "type": "element"
     }
   ],

@@ -1,5 +1,5 @@
 Extension: VSDMLaenderkennzeichen
-Context: AddressDeBasis.country
+Context: Address.country
 Title: "Länderkennzeichen nach DEÜV Anlage 8"
 Description: "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8"
 
