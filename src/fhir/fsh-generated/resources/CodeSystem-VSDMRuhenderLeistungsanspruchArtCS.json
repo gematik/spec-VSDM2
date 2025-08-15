@@ -21,5 +21,6 @@
   "experimental": false,
   "publisher": "gematik GmbH",
   "date": "2023-12-31",
+  "caseSensitive": true,
   "count": 2
 }

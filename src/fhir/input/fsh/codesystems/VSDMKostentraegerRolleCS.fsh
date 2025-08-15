@@ -3,8 +3,8 @@ Title: "Rolle des Kostenträgers"
 Description: "Rolle des Kostenträgers im Versichertenstammdatenmanagement (VSDM) 2.0"
 
 * insert Meta-CodeSystem
-* ^content = #complete
 * ^caseSensitive = true
+* ^content = #complete
 
 * #H "Haupt-Kostenträger"
 * #A "abrechnender Kostenträger"

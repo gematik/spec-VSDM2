@@ -33,7 +33,7 @@ Bundle-VSDMBundle-O567890128.json                    VSDMBundle-O567890128      
 Bundle-VSDMBundle-Z987654321.json                    VSDMBundle-Z987654321               Instance    examples/VSDMBundle-Z987654321.fsh                  1 - 21
 CodeSystem-VSDMErrorcodeCS.json                      VSDMErrorcodeCS                     CodeSystem  codesystems/VSDMErrorcodeCS.fsh                     1 - 23
 CodeSystem-VSDMKostentraegerRolleCS.json             VSDMKostentraegerRolleCS            CodeSystem  codesystems/VSDMKostentraegerRolleCS.fsh            1 - 10
-CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json   VSDMRuhenderLeistungsanspruchArtCS  CodeSystem  codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh  1 - 9
+CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json   VSDMRuhenderLeistungsanspruchArtCS  CodeSystem  codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh  1 - 10
 Coverage-VSDMCoverage-A123456780.json                VSDMCoverage-A123456780             Instance    examples/VSDMCoverage-A123456780.fsh                1 - 18
 Coverage-VSDMCoverage-B234567895.json                VSDMCoverage-B234567895             Instance    examples/VSDMCoverage-B234567895.fsh                1 - 23
 Coverage-VSDMCoverage-C345678908.json                VSDMCoverage-C345678908             Instance    examples/VSDMCoverage-C345678908.fsh                1 - 34

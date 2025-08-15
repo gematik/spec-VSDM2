@@ -277,7 +277,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh",
     "startLine": 1,
-    "endLine": 9
+    "endLine": 10
   },
   {
     "outputFile": "Coverage-VSDMCoverage-A123456780.json",
