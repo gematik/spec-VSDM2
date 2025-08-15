@@ -261,7 +261,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMErrorcodeCS.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 25
   },
   {
     "outputFile": "CodeSystem-VSDMKostentraegerRolleCS.json",

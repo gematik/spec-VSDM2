@@ -6,6 +6,8 @@ Description: "VSDM-spezifische Fehlercodes"
 * ^caseSensitive = true
 * ^content = #complete
 
+// TODO CodeSystem.concept[2].display: Information - The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk {SECURITY_STRING_CONTENT_WARNING}
+
 // client
 * #VSDSERVICE_INVALID_IK                     "Ungültige oder nicht bekannte Institutionskennung <ik>."
 * #VSDSERVICE_INVALID_KVNR                   "Ungültige oder nicht bekannte Krankenversichertennummer <kvnr>."
