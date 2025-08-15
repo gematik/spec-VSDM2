@@ -351,7 +351,7 @@
           "discriminator": [
             {
               "type": "pattern",
-              "path": "extension[kostentraegerRolle].value.code"
+              "path": "extension('https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle').value"
             }
           ],
           "rules": "open"
@@ -409,9 +409,12 @@
         ]
       },
       {
-        "id": "Coverage.payor:Hauptkostentraeger.extension:kostentraegerRolle.value[x].code",
-        "path": "Coverage.payor.extension.value[x].code",
-        "patternCode": "H"
+        "id": "Coverage.payor:Hauptkostentraeger.extension:kostentraegerRolle.value[x]",
+        "path": "Coverage.payor.extension.value[x]",
+        "patternCoding": {
+          "code": "H",
+          "display": "Haupt-Kostenträger"
+        }
       },
       {
         "id": "Coverage.payor:abrechnenderKostentraeger",
@@ -447,9 +450,12 @@
         ]
       },
       {
-        "id": "Coverage.payor:abrechnenderKostentraeger.extension:kostentraegerRolle.value[x].code",
-        "path": "Coverage.payor.extension.value[x].code",
-        "patternCode": "A"
+        "id": "Coverage.payor:abrechnenderKostentraeger.extension:kostentraegerRolle.value[x]",
+        "path": "Coverage.payor.extension.value[x]",
+        "patternCoding": {
+          "code": "A",
+          "display": "abrechnender Kostentraeger"
+        }
       }
     ]
   }
