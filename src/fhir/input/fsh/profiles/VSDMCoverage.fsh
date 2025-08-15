@@ -157,7 +157,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
 * payor
   * ^short = "Kostenträger"
   * extension contains VSDMKostentraegerRolle named kostentraegerRolle 0..1 
-  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "extension('https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle').value"
   * ^slicing.rules = #open
   * extension[kostentraegerRolle]

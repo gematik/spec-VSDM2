@@ -16,7 +16,7 @@ Description: "Strukturierte Fehlermeldung im Versichertenstammdatenmanagement (V
 // TODO Inhalte noch prüfen
 
 * issue MS
-  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "details.coding.system"
   * ^slicing.rules = #open
   * ^slicing.description = "Slicing der OperationOutcome Issues"

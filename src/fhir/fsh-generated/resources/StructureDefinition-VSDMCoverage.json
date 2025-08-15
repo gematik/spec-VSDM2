@@ -350,7 +350,7 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
+              "type": "value",
               "path": "extension('https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle').value"
             }
           ],
