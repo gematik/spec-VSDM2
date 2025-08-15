@@ -10,7 +10,7 @@ Usage: #example
 * extension[besonderePersonengruppe].valueCoding = #04 "SOZ" // "BSHG (Bundessozialhilfegesetz) § 264 SGB V"
 * extension[versichertenart].valueCoding = $csVersichertenart#3 "Familienangehoerige"
 * status = #active
-* type = #GKV
+* type = $csVersicherungsart#GKV
 * beneficiary.reference = "Patient/VSDMPatient-B234567895"
 * period
   * start = "2011-04-01"

@@ -25,7 +25,7 @@ Usage: #example
   * extension[digitalesDMP].valueBoolean = true
 * extension[versichertenart].valueCoding = $csVersichertenart#5 "Rentner"
 * status = #active
-* type = #GKV
+* type = $csVersicherungsart#GKV
 * beneficiary.reference = "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
 * period
   * start = "1953-01-01"

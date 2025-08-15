@@ -164,7 +164,8 @@
   "type": {
     "coding": [
       {
-        "code": "GKV"
+        "code": "GKV",
+        "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis"
       }
     ]
   },

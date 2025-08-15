@@ -27,7 +27,7 @@ Usage: #example
   * extension[veranlassteLeistungen].valueBoolean = false
 * extension[versichertenart].valueCoding = $csVersichertenart#1 "Mitglieder"
 * status = #active
-* type = #GKV
+* type = $csVersicherungsart#GKV
 * beneficiary.reference = "Patient/VSDMPatient-E567890127"
 * period
   * start = "1992-11-13"
