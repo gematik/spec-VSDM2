@@ -82,8 +82,8 @@
         {
           "valueCoding": {
             "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
-            "code": "A",
-            "display": "abrechnender Kostenträger"
+            "code": "H",
+            "display": "Haupt-Kostenträger"
           },
           "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
         }
