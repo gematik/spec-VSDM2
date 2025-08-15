@@ -35,7 +35,7 @@ Usage: #inline
 * author.identifier
   * system = "http://fhir.de/sid/arge-ik/iknr"
   * value = "103169760"
-* section[+].entry.reference = "Patient/VSDMPatient-B234567895"
-* section[+].entry.reference = "Coverage/VSDMCoverage-B234567895"
+* section[+].entry.reference = "Patient/VSDMPatient-Z987654321"
+* section[+].entry.reference = "Coverage/VSDMCoverage-Z987654321"
 * section[+].entry.reference = "Organization/VSDMPayorOrganization-108213958"
 * section[+].entry.reference = "Organization/VSDMPayorOrganization-100293710"

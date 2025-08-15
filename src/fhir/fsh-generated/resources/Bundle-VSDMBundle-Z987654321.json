@@ -47,14 +47,14 @@
           {
             "entry": [
               {
-                "reference": "Patient/VSDMPatient-B234567895"
+                "reference": "Patient/VSDMPatient-Z987654321"
               }
             ]
           },
           {
             "entry": [
               {
-                "reference": "Coverage/VSDMCoverage-B234567895"
+                "reference": "Coverage/VSDMCoverage-Z987654321"
               }
             ]
           },
