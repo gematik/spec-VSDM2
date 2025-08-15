@@ -102,6 +102,7 @@
         "id": "Patient.name:Name.family.extension:vorsatzwort",
         "path": "Patient.name.family.extension",
         "sliceName": "vorsatzwort",
+        "short": "Vorsatzwort",
         "definition": "Vorsatzwort zum Nachnamen des Patienten (z.B. \"van\" in \"Ludwig van Beethoven\").",
         "comment": "Hinweise zum Umgang mit dieser Erweiterung siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.\nEine Tabelle der gültigen Vorsatzworte findet sich in Anlage 6 zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp.\nUm die Verarbeitung ausländischer Namensangaben nicht zu verhindern, ist die Wertetabelle nur als \"preferred binding\" hinterlegt.\nVerwender müssen mindestens 20 Zeichen verarbeiten können."
       },

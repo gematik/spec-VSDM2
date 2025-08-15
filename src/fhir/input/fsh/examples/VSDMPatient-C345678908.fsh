@@ -14,7 +14,7 @@ Usage: #example
     * extension[nachname].valueString = "Carolinataube"
   * given = "Charlie"
 * gender = #other
-  * extension[other-amtlich].valueCoding = #D "divers"
+  * extension[other-amtlich].valueCoding = $csGenderAmtlich#D "divers"
 * address[StrassenAdresse]
   * line[+] = "Taubenweg 3c"
     * extension[Hausnummer].valueString = "3c"

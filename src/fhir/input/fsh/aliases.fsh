@@ -34,6 +34,10 @@ Alias: $csCountryCodeISO3166 = urn:iso:std:iso:3166
 //       - VSDMCoverage.extension[dmp]
 Alias: $csDMP = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP
 
+// administrative Geschlechtsangabe, verwendet für
+//   - Beispiel für VSDMPatient
+Alias: $csGenderAmtlich = http://fhir.de/CodeSystem/gender-amtlich-de
+
 // LOINC, verwendet für 
 //   - VSDMComposition.type.coding
 Alias: $csLOINC = http://loinc.org

@@ -136,6 +136,7 @@
         "url": "http://fhir.de/StructureDefinition/gender-amtlich-de",
         "valueCoding": {
           "code": "X",
+          "system": "http://fhir.de/CodeSystem/gender-amtlich-de",
           "display": "unbestimmt"
         }
       }

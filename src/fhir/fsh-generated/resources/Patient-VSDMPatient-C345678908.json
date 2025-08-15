@@ -84,6 +84,7 @@
         "url": "http://fhir.de/StructureDefinition/gender-amtlich-de",
         "valueCoding": {
           "code": "D",
+          "system": "http://fhir.de/CodeSystem/gender-amtlich-de",
           "display": "divers"
         }
       }

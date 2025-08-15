@@ -16,7 +16,7 @@ Usage: #example
   * prefix = "Dr. rer. nat."
     * extension[prefix-qualifier].valueCode = #AC
 * gender = #other
-  * extension[other-amtlich].valueCoding = #X "unbestimmt"
+  * extension[other-amtlich].valueCoding = $csGenderAmtlich#X "unbestimmt"
 * address[StrassenAdresse]
   * line[+] = "Dohlenallee 4-6"
     * extension[Hausnummer].valueString = "4-6"
