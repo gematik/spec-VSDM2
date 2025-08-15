@@ -413,6 +413,7 @@
         "path": "Coverage.payor.extension.value[x]",
         "patternCoding": {
           "code": "H",
+          "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
           "display": "Haupt-Kostenträger"
         }
       },
@@ -454,7 +455,8 @@
         "path": "Coverage.payor.extension.value[x]",
         "patternCoding": {
           "code": "A",
-          "display": "abrechnender Kostentraeger"
+          "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
+          "display": "abrechnender Kostenträger"
         }
       }
     ]
