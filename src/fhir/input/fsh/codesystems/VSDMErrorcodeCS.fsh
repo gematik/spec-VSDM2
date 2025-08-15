@@ -2,7 +2,7 @@ CodeSystem: VSDMErrorcodeCS
 Title: "VSDM-Fehlercodes"
 Description: "VSDM-spezifische Fehlercodes"
 
-* insert Meta
+* insert Meta-CodeSystem
 * ^caseSensitive = true
 * ^content = #complete
 

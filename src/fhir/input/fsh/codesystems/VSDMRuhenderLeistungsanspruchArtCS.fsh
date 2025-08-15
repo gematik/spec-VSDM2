@@ -2,7 +2,7 @@ CodeSystem: VSDMRuhenderLeistungsanspruchArtCS
 Title: "Art des ruhenden Leistungsanspruchs"
 Description: "Art des ruhenden Leistungsanspruchs"
 
-* insert Meta
+* insert Meta-CodeSystem
 * ^content = #complete
 
 * #1 "vollständig"
