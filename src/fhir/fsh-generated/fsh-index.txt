@@ -50,7 +50,7 @@ Coverage-VSDMCoverage-M345678909.json                VSDMCoverage-M345678909    
 Coverage-VSDMCoverage-N456789014.json                VSDMCoverage-N456789014             Instance    examples/VSDMCoverage-N456789014.fsh                1 - 29
 Coverage-VSDMCoverage-O567890128.json                VSDMCoverage-O567890128             Instance    examples/VSDMCoverage-O567890128.fsh                1 - 21
 Coverage-VSDMCoverage-Z987654321.json                VSDMCoverage-Z987654321             Instance    examples/VSDMCoverage-Z987654321.fsh                1 - 46
-OperationOutcome-example-vsdm-operationoutcome.json  ExampleOperationOutcome             Instance    examples/ExampleOperationOutcome.fsh                1 - 15
+OperationOutcome-example-vsdm-operationoutcome.json  ExampleOperationOutcome             Instance    examples/ExampleOperationOutcome.fsh                1 - 13
 Organization-VSDMPayorOrganization-100293710.json    VSDMPayorOrganization-100293710     Instance    examples/VSDMPayorOrganization-100293710.fsh        1 - 25
 Organization-VSDMPayorOrganization-102186348.json    VSDMPayorOrganization-102186348     Instance    examples/VSDMPayorOrganization-102186348.fsh        1 - 25
 Organization-VSDMPayorOrganization-102249844.json    VSDMPayorOrganization-102249844     Instance    examples/VSDMPayorOrganization-102249844.fsh        1 - 25
@@ -96,7 +96,7 @@ StructureDefinition-VSDMCoverage.json                VSDMCoverage               
 StructureDefinition-VSDMDMPTeilnahme.json            VSDMDMPTeilnahme                    Extension   extensions/VSDMDMPTeilnahme.fsh                     1 - 51
 StructureDefinition-VSDMKostentraegerRolle.json      VSDMKostentraegerRolle              Extension   extensions/VSDMKostentraegerRolle.fsh               1 - 19
 StructureDefinition-VSDMLaenderkennzeichen.json      VSDMLaenderkennzeichen              Extension   extensions/VSDMLaenderkennzeichen.fsh               1 - 19
-StructureDefinition-VSDMOperationOutcome.json        VSDMOperationOutcome                Profile     profiles/VSDMOperationOutcome.fsh                   1 - 43
+StructureDefinition-VSDMOperationOutcome.json        VSDMOperationOutcome                Profile     profiles/VSDMOperationOutcome.fsh                   1 - 42
 StructureDefinition-VSDMPatient.json                 VSDMPatient                         Profile     profiles/VSDMPatient.fsh                            1 - 225
 StructureDefinition-VSDMPayorOrganization.json       VSDMPayorOrganization               Profile     profiles/VSDMPayorOrganization.fsh                  1 - 62
 ValueSet-VSDMBesonderePersonengruppeVS.json          VSDMBesonderePersonengruppeVS       ValueSet    valuesets/VSDMBesonderePersonengruppeVS.fsh         1 - 11

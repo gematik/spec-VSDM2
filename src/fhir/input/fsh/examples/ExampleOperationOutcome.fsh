@@ -9,7 +9,5 @@ Description: "Eine Beispielinstanz, die das Profil VSDMOperationOutcome erfüllt
 // Slicing: Issue vom Typ vsdm-error
 * issue[0].severity = #fatal
 * issue[0].code = #invalid
-* issue[0].details.coding[0].system = "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS"
-* issue[0].details.coding[0].code = VSDMErrorcodeCS#VSDSERVICE_INVALID_IK
-* issue[0].details.coding[0].display = "Ungültige oder nicht bekannte Institutionskennung <ik>."
+* issue[0].details.coding[0] = VSDMErrorcodeCS#VSDSERVICE_INVALID_IK "Ungültige oder nicht bekannte Institutionskennung <ik>."
 * issue[0].details.text = "Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service 1 x erneuern. Bei erneutem Fehler: Abbruch, da wahrscheinlich ein Implementierungsfehler vorliegt (Clientsystem oder PoPP-Service) oder die KTR gar nicht bei diesem FD-Anbieter ist (fehlerhafter DNS-Eintrag)."

@@ -17,9 +17,8 @@ Description: "Strukturierte Fehlermeldung im Versichertenstammdatenmanagement (V
 
 * issue MS
   * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "details.coding.system"
+  * ^slicing.discriminator.path = "details.coding"
   * ^slicing.rules = #open
-  * ^slicing.description = "Slicing der OperationOutcome Issues"
   * ^slicing.ordered = false
 
 * issue contains vsdm-error 0..1 MS

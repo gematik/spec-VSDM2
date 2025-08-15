@@ -13,8 +13,8 @@
       "details": {
         "coding": [
           {
-            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
             "code": "VSDSERVICE_INVALID_IK",
+            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
             "display": "Ungültige oder nicht bekannte Institutionskennung <ik>."
           }
         ],

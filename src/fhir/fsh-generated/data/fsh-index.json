@@ -413,7 +413,7 @@
     "fshType": "Instance",
     "fshFile": "examples/ExampleOperationOutcome.fsh",
     "startLine": 1,
-    "endLine": 15
+    "endLine": 13
   },
   {
     "outputFile": "Organization-VSDMPayorOrganization-100293710.json",
@@ -781,7 +781,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMOperationOutcome.fsh",
     "startLine": 1,
-    "endLine": 43
+    "endLine": 42
   },
   {
     "outputFile": "StructureDefinition-VSDMPatient.json",

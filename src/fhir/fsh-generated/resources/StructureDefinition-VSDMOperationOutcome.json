@@ -31,11 +31,10 @@
           "discriminator": [
             {
               "type": "value",
-              "path": "details.coding.system"
+              "path": "details.coding"
             }
           ],
           "rules": "open",
-          "description": "Slicing der OperationOutcome Issues",
           "ordered": false
         },
         "mustSupport": true
