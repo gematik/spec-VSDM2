@@ -2,6 +2,7 @@ Instance: VSDDatensatzGKV-M345678909
 InstanceOf: VSDDatensatzGKV
 Title: "M345678909 Mittelspecht, Michael-Martin"
 Description: "Testdatensatz M345678909 Mittelspecht, Michael-Martin"
+Usage: #inline // to prevent SUSHI from generating JSON files that confuse many other tools downstream
 
 * Versichertendaten
   * Versicherter

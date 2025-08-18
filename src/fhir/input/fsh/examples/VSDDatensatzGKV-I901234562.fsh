@@ -2,6 +2,7 @@ Instance: VSDDatensatzGKV-I901234562
 InstanceOf: VSDDatensatzGKV
 Title: "I901234562 Ibis, Ingrid"
 Description: "Testdatensatz I901234562 Ibis, Ingrid"
+Usage: #inline // to prevent SUSHI from generating JSON files that confuse many other tools downstream
 
 * Versichertendaten
   * Versicherter

@@ -2,6 +2,7 @@ Instance: VSDDatensatzGKV-A123456780
 InstanceOf: VSDDatensatzGKV
 Title: "A123456780 Amsel, Andrea"
 Description: "Testdatensatz A123456780 Amsel, Andrea"
+Usage: #inline // to prevent SUSHI from generating JSON files that confuse many other tools downstream
 
 * Versichertendaten
   * Versicherter

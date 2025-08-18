@@ -2,6 +2,7 @@ Instance: VSDDatensatzGKV-K123456781
 InstanceOf: VSDDatensatzGKV
 Title: "K123456781 Kiebitz, Karin"
 Description: "Testdatensatz K123456781 Kiebitz, Karin"
+Usage: #inline // to prevent SUSHI from generating JSON files that confuse many other tools downstream
 
 * Versichertendaten
   * Versicherter

@@ -2,6 +2,7 @@ Instance: VSDDatensatzGKV-N456789014
 InstanceOf: VSDDatensatzGKV
 Title: "N456789014 Nachtigall, Nina Nicole"
 Description: "Testdatensatz N456789014 Nachtigall, Nina Nicole"
+Usage: #inline // to prevent SUSHI from generating JSON files that confuse many other tools downstream
 
 * Versichertendaten
   * Versicherter

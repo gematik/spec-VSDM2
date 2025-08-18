@@ -2,6 +2,7 @@ Instance: VSDDatensatzGKV-J012345677
 InstanceOf: VSDDatensatzGKV
 Title: "J012345677 Junko, Jens-Jörg"
 Description: "Testdatensatz J012345677 Junko, Jens-Jörg"
+Usage: #inline // to prevent SUSHI from generating JSON files that confuse many other tools downstream
 
 * Versichertendaten
   * Versicherter

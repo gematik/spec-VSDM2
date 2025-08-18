@@ -2,6 +2,7 @@ Instance: VSDDatensatzGKV-C345678908
 InstanceOf: VSDDatensatzGKV
 Title: "C345678908 Carolinataube, Charlie"
 Description: "Testdatensatz C345678908 Carolinataube, Charlie"
+Usage: #inline // to prevent SUSHI from generating JSON files that confuse many other tools downstream
 
 * Versichertendaten
   * Versicherter

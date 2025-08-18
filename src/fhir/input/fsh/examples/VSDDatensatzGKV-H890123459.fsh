@@ -2,6 +2,7 @@ Instance: VSDDatensatzGKV-H890123459
 InstanceOf: VSDDatensatzGKV
 Title: "H890123459 vorm Habicht, Hans"
 Description: "Testdatensatz H890123459 vorm Habicht, Hans"
+Usage: #inline // to prevent SUSHI from generating JSON files that confuse many other tools downstream
 
 * Versichertendaten
   * Versicherter
