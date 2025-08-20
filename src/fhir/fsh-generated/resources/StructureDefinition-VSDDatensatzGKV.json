@@ -15,7 +15,7 @@
       "comment": "Zuordnung der Versicherungsinformationen des VSD-Datensatzes GKV zum FHIR-Profil VSDMCoverage"
     },
     {
-      "identity": "VSD-Datensatz-Patient",
+      "identity": "VSD-Datensatz-GKV-Patient",
       "name": "Mapping VSD-Datensatz GKV zu Patient",
       "uri": "VSDMPatient",
       "comment": "Zuordnung der Versichertendaten des VSD-Datensatzes GKV zum FHIR-Profil VSDMPatient"
@@ -74,7 +74,7 @@
         ],
         "mapping": [
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.identifier:KVNR.value",
             "comment": "Die KVNR wird in Übereinstimmung mit dem deutschen Basisprofils kodiert und ist verpflichtend anzugeben."
           }
@@ -94,7 +94,7 @@
         ],
         "mapping": [
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.birthDate",
             "comment": "Die Angabe des partiellen Geburtsdatums wird vom FHIR-nativen Datentyp date bereits unterstützt."
           }
@@ -114,7 +114,7 @@
         ],
         "mapping": [
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.name:Name.given",
             "comment": "FHIR lässt die Angabe mehrerer Vornamen in wiederholten Elementen zu. Davon wird hier kein Gebrauch gemacht."
           }
@@ -134,12 +134,12 @@
         ],
         "mapping": [
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.name:Name.family",
             "comment": "Nachname mit Vorsatzwort und Namenszusatz. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
           },
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.name:Name.family.extension:nachname",
             "comment": "Nachname ohne Vorsatzwort und Namenszusatz. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
           }
@@ -159,12 +159,12 @@
         ],
         "mapping": [
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.gender",
             "comment": "Das Geschlecht wird auf die standardisierten FHIR-Werte abgebildet. Da damit nicht alle Werte abgebildet werden können, kommt eine Erweiterung zum Einsatz."
           },
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.gender.extension:other-amtlich",
             "comment": "Diese Erweiterung nimmt die Geschlechtsangabe gemäß der geforderten Wertetabelle auf."
           }
@@ -184,7 +184,7 @@
         ],
         "mapping": [
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.name:Name.family.extension:vorsatzwort",
             "comment": "Vorsatzwort zum Nachnamen. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
           }
@@ -204,7 +204,7 @@
         ],
         "mapping": [
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.name:Name.family.extension:namenszusatz",
             "comment": "Zusatz zum Nachnamen. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
           }
@@ -224,7 +224,7 @@
         ],
         "mapping": [
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.name:Name.prefix",
             "comment": "Kennzeichnung des akademischen Titels mittels Erweiterung siehe Elementdokumentation."
           }
@@ -244,7 +244,7 @@
         ],
         "mapping": [
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.address:PostfachAdresse",
             "comment": "Postfachadressen werden mit dem Typ \"postal\" gekennzeichnet."
           }
@@ -264,7 +264,7 @@
         ],
         "mapping": [
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.address:PostfachAdresse.postalCode"
           }
         ]
@@ -283,7 +283,7 @@
         ],
         "mapping": [
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.address:PostfachAdresse.city"
           }
         ]
@@ -302,7 +302,7 @@
         ],
         "mapping": [
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.address:PostfachAdresse.line.extension:Postfach",
             "comment": "Hinweise zur Bildung der Adresszeilen beachten."
           }
@@ -322,7 +322,7 @@
         ],
         "mapping": [
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.address:PostfachAdresse.country",
             "comment": "Hinweise zur Befüllung der Extensions beachten."
           }
@@ -342,7 +342,7 @@
         ],
         "mapping": [
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.address:StrassenAdresse",
             "comment": "Strassenadressen (Meldeadressen) werden mit dem Typ \"physical\" gekennzeichnet."
           }
@@ -362,7 +362,7 @@
         ],
         "mapping": [
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.address:StrassenAdresse.postalCode"
           }
         ]
@@ -381,7 +381,7 @@
         ],
         "mapping": [
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.address:StrassenAdresse.city"
           }
         ]
@@ -400,7 +400,7 @@
         ],
         "mapping": [
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.address.country",
             "comment": "Hinweise zur Befüllung der Extensions beachten."
           }
@@ -420,7 +420,7 @@
         ],
         "mapping": [
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.address:StrassenAdresse.line.extension:Strasse",
             "comment": "Hinweise zur Bildung der Adresszeilen beachten."
           }
@@ -440,7 +440,7 @@
         ],
         "mapping": [
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.address:StrassenAdresse.line.extension:Hausnummer",
             "comment": "Hinweise zur Bildung der Adresszeilen beachten."
           }
@@ -460,7 +460,7 @@
         ],
         "mapping": [
           {
-            "identity": "VSD-Datensatz-Patient",
+            "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.address:StrassenAdresse.line.extension:Adresszusatz",
             "comment": "Hinweise zur Bildung der Adresszeilen beachten."
           }

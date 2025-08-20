@@ -1,7 +1,7 @@
 Mapping: VSDDatensatzGKVPatient
 Source: VSDDatensatzGKV
 Target: "VSDMPatient"
-Id: VSD-Datensatz-Patient
+Id: VSD-Datensatz-GKV-Patient
 Title: "Mapping VSD-Datensatz GKV zu Patient"
 Description: "Zuordnung der Versichertendaten des VSD-Datensatzes GKV zum FHIR-Profil VSDMPatient"
 
