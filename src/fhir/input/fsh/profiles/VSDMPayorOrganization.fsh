@@ -53,7 +53,7 @@ Description: "Angaben zum Kostenträger im Versichertenstammdatenmanagement (VSD
         Die Kodierung ist durch den FHIR-Standard empfohlen, aber nicht erzwungen. 
         Durch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.
       """
-    * extension contains VSDMLaenderkennzeichen named Laenderkennzeichen 1..1 MS
+    * extension contains VSDMLaenderkennzeichen named Laenderkennzeichen 0..1 MS // zur Kardinalität siehe Invariante VSDMCoverage-address-2 in VSDMCoverage
     * extension[Laenderkennzeichen] 
       * ^short = "Länderkennzeichen nach DEÜV Anlage 8"
       * ^definition = """

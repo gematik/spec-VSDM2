@@ -34,8 +34,15 @@
           {
             "key": "VSDMCoverage-address-1",
             "severity": "error",
-            "human": "Für GKV-Versicherte ist die Angabe des Länderkennzeichens in Adressen erforderlich.",
+            "human": "Für GKV-Versicherte ist die Angabe des Länderkennzeichens in Adressen des Patienten erforderlich.",
             "expression": "type.coding.code = 'GKV' implies beneficiary.resolve().address.all(country.extension('https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen').exists())",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+          },
+          {
+            "key": "VSDMCoverage-address-2",
+            "severity": "error",
+            "human": "Für GKV-Versicherte ist die Angabe des Länderkennzeichens in Adressen des Kostenträgers erforderlich.",
+            "expression": "type.coding.code = 'GKV' implies payor.all(resolve().address.all(country.extension('https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen').exists()))",
             "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
           }
         ]

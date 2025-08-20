@@ -19,7 +19,8 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
 
 // Invarianten auf Strukturebene
 * obeys VSDMCoverage-gender-1  // GKV: Pflichtangabe Geschlecht
-* obeys VSDMCoverage-address-1 // GKV: Pflichtangabe Länderkennzeichen nach DEÜV 
+* obeys VSDMCoverage-address-1 // GKV: Pflichtangabe Länderkennzeichen nach DEÜV im Patient
+* obeys VSDMCoverage-address-2 // GKV: Pflichtangabe Länderkennzeichen nach DEÜV im Kostenträger
 
 // Zuordnung aus Versicherungsdaten -> WOP
 * extension contains $extWOP named WOP 1..1 MS
@@ -195,6 +196,11 @@ Expression: "type.coding.code = 'GKV' implies beneficiary.resolve().gender.exist
 Severity: #error
 
 Invariant: VSDMCoverage-address-1
-Description: "Für GKV-Versicherte ist die Angabe des Länderkennzeichens in Adressen erforderlich."
+Description: "Für GKV-Versicherte ist die Angabe des Länderkennzeichens in Adressen des Patienten erforderlich."
 Expression: "type.coding.code = 'GKV' implies beneficiary.resolve().address.all(country.extension('https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen').exists())"
+Severity: #error
+
+Invariant: VSDMCoverage-address-2
+Description: "Für GKV-Versicherte ist die Angabe des Länderkennzeichens in Adressen des Kostenträgers erforderlich."
+Expression: "type.coding.code = 'GKV' implies payor.all(resolve().address.all(country.extension('https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen').exists()))"
 Severity: #error
