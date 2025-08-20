@@ -1,8 +1,8 @@
-Instance: VSDMPatient-K123456781
+Instance: VSDMPatient-GKV-K123456781
 InstanceOf: VSDMPatient
 Title: "K123456781 Kiebitz, Karin"
 Description: "Versichertendaten K123456781 Kiebitz, Karin"
-Usage: #example
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 

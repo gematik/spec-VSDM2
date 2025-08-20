@@ -1,8 +1,8 @@
-Instance: VSDMPatient-M345678909
+Instance: VSDMPatient-GKV-M345678909
 InstanceOf: VSDMPatient
 Title: "M345678909 Mittelspecht, Michael-Martin"
 Description: "Versichertendaten M345678909 Mittelspecht, Michael-Martin"
-Usage: #example
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 

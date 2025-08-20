@@ -1,8 +1,8 @@
-Instance: VSDMPatient-A123456780
+Instance: VSDMPatient-GKV-A123456780
 InstanceOf: VSDMPatient
 Title: "A123456780 Amsel, Andrea"
 Description: "Versichertendaten A123456780 Amsel, Andrea"
-Usage: #example
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 

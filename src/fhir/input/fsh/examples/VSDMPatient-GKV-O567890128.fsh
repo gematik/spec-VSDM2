@@ -1,8 +1,8 @@
-Instance: VSDMPatient-O567890128
+Instance: VSDMPatient-GKV-O567890128
 InstanceOf: VSDMPatient
 Title: "O567890128 Ortolan, Oliver"
 Description: "Versichertendaten O567890128 Ortolan, Oliver"
-Usage: #example
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 

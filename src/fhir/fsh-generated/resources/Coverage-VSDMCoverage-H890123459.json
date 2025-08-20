@@ -131,7 +131,7 @@
     ]
   },
   "beneficiary": {
-    "reference": "Patient/VSDMPatient-H890123459"
+    "reference": "Patient/VSDMPatient-GKV-H890123459"
   },
   "period": {
     "start": "1953-01-01",

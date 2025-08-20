@@ -1,8 +1,8 @@
-Instance: VSDMPatient-B234567895
+Instance: VSDMPatient-GKV-B234567895
 InstanceOf: VSDMPatient
 Title: "B234567895 Graf von und zu Buntspecht, Bernd Benjamin"
 Description: "Versichertendaten B234567895 Graf von und zu Buntspecht, Bernd Benjamin"
-Usage: #example
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 

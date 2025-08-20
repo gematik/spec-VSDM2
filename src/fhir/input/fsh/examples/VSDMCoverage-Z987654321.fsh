@@ -34,7 +34,7 @@ Usage: #example
     * end = "2025-12-31"
 * status = #active
 * type = $csVersicherungsart#GKV
-* beneficiary.reference = "Patient/VSDMPatient-Z987654321"
+* beneficiary.reference = "Patient/VSDMPatient-GKV-Z987654321"
 * period
   * start = "2000-01-01"
   * end = "2029-12-31"

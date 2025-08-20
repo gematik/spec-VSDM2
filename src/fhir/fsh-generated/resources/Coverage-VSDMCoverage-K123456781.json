@@ -101,7 +101,7 @@
     ]
   },
   "beneficiary": {
-    "reference": "Patient/VSDMPatient-K123456781"
+    "reference": "Patient/VSDMPatient-GKV-K123456781"
   },
   "period": {
     "start": "2022-04-01",

@@ -62,7 +62,7 @@
     ]
   },
   "beneficiary": {
-    "reference": "Patient/VSDMPatient-O567890128"
+    "reference": "Patient/VSDMPatient-GKV-O567890128"
   },
   "period": {
     "start": "2009-06-08"

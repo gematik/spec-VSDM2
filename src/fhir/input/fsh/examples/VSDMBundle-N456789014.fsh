@@ -11,8 +11,8 @@ Usage: #example
 * timestamp = "2025-07-14T15:16:17.890+01:00"
 * entry[DocumentInformation][+].fullUrl = "https://gematik.de/fhir/Composition/bd5c24ca-1a53-45d3-aeb3-7b7875f3750e"
 * entry[DocumentInformation][=].resource = VSDMComposition-N456789014
-* entry[VSDMPatient][+].fullUrl = "https://gematik.de/fhir/Patient/VSDMPatient-N456789014"
-* entry[VSDMPatient][=].resource = VSDMPatient-N456789014
+* entry[VSDMPatient][+].fullUrl = "https://gematik.de/fhir/Patient/VSDMPatient-GKV-N456789014"
+* entry[VSDMPatient][=].resource = VSDMPatient-GKV-N456789014
 * entry[VSDMCoverage][+].fullUrl = "https://gematik.de/fhir/Coverage/VSDMCoverage-N456789014"
 * entry[VSDMCoverage][=].resource = VSDMCoverage-N456789014
 * entry[VSDMPayorOrganization][+].fullUrl = "https://gematik.de/fhir/Organization/VSDMPayorOrganization-108028771"
@@ -35,7 +35,7 @@ Usage: #inline
 * author.identifier
   * system = "http://fhir.de/sid/arge-ik/iknr"
   * value = "108028771"
-* section[+].entry.reference = "Patient/VSDMPatient-N456789014"
+* section[+].entry.reference = "Patient/VSDMPatient-GKV-N456789014"
 * section[+].entry.reference = "Coverage/VSDMCoverage-N456789014"
 * section[+].entry.reference = "Organization/VSDMPayorOrganization-108028771"
 * section[+].entry.reference = "Organization/VSDMPayorOrganization-109083613"

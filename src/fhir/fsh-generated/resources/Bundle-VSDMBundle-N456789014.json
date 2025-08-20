@@ -47,7 +47,7 @@
           {
             "entry": [
               {
-                "reference": "Patient/VSDMPatient-N456789014"
+                "reference": "Patient/VSDMPatient-GKV-N456789014"
               }
             ]
           },
@@ -76,10 +76,10 @@
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-N456789014",
+      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-N456789014",
       "resource": {
         "resourceType": "Patient",
-        "id": "VSDMPatient-N456789014",
+        "id": "VSDMPatient-GKV-N456789014",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
@@ -250,7 +250,7 @@
           ]
         },
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-N456789014"
+          "reference": "Patient/VSDMPatient-GKV-N456789014"
         },
         "period": {
           "start": "2011-06-22"

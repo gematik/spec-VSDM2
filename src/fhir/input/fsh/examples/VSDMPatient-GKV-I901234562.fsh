@@ -1,8 +1,8 @@
-Instance: VSDMPatient-I901234562
+Instance: VSDMPatient-GKV-I901234562
 InstanceOf: VSDMPatient
 Title: "I901234562 Ibis, Ingrid"
 Description: "Versichertendaten I901234562 Ibis, Ingrid"
-Usage: #example
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 

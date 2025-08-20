@@ -70,7 +70,7 @@
     ]
   },
   "beneficiary": {
-    "reference": "Patient/VSDMPatient-B234567895"
+    "reference": "Patient/VSDMPatient-GKV-B234567895"
   },
   "period": {
     "start": "2011-04-01",

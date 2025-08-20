@@ -145,7 +145,7 @@
     ]
   },
   "beneficiary": {
-    "reference": "Patient/VSDMPatient-J012345677"
+    "reference": "Patient/VSDMPatient-GKV-J012345677"
   },
   "period": {
     "start": "1964-05-01"

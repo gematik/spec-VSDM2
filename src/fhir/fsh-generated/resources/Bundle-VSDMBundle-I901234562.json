@@ -47,7 +47,7 @@
           {
             "entry": [
               {
-                "reference": "Patient/VSDMPatient-I901234562"
+                "reference": "Patient/VSDMPatient-GKV-I901234562"
               }
             ]
           },
@@ -69,10 +69,10 @@
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-I901234562",
+      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-I901234562",
       "resource": {
         "resourceType": "Patient",
-        "id": "VSDMPatient-I901234562",
+        "id": "VSDMPatient-GKV-I901234562",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
@@ -241,7 +241,7 @@
           ]
         },
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-I901234562"
+          "reference": "Patient/VSDMPatient-GKV-I901234562"
         },
         "period": {
           "start": "1942-02-28",

@@ -102,7 +102,7 @@
     ]
   },
   "beneficiary": {
-    "reference": "Patient/VSDMPatient-G789012344"
+    "reference": "Patient/VSDMPatient-GKV-G789012344"
   },
   "period": {
     "start": "1974-02-12"

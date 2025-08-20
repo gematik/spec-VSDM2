@@ -83,7 +83,7 @@
     ]
   },
   "beneficiary": {
-    "reference": "Patient/VSDMPatient-L234567896"
+    "reference": "Patient/VSDMPatient-GKV-L234567896"
   },
   "period": {
     "start": "2022-07-02"

@@ -94,7 +94,7 @@
     ]
   },
   "beneficiary": {
-    "reference": "Patient/VSDMPatient-I901234562"
+    "reference": "Patient/VSDMPatient-GKV-I901234562"
   },
   "period": {
     "start": "1942-02-28",

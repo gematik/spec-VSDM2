@@ -1,8 +1,8 @@
-Instance: VSDMPatient-L234567896
+Instance: VSDMPatient-GKV-L234567896
 InstanceOf: VSDMPatient
 Title: "L234567896 Lachmöwe, Lisa"
 Description: "Versichertendaten L234567896 Lachmöwe, Lisa"
-Usage: #example
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
