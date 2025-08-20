@@ -15,7 +15,7 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes GKV z
     * Name -> "VSDMPayorOrganization:Hauptkostentraeger.name"
 
     * Kostentraegerlaendercode -> "VSDMPayorOrganization:Hauptkostentraeger.address.country"
-      "Hinweise zur Befüllung der Extensions beachten."
+      "Hinweise zur Befüllung der Extensions beachten. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverage-address-2 abgebildet."
 
     * Kostentraegerkennung -> "VSDMPayorOrganization:Hauptkostentraeger.identifier:IKNR"
 
@@ -30,7 +30,7 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes GKV z
     * Kostentraegerkennung -> "VSDMPayorOrganization:abrechnenderKostentraeger.identifier:IKNR"
 
   * WOP -> "VSDMCoverage.extension:WOP"
-    "Die KBV-Schlüsseltabelle wird ggf. durch ein VSDM-spezifisches ValueSet auf die zulässigen Werte eingeschränkt."
+    "Die KBV-Schlüsseltabelle wird ggf. durch ein VSDM-spezifisches ValueSet auf die zulässigen Werte eingeschränkt. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverage-wop-1 abgebildet."
 
   * BesonderePersonengruppe -> "VSDMCoverage.extension:besonderePersonengruppe"
     "Es werden die zweistelligen Werte aus der Schlüsseltabelle (mit führenden Nullen) verwendet."
@@ -48,6 +48,7 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes GKV z
     "Zur Abbildung werden die Standard-Felder der FHIR-Ressource verwendet."
     
     * Beginn -> "VSDMCoverage.period.start"
+      "Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverage-period-1 abgebildet."
 
     * Ende -> "VSDMCoverage.period.end"
       "Da der VSDM 2.0 Resource Server keine Kenntnis von der eingesetzten eGK haben kann, wird immer das Gültigkeitsende des Versicherungsverhältnisses gemeldet, wenn anwendbar."

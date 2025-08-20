@@ -1,8 +1,6 @@
 ValueSet: VSDMCoverageTypeVS
-Title: "Versicherungsarten für VSDM 2.0"
-Description: """
-    Dieses ValueSet stellt eine Einschränkung von [VersicherungsartDeBasisVS](http://fhir.de/ValueSet/versicherungsart-de-basis) auf die in VSDM 2.0 unterstützten Werte dar.
-  """
+Title: "Versicherungsart"
+Description: "Dieses ValueSet stellt eine Einschränkung von [VersicherungsartDeBasisVS](http://fhir.de/ValueSet/versicherungsart-de-basis) auf die in VSDM 2.0 unterstützten Werte dar."
 
 * insert Meta
 

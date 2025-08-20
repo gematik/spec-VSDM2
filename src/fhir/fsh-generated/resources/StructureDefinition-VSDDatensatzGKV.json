@@ -166,7 +166,7 @@
           {
             "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.gender.extension:other-amtlich",
-            "comment": "Diese Erweiterung nimmt die Geschlechtsangabe gemäß der geforderten Wertetabelle auf."
+            "comment": "Diese Erweiterung nimmt die Geschlechtsangabe gemäß der geforderten Wertetabelle auf. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverage-gender-1 abgebildet."
           }
         ]
       },
@@ -324,7 +324,7 @@
           {
             "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.address:PostfachAdresse.country",
-            "comment": "Hinweise zur Befüllung der Extensions beachten."
+            "comment": "Hinweise zur Befüllung der Extensions beachten. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverage-address-1 abgebildet."
           }
         ]
       },
@@ -402,7 +402,7 @@
           {
             "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.address.country",
-            "comment": "Hinweise zur Befüllung der Extensions beachten."
+            "comment": "Hinweise zur Befüllung der Extensions beachten. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverage-address-1 abgebildet."
           }
         ]
       },
@@ -534,7 +534,7 @@
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
             "map": "VSDMPayorOrganization:Hauptkostentraeger.address.country",
-            "comment": "Hinweise zur Befüllung der Extensions beachten."
+            "comment": "Hinweise zur Befüllung der Extensions beachten. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverage-address-2 abgebildet."
           }
         ]
       },
@@ -651,7 +651,7 @@
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
             "map": "VSDMCoverage.extension:WOP",
-            "comment": "Die KBV-Schlüsseltabelle wird ggf. durch ein VSDM-spezifisches ValueSet auf die zulässigen Werte eingeschränkt."
+            "comment": "Die KBV-Schlüsseltabelle wird ggf. durch ein VSDM-spezifisches ValueSet auf die zulässigen Werte eingeschränkt. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverage-wop-1 abgebildet."
           }
         ]
       },
@@ -770,7 +770,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.period.start"
+            "map": "VSDMCoverage.period.start",
+            "comment": "Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverage-period-1 abgebildet."
           }
         ]
       },

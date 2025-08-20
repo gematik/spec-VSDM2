@@ -3,7 +3,7 @@
   "status": "draft",
   "name": "VSDMCoverageTypeVS",
   "id": "VSDMCoverageTypeVS",
-  "title": "Versicherungsarten für VSDM 2.0",
+  "title": "Versicherungsart",
   "description": "Dieses ValueSet stellt eine Einschränkung von [VersicherungsartDeBasisVS](http://fhir.de/ValueSet/versicherungsart-de-basis) auf die in VSDM 2.0 unterstützten Werte dar.",
   "version": "1.0.0",
   "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMCoverageTypeVS",
