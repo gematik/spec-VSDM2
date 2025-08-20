@@ -22,6 +22,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
 * obeys VSDMCoverage-address-1 // GKV: Pflichtangabe Länderkennzeichen nach DEÜV im Patient
 * obeys VSDMCoverage-address-2 // GKV: Pflichtangabe Länderkennzeichen nach DEÜV im Kostenträger
 * obeys VSDMCoverage-wop-1     // GKV: Pflichtangabe Wohnortprinzip
+* obeys VSDMCoverage-period-1  // GKV: Pflichtangabe Versicherungsbeginn
 
 // Zuordnung aus Versicherungsdaten -> WOP
 * extension contains $extWOP named WOP 0..1 MS // zur Kardinalität siehe Invariante VSDMCoverage-wop-1
@@ -146,17 +147,17 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
 * beneficiary only Reference(VSDMPatient) 
 
 // Zuordnung aus Versicherungsdaten -> Versicherungsschutz
-* period 1..1 MS
+* period MS // zur Kardinalität siehe Invariante VSDMCoverage-period-1
   * ^short = "Gültigkeitszeitraum des Versicherungsschutzes"
   * ^definition = """
       Gibt den Beginn und, sofern anwendbar, das Ende des Versicherungsschutzes an.
     """
-  * start 1..1
+  * start // zur Kardinalität siehe Invariante VSDMCoverage-period-1
     * ^short = "Beginn des Versicherungsschutzes"
     * ^definition = """
         Gibt den Beginn des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an. 
       """
-  * end 0..1
+  * end
     * ^short = "Ende des Versicherungsschutzes"
     * ^definition = """
         Gibt das Ende des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an, wenn ein Endedatum festgelegt ist. 
@@ -209,4 +210,9 @@ Severity: #error
 Invariant: VSDMCoverage-wop-1
 Description: "Für GKV-Versicherte ist die Angabe des Wohnortprinzip-Kennzeichens erforderlich."
 Expression: "type.coding.code = 'GKV' implies extension('http://fhir.de/StructureDefinition/gkv/wop').exists()"
+Severity: #error
+
+Invariant: VSDMCoverage-period-1
+Description: "Für GKV-Versicherte ist die Angabe des Versicherungsbeginns erforderlich."
+Expression: "type.coding.code = 'GKV' implies period.start.exists()"
 Severity: #error

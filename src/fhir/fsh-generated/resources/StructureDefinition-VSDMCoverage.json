@@ -51,6 +51,13 @@
             "human": "Für GKV-Versicherte ist die Angabe des Wohnortprinzip-Kennzeichens erforderlich.",
             "expression": "type.coding.code = 'GKV' implies extension('http://fhir.de/StructureDefinition/gkv/wop').exists()",
             "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+          },
+          {
+            "key": "VSDMCoverage-period-1",
+            "severity": "error",
+            "human": "Für GKV-Versicherte ist die Angabe des Versicherungsbeginns erforderlich.",
+            "expression": "type.coding.code = 'GKV' implies period.start.exists()",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
           }
         ]
       },
@@ -367,15 +374,13 @@
         "path": "Coverage.period",
         "short": "Gültigkeitszeitraum des Versicherungsschutzes",
         "definition": "Gibt den Beginn und, sofern anwendbar, das Ende des Versicherungsschutzes an.",
-        "min": 1,
         "mustSupport": true
       },
       {
         "id": "Coverage.period.start",
         "path": "Coverage.period.start",
         "short": "Beginn des Versicherungsschutzes",
-        "definition": "Gibt den Beginn des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an. ",
-        "min": 1
+        "definition": "Gibt den Beginn des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an. "
       },
       {
         "id": "Coverage.period.end",
