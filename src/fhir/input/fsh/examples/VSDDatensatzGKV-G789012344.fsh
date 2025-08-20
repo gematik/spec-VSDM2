@@ -1,7 +1,7 @@
 Instance: VSDDatensatzGKV-G789012344
 InstanceOf: VSDDatensatzGKV
-Title: "G789012344 Edle von der Graugans, Gabriele"
-Description: "Testdatensatz G789012344 Edle von der Graugans, Gabriele"
+Title: "G789012344 Edle von der Graugans, Gabriele (GKV)"
+Description: "Testdatensatz G789012344 Edle von der Graugans, Gabriele (GKV)"
 Usage: #inline // to prevent SUSHI from generating JSON files that confuse many other tools downstream
 
 * Versichertendaten

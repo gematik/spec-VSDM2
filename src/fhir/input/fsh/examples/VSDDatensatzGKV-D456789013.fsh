@@ -1,7 +1,7 @@
 Instance: VSDDatensatzGKV-D456789013
 InstanceOf: VSDDatensatzGKV
-Title: "D456789013 Dohle, Dara"
-Description: "Testdatensatz D456789013 Dohle, Dara"
+Title: "D456789013 Dohle, Dara (GKV)"
+Description: "Testdatensatz D456789013 Dohle, Dara (GKV)"
 Usage: #inline // to prevent SUSHI from generating JSON files that confuse many other tools downstream
 
 * Versichertendaten

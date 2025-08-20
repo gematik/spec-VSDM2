@@ -1,7 +1,7 @@
 Instance: VSDMBundle-GKV-J012345677
 InstanceOf: VSDMBundle
-Title: "J012345677 Junko, Jens-Jörg"
-Description: "VSDM 2.0-Daten J012345677 Junko, Jens-Jörg"
+Title: "J012345677 Junko, Jens-Jörg (GKV)"
+Description: "VSDM 2.0-Daten J012345677 Junko, Jens-Jörg (GKV)"
 Usage: #example
 
 * meta.profile[0] = Canonical(VSDMBundle|1.0.0)

@@ -1,7 +1,7 @@
 Instance: VSDMBundle-GKV-E567890127
 InstanceOf: VSDMBundle
-Title: "E567890127 Freifrau an der Elster, Elke"
-Description: "VSDM 2.0-Daten E567890127 Freifrau an der Elster, Elke"
+Title: "E567890127 Freifrau an der Elster, Elke (GKV)"
+Description: "VSDM 2.0-Daten E567890127 Freifrau an der Elster, Elke (GKV)"
 Usage: #example
 
 * meta.profile[0] = Canonical(VSDMBundle|1.0.0)

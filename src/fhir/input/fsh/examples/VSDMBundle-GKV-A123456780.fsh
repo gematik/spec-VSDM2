@@ -1,7 +1,7 @@
 Instance: VSDMBundle-GKV-A123456780
 InstanceOf: VSDMBundle
-Title: "A123456780 Amsel, Andrea"
-Description: "VSDM 2.0-Daten A123456780 Amsel, Andrea"
+Title: "A123456780 Amsel, Andrea (GKV)"
+Description: "VSDM 2.0-Daten A123456780 Amsel, Andrea (GKV)"
 Usage: #example
 
 * meta.profile[0] = Canonical(VSDMBundle|1.0.0)

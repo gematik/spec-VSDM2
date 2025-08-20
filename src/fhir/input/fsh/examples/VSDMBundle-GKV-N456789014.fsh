@@ -1,7 +1,7 @@
 Instance: VSDMBundle-GKV-N456789014
 InstanceOf: VSDMBundle
-Title: "N456789014 Nachtigall, Nina Nicole"
-Description: "VSDM 2.0-Daten N456789014 Nachtigall, Nina Nicole"
+Title: "N456789014 Nachtigall, Nina Nicole (GKV)"
+Description: "VSDM 2.0-Daten N456789014 Nachtigall, Nina Nicole (GKV)"
 Usage: #example
 
 * meta.profile[0] = Canonical(VSDMBundle|1.0.0)

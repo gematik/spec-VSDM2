@@ -1,7 +1,7 @@
 Instance: VSDMPatient-GKV-E567890127
 InstanceOf: VSDMPatient
-Title: "E567890127 Freifrau an der Elster, Elke"
-Description: "Versichertendaten E567890127 Freifrau an der Elster, Elke"
+Title: "E567890127 Freifrau an der Elster, Elke (GKV)"
+Description: "Versichertendaten E567890127 Freifrau an der Elster, Elke (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)

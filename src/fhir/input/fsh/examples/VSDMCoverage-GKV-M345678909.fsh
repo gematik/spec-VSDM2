@@ -1,7 +1,7 @@
 Instance: VSDMCoverage-GKV-M345678909
 InstanceOf: VSDMCoverage
-Title: "M345678909 Mittelspecht, Michael-Martin"
-Description: "Versicherungsdaten M345678909 Mittelspecht, Michael-Martin"
+Title: "M345678909 Mittelspecht, Michael-Martin (GKV)"
+Description: "Versicherungsdaten M345678909 Mittelspecht, Michael-Martin (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)

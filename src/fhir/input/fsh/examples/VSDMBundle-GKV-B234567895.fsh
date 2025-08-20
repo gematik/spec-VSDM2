@@ -1,7 +1,7 @@
 Instance: VSDMBundle-GKV-B234567895
 InstanceOf: VSDMBundle
-Title: "B234567895 Graf von und zu Buntspecht, Bernd Benjamin"
-Description: "VSDM 2.0-Daten B234567895 Graf von und zu Buntspecht, Bernd Benjamin"
+Title: "B234567895 Graf von und zu Buntspecht, Bernd Benjamin (GKV)"
+Description: "VSDM 2.0-Daten B234567895 Graf von und zu Buntspecht, Bernd Benjamin (GKV)"
 Usage: #example
 
 * meta.profile[0] = Canonical(VSDMBundle|1.0.0)

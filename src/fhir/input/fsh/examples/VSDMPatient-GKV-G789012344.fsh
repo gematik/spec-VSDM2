@@ -1,7 +1,7 @@
 Instance: VSDMPatient-GKV-G789012344
 InstanceOf: VSDMPatient
-Title: "G789012344 Edle von der Graugans, Gabriele"
-Description: "Versichertendaten G789012344 Edle von der Graugans, Gabriele"
+Title: "G789012344 Edle von der Graugans, Gabriele (GKV)"
+Description: "Versichertendaten G789012344 Edle von der Graugans, Gabriele (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)

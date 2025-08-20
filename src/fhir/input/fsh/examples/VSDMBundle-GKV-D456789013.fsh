@@ -1,7 +1,7 @@
 Instance: VSDMBundle-GKV-D456789013
 InstanceOf: VSDMBundle
-Title: "D456789013 Dohle, Dara"
-Description: "VSDM 2.0-Daten D456789013 Dohle, Dara"
+Title: "D456789013 Dohle, Dara (GKV)"
+Description: "VSDM 2.0-Daten D456789013 Dohle, Dara (GKV)"
 Usage: #example
 
 * meta.profile[0] = Canonical(VSDMBundle|1.0.0)

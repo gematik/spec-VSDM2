@@ -1,7 +1,7 @@
 Instance: VSDMCoverage-GKV-D456789013
 InstanceOf: VSDMCoverage
-Title: "D456789013 Dohle, Dara"
-Description: "Versicherungsdaten D456789013 Dohle, Dara"
+Title: "D456789013 Dohle, Dara (GKV)"
+Description: "Versicherungsdaten D456789013 Dohle, Dara (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)

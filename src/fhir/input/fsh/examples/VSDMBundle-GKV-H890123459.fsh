@@ -1,7 +1,7 @@
 Instance: VSDMBundle-GKV-H890123459
 InstanceOf: VSDMBundle
-Title: "H890123459 vorm Habicht, Hans"
-Description: "VSDM 2.0-Daten H890123459 vorm Habicht, Hans"
+Title: "H890123459 vorm Habicht, Hans (GKV)"
+Description: "VSDM 2.0-Daten H890123459 vorm Habicht, Hans (GKV)"
 Usage: #example
 
 * meta.profile[0] = Canonical(VSDMBundle|1.0.0)

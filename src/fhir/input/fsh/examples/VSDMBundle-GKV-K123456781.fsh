@@ -1,7 +1,7 @@
 Instance: VSDMBundle-GKV-K123456781
 InstanceOf: VSDMBundle
-Title: "K123456781 Kiebitz, Karin"
-Description: "VSDM 2.0-Daten K123456781 Kiebitz, Karin"
+Title: "K123456781 Kiebitz, Karin (GKV)"
+Description: "VSDM 2.0-Daten K123456781 Kiebitz, Karin (GKV)"
 Usage: #example
 
 * meta.profile[0] = Canonical(VSDMBundle|1.0.0)

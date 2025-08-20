@@ -1,7 +1,7 @@
 Instance: VSDMPatient-GKV-N456789014
 InstanceOf: VSDMPatient
-Title: "N456789014 Nachtigall, Nina Nicole"
-Description: "Versichertendaten N456789014 Nachtigall, Nina Nicole"
+Title: "N456789014 Nachtigall, Nina Nicole (GKV)"
+Description: "Versichertendaten N456789014 Nachtigall, Nina Nicole (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)

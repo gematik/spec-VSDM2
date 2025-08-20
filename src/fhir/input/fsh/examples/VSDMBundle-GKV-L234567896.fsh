@@ -1,7 +1,7 @@
 Instance: VSDMBundle-GKV-L234567896
 InstanceOf: VSDMBundle
-Title: "L234567896 Lachmöwe, Lisa"
-Description: "VSDM 2.0-Daten L234567896 Lachmöwe, Lisa"
+Title: "L234567896 Lachmöwe, Lisa (GKV)"
+Description: "VSDM 2.0-Daten L234567896 Lachmöwe, Lisa (GKV)"
 Usage: #example
 
 * meta.profile[0] = Canonical(VSDMBundle|1.0.0)

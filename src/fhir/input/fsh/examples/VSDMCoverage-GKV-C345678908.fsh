@@ -1,7 +1,7 @@
 Instance: VSDMCoverage-GKV-C345678908
 InstanceOf: VSDMCoverage
-Title: "C345678908 Carolinataube, Charlie"
-Description: "Versicherungsdaten C345678908 Carolinataube, Charlie"
+Title: "C345678908 Carolinataube, Charlie (GKV)"
+Description: "Versicherungsdaten C345678908 Carolinataube, Charlie (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)

@@ -1,7 +1,7 @@
 Instance: VSDMBundle-GKV-F678901231
 InstanceOf: VSDMBundle
-Title: "F678901231 von Fasan, Frank Florian"
-Description: "VSDM 2.0-Daten F678901231 von Fasan, Frank Florian"
+Title: "F678901231 von Fasan, Frank Florian (GKV)"
+Description: "VSDM 2.0-Daten F678901231 von Fasan, Frank Florian (GKV)"
 Usage: #example
 
 * meta.profile[0] = Canonical(VSDMBundle|1.0.0)

@@ -1,7 +1,7 @@
 Instance: VSDMCoverage-GKV-E567890127
 InstanceOf: VSDMCoverage
-Title: "E567890127 Freifrau an der Elster, Elke"
-Description: "Versicherungsdaten E567890127 Freifrau an der Elster, Elke"
+Title: "E567890127 Freifrau an der Elster, Elke (GKV)"
+Description: "Versicherungsdaten E567890127 Freifrau an der Elster, Elke (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)

@@ -1,7 +1,7 @@
 Instance: VSDMPatient-GKV-C345678908
 InstanceOf: VSDMPatient
-Title: "C345678908 Carolinataube, Charlie"
-Description: "Versichertendaten C345678908 Carolinataube, Charlie"
+Title: "C345678908 Carolinataube, Charlie (GKV)"
+Description: "Versichertendaten C345678908 Carolinataube, Charlie (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)

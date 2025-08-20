@@ -1,7 +1,7 @@
 Instance: VSDMBundle-GKV-O567890128
 InstanceOf: VSDMBundle
-Title: "O567890128 Ortolan, Oliver"
-Description: "VSDM 2.0-Daten O567890128 Ortolan, Oliver"
+Title: "O567890128 Ortolan, Oliver (GKV)"
+Description: "VSDM 2.0-Daten O567890128 Ortolan, Oliver (GKV)"
 Usage: #example
 
 * meta.profile[0] = Canonical(VSDMBundle|1.0.0)

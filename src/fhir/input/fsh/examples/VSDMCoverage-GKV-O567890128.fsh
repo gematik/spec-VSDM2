@@ -1,7 +1,7 @@
 Instance: VSDMCoverage-GKV-O567890128
 InstanceOf: VSDMCoverage
-Title: "O567890128 Ortolan, Oliver"
-Description: "Versicherungsdaten O567890128 Ortolan, Oliver"
+Title: "O567890128 Ortolan, Oliver (GKV)"
+Description: "Versicherungsdaten O567890128 Ortolan, Oliver (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)

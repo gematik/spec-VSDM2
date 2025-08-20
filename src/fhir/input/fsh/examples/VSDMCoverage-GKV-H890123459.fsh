@@ -1,7 +1,7 @@
 Instance: VSDMCoverage-GKV-H890123459
 InstanceOf: VSDMCoverage
-Title: "H890123459 vorm Habicht, Hans"
-Description: "Versicherungsdaten H890123459 vorm Habicht, Hans"
+Title: "H890123459 vorm Habicht, Hans (GKV)"
+Description: "Versicherungsdaten H890123459 vorm Habicht, Hans (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)

@@ -1,7 +1,7 @@
 Instance: VSDMCoverage-GKV-B234567895
 InstanceOf: VSDMCoverage
-Title: "B234567895 Graf von und zu Buntspecht, Bernd Benjamin"
-Description: "Versicherungsdaten B234567895 Graf von und zu Buntspecht, Bernd Benjamin"
+Title: "B234567895 Graf von und zu Buntspecht, Bernd Benjamin (GKV)"
+Description: "Versicherungsdaten B234567895 Graf von und zu Buntspecht, Bernd Benjamin (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)

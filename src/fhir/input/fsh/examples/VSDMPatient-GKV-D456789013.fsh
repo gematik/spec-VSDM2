@@ -1,7 +1,7 @@
 Instance: VSDMPatient-GKV-D456789013
 InstanceOf: VSDMPatient
-Title: "D456789013 Dohle, Dara"
-Description: "Versichertendaten D456789013 Dohle, Dara"
+Title: "D456789013 Dohle, Dara (GKV)"
+Description: "Versichertendaten D456789013 Dohle, Dara (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)

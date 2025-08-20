@@ -1,7 +1,7 @@
 Instance: VSDMBundle-GKV-Z987654321
 InstanceOf: VSDMBundle
-Title: "Z987654321 Graf von und zu Zaunkönig, Zacharias"
-Description: "VSDM 2.0-Daten Z987654321 Graf von und zu Zaunkönig, Zacharias"
+Title: "Z987654321 Graf von und zu Zaunkönig, Zacharias (GKV)"
+Description: "VSDM 2.0-Daten Z987654321 Graf von und zu Zaunkönig, Zacharias (GKV)"
 Usage: #example
 
 * meta.profile[0] = Canonical(VSDMBundle|1.0.0)

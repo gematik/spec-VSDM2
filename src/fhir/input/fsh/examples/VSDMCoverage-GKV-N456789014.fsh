@@ -1,7 +1,7 @@
 Instance: VSDMCoverage-GKV-N456789014
 InstanceOf: VSDMCoverage
-Title: "N456789014 Nachtigall, Nina Nicole"
-Description: "Versicherungsdaten N456789014 Nachtigall, Nina Nicole"
+Title: "N456789014 Nachtigall, Nina Nicole (GKV)"
+Description: "Versicherungsdaten N456789014 Nachtigall, Nina Nicole (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)

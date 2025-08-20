@@ -1,7 +1,7 @@
 Instance: VSDMCoverage-GKV-K123456781
 InstanceOf: VSDMCoverage
-Title: "K123456781 Kiebitz, Karin"
-Description: "Versicherungsdaten K123456781 Kiebitz, Karin"
+Title: "K123456781 Kiebitz, Karin (GKV)"
+Description: "Versicherungsdaten K123456781 Kiebitz, Karin (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)

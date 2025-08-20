@@ -1,7 +1,7 @@
 Instance: VSDMPatient-GKV-Z987654321
 InstanceOf: VSDMPatient
-Title: "Z987654321 Graf von und zu Zaunkönig, Zacharias"
-Description: "Versichertendaten Z987654321 Graf von und zu Zaunkönig, Zacharias"
+Title: "Z987654321 Graf von und zu Zaunkönig, Zacharias (GKV)"
+Description: "Versichertendaten Z987654321 Graf von und zu Zaunkönig, Zacharias (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)

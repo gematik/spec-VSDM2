@@ -1,7 +1,7 @@
 Instance: VSDMCoverage-GKV-I901234562
 InstanceOf: VSDMCoverage
-Title: "I901234562 Ibis, Ingrid"
-Description: "Versicherungsdaten I901234562 Ibis, Ingrid"
+Title: "I901234562 Ibis, Ingrid (GKV)"
+Description: "Versicherungsdaten I901234562 Ibis, Ingrid (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)

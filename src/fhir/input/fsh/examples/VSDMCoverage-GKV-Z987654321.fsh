@@ -1,7 +1,7 @@
 Instance: VSDMCoverage-GKV-Z987654321
 InstanceOf: VSDMCoverage
-Title: "Z987654321 Graf von und zu Zaunkönig, Zacharias"
-Description: "Versicherungsdaten Z987654321 Graf von und zu Zaunkönig, Zacharias"
+Title: "Z987654321 Graf von und zu Zaunkönig, Zacharias (GKV)"
+Description: "Versicherungsdaten Z987654321 Graf von und zu Zaunkönig, Zacharias (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)

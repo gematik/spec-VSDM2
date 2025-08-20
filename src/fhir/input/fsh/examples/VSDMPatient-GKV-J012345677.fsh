@@ -1,7 +1,7 @@
 Instance: VSDMPatient-GKV-J012345677
 InstanceOf: VSDMPatient
-Title: "J012345677 Junko, Jens-Jörg"
-Description: "Versichertendaten J012345677 Junko, Jens-Jörg"
+Title: "J012345677 Junko, Jens-Jörg (GKV)"
+Description: "Versichertendaten J012345677 Junko, Jens-Jörg (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)

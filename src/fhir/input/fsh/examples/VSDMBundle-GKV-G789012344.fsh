@@ -1,7 +1,7 @@
 Instance: VSDMBundle-GKV-G789012344
 InstanceOf: VSDMBundle
-Title: "G789012344 Edle von der Graugans, Gabriele"
-Description: "VSDM 2.0-Daten G789012344 Edle von der Graugans, Gabriele"
+Title: "G789012344 Edle von der Graugans, Gabriele (GKV)"
+Description: "VSDM 2.0-Daten G789012344 Edle von der Graugans, Gabriele (GKV)"
 Usage: #example
 
 * meta.profile[0] = Canonical(VSDMBundle|1.0.0)

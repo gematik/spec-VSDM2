@@ -1,7 +1,7 @@
 Instance: VSDMBundle-GKV-C345678908
 InstanceOf: VSDMBundle
-Title: "C345678908 Carolinataube, Charlie"
-Description: "VSDM 2.0-Daten C345678908 Carolinataube, Charlie"
+Title: "C345678908 Carolinataube, Charlie (GKV)"
+Description: "VSDM 2.0-Daten C345678908 Carolinataube, Charlie (GKV)"
 Usage: #example
 
 * meta.profile[0] = Canonical(VSDMBundle|1.0.0)

@@ -1,7 +1,7 @@
 Instance: VSDMPatient-GKV-F678901231
 InstanceOf: VSDMPatient
-Title: "F678901231 von Fasan, Frank Florian"
-Description: "Versichertendaten F678901231 von Fasan, Frank Florian"
+Title: "F678901231 von Fasan, Frank Florian (GKV)"
+Description: "Versichertendaten F678901231 von Fasan, Frank Florian (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)

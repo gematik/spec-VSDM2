@@ -1,7 +1,7 @@
 Instance: VSDMBundle-GKV-I901234562
 InstanceOf: VSDMBundle
-Title: "I901234562 Ibis, Ingrid"
-Description: "VSDM 2.0-Daten I901234562 Ibis, Ingrid"
+Title: "I901234562 Ibis, Ingrid (GKV)"
+Description: "VSDM 2.0-Daten I901234562 Ibis, Ingrid (GKV)"
 Usage: #example
 
 * meta.profile[0] = Canonical(VSDMBundle|1.0.0)

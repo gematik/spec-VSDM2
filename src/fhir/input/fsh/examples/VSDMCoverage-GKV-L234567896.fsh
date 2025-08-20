@@ -1,7 +1,7 @@
 Instance: VSDMCoverage-GKV-L234567896
 InstanceOf: VSDMCoverage
-Title: "L234567896 Lachmöwe, Lisa"
-Description: "Versicherungsdaten L234567896 Lachmöwe, Lisa"
+Title: "L234567896 Lachmöwe, Lisa (GKV)"
+Description: "Versicherungsdaten L234567896 Lachmöwe, Lisa (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)

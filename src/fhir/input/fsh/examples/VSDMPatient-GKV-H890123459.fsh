@@ -1,7 +1,7 @@
 Instance: VSDMPatient-GKV-H890123459
 InstanceOf: VSDMPatient
-Title: "H890123459 vorm Habicht, Hans"
-Description: "Versichertendaten H890123459 vorm Habicht, Hans"
+Title: "H890123459 vorm Habicht, Hans (GKV)"
+Description: "Versichertendaten H890123459 vorm Habicht, Hans (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)

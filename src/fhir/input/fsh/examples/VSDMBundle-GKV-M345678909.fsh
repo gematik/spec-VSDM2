@@ -1,7 +1,7 @@
 Instance: VSDMBundle-GKV-M345678909
 InstanceOf: VSDMBundle
-Title: "M345678909 Mittelspecht, Michael-Martin"
-Description: "VSDM 2.0-Daten M345678909 Mittelspecht, Michael-Martin"
+Title: "M345678909 Mittelspecht, Michael-Martin (GKV)"
+Description: "VSDM 2.0-Daten M345678909 Mittelspecht, Michael-Martin (GKV)"
 Usage: #example
 
 * meta.profile[0] = Canonical(VSDMBundle|1.0.0)

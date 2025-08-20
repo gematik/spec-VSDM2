@@ -1,7 +1,7 @@
 Instance: VSDDatensatzGKV-O567890128
 InstanceOf: VSDDatensatzGKV
-Title: "O567890128 Ortolan, Oliver"
-Description: "Testdatensatz O567890128 Ortolan, Oliver"
+Title: "O567890128 Ortolan, Oliver (GKV)"
+Description: "Testdatensatz O567890128 Ortolan, Oliver (GKV)"
 Usage: #inline // to prevent SUSHI from generating JSON files that confuse many other tools downstream
 
 * Versichertendaten

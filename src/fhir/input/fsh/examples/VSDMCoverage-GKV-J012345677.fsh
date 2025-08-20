@@ -1,7 +1,7 @@
 Instance: VSDMCoverage-GKV-J012345677
 InstanceOf: VSDMCoverage
-Title: "J012345677 Junko, Jens-Jörg"
-Description: "Versicherungsdaten J012345677 Junko, Jens-Jörg"
+Title: "J012345677 Junko, Jens-Jörg (GKV)"
+Description: "Versicherungsdaten J012345677 Junko, Jens-Jörg (GKV)"
 Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)

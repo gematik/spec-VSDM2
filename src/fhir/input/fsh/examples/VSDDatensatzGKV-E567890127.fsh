@@ -1,7 +1,7 @@
 Instance: VSDDatensatzGKV-E567890127
 InstanceOf: VSDDatensatzGKV
-Title: "E567890127 Freifrau an der Elster, Elke"
-Description: "Testdatensatz E567890127 Freifrau an der Elster, Elke"
+Title: "E567890127 Freifrau an der Elster, Elke (GKV)"
+Description: "Testdatensatz E567890127 Freifrau an der Elster, Elke (GKV)"
 Usage: #inline // to prevent SUSHI from generating JSON files that confuse many other tools downstream
 
 * Versichertendaten
