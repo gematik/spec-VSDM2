@@ -132,6 +132,13 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
     """
     * value[x] 1..1
 
+// Versicherungsart (GKV, PKV)
+* type MS
+  * ^comment = """
+      Im VSDM 2.0 sind nur die Werte aus dem eingeschränkten Wertevorrat zulässig.
+    """
+* type from VSDMCoverageTypeVS (required)
+
 // Bezug zum Versicherten
 * beneficiary only Reference(VSDMPatient) 
 

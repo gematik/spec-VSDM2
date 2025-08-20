@@ -320,6 +320,16 @@
         "min": 1
       },
       {
+        "id": "Coverage.type",
+        "path": "Coverage.type",
+        "comment": "Im VSDM 2.0 sind nur die Werte aus dem eingeschränkten Wertevorrat zulässig.",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMCoverageTypeVS"
+        }
+      },
+      {
         "id": "Coverage.beneficiary",
         "path": "Coverage.beneficiary",
         "type": [

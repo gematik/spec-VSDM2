@@ -1,0 +1,30 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "VSDMCoverageTypeVS",
+  "id": "VSDMCoverageTypeVS",
+  "title": "Versicherungsarten für VSDM 2.0",
+  "description": "Dieses ValueSet stellt eine Einschränkung von [VersicherungsartDeBasisVS](http://fhir.de/ValueSet/versicherungsart-de-basis) auf die in VSDM 2.0 unterstützten Werte dar.",
+  "version": "1.0.0",
+  "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMCoverageTypeVS",
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "date": "2023-12-31",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+        "concept": [
+          {
+            "code": "GKV",
+            "display": "gesetzliche Krankenversicherung"
+          },
+          {
+            "code": "PKV",
+            "display": "private Krankenversicherung"
+          }
+        ]
+      }
+    ]
+  }
+}
