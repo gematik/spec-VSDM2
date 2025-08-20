@@ -176,20 +176,20 @@
         },
         "extension": [
           {
-            "url": "http://fhir.de/StructureDefinition/gkv/wop",
-            "valueCoding": {
-              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
-              "code": "98",
-              "display": "Sachsen"
-            }
-          },
-          {
             "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
             "valueCoding": {
               "code": "1",
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
               "display": "Mitglieder"
             }
+          },
+          {
+            "valueCoding": {
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+              "code": "98",
+              "display": "Sachsen"
+            },
+            "url": "http://fhir.de/StructureDefinition/gkv/wop"
           },
           {
             "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",

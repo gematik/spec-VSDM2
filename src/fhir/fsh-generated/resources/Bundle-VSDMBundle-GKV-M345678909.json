@@ -164,20 +164,20 @@
         },
         "extension": [
           {
-            "url": "http://fhir.de/StructureDefinition/gkv/wop",
-            "valueCoding": {
-              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
-              "code": "71",
-              "display": "Bayern"
-            }
-          },
-          {
             "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
             "valueCoding": {
               "code": "3",
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
               "display": "Familienangehoerige"
             }
+          },
+          {
+            "valueCoding": {
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+              "code": "71",
+              "display": "Bayern"
+            },
+            "url": "http://fhir.de/StructureDefinition/gkv/wop"
           },
           {
             "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",

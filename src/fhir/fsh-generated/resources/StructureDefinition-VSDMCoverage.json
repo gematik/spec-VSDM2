@@ -44,6 +44,13 @@
             "human": "Für GKV-Versicherte ist die Angabe des Länderkennzeichens in Adressen des Kostenträgers erforderlich.",
             "expression": "type.coding.code = 'GKV' implies payor.all(resolve().address.all(country.extension('https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen').exists()))",
             "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+          },
+          {
+            "key": "VSDMCoverage-wop-1",
+            "severity": "error",
+            "human": "Für GKV-Versicherte ist die Angabe des Wohnortprinzip-Kennzeichens erforderlich.",
+            "expression": "type.coding.code = 'GKV' implies extension('http://fhir.de/StructureDefinition/gkv/wop').exists()",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
           }
         ]
       },
@@ -60,7 +67,7 @@
           "ordered": false,
           "rules": "open"
         },
-        "min": 2
+        "min": 1
       },
       {
         "id": "Coverage.extension:WOP",
@@ -69,8 +76,8 @@
         "short": "Wohnortprinzip (WOP)",
         "definition": "Kennzeichen zur Umsetzung des Wohnortprinzips (WOP).",
         "comment": "Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html",
-        "requirements": "Das Kennzeichen WOP ist gemäss § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemäss Artikel 2 § 2 Abs. 2 des Gesetzes zur Einführung des Wohnortprinzips bei Honorarvereinbarungen für Ärzte und Zahnärzte und zur Krankenversichertenkarte gemäss § 291 Abs. 2 Fünftes Sozialgesetzbuch (SGB V) erforderlich.",
-        "min": 1,
+        "requirements": "Das Kennzeichen WOP ist für GKV-Patienten gemäss § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemäss Artikel 2 § 2 Abs. 2 des Gesetzes zur Einführung des Wohnortprinzips bei Honorarvereinbarungen für Ärzte und Zahnärzte und zur Krankenversichertenkarte gemäss § 291 Abs. 2 Fünftes Sozialgesetzbuch (SGB V) erforderlich.",
+        "min": 0,
         "max": "1",
         "type": [
           {

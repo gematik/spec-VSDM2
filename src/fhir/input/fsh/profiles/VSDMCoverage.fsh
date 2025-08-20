@@ -21,9 +21,10 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
 * obeys VSDMCoverage-gender-1  // GKV: Pflichtangabe Geschlecht
 * obeys VSDMCoverage-address-1 // GKV: Pflichtangabe Länderkennzeichen nach DEÜV im Patient
 * obeys VSDMCoverage-address-2 // GKV: Pflichtangabe Länderkennzeichen nach DEÜV im Kostenträger
+* obeys VSDMCoverage-wop-1     // GKV: Pflichtangabe Wohnortprinzip
 
 // Zuordnung aus Versicherungsdaten -> WOP
-* extension contains $extWOP named WOP 1..1 MS
+* extension contains $extWOP named WOP 0..1 MS // zur Kardinalität siehe Invariante VSDMCoverage-wop-1
 * extension[wop]
   * ^short = "Wohnortprinzip (WOP)"
   * ^definition = """
@@ -33,7 +34,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
       Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html
     """
   * ^requirements = """
-      Das Kennzeichen WOP ist gemäss § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemäss Artikel 2 § 2 Abs. 2 des Gesetzes zur Einführung des Wohnortprinzips bei Honorarvereinbarungen für Ärzte und Zahnärzte und zur Krankenversichertenkarte gemäss § 291 Abs. 2 Fünftes Sozialgesetzbuch (SGB V) erforderlich.
+      Das Kennzeichen WOP ist für GKV-Patienten gemäss § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemäss Artikel 2 § 2 Abs. 2 des Gesetzes zur Einführung des Wohnortprinzips bei Honorarvereinbarungen für Ärzte und Zahnärzte und zur Krankenversichertenkarte gemäss § 291 Abs. 2 Fünftes Sozialgesetzbuch (SGB V) erforderlich.
     """
   * value[x] from VSDMWohnortprinzipVS (required)
   * valueCoding.system = $csWOP (exactly)
@@ -203,4 +204,9 @@ Severity: #error
 Invariant: VSDMCoverage-address-2
 Description: "Für GKV-Versicherte ist die Angabe des Länderkennzeichens in Adressen des Kostenträgers erforderlich."
 Expression: "type.coding.code = 'GKV' implies payor.all(resolve().address.all(country.extension('https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen').exists()))"
+Severity: #error
+
+Invariant: VSDMCoverage-wop-1
+Description: "Für GKV-Versicherte ist die Angabe des Wohnortprinzip-Kennzeichens erforderlich."
+Expression: "type.coding.code = 'GKV' implies extension('http://fhir.de/StructureDefinition/gkv/wop').exists()"
 Severity: #error
