@@ -138,8 +138,7 @@
         "path": "Patient.gender",
         "short": "Administrative Geschlechtsangabe (FHIR-Kodierung)",
         "definition": "Administrative Geschlechtsangabe gemäß den Unterlagen des Kostenträgers, kodiert nach FHIR-Standard.",
-        "comment": "Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht.",
-        "min": 1
+        "comment": "Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht."
       },
       {
         "id": "Patient.gender.extension:other-amtlich",

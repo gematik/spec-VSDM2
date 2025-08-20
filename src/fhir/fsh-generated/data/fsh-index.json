@@ -189,7 +189,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
-    "endLine": 177
+    "endLine": 180
   },
   {
     "outputFile": "StructureDefinition-VSDMDMPTeilnahme.json",

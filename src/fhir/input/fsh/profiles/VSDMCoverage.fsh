@@ -17,6 +17,9 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
       Die Struktur wird unabhängig von der Versicherungsart (GKV/PKV) definiert.
     """
 
+// Invarianten auf Strukturebene
+* obeys VSDMCoverage-gender-1 // GKV: Pflichtangabe Geschlecht
+
 // Zuordnung aus Versicherungsdaten -> WOP
 * extension contains $extWOP named WOP 1..1 MS
 * extension[wop]
@@ -175,3 +178,10 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
 * payor contains abrechnenderKostentraeger 0..1 MS
 * payor[abrechnenderKostentraeger] only Reference(VSDMPayorOrganization)
   * extension[kostentraegerRolle].valueCoding = VSDMKostentraegerRolleCS#A "abrechnender Kostenträger"
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Invariant: VSDMCoverage-gender-1
+Description: "Für GKV-Versicherte ist die Angabe des Geschlechts erforderlich."
+Expression: "type.coding.code = 'GKV' implies beneficiary.resolve().gender.exists()"
+Severity: #error

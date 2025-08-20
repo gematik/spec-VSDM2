@@ -22,7 +22,16 @@
         "id": "Coverage",
         "path": "Coverage",
         "definition": "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0",
-        "comment": "Die Struktur wird unabhängig von der Versicherungsart (GKV/PKV) definiert."
+        "comment": "Die Struktur wird unabhängig von der Versicherungsart (GKV/PKV) definiert.",
+        "constraint": [
+          {
+            "key": "VSDMCoverage-gender-1",
+            "severity": "error",
+            "human": "Für GKV-Versicherte ist die Angabe des Geschlechts erforderlich.",
+            "expression": "type.coding.code = 'GKV' implies beneficiary.resolve().gender.exists()",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+          }
+        ]
       },
       {
         "id": "Coverage.extension",
