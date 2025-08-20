@@ -30,6 +30,13 @@
             "human": "Für GKV-Versicherte ist die Angabe des Geschlechts erforderlich.",
             "expression": "type.coding.code = 'GKV' implies beneficiary.resolve().gender.exists()",
             "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+          },
+          {
+            "key": "VSDMCoverage-address-1",
+            "severity": "error",
+            "human": "Für GKV-Versicherte ist die Angabe des Länderkennzeichens in Adressen erforderlich.",
+            "expression": "type.coding.code = 'GKV' implies beneficiary.resolve().address.all(country.extension('https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen').exists())",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
           }
         ]
       },

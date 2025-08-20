@@ -189,7 +189,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
         Die Kodierung ist durch den FHIR-Standard empfohlen, aber nicht erzwungen. 
         Durch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.
       """
-    * extension contains VSDMLaenderkennzeichen named Laenderkennzeichen 1..1 MS
+    * extension contains VSDMLaenderkennzeichen named Laenderkennzeichen 0..1 MS // zur Kardinalität siehe Invariante VSDMCoverage-address-1 in VSDMCoverage
     * extension[Laenderkennzeichen] 
       * ^short = "Länderkennzeichen nach DEÜV Anlage 8"
       * ^definition = """
@@ -216,7 +216,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
         Die Kodierung ist durch den FHIR-Standard empfohlen, aber nicht erzwungen. 
         Durch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.
       """
-    * extension contains VSDMLaenderkennzeichen named Laenderkennzeichen 1..1 MS
+    * extension contains VSDMLaenderkennzeichen named Laenderkennzeichen 0..1 MS // zur Kardinalität siehe Invariante VSDMCoverage-address-1 in VSDMCoverage
     * extension[Laenderkennzeichen] 
       * ^short = "Länderkennzeichen nach DEÜV Anlage 8"
       * ^definition = """

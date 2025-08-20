@@ -145,12 +145,12 @@
             "_country": {
               "extension": [
                 {
-                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen",
                   "valueCoding": {
                     "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
                     "code": "CH",
                     "display": "Schweiz"
-                  }
+                  },
+                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen"
                 }
               ]
             }

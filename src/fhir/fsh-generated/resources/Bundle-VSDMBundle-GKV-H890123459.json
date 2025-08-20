@@ -161,12 +161,12 @@
             "_country": {
               "extension": [
                 {
-                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen",
                   "valueCoding": {
                     "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
                     "code": "D",
                     "display": "Deutschland"
-                  }
+                  },
+                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen"
                 }
               ]
             }

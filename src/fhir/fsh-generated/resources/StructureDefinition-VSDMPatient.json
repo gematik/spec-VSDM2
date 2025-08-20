@@ -214,8 +214,7 @@
           ],
           "ordered": false,
           "rules": "open"
-        },
-        "min": 1
+        }
       },
       {
         "id": "Patient.address:StrassenAdresse.country.extension:Laenderkennzeichen",
@@ -224,7 +223,7 @@
         "short": "Länderkennzeichen nach DEÜV Anlage 8",
         "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8. ",
         "comment": "Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -281,8 +280,7 @@
           ],
           "ordered": false,
           "rules": "open"
-        },
-        "min": 1
+        }
       },
       {
         "id": "Patient.address:PostfachAdresse.country.extension:Laenderkennzeichen",
@@ -291,7 +289,7 @@
         "short": "Länderkennzeichen nach DEÜV Anlage 8",
         "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8. ",
         "comment": "Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
