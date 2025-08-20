@@ -1,0 +1,358 @@
+{
+  "resourceType": "Bundle",
+  "id": "VSDMBundle-GKV-K123456781",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
+    ]
+  },
+  "type": "document",
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:40e95420-b46e-4e5e-937c-5b707af9ac49"
+  },
+  "timestamp": "2025-07-14T15:16:17.890+01:00",
+  "entry": [
+    {
+      "fullUrl": "https://gematik.de/fhir/Composition/5c6c5fef-9cf1-4149-901e-e24df8a19eba",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "5c6c5fef-9cf1-4149-901e-e24df8a19eba",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMComposition|1.0.0"
+          ]
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "code": "55188-7",
+              "system": "http://loinc.org",
+              "display": "Patient data Document"
+            }
+          ]
+        },
+        "author": [
+          {
+            "identifier": {
+              "system": "http://fhir.de/sid/arge-ik/iknr",
+              "value": "105532787"
+            }
+          }
+        ],
+        "date": "2025-07-14T05:06:07.890+01:00",
+        "title": "VSDM 2.0-Daten K123456781 Kiebitz, Karin",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "Patient/VSDMPatient-GKV-K123456781"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Coverage/VSDMCoverage-GKV-K123456781"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Organization/VSDMPayorOrganization-105532787"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Organization/VSDMPayorOrganization-106339922"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-K123456781",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "VSDMPatient-GKV-K123456781",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
+          ]
+        },
+        "name": [
+          {
+            "use": "official",
+            "text": "Karin Kiebitz",
+            "family": "Kiebitz",
+            "_family": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                  "valueString": "Kiebitz"
+                }
+              ]
+            },
+            "given": [
+              "Karin"
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "K123456781"
+          }
+        ],
+        "address": [
+          {
+            "type": "postal",
+            "line": [
+              "Postfach 554433"
+            ],
+            "_line": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox",
+                    "valueString": "Postfach 554433"
+                  }
+                ]
+              }
+            ],
+            "city": "Luxembourg",
+            "postalCode": "1120",
+            "country": "LU",
+            "_country": {
+              "extension": [
+                {
+                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen",
+                  "valueCoding": {
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+                    "code": "L",
+                    "display": "Luxemburg"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "birthDate": "1933",
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverage-GKV-K123456781",
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "VSDMCoverage-GKV-K123456781",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage|1.0.0"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/wop",
+            "valueCoding": {
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+              "code": "46",
+              "display": "Hessen"
+            }
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
+            "valueCoding": {
+              "code": "5",
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
+              "display": "Rentner"
+            }
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung",
+            "extension": [
+              {
+                "url": "aerztlicheVersorgung",
+                "valueBoolean": true
+              },
+              {
+                "url": "zahnaerztlicheVersorgung",
+                "valueBoolean": false
+              },
+              {
+                "url": "stationaererBereich",
+                "valueBoolean": true
+              },
+              {
+                "url": "veranlassteLeistungen",
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch",
+            "extension": [
+              {
+                "url": "art",
+                "valueCoding": {
+                  "code": "2",
+                  "display": "eingeschränkt"
+                }
+              },
+              {
+                "url": "dauer",
+                "valuePeriod": {
+                  "start": "2024-06-15"
+                }
+              }
+            ]
+          }
+        ],
+        "payor": [
+          {
+            "extension": [
+              {
+                "valueCoding": {
+                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
+                  "code": "H",
+                  "display": "Haupt-Kostenträger"
+                },
+                "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+              }
+            ],
+            "reference": "Organization/VSDMPayorOrganization-105532787"
+          },
+          {
+            "extension": [
+              {
+                "valueCoding": {
+                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
+                  "code": "A",
+                  "display": "abrechnender Kostenträger"
+                },
+                "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+              }
+            ],
+            "reference": "Organization/VSDMPayorOrganization-106339922"
+          }
+        ],
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "code": "GKV",
+              "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis"
+            }
+          ]
+        },
+        "beneficiary": {
+          "reference": "Patient/VSDMPatient-GKV-K123456781"
+        },
+        "period": {
+          "start": "2022-04-01",
+          "end": "2027-07-31"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-105532787",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "VSDMPayorOrganization-105532787",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.de/sid/arge-ik/iknr",
+            "value": "105532787"
+          }
+        ],
+        "address": [
+          {
+            "country": "DE",
+            "_country": {
+              "extension": [
+                {
+                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen",
+                  "valueCoding": {
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+                    "code": "D",
+                    "display": "Deutschland"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "name": "Beispielkostenträger Kassel"
+      }
+    },
+    {
+      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-106339922",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "VSDMPayorOrganization-106339922",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.de/sid/arge-ik/iknr",
+            "value": "106339922"
+          }
+        ],
+        "address": [
+          {
+            "country": "DE",
+            "_country": {
+              "extension": [
+                {
+                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen",
+                  "valueCoding": {
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+                    "code": "D",
+                    "display": "Deutschland"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "name": "Beispielkostenträger Koblenz",
+        "contact": [
+          {
+            "purpose": {
+              "coding": [
+                {
+                  "code": "BILL",
+                  "system": "http://terminology.hl7.org/CodeSystem/contactentity-type"
+                }
+              ],
+              "text": "Kontakt für Abrechnungsfragen"
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "+4952116391643"
+              },
+              {
+                "system": "email",
+                "value": "contact@kostentraeger.invalid"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
