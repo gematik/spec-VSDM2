@@ -1,8 +1,8 @@
-Instance: VSDMCoverage-G789012344
+Instance: VSDMCoverage-GKV-G789012344
 InstanceOf: VSDMCoverage
 Title: "G789012344 Edle von der Graugans, Gabriele"
 Description: "Versicherungsdaten G789012344 Edle von der Graugans, Gabriele"
-Usage: #example
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
 

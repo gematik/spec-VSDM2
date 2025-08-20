@@ -1,15 +1,15 @@
-Instance: VSDMCoverage-L234567896
+Instance: VSDMCoverage-GKV-N456789014
 InstanceOf: VSDMCoverage
-Title: "L234567896 Lachmöwe, Lisa"
-Description: "Versicherungsdaten L234567896 Lachmöwe, Lisa"
-Usage: #example
+Title: "N456789014 Nachtigall, Nina Nicole"
+Description: "Versicherungsdaten N456789014 Nachtigall, Nina Nicole"
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
 
-* extension[WOP].valueCoding = $csWOP#17 "Niedersachsen" 
+* extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"
 * extension[zuzahlungsstatus] 
   * extension[status].valueBoolean = true
-  * extension[gueltigBis].valueDate = "2040-07-02"
+  * extension[gueltigBis].valueDate = "2029-06-22"
 * extension[kostenerstattung]
   * extension[aerztlicheVersorgung].valueBoolean = true
   * extension[zahnaerztlicheVersorgung].valueBoolean = true
@@ -18,9 +18,12 @@ Usage: #example
 * extension[versichertenart].valueCoding = $csVersichertenart#3 "Familienangehoerige"
 * status = #active
 * type = $csVersicherungsart#GKV
-* beneficiary.reference = "Patient/VSDMPatient-GKV-L234567896"
+* beneficiary.reference = "Patient/VSDMPatient-GKV-N456789014"
 * period
-  * start = "2022-07-02"
+  * start = "2011-06-22"
 * payor[+]
-  * reference = "Organization/VSDMPayorOrganization-102343996"
+  * reference = "Organization/VSDMPayorOrganization-108028771"
   * extension[kostentraegerRolle].valueCoding = #H "Haupt-Kostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit
+* payor[+]
+  * reference = "Organization/VSDMPayorOrganization-109083613"
+  * extension[kostentraegerRolle].valueCoding = #A "abrechnender Kostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit

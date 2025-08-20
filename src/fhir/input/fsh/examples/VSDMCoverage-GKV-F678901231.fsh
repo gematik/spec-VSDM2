@@ -1,8 +1,8 @@
-Instance: VSDMCoverage-F678901231
+Instance: VSDMCoverage-GKV-F678901231
 InstanceOf: VSDMCoverage
 Title: "F678901231 von Fasan, Frank Florian"
 Description: "Versicherungsdaten F678901231 von Fasan, Frank Florian"
-Usage: #example
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
 

@@ -54,7 +54,7 @@
           {
             "entry": [
               {
-                "reference": "Coverage/VSDMCoverage-K123456781"
+                "reference": "Coverage/VSDMCoverage-GKV-K123456781"
               }
             ]
           },
@@ -147,10 +147,10 @@
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverage-K123456781",
+      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverage-GKV-K123456781",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoverage-K123456781",
+        "id": "VSDMCoverage-GKV-K123456781",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage|1.0.0"

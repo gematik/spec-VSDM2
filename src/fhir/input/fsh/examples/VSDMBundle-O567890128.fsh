@@ -13,8 +13,8 @@ Usage: #example
 * entry[DocumentInformation][=].resource = VSDMComposition-O567890128
 * entry[VSDMPatient][+].fullUrl = "https://gematik.de/fhir/Patient/VSDMPatient-GKV-O567890128"
 * entry[VSDMPatient][=].resource = VSDMPatient-GKV-O567890128
-* entry[VSDMCoverage][+].fullUrl = "https://gematik.de/fhir/Coverage/VSDMCoverage-O567890128"
-* entry[VSDMCoverage][=].resource = VSDMCoverage-O567890128
+* entry[VSDMCoverage][+].fullUrl = "https://gematik.de/fhir/Coverage/VSDMCoverage-GKV-O567890128"
+* entry[VSDMCoverage][=].resource = VSDMCoverage-GKV-O567890128
 * entry[VSDMPayorOrganization][+].fullUrl = "https://gematik.de/fhir/Organization/VSDMPayorOrganization-107668422"
 * entry[VSDMPayorOrganization][=].resource = VSDMPayorOrganization-107668422
 
@@ -34,5 +34,5 @@ Usage: #inline
   * system = "http://fhir.de/sid/arge-ik/iknr"
   * value = "107668422"
 * section[+].entry.reference = "Patient/VSDMPatient-GKV-O567890128"
-* section[+].entry.reference = "Coverage/VSDMCoverage-O567890128"
+* section[+].entry.reference = "Coverage/VSDMCoverage-GKV-O567890128"
 * section[+].entry.reference = "Organization/VSDMPayorOrganization-107668422"

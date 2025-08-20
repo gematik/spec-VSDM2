@@ -1,8 +1,8 @@
-Instance: VSDMCoverage-A123456780
+Instance: VSDMCoverage-GKV-A123456780
 InstanceOf: VSDMCoverage
 Title: "A123456780 Amsel, Andrea"
 Description: "Versicherungsdaten A123456780 Amsel, Andrea"
-Usage: #example
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
 
