@@ -58,6 +58,13 @@
             "human": "Für GKV-Versicherte ist die Angabe des Versicherungsbeginns erforderlich.",
             "expression": "type.coding.code = 'GKV' implies period.start.exists()",
             "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+          },
+          {
+            "key": "VSDMCoverage-versichertenart-1",
+            "severity": "error",
+            "human": "Für GKV-Versicherte sind nur die Versichertenarten 1, 3 und 5 zulässig.",
+            "expression": "type.coding.code = 'GKV' implies extension('http://fhir.de/StructureDefinition/gkv/versichertenart').valueCoding.code = '1' or extension('http://fhir.de/StructureDefinition/gkv/versichertenart').valueCoding.code = '3' or extension('http://fhir.de/StructureDefinition/gkv/versichertenart').valueCoding.code = '5'",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
           }
         ]
       },
@@ -345,7 +352,11 @@
       {
         "id": "Coverage.extension:versichertenart.value[x]",
         "path": "Coverage.extension.value[x]",
-        "min": 1
+        "min": 1,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMVersichertenartVS"
+        }
       },
       {
         "id": "Coverage.type",

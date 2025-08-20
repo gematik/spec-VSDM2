@@ -18,11 +18,12 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
     """
 
 // Invarianten auf Strukturebene
-* obeys VSDMCoverage-gender-1  // GKV: Pflichtangabe Geschlecht
-* obeys VSDMCoverage-address-1 // GKV: Pflichtangabe Länderkennzeichen nach DEÜV im Patient
-* obeys VSDMCoverage-address-2 // GKV: Pflichtangabe Länderkennzeichen nach DEÜV im Kostenträger
-* obeys VSDMCoverage-wop-1     // GKV: Pflichtangabe Wohnortprinzip
-* obeys VSDMCoverage-period-1  // GKV: Pflichtangabe Versicherungsbeginn
+* obeys VSDMCoverage-gender-1           // GKV: Pflichtangabe Geschlecht
+* obeys VSDMCoverage-address-1          // GKV: Pflichtangabe Länderkennzeichen nach DEÜV im Patient
+* obeys VSDMCoverage-address-2          // GKV: Pflichtangabe Länderkennzeichen nach DEÜV im Kostenträger
+* obeys VSDMCoverage-wop-1              // GKV: Pflichtangabe Wohnortprinzip
+* obeys VSDMCoverage-period-1           // GKV: Pflichtangabe Versicherungsbeginn
+* obeys VSDMCoverage-versichertenart-1  // GKV: Gültigkeit Versichertenart
 
 // Zuordnung aus Versicherungsdaten -> WOP
 * extension contains $extWOP named WOP 0..1 MS // zur Kardinalität siehe Invariante VSDMCoverage-wop-1
@@ -134,7 +135,8 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
   * ^comment = """
       Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html
     """
-    * value[x] 1..1
+  * value[x] 1..1
+  * valueCoding from VSDMVersichertenartVS // zur Konsistenzprüfung siehe Invarianten VSDMCoverage-versichertenart-1/2
 
 // Versicherungsart (GKV, PKV)
 * type MS
@@ -215,4 +217,9 @@ Severity: #error
 Invariant: VSDMCoverage-period-1
 Description: "Für GKV-Versicherte ist die Angabe des Versicherungsbeginns erforderlich."
 Expression: "type.coding.code = 'GKV' implies period.start.exists()"
+Severity: #error
+
+Invariant: VSDMCoverage-versichertenart-1 
+Description: "Für GKV-Versicherte sind nur die Versichertenarten 1, 3 und 5 zulässig."
+Expression: "type.coding.code = 'GKV' implies extension('http://fhir.de/StructureDefinition/gkv/versichertenart').valueCoding.code = '1' or extension('http://fhir.de/StructureDefinition/gkv/versichertenart').valueCoding.code = '3' or extension('http://fhir.de/StructureDefinition/gkv/versichertenart').valueCoding.code = '5'"
 Severity: #error

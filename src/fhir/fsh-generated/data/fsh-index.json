@@ -189,7 +189,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
-    "endLine": 191
+    "endLine": 193
   },
   {
     "outputFile": "StructureDefinition-VSDMDMPTeilnahme.json",
@@ -253,7 +253,7 @@
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMCoverageTypeVS.fsh",
     "startLine": 1,
-    "endLine": 10
+    "endLine": 8
   },
   {
     "outputFile": "ValueSet-VSDMDMPVS.json",
@@ -292,6 +292,14 @@
     "fshName": "VSDMRuhenderLeistungsanspruchArtVS",
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMRuhenderLeistungsanspruchArtVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-VSDMVersichertenartVS.json",
+    "fshName": "VSDMVersichertenartVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMVersichertenartVS.fsh",
     "startLine": 1,
     "endLine": 7
   },
