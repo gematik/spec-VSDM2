@@ -2,7 +2,7 @@ Instance: VSDMPayorOrganization-101316991
 InstanceOf: VSDMPayorOrganization
 Title: "Beispielkostenträger Schleswig-Holstein"
 Description: "Beispielkostenträger Schleswig-Holstein"
-Usage: #example
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 

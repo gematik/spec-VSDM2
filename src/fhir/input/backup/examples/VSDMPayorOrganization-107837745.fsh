@@ -2,7 +2,7 @@ Instance: VSDMPayorOrganization-107837745
 InstanceOf: VSDMPayorOrganization
 Title: "Beispielkostenträger Süd-Württemberg"
 Description: "Beispielkostenträger Süd-Württemberg"
-Usage: #example
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 

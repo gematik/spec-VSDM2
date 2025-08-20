@@ -2,7 +2,7 @@ Instance: VSDMPayorOrganization-109149007
 InstanceOf: VSDMPayorOrganization
 Title: "Beispielkostenträger Schwaben"
 Description: "Beispielkostenträger Schwaben"
-Usage: #example
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 

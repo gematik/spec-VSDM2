@@ -2,7 +2,7 @@ Instance: VSDMPayorOrganization-106270260
 InstanceOf: VSDMPayorOrganization
 Title: "Beispielkostenträger Rheinhessen"
 Description: "Beispielkostenträger Rheinhessen"
-Usage: #example
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 

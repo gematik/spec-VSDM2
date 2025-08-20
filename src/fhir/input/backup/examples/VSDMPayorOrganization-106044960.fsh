@@ -2,7 +2,7 @@ Instance: VSDMPayorOrganization-106044960
 InstanceOf: VSDMPayorOrganization
 Title: "Beispielkostenträger Gera"
 Description: "Beispielkostenträger Gera"
-Usage: #example
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 

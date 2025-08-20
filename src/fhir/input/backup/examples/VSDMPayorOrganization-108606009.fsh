@@ -2,7 +2,7 @@ Instance: VSDMPayorOrganization-108606009
 InstanceOf: VSDMPayorOrganization
 Title: "Beispielkostenträger Oberfranken"
 Description: "Beispielkostenträger Oberfranken"
-Usage: #example
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 

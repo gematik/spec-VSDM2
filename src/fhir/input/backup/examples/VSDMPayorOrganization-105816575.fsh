@@ -2,7 +2,7 @@ Instance: VSDMPayorOrganization-105816575
 InstanceOf: VSDMPayorOrganization
 Title: "Beispielkostenträger Wiesbaden"
 Description: "Beispielkostenträger Wiesbaden"
-Usage: #example
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 

@@ -2,7 +2,7 @@ Instance: VSDMPayorOrganization-102722735
 InstanceOf: VSDMPayorOrganization
 Title: "Beispielkostenträger Verden"
 Description: "Beispielkostenträger Verden"
-Usage: #example
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 

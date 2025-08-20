@@ -2,7 +2,7 @@ Instance: VSDMPayorOrganization-100412075
 InstanceOf: VSDMPayorOrganization
 Title: "Beispielkostenträger Neubrandenburg"
 Description: "Beispielkostenträger Neubrandenburg"
-Usage: #example
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 

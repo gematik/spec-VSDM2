@@ -2,7 +2,7 @@ Instance: VSDMPayorOrganization-106498173
 InstanceOf: VSDMPayorOrganization
 Title: "Beispielkostenträger Pfalz"
 Description: "Beispielkostenträger Pfalz"
-Usage: #example
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 

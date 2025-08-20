@@ -344,30 +344,7 @@
             }
           }
         ],
-        "name": "Beispielkostenträger Darmstadt",
-        "contact": [
-          {
-            "purpose": {
-              "coding": [
-                {
-                  "code": "BILL",
-                  "system": "http://terminology.hl7.org/CodeSystem/contactentity-type"
-                }
-              ],
-              "text": "Kontakt für Abrechnungsfragen"
-            },
-            "telecom": [
-              {
-                "system": "phone",
-                "value": "+4952116391643"
-              },
-              {
-                "system": "email",
-                "value": "contact@kostentraeger.invalid"
-              }
-            ]
-          }
-        ]
+        "name": "Beispielkostenträger Darmstadt"
       }
     }
   ]
