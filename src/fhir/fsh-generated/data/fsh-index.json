@@ -5,7 +5,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-GKV-A123456780.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 20
   },
   {
     "outputFile": "Bundle-VSDMBundle-GKV-B234567895.json",
@@ -13,7 +13,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-GKV-B234567895.fsh",
     "startLine": 1,
-    "endLine": 21
+    "endLine": 23
   },
   {
     "outputFile": "Bundle-VSDMBundle-GKV-C345678908.json",
@@ -21,7 +21,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-GKV-C345678908.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 20
   },
   {
     "outputFile": "Bundle-VSDMBundle-GKV-D456789013.json",
@@ -29,7 +29,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-GKV-D456789013.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 20
   },
   {
     "outputFile": "Bundle-VSDMBundle-GKV-E567890127.json",
@@ -37,7 +37,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-GKV-E567890127.fsh",
     "startLine": 1,
-    "endLine": 21
+    "endLine": 23
   },
   {
     "outputFile": "Bundle-VSDMBundle-GKV-F678901231.json",
@@ -45,7 +45,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-GKV-F678901231.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 20
   },
   {
     "outputFile": "Bundle-VSDMBundle-GKV-G789012344.json",
@@ -53,7 +53,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-GKV-G789012344.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 20
   },
   {
     "outputFile": "Bundle-VSDMBundle-GKV-H890123459.json",
@@ -61,7 +61,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-GKV-H890123459.fsh",
     "startLine": 1,
-    "endLine": 21
+    "endLine": 23
   },
   {
     "outputFile": "Bundle-VSDMBundle-GKV-I901234562.json",
@@ -69,7 +69,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-GKV-I901234562.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 20
   },
   {
     "outputFile": "Bundle-VSDMBundle-GKV-J012345677.json",
@@ -77,7 +77,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-GKV-J012345677.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 20
   },
   {
     "outputFile": "Bundle-VSDMBundle-GKV-K123456781.json",
@@ -85,7 +85,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-GKV-K123456781.fsh",
     "startLine": 1,
-    "endLine": 21
+    "endLine": 23
   },
   {
     "outputFile": "Bundle-VSDMBundle-GKV-L234567896.json",
@@ -93,7 +93,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-GKV-L234567896.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 20
   },
   {
     "outputFile": "Bundle-VSDMBundle-GKV-M345678909.json",
@@ -101,7 +101,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-GKV-M345678909.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 20
   },
   {
     "outputFile": "Bundle-VSDMBundle-GKV-N456789014.json",
@@ -109,7 +109,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-GKV-N456789014.fsh",
     "startLine": 1,
-    "endLine": 21
+    "endLine": 23
   },
   {
     "outputFile": "Bundle-VSDMBundle-GKV-O567890128.json",
@@ -117,7 +117,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-GKV-O567890128.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 20
   },
   {
     "outputFile": "Bundle-VSDMBundle-GKV-Z987654321.json",
@@ -125,7 +125,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMBundle-GKV-Z987654321.fsh",
     "startLine": 1,
-    "endLine": 21
+    "endLine": 23
   },
   {
     "outputFile": "CodeSystem-VSDMErrorcodeCS.json",
@@ -173,15 +173,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMBundle.fsh",
     "startLine": 1,
-    "endLine": 42
-  },
-  {
-    "outputFile": "StructureDefinition-VSDMComposition.json",
-    "fshName": "VSDMComposition",
-    "fshType": "Profile",
-    "fshFile": "profiles/VSDMComposition.fsh",
-    "startLine": 1,
-    "endLine": 28
+    "endLine": 54
   },
   {
     "outputFile": "StructureDefinition-VSDMCoverage.json",

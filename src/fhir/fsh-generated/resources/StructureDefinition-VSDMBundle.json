@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle",
   "version": "1.0.0",
   "name": "VSDMBundle",
-  "title": "Bundle der VSDM 2.0-Ressourcen",
+  "title": "Versichertenstammdaten",
   "status": "draft",
   "experimental": false,
   "date": "2023-12-31",
@@ -21,40 +21,37 @@
       {
         "id": "Bundle",
         "path": "Bundle",
-        "short": "Bundle der VSDM 2.0-Ressourcen",
+        "short": "Versichertenstammdaten",
         "definition": "Bundle zur Übermittlung der Ressourcen im Versichertenstammdatenmanagement (VSDM) 2.0"
       },
       {
-        "id": "Bundle.id",
-        "path": "Bundle.id",
-        "min": 1
-      },
-      {
-        "id": "Bundle.identifier",
-        "path": "Bundle.identifier",
-        "min": 1
-      },
-      {
-        "id": "Bundle.identifier.system",
-        "path": "Bundle.identifier.system",
+        "id": "Bundle.meta",
+        "path": "Bundle.meta",
         "min": 1,
-        "fixedUri": "urn:ietf:rfc:3986"
+        "mustSupport": true
       },
       {
-        "id": "Bundle.identifier.value",
-        "path": "Bundle.identifier.value",
-        "short": "a unique bundle identifier",
-        "min": 1
+        "id": "Bundle.meta.lastUpdated",
+        "path": "Bundle.meta.lastUpdated",
+        "short": "Aktualisierungszeitpunkt (inhaltlich)",
+        "definition": "Dieser Zeitpunkt gibt an, wann die Versichertenstammdaten zuletzt inhaltlich aktualisiert wurden.",
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Bundle.type",
         "path": "Bundle.type",
-        "fixedCode": "document"
+        "comment": "Die im VSDM 2.0 übermittelten Versichertenstammdaten stellen nicht - wie bei anderen Diensten der Telematikinfrastruktur - ein zusammenhängendes [Dokument im Sinne der FHIR-Spezifikation](https://hl7.org/fhir/R4/documents.html) dar.\nSie bestehen lediglich aus administrativen Daten, die zur Abbildung in FHIR auf mehrere miteinander verbundene Ressourcen verteilt sind.\nAus diesem Grund wird auf den Overhead eines Document-Bundles verzichtet und lediglich eine Collection verwendet.",
+        "fixedCode": "collection"
       },
       {
         "id": "Bundle.timestamp",
         "path": "Bundle.timestamp",
-        "min": 1
+        "short": "Aktualisierungszeitpunkt (technisch)",
+        "definition": "Dieser Zeitpunkt gibt an, wann das gesamte Bundle erstellt wurde.",
+        "comment": "Wenn der VSDM 2.0 Resource Server das gesamte Bundle speichert, darf dieser Zeitpunkt gleich der Angabe in meta.lastUpdated sein. \nWenn der Resource Server das Bundle bei jeder Anfrage neu erstellt, wird hier jeweils der aktuelle Erstellungszeitpunkt angegeben.",
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Bundle.entry",
@@ -68,34 +65,16 @@
           ],
           "rules": "closed"
         },
-        "min": 4
-      },
-      {
-        "id": "Bundle.entry:DocumentInformation",
-        "path": "Bundle.entry",
-        "sliceName": "DocumentInformation",
-        "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "Bundle.entry:DocumentInformation.resource",
-        "path": "Bundle.entry.resource",
-        "min": 1,
-        "type": [
-          {
-            "code": "Composition",
-            "profile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMComposition"
-            ]
-          }
-        ]
+        "min": 3,
+        "mustSupport": true
       },
       {
         "id": "Bundle.entry:VSDMPatient",
         "path": "Bundle.entry",
         "sliceName": "VSDMPatient",
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "Bundle.entry:VSDMPatient.resource",
@@ -108,14 +87,16 @@
               "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Bundle.entry:VSDMCoverage",
         "path": "Bundle.entry",
         "sliceName": "VSDMCoverage",
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "Bundle.entry:VSDMCoverage.resource",
@@ -128,14 +109,16 @@
               "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Bundle.entry:VSDMPayorOrganization",
         "path": "Bundle.entry",
         "sliceName": "VSDMPayorOrganization",
         "min": 1,
-        "max": "2"
+        "max": "2",
+        "mustSupport": true
       },
       {
         "id": "Bundle.entry:VSDMPayorOrganization.resource",
@@ -148,7 +131,8 @@
               "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       }
     ]
   }

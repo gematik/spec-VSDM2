@@ -4,35 +4,17 @@ Title: "J012345677 Junko, Jens-Jörg (GKV)"
 Description: "VSDM 2.0-Daten J012345677 Junko, Jens-Jörg (GKV)"
 Usage: #example
 
-* meta.profile[0] = Canonical(VSDMBundle|1.0.0)
-
-* identifier.value = "urn:uuid:a3acb244-31cc-462a-9fae-03eca9c52e93"
-* type = #document
+* meta
+  * profile[0] = Canonical(VSDMBundle|1.0.0)
+  * lastUpdated = "2025-07-14T15:16:17.890+01:00"
+* type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
-* entry[DocumentInformation][+].fullUrl = "https://gematik.de/fhir/Composition/339221d1-85b4-45b4-9ded-503fe1aab14d"
-* entry[DocumentInformation][=].resource = VSDMComposition-J012345677
-* entry[VSDMPatient][+].fullUrl = "https://gematik.de/fhir/Patient/VSDMPatient-GKV-J012345677"
-* entry[VSDMPatient][=].resource = VSDMPatient-GKV-J012345677
-* entry[VSDMCoverage][+].fullUrl = "https://gematik.de/fhir/Coverage/VSDMCoverage-GKV-J012345677"
-* entry[VSDMCoverage][=].resource = VSDMCoverage-GKV-J012345677
-* entry[VSDMPayorOrganization][+].fullUrl = "https://gematik.de/fhir/Organization/VSDMPayorOrganization-106877150"
-* entry[VSDMPayorOrganization][=].resource = VSDMPayorOrganization-106877150
-
-Instance: VSDMComposition-J012345677
-InstanceOf: VSDMComposition
-Title: "J012345677 Junko, Jens-Jörg"
-Description: "Composition für VSDM 2.0-Daten J012345677 Junko, Jens-Jörg"
-Usage: #inline
-
-* meta.profile[0] = Canonical(VSDMComposition|1.0.0)
-
-* id = "339221d1-85b4-45b4-9ded-503fe1aab14d"
-* status = #final
-* date = "2025-07-14T05:06:07.890+01:00"
-* title = "VSDM 2.0-Daten J012345677 Junko, Jens-Jörg"
-* author.identifier
-  * system = "http://fhir.de/sid/arge-ik/iknr"
-  * value = "106877150"
-* section[+].entry.reference = "Patient/VSDMPatient-GKV-J012345677"
-* section[+].entry.reference = "Coverage/VSDMCoverage-GKV-J012345677"
-* section[+].entry.reference = "Organization/VSDMPayorOrganization-106877150"
+* entry[VSDMPatient][+]
+  * fullUrl = "https://gematik.de/fhir/Patient/VSDMPatient-GKV-J012345677"
+  * resource = VSDMPatient-GKV-J012345677
+* entry[VSDMCoverage][+]
+  * fullUrl = "https://gematik.de/fhir/Coverage/VSDMCoverage-GKV-J012345677"
+  * resource = VSDMCoverage-GKV-J012345677
+* entry[VSDMPayorOrganization][+]
+  * fullUrl = "https://gematik.de/fhir/Organization/VSDMPayorOrganization-106877150"
+  * resource = VSDMPayorOrganization-106877150

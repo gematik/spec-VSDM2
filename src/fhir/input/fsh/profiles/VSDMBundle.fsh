@@ -1,6 +1,6 @@
 Profile: VSDMBundle
 Parent: Bundle
-Title: "Bundle der VSDM 2.0-Ressourcen"
+Title: "Versichertenstammdaten"
 Description: "Bundle zur Übermittlung der Ressourcen im Versichertenstammdatenmanagement (VSDM) 2.0"
 
 // Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen. 
@@ -8,35 +8,47 @@ Description: "Bundle zur Übermittlung der Ressourcen im Versichertenstammdatenm
 // Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
 * . 
-  * ^short = "Bundle der VSDM 2.0-Ressourcen"
+  * ^short = "Versichertenstammdaten"
   * ^definition = """
       Bundle zur Übermittlung der Ressourcen im Versichertenstammdatenmanagement (VSDM) 2.0
     """
 
-// TODO Inhalte noch prüfen
-* id 1..1
-* identifier 1..1
-  * system 1..1
-  * system = "urn:ietf:rfc:3986" (exactly)
-  * value 1..1
-  * value ^short = "a unique bundle identifier"
-  //TODO: * value ^example.valueString = "6c1b0aee-42d4-4684-871e-98258f189a71"
-* type = #document (exactly)
-* timestamp 1..1
-* entry
-* entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.rules = #closed
+* meta 1..1 MS
+  * lastUpdated 1..1 MS
+    * ^short = "Aktualisierungszeitpunkt (inhaltlich)"
+    * ^definition = """
+        Dieser Zeitpunkt gibt an, wann die Versichertenstammdaten zuletzt inhaltlich aktualisiert wurden.
+      """  
+* type = #collection (exactly)
+  * ^comment = """
+      Die im VSDM 2.0 übermittelten Versichertenstammdaten stellen nicht - wie bei anderen Diensten der Telematikinfrastruktur - ein zusammenhängendes [Dokument im Sinne der FHIR-Spezifikation](https://hl7.org/fhir/R4/documents.html) dar.
+      Sie bestehen lediglich aus administrativen Daten, die zur Abbildung in FHIR auf mehrere miteinander verbundene Ressourcen verteilt sind.
+      Aus diesem Grund wird auf den Overhead eines Document-Bundles verzichtet und lediglich eine Collection verwendet.
+    """
+* timestamp 1..1 MS
+  * ^short = "Aktualisierungszeitpunkt (technisch)"
+  * ^definition = """
+      Dieser Zeitpunkt gibt an, wann das gesamte Bundle erstellt wurde.
+    """  
+  * ^comment = """
+      Wenn der VSDM 2.0 Resource Server das gesamte Bundle speichert, darf dieser Zeitpunkt gleich der Angabe in meta.lastUpdated sein. 
+      Wenn der Resource Server das Bundle bei jeder Anfrage neu erstellt, wird hier jeweils der aktuelle Erstellungszeitpunkt angegeben.
+    """
+
+* entry MS
+  * ^slicing.discriminator.type = #profile
+  * ^slicing.discriminator.path = "resource"
+  * ^slicing.rules = #closed
 * entry contains
-    DocumentInformation 1..1 and
     VSDMPatient 1..1 and
     VSDMCoverage 1..1 and 
     VSDMPayorOrganization 1..2  
-* entry[DocumentInformation].resource 1..
-* entry[DocumentInformation].resource only VSDMComposition
-* entry[VSDMPatient].resource 1..
-* entry[VSDMPatient].resource only VSDMPatient
-* entry[VSDMCoverage].resource 1..
-* entry[VSDMCoverage].resource only VSDMCoverage
-* entry[VSDMPayorOrganization].resource 1..
-* entry[VSDMPayorOrganization].resource only VSDMPayorOrganization
+* entry[VSDMPatient] MS
+  * resource 1..1 MS
+  * resource only VSDMPatient
+* entry[VSDMCoverage] MS
+  * resource 1..1 MS
+  * resource only VSDMCoverage
+* entry[VSDMPayorOrganization] MS
+  * resource 1..1 MS
+  * resource only VSDMPayorOrganization
