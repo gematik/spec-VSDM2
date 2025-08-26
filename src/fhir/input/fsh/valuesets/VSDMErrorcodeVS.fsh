@@ -1,6 +1,6 @@
 ValueSet: VSDMErrorcodeVS
 Title: "VSDM-Fehlercodes"
-Description: "allgemeine und VSDM-spezifische Fehlercodes"
+Description: "Fehlercodes im Versichertenstammdatenmanagement (VSDM) 2.0"
 
 * insert Meta
 

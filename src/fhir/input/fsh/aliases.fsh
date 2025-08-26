@@ -38,6 +38,14 @@ Alias: $csDMP = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP
 //   - Beispiel für VSDMPatient
 Alias: $csGenderAmtlich = http://fhir.de/CodeSystem/gender-amtlich-de
 
+// Schweregrad einer Meldung, verwendet für
+//   - ConceptMap VSDMErrorcodeIssueSeverity
+Alias: $csIssueSeverity = http://hl7.org/fhir/issue-severity
+
+// Typ einer Meldung, verwendet für
+//   - ConceptMap VSDMErrorcodeIssueType
+Alias: $csIssueType = http://hl7.org/fhir/issue-type
+
 // LOINC, verwendet für 
 //   - VSDMComposition.type.coding
 Alias: $csLOINC = http://loinc.org
@@ -75,6 +83,14 @@ Alias: $csWOP = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP
 //     - VSDMPatient.address.country.extension[Laenderkennzeichen]
 //     - VSDMPayorOrganization.address.country.extension[Laenderkennzeichen]
 Alias: $vsAnlage8Laenderkennzeichen = https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8
+
+// Schweregrad einer Meldung, verwendet für
+//   - ConceptMap VSDMErrorcodeIssueSeverity
+Alias: $vsIssueSeverity = http://hl7.org/fhir/ValueSet/issue-severity
+
+// Typ einer Meldung, verwendet für
+//   - ConceptMap VSDMErrorcodeIssueType
+Alias: $vsIssueType = http://hl7.org/fhir/ValueSet/issue-type
 
 // ================================================================================================
 // 

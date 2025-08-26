@@ -133,7 +133,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMErrorcodeCS.fsh",
     "startLine": 1,
-    "endLine": 25
+    "endLine": 23
   },
   {
     "outputFile": "CodeSystem-VSDMKostentraegerRolleCS.json",
@@ -152,12 +152,116 @@
     "endLine": 10
   },
   {
-    "outputFile": "OperationOutcome-example-vsdm-operationoutcome.json",
-    "fshName": "ExampleOperationOutcome",
+    "outputFile": "ConceptMap-VSDMErrorcodeIssueSeverity.json",
+    "fshName": "VSDMErrorcodeIssueSeverity",
     "fshType": "Instance",
-    "fshFile": "examples/ExampleOperationOutcome.fsh",
+    "fshFile": "mappings/VSDMErrorcodeIssueSeverity.fsh",
     "startLine": 1,
-    "endLine": 13
+    "endLine": 101
+  },
+  {
+    "outputFile": "ConceptMap-VSDMErrorcodeIssueType.json",
+    "fshName": "VSDMErrorcodeIssueType",
+    "fshType": "Instance",
+    "fshFile": "mappings/VSDMErrorcodeIssueType.fsh",
+    "startLine": 1,
+    "endLine": 112
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-InternalServerError.json",
+    "fshName": "VSDMOperationOutcome-InternalServerError",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-InternalServerError.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidEndpoint.json",
+    "fshName": "VSDMOperationOutcome-InvalidEndpoint",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-InvalidEndpoint.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidHTTPOperation.json",
+    "fshName": "VSDMOperationOutcome-InvalidHTTPOperation",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-InvalidHTTPOperation.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidIK.json",
+    "fshName": "VSDMOperationOutcome-InvalidIK",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-InvalidIK.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidKVNR.json",
+    "fshName": "VSDMOperationOutcome-InvalidKVNR",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-InvalidKVNR.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidPatientRecordVersion.json",
+    "fshName": "VSDMOperationOutcome-InvalidPatientRecordVersion",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-InvalidPatientRecordVersion.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-MissingOrInvalidHeader.json",
+    "fshName": "VSDMOperationOutcome-MissingOrInvalidHeader",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-MissingOrInvalidHeader.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-PatientRecordNotFound.json",
+    "fshName": "VSDMOperationOutcome-PatientRecordNotFound",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-PatientRecordNotFound.fsh",
+    "startLine": 1,
+    "endLine": 25
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-UnsupportedEncoding.json",
+    "fshName": "VSDMOperationOutcome-UnsupportedEncoding",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-UnsupportedEncoding.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-UnsupportedMediatype.json",
+    "fshName": "VSDMOperationOutcome-UnsupportedMediatype",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-UnsupportedMediatype.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-VSDDNotReachable.json",
+    "fshName": "VSDMOperationOutcome-VSDDNotReachable",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-VSDDNotReachable.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-VSDDTimeout.json",
+    "fshName": "VSDMOperationOutcome-VSDDTimeout",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-VSDDTimeout.fsh",
+    "startLine": 1,
+    "endLine": 20
   },
   {
     "outputFile": "StructureDefinition-VSDDatensatzGKV.json",
@@ -213,7 +317,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMOperationOutcome.fsh",
     "startLine": 1,
-    "endLine": 42
+    "endLine": 79
   },
   {
     "outputFile": "StructureDefinition-VSDMPatient.json",
