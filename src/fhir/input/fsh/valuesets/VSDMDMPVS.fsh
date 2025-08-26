@@ -16,3 +16,5 @@ Description: "Disease-Management-Programm (Einschränkung auf im VSDM 2.0 gülti
 * include $csDMP#10 "Rheuma"
 * include $csDMP#11 "Osteoporose"
 * include $csDMP#12 "Adipositas - Erwachsene"
+
+// TODO Zu diskutieren: Soll dieses ValueSet perspektivisch von der KBV (die auch das CodeSystem verantwortet) gepflegt werden?

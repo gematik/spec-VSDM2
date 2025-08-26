@@ -14,7 +14,7 @@ Description: """
 
   * Versicherter 1..1 BackboneElement "Angaben zum Versicherten" 
     * VersichertenID 1..1 string "Versicherten-ID (KVNR)" """
-        Die Versicherten-ID ist der 10-stellige unveraäderliche Teil der 30-stelligen Krankenversichertennummer.
+        Die Versicherten-ID ist der 10-stellige unveränderliche Teil der 30-stelligen Krankenversichertennummer.
         Länge: 10
         Typ: AN
       """
@@ -208,7 +208,6 @@ Description: """
         Länge: 1
         Typ: offen
       """
-      // TODO Zelle C32: Typ "offen"
     * GueltigBis 1..1 date "Gültigkeit des Zuzahlungsstatus" """
 	      Gibt die Gültigkeit der Befreiung von der Zuzahlungspflicht nach § 62 SGB V an.	Wird nur angegeben, wenn Zuzahlungsstatus mit 1 (= befreit) angegeben ist.
         Typ: ISO8601Date

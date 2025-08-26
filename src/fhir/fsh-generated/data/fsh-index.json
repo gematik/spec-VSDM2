@@ -165,7 +165,7 @@
     "fshType": "Logical",
     "fshFile": "logicalmodel/VSDDatensatzGKV.fsh",
     "startLine": 1,
-    "endLine": 301
+    "endLine": 300
   },
   {
     "outputFile": "StructureDefinition-VSDMBundle.json",
