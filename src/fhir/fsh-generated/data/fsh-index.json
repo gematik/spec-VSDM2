@@ -336,14 +336,6 @@
     "endLine": 62
   },
   {
-    "outputFile": "ValueSet-VSDMBesonderePersonengruppeVS.json",
-    "fshName": "VSDMBesonderePersonengruppeVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMBesonderePersonengruppeVS.fsh",
-    "startLine": 1,
-    "endLine": 11
-  },
-  {
     "outputFile": "ValueSet-VSDMCoverageTypeVS.json",
     "fshName": "VSDMCoverageTypeVS",
     "fshType": "ValueSet",

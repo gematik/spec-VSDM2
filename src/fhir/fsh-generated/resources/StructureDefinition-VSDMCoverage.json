@@ -120,8 +120,8 @@
         "id": "Coverage.extension:besonderePersonengruppe",
         "path": "Coverage.extension",
         "sliceName": "besonderePersonengruppe",
-        "short": "Besondere Personengruppe",
-        "definition": "Gibt die Zugehörigkeit des Versicherten zu einer besonderen Personengruppe an.",
+        "short": "Besondere Personengruppe (GKV)",
+        "definition": "Gibt die Zugehörigkeit des GKV-Versicherten zu einer besonderen Personengruppe an.",
         "comment": "Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html",
         "requirements": "Die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.",
         "min": 0,
@@ -141,7 +141,7 @@
         "path": "Coverage.extension.value[x]",
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMBesonderePersonengruppeVS"
+          "valueSet": "https://simplifier.net/kbvschluesseltabellen/kbv-vs-sfhir-kbv-personengruppe"
         }
       },
       {

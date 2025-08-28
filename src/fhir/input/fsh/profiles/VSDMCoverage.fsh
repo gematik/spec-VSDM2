@@ -44,9 +44,9 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
 // Zuordnung aus Versicherungsdaten -> BesonderePersonengruppe
 * extension contains $extBesonderePersonengruppe named besonderePersonengruppe 0..1 MS
 * extension[besonderePersonengruppe]
-  * ^short = "Besondere Personengruppe"
+  * ^short = "Besondere Personengruppe (GKV)"
   * ^definition = """
-      Gibt die Zugehörigkeit des Versicherten zu einer besonderen Personengruppe an.
+      Gibt die Zugehörigkeit des GKV-Versicherten zu einer besonderen Personengruppe an.
     """
   * ^comment = """
       Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html
@@ -54,7 +54,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
   * ^requirements = """
       Die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.
     """
-  * value[x] from VSDMBesonderePersonengruppeVS (required)
+  * value[x] from $vsPersonengruppe (required)
   * valueCoding.system = $csPersonengruppe (exactly)
 
 // Zuordnung aus Versicherungsdaten -> Zuzahlungsstatus

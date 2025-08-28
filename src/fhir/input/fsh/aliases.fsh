@@ -92,6 +92,11 @@ Alias: $vsIssueSeverity = http://hl7.org/fhir/ValueSet/issue-severity
 //   - ConceptMap VSDMErrorcodeIssueType
 Alias: $vsIssueType = http://hl7.org/fhir/ValueSet/issue-type
 
+// besondere Personengruppe, verwendet für
+//   - VSDMBesonderePersonengruppeVS
+//     - VSDMCoverage.extension[besonderePersonengruppe]
+Alias: $vsPersonengruppe = https://simplifier.net/kbvschluesseltabellen/kbv-vs-sfhir-kbv-personengruppe
+
 // ================================================================================================
 // 
 //   StructureDefinition: Extensions (Präfix $ext...)

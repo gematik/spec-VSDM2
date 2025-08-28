@@ -41,7 +41,6 @@ StructureDefinition-VSDMLaenderkennzeichen.json                         VSDMLaen
 StructureDefinition-VSDMOperationOutcome.json                           VSDMOperationOutcome                              Profile     profiles/VSDMOperationOutcome.fsh                              1 - 79
 StructureDefinition-VSDMPatient.json                                    VSDMPatient                                       Profile     profiles/VSDMPatient.fsh                                       1 - 225
 StructureDefinition-VSDMPayorOrganization.json                          VSDMPayorOrganization                             Profile     profiles/VSDMPayorOrganization.fsh                             1 - 62
-ValueSet-VSDMBesonderePersonengruppeVS.json                             VSDMBesonderePersonengruppeVS                     ValueSet    valuesets/VSDMBesonderePersonengruppeVS.fsh                    1 - 11
 ValueSet-VSDMCoverageTypeVS.json                                        VSDMCoverageTypeVS                                ValueSet    valuesets/VSDMCoverageTypeVS.fsh                               1 - 8
 ValueSet-VSDMDMPVS.json                                                 VSDMDMPVS                                         ValueSet    valuesets/VSDMDMPVS.fsh                                        1 - 18
 ValueSet-VSDMErrorcodeVS.json                                           VSDMErrorcodeVS                                   ValueSet    valuesets/VSDMErrorcodeVS.fsh                                  1 - 8
