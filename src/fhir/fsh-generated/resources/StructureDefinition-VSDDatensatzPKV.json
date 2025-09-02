@@ -7,6 +7,14 @@
   "status": "draft",
   "description": "Fachliches Modell zur Beschreibung des VSD-Datensatzes für den Bereich der Privaten Krankenversicherung (PKV).\nDieses Modell stellt die Struktur für die Versichertendaten eines Privatversicherten bereit und dient als Ausgangspunkt für die Mappings, die die Abbildung auf FHIR-Ressourcen vornehmen.",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "VSD-Datensatz-PKV-Patient",
+      "name": "Mapping VSD-Datensatz PKV zu Patient",
+      "uri": "VSDMPatient",
+      "comment": "Zuordnung der Versichertendaten des VSD-Datensatzes PKV zum FHIR-Profil VSDMPatient"
+    }
+  ],
   "kind": "logical",
   "abstract": false,
   "type": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDDatensatzPKV",
@@ -44,6 +52,13 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.identifier:KVNR.value",
+            "comment": "Die KVNR wird in Übereinstimmung mit dem deutschen Basisprofils kodiert und ist verpflichtend anzugeben."
+          }
         ]
       },
       {
@@ -56,6 +71,13 @@
         "type": [
           {
             "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.birthDate",
+            "comment": "Die Angabe des partiellen Geburtsdatums wird vom FHIR-nativen Datentyp date bereits unterstützt."
           }
         ]
       },
@@ -70,6 +92,13 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.name:Name.given",
+            "comment": "FHIR lässt die Angabe mehrerer Vornamen in wiederholten Elementen zu. Davon wird hier kein Gebrauch gemacht."
+          }
         ]
       },
       {
@@ -83,6 +112,18 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.name:Name.family",
+            "comment": "Nachname mit Vorsatzwort und Namenszusatz. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
+          },
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.name:Name.family.extension:nachname",
+            "comment": "Nachname ohne Vorsatzwort und Namenszusatz. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
+          }
         ]
       },
       {
@@ -95,6 +136,18 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.gender",
+            "comment": "Das Geschlecht wird auf die standardisierten FHIR-Werte abgebildet. Da damit nicht alle Werte abgebildet werden können, kommt eine Erweiterung zum Einsatz."
+          },
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.gender.extension:other-amtlich",
+            "comment": "Diese Erweiterung nimmt die Geschlechtsangabe gemäß der geforderten Wertetabelle auf."
           }
         ]
       },
@@ -110,6 +163,13 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.name:Name.family.extension:vorsatzwort",
+            "comment": "Vorsatzwort zum Nachnamen. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
+          }
         ]
       },
       {
@@ -124,6 +184,13 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.name:Name.family.extension:namenszusatz",
+            "comment": "Zusatz zum Nachnamen. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
+          }
         ]
       },
       {
@@ -136,6 +203,13 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.name:Name.prefix",
+            "comment": "Kennzeichnung des akademischen Titels mittels Erweiterung siehe Elementdokumentation."
           }
         ]
       },
@@ -150,6 +224,13 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.address:PostfachAdresse",
+            "comment": "Postfachadressen werden mit dem Typ \"postal\" gekennzeichnet."
+          }
         ]
       },
       {
@@ -162,6 +243,13 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.address:PostfachAdresse.line.extension:Postfach",
+            "comment": "Hinweise zur Bildung der Adresszeilen beachten."
           }
         ]
       },
@@ -176,6 +264,12 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.address:PostfachAdresse.postalCode"
+          }
         ]
       },
       {
@@ -188,6 +282,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.address:PostfachAdresse.city"
           }
         ]
       },
@@ -202,6 +302,13 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.address:PostfachAdresse.country",
+            "comment": "Hinweise zur Befüllung der Extensions beachten."
+          }
         ]
       },
       {
@@ -214,6 +321,13 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.address:StrassenAdresse",
+            "comment": "Wohnsitzadressen werden mit dem Typ \"physical\" gekennzeichnet."
           }
         ]
       },
@@ -228,6 +342,13 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.address:StrassenAdresse.line.extension:Strasse",
+            "comment": "Hinweise zur Bildung der Adresszeilen beachten."
+          }
         ]
       },
       {
@@ -240,6 +361,13 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.address:StrassenAdresse.line.extension:Hausnummer",
+            "comment": "Hinweise zur Bildung der Adresszeilen beachten."
           }
         ]
       },
@@ -254,6 +382,13 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.address:StrassenAdresse.line.extension:Adresszusatz",
+            "comment": "Hinweise zur Bildung der Adresszeilen beachten."
+          }
         ]
       },
       {
@@ -266,6 +401,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.address:StrassenAdresse.postalCode"
           }
         ]
       },
@@ -280,6 +421,12 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.address:StrassenAdresse.city"
+          }
         ]
       },
       {
@@ -293,6 +440,13 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.address.country",
+            "comment": "Hinweise zur Befüllung der Extensions beachten."
+          }
         ]
       },
       {
@@ -305,6 +459,13 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Patient",
+            "map": "VSDMPatient.telecom:TIMessengerID",
+            "comment": "Hinweise zur Kodierung der TI-Messenger-ID beachten."
           }
         ]
       },
