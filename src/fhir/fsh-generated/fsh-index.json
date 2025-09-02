@@ -325,7 +325,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoveragePKV.fsh",
     "startLine": 1,
-    "endLine": 65
+    "endLine": 73
   },
   {
     "outputFile": "StructureDefinition-VSDMDMPTeilnahme.json",
@@ -342,6 +342,14 @@
     "fshFile": "extensions/VSDMKostentraegerRolle.fsh",
     "startLine": 1,
     "endLine": 19
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMKrankenhausleistungenPKV.json",
+    "fshName": "VSDMKrankenhausleistungenPKV",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMKrankenhausleistungenPKV.fsh",
+    "startLine": 1,
+    "endLine": 90
   },
   {
     "outputFile": "StructureDefinition-VSDMOperationOutcome.json",

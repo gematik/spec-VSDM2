@@ -59,6 +59,24 @@
         "mustSupport": true
       },
       {
+        "id": "Coverage.extension:krankenhaus",
+        "path": "Coverage.extension",
+        "sliceName": "krankenhaus",
+        "short": "PKV-Kostenübernahme Krankenhausleistungen",
+        "definition": "Angaben zur Kostenübernahme von Krankenhausleistungen für PKV-Versicherte",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKrankenhausleistungenPKV"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Coverage.extension:versichertenart",
         "path": "Coverage.extension",
         "sliceName": "versichertenart",

@@ -39,9 +39,10 @@ StructureDefinition-VSDMBeihilfe.json                                   VSDMBeih
 StructureDefinition-VSDMBundle.json                                     VSDMBundle                                        Profile     profiles/VSDMBundle.fsh                                        1 - 54
 StructureDefinition-VSDMContactPointTIM.json                            VSDMContactPointTIM                               Profile     profiles/VSDMContactPointTIM.fsh                               1 - 18
 StructureDefinition-VSDMCoverageGKV.json                                VSDMCoverageGKV                                   Profile     profiles/VSDMCoverageGKV.fsh                                   1 - 187
-StructureDefinition-VSDMCoveragePKV.json                                VSDMCoveragePKV                                   Profile     profiles/VSDMCoveragePKV.fsh                                   1 - 65
+StructureDefinition-VSDMCoveragePKV.json                                VSDMCoveragePKV                                   Profile     profiles/VSDMCoveragePKV.fsh                                   1 - 73
 StructureDefinition-VSDMDMPTeilnahme.json                               VSDMDMPTeilnahme                                  Extension   extensions/VSDMDMPTeilnahme.fsh                                1 - 54
 StructureDefinition-VSDMKostentraegerRolle.json                         VSDMKostentraegerRolle                            Extension   extensions/VSDMKostentraegerRolle.fsh                          1 - 19
+StructureDefinition-VSDMKrankenhausleistungenPKV.json                   VSDMKrankenhausleistungenPKV                      Extension   extensions/VSDMKrankenhausleistungenPKV.fsh                    1 - 90
 StructureDefinition-VSDMOperationOutcome.json                           VSDMOperationOutcome                              Profile     profiles/VSDMOperationOutcome.fsh                              1 - 79
 StructureDefinition-VSDMPatient.json                                    VSDMPatient                                       Profile     profiles/VSDMPatient.fsh                                       1 - 204
 StructureDefinition-VSDMPayorOrganization.json                          VSDMPayorOrganization                             Profile     profiles/VSDMPayorOrganization.fsh                             1 - 48

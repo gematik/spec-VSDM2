@@ -25,6 +25,14 @@ Description: "Angaben zum PKV-Versicherungsverhältnis im Versichertenstammdaten
       Angaben zum Beihilfe-Anspruch eines PKV-Versicherten
     """
 
+// Zuordnung aus Versicherungsdaten PKV -> Krankenhausleistungen
+* extension contains VSDMKrankenhausleistungenPKV named krankenhaus 0..* MS
+* extension[krankenhaus]
+  * ^short = "PKV-Kostenübernahme Krankenhausleistungen"
+  * ^definition = """
+      Angaben zur Kostenübernahme von Krankenhausleistungen für PKV-Versicherte
+    """
+
 // Zuordnung aus Versicherungsdaten -> Versichertenart
 * extension contains VSDMVersichertenartPKV named versichertenart 1..1 MS
 * extension[versichertenart]
