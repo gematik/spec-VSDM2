@@ -272,6 +272,14 @@
     "endLine": 300
   },
   {
+    "outputFile": "StructureDefinition-VSDDatensatzPKV.json",
+    "fshName": "VSDDatensatzPKV",
+    "fshType": "Logical",
+    "fshFile": "logicalmodel/VSDDatensatzPKV.fsh",
+    "startLine": 1,
+    "endLine": 176
+  },
+  {
     "outputFile": "StructureDefinition-VSDMBundle.json",
     "fshName": "VSDMBundle",
     "fshType": "Profile",
