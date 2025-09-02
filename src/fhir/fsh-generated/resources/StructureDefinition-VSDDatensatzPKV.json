@@ -9,6 +9,12 @@
   "fhirVersion": "4.0.1",
   "mapping": [
     {
+      "identity": "VSD-Datensatz-PKV-Coverage",
+      "name": "Mapping VSD-Datensatz PKV zu Coverage",
+      "uri": "VSDMCoverage",
+      "comment": "Zuordnung der Versicherungsinformationen des VSD-Datensatzes PKV zum FHIR-Profil VSDMCoverage"
+    },
+    {
       "identity": "VSD-Datensatz-PKV-Patient",
       "name": "Mapping VSD-Datensatz PKV zu Patient",
       "uri": "VSDMPatient",
@@ -493,6 +499,13 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Coverage",
+            "map": "VSDMCoverage.payor:Hauptkostentraeger",
+            "comment": "Der Kostenträger wird als Referenz auf eine VSDMPayorOrganization abgebildet. Im PKV-Bereich gibt es keine Unterscheidung zwischen Haupt- und abrechnendem Kostenträger, weshalb immer ein Hauptkostenträger angegeben wird."
+          }
         ]
       },
       {
@@ -505,6 +518,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Coverage",
+            "map": "VSDMPayorOrganization:Hauptkostentraeger.name"
           }
         ]
       },
@@ -519,6 +538,12 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Coverage",
+            "map": "VSDMPayorOrganization:Hauptkostentraeger.identifier:IKNR"
+          }
         ]
       },
       {
@@ -531,6 +556,13 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Coverage",
+            "map": "VSDMCoverage.period",
+            "comment": "Zur Abbildung werden die Standard-Felder der FHIR-Ressource verwendet."
           }
         ]
       },
@@ -545,6 +577,12 @@
           {
             "code": "date"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Coverage",
+            "map": "VSDMCoverage.period.start"
+          }
         ]
       },
       {
@@ -557,6 +595,12 @@
         "type": [
           {
             "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Coverage",
+            "map": "VSDMCoverage.period.end"
           }
         ]
       },
@@ -572,6 +616,13 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Coverage",
+            "map": "VSDMCoverage.extension:beihilfe",
+            "comment": "Die gesamte Zielstruktur ist für Versicherte ohne Beihilfeanspruch nicht anzugeben."
+          }
         ]
       },
       {
@@ -584,6 +635,12 @@
         "type": [
           {
             "code": "boolean"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Coverage",
+            "map": "VSDMCoverage.extension:beihilfe.extension:anspruch"
           }
         ]
       },
@@ -598,6 +655,12 @@
         "type": [
           {
             "code": "unsignedInt"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Coverage",
+            "map": "VSDMCoverage.extension:beihilfe.extension:quote"
           }
         ]
       },
@@ -626,6 +689,12 @@
           {
             "code": "unsignedInt"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Coverage",
+            "map": "VSDMCoverage.extension:krankenhaus.extension:allgemein"
+          }
         ]
       },
       {
@@ -639,6 +708,12 @@
         "type": [
           {
             "code": "unsignedInt"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Coverage",
+            "map": "VSDMCoverage.extension:krankenhaus.extension:zweibett"
           }
         ]
       },
@@ -654,6 +729,12 @@
           {
             "code": "unsignedInt"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Coverage",
+            "map": "VSDMCoverage.extension:krankenhaus.extension:einbett"
+          }
         ]
       },
       {
@@ -667,6 +748,12 @@
         "type": [
           {
             "code": "unsignedInt"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Coverage",
+            "map": "VSDMCoverage.extension:krankenhaus.extension:zweibettEinbettDifferenz"
           }
         ]
       },
@@ -685,6 +772,12 @@
           {
             "code": "unsignedInt"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Coverage",
+            "map": "VSDMCoverage.extension:krankenhaus.extension:wahlarzt"
+          }
         ]
       },
       {
@@ -702,6 +795,12 @@
           {
             "code": "unsignedInt"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Coverage",
+            "map": "VSDMCoverage.extension:krankenhaus.extension:belegarzt"
+          }
         ]
       },
       {
@@ -716,6 +815,12 @@
           {
             "code": "code"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Coverage",
+            "map": "VSDMCoverage.extension:sozialtarif"
+          }
         ]
       },
       {
@@ -728,6 +833,12 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Coverage",
+            "map": "VSDMCoverage.extension:versichertenart"
           }
         ]
       },
@@ -742,6 +853,12 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Coverage",
+            "map": "VSDMCoverage.extension:hinweis"
+          }
         ]
       },
       {
@@ -755,6 +872,12 @@
           {
             "code": "markdown"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Coverage",
+            "map": "VSDMCoverage.extension:hinweis.extension:text"
+          }
         ]
       },
       {
@@ -767,6 +890,12 @@
         "type": [
           {
             "code": "oid"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "VSD-Datensatz-PKV-Coverage",
+            "map": "VSDMCoverage.extension:hinweis.extension:professionOID"
           }
         ]
       }
