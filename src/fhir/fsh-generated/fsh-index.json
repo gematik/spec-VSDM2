@@ -128,6 +128,62 @@
     "endLine": 23
   },
   {
+    "outputFile": "Bundle-VSDMBundle-PKV-A123456780.json",
+    "fshName": "VSDMBundle-PKV-A123456780",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMBundle-PKV-A123456780.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "Bundle-VSDMBundle-PKV-B234567895.json",
+    "fshName": "VSDMBundle-PKV-B234567895",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMBundle-PKV-B234567895.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "Bundle-VSDMBundle-PKV-C345678908.json",
+    "fshName": "VSDMBundle-PKV-C345678908",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMBundle-PKV-C345678908.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "Bundle-VSDMBundle-PKV-D456789013.json",
+    "fshName": "VSDMBundle-PKV-D456789013",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMBundle-PKV-D456789013.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "Bundle-VSDMBundle-PKV-E567890127.json",
+    "fshName": "VSDMBundle-PKV-E567890127",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMBundle-PKV-E567890127.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "Bundle-VSDMBundle-PKV-F678901231.json",
+    "fshName": "VSDMBundle-PKV-F678901231",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMBundle-PKV-F678901231.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "Bundle-VSDMBundle-PKV-G789012344.json",
+    "fshName": "VSDMBundle-PKV-G789012344",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMBundle-PKV-G789012344.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
     "outputFile": "CodeSystem-VSDMErrorcodeCS.json",
     "fshName": "VSDMErrorcodeCS",
     "fshType": "CodeSystem",

@@ -1,0 +1,26 @@
+Instance: VSDMPatient-PKV-C345678908
+InstanceOf: VSDMPatient
+Title: "C345678908 Carolinataube, Charlie (PKV)"
+Description: "Versichertendaten C345678908 Carolinataube, Charlie (PKV)"
+Usage: #inline
+
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0)
+
+* identifier[KVNR].value = "C345678908"
+* birthDate = "1979-06-11"
+* name[Name]
+  * text = "Charlie Carolinataube"
+  * family = "Carolinataube"
+    * extension[nachname].valueString = "Carolinataube"
+  * given = "Charlie"
+* gender = #other
+  * extension[other-amtlich].valueCoding = $csGenderAmtlich#D "divers"
+* address[StrassenAdresse]
+  * line[+] = "Taubenweg 3c"
+    * extension[Hausnummer].valueString = "3c"
+    * extension[Strasse].valueString = "Taubenweg"
+  * line[+] = "zweites Hinterhaus links"
+    * extension[Adresszusatz].valueString = "Hinterhaus links"
+  * city = "Chemnitz"
+  * postalCode = "09128"
+  * country = $csCountryCodeISO3166#DE
