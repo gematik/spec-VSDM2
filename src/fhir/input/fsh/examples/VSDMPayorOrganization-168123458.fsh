@@ -9,4 +9,6 @@ Usage: #inline
 * identifier[IKNR].value = "168123458"
 * name = "Privatversicherung Neptun"
 * address
-  * country = #DE
+  * country = "Deutschland"
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
+    * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#D

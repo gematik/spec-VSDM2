@@ -9,7 +9,9 @@ Usage: #inline
 * identifier[IKNR].value = "168112342"
 * name = "Privatversicherung Pluto"
 * address
-  * country = #DE
+  * country = "Deutschland"
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
+    * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#D
 
 // Beispiel zur Übertragung weitergehender (nicht verpflichtender) Informationen zum Kostenträger
 * contact[+]
