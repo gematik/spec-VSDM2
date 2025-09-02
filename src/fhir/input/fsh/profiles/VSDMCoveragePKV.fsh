@@ -17,6 +17,14 @@ Description: "Angaben zum PKV-Versicherungsverhältnis im Versichertenstammdaten
       Zur Harmonisierung der Strukturen mit dem deutschen Basisprofil werden getrennte Profile für PKV und PKV gebildet.
     """
 
+// Zuordnung aus Versicherungsdaten PKV -> Beihilfe
+* extension contains VSDMBeihilfe named beihilfe 0..* MS
+* extension[beihilfe]
+  * ^short = "Beihilfeanspruch"
+  * ^definition = """
+      Angaben zum Beihilfe-Anspruch eines PKV-Versicherten
+    """
+
 // Zuordnung aus Versicherungsdaten -> Versichertenart
 * extension contains VSDMVersichertenartPKV named versichertenart 1..1 MS
 * extension[versichertenart]

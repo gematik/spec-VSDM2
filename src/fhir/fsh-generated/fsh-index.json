@@ -288,6 +288,14 @@
     "endLine": 176
   },
   {
+    "outputFile": "StructureDefinition-VSDMBeihilfe.json",
+    "fshName": "VSDMBeihilfe",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMBeihilfe.fsh",
+    "startLine": 1,
+    "endLine": 41
+  },
+  {
     "outputFile": "StructureDefinition-VSDMBundle.json",
     "fshName": "VSDMBundle",
     "fshType": "Profile",
@@ -317,7 +325,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoveragePKV.fsh",
     "startLine": 1,
-    "endLine": 57
+    "endLine": 65
   },
   {
     "outputFile": "StructureDefinition-VSDMDMPTeilnahme.json",

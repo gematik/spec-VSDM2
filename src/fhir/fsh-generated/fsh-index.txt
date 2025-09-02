@@ -35,10 +35,11 @@ OperationOutcome-VSDMOperationOutcome-VSDDNotReachable.json             VSDMOper
 OperationOutcome-VSDMOperationOutcome-VSDDTimeout.json                  VSDMOperationOutcome-VSDDTimeout                  Instance    examples/VSDMOperationOutcome-VSDDTimeout.fsh                  1 - 20
 StructureDefinition-VSDDatensatzGKV.json                                VSDDatensatzGKV                                   Logical     logicalmodel/VSDDatensatzGKV.fsh                               1 - 300
 StructureDefinition-VSDDatensatzPKV.json                                VSDDatensatzPKV                                   Logical     logicalmodel/VSDDatensatzPKV.fsh                               1 - 176
+StructureDefinition-VSDMBeihilfe.json                                   VSDMBeihilfe                                      Extension   extensions/VSDMBeihilfe.fsh                                    1 - 41
 StructureDefinition-VSDMBundle.json                                     VSDMBundle                                        Profile     profiles/VSDMBundle.fsh                                        1 - 54
 StructureDefinition-VSDMContactPointTIM.json                            VSDMContactPointTIM                               Profile     profiles/VSDMContactPointTIM.fsh                               1 - 18
 StructureDefinition-VSDMCoverageGKV.json                                VSDMCoverageGKV                                   Profile     profiles/VSDMCoverageGKV.fsh                                   1 - 187
-StructureDefinition-VSDMCoveragePKV.json                                VSDMCoveragePKV                                   Profile     profiles/VSDMCoveragePKV.fsh                                   1 - 57
+StructureDefinition-VSDMCoveragePKV.json                                VSDMCoveragePKV                                   Profile     profiles/VSDMCoveragePKV.fsh                                   1 - 65
 StructureDefinition-VSDMDMPTeilnahme.json                               VSDMDMPTeilnahme                                  Extension   extensions/VSDMDMPTeilnahme.fsh                                1 - 54
 StructureDefinition-VSDMKostentraegerRolle.json                         VSDMKostentraegerRolle                            Extension   extensions/VSDMKostentraegerRolle.fsh                          1 - 19
 StructureDefinition-VSDMOperationOutcome.json                           VSDMOperationOutcome                              Profile     profiles/VSDMOperationOutcome.fsh                              1 - 79

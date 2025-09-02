@@ -41,6 +41,24 @@
         "min": 1
       },
       {
+        "id": "Coverage.extension:beihilfe",
+        "path": "Coverage.extension",
+        "sliceName": "beihilfe",
+        "short": "Beihilfeanspruch",
+        "definition": "Angaben zum Beihilfe-Anspruch eines PKV-Versicherten",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBeihilfe"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Coverage.extension:versichertenart",
         "path": "Coverage.extension",
         "sliceName": "versichertenart",
