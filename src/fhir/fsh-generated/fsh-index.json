@@ -152,6 +152,14 @@
     "endLine": 16
   },
   {
+    "outputFile": "CodeSystem-VSDMVersichertenartPKVCS.json",
+    "fshName": "VSDMVersichertenartPKVCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMVersichertenartPKVCS.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
     "outputFile": "ConceptMap-VSDMErrorcodeIssueSeverity.json",
     "fshName": "VSDMErrorcodeIssueSeverity",
     "fshType": "Instance",
@@ -288,12 +296,28 @@
     "endLine": 54
   },
   {
+    "outputFile": "StructureDefinition-VSDMContactPointTIM.json",
+    "fshName": "VSDMContactPointTIM",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMContactPointTIM.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
     "outputFile": "StructureDefinition-VSDMCoverageGKV.json",
     "fshName": "VSDMCoverageGKV",
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverageGKV.fsh",
     "startLine": 1,
     "endLine": 187
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMCoveragePKV.json",
+    "fshName": "VSDMCoveragePKV",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMCoveragePKV.fsh",
+    "startLine": 1,
+    "endLine": 57
   },
   {
     "outputFile": "StructureDefinition-VSDMDMPTeilnahme.json",
@@ -325,7 +349,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 194
+    "endLine": 204
   },
   {
     "outputFile": "StructureDefinition-VSDMPayorOrganization.json",
@@ -334,6 +358,14 @@
     "fshFile": "profiles/VSDMPayorOrganization.fsh",
     "startLine": 1,
     "endLine": 48
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMVersichertenartPKV.json",
+    "fshName": "VSDMVersichertenartPKV",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMVersichertenartPKV.fsh",
+    "startLine": 1,
+    "endLine": 20
   },
   {
     "outputFile": "ValueSet-VSDMDMPVS.json",
@@ -372,6 +404,14 @@
     "fshName": "VSDMRuhenderLeistungsanspruchArtVS",
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMRuhenderLeistungsanspruchArtVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-VSDMVersichertenartPKVVS.json",
+    "fshName": "VSDMVersichertenartPKVVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMVersichertenartPKVVS.fsh",
     "startLine": 1,
     "endLine": 7
   },

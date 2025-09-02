@@ -48,7 +48,7 @@ Description: "Bundle zur Übermittlung der Ressourcen im Versichertenstammdatenm
   * resource only VSDMPatient
 * entry[VSDMCoverageGKV] MS
   * resource 1..1 MS
-  * resource only VSDMCoverageGKV
+  * resource only VSDMCoverageGKV or VSDMCoveragePKV 
 * entry[VSDMPayorOrganization] MS
   * resource 1..1 MS
   * resource only VSDMPayorOrganization

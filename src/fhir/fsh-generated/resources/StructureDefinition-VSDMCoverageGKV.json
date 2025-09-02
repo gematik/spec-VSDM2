@@ -9,7 +9,7 @@
   "experimental": false,
   "date": "2023-12-31",
   "publisher": "gematik GmbH",
-  "description": "Angaben zum GKV Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "description": "Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,

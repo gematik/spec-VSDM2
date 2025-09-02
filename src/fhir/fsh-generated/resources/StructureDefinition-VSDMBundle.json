@@ -5831,7 +5831,8 @@
           {
             "code": "Coverage",
             "profile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV"
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV",
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoveragePKV"
             ]
           }
         ],

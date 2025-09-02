@@ -1,0 +1,115 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "VSDMCoveragePKV",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoveragePKV",
+  "version": "1.0.0",
+  "name": "VSDMCoveragePKV",
+  "title": "Versicherungsdaten PKV",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-12-31",
+  "publisher": "gematik GmbH",
+  "description": "Angaben zum PKV-Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Coverage",
+  "baseDefinition": "http://fhir.de/StructureDefinition/coverage-de-basis",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Coverage",
+        "path": "Coverage",
+        "short": "Versicherungsdaten PKV",
+        "definition": "Angaben zum PKV-Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0",
+        "comment": "Zur Harmonisierung der Strukturen mit dem deutschen Basisprofil werden getrennte Profile für PKV und PKV gebildet."
+      },
+      {
+        "id": "Coverage.extension",
+        "path": "Coverage.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Coverage.extension:versichertenart",
+        "path": "Coverage.extension",
+        "sliceName": "versichertenart",
+        "short": "Art des Versicherten",
+        "definition": "Art des Versicherten",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMVersichertenartPKV"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.type",
+        "path": "Coverage.type",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "PKV",
+              "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Coverage.beneficiary",
+        "path": "Coverage.beneficiary",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.period",
+        "path": "Coverage.period",
+        "short": "Gültigkeitszeitraum des Versicherungsschutzes",
+        "definition": "Gibt den Beginn und, sofern anwendbar, das Ende des Versicherungsschutzes an.",
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.period.start",
+        "path": "Coverage.period.start",
+        "short": "Beginn des Versicherungsschutzes",
+        "definition": "Gibt den Beginn des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an. ",
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.period.end",
+        "path": "Coverage.period.end",
+        "short": "Ende des Versicherungsschutzes",
+        "definition": "Gibt das Ende des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an, wenn ein Endedatum festgelegt ist. ",
+        "comment": "Hier kann nicht das Ende der Gültigkeit einer konkreten eGK angegeben werden, weil der VSDM 2.0 Resource Server keine Kenntnis davon erlangt, welche konkrete eGK verwendet wurde.\nFür den Fall der Authentifikation mit einer elektronischen Identität liegt ohnehin kein eGK-Gültigkeitsdatum vor.",
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.payor",
+        "path": "Coverage.payor",
+        "short": "Kostenträger",
+        "mustSupport": true
+      }
+    ]
+  }
+}
