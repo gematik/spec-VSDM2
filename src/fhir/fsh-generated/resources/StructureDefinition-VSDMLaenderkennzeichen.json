@@ -9,7 +9,7 @@
   "experimental": false,
   "date": "2023-12-31",
   "publisher": "gematik GmbH",
-  "description": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8",
+  "description": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8 im Versichertenstammdatenmanagement (VSDM) 2.0",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -28,7 +28,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Länderkennzeichen nach DEÜV Anlage 8",
-        "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8.\nDiese Erweiterung ergänzt die Landesangabe nach internationalem Standard ISO3166-1-2."
+        "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8 im Versichertenstammdatenmanagement (VSDM) 2.0.\nDiese Erweiterung ergänzt die Landesangabe nach internationalem Standard ISO3166-1-2."
       },
       {
         "id": "Extension.extension",

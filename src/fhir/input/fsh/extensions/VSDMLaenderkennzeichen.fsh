@@ -1,14 +1,14 @@
 Extension: VSDMLaenderkennzeichen
 Context: Address.country
 Title: "Länderkennzeichen nach DEÜV Anlage 8"
-Description: "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8"
+Description: "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8 im Versichertenstammdatenmanagement (VSDM) 2.0"
 
 // Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
 * . 
   * ^short = "Länderkennzeichen nach DEÜV Anlage 8"
   * ^definition = """
-      Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8.
+      Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8 im Versichertenstammdatenmanagement (VSDM) 2.0.
       Diese Erweiterung ergänzt die Landesangabe nach internationalem Standard ISO3166-1-2.
     """
 

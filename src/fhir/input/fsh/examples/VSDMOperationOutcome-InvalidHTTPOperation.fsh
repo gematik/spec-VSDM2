@@ -18,5 +18,5 @@ Usage: #example
     * coding[0] = VSDMErrorcodeCS#VSDSERVICE_INVALID_HTTP_OPERATION "Die HTTP-Operation [http-operation] wird nicht unterstützt."
     * text = "Die HTTP-Operation PATCH wird nicht unterstützt."
   * diagnostics = """
-      Implementierungsfehler beim Clientsystem - der Hersteller des Clientsystems ist zu kontaktieren. 
+      Implementierungsfehler beim Clientsystem - der Hersteller des Clientsystems ist zu kontaktieren.
     """

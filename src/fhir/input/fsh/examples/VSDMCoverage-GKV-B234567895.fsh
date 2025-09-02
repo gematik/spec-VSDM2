@@ -8,7 +8,7 @@ Usage: #inline
 
 * extension[WOP].valueCoding = $csWOP#03 "Bremen"
 * extension[besonderePersonengruppe].valueCoding = #04 "SOZ" // "BSHG (Bundessozialhilfegesetz) § 264 SGB V"
-* extension[versichertenart].valueCoding = $csVersichertenart#3 "Familienangehoerige"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV#3 "Familienangehoerige"
 * status = #active
 * type = $csVersicherungsart#GKV
 * beneficiary.reference = "Patient/VSDMPatient-GKV-B234567895"

@@ -18,6 +18,6 @@ Usage: #example
     * coding[0] = VSDMErrorcodeCS#VSDSERVICE_INVALID_PATIENT_RECORD_VERSION "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden."
     * text = "Der Änderungsindikator 0xdeadbeef kann nicht verarbeitet werden."
   * diagnostics = """
-      Implementierungsfehler beim Clientsystem - der Hersteller des Clientsystems ist zu kontaktieren. 
+      Implementierungsfehler beim Clientsystem - der Hersteller des Clientsystems ist zu kontaktieren.
     """
   * expression[+] = "http.If-None-Match"

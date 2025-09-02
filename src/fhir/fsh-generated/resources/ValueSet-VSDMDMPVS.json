@@ -4,12 +4,13 @@
   "name": "VSDMDMPVS",
   "id": "VSDMDMPVS",
   "title": "Disease-Management-Programm (DMP)",
-  "description": "Disease-Management-Programm (Einschränkung auf im VSDM 2.0 gültige Werte)",
+  "description": "Disease-Management-Programm im Versichertenstammdatenmanagement (VSDM) 2.0",
   "version": "1.0.0",
   "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMDMPVS",
   "experimental": false,
   "publisher": "gematik GmbH",
   "date": "2023-12-31",
+  "purpose": "Einschränkung des KBV-CodeSystem auf im VSDM 2.0 gültige Werte",
   "compose": {
     "include": [
       {

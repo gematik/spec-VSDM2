@@ -168,7 +168,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
 // Slicing der Adresse, um die geforderten Kardinalitäten festzulegen
 * address 
   * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = type
+  * ^slicing.discriminator.path = "type"
   * ^slicing.rules = #open
 * address contains StrassenAdresse 0..1 and PostfachAdresse 0..1
 

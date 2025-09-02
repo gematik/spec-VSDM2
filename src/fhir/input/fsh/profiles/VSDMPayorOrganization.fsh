@@ -19,7 +19,7 @@ Description: "Angaben zum Kostenträger im Versichertenstammdatenmanagement (VSD
 // Zuordnung aus Versicherungsdaten -> [Abrechnender]Kostentraeger -> Kostentraegerkennung
 * identifier 
   * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = system
+  * ^slicing.discriminator.path = "system"
   * ^slicing.rules = #open
 * identifier contains IKNR 1..1 MS
 * identifier[IKNR] only IdentifierIknr 

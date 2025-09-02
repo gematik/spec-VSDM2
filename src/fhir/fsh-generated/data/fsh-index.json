@@ -301,7 +301,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMKostentraegerRolle.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 18
   },
   {
     "outputFile": "StructureDefinition-VSDMLaenderkennzeichen.json",
@@ -341,7 +341,7 @@
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMCoverageTypeVS.fsh",
     "startLine": 1,
-    "endLine": 8
+    "endLine": 11
   },
   {
     "outputFile": "ValueSet-VSDMDMPVS.json",
@@ -349,7 +349,7 @@
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMDMPVS.fsh",
     "startLine": 1,
-    "endLine": 18
+    "endLine": 21
   },
   {
     "outputFile": "ValueSet-VSDMErrorcodeVS.json",
@@ -389,7 +389,7 @@
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMVersichertenartVS.fsh",
     "startLine": 1,
-    "endLine": 7
+    "endLine": 10
   },
   {
     "outputFile": "ValueSet-VSDMVorsatzwortVS.json",

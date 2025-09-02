@@ -18,5 +18,5 @@ Usage: #example
     * coding[0] = VSDMErrorcodeCS#VSDSERVICE_INVALID_ENDPOINT "Der angefragte Endpunkt [endpoint] wird nicht unterstützt."
     * text = "Der angefragte Endpunkt /../etc/passwd wird nicht unterstützt."
   * diagnostics = """
-      Implementierungsfehler beim Clientsystem - der Hersteller des Clientsystems ist zu kontaktieren. 
+      Implementierungsfehler beim Clientsystem - der Hersteller des Clientsystems ist zu kontaktieren.
     """

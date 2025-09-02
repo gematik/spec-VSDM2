@@ -20,7 +20,7 @@ Usage: #inline
   * extension[dauer].valuePeriod
     * start = "2025-06-01"
     * end = "2027-12-31"
-* extension[versichertenart].valueCoding = $csVersichertenart#1 "Mitglieder"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV#1 "Mitglieder"
 * status = #active
 * type = $csVersicherungsart#GKV
 * beneficiary.reference = "Patient/VSDMPatient-GKV-G789012344"

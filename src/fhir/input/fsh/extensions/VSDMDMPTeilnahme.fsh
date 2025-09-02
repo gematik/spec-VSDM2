@@ -1,14 +1,14 @@
 Extension: VSDMDMPTeilnahme
 Context: Coverage
 Title: "Teilnahme an Disease Management-Programm"
-Description: "Angaben zur Teilnahme eines Versicherten an einem Disease Management-Programm"
+Description: "Angaben zur Teilnahme eines Versicherten an einem Disease Management-Programm im Versichertenstammdatenmanagement (VSDM) 2.0"
 
 // Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
 * . 
   * ^short = "Teilnahme an Disease Management-Programm"
   * ^definition = """
-      Angaben zur Teilnahme eines Versicherten an einem Disease Management-Programm
+      Angaben zur Teilnahme eines Versicherten an einem Disease Management-Programm im Versichertenstammdatenmanagement (VSDM) 2.0.
     """
 
 // Zuordnung aus Versicherungsdaten -> DMP -> DMP

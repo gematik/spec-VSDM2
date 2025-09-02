@@ -10,7 +10,7 @@ Usage: #inline
 * extension[zuzahlungsstatus] 
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = "2027-06-09"
-* extension[versichertenart].valueCoding = $csVersichertenart#3 "Familienangehoerige"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV#3 "Familienangehoerige"
 * status = #active
 * type = $csVersicherungsart#GKV
 * beneficiary.reference = "Patient/VSDMPatient-GKV-O567890128"

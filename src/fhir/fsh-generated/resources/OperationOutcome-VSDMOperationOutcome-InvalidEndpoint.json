@@ -24,7 +24,7 @@
         ],
         "text": "Der angefragte Endpunkt /../etc/passwd wird nicht unterstützt."
       },
-      "diagnostics": "Implementierungsfehler beim Clientsystem - der Hersteller des Clientsystems ist zu kontaktieren. "
+      "diagnostics": "Implementierungsfehler beim Clientsystem - der Hersteller des Clientsystems ist zu kontaktieren."
     }
   ]
 }

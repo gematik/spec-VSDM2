@@ -1,6 +1,6 @@
 ValueSet: VSDMNamenszusatzVS
 Title: "Namenszusatz"
-Description: "Namenszusatz nach DEÜV Anlage 7"
+Description: "Namenszusatz nach DEÜV Anlage 7 im Versichertenstammdatenmanagement (VSDM) 2.0"
 
 * insert Meta
 

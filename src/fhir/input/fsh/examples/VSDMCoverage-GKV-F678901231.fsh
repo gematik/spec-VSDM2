@@ -14,7 +14,7 @@ Usage: #inline
 * extension[ruhenderLeistungsanspruch]
   * extension[art].valueCoding = #1 "vollständig"
   * extension[dauer].valuePeriod.start = "2025-01-01"
-* extension[versichertenart].valueCoding = $csVersichertenart#3 "Familienangehoerige"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV#3 "Familienangehoerige"
 * status = #active
 * type = $csVersicherungsart#GKV
 * beneficiary.reference = "Patient/VSDMPatient-GKV-F678901231"

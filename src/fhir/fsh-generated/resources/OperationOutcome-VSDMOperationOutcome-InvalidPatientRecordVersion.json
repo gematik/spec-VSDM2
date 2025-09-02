@@ -24,7 +24,7 @@
         ],
         "text": "Der Änderungsindikator 0xdeadbeef kann nicht verarbeitet werden."
       },
-      "diagnostics": "Implementierungsfehler beim Clientsystem - der Hersteller des Clientsystems ist zu kontaktieren. ",
+      "diagnostics": "Implementierungsfehler beim Clientsystem - der Hersteller des Clientsystems ist zu kontaktieren.",
       "expression": [
         "http.If-None-Match"
       ]

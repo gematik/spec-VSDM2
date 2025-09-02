@@ -4,12 +4,13 @@
   "name": "VSDMCoverageTypeVS",
   "id": "VSDMCoverageTypeVS",
   "title": "Versicherungsart",
-  "description": "Dieses ValueSet stellt eine Einschränkung von [VersicherungsartDeBasisVS](http://fhir.de/ValueSet/versicherungsart-de-basis) auf die in VSDM 2.0 unterstützten Werte dar.",
+  "description": "Versicherungsart im Versichertenstammdatenmanagement (VSDM) 2.0",
   "version": "1.0.0",
   "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMCoverageTypeVS",
   "experimental": false,
   "publisher": "gematik GmbH",
   "date": "2023-12-31",
+  "purpose": "Dieses ValueSet stellt eine Einschränkung von [VersicherungsartDeBasisVS](http://fhir.de/ValueSet/versicherungsart-de-basis) auf die in VSDM 2.0 unterstützten Werte dar.",
   "compose": {
     "include": [
       {

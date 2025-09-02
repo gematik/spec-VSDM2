@@ -4,7 +4,7 @@
   "name": "VSDMWohnortprinzipVS",
   "id": "VSDMWohnortprinzipVS",
   "title": "Wohnortprinzip (WOP)",
-  "description": "Wohnortprinzip (Einschränkung auf im VSDM 2.0 gültige Werte)",
+  "description": "Wohnortprinzip im Versichertenstammdatenmanagement (VSDM) 2.0",
   "version": "1.0.0",
   "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMWohnortprinzipVS",
   "experimental": false,

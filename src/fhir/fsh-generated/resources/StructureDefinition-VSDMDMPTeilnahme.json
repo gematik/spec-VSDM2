@@ -9,7 +9,7 @@
   "experimental": false,
   "date": "2023-12-31",
   "publisher": "gematik GmbH",
-  "description": "Angaben zur Teilnahme eines Versicherten an einem Disease Management-Programm",
+  "description": "Angaben zur Teilnahme eines Versicherten an einem Disease Management-Programm im Versichertenstammdatenmanagement (VSDM) 2.0",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -28,7 +28,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Teilnahme an Disease Management-Programm",
-        "definition": "Angaben zur Teilnahme eines Versicherten an einem Disease Management-Programm"
+        "definition": "Angaben zur Teilnahme eines Versicherten an einem Disease Management-Programm im Versichertenstammdatenmanagement (VSDM) 2.0."
       },
       {
         "id": "Extension.extension",

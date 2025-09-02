@@ -1,8 +1,11 @@
 ValueSet: VSDMDMPVS
 Title: "Disease-Management-Programm (DMP)"
-Description: "Disease-Management-Programm (Einschränkung auf im VSDM 2.0 gültige Werte)"
+Description: "Disease-Management-Programm im Versichertenstammdatenmanagement (VSDM) 2.0"
 
 * insert Meta
+* ^purpose = """
+    Einschränkung des KBV-CodeSystem auf im VSDM 2.0 gültige Werte
+  """
 
 * include $csDMP#01 "Diabetes mellitus Typ 2"
 * include $csDMP#02 "Brustkrebs"

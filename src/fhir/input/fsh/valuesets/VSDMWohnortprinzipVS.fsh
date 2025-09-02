@@ -1,6 +1,6 @@
 ValueSet: VSDMWohnortprinzipVS
 Title: "Wohnortprinzip (WOP)"
-Description: "Wohnortprinzip (Einschränkung auf im VSDM 2.0 gültige Werte)"
+Description: "Wohnortprinzip im Versichertenstammdatenmanagement (VSDM) 2.0"
 
 * insert Meta
 

@@ -62,7 +62,7 @@ Alias: $csPersonengruppe = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSO
 
 // Versichertenstatus / Versichertenart, verwendet für
 //   - Beispiel für VSDMCoverage
-Alias: $csVersichertenart = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS
+Alias: $csVersichertenartGKV = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS
 
 // Versicherungsart, verwendet für:
 //   - Beispiel für VSDMCoverage
