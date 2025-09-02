@@ -113,6 +113,24 @@
         "mustSupport": true
       },
       {
+        "id": "Coverage.extension:hinweis",
+        "path": "Coverage.extension",
+        "sliceName": "hinweis",
+        "short": "Hinweise an PKV-Leistungserbringer",
+        "definition": "Optionale Hinweise in Freitextform für Leistungserbringer.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMHinweisPKV"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Coverage.type",
         "path": "Coverage.type",
         "fixedCodeableConcept": {

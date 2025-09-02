@@ -49,6 +49,14 @@ Description: "Angaben zum PKV-Versicherungsverhältnis im Versichertenstammdaten
       Art des Versicherten
     """
 
+// Zuordnung aus Versicherungsdaten PKV -> Hinweis
+* extension contains VSDMHinweisPKV named hinweis 0..* MS
+* extension[hinweis]
+  * ^short = "Hinweise an PKV-Leistungserbringer"
+  * ^definition = """
+      Optionale Hinweise in Freitextform für Leistungserbringer.
+    """
+
 // Versicherungsart (PKV)
 * type = $csVersicherungsart#PKV (exactly)
 

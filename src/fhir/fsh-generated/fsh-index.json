@@ -333,7 +333,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoveragePKV.fsh",
     "startLine": 1,
-    "endLine": 81
+    "endLine": 89
   },
   {
     "outputFile": "StructureDefinition-VSDMDMPTeilnahme.json",
@@ -342,6 +342,14 @@
     "fshFile": "extensions/VSDMDMPTeilnahme.fsh",
     "startLine": 1,
     "endLine": 54
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMHinweisPKV.json",
+    "fshName": "VSDMHinweisPKV",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMHinweisPKV.fsh",
+    "startLine": 1,
+    "endLine": 39
   },
   {
     "outputFile": "StructureDefinition-VSDMKostentraegerRolle.json",
