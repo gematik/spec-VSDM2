@@ -152,6 +152,14 @@
     "endLine": 16
   },
   {
+    "outputFile": "CodeSystem-VSDMSozialtarifPKVCS.json",
+    "fshName": "VSDMSozialtarifPKVCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMSozialtarifPKVCS.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
     "outputFile": "CodeSystem-VSDMVersichertenartPKVCS.json",
     "fshName": "VSDMVersichertenartPKVCS",
     "fshType": "CodeSystem",
@@ -325,7 +333,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoveragePKV.fsh",
     "startLine": 1,
-    "endLine": 73
+    "endLine": 81
   },
   {
     "outputFile": "StructureDefinition-VSDMDMPTeilnahme.json",
@@ -376,6 +384,14 @@
     "endLine": 48
   },
   {
+    "outputFile": "StructureDefinition-VSDMSozialtarifPKV.json",
+    "fshName": "VSDMSozialtarifPKV",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMSozialtarifPKV.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
     "outputFile": "StructureDefinition-VSDMVersichertenartPKV.json",
     "fshName": "VSDMVersichertenartPKV",
     "fshType": "Extension",
@@ -420,6 +436,14 @@
     "fshName": "VSDMRuhenderLeistungsanspruchArtVS",
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMRuhenderLeistungsanspruchArtVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-VSDMSozialtarifPKVVS.json",
+    "fshName": "VSDMSozialtarifPKVVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMSozialtarifPKVVS.fsh",
     "startLine": 1,
     "endLine": 7
   },

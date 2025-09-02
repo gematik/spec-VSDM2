@@ -77,6 +77,24 @@
         "mustSupport": true
       },
       {
+        "id": "Coverage.extension:sozialtarif",
+        "path": "Coverage.extension",
+        "sliceName": "sozialtarif",
+        "short": "PKV-Sozialtarif",
+        "definition": "Anwendung eines PKV-verbandseinheitlichen Tarifs mit Besonderheiten bezüglich der Leistungen und privatärztliche Abrechnungen.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMSozialtarifPKV"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Coverage.extension:versichertenart",
         "path": "Coverage.extension",
         "sliceName": "versichertenart",

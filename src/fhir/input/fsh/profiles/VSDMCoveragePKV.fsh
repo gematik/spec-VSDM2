@@ -33,6 +33,14 @@ Description: "Angaben zum PKV-Versicherungsverhältnis im Versichertenstammdaten
       Angaben zur Kostenübernahme von Krankenhausleistungen für PKV-Versicherte
     """
 
+// Zuordnung aus Versicherungsdaten PKV -> Sozialtarif
+* extension contains VSDMSozialtarifPKV named sozialtarif 0..* MS
+* extension[sozialtarif]
+  * ^short = "PKV-Sozialtarif"
+  * ^definition = """
+      Anwendung eines PKV-verbandseinheitlichen Tarifs mit Besonderheiten bezüglich der Leistungen und privatärztliche Abrechnungen.
+    """
+
 // Zuordnung aus Versicherungsdaten -> Versichertenart
 * extension contains VSDMVersichertenartPKV named versichertenart 1..1 MS
 * extension[versichertenart]
