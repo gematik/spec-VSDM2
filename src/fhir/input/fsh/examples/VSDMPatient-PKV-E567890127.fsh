@@ -25,10 +25,12 @@ Usage: #inline
     * extension[Strasse].valueString = "Elsterstraße"
   * city = "Erfurt"
   * postalCode = "99095"
-  * country = $csCountryCodeISO3166#DE
+  * country = "Deutschland"
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
 * address[PostfachAdresse]
   * line[+] = "Postfach 9821"
     * extension[Postfach].valueString = "Postfach 9821"
   * city = "Graz"
   * postalCode = "8055"
-  * country = $csCountryCodeISO3166#AT
+  * country = "Österreich"
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#AT

@@ -93,7 +93,18 @@
             ],
             "city": "Bremen",
             "postalCode": "28211",
-            "country": "DE"
+            "country": "Deutschland",
+            "_country": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                }
+              ]
+            }
           }
         ],
         "birthDate": "1988-06-22",
@@ -194,12 +205,23 @@
             "value": "168123458"
           }
         ],
-        "name": "Privatversicherung Neptun",
         "address": [
           {
-            "country": "DE"
+            "country": "Deutschland",
+            "_country": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                }
+              ]
+            }
           }
-        ]
+        ],
+        "name": "Privatversicherung Neptun"
       }
     }
   ]

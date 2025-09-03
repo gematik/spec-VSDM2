@@ -23,4 +23,5 @@ Usage: #inline
     * extension[Adresszusatz].valueString = "Hinterhaus links"
   * city = "Chemnitz"
   * postalCode = "09128"
-  * country = $csCountryCodeISO3166#DE
+  * country = "Deutschland"
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE

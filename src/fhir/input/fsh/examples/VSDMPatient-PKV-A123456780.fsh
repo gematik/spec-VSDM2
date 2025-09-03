@@ -23,4 +23,5 @@ Usage: #inline
     * extension[Strasse].valueString = "Amselweg"
   * city = "Aachen"
   * postalCode = "52070"
-  * country = $csCountryCodeISO3166#DE
+  * country = "Deutschland"
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE

@@ -11,7 +11,6 @@ Usage: #inline
 * address
   * country = "Deutschland"
     * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
-    * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#D
 
 // Beispiel zur Übertragung weitergehender (nicht verpflichtender) Informationen zum Kostenträger
 * contact[+]

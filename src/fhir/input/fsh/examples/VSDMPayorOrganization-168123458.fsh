@@ -11,4 +11,3 @@ Usage: #inline
 * address
   * country = "Deutschland"
     * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
-    * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#D

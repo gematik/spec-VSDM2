@@ -72,7 +72,18 @@
             ],
             "city": "Aachen",
             "postalCode": "52070",
-            "country": "DE"
+            "country": "Deutschland",
+            "_country": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                }
+              ]
+            }
           }
         ],
         "birthDate": "1997-12-28",
@@ -181,12 +192,23 @@
             "value": "168112342"
           }
         ],
-        "name": "Privatversicherung Pluto",
         "address": [
           {
-            "country": "DE"
+            "country": "Deutschland",
+            "_country": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                }
+              ]
+            }
           }
         ],
+        "name": "Privatversicherung Pluto",
         "contact": [
           {
             "purpose": {

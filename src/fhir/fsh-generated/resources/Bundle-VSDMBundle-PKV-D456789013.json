@@ -79,7 +79,18 @@
             ],
             "city": "Darmstadt",
             "postalCode": "64297",
-            "country": "DE"
+            "country": "Deutschland",
+            "_country": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                }
+              ]
+            }
           },
           {
             "type": "postal",
@@ -98,7 +109,18 @@
             ],
             "city": "Darmstadt",
             "postalCode": "64283",
-            "country": "DE"
+            "country": "Deutschland",
+            "_country": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                }
+              ]
+            }
           }
         ],
         "birthDate": "1970-01-20",
@@ -206,12 +228,23 @@
             "value": "168145671"
           }
         ],
-        "name": "Privatversicherung Saturn",
         "address": [
           {
-            "country": "DE"
+            "country": "Deutschland",
+            "_country": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                }
+              ]
+            }
           }
-        ]
+        ],
+        "name": "Privatversicherung Saturn"
       }
     }
   ]

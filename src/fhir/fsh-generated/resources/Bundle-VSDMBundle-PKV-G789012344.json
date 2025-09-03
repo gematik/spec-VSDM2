@@ -80,7 +80,18 @@
             ],
             "city": "Gießen",
             "postalCode": "35392",
-            "country": "DE"
+            "country": "Deutschland",
+            "_country": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                }
+              ]
+            }
           }
         ],
         "birthDate": "1974-02-12",
@@ -192,12 +203,23 @@
             "value": "168178900"
           }
         ],
-        "name": "Privatversicherung Venus",
         "address": [
           {
-            "country": "DE"
+            "country": "Deutschland",
+            "_country": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                }
+              ]
+            }
           }
         ],
+        "name": "Privatversicherung Venus",
         "contact": [
           {
             "purpose": {

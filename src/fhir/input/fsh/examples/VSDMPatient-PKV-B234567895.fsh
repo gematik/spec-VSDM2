@@ -27,4 +27,5 @@ Usage: #inline
     * extension[Strasse].valueString = "Buntspechtallee"
   * city = "Bremen"
   * postalCode = "28211"
-  * country = $csCountryCodeISO3166#DE
+  * country = "Deutschland"
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
