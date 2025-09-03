@@ -328,14 +328,6 @@
     "endLine": 48
   },
   {
-    "outputFile": "ValueSet-VSDMCoverageGKVTypeVS.json",
-    "fshName": "VSDMCoverageGKVTypeVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMCoverageTypeVS.fsh",
-    "startLine": 1,
-    "endLine": 11
-  },
-  {
     "outputFile": "ValueSet-VSDMDMPVS.json",
     "fshName": "VSDMDMPVS",
     "fshType": "ValueSet",

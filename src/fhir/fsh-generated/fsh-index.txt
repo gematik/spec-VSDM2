@@ -40,7 +40,6 @@ StructureDefinition-VSDMKostentraegerRolle.json                         VSDMKost
 StructureDefinition-VSDMOperationOutcome.json                           VSDMOperationOutcome                              Profile     profiles/VSDMOperationOutcome.fsh                              1 - 79
 StructureDefinition-VSDMPatient.json                                    VSDMPatient                                       Profile     profiles/VSDMPatient.fsh                                       1 - 195
 StructureDefinition-VSDMPayorOrganization.json                          VSDMPayorOrganization                             Profile     profiles/VSDMPayorOrganization.fsh                             1 - 48
-ValueSet-VSDMCoverageGKVTypeVS.json                                     VSDMCoverageGKVTypeVS                             ValueSet    valuesets/VSDMCoverageTypeVS.fsh                               1 - 11
 ValueSet-VSDMDMPVS.json                                                 VSDMDMPVS                                         ValueSet    valuesets/VSDMDMPVS.fsh                                        1 - 21
 ValueSet-VSDMErrorcodeVS.json                                           VSDMErrorcodeVS                                   ValueSet    valuesets/VSDMErrorcodeVS.fsh                                  1 - 8
 ValueSet-VSDMKostentraegerRolleVS.json                                  VSDMKostentraegerRolleVS                          ValueSet    valuesets/VSDMKostentraegerRolleVS.fsh                         1 - 7
