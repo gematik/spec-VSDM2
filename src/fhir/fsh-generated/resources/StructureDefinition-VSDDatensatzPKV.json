@@ -503,8 +503,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-PKV-Coverage",
-            "map": "VSDMCoverage.payor:Hauptkostentraeger",
-            "comment": "Der Kostenträger wird als Referenz auf eine VSDMPayorOrganization abgebildet. Im PKV-Bereich gibt es keine Unterscheidung zwischen Haupt- und abrechnendem Kostenträger, weshalb immer ein Hauptkostenträger angegeben wird."
+            "map": "VSDMCoveragePKV.payor:Hauptkostentraeger",
+            "comment": "Der Kostenträger wird als Referenz auf eine VSDMPayorOrganization abgebildet. Im PKV-Bereich gibt es keine Unterscheidung zwischen Haupt- und abrechnendem Kostenträger."
           }
         ]
       },
@@ -561,7 +561,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-PKV-Coverage",
-            "map": "VSDMCoverage.period",
+            "map": "VSDMCoveragePKV.period",
             "comment": "Zur Abbildung werden die Standard-Felder der FHIR-Ressource verwendet."
           }
         ]
@@ -581,7 +581,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-PKV-Coverage",
-            "map": "VSDMCoverage.period.start"
+            "map": "VSDMCoveragePKV.period.start"
           }
         ]
       },
@@ -600,7 +600,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-PKV-Coverage",
-            "map": "VSDMCoverage.period.end"
+            "map": "VSDMCoveragePKV.period.end"
           }
         ]
       },
@@ -620,7 +620,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-PKV-Coverage",
-            "map": "VSDMCoverage.extension:beihilfe",
+            "map": "VSDMCoveragePKV.extension:beihilfe",
             "comment": "Die gesamte Zielstruktur ist für Versicherte ohne Beihilfeanspruch nicht anzugeben."
           }
         ]
@@ -640,7 +640,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-PKV-Coverage",
-            "map": "VSDMCoverage.extension:beihilfe.extension:anspruch"
+            "map": "VSDMCoveragePKV.extension:beihilfe.extension:anspruch"
           }
         ]
       },
@@ -660,7 +660,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-PKV-Coverage",
-            "map": "VSDMCoverage.extension:beihilfe.extension:quote"
+            "map": "VSDMCoveragePKV.extension:beihilfe.extension:quote"
           }
         ]
       },
@@ -693,7 +693,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-PKV-Coverage",
-            "map": "VSDMCoverage.extension:krankenhaus.extension:allgemein"
+            "map": "VSDMCoveragePKV.extension:krankenhaus.extension:allgemein"
           }
         ]
       },
@@ -713,7 +713,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-PKV-Coverage",
-            "map": "VSDMCoverage.extension:krankenhaus.extension:zweibett"
+            "map": "VSDMCoveragePKV.extension:krankenhaus.extension:zweibett"
           }
         ]
       },
@@ -733,7 +733,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-PKV-Coverage",
-            "map": "VSDMCoverage.extension:krankenhaus.extension:einbett"
+            "map": "VSDMCoveragePKV.extension:krankenhaus.extension:einbett"
           }
         ]
       },
@@ -753,7 +753,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-PKV-Coverage",
-            "map": "VSDMCoverage.extension:krankenhaus.extension:zweibettEinbettDifferenz"
+            "map": "VSDMCoveragePKV.extension:krankenhaus.extension:zweibettEinbettDifferenz"
           }
         ]
       },
@@ -776,7 +776,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-PKV-Coverage",
-            "map": "VSDMCoverage.extension:krankenhaus.extension:wahlarzt"
+            "map": "VSDMCoveragePKV.extension:krankenhaus.extension:wahlarzt"
           }
         ]
       },
@@ -799,7 +799,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-PKV-Coverage",
-            "map": "VSDMCoverage.extension:krankenhaus.extension:belegarzt"
+            "map": "VSDMCoveragePKV.extension:krankenhaus.extension:belegarzt"
           }
         ]
       },
@@ -819,7 +819,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-PKV-Coverage",
-            "map": "VSDMCoverage.extension:sozialtarif"
+            "map": "VSDMCoveragePKV.extension:sozialtarif"
           }
         ]
       },
@@ -838,7 +838,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-PKV-Coverage",
-            "map": "VSDMCoverage.extension:versichertenart"
+            "map": "VSDMCoveragePKV.extension:versichertenart"
           }
         ]
       },
@@ -857,7 +857,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-PKV-Coverage",
-            "map": "VSDMCoverage.extension:hinweis"
+            "map": "VSDMCoveragePKV.extension:hinweis"
           }
         ]
       },
@@ -876,7 +876,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-PKV-Coverage",
-            "map": "VSDMCoverage.extension:hinweis.extension:text"
+            "map": "VSDMCoveragePKV.extension:hinweis.extension:text"
           }
         ]
       },
@@ -895,7 +895,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-PKV-Coverage",
-            "map": "VSDMCoverage.extension:hinweis.extension:professionOID"
+            "map": "VSDMCoveragePKV.extension:hinweis.extension:professionOID"
           }
         ]
       }
