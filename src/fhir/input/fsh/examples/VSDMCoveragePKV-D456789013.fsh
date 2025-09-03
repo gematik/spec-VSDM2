@@ -1,10 +1,10 @@
-Instance: VSDMCoverage-PKV-D456789013
-InstanceOf: VSDMCoverage
+Instance: VSDMCoveragePKV-D456789013
+InstanceOf: VSDMCoveragePKV
 Title: "D456789013 Dohle, Dara (PKV)"
 Description: "Versicherungsdaten D456789013 Dohle, Dara (PKV)"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+* meta.profile[0] = Canonical(VSDMCoveragePKV|1.0.0)
 
 * extension[krankenhaus]
   * extension[allgemein].valueUnsignedInt = 100
@@ -19,4 +19,3 @@ Usage: #inline
   * start = "1980-01-01"
 * payor[+]
   * reference = "Organization/VSDMPayorOrganization-168145671"
-  * extension[kostentraegerRolle].valueCoding = #H "Haupt-Kostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit

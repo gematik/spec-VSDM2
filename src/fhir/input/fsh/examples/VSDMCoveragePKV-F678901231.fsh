@@ -1,10 +1,10 @@
-Instance: VSDMCoverage-PKV-F678901231
-InstanceOf: VSDMCoverage
+Instance: VSDMCoveragePKV-F678901231
+InstanceOf: VSDMCoveragePKV
 Title: "F678901231 von Fasan, Frank Florian (PKV)"
 Description: "Versicherungsdaten F678901231 von Fasan, Frank Florian (PKV)"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+* meta.profile[0] = Canonical(VSDMCoveragePKV|1.0.0)
 
 * extension[krankenhaus]
   * extension[allgemein].valueUnsignedInt = 100
@@ -22,4 +22,3 @@ Usage: #inline
   * start = "2020-01-01"
 * payor[+]
   * reference = "Organization/VSDMPayorOrganization-168167894"
-  * extension[kostentraegerRolle].valueCoding = #H "Haupt-Kostenträger"

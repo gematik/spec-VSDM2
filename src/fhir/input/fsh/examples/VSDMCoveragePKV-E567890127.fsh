@@ -1,10 +1,10 @@
-Instance: VSDMCoverage-PKV-E567890127
-InstanceOf: VSDMCoverage
+Instance: VSDMCoveragePKV-E567890127
+InstanceOf: VSDMCoveragePKV
 Title: "E567890127 Freifrau an der Elster, Elke (PKV)"
 Description: "Versicherungsdaten E567890127 Freifrau an der Elster, Elke (PKV)"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+* meta.profile[0] = Canonical(VSDMCoveragePKV|1.0.0)
 
 * extension[krankenhaus]
   * extension[allgemein].valueUnsignedInt = 100
@@ -21,4 +21,3 @@ Usage: #inline
   * start = "2020-01-01"
 * payor[+]
   * reference = "Organization/VSDMPayorOrganization-168156788"
-  * extension[kostentraegerRolle].valueCoding = #H "Haupt-Kostenträger"

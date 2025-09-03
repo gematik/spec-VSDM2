@@ -41,14 +41,14 @@ Description: "Bundle zur Übermittlung der Ressourcen im Versichertenstammdatenm
   * ^slicing.rules = #closed
 * entry contains
     VSDMPatient 1..1 and
-    VSDMCoverageGKV 1..1 and 
+    VSDMCoverage 1..1 and 
     VSDMPayorOrganization 1..2  
 * entry[VSDMPatient] MS
   * resource 1..1 MS
   * resource only VSDMPatient
-* entry[VSDMCoverageGKV] MS
+* entry[VSDMCoverage] MS
   * resource 1..1 MS
-  * resource only VSDMCoverageGKV or VSDMCoveragePKV 
+  * resource only VSDMCoverageGKV or VSDMCoveragePKV
 * entry[VSDMPayorOrganization] MS
   * resource 1..1 MS
   * resource only VSDMPayorOrganization

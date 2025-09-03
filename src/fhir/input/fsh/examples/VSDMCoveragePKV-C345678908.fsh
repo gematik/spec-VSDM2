@@ -1,10 +1,10 @@
-Instance: VSDMCoverage-PKV-C345678908
-InstanceOf: VSDMCoverage
+Instance: VSDMCoveragePKV-C345678908
+InstanceOf: VSDMCoveragePKV
 Title: "C345678908 Carolinataube, Charlie (PKV)"
 Description: "Versicherungsdaten C345678908 Carolinataube, Charlie (PKV)"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+* meta.profile[0] = Canonical(VSDMCoveragePKV|1.0.0)
 
 * extension[krankenhaus]
   * extension[allgemein].valueUnsignedInt = 100
@@ -23,4 +23,3 @@ Usage: #inline
   * start = "2020-01-01"
 * payor[+]
   * reference = "Organization/VSDMPayorOrganization-168134565"
-  * extension[kostentraegerRolle].valueCoding = #H "Haupt-Kostenträger"

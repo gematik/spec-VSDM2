@@ -1,10 +1,10 @@
-Instance: VSDMCoverage-PKV-G789012344
-InstanceOf: VSDMCoverage
+Instance: VSDMCoveragePKV-G789012344
+InstanceOf: VSDMCoveragePKV
 Title: "G789012344 Edle von der Graugans, Gabriele (PKV)"
 Description: "Versicherungsdaten G789012344 Edle von der Graugans, Gabriele (PKV)"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+* meta.profile[0] = Canonical(VSDMCoveragePKV|1.0.0)
 
 * extension[krankenhaus]
   * extension[allgemein].valueUnsignedInt = 100
@@ -22,4 +22,3 @@ Usage: #inline
   * start = "1974-02-12"
 * payor[+]
   * reference = "Organization/VSDMPayorOrganization-168178900"
-  * extension[kostentraegerRolle].valueCoding = #H "Haupt-Kostenträger" 

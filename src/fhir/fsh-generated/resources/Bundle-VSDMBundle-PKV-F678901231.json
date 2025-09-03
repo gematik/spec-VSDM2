@@ -102,18 +102,26 @@
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverage-PKV-F678901231",
+      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoveragePKV-F678901231",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoverage-PKV-F678901231",
+        "id": "VSDMCoveragePKV-F678901231",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage|1.0.0"
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoveragePKV|1.0.0"
+          ]
+        },
+        "type": {
+          "coding": [
+            {
+              "code": "PKV",
+              "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis"
+            }
           ]
         },
         "extension": [
           {
-            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMVersichertenart",
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMVersichertenartPKV",
             "valueCoding": {
               "code": "VN",
               "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMVersichertenartPKVCS",
@@ -158,36 +166,18 @@
             "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMSozialtarifPKV"
           }
         ],
-        "payor": [
-          {
-            "extension": [
-              {
-                "valueCoding": {
-                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
-                  "code": "H",
-                  "display": "Haupt-Kostenträger"
-                },
-                "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
-              }
-            ],
-            "reference": "Organization/VSDMPayorOrganization-168167894"
-          }
-        ],
         "status": "active",
-        "type": {
-          "coding": [
-            {
-              "code": "PKV",
-              "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis"
-            }
-          ]
-        },
         "beneficiary": {
           "reference": "Patient/VSDMPatient-PKV-F678901231"
         },
         "period": {
           "start": "2020-01-01"
-        }
+        },
+        "payor": [
+          {
+            "reference": "Organization/VSDMPayorOrganization-168167894"
+          }
+        ]
       }
     },
     {
