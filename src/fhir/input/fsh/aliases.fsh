@@ -79,10 +79,14 @@ Alias: $csWOP = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP
 //
 
 // DEÜV Anlage 8 (Länderkennzeichen), verwendet für
-//   - VSDMLaenderkennzeichen (Extension)
-//     - VSDMPatient.address.country.extension[Laenderkennzeichen]
-//     - VSDMPayorOrganization.address.country.extension[Laenderkennzeichen]
+//   - VSDMPatient.address.country
+//   - VSDMPayorOrganization.address
 Alias: $vsAnlage8Laenderkennzeichen = https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8
+
+// Länderkennzeichen nach ISO 3166-1-2, verwendet für
+//   - VSDMPatient.address.country
+//   - VSDMPayorOrganization.address
+Alias: $vsCountryCodeISO3166 = http://hl7.org/fhir/ValueSet/iso3166-1-2
 
 // Schweregrad einer Meldung, verwendet für
 //   - ConceptMap VSDMErrorcodeIssueSeverity
@@ -95,7 +99,7 @@ Alias: $vsIssueType = http://hl7.org/fhir/ValueSet/issue-type
 // besondere Personengruppe, verwendet für
 //   - VSDMBesonderePersonengruppeVS
 //     - VSDMCoverage.extension[besonderePersonengruppe]
-Alias: $vsPersonengruppe = https://simplifier.net/kbvschluesseltabellen/kbv-vs-sfhir-kbv-personengruppe
+Alias: $vsPersonengruppe = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_PERSONENGRUPPE
 
 // ================================================================================================
 // 
@@ -113,6 +117,10 @@ Alias: $extKostenerstattung = http://fhir.de/StructureDefinition/gkv/kostenersta
 // ruhender Leistungsanspruch (Extension aus dem deutschen Basisprofil), verwendet für
 //   - VSDMCoverage.extension[ruhenderLeistungsanspruch]
 Alias: $extRuhenderLeistungsanspruch = http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch
+
+// coded expression for the content represented in a string
+// verwendet für die Länderangaben nach ISO 3166-2 bzw. Anlage 8 DEÜV
+Alias: $extCodedString = http://hl7.org/fhir/StructureDefinition/iso21090-codedString
 
 // Versichertenart (Extension aus dem deutschen Basisprofil), verwendet für
 //   - VSDMCoverage.extension[versichertenart]

@@ -22,5 +22,6 @@ Usage: #inline
     * extension[Strasse].valueString = "Am Gänseweiher"
   * city = "Gießen"
   * postalCode = "35392"
-  * country = $csCountryCodeISO3166#DE
-    * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"
+  * country = "Deutschland"
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
+    * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#D

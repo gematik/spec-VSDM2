@@ -34,15 +34,15 @@
           {
             "key": "VSDMCoverage-address-1",
             "severity": "error",
-            "human": "Für GKV-Versicherte ist die Angabe des Länderkennzeichens in Adressen des Patienten erforderlich.",
-            "expression": "type.coding.code = 'GKV' implies beneficiary.resolve().address.all(country.extension('https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen').exists())",
+            "human": "Für GKV-Versicherte ist die Angabe des Länderkennzeichens nach DEÜV Anlage 8 in Adressen des Patienten erforderlich.",
+            "expression": "type.coding.code = 'GKV' implies beneficiary.resolve().address.all(country.extension('http://hl7.org/fhir/StructureDefinition/iso21090-codedString').value.ofType(Coding).where(system = 'http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen').exists())",
             "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
           },
           {
             "key": "VSDMCoverage-address-2",
             "severity": "error",
-            "human": "Für GKV-Versicherte ist die Angabe des Länderkennzeichens in Adressen des Kostenträgers erforderlich.",
-            "expression": "type.coding.code = 'GKV' implies payor.all(resolve().address.all(country.extension('https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen').exists()))",
+            "human": "Für GKV-Versicherte ist die Angabe des Länderkennzeichens nach DEÜV Anlage 8 in Adressen des Kostenträgers erforderlich.",
+            "expression": "type.coding.code = 'GKV' implies payor.all(resolve().address.all(country.extension('http://hl7.org/fhir/StructureDefinition/iso21090-codedString').value.ofType(Coding).where(system = 'http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen').exists()))",
             "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
           },
           {
@@ -135,14 +135,6 @@
           }
         ],
         "mustSupport": true
-      },
-      {
-        "id": "Coverage.extension:besonderePersonengruppe.value[x]",
-        "path": "Coverage.extension.value[x]",
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://simplifier.net/kbvschluesseltabellen/kbv-vs-sfhir-kbv-personengruppe"
-        }
       },
       {
         "id": "Coverage.extension:besonderePersonengruppe.value[x].system",
@@ -319,6 +311,11 @@
           "strength": "required",
           "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMRuhenderLeistungsanspruchArtVS"
         }
+      },
+      {
+        "id": "Coverage.extension:ruhenderLeistungsanspruch.extension:art.value[x].system",
+        "path": "Coverage.extension.extension.value[x].system",
+        "fixedUri": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMRuhenderLeistungsanspruchArtCS"
       },
       {
         "id": "Coverage.extension:ruhenderLeistungsanspruch.extension:dauer",

@@ -20,12 +20,14 @@ Usage: #inline
     * extension[Strasse].valueString = "Winterammerstraße"
   * city = "Baden-Baden"
   * postalCode = "77815"
-  * country = $csCountryCodeISO3166#DE
-    * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"
+  * country = "Deutschland"
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
+    * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#D
 * address[PostfachAdresse]
   * line[+] = "Postfach 98765"
     * extension[Postfach].valueString = "Postfach 98765"
   * city = "Baden-Baden"
   * postalCode = "76530"
-  * country = $csCountryCodeISO3166#DE
-    * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"
+  * country = "Deutschland"
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
+    * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#D

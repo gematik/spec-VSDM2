@@ -13,7 +13,7 @@ Usage: #inline
   * extension[stationaererBereich].valueBoolean = true
   * extension[veranlassteLeistungen].valueBoolean = false
 * extension[ruhenderLeistungsanspruch]
-  * extension[art].valueCoding = #2 "eingeschränkt"
+  * extension[art].valueCoding = VSDMRuhenderLeistungsanspruchArtCS#2 "eingeschränkt"
   * extension[dauer].valuePeriod.start = "2024-06-15"
 * extension[versichertenart].valueCoding = $csVersichertenartGKV#5 "Rentner"
 * status = #active

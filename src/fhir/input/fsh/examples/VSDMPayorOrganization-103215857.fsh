@@ -9,5 +9,6 @@ Usage: #inline
 * identifier[IKNR].value = "103215857"
 * name = "Beispielkostenträger Bremerhaven"
 * address
-  * country = #DE
-    * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"
+  * country = "Deutschland"
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
+    * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#D

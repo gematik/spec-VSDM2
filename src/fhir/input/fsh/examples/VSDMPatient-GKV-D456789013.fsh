@@ -23,12 +23,14 @@ Usage: #inline
     * extension[Strasse].valueString = "Blumenweg"
   * city = "Darmstadt"
   * postalCode = "64297"
-  * country = $csCountryCodeISO3166#DE
-    * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"
+  * country = "Deutschland"
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
+    * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#D
 * address[PostfachAdresse]
   * line[+] = "Postfach 405060"
     * extension[Postfach].valueString = "Postfach 405060"
   * city = "Darmstadt"
   * postalCode = "64283"
-  * country = $csCountryCodeISO3166#DE
-    * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"
+  * country = "Deutschland"
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
+    * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#D

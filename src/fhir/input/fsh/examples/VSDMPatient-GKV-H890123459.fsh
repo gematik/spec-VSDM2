@@ -25,5 +25,6 @@ Usage: #inline
     * extension[Adresszusatz].valueString = "zweite Laube rechts"
   * city = "Hildesheim"
   * postalCode = "31135"
-  * country = $csCountryCodeISO3166#DE
-    * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"
+  * country = "Deutschland"
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
+    * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#D

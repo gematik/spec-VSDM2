@@ -285,7 +285,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverage.fsh",
     "startLine": 1,
-    "endLine": 193
+    "endLine": 194
   },
   {
     "outputFile": "StructureDefinition-VSDMDMPTeilnahme.json",
@@ -304,14 +304,6 @@
     "endLine": 18
   },
   {
-    "outputFile": "StructureDefinition-VSDMLaenderkennzeichen.json",
-    "fshName": "VSDMLaenderkennzeichen",
-    "fshType": "Extension",
-    "fshFile": "extensions/VSDMLaenderkennzeichen.fsh",
-    "startLine": 1,
-    "endLine": 19
-  },
-  {
     "outputFile": "StructureDefinition-VSDMOperationOutcome.json",
     "fshName": "VSDMOperationOutcome",
     "fshType": "Profile",
@@ -325,7 +317,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 225
+    "endLine": 195
   },
   {
     "outputFile": "StructureDefinition-VSDMPayorOrganization.json",
@@ -333,7 +325,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPayorOrganization.fsh",
     "startLine": 1,
-    "endLine": 62
+    "endLine": 48
   },
   {
     "outputFile": "ValueSet-VSDMCoverageTypeVS.json",

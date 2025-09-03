@@ -44,21 +44,5 @@ Description: "Angaben zum Kostenträger im Versichertenstammdatenmanagement (VSD
       Die meisten Adressfelder sind optional; verpflichtend ist die Angabe des Staats (Ländercode).
       Hinweise zur Abbildung von Adressen und Beispiele siehe https://ig.fhir.de/basisprofile-de/1.0.0-RC1/Datentypen-Address.html.
     """
-  * country MS
-    * ^short = "Staat"
-    * ^definition = """
-        Staatsangabe kodiert nach ISO-3166-1-2.
-      """
-    * ^comment = """
-        Die Kodierung ist durch den FHIR-Standard empfohlen, aber nicht erzwungen. 
-        Durch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.
-      """
-    * extension contains VSDMLaenderkennzeichen named Laenderkennzeichen 0..1 MS // zur Kardinalität siehe Invariante VSDMCoverage-address-2 in VSDMCoverage
-    * extension[Laenderkennzeichen] 
-      * ^short = "Länderkennzeichen nach DEÜV Anlage 8"
-      * ^definition = """
-          Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8. 
-        """
-      * ^comment = """
-          Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.
-        """
+  * country
+    * insert Address-Country

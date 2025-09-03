@@ -16,7 +16,7 @@ Usage: #inline
   * extension[stationaererBereich].valueBoolean = true
   * extension[veranlassteLeistungen].valueBoolean = true
 * extension[ruhenderLeistungsanspruch]
-  * extension[art].valueCoding = #2 "eingeschränkt"
+  * extension[art].valueCoding = VSDMRuhenderLeistungsanspruchArtCS#2 "eingeschränkt"
   * extension[dauer].valuePeriod
     * start = "2025-06-01"
     * end = "2027-12-31"

@@ -181,23 +181,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
         Hinweise zur Abbildung von Adressen und Beispiele siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Addresse.
       """
   * country
-    * ^short = "Staat"
-    * ^definition = """
-        Staatsangabe kodiert nach ISO-3166-1-2
-      """
-    * ^comment = """
-        Die Kodierung ist durch den FHIR-Standard empfohlen, aber nicht erzwungen. 
-        Durch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.
-      """
-    * extension contains VSDMLaenderkennzeichen named Laenderkennzeichen 0..1 MS // zur Kardinalität siehe Invariante VSDMCoverage-address-1 in VSDMCoverage
-    * extension[Laenderkennzeichen] 
-      * ^short = "Länderkennzeichen nach DEÜV Anlage 8"
-      * ^definition = """
-          Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8. 
-        """
-      * ^comment = """
-          Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.
-        """
+    * insert Address-Country
 
 // Zuordnung aus Versichertendaten -> Versicherter -> StrassenAdresse
 * address[StrassenAdresse] only AddressDeBasis // address-de-basis
@@ -208,20 +192,4 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
         Hinweise zur Abbildung von Adressen und Beispiele siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Addresse.
       """
   * country
-    * ^short = "Staat"
-    * ^definition = """
-        Staatsangabe kodiert nach ISO-3166-1-2
-      """
-    * ^comment = """
-        Die Kodierung ist durch den FHIR-Standard empfohlen, aber nicht erzwungen. 
-        Durch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.
-      """
-    * extension contains VSDMLaenderkennzeichen named Laenderkennzeichen 0..1 MS // zur Kardinalität siehe Invariante VSDMCoverage-address-1 in VSDMCoverage
-    * extension[Laenderkennzeichen] 
-      * ^short = "Länderkennzeichen nach DEÜV Anlage 8"
-      * ^definition = """
-          Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8. 
-        """
-      * ^comment = """
-          Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.
-        """
+    * insert Address-Country

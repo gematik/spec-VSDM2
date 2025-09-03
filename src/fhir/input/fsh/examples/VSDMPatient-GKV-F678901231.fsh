@@ -23,5 +23,6 @@ Usage: #inline
     * extension[Strasse].valueString = "Fasanenallee"
   * city = "Bern"
   * postalCode = "3013"
-  * country = $csCountryCodeISO3166#CH
-    * extension[Laenderkennzeichen].valueCoding = #CH "Schweiz"
+  * country = "Schweiz"
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#CH
+    * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#CH

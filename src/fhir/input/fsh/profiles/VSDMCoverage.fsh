@@ -39,7 +39,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
       Das Kennzeichen WOP ist für GKV-Patienten gemäss § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemäss Artikel 2 § 2 Abs. 2 des Gesetzes zur Einführung des Wohnortprinzips bei Honorarvereinbarungen für Ärzte und Zahnärzte und zur Krankenversichertenkarte gemäss § 291 Abs. 2 Fünftes Sozialgesetzbuch (SGB V) erforderlich.
     """
   * value[x] from VSDMWohnortprinzipVS (required)
-  * valueCoding.system = $csWOP (exactly)
+    * system = $csWOP (exactly)
 
 // Zuordnung aus Versicherungsdaten -> BesonderePersonengruppe
 * extension contains $extBesonderePersonengruppe named besonderePersonengruppe 0..1 MS
@@ -55,7 +55,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
       Die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.
     """
   * value[x] from $vsPersonengruppe (required)
-  * valueCoding.system = $csPersonengruppe (exactly)
+    * system = $csPersonengruppe (exactly)
 
 // Zuordnung aus Versicherungsdaten -> Zuzahlungsstatus
 * extension contains $extZuzahlungsstatus named zuzahlungsstatus 0..1 MS
@@ -123,6 +123,7 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
   * extension[art]
     * value[x] 1..1
     * valueCoding from VSDMRuhenderLeistungsanspruchArtVS
+      * system = Canonical(VSDMRuhenderLeistungsanspruchArtCS) (exactly)
   * extension[dauer].value[x] 1..1
 
 // Zuordnung aus Versicherungsdaten -> Versichertenart
@@ -200,13 +201,13 @@ Expression: "type.coding.code = 'GKV' implies beneficiary.resolve().gender.exist
 Severity: #error
 
 Invariant: VSDMCoverage-address-1
-Description: "Für GKV-Versicherte ist die Angabe des Länderkennzeichens in Adressen des Patienten erforderlich."
-Expression: "type.coding.code = 'GKV' implies beneficiary.resolve().address.all(country.extension('https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen').exists())"
+Description: "Für GKV-Versicherte ist die Angabe des Länderkennzeichens nach DEÜV Anlage 8 in Adressen des Patienten erforderlich."
+Expression: "type.coding.code = 'GKV' implies beneficiary.resolve().address.all(country.extension('http://hl7.org/fhir/StructureDefinition/iso21090-codedString').value.ofType(Coding).where(system = 'http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen').exists())"
 Severity: #error
 
 Invariant: VSDMCoverage-address-2
-Description: "Für GKV-Versicherte ist die Angabe des Länderkennzeichens in Adressen des Kostenträgers erforderlich."
-Expression: "type.coding.code = 'GKV' implies payor.all(resolve().address.all(country.extension('https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen').exists()))"
+Description: "Für GKV-Versicherte ist die Angabe des Länderkennzeichens nach DEÜV Anlage 8 in Adressen des Kostenträgers erforderlich."
+Expression: "type.coding.code = 'GKV' implies payor.all(resolve().address.all(country.extension('http://hl7.org/fhir/StructureDefinition/iso21090-codedString').value.ofType(Coding).where(system = 'http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen').exists()))"
 Severity: #error
 
 Invariant: VSDMCoverage-wop-1

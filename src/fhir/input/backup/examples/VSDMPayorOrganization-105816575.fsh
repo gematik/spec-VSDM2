@@ -9,8 +9,9 @@ Usage: #inline
 * identifier[IKNR].value = "105816575"
 * name = "Beispielkostenträger Wiesbaden"
 * address
-  * country = #DE
-    * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"
+  * country = "Deutschland"
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
+    * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#D
 
 // Beispiel zur Übertragung weitergehender (nicht verpflichtender) Informationen zum Kostenträger
 * contact[+]

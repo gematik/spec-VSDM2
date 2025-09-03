@@ -96,16 +96,22 @@
             ],
             "city": "Zwickau",
             "postalCode": "08066",
-            "country": "DE",
+            "country": "Deutschland",
             "_country": {
               "extension": [
                 {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
                   "valueCoding": {
-                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
                     "code": "D",
-                    "display": "Deutschland"
-                  },
-                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen"
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
+                  }
                 }
               ]
             }
@@ -127,16 +133,22 @@
             ],
             "city": "Zwickau",
             "postalCode": "08062",
-            "country": "DE",
+            "country": "Deutschland",
             "_country": {
               "extension": [
                 {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
                   "valueCoding": {
-                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
                     "code": "D",
-                    "display": "Deutschland"
-                  },
-                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen"
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
+                  }
                 }
               ]
             }
@@ -281,6 +293,7 @@
                 "url": "art",
                 "valueCoding": {
                   "code": "1",
+                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMRuhenderLeistungsanspruchArtCS",
                   "display": "vollständig"
                 }
               },
@@ -358,16 +371,22 @@
         ],
         "address": [
           {
-            "country": "DE",
+            "country": "Deutschland",
             "_country": {
               "extension": [
                 {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
                   "valueCoding": {
-                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
                     "code": "D",
-                    "display": "Deutschland"
-                  },
-                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen"
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
+                  }
                 }
               ]
             }
@@ -394,16 +413,22 @@
         ],
         "address": [
           {
-            "country": "DE",
+            "country": "Deutschland",
             "_country": {
               "extension": [
                 {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
                   "valueCoding": {
-                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
                     "code": "D",
-                    "display": "Deutschland"
-                  },
-                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen"
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
+                  }
                 }
               ]
             }
