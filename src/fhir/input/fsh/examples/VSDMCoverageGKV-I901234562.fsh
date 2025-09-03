@@ -1,10 +1,10 @@
-Instance: VSDMCoverage-GKV-I901234562
-InstanceOf: VSDMCoverage
+Instance: VSDMCoverageGKV-I901234562
+InstanceOf: VSDMCoverageGKV
 Title: "I901234562 Ibis, Ingrid (GKV)"
 Description: "Versicherungsdaten I901234562 Ibis, Ingrid (GKV)"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#98 "Sachsen"
 * extension[dmp][+]

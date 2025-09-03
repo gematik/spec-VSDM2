@@ -280,12 +280,12 @@
     "endLine": 54
   },
   {
-    "outputFile": "StructureDefinition-VSDMCoverage.json",
-    "fshName": "VSDMCoverage",
+    "outputFile": "StructureDefinition-VSDMCoverageGKV.json",
+    "fshName": "VSDMCoverageGKV",
     "fshType": "Profile",
-    "fshFile": "profiles/VSDMCoverage.fsh",
+    "fshFile": "profiles/VSDMCoverageGKV.fsh",
     "startLine": 1,
-    "endLine": 194
+    "endLine": 187
   },
   {
     "outputFile": "StructureDefinition-VSDMDMPTeilnahme.json",
@@ -328,8 +328,8 @@
     "endLine": 48
   },
   {
-    "outputFile": "ValueSet-VSDMCoverageTypeVS.json",
-    "fshName": "VSDMCoverageTypeVS",
+    "outputFile": "ValueSet-VSDMCoverageGKVTypeVS.json",
+    "fshName": "VSDMCoverageGKVTypeVS",
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMCoverageTypeVS.fsh",
     "startLine": 1,
@@ -374,14 +374,6 @@
     "fshFile": "valuesets/VSDMRuhenderLeistungsanspruchArtVS.fsh",
     "startLine": 1,
     "endLine": 7
-  },
-  {
-    "outputFile": "ValueSet-VSDMVersichertenartVS.json",
-    "fshName": "VSDMVersichertenartVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMVersichertenartVS.fsh",
-    "startLine": 1,
-    "endLine": 10
   },
   {
     "outputFile": "ValueSet-VSDMVorsatzwortVS.json",

@@ -1,4 +1,4 @@
-ValueSet: VSDMCoverageTypeVS
+ValueSet: VSDMCoverageGKVTypeVS
 Title: "Versicherungsart"
 Description: "Versicherungsart im Versichertenstammdatenmanagement (VSDM) 2.0"
 

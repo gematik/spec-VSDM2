@@ -28,7 +28,7 @@ Description: "Zuordnung der Versichertendaten des VSD-Datensatzes GKV zum FHIR-P
       "Das Geschlecht wird auf die standardisierten FHIR-Werte abgebildet. Da damit nicht alle Werte abgebildet werden können, kommt eine Erweiterung zum Einsatz."
     
     * Geschlecht -> "VSDMPatient.gender.extension:other-amtlich"
-      "Diese Erweiterung nimmt die Geschlechtsangabe gemäß der geforderten Wertetabelle auf. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverage-gender-1 abgebildet."
+      "Diese Erweiterung nimmt die Geschlechtsangabe gemäß der geforderten Wertetabelle auf. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverageGKV-gender-1 abgebildet."
     
     * Vorsatzwort -> "VSDMPatient.name:Name.family.extension:vorsatzwort"
       "Vorsatzwort zum Nachnamen. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
@@ -50,7 +50,7 @@ Description: "Zuordnung der Versichertendaten des VSD-Datensatzes GKV zum FHIR-P
         "Hinweise zur Bildung der Adresszeilen beachten."
 
       * Wohnsitzlaendercode -> "VSDMPatient.address:PostfachAdresse.country"
-        "Hinweise zur Befüllung der Extensions beachten. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverage-address-1 abgebildet."
+        "Hinweise zur Befüllung der Extensions beachten. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverageGKV-address-1 abgebildet."
 
     * StrassenAdresse -> "VSDMPatient.address:StrassenAdresse"
       "Strassenadressen (Meldeadressen) werden mit dem Typ \"physical\" gekennzeichnet."
@@ -60,7 +60,7 @@ Description: "Zuordnung der Versichertendaten des VSD-Datensatzes GKV zum FHIR-P
       * Ort -> "VSDMPatient.address:StrassenAdresse.city"
 
       * Wohnsitzlaendercode -> "VSDMPatient.address.country"
-        "Hinweise zur Befüllung der Extensions beachten. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverage-address-1 abgebildet."
+        "Hinweise zur Befüllung der Extensions beachten. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverageGKV-address-1 abgebildet."
 
       * Strasse -> "VSDMPatient.address:StrassenAdresse.line.extension:Strasse"
         "Hinweise zur Bildung der Adresszeilen beachten."

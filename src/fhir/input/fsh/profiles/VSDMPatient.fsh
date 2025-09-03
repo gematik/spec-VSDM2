@@ -136,7 +136,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
       """
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Geschlecht
-* gender // MS bereits durch TIPatient vorgegeben; zur Kardinalität siehe Invariante VSDMCoverage-gender-1 in VSDMCoverage
+* gender // MS bereits durch TIPatient vorgegeben; zur Kardinalität siehe Invariante VSDMCoverageGKV-gender-1 in VSDMCoverageGKV
   * ^short = "Administrative Geschlechtsangabe (FHIR-Kodierung)"
   * ^definition = """
       Administrative Geschlechtsangabe gemäß den Unterlagen des Kostenträgers, kodiert nach FHIR-Standard.

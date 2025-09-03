@@ -1,10 +1,10 @@
-Instance: VSDMCoverage-GKV-O567890128
-InstanceOf: VSDMCoverage
+Instance: VSDMCoverageGKV-O567890128
+InstanceOf: VSDMCoverageGKV
 Title: "O567890128 Ortolan, Oliver (GKV)"
 Description: "Versicherungsdaten O567890128 Ortolan, Oliver (GKV)"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"
 * extension[zuzahlungsstatus] 

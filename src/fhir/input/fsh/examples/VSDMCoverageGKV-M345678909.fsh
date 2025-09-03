@@ -1,10 +1,10 @@
-Instance: VSDMCoverage-GKV-M345678909
-InstanceOf: VSDMCoverage
+Instance: VSDMCoverageGKV-M345678909
+InstanceOf: VSDMCoverageGKV
 Title: "M345678909 Mittelspecht, Michael-Martin (GKV)"
 Description: "Versicherungsdaten M345678909 Mittelspecht, Michael-Martin (GKV)"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#71 "Bayern"
 * extension[zuzahlungsstatus] 

@@ -1,10 +1,10 @@
-Instance: VSDMCoverage-GKV-B234567895
-InstanceOf: VSDMCoverage
+Instance: VSDMCoverageGKV-B234567895
+InstanceOf: VSDMCoverageGKV
 Title: "B234567895 Graf von und zu Buntspecht, Bernd Benjamin (GKV)"
 Description: "Versicherungsdaten B234567895 Graf von und zu Buntspecht, Bernd Benjamin (GKV)"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#03 "Bremen"
 * extension[besonderePersonengruppe].valueCoding = #04 "SOZ" // "BSHG (Bundessozialhilfegesetz) § 264 SGB V"

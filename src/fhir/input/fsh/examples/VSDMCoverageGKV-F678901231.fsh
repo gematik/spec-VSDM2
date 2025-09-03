@@ -1,10 +1,10 @@
-Instance: VSDMCoverage-GKV-F678901231
-InstanceOf: VSDMCoverage
+Instance: VSDMCoverageGKV-F678901231
+InstanceOf: VSDMCoverageGKV
 Title: "F678901231 von Fasan, Frank Florian (GKV)"
 Description: "Versicherungsdaten F678901231 von Fasan, Frank Florian (GKV)"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"
 * extension[besonderePersonengruppe].valueCoding = #08 "SVA2" // "SVA-Kennzeichnung, pauschal"

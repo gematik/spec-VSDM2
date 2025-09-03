@@ -88,16 +88,32 @@
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverage-GKV-K123456781",
+      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-K123456781",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoverage-GKV-K123456781",
+        "id": "VSDMCoverageGKV-K123456781",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage|1.0.0"
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0"
+          ]
+        },
+        "type": {
+          "coding": [
+            {
+              "code": "GKV",
+              "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis"
+            }
           ]
         },
         "extension": [
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/wop",
+            "valueCoding": {
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+              "code": "46",
+              "display": "Hessen"
+            }
+          },
           {
             "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
             "valueCoding": {
@@ -105,14 +121,6 @@
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
               "display": "Rentner"
             }
-          },
-          {
-            "valueCoding": {
-              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
-              "code": "46",
-              "display": "Hessen"
-            },
-            "url": "http://fhir.de/StructureDefinition/gkv/wop"
           },
           {
             "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung",
@@ -184,14 +192,6 @@
           }
         ],
         "status": "active",
-        "type": {
-          "coding": [
-            {
-              "code": "GKV",
-              "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis"
-            }
-          ]
-        },
         "beneficiary": {
           "reference": "Patient/VSDMPatient-GKV-K123456781"
         },

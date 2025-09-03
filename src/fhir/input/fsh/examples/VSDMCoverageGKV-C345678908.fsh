@@ -1,10 +1,10 @@
-Instance: VSDMCoverage-GKV-C345678908
-InstanceOf: VSDMCoverage
+Instance: VSDMCoverageGKV-C345678908
+InstanceOf: VSDMCoverageGKV
 Title: "C345678908 Carolinataube, Charlie (GKV)"
 Description: "Versicherungsdaten C345678908 Carolinataube, Charlie (GKV)"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#98 "Sachsen"
 * extension[dmp][+]

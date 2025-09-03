@@ -1,10 +1,10 @@
-Instance: VSDMCoverage-GKV-K123456781
-InstanceOf: VSDMCoverage
+Instance: VSDMCoverageGKV-K123456781
+InstanceOf: VSDMCoverageGKV
 Title: "K123456781 Kiebitz, Karin (GKV)"
 Description: "Versicherungsdaten K123456781 Kiebitz, Karin (GKV)"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#46 "Hessen"
 * extension[kostenerstattung]

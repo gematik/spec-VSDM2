@@ -1,10 +1,10 @@
-Instance: VSDMCoverage-GKV-N456789014
-InstanceOf: VSDMCoverage
+Instance: VSDMCoverageGKV-N456789014
+InstanceOf: VSDMCoverageGKV
 Title: "N456789014 Nachtigall, Nina Nicole (GKV)"
 Description: "Versicherungsdaten N456789014 Nachtigall, Nina Nicole (GKV)"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"
 * extension[zuzahlungsstatus] 

@@ -1,10 +1,10 @@
-Instance: VSDMCoverage-GKV-A123456780
-InstanceOf: VSDMCoverage
+Instance: VSDMCoverageGKV-A123456780
+InstanceOf: VSDMCoverageGKV
 Title: "A123456780 Amsel, Andrea (GKV)"
 Description: "Versicherungsdaten A123456780 Amsel, Andrea (GKV)"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#38 "Nordrhein"
 * extension[versichertenart].valueCoding = $csVersichertenartGKV#1 "Mitglieder"

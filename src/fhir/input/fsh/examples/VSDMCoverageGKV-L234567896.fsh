@@ -1,10 +1,10 @@
-Instance: VSDMCoverage-GKV-L234567896
-InstanceOf: VSDMCoverage
+Instance: VSDMCoverageGKV-L234567896
+InstanceOf: VSDMCoverageGKV
 Title: "L234567896 Lachmöwe, Lisa (GKV)"
 Description: "Versicherungsdaten L234567896 Lachmöwe, Lisa (GKV)"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#17 "Niedersachsen" 
 * extension[zuzahlungsstatus] 

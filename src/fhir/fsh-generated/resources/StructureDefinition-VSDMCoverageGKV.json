@@ -1,15 +1,15 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "VSDMCoverage",
-  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage",
+  "id": "VSDMCoverageGKV",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV",
   "version": "1.0.0",
-  "name": "VSDMCoverage",
-  "title": "Versicherungsdaten",
+  "name": "VSDMCoverageGKV",
+  "title": "Versicherungsdaten GKV",
   "status": "draft",
   "experimental": false,
   "date": "2023-12-31",
   "publisher": "gematik GmbH",
-  "description": "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "description": "Angaben zum GKV Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -21,50 +21,30 @@
       {
         "id": "Coverage",
         "path": "Coverage",
-        "definition": "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0",
-        "comment": "Die Struktur wird unabhängig von der Versicherungsart (GKV/PKV) definiert.",
+        "short": "Versicherungsdaten GKV",
+        "definition": "Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0",
+        "comment": "Zur Harmonisierung der Strukturen mit dem deutschen Basisprofil werden getrennte Profile für GKV und PKV gebildet.",
         "constraint": [
           {
-            "key": "VSDMCoverage-gender-1",
+            "key": "VSDMCoverageGKV-gender-1",
             "severity": "error",
             "human": "Für GKV-Versicherte ist die Angabe des Geschlechts erforderlich.",
-            "expression": "type.coding.code = 'GKV' implies beneficiary.resolve().gender.exists()",
-            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+            "expression": "beneficiary.resolve().gender.exists()",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV"
           },
           {
-            "key": "VSDMCoverage-address-1",
+            "key": "VSDMCoverageGKV-address-1",
             "severity": "error",
             "human": "Für GKV-Versicherte ist die Angabe des Länderkennzeichens nach DEÜV Anlage 8 in Adressen des Patienten erforderlich.",
-            "expression": "type.coding.code = 'GKV' implies beneficiary.resolve().address.all(country.extension('http://hl7.org/fhir/StructureDefinition/iso21090-codedString').value.ofType(Coding).where(system = 'http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen').exists())",
-            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+            "expression": "beneficiary.resolve().address.all(country.extension('http://hl7.org/fhir/StructureDefinition/iso21090-codedString').value.ofType(Coding).where(system = 'http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen').exists())",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV"
           },
           {
-            "key": "VSDMCoverage-address-2",
+            "key": "VSDMCoverageGKV-address-2",
             "severity": "error",
             "human": "Für GKV-Versicherte ist die Angabe des Länderkennzeichens nach DEÜV Anlage 8 in Adressen des Kostenträgers erforderlich.",
-            "expression": "type.coding.code = 'GKV' implies payor.all(resolve().address.all(country.extension('http://hl7.org/fhir/StructureDefinition/iso21090-codedString').value.ofType(Coding).where(system = 'http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen').exists()))",
-            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
-          },
-          {
-            "key": "VSDMCoverage-wop-1",
-            "severity": "error",
-            "human": "Für GKV-Versicherte ist die Angabe des Wohnortprinzip-Kennzeichens erforderlich.",
-            "expression": "type.coding.code = 'GKV' implies extension('http://fhir.de/StructureDefinition/gkv/wop').exists()",
-            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
-          },
-          {
-            "key": "VSDMCoverage-period-1",
-            "severity": "error",
-            "human": "Für GKV-Versicherte ist die Angabe des Versicherungsbeginns erforderlich.",
-            "expression": "type.coding.code = 'GKV' implies period.start.exists()",
-            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
-          },
-          {
-            "key": "VSDMCoverage-versichertenart-1",
-            "severity": "error",
-            "human": "Für GKV-Versicherte sind nur die Versichertenarten 1, 3 und 5 zulässig.",
-            "expression": "type.coding.code = 'GKV' implies extension('http://fhir.de/StructureDefinition/gkv/versichertenart').valueCoding.code = '1' or extension('http://fhir.de/StructureDefinition/gkv/versichertenart').valueCoding.code = '3' or extension('http://fhir.de/StructureDefinition/gkv/versichertenart').valueCoding.code = '5'",
-            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+            "expression": "payor.all(resolve().address.all(country.extension('http://hl7.org/fhir/StructureDefinition/iso21090-codedString').value.ofType(Coding).where(system = 'http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen').exists()))",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV"
           }
         ]
       },
@@ -81,7 +61,7 @@
           "ordered": false,
           "rules": "open"
         },
-        "min": 1
+        "min": 2
       },
       {
         "id": "Coverage.extension:WOP",
@@ -91,7 +71,7 @@
         "definition": "Kennzeichen zur Umsetzung des Wohnortprinzips (WOP).",
         "comment": "Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html",
         "requirements": "Das Kennzeichen WOP ist für GKV-Patienten gemäss § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemäss Artikel 2 § 2 Abs. 2 des Gesetzes zur Einführung des Wohnortprinzips bei Honorarvereinbarungen für Ärzte und Zahnärzte und zur Krankenversichertenkarte gemäss § 291 Abs. 2 Fünftes Sozialgesetzbuch (SGB V) erforderlich.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -349,20 +329,18 @@
       {
         "id": "Coverage.extension:versichertenart.value[x]",
         "path": "Coverage.extension.value[x]",
-        "min": 1,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMVersichertenartVS"
-        }
+        "min": 1
       },
       {
         "id": "Coverage.type",
         "path": "Coverage.type",
-        "comment": "Im VSDM 2.0 sind nur die Werte aus dem eingeschränkten Wertevorrat zulässig.",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMCoverageTypeVS"
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "GKV",
+              "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis"
+            }
+          ]
         }
       },
       {
@@ -388,14 +366,17 @@
         "id": "Coverage.period.start",
         "path": "Coverage.period.start",
         "short": "Beginn des Versicherungsschutzes",
-        "definition": "Gibt den Beginn des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an. "
+        "definition": "Gibt den Beginn des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an. ",
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Coverage.period.end",
         "path": "Coverage.period.end",
         "short": "Ende des Versicherungsschutzes",
         "definition": "Gibt das Ende des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an, wenn ein Endedatum festgelegt ist. ",
-        "comment": "Hier kann nicht das Ende der Gültigkeit einer konkreten eGK angegeben werden, weil der VSDM 2.0 Resource Server keine Kenntnis davon erlangt, welche konkrete eGK verwendet wurde.\nFür den Fall der Authentifikation mit einer elektronischen Identität liegt ohnehin kein eGK-Gültigkeitsdatum vor."
+        "comment": "Hier kann nicht das Ende der Gültigkeit einer konkreten eGK angegeben werden, weil der VSDM 2.0 Resource Server keine Kenntnis davon erlangt, welche konkrete eGK verwendet wurde.\nFür den Fall der Authentifikation mit einer elektronischen Identität liegt ohnehin kein eGK-Gültigkeitsdatum vor.",
+        "mustSupport": true
       },
       {
         "id": "Coverage.payor",

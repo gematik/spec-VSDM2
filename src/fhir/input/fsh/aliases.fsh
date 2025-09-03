@@ -31,7 +31,7 @@ Alias: $csCountryCodeISO3166 = urn:iso:std:iso:3166
 // DMP-Schlüssel, verwendet für
 //   - VSDMDMPVS
 //     - VSDMDMPTeilnahme
-//       - VSDMCoverage.extension[dmp]
+//       - VSDMCoverageGKV.extension[dmp]
 Alias: $csDMP = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP
 
 // administrative Geschlechtsangabe, verwendet für
@@ -57,20 +57,20 @@ Alias: $csOperationOutcomeCodes = http://terminology.hl7.org/CodeSystem/operatio
 
 // besondere Personengruppe, verwendet für
 //   - VSDMBesonderePersonengruppeVS
-//     - VSDMCoverage.extension[besonderePersonengruppe]
+//     - VSDMCoverageGKV.extension[besonderePersonengruppe]
 Alias: $csPersonengruppe = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE
 
 // Versichertenstatus / Versichertenart, verwendet für
-//   - Beispiel für VSDMCoverage
+//   - Beispiel für VSDMCoverageGKV
 Alias: $csVersichertenartGKV = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS
 
 // Versicherungsart, verwendet für:
-//   - Beispiel für VSDMCoverage
+//   - Beispiel für VSDMCoverageGKV
 Alias: $csVersicherungsart = http://fhir.de/CodeSystem/versicherungsart-de-basis
 
 // Wohnortprinzip, verwendet für
 //   - VSDMWohnortprinzipVS
-//     - VSDMCoverage.extension[wop]
+//     - VSDMCoverageGKV.extension[wop]
 Alias: $csWOP = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP
 
 // ================================================================================================
@@ -98,8 +98,12 @@ Alias: $vsIssueType = http://hl7.org/fhir/ValueSet/issue-type
 
 // besondere Personengruppe, verwendet für
 //   - VSDMBesonderePersonengruppeVS
-//     - VSDMCoverage.extension[besonderePersonengruppe]
+//     - VSDMCoverageGKV.extension[besonderePersonengruppe]
 Alias: $vsPersonengruppe = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_PERSONENGRUPPE
+
+// Versichertenstatus / Versichertenart, verwendet für
+//   - Beispiel für VSDMCoverageGKV
+Alias: $vsVersichertenartGKV = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_VERSICHERTENSTATUS
 
 // ================================================================================================
 // 
@@ -107,15 +111,15 @@ Alias: $vsPersonengruppe = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_PERSONE
 //
 
 // besondere Personengruppe (Extension aus dem deutschen Basisprofil), verwendet für
-//   - VSDMCoverage.extension[besonderePersonengruppe]
+//   - VSDMCoverageGKV.extension[besonderePersonengruppe]
 Alias: $extBesonderePersonengruppe = http://fhir.de/StructureDefinition/gkv/besondere-personengruppe
 
 // Kostenerstattung (Extension aus dem deutschen Basisprofil), verwendet für
-//   - VSDMCoverage.extension[kostenerstattung]
+//   - VSDMCoverageGKV.extension[kostenerstattung]
 Alias: $extKostenerstattung = http://fhir.de/StructureDefinition/gkv/kostenerstattung
 
 // ruhender Leistungsanspruch (Extension aus dem deutschen Basisprofil), verwendet für
-//   - VSDMCoverage.extension[ruhenderLeistungsanspruch]
+//   - VSDMCoverageGKV.extension[ruhenderLeistungsanspruch]
 Alias: $extRuhenderLeistungsanspruch = http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch
 
 // coded expression for the content represented in a string
@@ -123,13 +127,13 @@ Alias: $extRuhenderLeistungsanspruch = http://fhir.de/StructureDefinition/gkv/ru
 Alias: $extCodedString = http://hl7.org/fhir/StructureDefinition/iso21090-codedString
 
 // Versichertenart (Extension aus dem deutschen Basisprofil), verwendet für
-//   - VSDMCoverage.extension[versichertenart]
+//   - VSDMCoverageGKV.extension[versichertenart]
 Alias: $extVersichertenart = http://fhir.de/StructureDefinition/gkv/versichertenart
 
 // Wohnortprinzip (Extension aus dem deutschen Basisprofil), verwendet für
-//   - VSDMCoverage.extension[wop]
+//   - VSDMCoverageGKV.extension[wop]
 Alias: $extWOP = http://fhir.de/StructureDefinition/gkv/wop
 
 // Zuzahlungsstatus (Extension aus dem deutschen Basisprofil), verwendet für
-//   - VSDMCoverage.extension[zuzahlungsstatus]
+//   - VSDMCoverageGKV.extension[zuzahlungsstatus]
 Alias: $extZuzahlungsstatus = http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus

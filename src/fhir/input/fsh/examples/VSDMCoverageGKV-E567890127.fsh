@@ -1,10 +1,10 @@
-Instance: VSDMCoverage-GKV-E567890127
-InstanceOf: VSDMCoverage
+Instance: VSDMCoverageGKV-E567890127
+InstanceOf: VSDMCoverageGKV
 Title: "E567890127 Freifrau an der Elster, Elke (GKV)"
 Description: "Versicherungsdaten E567890127 Freifrau an der Elster, Elke (GKV)"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#93 "Thüringen"
 * extension[zuzahlungsstatus] 

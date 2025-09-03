@@ -11,8 +11,8 @@
     {
       "identity": "VSD-Datensatz-GKV-Coverage",
       "name": "Mapping VSD-Datensatz GKV zu Coverage",
-      "uri": "VSDMCoverage",
-      "comment": "Zuordnung der Versicherungsinformationen des VSD-Datensatzes GKV zum FHIR-Profil VSDMCoverage"
+      "uri": "VSDMCoverageGKV",
+      "comment": "Zuordnung der Versicherungsinformationen des VSD-Datensatzes GKV zum FHIR-Profil VSDMCoverageGKV"
     },
     {
       "identity": "VSD-Datensatz-GKV-Patient",
@@ -166,7 +166,7 @@
           {
             "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.gender.extension:other-amtlich",
-            "comment": "Diese Erweiterung nimmt die Geschlechtsangabe gemäß der geforderten Wertetabelle auf. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverage-gender-1 abgebildet."
+            "comment": "Diese Erweiterung nimmt die Geschlechtsangabe gemäß der geforderten Wertetabelle auf. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverageGKV-gender-1 abgebildet."
           }
         ]
       },
@@ -324,7 +324,7 @@
           {
             "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.address:PostfachAdresse.country",
-            "comment": "Hinweise zur Befüllung der Extensions beachten. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverage-address-1 abgebildet."
+            "comment": "Hinweise zur Befüllung der Extensions beachten. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverageGKV-address-1 abgebildet."
           }
         ]
       },
@@ -402,7 +402,7 @@
           {
             "identity": "VSD-Datensatz-GKV-Patient",
             "map": "VSDMPatient.address.country",
-            "comment": "Hinweise zur Befüllung der Extensions beachten. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverage-address-1 abgebildet."
+            "comment": "Hinweise zur Befüllung der Extensions beachten. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverageGKV-address-1 abgebildet."
           }
         ]
       },
@@ -494,7 +494,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.payor:Hauptkostentraeger",
+            "map": "VSDMCoverageGKV.payor:Hauptkostentraeger",
             "comment": "Der Hauptkostenträger wird als Referenz auf eine VSDMPayorOrganization abgebildet. Die Referenz ist mit einer Erweiterung zur Kennzeichnung der Rolle des Kostenträgers versehen."
           }
         ]
@@ -534,7 +534,7 @@
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
             "map": "VSDMPayorOrganization:Hauptkostentraeger.address.country",
-            "comment": "Hinweise zur Befüllung der Extensions beachten. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverage-address-2 abgebildet."
+            "comment": "Hinweise zur Befüllung der Extensions beachten. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverageGKV-address-2 abgebildet."
           }
         ]
       },
@@ -572,7 +572,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.payor:abrechnenderKostentraeger",
+            "map": "VSDMCoverageGKV.payor:abrechnenderKostentraeger",
             "comment": "Der abrechnende Kostenträger wird als Referenz auf eine VSDMPayorOrganization abgebildet. Die Referenz ist mit einer Erweiterung zur Kennzeichnung der Rolle des Kostenträgers versehen."
           }
         ]
@@ -650,8 +650,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.extension:WOP",
-            "comment": "Die KBV-Schlüsseltabelle wird ggf. durch ein VSDM-spezifisches ValueSet auf die zulässigen Werte eingeschränkt. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverage-wop-1 abgebildet."
+            "map": "VSDMCoverageGKV.extension:WOP",
+            "comment": "Die KBV-Schlüsseltabelle wird ggf. durch ein VSDM-spezifisches ValueSet auf die zulässigen Werte eingeschränkt. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverageGKV-wop-1 abgebildet."
           }
         ]
       },
@@ -670,7 +670,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.extension:besonderePersonengruppe",
+            "map": "VSDMCoverageGKV.extension:besonderePersonengruppe",
             "comment": "Es werden die zweistelligen Werte aus der Schlüsseltabelle (mit führenden Nullen) verwendet."
           }
         ]
@@ -690,7 +690,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.extension:zuzahlungsstatus",
+            "map": "VSDMCoverageGKV.extension:zuzahlungsstatus",
             "comment": "Die gesamte Erweiterung darf nur angegeben werden, wenn eine Zuzahlungsbefreiung vorliegt."
           }
         ]
@@ -710,7 +710,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.extension:zuzahlungsstatus.extension:status",
+            "map": "VSDMCoverageGKV.extension:zuzahlungsstatus.extension:status",
             "comment": "Der Wert \"von Zuzahlungspflicht befreit\" wird auf \"true\" abgebildet."
           }
         ]
@@ -730,7 +730,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.extension:zuzahlungsstatus.extension:gueltigBis",
+            "map": "VSDMCoverageGKV.extension:zuzahlungsstatus.extension:gueltigBis",
             "comment": "Da die Angabe ein Pflichtfeld ist, aber nur erfolgen kann und soll, wenn eine Zuzahlungsbefreiung vorliegt, beeinflusst das die gesamte Struktur."
           }
         ]
@@ -750,7 +750,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.period",
+            "map": "VSDMCoverageGKV.period",
             "comment": "Zur Abbildung werden die Standard-Felder der FHIR-Ressource verwendet."
           }
         ]
@@ -770,8 +770,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.period.start",
-            "comment": "Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverage-period-1 abgebildet."
+            "map": "VSDMCoverageGKV.period.start",
+            "comment": "Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverageGKV-period-1 abgebildet."
           }
         ]
       },
@@ -790,7 +790,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.period.end",
+            "map": "VSDMCoverageGKV.period.end",
             "comment": "Da der VSDM 2.0 Resource Server keine Kenntnis von der eingesetzten eGK haben kann, wird immer das Gültigkeitsende des Versicherungsverhältnisses gemeldet, wenn anwendbar."
           }
         ]
@@ -810,7 +810,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.extension:dmp"
+            "map": "VSDMCoverageGKV.extension:dmp"
           }
         ]
       },
@@ -829,7 +829,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.extension:dmp.extension:dmp",
+            "map": "VSDMCoverageGKV.extension:dmp.extension:dmp",
             "comment": "Anstelle des Namens wird der Schlüssel aus der vorgegebenen Wertetabelle, ergänzt um führende Nullen, angegeben. Zur Einschränkung auf die erlaubten Werte (keine Kombi-Werte) wird ein eigenes ValueSet verwendet."
           }
         ]
@@ -849,7 +849,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.extension:dmp.extension:zeitraum.value[x].start"
+            "map": "VSDMCoverageGKV.extension:dmp.extension:zeitraum.value[x].start"
           }
         ]
       },
@@ -868,7 +868,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.extension:dmp.extension:zeitraum.value[x].end"
+            "map": "VSDMCoverageGKV.extension:dmp.extension:zeitraum.value[x].end"
           }
         ]
       },
@@ -887,7 +887,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.extension:dmp.extension:digitalesDMP"
+            "map": "VSDMCoverageGKV.extension:dmp.extension:digitalesDMP"
           }
         ]
       },
@@ -906,7 +906,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.extension:kostenerstattung"
+            "map": "VSDMCoverageGKV.extension:kostenerstattung"
           }
         ]
       },
@@ -925,7 +925,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.extension:kostenerstattung.extension:aerztlicheVersorgung"
+            "map": "VSDMCoverageGKV.extension:kostenerstattung.extension:aerztlicheVersorgung"
           }
         ]
       },
@@ -944,7 +944,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.extension:kostenerstattung.extension:zahnaerztlicheVersorgung"
+            "map": "VSDMCoverageGKV.extension:kostenerstattung.extension:zahnaerztlicheVersorgung"
           }
         ]
       },
@@ -963,7 +963,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.extension:kostenerstattung.extension:stationaererBereich"
+            "map": "VSDMCoverageGKV.extension:kostenerstattung.extension:stationaererBereich"
           }
         ]
       },
@@ -982,7 +982,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.extension:gkv-kostenerstattung.extension:veranlassteLeistungen"
+            "map": "VSDMCoverageGKV.extension:gkv-kostenerstattung.extension:veranlassteLeistungen"
           }
         ]
       },
@@ -1001,7 +1001,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.extension:ruhenderLeistungsanspruch"
+            "map": "VSDMCoverageGKV.extension:ruhenderLeistungsanspruch"
           }
         ]
       },
@@ -1020,7 +1020,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:dauer.value[x].start"
+            "map": "VSDMCoverageGKV.extension:ruhenderLeistungsanspruch.extension:dauer.value[x].start"
           }
         ]
       },
@@ -1039,7 +1039,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:dauer.value[x].end"
+            "map": "VSDMCoverageGKV.extension:ruhenderLeistungsanspruch.extension:dauer.value[x].end"
           }
         ]
       },
@@ -1058,7 +1058,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.extension:ruhenderLeistungsanspruch.extension:art"
+            "map": "VSDMCoverageGKV.extension:ruhenderLeistungsanspruch.extension:art"
           }
         ]
       },
@@ -1077,7 +1077,7 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-GKV-Coverage",
-            "map": "VSDMCoverage.extension:versichertenart"
+            "map": "VSDMCoverageGKV.extension:versichertenart"
           }
         ]
       }

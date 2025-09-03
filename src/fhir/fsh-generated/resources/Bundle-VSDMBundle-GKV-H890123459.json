@@ -118,16 +118,32 @@
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverage-GKV-H890123459",
+      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-H890123459",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoverage-GKV-H890123459",
+        "id": "VSDMCoverageGKV-H890123459",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage|1.0.0"
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0"
+          ]
+        },
+        "type": {
+          "coding": [
+            {
+              "code": "GKV",
+              "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis"
+            }
           ]
         },
         "extension": [
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/wop",
+            "valueCoding": {
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+              "code": "17",
+              "display": "Niedersachsen"
+            }
+          },
           {
             "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
             "valueCoding": {
@@ -135,14 +151,6 @@
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
               "display": "Rentner"
             }
-          },
-          {
-            "valueCoding": {
-              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
-              "code": "17",
-              "display": "Niedersachsen"
-            },
-            "url": "http://fhir.de/StructureDefinition/gkv/wop"
           },
           {
             "valueCoding": {
@@ -243,14 +251,6 @@
           }
         ],
         "status": "active",
-        "type": {
-          "coding": [
-            {
-              "code": "GKV",
-              "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis"
-            }
-          ]
-        },
         "beneficiary": {
           "reference": "Patient/VSDMPatient-GKV-H890123459"
         },

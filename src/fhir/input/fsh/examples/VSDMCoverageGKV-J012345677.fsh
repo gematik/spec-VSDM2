@@ -1,10 +1,10 @@
-Instance: VSDMCoverage-GKV-J012345677
-InstanceOf: VSDMCoverage
+Instance: VSDMCoverageGKV-J012345677
+InstanceOf: VSDMCoverageGKV
 Title: "J012345677 Junko, Jens-Jörg (GKV)"
 Description: "Versicherungsdaten J012345677 Junko, Jens-Jörg (GKV)"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"
 * extension[besonderePersonengruppe].valueCoding = #09 "ASY" // "Empfänger von Gesundheitsleistungen nach §§ 4 und 6 des Asylbewerberleistungsgesetzes (AsylbLG)"

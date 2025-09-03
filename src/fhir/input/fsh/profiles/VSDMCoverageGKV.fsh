@@ -1,7 +1,7 @@
-Profile: VSDMCoverage
+Profile: VSDMCoverageGKV
 Parent: CoverageDeBasis
-Title: "Versicherungsdaten"
-Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0"
+Title: "Versicherungsdaten GKV"
+Description: "Angaben zum GKV Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0"
 
 // Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen. 
 // Die Extensions sind in der Reihenfolge der Nennung der Attribute im logischen Modell aufgeführt.
@@ -9,24 +9,21 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
 // Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
 * . 
-  * ^short = "Versicherungsdaten"
+  * ^short = "Versicherungsdaten GKV"
   * ^definition = """
-      Angaben zum Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0
+      Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0
     """
   * ^comment = """
-      Die Struktur wird unabhängig von der Versicherungsart (GKV/PKV) definiert.
+      Zur Harmonisierung der Strukturen mit dem deutschen Basisprofil werden getrennte Profile für GKV und PKV gebildet.
     """
 
 // Invarianten auf Strukturebene
-* obeys VSDMCoverage-gender-1           // GKV: Pflichtangabe Geschlecht
-* obeys VSDMCoverage-address-1          // GKV: Pflichtangabe Länderkennzeichen nach DEÜV im Patient
-* obeys VSDMCoverage-address-2          // GKV: Pflichtangabe Länderkennzeichen nach DEÜV im Kostenträger
-* obeys VSDMCoverage-wop-1              // GKV: Pflichtangabe Wohnortprinzip
-* obeys VSDMCoverage-period-1           // GKV: Pflichtangabe Versicherungsbeginn
-* obeys VSDMCoverage-versichertenart-1  // GKV: Gültigkeit Versichertenart
+* obeys VSDMCoverageGKV-gender-1           // Pflichtangabe Geschlecht
+* obeys VSDMCoverageGKV-address-1          // Pflichtangabe Länderkennzeichen nach DEÜV im Patient
+* obeys VSDMCoverageGKV-address-2          // Pflichtangabe Länderkennzeichen nach DEÜV im Kostenträger
 
 // Zuordnung aus Versicherungsdaten -> WOP
-* extension contains $extWOP named WOP 0..1 MS // zur Kardinalität siehe Invariante VSDMCoverage-wop-1
+* extension contains $extWOP named WOP 1..1 MS
 * extension[wop]
   * ^short = "Wohnortprinzip (WOP)"
   * ^definition = """
@@ -137,30 +134,26 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
       Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html
     """
   * value[x] 1..1
-  * valueCoding from VSDMVersichertenartVS // zur Konsistenzprüfung siehe Invarianten VSDMCoverage-versichertenart-1/2
+  * valueCoding from $vsVersichertenartGKV
 
-// Versicherungsart (GKV, PKV)
-* type MS
-  * ^comment = """
-      Im VSDM 2.0 sind nur die Werte aus dem eingeschränkten Wertevorrat zulässig.
-    """
-* type from VSDMCoverageTypeVS (required)
+// Versicherungsart (GKV)
+* type = $csVersicherungsart#GKV (exactly)
 
 // Bezug zum Versicherten
 * beneficiary only Reference(VSDMPatient) 
 
 // Zuordnung aus Versicherungsdaten -> Versicherungsschutz
-* period MS // zur Kardinalität siehe Invariante VSDMCoverage-period-1
+* period MS // zur Kardinalität siehe Invariante VSDMCoverageGKV-period-1
   * ^short = "Gültigkeitszeitraum des Versicherungsschutzes"
   * ^definition = """
       Gibt den Beginn und, sofern anwendbar, das Ende des Versicherungsschutzes an.
     """
-  * start // zur Kardinalität siehe Invariante VSDMCoverage-period-1
+  * start 1.. MS
     * ^short = "Beginn des Versicherungsschutzes"
     * ^definition = """
         Gibt den Beginn des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an. 
       """
-  * end
+  * end MS
     * ^short = "Ende des Versicherungsschutzes"
     * ^definition = """
         Gibt das Ende des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an, wenn ein Endedatum festgelegt ist. 
@@ -195,32 +188,17 @@ Description: "Angaben zum Versicherungsverhältnis im Versichertenstammdatenmana
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Invariant: VSDMCoverage-gender-1
+Invariant: VSDMCoverageGKV-gender-1
 Description: "Für GKV-Versicherte ist die Angabe des Geschlechts erforderlich."
-Expression: "type.coding.code = 'GKV' implies beneficiary.resolve().gender.exists()"
+Expression: "beneficiary.resolve().gender.exists()"
 Severity: #error
 
-Invariant: VSDMCoverage-address-1
+Invariant: VSDMCoverageGKV-address-1
 Description: "Für GKV-Versicherte ist die Angabe des Länderkennzeichens nach DEÜV Anlage 8 in Adressen des Patienten erforderlich."
-Expression: "type.coding.code = 'GKV' implies beneficiary.resolve().address.all(country.extension('http://hl7.org/fhir/StructureDefinition/iso21090-codedString').value.ofType(Coding).where(system = 'http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen').exists())"
+Expression: "beneficiary.resolve().address.all(country.extension('http://hl7.org/fhir/StructureDefinition/iso21090-codedString').value.ofType(Coding).where(system = 'http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen').exists())"
 Severity: #error
 
-Invariant: VSDMCoverage-address-2
+Invariant: VSDMCoverageGKV-address-2
 Description: "Für GKV-Versicherte ist die Angabe des Länderkennzeichens nach DEÜV Anlage 8 in Adressen des Kostenträgers erforderlich."
-Expression: "type.coding.code = 'GKV' implies payor.all(resolve().address.all(country.extension('http://hl7.org/fhir/StructureDefinition/iso21090-codedString').value.ofType(Coding).where(system = 'http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen').exists()))"
-Severity: #error
-
-Invariant: VSDMCoverage-wop-1
-Description: "Für GKV-Versicherte ist die Angabe des Wohnortprinzip-Kennzeichens erforderlich."
-Expression: "type.coding.code = 'GKV' implies extension('http://fhir.de/StructureDefinition/gkv/wop').exists()"
-Severity: #error
-
-Invariant: VSDMCoverage-period-1
-Description: "Für GKV-Versicherte ist die Angabe des Versicherungsbeginns erforderlich."
-Expression: "type.coding.code = 'GKV' implies period.start.exists()"
-Severity: #error
-
-Invariant: VSDMCoverage-versichertenart-1 
-Description: "Für GKV-Versicherte sind nur die Versichertenarten 1, 3 und 5 zulässig."
-Expression: "type.coding.code = 'GKV' implies extension('http://fhir.de/StructureDefinition/gkv/versichertenart').valueCoding.code = '1' or extension('http://fhir.de/StructureDefinition/gkv/versichertenart').valueCoding.code = '3' or extension('http://fhir.de/StructureDefinition/gkv/versichertenart').valueCoding.code = '5'"
+Expression: "payor.all(resolve().address.all(country.extension('http://hl7.org/fhir/StructureDefinition/iso21090-codedString').value.ofType(Coding).where(system = 'http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen').exists()))"
 Severity: #error

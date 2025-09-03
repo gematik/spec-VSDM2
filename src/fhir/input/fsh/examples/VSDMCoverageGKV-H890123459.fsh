@@ -1,10 +1,10 @@
-Instance: VSDMCoverage-GKV-H890123459
-InstanceOf: VSDMCoverage
+Instance: VSDMCoverageGKV-H890123459
+InstanceOf: VSDMCoverageGKV
 Title: "H890123459 vorm Habicht, Hans (GKV)"
 Description: "Versicherungsdaten H890123459 vorm Habicht, Hans (GKV)"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMCoverage|1.0.0)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#17 "Niedersachsen" 
 * extension[besonderePersonengruppe].valueCoding = #07 "SVA1" // "SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht: - Personen mit Wohnsitz im Inland, Abrechnung nach Aufwand"
