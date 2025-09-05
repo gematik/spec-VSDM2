@@ -28,7 +28,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Rolle des Kostenträgers",
-        "definition": "Die Rolle des Kostenträgers im Versicherungsverhältnis dient der Unterscheidung zwischen Haupt- und abrechnendem Kostenträger."
+        "definition": "Die Rolle des Kostenträgers im Versicherungsverhältnis dient der Unterscheidung zwischen Haupt- und abrechnendem Kostenträger.\nDiese Unterscheidung ist nur für GKV-Versicherte relevant."
       },
       {
         "id": "Extension.extension",

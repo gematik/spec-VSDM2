@@ -22,5 +22,6 @@
   "publisher": "gematik GmbH",
   "date": "2023-12-31",
   "caseSensitive": true,
+  "purpose": "Für GKV-Versicherte wird zwischen dem Haupt-Kostenträger und einem optionalen zweiten abrechnenden Kostenträger unterschieden.",
   "count": 2
 }

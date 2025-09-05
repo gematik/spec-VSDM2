@@ -42,7 +42,7 @@ RuleSet: Address-Country
       Kodierte Angabe des Länderkennzeichens nach ISO 3166-2. 
     """
   * ^comment = """
-      Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur Kodierung der Landesangabe, vgl. https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html.
+      Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur [Kodierung der Landesangabe](https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html).
       Durch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.
     """
   * valueCoding from $vsCountryCodeISO3166 (required)

@@ -42,7 +42,7 @@ Description: "Angaben zum Kostenträger im Versichertenstammdatenmanagement (VSD
   * ^definition = """
       Adresse des Kostenträgers. 
       Die meisten Adressfelder sind optional; verpflichtend ist die Angabe des Staats (Ländercode).
-      Hinweise zur Abbildung von Adressen und Beispiele siehe https://ig.fhir.de/basisprofile-de/1.0.0-RC1/Datentypen-Address.html.
+      Hinweise zur Abbildung von Adressen und Beispiele siehe [Adresse](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Datentypen-Address.html) im deutschen Basisprofil.
     """
   * country
     * insert Address-Country

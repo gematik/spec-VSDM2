@@ -17,7 +17,11 @@ Description: "Angaben zur Teilnahme eines Versicherten an einem Disease Manageme
   * ^short = "Schlüssel des DMP"
   * ^definition = """
       Gibt den Schlüssel des DMP an, in das der Versicherte eingeschrieben ist.
-	"""
+	  """
+  * ^comment = """
+      Hier sind nur die DMP-Schlüssel zulässig, die einzelne DMP identifizieren (keine Kombinationswerte).
+      Der bisherigen Leerwerts 00 darf nicht verwendet werden; stattdessen ist die gesamte Extension nicht anzugeben, wenn keine DMP-Teilnahme registriert ist.
+    """
   * value[x] 1..1 
   * value[x] only Coding
   * value[x] from VSDMDMPVS (required)
@@ -30,7 +34,7 @@ Description: "Angaben zur Teilnahme eines Versicherten an einem Disease Manageme
 * extension[zeitraum]
   * ^short = "Einschreibezeitraum"
   * ^definition = """
-      Gibt den Zeitraum der Einschreibung des Versicherten in das DMP an.
+        Gibt den Zeitraum der Einschreibung des Versicherten in das DMP an.
 	"""
   * value[x] only Period
   * valuePeriod
@@ -48,4 +52,3 @@ Description: "Angaben zur Teilnahme eines Versicherten an einem Disease Manageme
     """
   * value[x] 1..1 
   * value[x] only boolean
-  * value[x] ^short = "Information, ob ein digitales DMP vorhanden ist"

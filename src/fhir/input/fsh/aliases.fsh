@@ -14,9 +14,8 @@ Alias: $csAnlage6Vorsatzworte = http://fhir.de/CodeSystem/deuev/anlage-6-vorsatz
 Alias: $csAnlage7Namenszusaetze = http://fhir.de/CodeSystem/deuev/anlage-7-namenszusaetze
 
 // DEÜV Anlage 8 (Länderkennzeichen), verwendet für
-//   - VSDMLaenderkennzeichen (Extension)
-//     - VSDMPatient.address.country.extension[Laenderkennzeichen]
-//     - VSDMPayorOrganization.address.country.extension[Laenderkennzeichen]
+//   - VSDMPatient.address.country.extension[anlage8]
+//   - VSDMPayorOrganization.address.country.extension[anlage8]
 Alias: $csAnlage8Laenderkennzeichen = http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen
 
 // Contact entity type, verwendet für
@@ -79,13 +78,13 @@ Alias: $csWOP = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP
 //
 
 // DEÜV Anlage 8 (Länderkennzeichen), verwendet für
-//   - VSDMPatient.address.country
-//   - VSDMPayorOrganization.address
+//   - VSDMPatient.address.country.extension[anlage8]
+//   - VSDMPayorOrganization.address.country.extension[anlage8]
 Alias: $vsAnlage8Laenderkennzeichen = https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8
 
 // Länderkennzeichen nach ISO 3166-1-2, verwendet für
-//   - VSDMPatient.address.country
-//   - VSDMPayorOrganization.address
+//   - VSDMPatient.address.country.extension[countryCode]
+//   - VSDMPayorOrganization.address.country.extension[countryCode]
 Alias: $vsCountryCodeISO3166 = http://hl7.org/fhir/ValueSet/iso3166-1-2
 
 // Schweregrad einer Meldung, verwendet für

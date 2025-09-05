@@ -5,6 +5,9 @@ Description: "Rolle des Kostenträgers im Versichertenstammdatenmanagement (VSDM
 * insert Meta-CodeSystem
 * ^caseSensitive = true
 * ^content = #complete
+* ^purpose = """
+    Für GKV-Versicherte wird zwischen dem Haupt-Kostenträger und einem optionalen zweiten abrechnenden Kostenträger unterschieden.
+  """
 
 * #H "Haupt-Kostenträger"
 * #A "abrechnender Kostenträger"

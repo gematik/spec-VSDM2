@@ -41,6 +41,7 @@
         "sliceName": "dmp",
         "short": "Schlüssel des DMP",
         "definition": "Gibt den Schlüssel des DMP an, in das der Versicherte eingeschrieben ist.",
+        "comment": "Hier sind nur die DMP-Schlüssel zulässig, die einzelne DMP identifizieren (keine Kombinationswerte).\nDer bisherigen Leerwerts 00 darf nicht verwendet werden; stattdessen ist die gesamte Extension nicht anzugeben, wenn keine DMP-Teilnahme registriert ist.",
         "min": 1,
         "max": "1",
         "mustSupport": true
@@ -116,10 +117,10 @@
         "constraint": [
           {
             "key": "date-precision-1",
-            "human": "date consists exactly of year, month and day",
-            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
             "severity": "error",
-            "expression": "toString().matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')"
+            "human": "An dieser Stelle muss ein vollständiges Datum bestehend aus Jahr, Monat und Tag angegeben werden.",
+            "expression": "toString().matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme"
           }
         ]
       },
@@ -129,10 +130,10 @@
         "constraint": [
           {
             "key": "date-precision-1",
-            "human": "date consists exactly of year, month and day",
-            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
             "severity": "error",
-            "expression": "toString().matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')"
+            "human": "An dieser Stelle muss ein vollständiges Datum bestehend aus Jahr, Monat und Tag angegeben werden.",
+            "expression": "toString().matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme"
           }
         ]
       },
@@ -159,7 +160,6 @@
       {
         "id": "Extension.extension:digitalesDMP.value[x]",
         "path": "Extension.extension.value[x]",
-        "short": "Information, ob ein digitales DMP vorhanden ist",
         "min": 1,
         "type": [
           {

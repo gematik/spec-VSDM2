@@ -141,7 +141,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMKostentraegerRolleCS.fsh",
     "startLine": 1,
-    "endLine": 10
+    "endLine": 13
   },
   {
     "outputFile": "CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json",
@@ -149,7 +149,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh",
     "startLine": 1,
-    "endLine": 10
+    "endLine": 16
   },
   {
     "outputFile": "ConceptMap-VSDMErrorcodeIssueSeverity.json",
@@ -293,7 +293,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMDMPTeilnahme.fsh",
     "startLine": 1,
-    "endLine": 51
+    "endLine": 54
   },
   {
     "outputFile": "StructureDefinition-VSDMKostentraegerRolle.json",
@@ -301,7 +301,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMKostentraegerRolle.fsh",
     "startLine": 1,
-    "endLine": 18
+    "endLine": 19
   },
   {
     "outputFile": "StructureDefinition-VSDMOperationOutcome.json",
@@ -317,7 +317,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 195
+    "endLine": 194
   },
   {
     "outputFile": "StructureDefinition-VSDMPayorOrganization.json",
@@ -333,7 +333,7 @@
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMDMPVS.fsh",
     "startLine": 1,
-    "endLine": 21
+    "endLine": 32
   },
   {
     "outputFile": "ValueSet-VSDMErrorcodeVS.json",
@@ -381,6 +381,6 @@
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMWohnortprinzipVS.fsh",
     "startLine": 1,
-    "endLine": 39
+    "endLine": 48
   }
 ]

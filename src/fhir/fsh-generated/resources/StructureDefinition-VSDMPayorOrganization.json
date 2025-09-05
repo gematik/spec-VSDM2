@@ -69,7 +69,7 @@
         "id": "Organization.address",
         "path": "Organization.address",
         "short": "Adresse des Kostenträgers",
-        "definition": "Adresse des Kostenträgers. \nDie meisten Adressfelder sind optional; verpflichtend ist die Angabe des Staats (Ländercode).\nHinweise zur Abbildung von Adressen und Beispiele siehe https://ig.fhir.de/basisprofile-de/1.0.0-RC1/Datentypen-Address.html."
+        "definition": "Adresse des Kostenträgers. \nDie meisten Adressfelder sind optional; verpflichtend ist die Angabe des Staats (Ländercode).\nHinweise zur Abbildung von Adressen und Beispiele siehe [Adresse](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Datentypen-Address.html) im deutschen Basisprofil."
       },
       {
         "id": "Organization.address.country",
@@ -102,7 +102,7 @@
         "sliceName": "countryCode",
         "short": "Länderkennzeichen nach ISO 3166-2",
         "definition": "Kodierte Angabe des Länderkennzeichens nach ISO 3166-2. ",
-        "comment": "Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur Kodierung der Landesangabe, vgl. https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html.\nDurch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.",
+        "comment": "Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur [Kodierung der Landesangabe](https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html).\nDurch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.",
         "min": 1,
         "max": "1",
         "type": [

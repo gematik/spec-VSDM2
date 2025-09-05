@@ -30,7 +30,7 @@ Description: "Angaben zum GKV Versicherungsverhältnis im Versichertenstammdaten
       Kennzeichen zur Umsetzung des Wohnortprinzips (WOP).
     """
   * ^comment = """
-      Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html
+      Hinweise zur Verwendung siehe auch [Extensions für Coverage](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html) im deutschen Basisprofil
     """
   * ^requirements = """
       Das Kennzeichen WOP ist für GKV-Patienten gemäss § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemäss Artikel 2 § 2 Abs. 2 des Gesetzes zur Einführung des Wohnortprinzips bei Honorarvereinbarungen für Ärzte und Zahnärzte und zur Krankenversichertenkarte gemäss § 291 Abs. 2 Fünftes Sozialgesetzbuch (SGB V) erforderlich.
@@ -46,7 +46,7 @@ Description: "Angaben zum GKV Versicherungsverhältnis im Versichertenstammdaten
       Gibt die Zugehörigkeit des GKV-Versicherten zu einer besonderen Personengruppe an.
     """
   * ^comment = """
-      Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html
+      Hinweise zur Verwendung siehe auch [Extensions für Coverage](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html) im deutschen Basisprofil
     """
   * ^requirements = """
       Die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.
@@ -63,7 +63,7 @@ Description: "Angaben zum GKV Versicherungsverhältnis im Versichertenstammdaten
       Achtung: Wenn keine Zuzahlungsbefreiung vorliegt, entfällt die gesamte Extension.
     """
   * ^comment = """
-      Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html
+      Hinweise zur Verwendung siehe auch [Extensions für Coverage](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html) im deutschen Basisprofil
     """
   * ^requirements = """
       Befreiung des Versicherten von der Zuzahlungspflicht nach § 62 Abs. 3 SGB V.
@@ -92,7 +92,7 @@ Description: "Angaben zum GKV Versicherungsverhältnis im Versichertenstammdaten
       Gibt die vom Versicherten gewählte Kostenerstattung für den jeweiligen Bereich an.
     """
   * ^comment = """
-      Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html
+      Hinweise zur Verwendung siehe auch [Extensions für Coverage](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html) im deutschen Basisprofil
     """
   * extension[aerztlicheVersorgung] 1..1
     * ^short = "Ärztliche Versorgung"
@@ -115,7 +115,7 @@ Description: "Angaben zum GKV Versicherungsverhältnis im Versichertenstammdaten
       Angaben zum ruhenden Leistungsanspruch des Versicherten
     """
   * ^comment = """
-      Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html
+      Hinweise zur Verwendung siehe auch [Extensions für Coverage](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html) im deutschen Basisprofil
     """
   * extension[art]
     * value[x] 1..1
@@ -131,7 +131,7 @@ Description: "Angaben zum GKV Versicherungsverhältnis im Versichertenstammdaten
       Art des Versicherten
     """
   * ^comment = """
-      Hinweise zur Verwendung siehe auch https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html
+      Hinweise zur Verwendung siehe auch [Extensions für Coverage](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html) im deutschen Basisprofil
     """
   * value[x] 1..1
   * valueCoding from $vsVersichertenartGKV

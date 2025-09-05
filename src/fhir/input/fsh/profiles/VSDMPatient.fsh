@@ -36,7 +36,6 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
         HINWEIS: Das Attribut meta.versionId ist aktuell durch das übergeordneter Profil TIPatient als "must support" gekennzeichnet.
         Diese Kennzeichnung wird in einer Folgeversion aufgehoben.
       """
-    // TODO Falls das Bundle von Document auf Collection umgestellt wird, können wir lastUpdated als Datum der letzten inhaltlichen Änderung / Aktualisierung verwenden.
 
 // Zuordnung aus Versichertendaten -> Versicherter -> VersichertenID
 * identifier[KVNR] 1..1 // MS bereits durch TIPatient vorgegeben
@@ -46,7 +45,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
       Zur eindeutigen Identifikation muss genau eine KVNR angegeben werden.
     """
   * ^comment = """
-      Hinweise zur Verwendung und Beispiele siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-LebenslangeKrankenversichertennummer10-stelligeKVID-Identifier?version=current.
+      Hinweise zur Verwendung und Beispiele siehe [Lebenslange Krankenversicherten-ID](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-LebenslangeKrankenversichertennummer10-stelligeKVID-Identifier.html) im deutschen Basisprofil.
     """
   * ^requirements = "Die KVNR identifiziert den Versicherten, auf den sich die bereitgestellten Stammdaten beziehen."
 
@@ -58,13 +57,13 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
       Die Bildungsregel ist dabei [Titel] [Vornamen] [Namenszusätze] [Vorsatzworte] [Nachnamen].
     """
   * ^comment = """
-      Hinweise und Beispiele siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name
+      Hinweise und Beispiele siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil
     """
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Nachname, Vorsatzwort und Namenszusatz
 * name[Name].family // 1..1 MS bereits durch TIPatient vorgegeben
   * ^comment = """
-      Hinweise zur Bildung des gesamten Namenamens siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.
+      Hinweise zur Bildung des gesamten Namenamens siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil
       Verwender müssen mindestens 87 Zeichen verarbeiten können.
     """
     // 45 Zeichen Nachname + 20 Zeichen Vorsatzwort + 20 Zeichen Namenszusatz + max. 2 Leerzeichen = 87 Zeichen
@@ -72,7 +71,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
 // Zuordnung aus Versichertendaten -> Versicherter -> Namenszusatz
 * name[Name].family.extension[namenszusatz] // MS bereits durch TIPatient vorgegeben
   * ^comment = """
-      Hinweise zum Umgang mit dieser Erweiterung siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.
+      Hinweise zum Umgang mit dieser Erweiterung siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil
       Eine Tabelle der gültigen Namenszusätze findet sich in Anlage 7 zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp.
       Um die Verarbeitung ausländischer Namensangaben nicht zu verhindern, ist die Wertetabelle nur als "preferred binding" hinterlegt.
       Verwender müssen mindestens 20 Zeichen verarbeiten können.
@@ -87,7 +86,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
       Wenn weder Vorsatzworte noch Namenszusätze existieren, kann die Erweiterung entfallen.
     """
   * ^comment = """
-      Hinweise zum Umgang mit dieser Erweiterung siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.
+      Hinweise zum Umgang mit dieser Erweiterung siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil.
       Verwender müssen mindestens 45 Zeichen verarbeiten können.
     """
 
@@ -98,7 +97,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
       Vorsatzwort zum Nachnamen des Patienten (z.B. "van" in "Ludwig van Beethoven").
     """
   * ^comment = """
-      Hinweise zum Umgang mit dieser Erweiterung siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.
+      Hinweise zum Umgang mit dieser Erweiterung siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil.
       Eine Tabelle der gültigen Vorsatzworte findet sich in Anlage 6 zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp.
       Um die Verarbeitung ausländischer Namensangaben nicht zu verhindern, ist die Wertetabelle nur als "preferred binding" hinterlegt.
       Verwender müssen mindestens 20 Zeichen verarbeiten können.
@@ -122,7 +121,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
       Verwender müssen mindestens 20 Zeichen verarbeiten können.
     """
   * ^comment = """
-      Beispiele zur Verwendung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name.
+      Beispiele zur Verwendung siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil.
     """
   * extension[prefix-qualifier] // MS bereits durch TIPatient vorgegeben
     * ^short = "Art des Namenspräfix"
@@ -132,7 +131,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
         Für akademische Titel ist verpflichtend die Kennzeichnung AC (academic) zu verwenden.
       """
     * ^comment = """
-        Beispiele zur Verwendung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name.
+        Beispiele zur Verwendung siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil.
       """
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Geschlecht
@@ -142,7 +141,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
       Administrative Geschlechtsangabe gemäß den Unterlagen des Kostenträgers, kodiert nach FHIR-Standard.
     """
   * ^comment = """
-      Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht.
+      Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe [Geschlecht (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht) im deutschen Basisprofil.
     """
   * extension[other-amtlich] MS
     * ^short = "Administrative Geschlechtsangabe (deutsche Kodierung)"
@@ -150,7 +149,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
         Administrative Geschlechtsangabe gemäß den Unterlagen des Kostenträgers, kodiert nach Wertetabelle zur Unterscheidung zwischen "divers" und "unbestimmt".
       """
     * ^comment = """
-        Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht.
+        Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe [Geschlecht (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht) im deutschen Basisprofil.
         Nur bei FHIR-Kodierung "other" zu verwenden (vgl. Constraint pat-de-1).
       """
 
@@ -162,7 +161,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
       Partielle Datumsangaben sind allerdings zulässig.
     """
   * ^comment = """
-      Hinweise insbesondere zur Angabe unvollständiger Datumswerte siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Geburtsdatum.
+      Hinweise insbesondere zur Angabe unvollständiger Datumswerte siehe [Geburtsdatum (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geburtsdatum).
     """
 
 // Slicing der Adresse, um die geforderten Kardinalitäten festzulegen
@@ -178,7 +177,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
   * type = #postal
   * line
     * ^comment = """
-        Hinweise zur Abbildung von Adressen und Beispiele siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Addresse.
+        Hinweise zur Abbildung von Adressen und Beispiele siehe [Adresse (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Addresse) im deutschen Basisprofil.
       """
   * country
     * insert Address-Country
@@ -189,7 +188,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
   * type = #physical
   * line
     * ^comment = """
-        Hinweise zur Abbildung von Adressen und Beispiele siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Addresse.
+        Hinweise zur Abbildung von Adressen und Beispiele siehe [Adresse (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Addresse) im deutschen Basisprofil.
       """
   * country
     * insert Address-Country
