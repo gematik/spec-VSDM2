@@ -11,11 +11,13 @@
   "concept": [
     {
       "code": "VN",
-      "display": "Versicherungsnehmer"
+      "display": "Versicherungsnehmer",
+      "definition": "Die behandelte Person ist selbst der Versicherungsnehmer."
     },
     {
       "code": "VP",
-      "display": "versicherte Person"
+      "display": "versicherte Person",
+      "definition": "Die behandelte Person ist nicht selbst der Versicherungsnehmer."
     }
   ],
   "experimental": false,

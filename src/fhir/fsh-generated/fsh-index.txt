@@ -26,7 +26,7 @@ CodeSystem-VSDMErrorcodeCS.json                                         VSDMErro
 CodeSystem-VSDMKostentraegerRolleCS.json                                VSDMKostentraegerRolleCS                          CodeSystem  codesystems/VSDMKostentraegerRolleCS.fsh                       1 - 13
 CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json                      VSDMRuhenderLeistungsanspruchArtCS                CodeSystem  codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh             1 - 16
 CodeSystem-VSDMSozialtarifPKVCS.json                                    VSDMSozialtarifPKVCS                              CodeSystem  codesystems/VSDMSozialtarifPKVCS.fsh                           1 - 11
-CodeSystem-VSDMVersichertenartPKVCS.json                                VSDMVersichertenartPKVCS                          CodeSystem  codesystems/VSDMVersichertenartPKVCS.fsh                       1 - 10
+CodeSystem-VSDMVersichertenartPKVCS.json                                VSDMVersichertenartPKVCS                          CodeSystem  codesystems/VSDMVersichertenartPKVCS.fsh                       1 - 14
 ConceptMap-VSDMErrorcodeIssueSeverity.json                              VSDMErrorcodeIssueSeverity                        Instance    mappings/VSDMErrorcodeIssueSeverity.fsh                        1 - 101
 ConceptMap-VSDMErrorcodeIssueType.json                                  VSDMErrorcodeIssueType                            Instance    mappings/VSDMErrorcodeIssueType.fsh                            1 - 112
 OperationOutcome-VSDMOperationOutcome-InternalServerError.json          VSDMOperationOutcome-InternalServerError          Instance    examples/VSDMOperationOutcome-InternalServerError.fsh          1 - 20
