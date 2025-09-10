@@ -1,7 +1,8 @@
 Instance: VSDDatensatzGKV-B234567895
 InstanceOf: VSDDatensatzGKV
-Title: "B234567895 Graf von und zu Buntspecht, Bernd Benjamin"
-Description: "Testdatensatz B234567895 Graf von und zu Buntspecht, Bernd Benjamin"
+Title: "B234567895 Graf von und zu Buntspecht, Bernd Benjamin (GKV)"
+Description: "Testdatensatz B234567895 Graf von und zu Buntspecht, Bernd Benjamin (GKV)"
+Usage: #inline // to prevent SUSHI from generating JSON files that confuse many other tools downstream
 
 * Versichertendaten
   * Versicherter

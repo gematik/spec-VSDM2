@@ -1,7 +1,8 @@
 Instance: VSDDatensatzGKV-L234567896
 InstanceOf: VSDDatensatzGKV
-Title: "L234567896 Lachmöwe, Lisa"
-Description: "Testdatensatz L234567896 Lachmöwe, Lisa"
+Title: "L234567896 Lachmöwe, Lisa (GKV)"
+Description: "Testdatensatz L234567896 Lachmöwe, Lisa (GKV)"
+Usage: #inline // to prevent SUSHI from generating JSON files that confuse many other tools downstream
 
 * Versichertendaten
   * Versicherter

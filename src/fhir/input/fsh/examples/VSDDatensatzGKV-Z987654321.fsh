@@ -1,7 +1,8 @@
 Instance: VSDDatensatzGKV-Z987654321
 InstanceOf: VSDDatensatzGKV
-Title: "Z987654321 Graf von und zu Zaunkönig, Zacharias"
-Description: "Testdatensatz Z987654321 Graf von und zu Zaunkönig, Zacharias"
+Title: "Z987654321 Graf von und zu Zaunkönig, Zacharias (GKV)"
+Description: "Testdatensatz Z987654321 Graf von und zu Zaunkönig, Zacharias (GKV)"
+Usage: #inline // to prevent SUSHI from generating JSON files that confuse many other tools downstream
 
 * Versichertendaten
   * Versicherter

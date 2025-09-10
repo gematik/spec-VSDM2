@@ -2,20 +2,21 @@ Instance: VSDMPayorOrganization-106339922
 InstanceOf: VSDMPayorOrganization
 Title: "Beispielkostenträger Koblenz"
 Description: "Beispielkostenträger Koblenz"
-Usage: #example
+Usage: #inline
 
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 
 * identifier[IKNR].value = "106339922"
 * name = "Beispielkostenträger Koblenz"
 * address
-  * country = #DE
-    * extension[Laenderkennzeichen].valueCoding = #D "Deutschland"
+  * country = "Deutschland"
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
+    * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#D
 
 // Beispiel zur Übertragung weitergehender (nicht verpflichtender) Informationen zum Kostenträger
 * contact[+]
   * purpose
-    * coding = #BILL
+    * coding = $csContactEntityType#BILL
     * text = "Kontakt für Abrechnungsfragen"
   * telecom[+]
     * system = #phone

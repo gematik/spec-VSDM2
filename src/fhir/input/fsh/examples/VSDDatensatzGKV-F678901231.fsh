@@ -1,7 +1,8 @@
 Instance: VSDDatensatzGKV-F678901231
 InstanceOf: VSDDatensatzGKV
-Title: "F678901231 von Fasan, Frank Florian"
-Description: "Testdatensatz F678901231 von Fasan, Frank Florian"
+Title: "F678901231 von Fasan, Frank Florian (GKV)"
+Description: "Testdatensatz F678901231 von Fasan, Frank Florian (GKV)"
+Usage: #inline // to prevent SUSHI from generating JSON files that confuse many other tools downstream
 
 * Versichertendaten
   * Versicherter

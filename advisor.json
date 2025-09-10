@@ -1,0 +1,7 @@
+{ 
+  "suppress" : [
+    "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6",
+    "http://hl7.org/fhir/StructureDefinition/ElementDefinition#eld-20",
+    "Terminology_TX_Binding_NoSource"
+  ]
+}

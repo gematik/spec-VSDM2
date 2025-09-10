@@ -55,7 +55,7 @@
         "sliceName": "KVNR",
         "short": "Versichertennummer (KVNR)",
         "definition": "Es wird der zehnstellig (unveränderliche) Teil der KVNR verwendet. \nZur eindeutigen Identifikation muss genau eine KVNR angegeben werden.",
-        "comment": "Hinweise zur Verwendung und Beispiele siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-LebenslangeKrankenversichertennummer10-stelligeKVID-Identifier?version=current.",
+        "comment": "Hinweise zur Verwendung und Beispiele siehe [Lebenslange Krankenversicherten-ID](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-LebenslangeKrankenversichertennummer10-stelligeKVID-Identifier.html) im deutschen Basisprofil.",
         "requirements": "Die KVNR identifiziert den Versicherten, auf den sich die bereitgestellten Stammdaten beziehen.",
         "min": 1
       },
@@ -69,18 +69,18 @@
         "path": "Patient.name.text",
         "short": "vollständiger zusammengesetzter Name",
         "definition": "Zur besseren Lesbarkeit sowie zur leichteren Verarbeitung für Systeme, die die einzelnen Namensbestandteile nicht getrennt benötigen, SOLL dieses Attribut den gesamten Namen mit Titel, Vorsatzwort und Namenszusätzen enthalten.\nDie Bildungsregel ist dabei [Titel] [Vornamen] [Namenszusätze] [Vorsatzworte] [Nachnamen].",
-        "comment": "Hinweise und Beispiele siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name"
+        "comment": "Hinweise und Beispiele siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil"
       },
       {
         "id": "Patient.name:Name.family",
         "path": "Patient.name.family",
-        "comment": "Hinweise zur Bildung des gesamten Namenamens siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.\nVerwender müssen mindestens 87 Zeichen verarbeiten können."
+        "comment": "Hinweise zur Bildung des gesamten Namenamens siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil\nVerwender müssen mindestens 87 Zeichen verarbeiten können."
       },
       {
         "id": "Patient.name:Name.family.extension:namenszusatz",
         "path": "Patient.name.family.extension",
         "sliceName": "namenszusatz",
-        "comment": "Hinweise zum Umgang mit dieser Erweiterung siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.\nEine Tabelle der gültigen Namenszusätze findet sich in Anlage 7 zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp.\nUm die Verarbeitung ausländischer Namensangaben nicht zu verhindern, ist die Wertetabelle nur als \"preferred binding\" hinterlegt.\nVerwender müssen mindestens 20 Zeichen verarbeiten können."
+        "comment": "Hinweise zum Umgang mit dieser Erweiterung siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil\nEine Tabelle der gültigen Namenszusätze findet sich in Anlage 7 zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp.\nUm die Verarbeitung ausländischer Namensangaben nicht zu verhindern, ist die Wertetabelle nur als \"preferred binding\" hinterlegt.\nVerwender müssen mindestens 20 Zeichen verarbeiten können."
       },
       {
         "id": "Patient.name:Name.family.extension:namenszusatz.value[x]",
@@ -96,14 +96,15 @@
         "sliceName": "nachname",
         "short": "Nachname ohne Vorsatzwort und Zusätze",
         "definition": "Diese Erweiterung kann den Nachnamen ohne Vorsatzworte und Zusätze aufnehmen.\nWenn weder Vorsatzworte noch Namenszusätze existieren, kann die Erweiterung entfallen.",
-        "comment": "Hinweise zum Umgang mit dieser Erweiterung siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.\nVerwender müssen mindestens 45 Zeichen verarbeiten können."
+        "comment": "Hinweise zum Umgang mit dieser Erweiterung siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil.\nVerwender müssen mindestens 45 Zeichen verarbeiten können."
       },
       {
         "id": "Patient.name:Name.family.extension:vorsatzwort",
         "path": "Patient.name.family.extension",
         "sliceName": "vorsatzwort",
+        "short": "Vorsatzwort",
         "definition": "Vorsatzwort zum Nachnamen des Patienten (z.B. \"van\" in \"Ludwig van Beethoven\").",
-        "comment": "Hinweise zum Umgang mit dieser Erweiterung siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Name.\nEine Tabelle der gültigen Vorsatzworte findet sich in Anlage 6 zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp.\nUm die Verarbeitung ausländischer Namensangaben nicht zu verhindern, ist die Wertetabelle nur als \"preferred binding\" hinterlegt.\nVerwender müssen mindestens 20 Zeichen verarbeiten können."
+        "comment": "Hinweise zum Umgang mit dieser Erweiterung siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil.\nEine Tabelle der gültigen Vorsatzworte findet sich in Anlage 6 zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp.\nUm die Verarbeitung ausländischer Namensangaben nicht zu verhindern, ist die Wertetabelle nur als \"preferred binding\" hinterlegt.\nVerwender müssen mindestens 20 Zeichen verarbeiten können."
       },
       {
         "id": "Patient.name:Name.family.extension:vorsatzwort.value[x]",
@@ -122,7 +123,7 @@
         "id": "Patient.name:Name.prefix",
         "path": "Patient.name.prefix",
         "definition": "Namensteile vor dem Vornamen, z.B. akademischer Titel.\nWenn dieses Attribut zur Angabe des akademischen Titels verwendet wird, ist die Erweiterung prefix-qualifier mit dem Wert AC (academic) verpflichtend anzugeben.\nMehrere Titel werden durch Leerzeichen getrennt angegeben. \nVerwender müssen mindestens 20 Zeichen verarbeiten können.",
-        "comment": "Beispiele zur Verwendung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name."
+        "comment": "Beispiele zur Verwendung siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil."
       },
       {
         "id": "Patient.name:Name.prefix.extension:prefix-qualifier",
@@ -130,15 +131,14 @@
         "sliceName": "prefix-qualifier",
         "short": "Art des Namenspräfix",
         "definition": "Kodierte Angabe der Art des Namenspräfix zur technischen Unterscheidung zwischen verschieden Präfixen wie akademischem Titel.\nAchtung: Für das Vorsatzwort ist das Attribut family.extension[vorsatzwort] zu verwenden.\nFür akademische Titel ist verpflichtend die Kennzeichnung AC (academic) zu verwenden.",
-        "comment": "Beispiele zur Verwendung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name."
+        "comment": "Beispiele zur Verwendung siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil."
       },
       {
         "id": "Patient.gender",
         "path": "Patient.gender",
         "short": "Administrative Geschlechtsangabe (FHIR-Kodierung)",
         "definition": "Administrative Geschlechtsangabe gemäß den Unterlagen des Kostenträgers, kodiert nach FHIR-Standard.",
-        "comment": "Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht.",
-        "min": 1
+        "comment": "Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe [Geschlecht (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht) im deutschen Basisprofil."
       },
       {
         "id": "Patient.gender.extension:other-amtlich",
@@ -146,7 +146,7 @@
         "sliceName": "other-amtlich",
         "short": "Administrative Geschlechtsangabe (deutsche Kodierung)",
         "definition": "Administrative Geschlechtsangabe gemäß den Unterlagen des Kostenträgers, kodiert nach Wertetabelle zur Unterscheidung zwischen \"divers\" und \"unbestimmt\".",
-        "comment": "Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht.\nNur bei FHIR-Kodierung \"other\" zu verwenden (vgl. Constraint pat-de-1).",
+        "comment": "Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe [Geschlecht (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht) im deutschen Basisprofil.\nNur bei FHIR-Kodierung \"other\" zu verwenden (vgl. Constraint pat-de-1).",
         "mustSupport": true
       },
       {
@@ -154,7 +154,7 @@
         "path": "Patient.birthDate",
         "short": "Geburtsdatum",
         "definition": "Das Geburtsdatum des Versicherten ist in den VSD eine Pflichtangabe. \nPartielle Datumsangaben sind allerdings zulässig.",
-        "comment": "Hinweise insbesondere zur Angabe unvollständiger Datumswerte siehe https://simplifier.net/guide/leitfaden-de-basis-r4/ig-markdown-Ressourcen-Patient?version=current#ig-markdown-Ressourcen-Patient-Geburtsdatum."
+        "comment": "Hinweise insbesondere zur Angabe unvollständiger Datumswerte siehe [Geburtsdatum (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geburtsdatum)."
       },
       {
         "id": "Patient.address",
@@ -194,47 +194,95 @@
       {
         "id": "Patient.address:StrassenAdresse.line",
         "path": "Patient.address.line",
-        "comment": "Hinweise zur Abbildung von Adressen und Beispiele siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Addresse."
+        "comment": "Hinweise zur Abbildung von Adressen und Beispiele siehe [Adresse (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Addresse) im deutschen Basisprofil."
       },
       {
         "id": "Patient.address:StrassenAdresse.country",
         "path": "Patient.address.country",
-        "definition": "Staatsangabe kodiert nach ISO-3166-1-2",
-        "comment": "Die Kodierung ist durch den FHIR-Standard empfohlen, aber nicht erzwungen. \nDurch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert."
+        "definition": "Staatsangabe",
+        "comment": "Hier ist die Staatsangabe im Volltext (z.B. zur postalischen Adressierung) anzugeben."
       },
       {
         "id": "Patient.address:StrassenAdresse.country.extension",
         "path": "Patient.address.country.extension",
         "slicing": {
+          "rules": "open",
           "discriminator": [
             {
               "type": "value",
               "path": "url"
+            },
+            {
+              "type": "value",
+              "path": "value.ofType(Coding).system"
             }
-          ],
-          "ordered": false,
-          "rules": "open"
+          ]
         },
         "min": 1
       },
       {
-        "id": "Patient.address:StrassenAdresse.country.extension:Laenderkennzeichen",
+        "id": "Patient.address:StrassenAdresse.country.extension:countryCode",
         "path": "Patient.address.country.extension",
-        "sliceName": "Laenderkennzeichen",
-        "short": "Länderkennzeichen nach DEÜV Anlage 8",
-        "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8. ",
-        "comment": "Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.",
+        "sliceName": "countryCode",
+        "short": "Länderkennzeichen nach ISO 3166-2",
+        "definition": "Kodierte Angabe des Länderkennzeichens nach ISO 3166-2. ",
+        "comment": "Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur [Kodierung der Landesangabe](https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html).\nDurch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.",
         "min": 1,
         "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen"
+              "http://hl7.org/fhir/StructureDefinition/iso21090-codedString"
             ]
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "Patient.address:StrassenAdresse.country.extension:countryCode.value[x]",
+        "path": "Patient.address.country.extension.value[x]",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2"
+        }
+      },
+      {
+        "id": "Patient.address:StrassenAdresse.country.extension:countryCode.value[x].system",
+        "path": "Patient.address.country.extension.value[x].system",
+        "fixedUri": "urn:iso:std:iso:3166"
+      },
+      {
+        "id": "Patient.address:StrassenAdresse.country.extension:anlage8",
+        "path": "Patient.address.country.extension",
+        "sliceName": "anlage8",
+        "short": "Länderkennzeichen nach DEÜV Anlage 8",
+        "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8. ",
+        "comment": "Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/iso21090-codedString"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:StrassenAdresse.country.extension:anlage8.value[x]",
+        "path": "Patient.address.country.extension.value[x]",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8"
+        }
+      },
+      {
+        "id": "Patient.address:StrassenAdresse.country.extension:anlage8.value[x].system",
+        "path": "Patient.address.country.extension.value[x].system",
+        "fixedUri": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
       },
       {
         "id": "Patient.address:PostfachAdresse",
@@ -261,47 +309,95 @@
       {
         "id": "Patient.address:PostfachAdresse.line",
         "path": "Patient.address.line",
-        "comment": "Hinweise zur Abbildung von Adressen und Beispiele siehe https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Addresse."
+        "comment": "Hinweise zur Abbildung von Adressen und Beispiele siehe [Adresse (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Addresse) im deutschen Basisprofil."
       },
       {
         "id": "Patient.address:PostfachAdresse.country",
         "path": "Patient.address.country",
-        "definition": "Staatsangabe kodiert nach ISO-3166-1-2",
-        "comment": "Die Kodierung ist durch den FHIR-Standard empfohlen, aber nicht erzwungen. \nDurch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert."
+        "definition": "Staatsangabe",
+        "comment": "Hier ist die Staatsangabe im Volltext (z.B. zur postalischen Adressierung) anzugeben."
       },
       {
         "id": "Patient.address:PostfachAdresse.country.extension",
         "path": "Patient.address.country.extension",
         "slicing": {
+          "rules": "open",
           "discriminator": [
             {
               "type": "value",
               "path": "url"
+            },
+            {
+              "type": "value",
+              "path": "value.ofType(Coding).system"
             }
-          ],
-          "ordered": false,
-          "rules": "open"
+          ]
         },
         "min": 1
       },
       {
-        "id": "Patient.address:PostfachAdresse.country.extension:Laenderkennzeichen",
+        "id": "Patient.address:PostfachAdresse.country.extension:countryCode",
         "path": "Patient.address.country.extension",
-        "sliceName": "Laenderkennzeichen",
-        "short": "Länderkennzeichen nach DEÜV Anlage 8",
-        "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8. ",
-        "comment": "Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.",
+        "sliceName": "countryCode",
+        "short": "Länderkennzeichen nach ISO 3166-2",
+        "definition": "Kodierte Angabe des Länderkennzeichens nach ISO 3166-2. ",
+        "comment": "Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur [Kodierung der Landesangabe](https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html).\nDurch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.",
         "min": 1,
         "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen"
+              "http://hl7.org/fhir/StructureDefinition/iso21090-codedString"
             ]
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "Patient.address:PostfachAdresse.country.extension:countryCode.value[x]",
+        "path": "Patient.address.country.extension.value[x]",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2"
+        }
+      },
+      {
+        "id": "Patient.address:PostfachAdresse.country.extension:countryCode.value[x].system",
+        "path": "Patient.address.country.extension.value[x].system",
+        "fixedUri": "urn:iso:std:iso:3166"
+      },
+      {
+        "id": "Patient.address:PostfachAdresse.country.extension:anlage8",
+        "path": "Patient.address.country.extension",
+        "sliceName": "anlage8",
+        "short": "Länderkennzeichen nach DEÜV Anlage 8",
+        "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8. ",
+        "comment": "Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/iso21090-codedString"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:PostfachAdresse.country.extension:anlage8.value[x]",
+        "path": "Patient.address.country.extension.value[x]",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8"
+        }
+      },
+      {
+        "id": "Patient.address:PostfachAdresse.country.extension:anlage8.value[x].system",
+        "path": "Patient.address.country.extension.value[x].system",
+        "fixedUri": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
       }
     ]
   }

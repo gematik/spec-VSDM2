@@ -4,11 +4,12 @@ name: CI (FHIR Validation)
 
 # Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
+  # Triggers the workflow on push or pull request events but only for the master branch.
+  # Added working branch to support clean-up of current validation issues - will be removed once branch is merged.
   push:
-    branches: [ main ]
+    branches: [ main, adesso-update-mapping ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, adesso-update-mapping ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -50,7 +51,7 @@ jobs:
           #PATH_TO_QUALITY_CONTROL_RULES: qc/custom
           DOTNET_VALIDATION_ENABLED: true
           JAVA_VALIDATION_ENABLED: true
-          JAVA_VALIDATION_OPTIONS: -allow-example-urls true -ig kbv.all.st#1.24.0
+          JAVA_VALIDATION_OPTIONS: -allow-example-urls true -advisor-file advisor.json -output-style compact -show-message-ids -ig kbv.all.st#1.24.0 -ig kbv.basis#1.7.0
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
           SUSHI_ENABLED: true

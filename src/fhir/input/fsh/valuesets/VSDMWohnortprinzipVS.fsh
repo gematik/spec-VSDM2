@@ -1,6 +1,6 @@
 ValueSet: VSDMWohnortprinzipVS
 Title: "Wohnortprinzip (WOP)"
-Description: "Wohnortprinzip (Einschränkung auf im VSDM 2.0 gültige Werte)"
+Description: "Wohnortprinzip im Versichertenstammdatenmanagement (VSDM) 2.0"
 
 * insert Meta
 
@@ -22,16 +22,25 @@ Description: "Wohnortprinzip (Einschränkung auf im VSDM 2.0 gültige Werte)"
 * include $csWOP#93 "Thüringen"
 * include $csWOP#98 "Sachsen"
 
-// TODO: Die folgenden Codes aus dem CodeSystem sind in der BMV-Ä-Vorgabetabelle nicht enthalten, 
+// TODO Umfang der erlaubten Werte klären
+// Die folgenden Codes aus dem CodeSystem sind in der BMV-Ä-Vorgabetabelle nicht enthalten, 
 // aber nach Einschätzung des GKV-SV ergänzend aufzunehmen. Eine Bestätigung der KBV sollte 
 // aber vorab eingeholt werden, da der Punkt nicht Teil der KBV/GKV-SV Verhandlungen war. 
 
 // Wenn das vollständige CodeSystem zugelassen werden soll, kann dieses ValueSet
 // entfallen und durch https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_ITA_WOP ersetzt werden.
 
+// Der folgende "Leerwert" ist für VSDM 2.0 nach aktuellem Wissensstand nicht mehr notwendig.
+
 * include $csWOP#00 "WIP: Dummy bei eGK"
+
+// Die folgenden Werte sind in der KVDT-Datensatzbeschreibung als "fusioniert, teilweise aber noch in Gebrauch (bspw. KVK-WOP)" markiert.
+// https://update.kbv.de/ita-update/Abrechnung/KBV_ITA_VGEX_Datensatzbeschreibung_KVDT.pdf 
+// Abstimmung Maximilian Reith 04.09.2025: Klärung der weiteren Notwendigkeit für VSDM 2.0 KBV-intern 
+
 * include $csWOP#47 "WIP: Koblenz"
 * include $csWOP#48 "WIP: Rheinhessen"
+* include $csWOP#49 "WIP: Pfalz"
 * include $csWOP#50 "WIP: Trier"
 * include $csWOP#55 "WIP: Nordbaden"
 * include $csWOP#60 "WIP: Südbaden"

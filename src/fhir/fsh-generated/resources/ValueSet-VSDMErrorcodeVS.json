@@ -4,7 +4,7 @@
   "name": "VSDMErrorcodeVS",
   "id": "VSDMErrorcodeVS",
   "title": "VSDM-Fehlercodes",
-  "description": "allgemeine und VSDM-spezifische Fehlercodes",
+  "description": "Fehlercodes im Versichertenstammdatenmanagement (VSDM) 2.0",
   "version": "1.0.0",
   "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMErrorcodeVS",
   "experimental": false,
@@ -13,7 +13,8 @@
   "compose": {
     "include": [
       {
-        "system": "http://terminology.hl7.org/CodeSystem/operation-outcome"
+        "system": "http://terminology.hl7.org/CodeSystem/operation-outcome",
+        "version": "3.0.0"
       },
       {
         "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS"

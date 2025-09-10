@@ -69,49 +69,96 @@
         "id": "Organization.address",
         "path": "Organization.address",
         "short": "Adresse des Kostenträgers",
-        "definition": "Adresse des Kostenträgers. \nDie meisten Adressfelder sind optional; verpflichtend ist die Angabe des Staats (Ländercode).\nHinweise zur Abbildung von Adressen und Beispiele siehe https://ig.fhir.de/basisprofile-de/1.0.0-RC1/Datentypen-Address.html."
+        "definition": "Adresse des Kostenträgers. \nDie meisten Adressfelder sind optional; verpflichtend ist die Angabe des Staats (Ländercode).\nHinweise zur Abbildung von Adressen und Beispiele siehe [Adresse](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Datentypen-Address.html) im deutschen Basisprofil."
       },
       {
         "id": "Organization.address.country",
         "path": "Organization.address.country",
         "short": "Staat",
-        "definition": "Staatsangabe kodiert nach ISO-3166-1-2.",
-        "comment": "Die Kodierung ist durch den FHIR-Standard empfohlen, aber nicht erzwungen. \nDurch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.",
-        "mustSupport": true
+        "definition": "Staatsangabe",
+        "comment": "Hier ist die Staatsangabe im Volltext (z.B. zur postalischen Adressierung) anzugeben."
       },
       {
         "id": "Organization.address.country.extension",
         "path": "Organization.address.country.extension",
         "slicing": {
+          "rules": "open",
           "discriminator": [
             {
               "type": "value",
               "path": "url"
+            },
+            {
+              "type": "value",
+              "path": "value.ofType(Coding).system"
             }
-          ],
-          "ordered": false,
-          "rules": "open"
+          ]
         },
         "min": 1
       },
       {
-        "id": "Organization.address.country.extension:Laenderkennzeichen",
+        "id": "Organization.address.country.extension:countryCode",
         "path": "Organization.address.country.extension",
-        "sliceName": "Laenderkennzeichen",
-        "short": "Länderkennzeichen nach DEÜV Anlage 8",
-        "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8. ",
-        "comment": "Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.",
+        "sliceName": "countryCode",
+        "short": "Länderkennzeichen nach ISO 3166-2",
+        "definition": "Kodierte Angabe des Länderkennzeichens nach ISO 3166-2. ",
+        "comment": "Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur [Kodierung der Landesangabe](https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html).\nDurch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.",
         "min": 1,
         "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichen"
+              "http://hl7.org/fhir/StructureDefinition/iso21090-codedString"
             ]
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "Organization.address.country.extension:countryCode.value[x]",
+        "path": "Organization.address.country.extension.value[x]",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2"
+        }
+      },
+      {
+        "id": "Organization.address.country.extension:countryCode.value[x].system",
+        "path": "Organization.address.country.extension.value[x].system",
+        "fixedUri": "urn:iso:std:iso:3166"
+      },
+      {
+        "id": "Organization.address.country.extension:anlage8",
+        "path": "Organization.address.country.extension",
+        "sliceName": "anlage8",
+        "short": "Länderkennzeichen nach DEÜV Anlage 8",
+        "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8. ",
+        "comment": "Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/iso21090-codedString"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address.country.extension:anlage8.value[x]",
+        "path": "Organization.address.country.extension.value[x]",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8"
+        }
+      },
+      {
+        "id": "Organization.address.country.extension:anlage8.value[x].system",
+        "path": "Organization.address.country.extension.value[x].system",
+        "fixedUri": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
       }
     ]
   }

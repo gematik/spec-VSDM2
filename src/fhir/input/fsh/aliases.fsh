@@ -14,9 +14,8 @@ Alias: $csAnlage6Vorsatzworte = http://fhir.de/CodeSystem/deuev/anlage-6-vorsatz
 Alias: $csAnlage7Namenszusaetze = http://fhir.de/CodeSystem/deuev/anlage-7-namenszusaetze
 
 // DEÜV Anlage 8 (Länderkennzeichen), verwendet für
-//   - VSDMLaenderkennzeichen (Extension)
-//     - VSDMPatient.address.country.extension[Laenderkennzeichen]
-//     - VSDMPayorOrganization.address.country.extension[Laenderkennzeichen]
+//   - VSDMPatient.address.country.extension[anlage8]
+//   - VSDMPayorOrganization.address.country.extension[anlage8]
 Alias: $csAnlage8Laenderkennzeichen = http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen
 
 // Contact entity type, verwendet für
@@ -31,8 +30,20 @@ Alias: $csCountryCodeISO3166 = urn:iso:std:iso:3166
 // DMP-Schlüssel, verwendet für
 //   - VSDMDMPVS
 //     - VSDMDMPTeilnahme
-//       - VSDMCoverage.extension[dmp]
+//       - VSDMCoverageGKV.extension[dmp]
 Alias: $csDMP = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP
+
+// administrative Geschlechtsangabe, verwendet für
+//   - Beispiel für VSDMPatient
+Alias: $csGenderAmtlich = http://fhir.de/CodeSystem/gender-amtlich-de
+
+// Schweregrad einer Meldung, verwendet für
+//   - ConceptMap VSDMErrorcodeIssueSeverity
+Alias: $csIssueSeverity = http://hl7.org/fhir/issue-severity
+
+// Typ einer Meldung, verwendet für
+//   - ConceptMap VSDMErrorcodeIssueType
+Alias: $csIssueType = http://hl7.org/fhir/issue-type
 
 // LOINC, verwendet für 
 //   - VSDMComposition.type.coding
@@ -45,16 +56,20 @@ Alias: $csOperationOutcomeCodes = http://terminology.hl7.org/CodeSystem/operatio
 
 // besondere Personengruppe, verwendet für
 //   - VSDMBesonderePersonengruppeVS
-//     - VSDMCoverage.extension[besonderePersonengruppe]
+//     - VSDMCoverageGKV.extension[besonderePersonengruppe]
 Alias: $csPersonengruppe = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE
 
 // Versichertenstatus / Versichertenart, verwendet für
-//   - Beispiel für VSDMCoverage
-Alias: $csVersichertenart = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS
+//   - Beispiel für VSDMCoverageGKV
+Alias: $csVersichertenartGKV = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS
+
+// Versicherungsart, verwendet für:
+//   - Beispiel für VSDMCoverageGKV
+Alias: $csVersicherungsart = http://fhir.de/CodeSystem/versicherungsart-de-basis
 
 // Wohnortprinzip, verwendet für
 //   - VSDMWohnortprinzipVS
-//     - VSDMCoverage.extension[wop]
+//     - VSDMCoverageGKV.extension[wop]
 Alias: $csWOP = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP
 
 // ================================================================================================
@@ -63,10 +78,31 @@ Alias: $csWOP = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP
 //
 
 // DEÜV Anlage 8 (Länderkennzeichen), verwendet für
-//   - VSDMLaenderkennzeichen (Extension)
-//     - VSDMPatient.address.country.extension[Laenderkennzeichen]
-//     - VSDMPayorOrganization.address.country.extension[Laenderkennzeichen]
+//   - VSDMPatient.address.country.extension[anlage8]
+//   - VSDMPayorOrganization.address.country.extension[anlage8]
 Alias: $vsAnlage8Laenderkennzeichen = https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8
+
+// Länderkennzeichen nach ISO 3166-1-2, verwendet für
+//   - VSDMPatient.address.country.extension[countryCode]
+//   - VSDMPayorOrganization.address.country.extension[countryCode]
+Alias: $vsCountryCodeISO3166 = http://hl7.org/fhir/ValueSet/iso3166-1-2
+
+// Schweregrad einer Meldung, verwendet für
+//   - ConceptMap VSDMErrorcodeIssueSeverity
+Alias: $vsIssueSeverity = http://hl7.org/fhir/ValueSet/issue-severity
+
+// Typ einer Meldung, verwendet für
+//   - ConceptMap VSDMErrorcodeIssueType
+Alias: $vsIssueType = http://hl7.org/fhir/ValueSet/issue-type
+
+// besondere Personengruppe, verwendet für
+//   - VSDMBesonderePersonengruppeVS
+//     - VSDMCoverageGKV.extension[besonderePersonengruppe]
+Alias: $vsPersonengruppe = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_PERSONENGRUPPE
+
+// Versichertenstatus / Versichertenart, verwendet für
+//   - Beispiel für VSDMCoverageGKV
+Alias: $vsVersichertenartGKV = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_VERSICHERTENSTATUS
 
 // ================================================================================================
 // 
@@ -74,25 +110,29 @@ Alias: $vsAnlage8Laenderkennzeichen = https://fhir.kbv.de/ValueSet/KBV_VS_Base_D
 //
 
 // besondere Personengruppe (Extension aus dem deutschen Basisprofil), verwendet für
-//   - VSDMCoverage.extension[besonderePersonengruppe]
+//   - VSDMCoverageGKV.extension[besonderePersonengruppe]
 Alias: $extBesonderePersonengruppe = http://fhir.de/StructureDefinition/gkv/besondere-personengruppe
 
 // Kostenerstattung (Extension aus dem deutschen Basisprofil), verwendet für
-//   - VSDMCoverage.extension[kostenerstattung]
+//   - VSDMCoverageGKV.extension[kostenerstattung]
 Alias: $extKostenerstattung = http://fhir.de/StructureDefinition/gkv/kostenerstattung
 
 // ruhender Leistungsanspruch (Extension aus dem deutschen Basisprofil), verwendet für
-//   - VSDMCoverage.extension[ruhenderLeistungsanspruch]
+//   - VSDMCoverageGKV.extension[ruhenderLeistungsanspruch]
 Alias: $extRuhenderLeistungsanspruch = http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch
 
+// coded expression for the content represented in a string
+// verwendet für die Länderangaben nach ISO 3166-2 bzw. Anlage 8 DEÜV
+Alias: $extCodedString = http://hl7.org/fhir/StructureDefinition/iso21090-codedString
+
 // Versichertenart (Extension aus dem deutschen Basisprofil), verwendet für
-//   - VSDMCoverage.extension[versichertenart]
+//   - VSDMCoverageGKV.extension[versichertenart]
 Alias: $extVersichertenart = http://fhir.de/StructureDefinition/gkv/versichertenart
 
 // Wohnortprinzip (Extension aus dem deutschen Basisprofil), verwendet für
-//   - VSDMCoverage.extension[wop]
+//   - VSDMCoverageGKV.extension[wop]
 Alias: $extWOP = http://fhir.de/StructureDefinition/gkv/wop
 
 // Zuzahlungsstatus (Extension aus dem deutschen Basisprofil), verwendet für
-//   - VSDMCoverage.extension[zuzahlungsstatus]
+//   - VSDMCoverageGKV.extension[zuzahlungsstatus]
 Alias: $extZuzahlungsstatus = http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus

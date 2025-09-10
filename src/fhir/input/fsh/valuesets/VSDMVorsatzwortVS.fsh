@@ -1,6 +1,6 @@
 ValueSet: VSDMVorsatzwortVS
 Title: "Namensvorsatzwort"
-Description: "Namensvorsatzwort nach DEÜV Anlage 6"
+Description: "Namensvorsatzwort nach DEÜV Anlage 6 im Versichertenstammdatenmanagement (VSDM) 2.0"
 
 * insert Meta
 
