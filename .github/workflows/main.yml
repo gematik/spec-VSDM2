@@ -4,11 +4,12 @@ name: CI (FHIR Validation)
 
 # Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
+  # Triggers the workflow on push or pull request events but only for the master branch.
+  # Added working branch to support clean-up of current validation issues - will be removed once branch is merged.
   push:
-    branches: [ master ]
+    branches: [ main, adesso-update-mapping ]
   pull_request:
-    branches: [ master ]
+    branches: [ main, adesso-update-mapping ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -23,24 +24,36 @@ jobs:
     
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
         
-      # Java and .NET are already installed on ubuntu-latest
+      # Install .NET runtime
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      
+      # Install Java runtime (only needed if you want to run the offical HL7 Java validator)
+      - name: Setup Java JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
         
       - name: Firely.Terminal (GitHub Actions)
-        uses: FirelyTeam/firely-terminal-pipeline@v0.4.0
+        uses: FirelyTeam/firely-terminal-pipeline@v0.7.8
         with:
-          PATH_TO_CONFORMANCE_RESOURCES: Resources/fsh-generated/resources/
-          #PATH_TO_EXAMPLES: Examples
-          PATH_TO_QUALITY_CONTROL_RULES: qc/custom
+          PATH_TO_CONFORMANCE_RESOURCES: src/fhir/fsh-generated/resources/
+          FIRELY_TERMINAL_VERSION: 3.4.0
+          PATH_TO_EXAMPLES: src/fhir/fsh-generated/resources
+          #PATH_TO_QUALITY_CONTROL_RULES: qc/custom
           DOTNET_VALIDATION_ENABLED: true
           JAVA_VALIDATION_ENABLED: true
-          OUTPUT_FORMAT: RAW
-          JAVA_VALIDATION_OPTIONS: -allow-example-urls true
-          JAVA_VALIDATOR_VERSION: 6.0.11
+          JAVA_VALIDATION_OPTIONS: -allow-example-urls true -advisor-file advisor.json -output-style compact -show-message-ids -ig kbv.all.st#1.24.0 -ig kbv.basis#1.7.0
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
           SUSHI_ENABLED: true
-          SUSHI_OPTIONS: Resources/
-          EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET VALIDATION_CONFORMANCE_JAVA VALIDATION_EXAMPLES_JAVA
+          SUSHI_OPTIONS: src/fhir
+          EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET VALIDATION_CONFORMANCE_JAVA

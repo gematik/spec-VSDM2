@@ -1,0 +1,69 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "VSDMKostentraegerRolle",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle",
+  "version": "1.0.0",
+  "name": "VSDMKostentraegerRolle",
+  "title": "Rolle des Kostenträgers",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-12-31",
+  "publisher": "gematik GmbH",
+  "description": "Rolle des Kostenträgers (Haupt-/abrechnender Kostenträger) im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Coverage.payor",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Rolle des Kostenträgers",
+        "definition": "Die Rolle des Kostenträgers im Versicherungsverhältnis dient der Unterscheidung zwischen Haupt- und abrechnendem Kostenträger.\nDiese Unterscheidung ist nur für GKV-Versicherte relevant."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMKostentraegerRolleVS"
+        }
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "min": 1,
+        "patternUri": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS"
+      },
+      {
+        "id": "Extension.value[x].code",
+        "path": "Extension.value[x].code",
+        "min": 1
+      }
+    ]
+  }
+}

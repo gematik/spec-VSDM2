@@ -1,0 +1,182 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "VSDMDMPTeilnahme",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
+  "version": "1.0.0",
+  "name": "VSDMDMPTeilnahme",
+  "title": "Teilnahme an Disease Management-Programm",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-12-31",
+  "publisher": "gematik GmbH",
+  "description": "Angaben zur Teilnahme eines Versicherten an einem Disease Management-Programm im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Coverage",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Teilnahme an Disease Management-Programm",
+        "definition": "Angaben zur Teilnahme eines Versicherten an einem Disease Management-Programm im Versichertenstammdatenmanagement (VSDM) 2.0."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "min": 3
+      },
+      {
+        "id": "Extension.extension:dmp",
+        "path": "Extension.extension",
+        "sliceName": "dmp",
+        "short": "Schlüssel des DMP",
+        "definition": "Gibt den Schlüssel des DMP an, in das der Versicherte eingeschrieben ist.",
+        "comment": "Hier sind nur die DMP-Schlüssel zulässig, die einzelne DMP identifizieren (keine Kombinationswerte).\nDer bisherigen Leerwerts 00 darf nicht verwendet werden; stattdessen ist die gesamte Extension nicht anzugeben, wenn keine DMP-Teilnahme registriert ist.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:dmp.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:dmp.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "dmp"
+      },
+      {
+        "id": "Extension.extension:dmp.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMDMPVS"
+        }
+      },
+      {
+        "id": "Extension.extension:dmp.value[x].system",
+        "path": "Extension.extension.value[x].system",
+        "min": 1,
+        "patternUri": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP"
+      },
+      {
+        "id": "Extension.extension:dmp.value[x].code",
+        "path": "Extension.extension.value[x].code",
+        "min": 1
+      },
+      {
+        "id": "Extension.extension:zeitraum",
+        "path": "Extension.extension",
+        "sliceName": "zeitraum",
+        "short": "Einschreibezeitraum",
+        "definition": "Gibt den Zeitraum der Einschreibung des Versicherten in das DMP an.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:zeitraum.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:zeitraum.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "zeitraum"
+      },
+      {
+        "id": "Extension.extension:zeitraum.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:zeitraum.value[x].start",
+        "path": "Extension.extension.value[x].start",
+        "min": 1,
+        "constraint": [
+          {
+            "key": "date-precision-1",
+            "severity": "error",
+            "human": "An dieser Stelle muss ein vollständiges Datum bestehend aus Jahr, Monat und Tag angegeben werden.",
+            "expression": "toString().matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:zeitraum.value[x].end",
+        "path": "Extension.extension.value[x].end",
+        "constraint": [
+          {
+            "key": "date-precision-1",
+            "severity": "error",
+            "human": "An dieser Stelle muss ein vollständiges Datum bestehend aus Jahr, Monat und Tag angegeben werden.",
+            "expression": "toString().matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:digitalesDMP",
+        "path": "Extension.extension",
+        "sliceName": "digitalesDMP",
+        "short": "digitales DMP",
+        "definition": "Gibt an, ob das DMP als digitales DMP durchgeführt wird.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:digitalesDMP.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:digitalesDMP.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "digitalesDMP"
+      },
+      {
+        "id": "Extension.extension:digitalesDMP.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

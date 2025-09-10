@@ -1,0 +1,18 @@
+Instance: VSDMCoverageGKV-A123456780
+InstanceOf: VSDMCoverageGKV
+Title: "A123456780 Amsel, Andrea (GKV)"
+Description: "Versicherungsdaten A123456780 Amsel, Andrea (GKV)"
+Usage: #inline
+
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
+
+* extension[WOP].valueCoding = $csWOP#38 "Nordrhein"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV#1 "Mitglieder"
+* status = #active
+* type = $csVersicherungsart#GKV
+* beneficiary.reference = "Patient/VSDMPatient-GKV-A123456780"
+* period
+  * start = "1997-12-28"
+* payor[+]
+  * reference = "Organization/VSDMPayorOrganization-104178397"
+  * extension[kostentraegerRolle].valueCoding = #H "Haupt-Kostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit
