@@ -128,6 +128,62 @@
     "endLine": 23
   },
   {
+    "outputFile": "Bundle-VSDMBundle-PKV-A123456780.json",
+    "fshName": "VSDMBundle-PKV-A123456780",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMBundle-PKV-A123456780.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "Bundle-VSDMBundle-PKV-B234567895.json",
+    "fshName": "VSDMBundle-PKV-B234567895",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMBundle-PKV-B234567895.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "Bundle-VSDMBundle-PKV-C345678908.json",
+    "fshName": "VSDMBundle-PKV-C345678908",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMBundle-PKV-C345678908.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "Bundle-VSDMBundle-PKV-D456789013.json",
+    "fshName": "VSDMBundle-PKV-D456789013",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMBundle-PKV-D456789013.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "Bundle-VSDMBundle-PKV-E567890127.json",
+    "fshName": "VSDMBundle-PKV-E567890127",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMBundle-PKV-E567890127.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "Bundle-VSDMBundle-PKV-F678901231.json",
+    "fshName": "VSDMBundle-PKV-F678901231",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMBundle-PKV-F678901231.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "Bundle-VSDMBundle-PKV-G789012344.json",
+    "fshName": "VSDMBundle-PKV-G789012344",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMBundle-PKV-G789012344.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
     "outputFile": "CodeSystem-VSDMErrorcodeCS.json",
     "fshName": "VSDMErrorcodeCS",
     "fshType": "CodeSystem",
@@ -150,6 +206,22 @@
     "fshFile": "codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh",
     "startLine": 1,
     "endLine": 16
+  },
+  {
+    "outputFile": "CodeSystem-VSDMSozialtarifPKVCS.json",
+    "fshName": "VSDMSozialtarifPKVCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMSozialtarifPKVCS.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
+    "outputFile": "CodeSystem-VSDMVersichertenartPKVCS.json",
+    "fshName": "VSDMVersichertenartPKVCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMVersichertenartPKVCS.fsh",
+    "startLine": 1,
+    "endLine": 14
   },
   {
     "outputFile": "ConceptMap-VSDMErrorcodeIssueSeverity.json",
@@ -272,12 +344,36 @@
     "endLine": 300
   },
   {
+    "outputFile": "StructureDefinition-VSDDatensatzPKV.json",
+    "fshName": "VSDDatensatzPKV",
+    "fshType": "Logical",
+    "fshFile": "logicalmodel/VSDDatensatzPKV.fsh",
+    "startLine": 1,
+    "endLine": 176
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMBeihilfe.json",
+    "fshName": "VSDMBeihilfe",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMBeihilfe.fsh",
+    "startLine": 1,
+    "endLine": 41
+  },
+  {
     "outputFile": "StructureDefinition-VSDMBundle.json",
     "fshName": "VSDMBundle",
     "fshType": "Profile",
     "fshFile": "profiles/VSDMBundle.fsh",
     "startLine": 1,
     "endLine": 54
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMContactPointTIM.json",
+    "fshName": "VSDMContactPointTIM",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMContactPointTIM.fsh",
+    "startLine": 1,
+    "endLine": 18
   },
   {
     "outputFile": "StructureDefinition-VSDMCoverageGKV.json",
@@ -288,6 +384,14 @@
     "endLine": 187
   },
   {
+    "outputFile": "StructureDefinition-VSDMCoveragePKV.json",
+    "fshName": "VSDMCoveragePKV",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMCoveragePKV.fsh",
+    "startLine": 1,
+    "endLine": 89
+  },
+  {
     "outputFile": "StructureDefinition-VSDMDMPTeilnahme.json",
     "fshName": "VSDMDMPTeilnahme",
     "fshType": "Extension",
@@ -296,12 +400,28 @@
     "endLine": 54
   },
   {
+    "outputFile": "StructureDefinition-VSDMHinweisPKV.json",
+    "fshName": "VSDMHinweisPKV",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMHinweisPKV.fsh",
+    "startLine": 1,
+    "endLine": 39
+  },
+  {
     "outputFile": "StructureDefinition-VSDMKostentraegerRolle.json",
     "fshName": "VSDMKostentraegerRolle",
     "fshType": "Extension",
     "fshFile": "extensions/VSDMKostentraegerRolle.fsh",
     "startLine": 1,
     "endLine": 19
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMKrankenhausleistungenPKV.json",
+    "fshName": "VSDMKrankenhausleistungenPKV",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMKrankenhausleistungenPKV.fsh",
+    "startLine": 1,
+    "endLine": 90
   },
   {
     "outputFile": "StructureDefinition-VSDMOperationOutcome.json",
@@ -317,7 +437,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 194
+    "endLine": 204
   },
   {
     "outputFile": "StructureDefinition-VSDMPayorOrganization.json",
@@ -326,6 +446,22 @@
     "fshFile": "profiles/VSDMPayorOrganization.fsh",
     "startLine": 1,
     "endLine": 48
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMSozialtarifPKV.json",
+    "fshName": "VSDMSozialtarifPKV",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMSozialtarifPKV.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMVersichertenartPKV.json",
+    "fshName": "VSDMVersichertenartPKV",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMVersichertenartPKV.fsh",
+    "startLine": 1,
+    "endLine": 20
   },
   {
     "outputFile": "ValueSet-VSDMDMPVS.json",
@@ -364,6 +500,22 @@
     "fshName": "VSDMRuhenderLeistungsanspruchArtVS",
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMRuhenderLeistungsanspruchArtVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-VSDMSozialtarifPKVVS.json",
+    "fshName": "VSDMSozialtarifPKVVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMSozialtarifPKVVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-VSDMVersichertenartPKVVS.json",
+    "fshName": "VSDMVersichertenartPKVVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMVersichertenartPKVVS.fsh",
     "startLine": 1,
     "endLine": 7
   },

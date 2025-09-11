@@ -1,0 +1,109 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "VSDMHinweisPKV",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMHinweisPKV",
+  "version": "1.0.0",
+  "name": "VSDMHinweisPKV",
+  "title": "Hinweise an PKV-Leistungserbringer",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-12-31",
+  "publisher": "gematik GmbH",
+  "description": "Optionale Hinweise in Freitextform für PKV-Leistungserbringer im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Coverage",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Hinweise an PKV-Leistungserbringer",
+        "definition": "Optionale Hinweise in Freitextform für Leistungserbringer im Versichertenstammdatenmanagement (VSDM) 2.0.\nDie Relevanz eines Hinweises kann auf einzelne Leistungserbringer-Institutionstypen (professionOID gemäß gemSpec_OID) eingeschränkt werden.\nHinweise ohne Angabe einer Berufsgruppe sind für alle Leistungserbringer relevant."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "min": 1
+      },
+      {
+        "id": "Extension.extension:text",
+        "path": "Extension.extension",
+        "sliceName": "text",
+        "short": "Hinweistext",
+        "definition": "Hinweistext im Markdown-Format. \nDer Hinweistext ist nicht zur maschinellen Verarbeitung vorgesehen, sondern muss dem Leistungserbringer lediglich angezeigt werden.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:text.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:text.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "text"
+      },
+      {
+        "id": "Extension.extension:text.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "markdown"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:professionOID",
+        "path": "Extension.extension",
+        "sliceName": "professionOID",
+        "short": "betroffene LEI-Typen",
+        "definition": "Leistungserbringer-Institutionstypen, für die der Hinweistext relevant ist.\nDie Angabe erfolgt als Liste von professionOIDs gemäß gemSpec_OID Tabelle Tab_PKI_403-*.\nDie Verwendung anderer OIDs (insbesondere individueller Berufsgruppen) ist nicht zulässig.\nWenn keine Institutionstypen angegeben sind oder das empfangende System den Filter nicht anzeigen kann, ist der Hinweistext sicherheitshalber anzuzeigen.",
+        "comment": "Prozentwert (0..100)",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:professionOID.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:professionOID.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "professionOID"
+      },
+      {
+        "id": "Extension.extension:professionOID.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "oid"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMHinweisPKV"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

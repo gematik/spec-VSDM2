@@ -1,7 +1,7 @@
 Profile: VSDMCoverageGKV
 Parent: CoverageDeBasis
 Title: "Versicherungsdaten GKV"
-Description: "Angaben zum GKV Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0"
+Description: "Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0"
 
 // Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen. 
 // Die Extensions sind in der Reihenfolge der Nennung der Attribute im logischen Modell aufgeführt.

@@ -9,7 +9,7 @@ Description: "Rolle des Kostenträgers (Haupt-/abrechnender Kostenträger) im Ve
   * ^short = "Rolle des Kostenträgers"
   * ^definition = """
       Die Rolle des Kostenträgers im Versicherungsverhältnis dient der Unterscheidung zwischen Haupt- und abrechnendem Kostenträger.
-      Diese Unterscheidung ist nur für GKV-Versicherte relevant.
+      Diese Unterscheidung ist nur für GKV-Versicherte relevant; für PKV-Versicherte wird nur ein Haupt-Kostenträger angegeben.
     """
 
 * value[x] only Coding

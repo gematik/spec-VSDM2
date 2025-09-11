@@ -9883,6 +9883,34 @@
         "comment": "Beispiele zur Verwendung siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil."
       },
       {
+        "id": "Patient.telecom",
+        "path": "Patient.telecom",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Patient.telecom:TIMessengerID",
+        "path": "Patient.telecom",
+        "sliceName": "TIMessengerID",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "ContactPoint",
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMContactPointTIM"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Patient.gender",
         "path": "Patient.gender",
         "short": "Administrative Geschlechtsangabe (FHIR-Kodierung)",
