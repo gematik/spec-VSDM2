@@ -6,7 +6,11 @@
   ],
   "dependencies": {
     "hl7.fhir.r4.core": "4.0.1",
-    "de.basisprofil.r4": "1.5.3",
-    "de.gematik.ti": "1.1.0"
+    "de.basisprofil.r4": "1.5.x",
+    "de.gematik.terminology": "1.0.x",
+    "de.gematik.ti": "1.1.x",
+    "kbv.basis": "1.7.0",
+    "kbv.all.st": "1.24.0",
+    "kbv.ita.for": "1.2.0"
   }
 }
