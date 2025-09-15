@@ -22,6 +22,10 @@ Alias: $csAnlage8Laenderkennzeichen = http://fhir.de/CodeSystem/deuev/anlage-8-l
 //   - Beispiel für VSDMPayorOrganization
 Alias: $csContactEntityType = http://terminology.hl7.org/CodeSystem/contactentity-type
 
+// Contact Point System, verwendet für
+//   - VSDMContactPointTIM
+Alias: $csContactPointSystem = http://hl7.org/fhir/contact-point-system
+
 // Länderkennzeichen nach ISO 3166-1-2, verwendet für
 //   - Beispiel für VSDMPatient
 //   - Beispiel für VSDMPayorOrganization

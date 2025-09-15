@@ -1,0 +1,49 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "VSDMContactPointTIM",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMContactPointTIM",
+  "version": "1.0.0",
+  "name": "VSDMContactPointTIM",
+  "title": "TI-Messenger-ID",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-12-31",
+  "publisher": "gematik GmbH",
+  "description": "Matrix-ID (MXID) für TI-Messenger im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "ContactPoint",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ContactPoint",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ContactPoint",
+        "path": "ContactPoint",
+        "short": "TI-Messenger-ID",
+        "definition": "Matrix-ID (MXID) für TI-Messenger im Versichertenstammdatenmanagement (VSDM) 2.0."
+      },
+      {
+        "id": "ContactPoint.system",
+        "path": "ContactPoint.system",
+        "fixedCode": "url"
+      },
+      {
+        "id": "ContactPoint.value",
+        "path": "ContactPoint.value",
+        "min": 1,
+        "constraint": [
+          {
+            "key": "VSDMContactPointTIM-mxid-1",
+            "severity": "error",
+            "human": "Die TI-Messenger-ID muss eine [gültige MXID](https://spec.matrix.org/latest/appendices/#user-identifiers) sein.",
+            "expression": "matches('matrix:@[a-z0-9\\\\-\\\\._=\\/\\\\+]{1,}:[a-zA-Z0-9\\\\-\\\\.]{1,255}(:[0-9+]{1,5})?') and length() <= 262",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMContactPointTIM"
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

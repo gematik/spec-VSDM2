@@ -12,7 +12,7 @@ Usage: #example
 * entry[VSDMPatient][+]
   * fullUrl = "https://gematik.de/fhir/Patient/VSDMPatient-GKV-F678901231"
   * resource = VSDMPatient-GKV-F678901231
-* entry[VSDMCoverageGKV][+]
+* entry[VSDMCoverage][+]
   * fullUrl = "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-F678901231"
   * resource = VSDMCoverageGKV-F678901231
 * entry[VSDMPayorOrganization][+]

@@ -134,6 +134,16 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
         Beispiele zur Verwendung siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil.
       """
 
+// Slicing der Telekommunikationsdaten
+* telecom
+  * ^slicing.discriminator.type = #profile
+  * ^slicing.discriminator.path = "system"
+  * ^slicing.rules = #open
+* telecom contains TIMessengerID 0..1
+
+// TI-Messenger-ID
+* telecom[TIMessengerID] only VSDMContactPointTIM
+
 // Zuordnung aus Versichertendaten -> Versicherter -> Geschlecht
 * gender // MS bereits durch TIPatient vorgegeben; zur Kardinalität siehe Invariante VSDMCoverageGKV-gender-1 in VSDMCoverageGKV
   * ^short = "Administrative Geschlechtsangabe (FHIR-Kodierung)"
