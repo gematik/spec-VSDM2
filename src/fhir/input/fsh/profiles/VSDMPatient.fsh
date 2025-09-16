@@ -16,27 +16,6 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
       Dieser Sachverhalt wird in einer Folgeversion des IG klargestellt.
     """
 
-* id
-  * ^comment = """
-      HINWEIS: Das Attribut id ist aktuell durch das übergeordneter Profil TIPatient als "must support" gekennzeichnet.
-      Diese Kennzeichnung wird in einer Folgeversion aufgehoben.
-    """
-* meta
-  * ^comment = """
-      HINWEIS: Das Attribut meta ist aktuell durch das übergeordneter Profil TIPatient als "must support" gekennzeichnet.
-      Diese Kennzeichnung wird in einer Folgeversion aufgehoben.
-    """
-  * versionId
-    * ^comment = """
-        HINWEIS: Das Attribut meta.versionId ist aktuell durch das übergeordneter Profil TIPatient als "must support" gekennzeichnet.
-        Diese Kennzeichnung wird in einer Folgeversion aufgehoben.
-      """
-  * lastUpdated
-    * ^comment = """
-        HINWEIS: Das Attribut meta.versionId ist aktuell durch das übergeordneter Profil TIPatient als "must support" gekennzeichnet.
-        Diese Kennzeichnung wird in einer Folgeversion aufgehoben.
-      """
-
 // Zuordnung aus Versichertendaten -> Versicherter -> VersichertenID
 * identifier[KVNR] 1..1 // MS bereits durch TIPatient vorgegeben
   * ^short = "Versichertennummer (KVNR)"
