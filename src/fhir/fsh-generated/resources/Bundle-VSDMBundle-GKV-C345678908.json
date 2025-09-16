@@ -20,6 +20,12 @@
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
           ]
         },
+        "identifier": [
+          {
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "C345678908"
+          }
+        ],
         "name": [
           {
             "use": "official",
@@ -36,12 +42,6 @@
             "given": [
               "Charlie"
             ]
-          }
-        ],
-        "identifier": [
-          {
-            "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "C345678908"
           }
         ],
         "address": [

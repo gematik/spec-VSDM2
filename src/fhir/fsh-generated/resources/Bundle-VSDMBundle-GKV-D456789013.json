@@ -20,6 +20,12 @@
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
           ]
         },
+        "identifier": [
+          {
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "D456789013"
+          }
+        ],
         "name": [
           {
             "use": "official",
@@ -49,12 +55,6 @@
             "given": [
               "Dara"
             ]
-          }
-        ],
-        "identifier": [
-          {
-            "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "D456789013"
           }
         ],
         "address": [

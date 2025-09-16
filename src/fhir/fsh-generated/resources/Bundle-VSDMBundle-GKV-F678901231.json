@@ -20,6 +20,12 @@
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
           ]
         },
+        "identifier": [
+          {
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "F678901231"
+          }
+        ],
         "name": [
           {
             "use": "official",
@@ -53,12 +59,6 @@
             "given": [
               "Frank Florian"
             ]
-          }
-        ],
-        "identifier": [
-          {
-            "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "F678901231"
           }
         ],
         "address": [

@@ -20,6 +20,12 @@
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
           ]
         },
+        "identifier": [
+          {
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "E567890127"
+          }
+        ],
         "name": [
           {
             "use": "official",
@@ -44,12 +50,6 @@
             "given": [
               "Elke"
             ]
-          }
-        ],
-        "identifier": [
-          {
-            "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "E567890127"
           }
         ],
         "address": [
