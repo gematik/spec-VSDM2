@@ -15,7 +15,7 @@ Auf den folgenden Seiten stellt die gematik die Nutzung der Schnittstellen durch
 ## Was ist VSDM 2.0
 
 VSDM steht für „Versichertenstammdatenmanagement“. Es ist ein Teil der Telematikinfrastruktur (TI) im deutschen Gesundheitswesen und dient der Verwaltung und dem Abgleich der Stammdaten von gesetzlich versicherten Personen.
-VSDM 2.0 ist die Weiterentwicklung des bestehenden VSDM 1.0. Die Versichertenstammdaten (VSD) werden mit VSDM 2.0 nicht mehr auf der eGK des Versicherten gespeichert und aktualisiert sondern direkt vom Primärsystem (PS) des Leistungserbringers (LE) vom Fachdienst der Krankenkasse abgerufen und ggf. im PS aktualisiert.
+VSDM 2.0 ist die Weiterentwicklung des bestehenden VSDM 1.0. Die Versichertenstammdaten (VSD) werden mit VSDM 2.0 nicht mehr auf der eGK des Versicherten gespeichert und aktualisiert sondern direkt vom Primärsystem (PS) des Leistungserbringers (LE) vom Fachdienst der Krankenkasse bzw. der privaten Krankenversicherung abgerufen und ggf. im PS aktualisiert. Durch die Entkopplung von VSD und eGK können alle Krankenversicherungen (gesetzliche wie private) gemeinschaftlich betrachtet werden.
 Während bei VSDM 1.0 in den Anwendungsfällen die Komponenten Konnektor, eHealth Kartenterminals, eGK, SMC-B, Intermediär und schließlich die VSDM-Backend-Dienste des Versicherers zum Einsatz kommen, reduziert VSDM 2.0 die Abhängigkeiten von diesen Komponenten. 
 Mit der Initiative TI 2.0 wird die gesamte Infrastruktur modernisiert und auf den neuesten Stand der Sicherheits- und Architekturprinzipien gebracht.
 
