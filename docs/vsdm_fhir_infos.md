@@ -11,6 +11,7 @@ Folgende FHIR-Profile sind im VSDM 2.0 -Kontext relevant und werden von den vers
 | DAV | | ... |
 | DAV | | ... |
 | GKV | ... |
+| PKV | ... |
 | gematik | ... |
 
 
