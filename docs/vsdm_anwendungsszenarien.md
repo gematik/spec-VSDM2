@@ -3,6 +3,9 @@
 ## Niedergelassener Sektor
 
 Die Aufnahme eines Patienten in einer Arzt-/ Zahnarztpraxis oder in psychotherapeutischen Praxen folgt typischerweise einem standardisierten Prozess, der je nach Art der Praxis und organisatorischen Abläufen leicht variieren kann. Um eine Behandlung durchführen und abrechnen zu können ist in jedem Fall die Herstellung des Versorgungskontextes sowie der sich daran anschließende Abruf der Versichertenstammdaten (VSD) notwendig.
+
+Für privat Krankenversicherte werden die VSD i.d.R. nur für die Abrechnung benötigt.
+
 Für jeden Versicherten wird ein Patientenstammblatt angelegt (der Begriff kann variieren und ist nicht mit der elektonischen Patientenakte zu verwechseln) die alle relevanten medizinischen und administrativen Daten enthält. Das Patientenstammblatt ist integrativer Teil des Primärsystems und dient sowohl der Dokumentation als auch der Nachverfolgbarkeit des Behandlungsverlaufs und ist für eine korrekte Diagnose, Therapie und Nachsorge unerlässlich.
 Für Versicherte die der Praxis noch nicht bekannt sind wird ein Patientenstammblatt im Zusammenhang mit dem Abruf der VSD angelegt.
 Existiert zum Versicherten bereits ein Patientenstammblatt wird diese im Laufe der Behandlung fortgeschrieben und aktualsiert.
@@ -20,6 +23,7 @@ Der Abruf der VSD im Rahmen der Aufnahme oder Erfassung erfolgt hier
 - in der ambulanten Versorgung durch einen für die ambulante Versorgung ermächtigten Arzt
 - in der Notaufnahme der Rettungstelle für eine Akutversorgung (z.B. Einlieferung durch den Rettungswagen oder Selbsteinweisung des Versicherten)
 - in der Zentralaufnahme bei der stationäre Versorgung (geplante Einweisung auf Grundlage eines Einweisungsscheins)
+  
 
 
 ## Apotheken
