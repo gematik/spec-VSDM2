@@ -334,7 +334,7 @@
           "extensions",
           "user content"
         ],
-        "min": 1,
+        "min": 2,
         "max": "*",
         "base": {
           "path": "DomainResource.extension",
@@ -482,18 +482,18 @@
         ]
       },
       {
-        "id": "Coverage.extension:sozialtarif",
+        "id": "Coverage.extension:tarifart",
         "path": "Coverage.extension",
-        "sliceName": "sozialtarif",
-        "short": "PKV-Sozialtarif",
-        "definition": "Anwendung eines PKV-verbandseinheitlichen Tarifs mit Besonderheiten bezüglich der Leistungen und privatärztliche Abrechnungen.",
+        "sliceName": "tarifart",
+        "short": "PKV-Tarifart",
+        "definition": "Tarifart des PKV-Versicherten, inklusive Anwendung eines PKV-verbandseinheitlichen Tarifs mit Besonderheiten bezüglich der Leistungen und privatärztliche Abrechnungen.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
           "user content"
         ],
-        "min": 0,
-        "max": "*",
+        "min": 1,
+        "max": "1",
         "base": {
           "path": "DomainResource.extension",
           "min": 0,
@@ -503,7 +503,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMSozialtarifPKV"
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMTarifartPKV"
             ]
           }
         ],
@@ -2494,7 +2494,7 @@
           "ordered": false,
           "rules": "open"
         },
-        "min": 1
+        "min": 2
       },
       {
         "id": "Coverage.extension:beihilfe",
@@ -2533,18 +2533,18 @@
         "mustSupport": true
       },
       {
-        "id": "Coverage.extension:sozialtarif",
+        "id": "Coverage.extension:tarifart",
         "path": "Coverage.extension",
-        "sliceName": "sozialtarif",
-        "short": "PKV-Sozialtarif",
-        "definition": "Anwendung eines PKV-verbandseinheitlichen Tarifs mit Besonderheiten bezüglich der Leistungen und privatärztliche Abrechnungen.",
-        "min": 0,
-        "max": "*",
+        "sliceName": "tarifart",
+        "short": "PKV-Tarifart",
+        "definition": "Tarifart des PKV-Versicherten, inklusive Anwendung eines PKV-verbandseinheitlichen Tarifs mit Besonderheiten bezüglich der Leistungen und privatärztliche Abrechnungen.",
+        "min": 1,
+        "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMSozialtarifPKV"
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMTarifartPKV"
             ]
           }
         ],
