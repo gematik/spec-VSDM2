@@ -14,6 +14,7 @@ Usage: #inline
   * extension[einbett].valueUnsignedInt = 100
   * extension[wahlarzt].valueUnsignedInt = 100
   * extension[belegarzt].valueUnsignedInt = 100 
+* extension[tarifart].valueCoding = #01 "Individualtarif"
 * extension[versichertenart].valueCoding = VSDMVersichertenartPKVCS#VN "Versicherungsnehmer"
 * status = #active
 * type = $csVersicherungsart#PKV

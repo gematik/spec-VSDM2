@@ -12,7 +12,7 @@ Usage: #inline
   * extension[einbett].valueUnsignedInt = 100
   * extension[wahlarzt].valueBoolean = false
   * extension[belegarzt].valueBoolean = false
-* extension[sozialtarif].valueCoding = #S "Standardtarif"
+* extension[tarifart].valueCoding = #02 "Standardtarif"
 * extension[versichertenart].valueCoding = VSDMVersichertenartPKVCS#VN "Versicherungsnehmer"
 * status = #active
 * type = $csVersicherungsart#PKV
