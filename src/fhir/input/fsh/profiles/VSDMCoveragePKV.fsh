@@ -34,11 +34,11 @@ Description: "Angaben zum PKV-Versicherungsverhältnis im Versichertenstammdaten
     """
 
 // Zuordnung aus Versicherungsdaten PKV -> Sozialtarif
-* extension contains VSDMSozialtarifPKV named sozialtarif 0..* MS
-* extension[sozialtarif]
-  * ^short = "PKV-Sozialtarif"
+* extension contains VSDMTarifartPKV named tarifart 1..1 MS
+* extension[tarifart]
+  * ^short = "PKV-Tarifart"
   * ^definition = """
-      Anwendung eines PKV-verbandseinheitlichen Tarifs mit Besonderheiten bezüglich der Leistungen und privatärztliche Abrechnungen.
+      Tarifart des PKV-Versicherten, inklusive Anwendung eines PKV-verbandseinheitlichen Tarifs mit Besonderheiten bezüglich der Leistungen und privatärztliche Abrechnungen.
     """
 
 // Zuordnung aus Versicherungsdaten -> Versichertenart

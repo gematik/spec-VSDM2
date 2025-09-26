@@ -121,6 +121,14 @@
         },
         "extension": [
           {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMTarifartPKV",
+            "valueCoding": {
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PKV_TARIFF",
+              "code": "04",
+              "display": "Notlagentarif"
+            }
+          },
+          {
             "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMVersichertenartPKV",
             "valueCoding": {
               "code": "VN",
@@ -156,14 +164,6 @@
                 "valueBoolean": false
               }
             ]
-          },
-          {
-            "valueCoding": {
-              "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMSozialtarifPKVCS",
-              "code": "N",
-              "display": "Notlagentarif"
-            },
-            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMSozialtarifPKV"
           }
         ],
         "status": "active",

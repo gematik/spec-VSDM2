@@ -13,7 +13,7 @@ Usage: #inline
   * extension[zweibettEinbettDifferenz].valueUnsignedInt = 0
   * extension[wahlarzt].valueBoolean = false
   * extension[belegarzt].valueBoolean = false
-* extension[sozialtarif].valueCoding = #N "Notlagentarif"
+* extension[tarifart].valueCoding = #04 "Notlagentarif"
 * extension[versichertenart].valueCoding = VSDMVersichertenartPKVCS#VN "Versicherungsnehmer"
 * status = #active
 * type = $csVersicherungsart#PKV
