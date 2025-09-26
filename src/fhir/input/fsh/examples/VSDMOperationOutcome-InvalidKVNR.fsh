@@ -21,4 +21,4 @@ Usage: #example
       Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service 1x erneuern. 
       Bei erneutem Fehler: Abbruch, da wahrscheinlich ein Implementierungsfehler vorliegt (Clientsystem oder PoPP-Service).
     """
-  * expression[+] = "http.ZETA-PoPP-Token-Content.patientId"
+  * location[+] = "http.ZETA-PoPP-Token-Content.patientId"

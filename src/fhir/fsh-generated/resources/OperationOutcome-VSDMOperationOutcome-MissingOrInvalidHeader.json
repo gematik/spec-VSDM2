@@ -25,7 +25,7 @@
         "text": "Der erforderliche HTTP-Header ZETA-PoPP-Token fehlt oder ist undgültig."
       },
       "diagnostics": "Im Falle des Headers PoPP: Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service 1x erneuern. \nBei erneutem Fehler: Abbruch, da wahrscheinlich ein Implementierungsfehler vorliegt (Clientsystem).",
-      "expression": [
+      "location": [
         "http.ZETA-PoPP-Token"
       ]
     }

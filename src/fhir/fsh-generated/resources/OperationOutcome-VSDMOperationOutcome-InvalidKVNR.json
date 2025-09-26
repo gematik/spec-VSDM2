@@ -25,7 +25,7 @@
         "text": "Ungültige oder nicht bekannte Krankenversichertennummer 1234567890."
       },
       "diagnostics": "Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service 1x erneuern. \nBei erneutem Fehler: Abbruch, da wahrscheinlich ein Implementierungsfehler vorliegt (Clientsystem oder PoPP-Service).",
-      "expression": [
+      "location": [
         "http.ZETA-PoPP-Token-Content.patientId"
       ]
     }

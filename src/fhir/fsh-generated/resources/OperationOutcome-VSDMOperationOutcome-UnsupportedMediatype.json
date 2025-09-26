@@ -25,7 +25,7 @@
         "text": "Der vom Clientsystem angefragte Medientyp application/morse-code wird nicht unterstützt."
       },
       "diagnostics": "Implementierungsfehler beim Clientsystem - der Hersteller des Clientsystems ist zu kontaktieren.",
-      "expression": [
+      "location": [
         "http.Accept"
       ]
     }
