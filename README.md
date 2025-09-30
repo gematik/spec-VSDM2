@@ -7,6 +7,8 @@ Dieses Dokument beschreibt die für die Implementierung des Versicherungsstammda
 
 Die in der Spezifikation VSDM 2.0 [gemSpec_VSDM_2] enthaltenen und in den Steckbrief [gemSST_CS_VSDM_2] ausgeleiteten Anforderungen an Clientsysteme haben informativen Charakter und treffen Festlegungen über diesen Implementierungsleitfaden hinaus. Die Anforderungen dienen zur Unterstützung der Implementierung durch Primärsystemhersteller.
 
+Dieser Implementierungsleitfaden betrachtet Vorgaben für GKV und PKV.
+
 ## Einleitung
 Die gematik geht neue Wege und möchte auf diesem Weg die Nutzung der Schnittstellen rund um das VSDM 2.0 vorstellen. Die Beschreibung dieser API ergänzt die normativen Dokumente der gematik sowie die Festlegungen über die VSDM-Profile (inkl. Beispielen) des genutzten FHIR-Standards.
 
