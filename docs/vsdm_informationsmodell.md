@@ -25,12 +25,14 @@ Weitere in den FHIR-Profilen Patient und Coverage befindliche Felder aus dem Bas
 ![Alt-Text](/images/logicalmodelVersichertendaten.png)
 
 
-#### Versicherungsdaten
+#### Versicherungsdaten GKV
 
 ![Alt-Text](/images/logicalmodelVersicherungsdaten.png)
- 
 
-**Anmerkung:** Die konkrete Ausgestaltung des Datensatzes befindet sich noch in Absprache zwischen den Gesellschaftern. Die in Abstimmung befindlichen Felder sind im Logical Model auf Simplifier mit **"WIP"** (**W**ork**I**n**P**rogress) gekennzeichnet. Die Festlegungen hierzu werden in einem späteren Release nachgeführt.
+
+#### Versicherungsdaten PKV
+ 
+ToDo: Abbildung logical model PKV einfügen
 
 
 ### Mapping
