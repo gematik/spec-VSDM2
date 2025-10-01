@@ -81,12 +81,20 @@ Hier geht es zur Informationsseite zu Statuscodes
 
 In VSDM 1.0 wurde ein proprietäres XML-Datenformat in einer SOAP-Servicekette verwendet. Mit VSDM 2.0 wird der VSD Datensatz in den FHIR-Standard migriert, der im deutschen Gesundheitswesen immer mehr zum Einsatz kommt. Die FHIR-Profile und Beispielressourcen werden im offiziellen [VSDM 2 simplifier project](https://simplifier.net/vsdm2) veröffentlicht.
 
-## Mitgeltende Dokumente und Informationen
+## Mitgeltende Dokumente
 Hier finden Sie eine Übersicht zu den weiterführenden Dokumenten zur Implementierung.
 
 - [Spezifikation VSDM 2.0](https://gemspec.gematik.de/prereleases/Draft_ZeroTrust_VSDM2_24_1/gemSpec_VSDM_2_V1.0.0_CC/)
 - [FHIR-Profile VSDM 2.0](https://simplifier.net/vsdm2)
 - [Steckbrief Clientsystem-Schnittstelle zum VSDM 2.0](https://gemspec.gematik.de/docs/gemSST/gemSST_CS_VSDM_2)
+
+## Weiterführende Informationen
+
+| Quelle | Herausgeber: Titel |
+| :------------- | :------------ |
+| gemSpec_PoPP_Service | gematik: Spezifikation Proof of Patient Presence-Service  |
+| gemSpec_ZETA | gematik: Spezifikation Zero Trust Access (ZETA) |
+| gemGlossar | gematik: Glossar der Telematikinfrastruktur | 
 
 
 ## Branch Modell
