@@ -8,4 +8,8 @@ VSDM 2.0 setzt voraus, dass der Versorgungskontext für einen zu behandelnden Ve
 
 Proof of Patient Presence (PoPP) ist ein Nachweis, der belegt, dass sich ein Versicherter zu einem bestimmten Zeitpunkt in einem Versorgungskontext mit einer bestimmten Leistungserbringerinstitution (LEI) befindet. Im kryptografisch gesicherten PoPP-Token sind somit Informationen über die LEI und über den Versicherten zusammengeführt. Dabei ist es die Aufgabe der PoPP-Lösung, die Authentifizierung der LEI durchzuführen und durch Authentifizierung des Versicherten per GesundheitsID oder Authentifizierung der elektronischen Gesundheitskarte (eGK) eines Versicherten, an einem eHealth-Kartenterminal oder handelsüblichen USB Smartcard-Reader, den Versorgungskontext zu bestätigen. Das Ergebnis ist das PoPP-Token, welches der LEI zur Autorisierung für den Zugriff auf die Daten des Versicherten in Diensten der Telematikinfrastruktur (TI) dient.
 
-Der http Proxy des ZETA Guards stellt sicher, dass nur Requests mit gültigem Access Token sowie bestandenen zusätzlichen Prüfungen an den Ressource Server weitergeleitet werden. Welche Prüfungen zusätzlich erfolgen, wird über Attribute im Access Token gesteuert.
+Sowohl der VSDM 2.0 Dienst als auch der PoPP-Service werden als Internetdienste realisiert und mittels Zero Trust Komponenten geschützt. Hierfür stellt die gematik den ZETA Guard zur Verfügung, den diese Dienste verwenden müssen. Der http Proxy des ZETA Guards stellt sicher, dass nur Requests mit gültigem Access Token sowie bestandenen zusätzlichen Prüfungen an den Ressource Server weitergeleitet werden. Welche Prüfungen zusätzlich erfolgen, wird über Attribute im Access Token gesteuert.
+
+Im Primärsystem wird ein ZETA Client benötigt, der von den PS-Herstellern implementiert und in ihre jeweiligen spezifischen Produkte integriert wird. Die gematik stellt den PS-Herstellern eine Referenz-Implementierung des ZETA Clients zu Verfügung.
+
+
