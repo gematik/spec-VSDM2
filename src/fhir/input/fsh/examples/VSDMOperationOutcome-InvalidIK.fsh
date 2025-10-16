@@ -21,4 +21,4 @@ Usage: #example
       Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service 1x erneuern. 
       Bei erneutem Fehler: Abbruch, da wahrscheinlich ein Implementierungsfehler vorliegt (Clientsystem oder PoPP-Service) oder der Kostenträger nicht von diesem Farchdienst-Anbieter vertreten wird (fehlerhafter DNS-Eintrag).
     """
-  * expression[+] = "http.ZETA-PoPP-Token-Content.insurerId"
+  * location[+] = "http.ZETA-PoPP-Token-Content.insurerId"

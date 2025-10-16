@@ -20,4 +20,4 @@ Usage: #example
   * diagnostics = """
       Implementierungsfehler beim Clientsystem - der Hersteller des Clientsystems ist zu kontaktieren.
     """
-  * expression[+] = "http.If-None-Match"
+  * location[+] = "http.If-None-Match"

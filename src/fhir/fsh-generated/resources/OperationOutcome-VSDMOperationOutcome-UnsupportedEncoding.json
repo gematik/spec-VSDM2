@@ -25,7 +25,7 @@
         "text": "Das vom Clientsystem angefragte Komprimierungsverfahren implode wird nicht unterstützt."
       },
       "diagnostics": "Implementierungsfehler beim Clientsystem - der Hersteller des Clientsystems ist zu kontaktieren.",
-      "expression": [
+      "location": [
         "http.Content-Encoding"
       ]
     }

@@ -21,4 +21,4 @@ Usage: #example
       Im Falle des Headers PoPP: Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service 1x erneuern. 
       Bei erneutem Fehler: Abbruch, da wahrscheinlich ein Implementierungsfehler vorliegt (Clientsystem).
     """
-  * expression[+] = "http.ZETA-PoPP-Token"
+  * location[+] = "http.ZETA-PoPP-Token"

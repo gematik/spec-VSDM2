@@ -25,7 +25,7 @@
         "text": "Die Versichertenstammdaten zur Versichertennummer 1234567890 konnten für die Institutionskennung 103456789 nicht ermittelt werden."
       },
       "diagnostics": "Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service 1x erneuern. \nBei erneutem Fehler: Abbruch, da wahrscheinlich ein Implementierungsfehler vorliegt (Clientsystem, PoPP-Service oder Schnittstelle zu KTR-Bestandssystemen).",
-      "expression": [
+      "location": [
         "http.ZETA-PoPP-Token-Content.insurerId",
         "http.ZETA-PoPP-Token-Content.patientId"
       ]
