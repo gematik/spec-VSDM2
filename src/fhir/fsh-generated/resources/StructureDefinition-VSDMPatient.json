@@ -3408,7 +3408,7 @@
         "sliceName": "TIMessengerID",
         "short": "A contact detail for the individual",
         "definition": "A contact detail (e.g. a telephone number or an email address) by which the individual may be contacted.",
-        "comment": "A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address might not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone).",
+        "comment": "Bis zur Schaffung einer entsprechenden Rechtsgrundlage wird die TI-Messenger-ID für GKV-Versicherte im VSDM 2.0 nicht genutzt.",
         "requirements": "People have (primary) ways to contact them in some way such as phone, email.",
         "min": 0,
         "max": "1",
@@ -10318,6 +10318,7 @@
         "id": "Patient.telecom:TIMessengerID",
         "path": "Patient.telecom",
         "sliceName": "TIMessengerID",
+        "comment": "Bis zur Schaffung einer entsprechenden Rechtsgrundlage wird die TI-Messenger-ID für GKV-Versicherte im VSDM 2.0 nicht genutzt.",
         "min": 0,
         "max": "1",
         "type": [
