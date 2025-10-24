@@ -1,8 +1,9 @@
 # VSD vom Fachdienst abrufen
 Der Anwendungsfall ermöglicht dem Leistungserbringer,
-- das gültige Versicherungsverhältnis beim erstmaligen Quartalsbesuch zu prüfen,
-- die jeweils zum Besuch aktuellen VSD und
-- die Prüfziffer für die Abrechnung zu erhalten
+- das gültige Versicherungsverhältnis beim erstmaligen Quartalsbesuch zu prüfen (GKV),
+- die jeweils zum Besuch aktuellen VSD (GKV und PKV),
+- die Prüfziffer für die Abrechnung zu erhalten (GKV) und
+- die vereinfachte Übertragung der Versichertenstammdaten aus den Systemen der GKV und PKV in die Praxisverwaltungssoftware (GKV und PKV)
 
 Vorraussetzungen für die Durchführung des VSDM-Anwendungsfalls ist die Herstellung des Versorgungskontextes. Versorgungskontext bedeutet, dass ein Zusammenhang zwischen einem berechtigten Versicherten und einer behandelnden oder versorgenden Leistungserbringerinstitution (LEI) hergestellt wird.
 
