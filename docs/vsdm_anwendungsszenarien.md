@@ -24,7 +24,7 @@ Der Abruf der VSD im Rahmen der Aufnahme oder Erfassung erfolgt hier
 - in der Notaufnahme der Rettungstelle für eine Akutversorgung (z.B. Einlieferung durch den Rettungswagen oder Selbsteinweisung des Versicherten)
 - in der Zentralaufnahme bei der stationäre Versorgung (geplante Einweisung auf Grundlage eines Einweisungsscheins)
   
-
+Anmerkung: Im Rahmen des Abrufs der VSD von Privatversicherten besteht die Möglichkeit, die Leistungskomponenten (z.B. Einzelzimmer) aus dem Versicherungsschutz mit zu übertragen. 
 
 ## Apotheken
 
