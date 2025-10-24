@@ -122,6 +122,9 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
 
 // TI-Messenger-ID
 * telecom[TIMessengerID] only VSDMContactPointTIM
+  * ^comment = """
+      Bis zur Schaffung einer entsprechenden Rechtsgrundlage wird die TI-Messenger-ID für GKV-Versicherte im VSDM 2.0 nicht genutzt.
+    """
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Geschlecht
 * gender // MS bereits durch TIPatient vorgegeben; zur Kardinalität siehe Invariante VSDMCoverageGKV-gender-1 in VSDMCoverageGKV
