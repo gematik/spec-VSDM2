@@ -56,7 +56,7 @@ Description: """
       """
     * Land 1..1 code "Land der Postfachadresse" """
         Gibt das Land zu der Postfachadresse an. 
-        Es werden Landesangaben nach ISO 3166-2 verwendet.
+        Es werden Landesangaben nach ISO 3166-1 verwendet.
       """
 
   * Wohnsitzadresse 0..1 BackboneElement "Wohnsitzadresse des Versicherten"
@@ -80,7 +80,7 @@ Description: """
       """
     * Land 1..1 code "Land der Wohnsitzadresse" """
         Gibt das Land zu der Wohnsitzadresse an. 
-        Es werden Landesangaben nach ISO 3166-2 verwendet.
+        Es werden Landesangaben nach ISO 3166-1 verwendet.
       """
 
   * TIMessengerID 0..1 string "TI-Messenger-ID" """
