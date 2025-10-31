@@ -37,9 +37,9 @@ RuleSet: Address-Country
 * extension contains $extCodedString named countryCode 1..1 MS and
                      $extCodedString named anlage8 0..1 MS
 * extension[countryCode]
-  * ^short = "Länderkennzeichen nach ISO 3166-2"
+  * ^short = "Länderkennzeichen nach ISO 3166-1"
   * ^definition = """
-      Kodierte Angabe des Länderkennzeichens nach ISO 3166-2. 
+      Kodierte Angabe des Länderkennzeichens nach ISO 3166-1. 
     """
   * ^comment = """
       Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur [Kodierung der Landesangabe](https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html).

@@ -621,7 +621,7 @@
         "id": "VSDDatensatzPKV.Versichertendaten.Postfachadresse.Land",
         "path": "VSDDatensatzPKV.Versichertendaten.Postfachadresse.Land",
         "short": "Land der Postfachadresse",
-        "definition": "Gibt das Land zu der Postfachadresse an. \nEs werden Landesangaben nach ISO 3166-2 verwendet.",
+        "definition": "Gibt das Land zu der Postfachadresse an. \nEs werden Landesangaben nach ISO 3166-1 verwendet.",
         "min": 1,
         "max": "1",
         "base": {
@@ -864,7 +864,7 @@
         "id": "VSDDatensatzPKV.Versichertendaten.Wohnsitzadresse.Land",
         "path": "VSDDatensatzPKV.Versichertendaten.Wohnsitzadresse.Land",
         "short": "Land der Wohnsitzadresse",
-        "definition": "Gibt das Land zu der Wohnsitzadresse an. \nEs werden Landesangaben nach ISO 3166-2 verwendet.",
+        "definition": "Gibt das Land zu der Wohnsitzadresse an. \nEs werden Landesangaben nach ISO 3166-1 verwendet.",
         "min": 1,
         "max": "1",
         "base": {
@@ -1961,7 +1961,7 @@
         "id": "VSDDatensatzPKV.Versichertendaten.Postfachadresse.Land",
         "path": "VSDDatensatzPKV.Versichertendaten.Postfachadresse.Land",
         "short": "Land der Postfachadresse",
-        "definition": "Gibt das Land zu der Postfachadresse an. \nEs werden Landesangaben nach ISO 3166-2 verwendet.",
+        "definition": "Gibt das Land zu der Postfachadresse an. \nEs werden Landesangaben nach ISO 3166-1 verwendet.",
         "min": 1,
         "max": "1",
         "type": [
@@ -2099,7 +2099,7 @@
         "id": "VSDDatensatzPKV.Versichertendaten.Wohnsitzadresse.Land",
         "path": "VSDDatensatzPKV.Versichertendaten.Wohnsitzadresse.Land",
         "short": "Land der Wohnsitzadresse",
-        "definition": "Gibt das Land zu der Wohnsitzadresse an. \nEs werden Landesangaben nach ISO 3166-2 verwendet.",
+        "definition": "Gibt das Land zu der Wohnsitzadresse an. \nEs werden Landesangaben nach ISO 3166-1 verwendet.",
         "min": 1,
         "max": "1",
         "type": [
