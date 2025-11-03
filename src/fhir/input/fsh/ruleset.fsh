@@ -39,7 +39,7 @@ RuleSet: Address-Country
 * extension[countryCode]
   * ^short = "Länderkennzeichen nach ISO 3166-1"
   * ^definition = """
-      Kodierte Angabe des Länderkennzeichens nach ISO 3166-1. 
+      Kodierte Angabe des Länderkennzeichens nach ISO 3166-1.
     """
   * ^comment = """
       Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur [Kodierung der Landesangabe](https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html).
