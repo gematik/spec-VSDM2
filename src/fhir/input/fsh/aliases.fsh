@@ -126,7 +126,7 @@ Alias: $extKostenerstattung = http://fhir.de/StructureDefinition/gkv/kostenersta
 Alias: $extRuhenderLeistungsanspruch = http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch
 
 // coded expression for the content represented in a string
-// verwendet für die Länderangaben nach ISO 3166-2 bzw. Anlage 8 DEÜV
+// verwendet für die Länderangaben nach ISO 3166-1 bzw. Anlage 8 DEÜV
 Alias: $extCodedString = http://hl7.org/fhir/StructureDefinition/iso21090-codedString
 
 // Versichertenart (Extension aus dem deutschen Basisprofil), verwendet für
