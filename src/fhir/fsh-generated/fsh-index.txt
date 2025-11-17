@@ -65,4 +65,4 @@ ValueSet-VSDMRuhenderLeistungsanspruchArtVS.json                        VSDMRuhe
 ValueSet-VSDMSozialtarifPKVVS.json                                      VSDMSozialtarifPKVVS                              ValueSet    valuesets/VSDMSozialtarifPKVVS.fsh                             1 - 7
 ValueSet-VSDMVersichertenartPKVVS.json                                  VSDMVersichertenartPKVVS                          ValueSet    valuesets/VSDMVersichertenartPKVVS.fsh                         1 - 7
 ValueSet-VSDMVorsatzwortVS.json                                         VSDMVorsatzwortVS                                 ValueSet    valuesets/VSDMVorsatzwortVS.fsh                                1 - 7
-ValueSet-VSDMWohnortprinzipVS.json                                      VSDMWohnortprinzipVS                              ValueSet    valuesets/VSDMWohnortprinzipVS.fsh                             1 - 48
+ValueSet-VSDMWohnortprinzipVS.json                                      VSDMWohnortprinzipVS                              ValueSet    valuesets/VSDMWohnortprinzipVS.fsh                             1 - 23
