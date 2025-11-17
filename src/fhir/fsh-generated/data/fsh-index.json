@@ -448,10 +448,10 @@
     "endLine": 48
   },
   {
-    "outputFile": "StructureDefinition-VSDMSozialtarifPKV.json",
-    "fshName": "VSDMSozialtarifPKV",
+    "outputFile": "StructureDefinition-VSDMTarifartPKV.json",
+    "fshName": "VSDMTarifartPKV",
     "fshType": "Extension",
-    "fshFile": "extensions/VSDMSozialtarifPKV.fsh",
+    "fshFile": "extensions/VSDMTarifartPKV.fsh",
     "startLine": 1,
     "endLine": 18
   },
