@@ -63,6 +63,10 @@ Alias: $csOperationOutcomeCodes = http://terminology.hl7.org/CodeSystem/operatio
 //     - VSDMCoverageGKV.extension[besonderePersonengruppe]
 Alias: $csPersonengruppe = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE
 
+// SNOMED Clinical Terms, verwendet für
+//   - VSDMDMPVS
+Alias: $csSCT = http://snomed.info/sct 
+
 // Versichertenstatus / Versichertenart, verwendet für
 //   - Beispiel für VSDMCoverageGKV
 Alias: $csVersichertenartGKV = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS
