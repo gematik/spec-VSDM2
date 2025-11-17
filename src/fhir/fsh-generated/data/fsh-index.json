@@ -469,7 +469,7 @@
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMDMPVS.fsh",
     "startLine": 1,
-    "endLine": 32
+    "endLine": 69
   },
   {
     "outputFile": "ValueSet-VSDMErrorcodeVS.json",

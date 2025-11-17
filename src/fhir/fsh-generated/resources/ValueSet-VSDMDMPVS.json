@@ -10,7 +10,7 @@
   "experimental": false,
   "publisher": "gematik GmbH",
   "date": "2023-12-31",
-  "purpose": "Das CodeSystem der Disease-Management-Programme enthält alle auf der eGK hinterlegbaren Werte.\nDazu gehören auch Kombinationswerte, z.B. 33 für COPD und KHK, sowie ein Nullwert.\nDiese Kombinationswerte sind zur Ablage auf der eGK erforderlich (eng beschränkter Speicherbereich).\nFür VSDM 2.0 sind diese Sonderwerte allerdings nicht mehr sinnvoll:\nDie Disease-Management-Programme werden als wiederholbare Struktur mit separaten Gültigkeitsbereichen und weiteren Attributen ausgeführt.\nEin Nullwert wird ebenfalls nicht mehr benötigt.\nDieses ValueSet nimmt daher eine Einschränkung des KBV-CodeSystem auf im VSDM 2.0 gültige Werte vor.",
+  "purpose": "Das CodeSystem der Disease-Management-Programme enthält alle auf der eGK hinterlegbaren Werte.\nDazu gehören auch Kombinationswerte, z.B. 33 für COPD und KHK, sowie ein Nullwert.\nDiese Kombinationswerte sind zur Ablage auf der eGK erforderlich (eng beschränkter Speicherbereich).\nFür VSDM 2.0 sind diese Sonderwerte allerdings nicht mehr sinnvoll:\nDie Disease-Management-Programme werden als wiederholbare Struktur mit separaten Gültigkeitsbereichen und weiteren Attributen ausgeführt.\nEin Nullwert wird ebenfalls nicht mehr benötigt.\nDieses ValueSet nimmt daher eine Einschränkung des KBV-CodeSystem auf im VSDM 2.0 gültige Werte vor.\nDa einige Abkürzungen aus dem CodeSystem nicht unbedingt allgemeinverständlich sind, ergänzt das ValueSet die Konzepte um einen Beschreibungstext.",
   "compose": {
     "include": [
       {
@@ -18,51 +18,171 @@
         "concept": [
           {
             "code": "01",
-            "display": "Diabetes mellitus Typ 2"
+            "display": "DM2",
+            "designation": [
+              {
+                "use": {
+                  "code": "900000000000003001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Fully specified name"
+                },
+                "value": "Diabetes mellitus Typ 2"
+              }
+            ]
           },
           {
             "code": "02",
-            "display": "Brustkrebs"
+            "display": "BRK",
+            "designation": [
+              {
+                "use": {
+                  "code": "900000000000003001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Fully specified name"
+                },
+                "value": "Brustkrebs"
+              }
+            ]
           },
           {
             "code": "03",
-            "display": "Koronare Herzkrankheit"
+            "display": "KHK",
+            "designation": [
+              {
+                "use": {
+                  "code": "900000000000003001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Fully specified name"
+                },
+                "value": "Koronare Herzkrankheit"
+              }
+            ]
           },
           {
             "code": "04",
-            "display": "Diabetes mellitus Typ 1"
+            "display": "DM1",
+            "designation": [
+              {
+                "use": {
+                  "code": "900000000000003001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Fully specified name"
+                },
+                "value": "Diabetes mellitus Typ 1"
+              }
+            ]
           },
           {
             "code": "05",
-            "display": "Asthma bronchiale"
+            "display": "Asthma",
+            "designation": [
+              {
+                "use": {
+                  "code": "900000000000003001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Fully specified name"
+                },
+                "value": "Asthma bronchiale"
+              }
+            ]
           },
           {
             "code": "06",
-            "display": "COPD (chronic obstructive pulmonary disease)"
+            "display": "COPD",
+            "designation": [
+              {
+                "use": {
+                  "code": "900000000000003001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Fully specified name"
+                },
+                "value": "COPD (chronic obstructive pulmonary disease)"
+              }
+            ]
           },
           {
             "code": "07",
-            "display": "Chronische Herzinsuffizienz"
+            "display": "HI",
+            "designation": [
+              {
+                "use": {
+                  "code": "900000000000003001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Fully specified name"
+                },
+                "value": "Chronische Herzinsuffizienz"
+              }
+            ]
           },
           {
             "code": "08",
-            "display": "Depression"
+            "display": "Depression",
+            "designation": [
+              {
+                "use": {
+                  "code": "900000000000003001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Fully specified name"
+                },
+                "value": "Depression"
+              }
+            ]
           },
           {
             "code": "09",
-            "display": "Rückenschmerz"
+            "display": "Rueckenschmerz",
+            "designation": [
+              {
+                "use": {
+                  "code": "900000000000003001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Fully specified name"
+                },
+                "value": "Rückenschmerz"
+              }
+            ]
           },
           {
             "code": "10",
-            "display": "Rheuma"
+            "display": "Rheuma",
+            "designation": [
+              {
+                "use": {
+                  "code": "900000000000003001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Fully specified name"
+                },
+                "value": "Rheuma"
+              }
+            ]
           },
           {
             "code": "11",
-            "display": "Osteoporose"
+            "display": "Osteoporose",
+            "designation": [
+              {
+                "use": {
+                  "code": "900000000000003001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Fully specified name"
+                },
+                "value": "Osteoporose"
+              }
+            ]
           },
           {
             "code": "12",
-            "display": "Adipositas - Erwachsene"
+            "display": "Adipositas",
+            "designation": [
+              {
+                "use": {
+                  "code": "900000000000003001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Fully specified name"
+                },
+                "value": "Adipositas - Erwachsene"
+              }
+            ]
           }
         ]
       }
