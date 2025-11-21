@@ -4,7 +4,7 @@ Title: "K123456781 Kiebitz, Karin (GKV)"
 Description: "Versichertendaten K123456781 Kiebitz, Karin (GKV)"
 Usage: #inline
 
-* id = "019aa694-042b-7240-98e0-2ea7952c3fec"
+* id = $idVSDMPatient-GKV-K123456781
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "K123456781"

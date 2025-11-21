@@ -4,7 +4,7 @@ Title: "K123456781 Kiebitz, Karin (GKV)"
 Description: "Versicherungsdaten K123456781 Kiebitz, Karin (GKV)"
 Usage: #inline
 
-* id = "019aa695-bcf0-7225-b707-8f15c0710b3c"
+* id = $idVSDMCoverageGKV-K123456781
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#46 "Hessen"
@@ -19,7 +19,7 @@ Usage: #inline
 * extension[versichertenart].valueCoding = $csVersichertenartGKV#5 "Rentner"
 * status = #active
 * type = $csVersicherungsart#GKV
-* beneficiary.reference = "Patient/VSDMPatient-GKV-K123456781"
+* beneficiary.reference = $urlVSDMPatient-GKV-K123456781
 * period
   * start = "2022-04-01"
   * end = "2027-07-31"

@@ -4,7 +4,7 @@ Title: "D456789013 Dohle, Dara (GKV)"
 Description: "Versicherungsdaten D456789013 Dohle, Dara (GKV)"
 Usage: #inline
 
-* id = "019aa696-4962-7577-9a24-9be92b1dde93"
+* id = $idVSDMCoverageGKV-D456789013
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#46 "Hessen"
@@ -21,7 +21,7 @@ Usage: #inline
 * extension[versichertenart].valueCoding = $csVersichertenartGKV#3 "Familienangehoerige"
 * status = #active
 * type = $csVersicherungsart#GKV
-* beneficiary.reference = "Patient/VSDMPatient-GKV-D456789013"
+* beneficiary.reference = $urlVSDMPatient-GKV-D456789013
 * period
   * start = "2021-10-01"
 * payor[+]

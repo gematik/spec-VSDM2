@@ -4,18 +4,18 @@ Title: "A123456780 Amsel, Andrea (GKV)"
 Description: "VSDM 2.0-Daten A123456780 Amsel, Andrea (GKV)"
 Usage: #example
 
-* id = "019aa690-d14a-79a3-a078-3807df1b87f4"
+* id = $idVSDMBundle-GKV-A123456780
 * meta
   * profile[0] = Canonical(VSDMBundle|1.0.0)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
 * entry[VSDMPatient][+]
-  * fullUrl = "https://gematik.de/fhir/Patient/VSDMPatient-GKV-A123456780"
+  * fullUrl = $urlVSDMPatient-GKV-A123456780
   * resource = VSDMPatient-GKV-A123456780
 * entry[VSDMCoverage][+]
-  * fullUrl = "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-A123456780"
+  * fullUrl = $urlVSDMCoverageGKV-A123456780
   * resource = VSDMCoverageGKV-A123456780
 * entry[VSDMPayorOrganization][+]
-  * fullUrl = "https://gematik.de/fhir/Organization/VSDMPayorOrganization-104178397"
+  * fullUrl = $urlVSDMPayorOrganization-104178397
   * resource = VSDMPayorOrganization-104178397

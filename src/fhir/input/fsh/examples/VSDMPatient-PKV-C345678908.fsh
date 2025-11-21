@@ -4,7 +4,7 @@ Title: "C345678908 Carolinataube, Charlie (PKV)"
 Description: "Versichertendaten C345678908 Carolinataube, Charlie (PKV)"
 Usage: #inline
 
-* id = "019aa693-7f8b-71e0-87d5-b6c2f4aee454"
+* id = $idVSDMPatient-PKV-C345678908
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "C345678908"

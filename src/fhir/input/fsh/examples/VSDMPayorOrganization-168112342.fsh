@@ -4,7 +4,7 @@ Title: "Privatversicherung Pluto"
 Description: "Privatversicherung Pluto"
 Usage: #inline
 
-* id = "019aa691-6ac1-7cb4-94fe-c2bce5e1a343"
+* id = $idVSDMPayorOrganization-168112342
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 
 * identifier[IKNR].value = "168112342"

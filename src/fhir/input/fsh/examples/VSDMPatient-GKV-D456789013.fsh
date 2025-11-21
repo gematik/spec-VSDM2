@@ -4,7 +4,7 @@ Title: "D456789013 Dohle, Dara (GKV)"
 Description: "Versichertendaten D456789013 Dohle, Dara (GKV)"
 Usage: #inline
 
-* id = "019aa694-6f37-72b0-89ea-042e20e449a8"
+* id = $idVSDMPatient-GKV-D456789013
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "D456789013"

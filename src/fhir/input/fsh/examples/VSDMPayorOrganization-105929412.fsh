@@ -4,7 +4,7 @@ Title: "Beispielkostenträger Erfurt"
 Description: "Beispielkostenträger Erfurt"
 Usage: #inline
 
-* id = "019aa692-3896-74e3-a3f5-ee54b04411e5"
+* id = $idVSDMPayorOrganization-105929412
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 
 * identifier[IKNR].value = "105929412"
