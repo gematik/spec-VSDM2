@@ -4,7 +4,7 @@ Title: "C345678908 Carolinataube, Charlie (GKV)"
 Description: "Versichertendaten C345678908 Carolinataube, Charlie (GKV)"
 Usage: #inline
 
-* id = "019aa694-7e82-76ba-9b71-cbb1456f219e"
+* id = $idVSDMPatient-GKV-C345678908
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "C345678908"

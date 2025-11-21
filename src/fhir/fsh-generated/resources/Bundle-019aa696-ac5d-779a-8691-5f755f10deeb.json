@@ -11,7 +11,7 @@
   "timestamp": "2025-07-14T15:16:17.890+01:00",
   "entry": [
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-PKV-F678901231",
+      "fullUrl": "https://gematik.de/fhir/Patient/019aa693-4d88-7efc-8b76-73f2e3afd5e7",
       "resource": {
         "resourceType": "Patient",
         "id": "019aa693-4d88-7efc-8b76-73f2e3afd5e7",
@@ -102,7 +102,7 @@
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoveragePKV-F678901231",
+      "fullUrl": "https://gematik.de/fhir/Coverage/019aa694-edc7-7231-9184-c2910d4cf37f",
       "resource": {
         "resourceType": "Coverage",
         "id": "019aa694-edc7-7231-9184-c2910d4cf37f",
@@ -168,7 +168,7 @@
         ],
         "status": "active",
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-PKV-F678901231"
+          "reference": "https://gematik.de/fhir/Patient/019aa693-4d88-7efc-8b76-73f2e3afd5e7"
         },
         "period": {
           "start": "2020-01-01"
@@ -181,7 +181,7 @@
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-168167894",
+      "fullUrl": "https://gematik.de/fhir/Organization/019aa690-ed54-74bb-9acf-d15af64e00d3",
       "resource": {
         "resourceType": "Organization",
         "id": "019aa690-ed54-74bb-9acf-d15af64e00d3",

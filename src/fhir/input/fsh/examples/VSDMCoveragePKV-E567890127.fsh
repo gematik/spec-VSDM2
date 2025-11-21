@@ -4,7 +4,7 @@ Title: "E567890127 Freifrau an der Elster, Elke (PKV)"
 Description: "Versicherungsdaten E567890127 Freifrau an der Elster, Elke (PKV)"
 Usage: #inline
 
-* id = "019aa694-fd12-70dd-9861-370e431a0227"
+* id = $idVSDMCoveragePKV-E567890127
 * meta.profile[0] = Canonical(VSDMCoveragePKV|1.0.0)
 
 * extension[krankenhaus]
@@ -17,7 +17,7 @@ Usage: #inline
 * extension[versichertenart].valueCoding = VSDMVersichertenartPKVCS#VN "Versicherungsnehmer"
 * status = #active
 * type = $csVersicherungsart#PKV
-* beneficiary.reference = "Patient/VSDMPatient-PKV-E567890127"
+* beneficiary.reference = $urlVSDMPatient-PKV-E567890127
 * period
   * start = "2020-01-01"
 * payor[+]

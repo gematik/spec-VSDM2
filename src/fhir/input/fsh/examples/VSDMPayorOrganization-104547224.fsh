@@ -4,7 +4,7 @@ Title: "Beispielkostenträger Essen"
 Description: "Beispielkostenträger Essen"
 Usage: #inline
 
-* id = "019aa692-8168-7b40-8893-eed9305defcb"
+* id = $idVSDMPayorOrganization-104547224
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 
 * identifier[IKNR].value = "104547224"

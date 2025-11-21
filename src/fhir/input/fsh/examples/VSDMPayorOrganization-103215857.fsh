@@ -4,7 +4,7 @@ Title: "Beispielkostenträger Bremerhaven"
 Description: "Beispielkostenträger Bremerhaven"
 Usage: #inline
 
-* id = "019aa692-a944-756a-bc42-e857b709b862"
+* id = $idVSDMPayorOrganization-103215857
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 
 * identifier[IKNR].value = "103215857"

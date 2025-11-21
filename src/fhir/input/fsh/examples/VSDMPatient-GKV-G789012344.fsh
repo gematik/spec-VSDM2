@@ -4,7 +4,7 @@ Title: "G789012344 Edle von der Graugans, Gabriele (GKV)"
 Description: "Versichertendaten G789012344 Edle von der Graugans, Gabriele (GKV)"
 Usage: #inline
 
-* id = "019aa694-4344-78ca-899f-b73d841475b1"
+* id = $idVSDMPatient-GKV-G789012344
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "G789012344"

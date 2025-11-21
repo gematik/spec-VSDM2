@@ -4,7 +4,7 @@ Title: "N456789014 Nachtigall, Nina Nicole (GKV)"
 Description: "Versichertendaten N456789014 Nachtigall, Nina Nicole (GKV)"
 Usage: #inline
 
-* id = "019aa693-d14a-7370-bdb9-19b88d14f8d1"
+* id = $idVSDMPatient-GKV-N456789014
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "N456789014"

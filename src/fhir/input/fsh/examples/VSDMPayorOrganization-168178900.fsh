@@ -4,7 +4,7 @@ Title: "Privatversicherung Venus"
 Description: "Privatversicherung Venus"
 Usage: #inline
 
-* id = "019aa698-5ee2-7d61-8f09-c93fb5c18f95"
+* id = $idVSDMPayorOrganization-168178900
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 
 * identifier[IKNR].value = "168178900"

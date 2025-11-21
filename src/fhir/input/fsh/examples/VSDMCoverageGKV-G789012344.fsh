@@ -4,7 +4,7 @@ Title: "G789012344 Edle von der Graugans, Gabriele (GKV)"
 Description: "Versicherungsdaten G789012344 Edle von der Graugans, Gabriele (GKV)"
 Usage: #inline
 
-* id = "019aa696-021a-72bf-b9fa-3fd5e56ba94b"
+* id = $idVSDMCoverageGKV-G789012344
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#46 "Hessen"
@@ -24,7 +24,7 @@ Usage: #inline
 * extension[versichertenart].valueCoding = $csVersichertenartGKV#1 "Mitglieder"
 * status = #active
 * type = $csVersicherungsart#GKV
-* beneficiary.reference = "Patient/VSDMPatient-GKV-G789012344"
+* beneficiary.reference = $urlVSDMPatient-GKV-G789012344
 * period
   * start = "1974-02-12"
 * payor[+]

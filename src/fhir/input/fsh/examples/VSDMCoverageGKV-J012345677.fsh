@@ -4,7 +4,7 @@ Title: "J012345677 Junko, Jens-Jörg (GKV)"
 Description: "Versicherungsdaten J012345677 Junko, Jens-Jörg (GKV)"
 Usage: #inline
 
-* id = "019aa695-cf21-730d-9e2c-2d7013b2db6d"
+* id = $idVSDMCoverageGKV-J012345677
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"
@@ -29,7 +29,7 @@ Usage: #inline
 * extension[versichertenart].valueCoding = $csVersichertenartGKV#5 "Rentner"
 * status = #active
 * type = $csVersicherungsart#GKV
-* beneficiary.reference = "Patient/VSDMPatient-GKV-J012345677"
+* beneficiary.reference = $urlVSDMPatient-GKV-J012345677
 * period
   * start = "1964-05-01"
 * payor[+]
