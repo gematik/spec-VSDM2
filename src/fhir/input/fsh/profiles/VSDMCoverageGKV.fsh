@@ -170,7 +170,7 @@ Description: "Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdaten
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "extension('https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle').value"
   * ^slicing.rules = #open
-  * extension[kostentraegerRolle]
+  * extension[kostentraegerRolle] MS
     * ^short = "Rolle des Kostenträgers"
     * ^definition = """
         Rolle des Kostenträgers (Haupt- oder abrechnender Kostenträger)
