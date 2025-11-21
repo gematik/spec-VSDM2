@@ -167,20 +167,29 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
 * address[PostfachAdresse] only AddressDeBasis // address-de-basis
 * address[PostfachAdresse] MS
   * type = #postal
-  * line
+  * line MS
     * ^comment = """
         Hinweise zur Abbildung von Adressen und Beispiele siehe [Adresse (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Addresse) im deutschen Basisprofil.
       """
-  * country
+    * extension[Adresszusatz] MS
+    * extension[Postfach] MS
+  * city MS
+  * postalCode MS
+  * country MS
     * insert Address-Country
 
 // Zuordnung aus Versichertendaten -> Versicherter -> StrassenAdresse
 * address[StrassenAdresse] only AddressDeBasis // address-de-basis
 * address[StrassenAdresse] MS
   * type = #physical
-  * line
+  * line MS
     * ^comment = """
         Hinweise zur Abbildung von Adressen und Beispiele siehe [Adresse (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Addresse) im deutschen Basisprofil.
       """
-  * country
+    * extension[Strasse] MS
+    * extension[Hausnummer] MS
+    * extension[Adresszusatz] MS
+  * city MS
+  * postalCode MS
+  * country MS
     * insert Address-Country

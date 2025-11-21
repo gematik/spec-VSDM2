@@ -6458,6 +6458,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -6828,6 +6829,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -7702,6 +7704,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -9763,7 +9766,8 @@
               "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.payor:Hauptkostentraeger",
@@ -9796,7 +9800,8 @@
               "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.payor:Hauptkostentraeger.extension:kostentraegerRolle.value[x]",
@@ -9838,7 +9843,8 @@
               "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Coverage.payor:abrechnenderKostentraeger.extension:kostentraegerRolle.value[x]",

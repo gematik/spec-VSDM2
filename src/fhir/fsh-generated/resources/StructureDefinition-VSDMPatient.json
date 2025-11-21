@@ -4341,6 +4341,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -4491,6 +4492,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -4547,6 +4549,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -4603,6 +4606,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -4738,6 +4742,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -4901,6 +4906,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -4950,6 +4956,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "binding": {
@@ -6680,6 +6687,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -6942,6 +6950,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -6998,6 +7007,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -7077,6 +7087,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -7240,6 +7251,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -7289,6 +7301,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "binding": {
@@ -10391,13 +10404,43 @@
       {
         "id": "Patient.address:StrassenAdresse.line",
         "path": "Patient.address.line",
-        "comment": "Hinweise zur Abbildung von Adressen und Beispiele siehe [Adresse (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Addresse) im deutschen Basisprofil."
+        "comment": "Hinweise zur Abbildung von Adressen und Beispiele siehe [Adresse (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Addresse) im deutschen Basisprofil.",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:StrassenAdresse.line.extension:Strasse",
+        "path": "Patient.address.line.extension",
+        "sliceName": "Strasse",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:StrassenAdresse.line.extension:Hausnummer",
+        "path": "Patient.address.line.extension",
+        "sliceName": "Hausnummer",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:StrassenAdresse.line.extension:Adresszusatz",
+        "path": "Patient.address.line.extension",
+        "sliceName": "Adresszusatz",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:StrassenAdresse.city",
+        "path": "Patient.address.city",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:StrassenAdresse.postalCode",
+        "path": "Patient.address.postalCode",
+        "mustSupport": true
       },
       {
         "id": "Patient.address:StrassenAdresse.country",
         "path": "Patient.address.country",
         "definition": "Staatsangabe",
-        "comment": "Hier ist die Staatsangabe im Volltext (z.B. zur postalischen Adressierung) anzugeben."
+        "comment": "Hier ist die Staatsangabe im Volltext (z.B. zur postalischen Adressierung) anzugeben.",
+        "mustSupport": true
       },
       {
         "id": "Patient.address:StrassenAdresse.country.extension",
@@ -10506,13 +10549,37 @@
       {
         "id": "Patient.address:PostfachAdresse.line",
         "path": "Patient.address.line",
-        "comment": "Hinweise zur Abbildung von Adressen und Beispiele siehe [Adresse (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Addresse) im deutschen Basisprofil."
+        "comment": "Hinweise zur Abbildung von Adressen und Beispiele siehe [Adresse (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Addresse) im deutschen Basisprofil.",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:PostfachAdresse.line.extension:Adresszusatz",
+        "path": "Patient.address.line.extension",
+        "sliceName": "Adresszusatz",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:PostfachAdresse.line.extension:Postfach",
+        "path": "Patient.address.line.extension",
+        "sliceName": "Postfach",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:PostfachAdresse.city",
+        "path": "Patient.address.city",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:PostfachAdresse.postalCode",
+        "path": "Patient.address.postalCode",
+        "mustSupport": true
       },
       {
         "id": "Patient.address:PostfachAdresse.country",
         "path": "Patient.address.country",
         "definition": "Staatsangabe",
-        "comment": "Hier ist die Staatsangabe im Volltext (z.B. zur postalischen Adressierung) anzugeben."
+        "comment": "Hier ist die Staatsangabe im Volltext (z.B. zur postalischen Adressierung) anzugeben.",
+        "mustSupport": true
       },
       {
         "id": "Patient.address:PostfachAdresse.country.extension",
