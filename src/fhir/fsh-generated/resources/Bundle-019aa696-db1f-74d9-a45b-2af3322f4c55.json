@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "VSDMBundle-PKV-E567890127",
+  "id": "019aa696-db1f-74d9-a45b-2af3322f4c55",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
@@ -11,10 +11,10 @@
   "timestamp": "2025-07-14T15:16:17.890+01:00",
   "entry": [
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-PKV-E567890127",
+      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-PKV-C345678908",
       "resource": {
         "resourceType": "Patient",
-        "id": "VSDMPatient-PKV-E567890127",
+        "id": "019aa693-7f8b-71e0-87d5-b6c2f4aee454",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
@@ -23,63 +23,58 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "E567890127"
+            "value": "C345678908"
           }
         ],
         "name": [
           {
             "use": "official",
-            "text": "Elke Freifrau an der Elster",
-            "family": "Freifrau an der Elster",
+            "text": "Charlie Carolinataube",
+            "family": "Carolinataube",
             "_family": {
               "extension": [
                 {
-                  "url": "http://fhir.de/StructureDefinition/humanname-namenszusatz",
-                  "valueString": "Freifrau"
-                },
-                {
                   "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-                  "valueString": "Elster"
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
-                  "valueString": "an der"
+                  "valueString": "Carolinataube"
                 }
               ]
             },
             "given": [
-              "Elke"
+              "Charlie"
             ]
-          }
-        ],
-        "telecom": [
-          {
-            "system": "url",
-            "value": "matrix:@e567890127:demo-ti-messenger"
           }
         ],
         "address": [
           {
             "type": "physical",
             "line": [
-              "Elsterstraße 5"
+              "Taubenweg 3c",
+              "zweites Hinterhaus links"
             ],
             "_line": [
               {
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                    "valueString": "5"
+                    "valueString": "3c"
                   },
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-                    "valueString": "Elsterstraße"
+                    "valueString": "Taubenweg"
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
+                    "valueString": "Hinterhaus links"
                   }
                 ]
               }
             ],
-            "city": "Erfurt",
-            "postalCode": "99095",
+            "city": "Chemnitz",
+            "postalCode": "09128",
             "country": "Deutschland",
             "_country": {
               "extension": [
@@ -92,47 +87,29 @@
                 }
               ]
             }
-          },
-          {
-            "type": "postal",
-            "line": [
-              "Postfach 9821"
-            ],
-            "_line": [
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox",
-                    "valueString": "Postfach 9821"
-                  }
-                ]
-              }
-            ],
-            "city": "Graz",
-            "postalCode": "8055",
-            "country": "Österreich",
-            "_country": {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
-                  "valueCoding": {
-                    "code": "AT",
-                    "system": "urn:iso:std:iso:3166"
-                  }
-                }
-              ]
-            }
           }
         ],
-        "birthDate": "1992-11-13",
-        "gender": "female"
+        "birthDate": "1979-06-11",
+        "gender": "other",
+        "_gender": {
+          "extension": [
+            {
+              "url": "http://fhir.de/StructureDefinition/gender-amtlich-de",
+              "valueCoding": {
+                "code": "D",
+                "system": "http://fhir.de/CodeSystem/gender-amtlich-de",
+                "display": "divers"
+              }
+            }
+          ]
+        }
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoveragePKV-E567890127",
+      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoveragePKV-C345678908",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoveragePKV-E567890127",
+        "id": "019aa695-1a2a-7c65-9348-067355fa7655",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoveragePKV|1.0.0"
@@ -151,16 +128,16 @@
             "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMTarifartPKV",
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PKV_TARIFF",
-              "code": "02",
-              "display": "Standardtarif"
+              "code": "01",
+              "display": "Individualtarif"
             }
           },
           {
             "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMVersichertenartPKV",
             "valueCoding": {
-              "code": "VN",
+              "code": "VP",
               "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMVersichertenartPKVCS",
-              "display": "Versicherungsnehmer"
+              "display": "versicherte Person"
             }
           },
           {
@@ -175,8 +152,8 @@
                 "valueUnsignedInt": 100
               },
               {
-                "url": "einbett",
-                "valueUnsignedInt": 100
+                "url": "zweibettEinbettDifferenz",
+                "valueUnsignedInt": 25
               },
               {
                 "url": "wahlarzt",
@@ -187,27 +164,40 @@
                 "valueBoolean": false
               }
             ]
+          },
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBeihilfe",
+            "extension": [
+              {
+                "url": "anspruch",
+                "valueBoolean": true
+              },
+              {
+                "url": "quote",
+                "valueUnsignedInt": 80
+              }
+            ]
           }
         ],
         "status": "active",
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-PKV-E567890127"
+          "reference": "Patient/VSDMPatient-PKV-C345678908"
         },
         "period": {
           "start": "2020-01-01"
         },
         "payor": [
           {
-            "reference": "Organization/VSDMPayorOrganization-168156788"
+            "reference": "Organization/VSDMPayorOrganization-168134565"
           }
         ]
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-168156788",
+      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-168134565",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-168156788",
+        "id": "019aa691-3a52-7536-acd9-2ec675894780",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
@@ -216,7 +206,7 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
-            "value": "168156788"
+            "value": "168134565"
           }
         ],
         "address": [
@@ -235,7 +225,7 @@
             }
           }
         ],
-        "name": "Privatversicherung Jupiter",
+        "name": "Privatversicherung Uranus",
         "contact": [
           {
             "purpose": {

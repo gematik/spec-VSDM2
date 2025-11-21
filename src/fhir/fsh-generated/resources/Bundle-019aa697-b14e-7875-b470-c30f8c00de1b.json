@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "VSDMBundle-GKV-O567890128",
+  "id": "019aa697-b14e-7875-b470-c30f8c00de1b",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
@@ -11,10 +11,10 @@
   "timestamp": "2025-07-14T15:16:17.890+01:00",
   "entry": [
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-O567890128",
+      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-F678901231",
       "resource": {
         "resourceType": "Patient",
-        "id": "VSDMPatient-GKV-O567890128",
+        "id": "019aa694-512a-7308-81bd-cffd96cec457",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
@@ -23,24 +23,41 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "O567890128"
+            "value": "F678901231"
           }
         ],
         "name": [
           {
             "use": "official",
-            "text": "Oliver Ortolan",
-            "family": "Ortolan",
+            "prefix": [
+              "Prof. Dr. med."
+            ],
+            "_prefix": [
+              {
+                "extension": [
+                  {
+                    "valueCode": "AC",
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
+                  }
+                ]
+              }
+            ],
+            "text": "Prof. Dr. med. Frank Florian von Fasan",
+            "family": "von Fasan",
             "_family": {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-                  "valueString": "Ortolan"
+                  "valueString": "Fasan"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                  "valueString": "von"
                 }
               ]
             },
             "given": [
-              "Oliver"
+              "Frank Florian"
             ]
           }
         ],
@@ -48,47 +65,38 @@
           {
             "type": "physical",
             "line": [
-              "Gartenammerstraße 15",
-              "Vorderhaus"
+              "Fasanenallee 50"
             ],
             "_line": [
               {
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                    "valueString": "15"
+                    "valueString": "50"
                   },
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-                    "valueString": "Gartenammerstraße"
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
-                    "valueString": "Vorderhaus"
+                    "valueString": "Fasanenallee"
                   }
                 ]
               }
             ],
-            "city": "Offenburg",
-            "postalCode": "77654",
-            "country": "Deutschland",
+            "city": "Bern",
+            "postalCode": "3013",
+            "country": "Schweiz",
             "_country": {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
                   "valueCoding": {
-                    "code": "DE",
+                    "code": "CH",
                     "system": "urn:iso:std:iso:3166"
                   }
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
                   "valueCoding": {
-                    "code": "D",
+                    "code": "CH",
                     "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
                   }
                 }
@@ -96,15 +104,15 @@
             }
           }
         ],
-        "birthDate": "2009-06-08",
+        "birthDate": "1983-01-19",
         "gender": "male"
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-O567890128",
+      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-F678901231",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoverageGKV-O567890128",
+        "id": "019aa696-1070-728a-ad84-4b44e373daac",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0"
@@ -136,6 +144,14 @@
             }
           },
           {
+            "valueCoding": {
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
+              "code": "08",
+              "display": "SVA2"
+            },
+            "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
+          },
+          {
             "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
             "extension": [
               {
@@ -144,7 +160,26 @@
               },
               {
                 "url": "gueltigBis",
-                "valueDate": "2027-06-09"
+                "valueDate": "2026-09-30"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch",
+            "extension": [
+              {
+                "url": "art",
+                "valueCoding": {
+                  "code": "1",
+                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMRuhenderLeistungsanspruchArtCS",
+                  "display": "vollständig"
+                }
+              },
+              {
+                "url": "dauer",
+                "valuePeriod": {
+                  "start": "2025-01-01"
+                }
               }
             ]
           }
@@ -161,23 +196,24 @@
                 "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
               }
             ],
-            "reference": "Organization/VSDMPayorOrganization-107668422"
+            "reference": "Organization/VSDMPayorOrganization-107403308"
           }
         ],
         "status": "active",
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-GKV-O567890128"
+          "reference": "Patient/VSDMPatient-GKV-F678901231"
         },
         "period": {
-          "start": "2009-06-08"
+          "start": "1992-12-01",
+          "end": "2027-06-30"
         }
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-107668422",
+      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-107403308",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-107668422",
+        "id": "019aa691-fec3-79c7-bd58-5538f03fea37",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
@@ -186,7 +222,7 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
-            "value": "107668422"
+            "value": "107403308"
           }
         ],
         "address": [
@@ -212,30 +248,7 @@
             }
           }
         ],
-        "name": "Beispielkostenträger Offenburg",
-        "contact": [
-          {
-            "purpose": {
-              "coding": [
-                {
-                  "code": "BILL",
-                  "system": "http://terminology.hl7.org/CodeSystem/contactentity-type"
-                }
-              ],
-              "text": "Kontakt für Abrechnungsfragen"
-            },
-            "telecom": [
-              {
-                "system": "phone",
-                "value": "+4952116391643"
-              },
-              {
-                "system": "email",
-                "value": "contact@kostentraeger.invalid"
-              }
-            ]
-          }
-        ]
+        "name": "Beispielkostenträger Freiburg"
       }
     }
   ]

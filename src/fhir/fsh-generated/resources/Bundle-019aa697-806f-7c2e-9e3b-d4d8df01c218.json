@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "VSDMBundle-GKV-M345678909",
+  "id": "019aa697-806f-7c2e-9e3b-d4d8df01c218",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
@@ -11,10 +11,10 @@
   "timestamp": "2025-07-14T15:16:17.890+01:00",
   "entry": [
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-M345678909",
+      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-I901234562",
       "resource": {
         "resourceType": "Patient",
-        "id": "VSDMPatient-GKV-M345678909",
+        "id": "019aa694-2007-76e7-80d0-37887bfb769f",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
@@ -23,24 +23,24 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "M345678909"
+            "value": "I901234562"
           }
         ],
         "name": [
           {
             "use": "official",
-            "text": "Michael-Martin Mittelspecht",
-            "family": "Mittelspecht",
+            "text": "Ingrid Ibis",
+            "family": "Ibis",
             "_family": {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-                  "valueString": "Mittelspecht"
+                  "valueString": "Ibis"
                 }
               ]
             },
             "given": [
-              "Michael-Martin"
+              "Ingrid"
             ]
           }
         ],
@@ -48,47 +48,38 @@
           {
             "type": "physical",
             "line": [
-              "Spechtstraße 130",
-              "c/o Baumklopfer"
+              "Im Balz 95"
             ],
             "_line": [
               {
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                    "valueString": "130"
+                    "valueString": "95"
                   },
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-                    "valueString": "Spechtstraße"
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
-                    "valueString": "c/o Baumklopfer"
+                    "valueString": "Im Balz"
                   }
                 ]
               }
             ],
-            "city": "München",
-            "postalCode": "80331",
-            "country": "Deutschland",
+            "city": "Fischbach",
+            "postalCode": "7430",
+            "country": "Luxemburg",
             "_country": {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
                   "valueCoding": {
-                    "code": "DE",
+                    "code": "LU",
                     "system": "urn:iso:std:iso:3166"
                   }
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
                   "valueCoding": {
-                    "code": "D",
+                    "code": "L",
                     "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
                   }
                 }
@@ -96,15 +87,15 @@
             }
           }
         ],
-        "birthDate": "2020-04-27",
-        "gender": "male"
+        "birthDate": "1942-02-28",
+        "gender": "female"
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-M345678909",
+      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-I901234562",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoverageGKV-M345678909",
+        "id": "019aa695-dec6-7b78-8014-c666bcc0d4a1",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0"
@@ -123,28 +114,60 @@
             "url": "http://fhir.de/StructureDefinition/gkv/wop",
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
-              "code": "71",
-              "display": "Bayern"
+              "code": "98",
+              "display": "Sachsen"
             }
           },
           {
             "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
             "valueCoding": {
-              "code": "3",
+              "code": "5",
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
-              "display": "Familienangehoerige"
+              "display": "Rentner"
             }
           },
           {
-            "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
             "extension": [
               {
-                "url": "status",
+                "url": "dmp",
+                "valueCoding": {
+                  "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+                  "code": "01",
+                  "display": "DM2"
+                }
+              },
+              {
+                "url": "zeitraum",
+                "valuePeriod": {
+                  "start": "2021-02-07",
+                  "end": "2028-02-15"
+                }
+              },
+              {
+                "url": "digitalesDMP",
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung",
+            "extension": [
+              {
+                "url": "aerztlicheVersorgung",
                 "valueBoolean": true
               },
               {
-                "url": "gueltigBis",
-                "valueDate": "2038-04-28"
+                "url": "zahnaerztlicheVersorgung",
+                "valueBoolean": true
+              },
+              {
+                "url": "stationaererBereich",
+                "valueBoolean": true
+              },
+              {
+                "url": "veranlassteLeistungen",
+                "valueBoolean": true
               }
             ]
           }
@@ -161,23 +184,24 @@
                 "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
               }
             ],
-            "reference": "Organization/VSDMPayorOrganization-108416806"
+            "reference": "Organization/VSDMPayorOrganization-107933230"
           }
         ],
         "status": "active",
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-GKV-M345678909"
+          "reference": "Patient/VSDMPatient-GKV-I901234562"
         },
         "period": {
-          "start": "2020-04-27"
+          "start": "1942-02-28",
+          "end": "2028-02-15"
         }
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-108416806",
+      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-107933230",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-108416806",
+        "id": "019aa691-c9ed-7311-8dde-26b7aeafaa08",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
@@ -186,7 +210,7 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
-            "value": "108416806"
+            "value": "107933230"
           }
         ],
         "address": [
@@ -212,7 +236,7 @@
             }
           }
         ],
-        "name": "Beispielkostenträger München-Stadt"
+        "name": "Beispielkostenträger Dresden"
       }
     }
   ]

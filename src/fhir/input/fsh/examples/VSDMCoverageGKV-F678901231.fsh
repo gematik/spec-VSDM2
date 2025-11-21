@@ -4,6 +4,7 @@ Title: "F678901231 von Fasan, Frank Florian (GKV)"
 Description: "Versicherungsdaten F678901231 von Fasan, Frank Florian (GKV)"
 Usage: #inline
 
+* id = "019aa696-1070-728a-ad84-4b44e373daac"
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"

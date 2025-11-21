@@ -4,6 +4,7 @@ Title: "A123456780 Amsel, Andrea (PKV)"
 Description: "VSDM 2.0-Daten A123456780 Amsel, Andrea (PKV)"
 Usage: #example
 
+* id = "019aa696-fa51-7296-8ee8-1e7e7f9b9e2a"
 * meta
   * profile[0] = Canonical(VSDMBundle|1.0.0)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"

@@ -4,6 +4,7 @@ Title: "Beispielkostenträger Gießen"
 Description: "Beispielkostenträger Gießen"
 Usage: #inline
 
+* id = "019aa692-5ee9-74c7-bcda-af99e8358094"
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 
 * identifier[IKNR].value = "105413578"

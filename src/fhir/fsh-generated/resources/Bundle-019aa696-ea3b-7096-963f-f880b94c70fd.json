@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "VSDMBundle-PKV-A123456780",
+  "id": "019aa696-ea3b-7096-963f-f880b94c70fd",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
@@ -11,10 +11,10 @@
   "timestamp": "2025-07-14T15:16:17.890+01:00",
   "entry": [
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-PKV-A123456780",
+      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-PKV-B234567895",
       "resource": {
         "resourceType": "Patient",
-        "id": "VSDMPatient-PKV-A123456780",
+        "id": "019aa693-8ee9-7328-9a10-31f6e689787a",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
@@ -23,55 +23,76 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "A123456780"
+            "value": "B234567895"
           }
         ],
         "name": [
           {
             "use": "official",
-            "text": "Andrea Amsel",
-            "family": "Amsel",
+            "prefix": [
+              "Dr. med."
+            ],
+            "_prefix": [
+              {
+                "extension": [
+                  {
+                    "valueCode": "AC",
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
+                  }
+                ]
+              }
+            ],
+            "text": "Dr. med. Bernd Benjamin Graf von und zu Buntspecht",
+            "family": "Graf von und zu Buntspecht",
             "_family": {
               "extension": [
                 {
+                  "url": "http://fhir.de/StructureDefinition/humanname-namenszusatz",
+                  "valueString": "Graf"
+                },
+                {
                   "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-                  "valueString": "Amsel"
+                  "valueString": "Buntspecht"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                  "valueString": "von und zu"
                 }
               ]
             },
             "given": [
-              "Andrea"
+              "Bernd Benjamin"
             ]
           }
         ],
         "telecom": [
           {
             "system": "url",
-            "value": "matrix:@a123456780:demo-ti-messenger"
+            "value": "matrix:@b234567895:demo-ti-messenger"
           }
         ],
         "address": [
           {
             "type": "physical",
             "line": [
-              "Amselweg 1"
+              "Buntspechtallee 2A"
             ],
             "_line": [
               {
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                    "valueString": "1"
+                    "valueString": "2a"
                   },
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-                    "valueString": "Amselweg"
+                    "valueString": "Buntspechtallee"
                   }
                 ]
               }
             ],
-            "city": "Aachen",
-            "postalCode": "52070",
+            "city": "Bremen",
+            "postalCode": "28211",
             "country": "Deutschland",
             "_country": {
               "extension": [
@@ -86,15 +107,15 @@
             }
           }
         ],
-        "birthDate": "1997-12-28",
-        "gender": "female"
+        "birthDate": "1988-06-22",
+        "gender": "male"
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoveragePKV-A123456780",
+      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoveragePKV-B234567895",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoveragePKV-A123456780",
+        "id": "019aa695-29cf-7efd-ba64-6d827477212f",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoveragePKV|1.0.0"
@@ -126,15 +147,6 @@
             }
           },
           {
-            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMHinweisPKV",
-            "extension": [
-              {
-                "url": "text",
-                "valueMarkdown": "Beihilfetaxe für Physio"
-              }
-            ]
-          },
-          {
             "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKrankenhausleistungenPKV",
             "extension": [
               {
@@ -146,8 +158,8 @@
                 "valueUnsignedInt": 100
               },
               {
-                "url": "einbett",
-                "valueUnsignedInt": 100
+                "url": "zweibettEinbettDifferenz",
+                "valueUnsignedInt": 25
               },
               {
                 "url": "wahlarzt",
@@ -162,23 +174,24 @@
         ],
         "status": "active",
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-PKV-A123456780"
+          "reference": "Patient/VSDMPatient-PKV-B234567895"
         },
         "period": {
-          "start": "2020-01-01"
+          "start": "1980-01-01",
+          "end": "2025-12-31"
         },
         "payor": [
           {
-            "reference": "Organization/VSDMPayorOrganization-168112342"
+            "reference": "Organization/VSDMPayorOrganization-168123458"
           }
         ]
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-168112342",
+      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-168123458",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-168112342",
+        "id": "019aa691-5647-7b09-905e-e0130ecd0bbd",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
@@ -187,7 +200,7 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
-            "value": "168112342"
+            "value": "168123458"
           }
         ],
         "address": [
@@ -206,30 +219,7 @@
             }
           }
         ],
-        "name": "Privatversicherung Pluto",
-        "contact": [
-          {
-            "purpose": {
-              "coding": [
-                {
-                  "code": "BILL",
-                  "system": "http://terminology.hl7.org/CodeSystem/contactentity-type"
-                }
-              ],
-              "text": "Kontakt für Abrechnungsfragen"
-            },
-            "telecom": [
-              {
-                "system": "phone",
-                "value": "+4952116391643"
-              },
-              {
-                "system": "email",
-                "value": "contact@kostentraeger.invalid"
-              }
-            ]
-          }
-        ]
+        "name": "Privatversicherung Neptun"
       }
     }
   ]

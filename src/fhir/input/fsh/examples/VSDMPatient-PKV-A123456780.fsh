@@ -4,6 +4,7 @@ Title: "A123456780 Amsel, Andrea (PKV)"
 Description: "Versichertendaten A123456780 Amsel, Andrea (PKV)"
 Usage: #inline
 
+* id = "019aa693-9ea6-7def-832d-27bb1eb8997f"
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "A123456780"

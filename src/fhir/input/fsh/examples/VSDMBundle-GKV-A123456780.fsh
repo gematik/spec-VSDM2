@@ -4,6 +4,7 @@ Title: "A123456780 Amsel, Andrea (GKV)"
 Description: "VSDM 2.0-Daten A123456780 Amsel, Andrea (GKV)"
 Usage: #example
 
+* id = "019aa690-d14a-79a3-a078-3807df1b87f4"
 * meta
   * profile[0] = Canonical(VSDMBundle|1.0.0)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"

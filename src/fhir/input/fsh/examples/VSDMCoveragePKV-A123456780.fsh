@@ -4,6 +4,7 @@ Title: "A123456780 Amsel, Andrea (PKV)"
 Description: "Versicherungsdaten A123456780 Amsel, Andrea (PKV)"
 Usage: #inline
 
+* id = "019aa695-3789-79be-a29b-88d8183eebe5"
 * meta.profile[0] = Canonical(VSDMCoveragePKV|1.0.0)
 
 * extension[hinweis]

@@ -4,6 +4,7 @@ Title: "F678901231 von Fasan, Frank Florian (GKV)"
 Description: "Versichertendaten F678901231 von Fasan, Frank Florian (GKV)"
 Usage: #inline
 
+* id = "019aa694-512a-7308-81bd-cffd96cec457"
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "F678901231"

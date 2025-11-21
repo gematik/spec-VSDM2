@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "VSDMBundle-GKV-B234567895",
+  "id": "019aa697-29dd-7ad1-a12c-32a14b4ed62b",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
@@ -11,10 +11,10 @@
   "timestamp": "2025-07-14T15:16:17.890+01:00",
   "entry": [
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-B234567895",
+      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-N456789014",
       "resource": {
         "resourceType": "Patient",
-        "id": "VSDMPatient-GKV-B234567895",
+        "id": "019aa693-d14a-7370-bdb9-19b88d14f8d1",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
@@ -23,45 +23,24 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "B234567895"
+            "value": "N456789014"
           }
         ],
         "name": [
           {
             "use": "official",
-            "prefix": [
-              "Dr. med."
-            ],
-            "_prefix": [
-              {
-                "extension": [
-                  {
-                    "valueCode": "AC",
-                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
-                  }
-                ]
-              }
-            ],
-            "text": "Dr. med. Bernd Benjamin Graf von und zu Buntspecht",
-            "family": "Graf von und zu Buntspecht",
+            "text": "Nina Nicole Nachtigall",
+            "family": "Nachtigall",
             "_family": {
               "extension": [
                 {
-                  "url": "http://fhir.de/StructureDefinition/humanname-namenszusatz",
-                  "valueString": "Graf"
-                },
-                {
                   "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-                  "valueString": "Buntspecht"
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
-                  "valueString": "von und zu"
+                  "valueString": "Nachtigall"
                 }
               ]
             },
             "given": [
-              "Bernd Benjamin"
+              "Nina Nicole"
             ]
           }
         ],
@@ -69,24 +48,24 @@
           {
             "type": "physical",
             "line": [
-              "Buntspechtallee 2A"
+              "Sängerweg 14"
             ],
             "_line": [
               {
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                    "valueString": "2a"
+                    "valueString": "14"
                   },
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-                    "valueString": "Buntspechtallee"
+                    "valueString": "Sängerweg"
                   }
                 ]
               }
             ],
-            "city": "Bremen",
-            "postalCode": "28211",
+            "city": "Stuttgart",
+            "postalCode": "70180",
             "country": "Deutschland",
             "_country": {
               "extension": [
@@ -108,15 +87,15 @@
             }
           }
         ],
-        "birthDate": "1988-06-22",
-        "gender": "male"
+        "birthDate": "2011-06-22",
+        "gender": "female"
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-B234567895",
+      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-N456789014",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoverageGKV-B234567895",
+        "id": "019aa695-89de-7f4d-852f-0a8d9802e333",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0"
@@ -135,8 +114,8 @@
             "url": "http://fhir.de/StructureDefinition/gkv/wop",
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
-              "code": "03",
-              "display": "Bremen"
+              "code": "52",
+              "display": "Baden-Württemberg"
             }
           },
           {
@@ -148,12 +127,38 @@
             }
           },
           {
-            "valueCoding": {
-              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
-              "code": "04",
-              "display": "SOZ"
-            },
-            "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
+            "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
+            "extension": [
+              {
+                "url": "status",
+                "valueBoolean": true
+              },
+              {
+                "url": "gueltigBis",
+                "valueDate": "2029-06-22"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung",
+            "extension": [
+              {
+                "url": "aerztlicheVersorgung",
+                "valueBoolean": true
+              },
+              {
+                "url": "zahnaerztlicheVersorgung",
+                "valueBoolean": true
+              },
+              {
+                "url": "stationaererBereich",
+                "valueBoolean": true
+              },
+              {
+                "url": "veranlassteLeistungen",
+                "valueBoolean": true
+              }
+            ]
           }
         ],
         "payor": [
@@ -168,7 +173,7 @@
                 "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
               }
             ],
-            "reference": "Organization/VSDMPayorOrganization-103169760"
+            "reference": "Organization/VSDMPayorOrganization-108028771"
           },
           {
             "extension": [
@@ -181,24 +186,23 @@
                 "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
               }
             ],
-            "reference": "Organization/VSDMPayorOrganization-103215857"
+            "reference": "Organization/VSDMPayorOrganization-109083613"
           }
         ],
         "status": "active",
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-GKV-B234567895"
+          "reference": "Patient/VSDMPatient-GKV-N456789014"
         },
         "period": {
-          "start": "2011-04-01",
-          "end": "2024-12-31"
+          "start": "2011-06-22"
         }
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-103169760",
+      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-108028771",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-103169760",
+        "id": "019aa691-a2d5-76a6-b3a0-f2210545a698",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
@@ -207,7 +211,7 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
-            "value": "103169760"
+            "value": "108028771"
           }
         ],
         "address": [
@@ -233,14 +237,37 @@
             }
           }
         ],
-        "name": "Beispielkostenträger Bremen"
+        "name": "Beispielkostenträger Nord-Württemberg",
+        "contact": [
+          {
+            "purpose": {
+              "coding": [
+                {
+                  "code": "BILL",
+                  "system": "http://terminology.hl7.org/CodeSystem/contactentity-type"
+                }
+              ],
+              "text": "Kontakt für Abrechnungsfragen"
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "+4952116391643"
+              },
+              {
+                "system": "email",
+                "value": "contact@kostentraeger.invalid"
+              }
+            ]
+          }
+        ]
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-103215857",
+      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-109083613",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-103215857",
+        "id": "019aa691-7b2d-741f-b40f-0eefa2596dd6",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
@@ -249,7 +276,7 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
-            "value": "103215857"
+            "value": "109083613"
           }
         ],
         "address": [
@@ -275,7 +302,30 @@
             }
           }
         ],
-        "name": "Beispielkostenträger Bremerhaven"
+        "name": "Beispielkostenträger Niederbayern",
+        "contact": [
+          {
+            "purpose": {
+              "coding": [
+                {
+                  "code": "BILL",
+                  "system": "http://terminology.hl7.org/CodeSystem/contactentity-type"
+                }
+              ],
+              "text": "Kontakt für Abrechnungsfragen"
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "+4952116391643"
+              },
+              {
+                "system": "email",
+                "value": "contact@kostentraeger.invalid"
+              }
+            ]
+          }
+        ]
       }
     }
   ]

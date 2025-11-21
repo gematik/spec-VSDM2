@@ -4,6 +4,7 @@ Title: "Beispielkostenträger Hildesheim"
 Description: "Beispielkostenträger Hildesheim"
 Usage: #inline
 
+* id = "019aa693-0f20-7aea-81ff-debae0183f14"
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 
 * identifier[IKNR].value = "102249844"

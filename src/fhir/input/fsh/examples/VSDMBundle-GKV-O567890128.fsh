@@ -4,6 +4,7 @@ Title: "O567890128 Ortolan, Oliver (GKV)"
 Description: "VSDM 2.0-Daten O567890128 Ortolan, Oliver (GKV)"
 Usage: #example
 
+* id = "019aa697-19f6-77e3-a394-ea9948e9e019"
 * meta
   * profile[0] = Canonical(VSDMBundle|1.0.0)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"

@@ -4,6 +4,7 @@ Title: "F678901231 von Fasan, Frank Florian (GKV)"
 Description: "VSDM 2.0-Daten F678901231 von Fasan, Frank Florian (GKV)"
 Usage: #example
 
+* id = "019aa697-b14e-7875-b470-c30f8c00de1b"
 * meta
   * profile[0] = Canonical(VSDMBundle|1.0.0)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"

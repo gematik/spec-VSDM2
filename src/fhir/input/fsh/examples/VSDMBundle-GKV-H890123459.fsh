@@ -4,6 +4,7 @@ Title: "H890123459 vorm Habicht, Hans (GKV)"
 Description: "VSDM 2.0-Daten H890123459 vorm Habicht, Hans (GKV)"
 Usage: #example
 
+* id = "019aa697-92a2-71bf-8eaf-310acac70f0e"
 * meta
   * profile[0] = Canonical(VSDMBundle|1.0.0)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"

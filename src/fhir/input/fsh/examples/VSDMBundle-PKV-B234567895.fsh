@@ -4,6 +4,7 @@ Title: "B234567895 Graf von und zu Buntspecht, Bernd Benjamin (PKV)"
 Description: "VSDM 2.0-Daten B234567895 Graf von und zu Buntspecht, Bernd Benjamin (PKV)"
 Usage: #example
 
+* id = "019aa696-ea3b-7096-963f-f880b94c70fd"
 * meta
   * profile[0] = Canonical(VSDMBundle|1.0.0)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"

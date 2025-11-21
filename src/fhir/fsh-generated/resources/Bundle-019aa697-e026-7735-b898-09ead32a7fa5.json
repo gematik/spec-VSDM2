@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "VSDMBundle-GKV-F678901231",
+  "id": "019aa697-e026-7735-b898-09ead32a7fa5",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
@@ -11,10 +11,10 @@
   "timestamp": "2025-07-14T15:16:17.890+01:00",
   "entry": [
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-F678901231",
+      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-C345678908",
       "resource": {
         "resourceType": "Patient",
-        "id": "VSDMPatient-GKV-F678901231",
+        "id": "019aa694-7e82-76ba-9b71-cbb1456f219e",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
@@ -23,41 +23,24 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "F678901231"
+            "value": "C345678908"
           }
         ],
         "name": [
           {
             "use": "official",
-            "prefix": [
-              "Prof. Dr. med."
-            ],
-            "_prefix": [
-              {
-                "extension": [
-                  {
-                    "valueCode": "AC",
-                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
-                  }
-                ]
-              }
-            ],
-            "text": "Prof. Dr. med. Frank Florian von Fasan",
-            "family": "von Fasan",
+            "text": "Charlie Carolinataube",
+            "family": "Carolinataube",
             "_family": {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-                  "valueString": "Fasan"
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
-                  "valueString": "von"
+                  "valueString": "Carolinataube"
                 }
               ]
             },
             "given": [
-              "Frank Florian"
+              "Charlie"
             ]
           }
         ],
@@ -65,38 +48,47 @@
           {
             "type": "physical",
             "line": [
-              "Fasanenallee 50"
+              "Taubenweg 3c",
+              "zweites Hinterhaus links"
             ],
             "_line": [
               {
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                    "valueString": "50"
+                    "valueString": "3c"
                   },
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-                    "valueString": "Fasanenallee"
+                    "valueString": "Taubenweg"
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
+                    "valueString": "Hinterhaus links"
                   }
                 ]
               }
             ],
-            "city": "Bern",
-            "postalCode": "3013",
-            "country": "Schweiz",
+            "city": "Chemnitz",
+            "postalCode": "09128",
+            "country": "Deutschland",
             "_country": {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
                   "valueCoding": {
-                    "code": "CH",
+                    "code": "DE",
                     "system": "urn:iso:std:iso:3166"
                   }
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
                   "valueCoding": {
-                    "code": "CH",
+                    "code": "D",
                     "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
                   }
                 }
@@ -104,15 +96,27 @@
             }
           }
         ],
-        "birthDate": "1983-01-19",
-        "gender": "male"
+        "birthDate": "1979-06-11",
+        "gender": "other",
+        "_gender": {
+          "extension": [
+            {
+              "url": "http://fhir.de/StructureDefinition/gender-amtlich-de",
+              "valueCoding": {
+                "code": "D",
+                "system": "http://fhir.de/CodeSystem/gender-amtlich-de",
+                "display": "divers"
+              }
+            }
+          ]
+        }
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-F678901231",
+      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-C345678908",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoverageGKV-F678901231",
+        "id": "019aa696-5a70-7a68-ad1c-83b7369f7049",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0"
@@ -131,55 +135,83 @@
             "url": "http://fhir.de/StructureDefinition/gkv/wop",
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
-              "code": "52",
-              "display": "Baden-Württemberg"
+              "code": "98",
+              "display": "Sachsen"
             }
           },
           {
             "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
             "valueCoding": {
-              "code": "3",
+              "code": "1",
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
-              "display": "Familienangehoerige"
+              "display": "Mitglieder"
             }
           },
           {
-            "valueCoding": {
-              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
-              "code": "08",
-              "display": "SVA2"
-            },
-            "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
-          },
-          {
-            "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
             "extension": [
               {
-                "url": "status",
-                "valueBoolean": true
+                "url": "dmp",
+                "valueCoding": {
+                  "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+                  "code": "01",
+                  "display": "DM2"
+                }
               },
               {
-                "url": "gueltigBis",
-                "valueDate": "2026-09-30"
+                "url": "zeitraum",
+                "valuePeriod": {
+                  "start": "2001-01-01"
+                }
+              },
+              {
+                "url": "digitalesDMP",
+                "valueBoolean": false
               }
             ]
           },
           {
-            "url": "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch",
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
             "extension": [
               {
-                "url": "art",
+                "url": "dmp",
                 "valueCoding": {
-                  "code": "1",
-                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMRuhenderLeistungsanspruchArtCS",
-                  "display": "vollständig"
+                  "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+                  "code": "08",
+                  "display": "Depression"
                 }
               },
               {
-                "url": "dauer",
+                "url": "zeitraum",
                 "valuePeriod": {
-                  "start": "2025-01-01"
+                  "start": "2020-01-01",
+                  "end": "2023-12-31"
                 }
+              },
+              {
+                "url": "digitalesDMP",
+                "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung",
+            "extension": [
+              {
+                "url": "aerztlicheVersorgung",
+                "valueBoolean": true
+              },
+              {
+                "url": "zahnaerztlicheVersorgung",
+                "valueBoolean": true
+              },
+              {
+                "url": "stationaererBereich",
+                "valueBoolean": true
+              },
+              {
+                "url": "veranlassteLeistungen",
+                "valueBoolean": true
               }
             ]
           }
@@ -196,24 +228,24 @@
                 "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
               }
             ],
-            "reference": "Organization/VSDMPayorOrganization-107403308"
+            "reference": "Organization/VSDMPayorOrganization-107723372"
           }
         ],
         "status": "active",
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-GKV-F678901231"
+          "reference": "Patient/VSDMPatient-GKV-C345678908"
         },
         "period": {
-          "start": "1992-12-01",
-          "end": "2027-06-30"
+          "start": "1979-06-11",
+          "end": "2027-01-01"
         }
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-107403308",
+      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-107723372",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-107403308",
+        "id": "019aa691-dd16-7d29-a3e0-f84ab48b9db0",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
@@ -222,7 +254,7 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
-            "value": "107403308"
+            "value": "107723372"
           }
         ],
         "address": [
@@ -248,7 +280,7 @@
             }
           }
         ],
-        "name": "Beispielkostenträger Freiburg"
+        "name": "Beispielkostenträger Chemnitz"
       }
     }
   ]

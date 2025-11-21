@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "VSDMBundle-GKV-G789012344",
+  "id": "019aa697-6fff-70ea-b912-a69e99e4e4bc",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
@@ -11,10 +11,10 @@
   "timestamp": "2025-07-14T15:16:17.890+01:00",
   "entry": [
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-G789012344",
+      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-J012345677",
       "resource": {
         "resourceType": "Patient",
-        "id": "VSDMPatient-GKV-G789012344",
+        "id": "019aa694-120e-7e8a-8f0b-701ea96908c8",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
@@ -23,32 +23,24 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "G789012344"
+            "value": "J012345677"
           }
         ],
         "name": [
           {
             "use": "official",
-            "text": "Gabriele Edle von der Graugans",
-            "family": "Edle von der Graugans",
+            "text": "Jens-Jörg Junko",
+            "family": "Junko",
             "_family": {
               "extension": [
                 {
-                  "url": "http://fhir.de/StructureDefinition/humanname-namenszusatz",
-                  "valueString": "Edle"
-                },
-                {
                   "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-                  "valueString": "Graugans"
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
-                  "valueString": "von der"
+                  "valueString": "Junko"
                 }
               ]
             },
             "given": [
-              "Gabriele"
+              "Jens-Jörg"
             ]
           }
         ],
@@ -56,24 +48,61 @@
           {
             "type": "physical",
             "line": [
-              "Am Gänseweiher 66"
+              "Winterammerstraße 10d"
             ],
             "_line": [
               {
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                    "valueString": "66"
+                    "valueString": "10d"
                   },
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-                    "valueString": "Am Gänseweiher"
+                    "valueString": "Winterammerstraße"
                   }
                 ]
               }
             ],
-            "city": "Gießen",
-            "postalCode": "35392",
+            "city": "Baden-Baden",
+            "postalCode": "77815",
+            "country": "Deutschland",
+            "_country": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "D",
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "postal",
+            "line": [
+              "Postfach 98765"
+            ],
+            "_line": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox",
+                    "valueString": "Postfach 98765"
+                  }
+                ]
+              }
+            ],
+            "city": "Baden-Baden",
+            "postalCode": "76530",
             "country": "Deutschland",
             "_country": {
               "extension": [
@@ -95,15 +124,15 @@
             }
           }
         ],
-        "birthDate": "1974-02-12",
-        "gender": "female"
+        "birthDate": "1958-12",
+        "gender": "male"
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-G789012344",
+      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-J012345677",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoverageGKV-G789012344",
+        "id": "019aa695-cf21-730d-9e2c-2d7013b2db6d",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0"
@@ -122,49 +151,92 @@
             "url": "http://fhir.de/StructureDefinition/gkv/wop",
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
-              "code": "46",
-              "display": "Hessen"
+              "code": "52",
+              "display": "Baden-Württemberg"
             }
           },
           {
             "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
             "valueCoding": {
-              "code": "1",
+              "code": "5",
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
-              "display": "Mitglieder"
+              "display": "Rentner"
             }
           },
           {
-            "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
+            "valueCoding": {
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
+              "code": "09",
+              "display": "ASY"
+            },
+            "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
+          },
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
             "extension": [
               {
-                "url": "status",
-                "valueBoolean": true
+                "url": "dmp",
+                "valueCoding": {
+                  "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+                  "code": "06",
+                  "display": "COPD"
+                }
               },
               {
-                "url": "gueltigBis",
-                "valueDate": "2026-12-31"
+                "url": "zeitraum",
+                "valuePeriod": {
+                  "start": "2001-01-11"
+                }
+              },
+              {
+                "url": "digitalesDMP",
+                "valueBoolean": false
               }
             ]
           },
           {
-            "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung",
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
             "extension": [
               {
-                "url": "aerztlicheVersorgung",
-                "valueBoolean": true
+                "url": "dmp",
+                "valueCoding": {
+                  "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+                  "code": "09",
+                  "display": "Rueckenschmerz"
+                }
               },
               {
-                "url": "zahnaerztlicheVersorgung",
-                "valueBoolean": true
+                "url": "zeitraum",
+                "valuePeriod": {
+                  "start": "2002-02-12"
+                }
               },
               {
-                "url": "stationaererBereich",
+                "url": "digitalesDMP",
                 "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
+            "extension": [
+              {
+                "url": "dmp",
+                "valueCoding": {
+                  "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+                  "code": "10",
+                  "display": "Rheuma"
+                }
               },
               {
-                "url": "veranlassteLeistungen",
-                "valueBoolean": true
+                "url": "zeitraum",
+                "valuePeriod": {
+                  "start": "2003-03-13"
+                }
+              },
+              {
+                "url": "digitalesDMP",
+                "valueBoolean": false
               }
             ]
           },
@@ -174,16 +246,16 @@
               {
                 "url": "art",
                 "valueCoding": {
-                  "code": "2",
+                  "code": "1",
                   "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMRuhenderLeistungsanspruchArtCS",
-                  "display": "eingeschränkt"
+                  "display": "vollständig"
                 }
               },
               {
                 "url": "dauer",
                 "valuePeriod": {
-                  "start": "2025-06-01",
-                  "end": "2027-12-31"
+                  "start": "2025-01-01",
+                  "end": "2025-12-31"
                 }
               }
             ]
@@ -201,23 +273,23 @@
                 "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
               }
             ],
-            "reference": "Organization/VSDMPayorOrganization-105413578"
+            "reference": "Organization/VSDMPayorOrganization-106877150"
           }
         ],
         "status": "active",
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-GKV-G789012344"
+          "reference": "Patient/VSDMPatient-GKV-J012345677"
         },
         "period": {
-          "start": "1974-02-12"
+          "start": "1964-05-01"
         }
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-105413578",
+      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-106877150",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-105413578",
+        "id": "019aa692-12b4-7a0b-be02-e700d52127d5",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
@@ -226,7 +298,7 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
-            "value": "105413578"
+            "value": "106877150"
           }
         ],
         "address": [
@@ -252,30 +324,7 @@
             }
           }
         ],
-        "name": "Beispielkostenträger Gießen",
-        "contact": [
-          {
-            "purpose": {
-              "coding": [
-                {
-                  "code": "BILL",
-                  "system": "http://terminology.hl7.org/CodeSystem/contactentity-type"
-                }
-              ],
-              "text": "Kontakt für Abrechnungsfragen"
-            },
-            "telecom": [
-              {
-                "system": "phone",
-                "value": "+4952116391643"
-              },
-              {
-                "system": "email",
-                "value": "contact@kostentraeger.invalid"
-              }
-            ]
-          }
-        ]
+        "name": "Beispielkostenträger Baden-Baden"
       }
     }
   ]

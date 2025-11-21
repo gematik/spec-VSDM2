@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "VSDMBundle-PKV-D456789013",
+  "id": "019aa696-8e77-7f16-be44-d702d1b6af67",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
@@ -11,10 +11,10 @@
   "timestamp": "2025-07-14T15:16:17.890+01:00",
   "entry": [
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-PKV-D456789013",
+      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-PKV-G789012344",
       "resource": {
         "resourceType": "Patient",
-        "id": "VSDMPatient-PKV-D456789013",
+        "id": "019aa693-3bb4-7dcf-a4ba-3322947d55dc",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
@@ -23,92 +23,63 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "D456789013"
+            "value": "G789012344"
           }
         ],
         "name": [
           {
             "use": "official",
-            "prefix": [
-              "Dr. rer. nat."
-            ],
-            "_prefix": [
-              {
-                "extension": [
-                  {
-                    "valueCode": "AC",
-                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
-                  }
-                ]
-              }
-            ],
-            "text": "Dr. rer. nat. Dara Dohle",
-            "family": "Dohle",
+            "text": "Gabriele Edle von der Graugans",
+            "family": "Edle von der Graugans",
             "_family": {
               "extension": [
                 {
+                  "url": "http://fhir.de/StructureDefinition/humanname-namenszusatz",
+                  "valueString": "Edle"
+                },
+                {
                   "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-                  "valueString": "Dohle"
+                  "valueString": "Graugans"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                  "valueString": "von der"
                 }
               ]
             },
             "given": [
-              "Dara"
+              "Gabriele"
             ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "matrix:@g789012344:demo-ti-messenger"
           }
         ],
         "address": [
           {
             "type": "physical",
             "line": [
-              "Dohlenallee 4-6"
+              "Am Gänseweiher 66"
             ],
             "_line": [
               {
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                    "valueString": "4-6"
+                    "valueString": "66"
                   },
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-                    "valueString": "Blumenweg"
+                    "valueString": "Am Gänseweiher"
                   }
                 ]
               }
             ],
-            "city": "Darmstadt",
-            "postalCode": "64297",
-            "country": "Deutschland",
-            "_country": {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
-                  "valueCoding": {
-                    "code": "DE",
-                    "system": "urn:iso:std:iso:3166"
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "type": "postal",
-            "line": [
-              "Postfach 405060"
-            ],
-            "_line": [
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox",
-                    "valueString": "Postfach 405060"
-                  }
-                ]
-              }
-            ],
-            "city": "Darmstadt",
-            "postalCode": "64283",
+            "city": "Gießen",
+            "postalCode": "35392",
             "country": "Deutschland",
             "_country": {
               "extension": [
@@ -123,27 +94,15 @@
             }
           }
         ],
-        "birthDate": "1970-01-20",
-        "gender": "other",
-        "_gender": {
-          "extension": [
-            {
-              "url": "http://fhir.de/StructureDefinition/gender-amtlich-de",
-              "valueCoding": {
-                "code": "X",
-                "system": "http://fhir.de/CodeSystem/gender-amtlich-de",
-                "display": "unbestimmt"
-              }
-            }
-          ]
-        }
+        "birthDate": "1974-02-12",
+        "gender": "female"
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoveragePKV-D456789013",
+      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoveragePKV-G789012344",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoveragePKV-D456789013",
+        "id": "019aa694-dbf0-7207-abd6-bcb7b65dab35",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoveragePKV|1.0.0"
@@ -162,8 +121,8 @@
             "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMTarifartPKV",
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PKV_TARIFF",
-              "code": "01",
-              "display": "Individualtarif"
+              "code": "03",
+              "display": "Basistarif"
             }
           },
           {
@@ -183,7 +142,15 @@
               },
               {
                 "url": "zweibett",
-                "valueUnsignedInt": 50
+                "valueUnsignedInt": 0
+              },
+              {
+                "url": "einbett",
+                "valueUnsignedInt": 0
+              },
+              {
+                "url": "zweibettEinbettDifferenz",
+                "valueUnsignedInt": 0
               },
               {
                 "url": "wahlarzt",
@@ -198,23 +165,23 @@
         ],
         "status": "active",
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-PKV-D456789013"
+          "reference": "Patient/VSDMPatient-PKV-G789012344"
         },
         "period": {
-          "start": "1980-01-01"
+          "start": "1974-02-12"
         },
         "payor": [
           {
-            "reference": "Organization/VSDMPayorOrganization-168145671"
+            "reference": "Organization/VSDMPayorOrganization-168178900"
           }
         ]
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-168145671",
+      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-168178900",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-168145671",
+        "id": "019aa698-5ee2-7d61-8f09-c93fb5c18f95",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
@@ -223,7 +190,7 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
-            "value": "168145671"
+            "value": "168178900"
           }
         ],
         "address": [
@@ -242,7 +209,30 @@
             }
           }
         ],
-        "name": "Privatversicherung Saturn"
+        "name": "Privatversicherung Venus",
+        "contact": [
+          {
+            "purpose": {
+              "coding": [
+                {
+                  "code": "BILL",
+                  "system": "http://terminology.hl7.org/CodeSystem/contactentity-type"
+                }
+              ],
+              "text": "Kontakt für Abrechnungsfragen"
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "+4952116391643"
+              },
+              {
+                "system": "email",
+                "value": "contact@kostentraeger.invalid"
+              }
+            ]
+          }
+        ]
       }
     }
   ]

@@ -4,6 +4,7 @@ Title: "Beispielkostenträger Freiburg"
 Description: "Beispielkostenträger Freiburg"
 Usage: #inline
 
+* id = "019aa691-fec3-79c7-bd58-5538f03fea37"
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 
 * identifier[IKNR].value = "107403308"

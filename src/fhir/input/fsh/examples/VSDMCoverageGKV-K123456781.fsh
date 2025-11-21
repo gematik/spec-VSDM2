@@ -4,6 +4,7 @@ Title: "K123456781 Kiebitz, Karin (GKV)"
 Description: "Versicherungsdaten K123456781 Kiebitz, Karin (GKV)"
 Usage: #inline
 
+* id = "019aa695-bcf0-7225-b707-8f15c0710b3c"
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#46 "Hessen"

@@ -4,6 +4,7 @@ Title: "J012345677 Junko, Jens-Jörg (GKV)"
 Description: "VSDM 2.0-Daten J012345677 Junko, Jens-Jörg (GKV)"
 Usage: #example
 
+* id = "019aa697-6fff-70ea-b912-a69e99e4e4bc"
 * meta
   * profile[0] = Canonical(VSDMBundle|1.0.0)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"

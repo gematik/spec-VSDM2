@@ -4,6 +4,7 @@ Title: "B234567895 Graf von und zu Buntspecht, Bernd Benjamin (PKV)"
 Description: "Versicherungsdaten B234567895 Graf von und zu Buntspecht, Bernd Benjamin (PKV)"
 Usage: #inline
 
+* id = "019aa695-29cf-7efd-ba64-6d827477212f"
 * meta.profile[0] = Canonical(VSDMCoveragePKV|1.0.0)
 
 * extension[krankenhaus]

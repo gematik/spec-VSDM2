@@ -4,6 +4,7 @@ Title: "Beispielkostenträger Niederbayern"
 Description: "Beispielkostenträger Niederbayern"
 Usage: #inline
 
+* id = "019aa691-7b2d-741f-b40f-0eefa2596dd6"
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 
 * identifier[IKNR].value = "109083613"

@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "VSDMBundle-GKV-L234567896",
+  "id": "019aa697-d1e9-7c8b-a283-34cfeae9fc8e",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
@@ -11,10 +11,10 @@
   "timestamp": "2025-07-14T15:16:17.890+01:00",
   "entry": [
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-L234567896",
+      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-D456789013",
       "resource": {
         "resourceType": "Patient",
-        "id": "VSDMPatient-GKV-L234567896",
+        "id": "019aa694-6f37-72b0-89ea-042e20e449a8",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
@@ -23,24 +23,37 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "L234567896"
+            "value": "D456789013"
           }
         ],
         "name": [
           {
             "use": "official",
-            "text": "Lisa Lachmöwe",
-            "family": "Lachmöwe",
+            "prefix": [
+              "Dr. rer. nat."
+            ],
+            "_prefix": [
+              {
+                "extension": [
+                  {
+                    "valueCode": "AC",
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
+                  }
+                ]
+              }
+            ],
+            "text": "Dr. rer. nat. Dara Dohle",
+            "family": "Dohle",
             "_family": {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-                  "valueString": "Lachmöwe"
+                  "valueString": "Dohle"
                 }
               ]
             },
             "given": [
-              "Lisa"
+              "Dara"
             ]
           }
         ],
@@ -48,24 +61,61 @@
           {
             "type": "physical",
             "line": [
-              "Möwenstraße 12b"
+              "Dohlenallee 4-6"
             ],
             "_line": [
               {
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                    "valueString": "12b"
+                    "valueString": "4-6"
                   },
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-                    "valueString": "Möwenstraße"
+                    "valueString": "Blumenweg"
                   }
                 ]
               }
             ],
-            "city": "Lüneburg",
-            "postalCode": "21337",
+            "city": "Darmstadt",
+            "postalCode": "64297",
+            "country": "Deutschland",
+            "_country": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "D",
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "postal",
+            "line": [
+              "Postfach 405060"
+            ],
+            "_line": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox",
+                    "valueString": "Postfach 405060"
+                  }
+                ]
+              }
+            ],
+            "city": "Darmstadt",
+            "postalCode": "64283",
             "country": "Deutschland",
             "_country": {
               "extension": [
@@ -87,15 +137,27 @@
             }
           }
         ],
-        "birthDate": "2022-07-02",
-        "gender": "female"
+        "birthDate": "1970-01-20",
+        "gender": "other",
+        "_gender": {
+          "extension": [
+            {
+              "url": "http://fhir.de/StructureDefinition/gender-amtlich-de",
+              "valueCoding": {
+                "code": "X",
+                "system": "http://fhir.de/CodeSystem/gender-amtlich-de",
+                "display": "unbestimmt"
+              }
+            }
+          ]
+        }
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-L234567896",
+      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-D456789013",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoverageGKV-L234567896",
+        "id": "019aa696-4962-7577-9a24-9be92b1dde93",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0"
@@ -114,8 +176,8 @@
             "url": "http://fhir.de/StructureDefinition/gkv/wop",
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
-              "code": "17",
-              "display": "Niedersachsen"
+              "code": "46",
+              "display": "Hessen"
             }
           },
           {
@@ -127,15 +189,33 @@
             }
           },
           {
-            "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
+            "valueCoding": {
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
+              "code": "06",
+              "display": "SER"
+            },
+            "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
+          },
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
             "extension": [
               {
-                "url": "status",
-                "valueBoolean": true
+                "url": "dmp",
+                "valueCoding": {
+                  "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+                  "code": "05",
+                  "display": "Asthma"
+                }
               },
               {
-                "url": "gueltigBis",
-                "valueDate": "2040-07-02"
+                "url": "zeitraum",
+                "valuePeriod": {
+                  "start": "2022-01-01"
+                }
+              },
+              {
+                "url": "digitalesDMP",
+                "valueBoolean": false
               }
             ]
           },
@@ -173,23 +253,23 @@
                 "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
               }
             ],
-            "reference": "Organization/VSDMPayorOrganization-102343996"
+            "reference": "Organization/VSDMPayorOrganization-105266989"
           }
         ],
         "status": "active",
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-GKV-L234567896"
+          "reference": "Patient/VSDMPatient-GKV-D456789013"
         },
         "period": {
-          "start": "2022-07-02"
+          "start": "2021-10-01"
         }
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-102343996",
+      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-105266989",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-102343996",
+        "id": "019aa692-6f84-7efd-bb81-1a4ebbff8075",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
@@ -198,7 +278,7 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
-            "value": "102343996"
+            "value": "105266989"
           }
         ],
         "address": [
@@ -224,30 +304,7 @@
             }
           }
         ],
-        "name": "Beispielkostenträger Lüneburg",
-        "contact": [
-          {
-            "purpose": {
-              "coding": [
-                {
-                  "code": "BILL",
-                  "system": "http://terminology.hl7.org/CodeSystem/contactentity-type"
-                }
-              ],
-              "text": "Kontakt für Abrechnungsfragen"
-            },
-            "telecom": [
-              {
-                "system": "phone",
-                "value": "+4952116391643"
-              },
-              {
-                "system": "email",
-                "value": "contact@kostentraeger.invalid"
-              }
-            ]
-          }
-        ]
+        "name": "Beispielkostenträger Darmstadt"
       }
     }
   ]

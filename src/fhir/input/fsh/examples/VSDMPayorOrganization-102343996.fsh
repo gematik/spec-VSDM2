@@ -4,6 +4,7 @@ Title: "Beispielkostenträger Lüneburg"
 Description: "Beispielkostenträger Lüneburg"
 Usage: #inline
 
+* id = "019aa693-005c-7770-a3b5-870d536e2163"
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 
 * identifier[IKNR].value = "102343996"
