@@ -115,14 +115,14 @@ Description: """
       * Strasse 0..1 string "Name der Strasse" """
           Gibt den Namen der Strasse an.
           Wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.
-          Anlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp 
+          Anlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV findet sich nunmehr unter der Rubrik [Fehlerprüfungsverfahren - GKV-Datenaustausch](https://www.gkv-datenaustausch.de/arbeitgeber/deuev/fehlerpruefungsverfahren_1/fehlerpruefungsverfahren.jsp), Datensatz Meldungen (DSME).
           Länge: 46
           Typ: AN
         """
       * Hausnummer 0..1 string "Hausnummer der Strassenadresse" """
           Gibt die Hausnummer in der Strasse der Person an.
           Pflichtangabe soweit bekannt, wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen. 
-          Anlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp 
+          Anlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV findet sich nunmehr unter der Rubrik [Fehlerprüfungsverfahren - GKV-Datenaustausch](https://www.gkv-datenaustausch.de/arbeitgeber/deuev/fehlerpruefungsverfahren_1/fehlerpruefungsverfahren.jsp), Datensatz Meldungen (DSME).
           Länge: 9
           Typ: AN
         """

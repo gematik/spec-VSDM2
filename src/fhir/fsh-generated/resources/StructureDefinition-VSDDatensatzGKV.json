@@ -820,7 +820,7 @@
         "id": "VSDDatensatzGKV.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
         "path": "VSDDatensatzGKV.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
         "short": "Name der Strasse",
-        "definition": "Gibt den Namen der Strasse an.\nWenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.\nAnlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp \nLänge: 46\nTyp: AN",
+        "definition": "Gibt den Namen der Strasse an.\nWenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.\nAnlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV findet sich nunmehr unter der Rubrik [Fehlerprüfungsverfahren - GKV-Datenaustausch](https://www.gkv-datenaustausch.de/arbeitgeber/deuev/fehlerpruefungsverfahren_1/fehlerpruefungsverfahren.jsp), Datensatz Meldungen (DSME).\nLänge: 46\nTyp: AN",
         "min": 0,
         "max": "1",
         "base": {
@@ -855,7 +855,7 @@
         "id": "VSDDatensatzGKV.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
         "path": "VSDDatensatzGKV.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
         "short": "Hausnummer der Strassenadresse",
-        "definition": "Gibt die Hausnummer in der Strasse der Person an.\nPflichtangabe soweit bekannt, wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen. \nAnlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp \nLänge: 9\nTyp: AN",
+        "definition": "Gibt die Hausnummer in der Strasse der Person an.\nPflichtangabe soweit bekannt, wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen. \nAnlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV findet sich nunmehr unter der Rubrik [Fehlerprüfungsverfahren - GKV-Datenaustausch](https://www.gkv-datenaustausch.de/arbeitgeber/deuev/fehlerpruefungsverfahren_1/fehlerpruefungsverfahren.jsp), Datensatz Meldungen (DSME).\nLänge: 9\nTyp: AN",
         "min": 0,
         "max": "1",
         "base": {
@@ -2402,7 +2402,7 @@
         "id": "VSDDatensatzGKV.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
         "path": "VSDDatensatzGKV.Versichertendaten.Versicherter.StrassenAdresse.Strasse",
         "short": "Name der Strasse",
-        "definition": "Gibt den Namen der Strasse an.\nWenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.\nAnlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp \nLänge: 46\nTyp: AN",
+        "definition": "Gibt den Namen der Strasse an.\nWenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.\nAnlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV findet sich nunmehr unter der Rubrik [Fehlerprüfungsverfahren - GKV-Datenaustausch](https://www.gkv-datenaustausch.de/arbeitgeber/deuev/fehlerpruefungsverfahren_1/fehlerpruefungsverfahren.jsp), Datensatz Meldungen (DSME).\nLänge: 46\nTyp: AN",
         "min": 0,
         "max": "1",
         "type": [
@@ -2422,7 +2422,7 @@
         "id": "VSDDatensatzGKV.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
         "path": "VSDDatensatzGKV.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
         "short": "Hausnummer der Strassenadresse",
-        "definition": "Gibt die Hausnummer in der Strasse der Person an.\nPflichtangabe soweit bekannt, wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen. \nAnlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp \nLänge: 9\nTyp: AN",
+        "definition": "Gibt die Hausnummer in der Strasse der Person an.\nPflichtangabe soweit bekannt, wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen. \nAnlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV findet sich nunmehr unter der Rubrik [Fehlerprüfungsverfahren - GKV-Datenaustausch](https://www.gkv-datenaustausch.de/arbeitgeber/deuev/fehlerpruefungsverfahren_1/fehlerpruefungsverfahren.jsp), Datensatz Meldungen (DSME).\nLänge: 9\nTyp: AN",
         "min": 0,
         "max": "1",
         "type": [
