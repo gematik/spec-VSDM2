@@ -4,6 +4,7 @@ Title: "A123456780 Amsel, Andrea (GKV)"
 Description: "Versicherungsdaten A123456780 Amsel, Andrea (GKV)"
 Usage: #inline
 
+* id = "019aa696-775a-7062-8e34-ad28ac640060"
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#38 "Nordrhein"

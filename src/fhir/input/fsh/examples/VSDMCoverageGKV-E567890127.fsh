@@ -4,6 +4,7 @@ Title: "E567890127 Freifrau an der Elster, Elke (GKV)"
 Description: "Versicherungsdaten E567890127 Freifrau an der Elster, Elke (GKV)"
 Usage: #inline
 
+* id = "019aa696-38b1-78a5-a3e9-b10cd6e0a34d"
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#93 "Thüringen"

@@ -4,6 +4,7 @@ Title: "N456789014 Nachtigall, Nina Nicole (GKV)"
 Description: "Versicherungsdaten N456789014 Nachtigall, Nina Nicole (GKV)"
 Usage: #inline
 
+* id = "019aa695-89de-7f4d-852f-0a8d9802e333"
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"

@@ -4,6 +4,7 @@ Title: "H890123459 vorm Habicht, Hans (GKV)"
 Description: "Versicherungsdaten H890123459 vorm Habicht, Hans (GKV)"
 Usage: #inline
 
+* id = "019aa695-f016-7aee-9ee9-a8577aabdbc7"
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#17 "Niedersachsen" 

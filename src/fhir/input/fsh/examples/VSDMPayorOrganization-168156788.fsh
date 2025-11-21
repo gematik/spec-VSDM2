@@ -4,6 +4,7 @@ Title: "Privatversicherung Jupiter"
 Description: "Privatversicherung Jupiter"
 Usage: #inline
 
+* id = "019aa691-0595-7235-8c71-f9bfc5cc579c"
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 
 * identifier[IKNR].value = "168156788"

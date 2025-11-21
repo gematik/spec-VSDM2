@@ -4,6 +4,7 @@ Title: "C345678908 Carolinataube, Charlie (GKV)"
 Description: "Versicherungsdaten C345678908 Carolinataube, Charlie (GKV)"
 Usage: #inline
 
+* id = "019aa696-5a70-7a68-ad1c-83b7369f7049"
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#98 "Sachsen"

@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "VSDMBundle-GKV-L234567896",
+  "id": "019aa697-e026-7735-b898-09ead32a7fa5",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
@@ -11,10 +11,10 @@
   "timestamp": "2025-07-14T15:16:17.890+01:00",
   "entry": [
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-L234567896",
+      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-C345678908",
       "resource": {
         "resourceType": "Patient",
-        "id": "VSDMPatient-GKV-L234567896",
+        "id": "019aa694-7e82-76ba-9b71-cbb1456f219e",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
@@ -23,24 +23,24 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "L234567896"
+            "value": "C345678908"
           }
         ],
         "name": [
           {
             "use": "official",
-            "text": "Lisa Lachmöwe",
-            "family": "Lachmöwe",
+            "text": "Charlie Carolinataube",
+            "family": "Carolinataube",
             "_family": {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-                  "valueString": "Lachmöwe"
+                  "valueString": "Carolinataube"
                 }
               ]
             },
             "given": [
-              "Lisa"
+              "Charlie"
             ]
           }
         ],
@@ -48,24 +48,33 @@
           {
             "type": "physical",
             "line": [
-              "Möwenstraße 12b"
+              "Taubenweg 3c",
+              "zweites Hinterhaus links"
             ],
             "_line": [
               {
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                    "valueString": "12b"
+                    "valueString": "3c"
                   },
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-                    "valueString": "Möwenstraße"
+                    "valueString": "Taubenweg"
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
+                    "valueString": "Hinterhaus links"
                   }
                 ]
               }
             ],
-            "city": "Lüneburg",
-            "postalCode": "21337",
+            "city": "Chemnitz",
+            "postalCode": "09128",
             "country": "Deutschland",
             "_country": {
               "extension": [
@@ -87,15 +96,27 @@
             }
           }
         ],
-        "birthDate": "2022-07-02",
-        "gender": "female"
+        "birthDate": "1979-06-11",
+        "gender": "other",
+        "_gender": {
+          "extension": [
+            {
+              "url": "http://fhir.de/StructureDefinition/gender-amtlich-de",
+              "valueCoding": {
+                "code": "D",
+                "system": "http://fhir.de/CodeSystem/gender-amtlich-de",
+                "display": "divers"
+              }
+            }
+          ]
+        }
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-L234567896",
+      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-C345678908",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoverageGKV-L234567896",
+        "id": "019aa696-5a70-7a68-ad1c-83b7369f7049",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0"
@@ -114,28 +135,62 @@
             "url": "http://fhir.de/StructureDefinition/gkv/wop",
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
-              "code": "17",
-              "display": "Niedersachsen"
+              "code": "98",
+              "display": "Sachsen"
             }
           },
           {
             "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
             "valueCoding": {
-              "code": "3",
+              "code": "1",
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
-              "display": "Familienangehoerige"
+              "display": "Mitglieder"
             }
           },
           {
-            "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
             "extension": [
               {
-                "url": "status",
-                "valueBoolean": true
+                "url": "dmp",
+                "valueCoding": {
+                  "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+                  "code": "01",
+                  "display": "DM2"
+                }
               },
               {
-                "url": "gueltigBis",
-                "valueDate": "2040-07-02"
+                "url": "zeitraum",
+                "valuePeriod": {
+                  "start": "2001-01-01"
+                }
+              },
+              {
+                "url": "digitalesDMP",
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
+            "extension": [
+              {
+                "url": "dmp",
+                "valueCoding": {
+                  "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+                  "code": "08",
+                  "display": "Depression"
+                }
+              },
+              {
+                "url": "zeitraum",
+                "valuePeriod": {
+                  "start": "2020-01-01",
+                  "end": "2023-12-31"
+                }
+              },
+              {
+                "url": "digitalesDMP",
+                "valueBoolean": true
               }
             ]
           },
@@ -173,23 +228,24 @@
                 "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
               }
             ],
-            "reference": "Organization/VSDMPayorOrganization-102343996"
+            "reference": "Organization/VSDMPayorOrganization-107723372"
           }
         ],
         "status": "active",
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-GKV-L234567896"
+          "reference": "Patient/VSDMPatient-GKV-C345678908"
         },
         "period": {
-          "start": "2022-07-02"
+          "start": "1979-06-11",
+          "end": "2027-01-01"
         }
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-102343996",
+      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-107723372",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-102343996",
+        "id": "019aa691-dd16-7d29-a3e0-f84ab48b9db0",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
@@ -198,7 +254,7 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
-            "value": "102343996"
+            "value": "107723372"
           }
         ],
         "address": [
@@ -224,30 +280,7 @@
             }
           }
         ],
-        "name": "Beispielkostenträger Lüneburg",
-        "contact": [
-          {
-            "purpose": {
-              "coding": [
-                {
-                  "code": "BILL",
-                  "system": "http://terminology.hl7.org/CodeSystem/contactentity-type"
-                }
-              ],
-              "text": "Kontakt für Abrechnungsfragen"
-            },
-            "telecom": [
-              {
-                "system": "phone",
-                "value": "+4952116391643"
-              },
-              {
-                "system": "email",
-                "value": "contact@kostentraeger.invalid"
-              }
-            ]
-          }
-        ]
+        "name": "Beispielkostenträger Chemnitz"
       }
     }
   ]

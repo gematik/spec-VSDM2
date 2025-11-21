@@ -4,6 +4,7 @@ Title: "M345678909 Mittelspecht, Michael-Martin (GKV)"
 Description: "VSDM 2.0-Daten M345678909 Mittelspecht, Michael-Martin (GKV)"
 Usage: #example
 
+* id = "019aa697-3a4c-7303-be74-43a250b6c5dd"
 * meta
   * profile[0] = Canonical(VSDMBundle|1.0.0)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"

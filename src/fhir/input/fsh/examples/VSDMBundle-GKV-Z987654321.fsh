@@ -4,6 +4,7 @@ Title: "Z987654321 Graf von und zu Zaunkönig, Zacharias (GKV)"
 Description: "VSDM 2.0-Daten Z987654321 Graf von und zu Zaunkönig, Zacharias (GKV)"
 Usage: #example
 
+* id = "019aa697-0b30-7415-95c1-85b85718f5e5"
 * meta
   * profile[0] = Canonical(VSDMBundle|1.0.0)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"

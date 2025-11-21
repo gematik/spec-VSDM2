@@ -4,6 +4,7 @@ Title: "B234567895 Graf von und zu Buntspecht, Bernd Benjamin (GKV)"
 Description: "Versichertendaten B234567895 Graf von und zu Buntspecht, Bernd Benjamin (GKV)"
 Usage: #inline
 
+* id = "019aa694-8cec-78d8-aadb-cb6af636e899"
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "B234567895"

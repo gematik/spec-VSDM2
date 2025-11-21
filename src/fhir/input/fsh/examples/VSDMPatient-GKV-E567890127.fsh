@@ -4,6 +4,7 @@ Title: "E567890127 Freifrau an der Elster, Elke (GKV)"
 Description: "Versichertendaten E567890127 Freifrau an der Elster, Elke (GKV)"
 Usage: #inline
 
+* id = "019aa694-5fec-7003-9b99-6a81eea5b057"
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "E567890127"

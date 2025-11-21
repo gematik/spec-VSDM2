@@ -4,6 +4,7 @@ Title: "O567890128 Ortolan, Oliver (GKV)"
 Description: "Versicherungsdaten O567890128 Ortolan, Oliver (GKV)"
 Usage: #inline
 
+* id = "019aa695-6296-743f-a1d0-f3a354ed1475"
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"

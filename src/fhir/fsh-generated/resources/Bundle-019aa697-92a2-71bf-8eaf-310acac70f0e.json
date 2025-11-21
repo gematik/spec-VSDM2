@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "VSDMBundle-GKV-I901234562",
+  "id": "019aa697-92a2-71bf-8eaf-310acac70f0e",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
@@ -11,10 +11,10 @@
   "timestamp": "2025-07-14T15:16:17.890+01:00",
   "entry": [
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-I901234562",
+      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-H890123459",
       "resource": {
         "resourceType": "Patient",
-        "id": "VSDMPatient-GKV-I901234562",
+        "id": "019aa694-3009-76be-8a8a-854f04af6f3d",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
@@ -23,24 +23,41 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "I901234562"
+            "value": "H890123459"
           }
         ],
         "name": [
           {
             "use": "official",
-            "text": "Ingrid Ibis",
-            "family": "Ibis",
+            "prefix": [
+              "Dr.-Ing."
+            ],
+            "_prefix": [
+              {
+                "extension": [
+                  {
+                    "valueCode": "AC",
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
+                  }
+                ]
+              }
+            ],
+            "text": "Dr.-Ing. Hans vorm Habicht",
+            "family": "vorm Habicht",
             "_family": {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-                  "valueString": "Ibis"
+                  "valueString": "Habicht"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                  "valueString": "vorm"
                 }
               ]
             },
             "given": [
-              "Ingrid"
+              "Hans"
             ]
           }
         ],
@@ -48,38 +65,47 @@
           {
             "type": "physical",
             "line": [
-              "Im Balz 95"
+              "Habichtpfad 7c",
+              "zweite Laube rechts"
             ],
             "_line": [
               {
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                    "valueString": "95"
+                    "valueString": "7c"
                   },
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-                    "valueString": "Im Balz"
+                    "valueString": "Habichtpfad"
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
+                    "valueString": "zweite Laube rechts"
                   }
                 ]
               }
             ],
-            "city": "Fischbach",
-            "postalCode": "7430",
-            "country": "Luxemburg",
+            "city": "Hildesheim",
+            "postalCode": "31135",
+            "country": "Deutschland",
             "_country": {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
                   "valueCoding": {
-                    "code": "LU",
+                    "code": "DE",
                     "system": "urn:iso:std:iso:3166"
                   }
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
                   "valueCoding": {
-                    "code": "L",
+                    "code": "D",
                     "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
                   }
                 }
@@ -87,15 +113,15 @@
             }
           }
         ],
-        "birthDate": "1942-02-28",
-        "gender": "female"
+        "birthDate": "1953-07-29",
+        "gender": "male"
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-I901234562",
+      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-H890123459",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoverageGKV-I901234562",
+        "id": "019aa695-f016-7aee-9ee9-a8577aabdbc7",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0"
@@ -114,8 +140,8 @@
             "url": "http://fhir.de/StructureDefinition/gkv/wop",
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
-              "code": "98",
-              "display": "Sachsen"
+              "code": "17",
+              "display": "Niedersachsen"
             }
           },
           {
@@ -125,6 +151,27 @@
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
               "display": "Rentner"
             }
+          },
+          {
+            "valueCoding": {
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
+              "code": "07",
+              "display": "SVA1"
+            },
+            "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
+            "extension": [
+              {
+                "url": "status",
+                "valueBoolean": true
+              },
+              {
+                "url": "gueltigBis",
+                "valueDate": "2024-03-31"
+              }
+            ]
           },
           {
             "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
@@ -140,8 +187,8 @@
               {
                 "url": "zeitraum",
                 "valuePeriod": {
-                  "start": "2021-02-07",
-                  "end": "2028-02-15"
+                  "start": "2001-01-01",
+                  "end": "2024-03-31"
                 }
               },
               {
@@ -151,22 +198,25 @@
             ]
           },
           {
-            "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung",
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
             "extension": [
               {
-                "url": "aerztlicheVersorgung",
-                "valueBoolean": true
+                "url": "dmp",
+                "valueCoding": {
+                  "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+                  "code": "06",
+                  "display": "COPD"
+                }
               },
               {
-                "url": "zahnaerztlicheVersorgung",
-                "valueBoolean": true
+                "url": "zeitraum",
+                "valuePeriod": {
+                  "start": "2020-01-01",
+                  "end": "2023-12-31"
+                }
               },
               {
-                "url": "stationaererBereich",
-                "valueBoolean": true
-              },
-              {
-                "url": "veranlassteLeistungen",
+                "url": "digitalesDMP",
                 "valueBoolean": true
               }
             ]
@@ -184,24 +234,37 @@
                 "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
               }
             ],
-            "reference": "Organization/VSDMPayorOrganization-107933230"
+            "reference": "Organization/VSDMPayorOrganization-102249844"
+          },
+          {
+            "extension": [
+              {
+                "valueCoding": {
+                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
+                  "code": "A",
+                  "display": "abrechnender Kostenträger"
+                },
+                "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+              }
+            ],
+            "reference": "Organization/VSDMPayorOrganization-102186348"
           }
         ],
         "status": "active",
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-GKV-I901234562"
+          "reference": "Patient/VSDMPatient-GKV-H890123459"
         },
         "period": {
-          "start": "1942-02-28",
-          "end": "2028-02-15"
+          "start": "1953-01-01",
+          "end": "2024-03-31"
         }
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-107933230",
+      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-102249844",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-107933230",
+        "id": "019aa693-0f20-7aea-81ff-debae0183f14",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
@@ -210,7 +273,7 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
-            "value": "107933230"
+            "value": "102249844"
           }
         ],
         "address": [
@@ -236,7 +299,49 @@
             }
           }
         ],
-        "name": "Beispielkostenträger Dresden"
+        "name": "Beispielkostenträger Hildesheim"
+      }
+    },
+    {
+      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-102186348",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "019aa693-1e11-74eb-9916-91d4b3071351",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.de/sid/arge-ik/iknr",
+            "value": "102186348"
+          }
+        ],
+        "address": [
+          {
+            "country": "Deutschland",
+            "_country": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "D",
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "name": "Beispielkostenträger Hannover"
       }
     }
   ]

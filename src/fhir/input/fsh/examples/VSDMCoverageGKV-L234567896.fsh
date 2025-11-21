@@ -4,6 +4,7 @@ Title: "L234567896 Lachmöwe, Lisa (GKV)"
 Description: "Versicherungsdaten L234567896 Lachmöwe, Lisa (GKV)"
 Usage: #inline
 
+* id = "019aa695-ad4a-787f-b8f4-a13e81110e87"
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#17 "Niedersachsen" 

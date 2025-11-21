@@ -4,6 +4,7 @@ Title: "E567890127 Freifrau an der Elster, Elke (PKV)"
 Description: "Versicherungsdaten E567890127 Freifrau an der Elster, Elke (PKV)"
 Usage: #inline
 
+* id = "019aa694-fd12-70dd-9861-370e431a0227"
 * meta.profile[0] = Canonical(VSDMCoveragePKV|1.0.0)
 
 * extension[krankenhaus]

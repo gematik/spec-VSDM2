@@ -4,6 +4,7 @@ Title: "L234567896 Lachmöwe, Lisa (GKV)"
 Description: "VSDM 2.0-Daten L234567896 Lachmöwe, Lisa (GKV)"
 Usage: #example
 
+* id = "019aa697-51f0-7259-8059-ba2e44cd6360"
 * meta
   * profile[0] = Canonical(VSDMBundle|1.0.0)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"

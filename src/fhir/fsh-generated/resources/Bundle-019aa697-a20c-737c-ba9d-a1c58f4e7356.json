@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "VSDMBundle-GKV-O567890128",
+  "id": "019aa697-a20c-737c-ba9d-a1c58f4e7356",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
@@ -11,10 +11,10 @@
   "timestamp": "2025-07-14T15:16:17.890+01:00",
   "entry": [
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-O567890128",
+      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-G789012344",
       "resource": {
         "resourceType": "Patient",
-        "id": "VSDMPatient-GKV-O567890128",
+        "id": "019aa694-4344-78ca-899f-b73d841475b1",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
@@ -23,24 +23,32 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "O567890128"
+            "value": "G789012344"
           }
         ],
         "name": [
           {
             "use": "official",
-            "text": "Oliver Ortolan",
-            "family": "Ortolan",
+            "text": "Gabriele Edle von der Graugans",
+            "family": "Edle von der Graugans",
             "_family": {
               "extension": [
                 {
+                  "url": "http://fhir.de/StructureDefinition/humanname-namenszusatz",
+                  "valueString": "Edle"
+                },
+                {
                   "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-                  "valueString": "Ortolan"
+                  "valueString": "Graugans"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                  "valueString": "von der"
                 }
               ]
             },
             "given": [
-              "Oliver"
+              "Gabriele"
             ]
           }
         ],
@@ -48,33 +56,24 @@
           {
             "type": "physical",
             "line": [
-              "Gartenammerstraße 15",
-              "Vorderhaus"
+              "Am Gänseweiher 66"
             ],
             "_line": [
               {
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                    "valueString": "15"
+                    "valueString": "66"
                   },
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-                    "valueString": "Gartenammerstraße"
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
-                    "valueString": "Vorderhaus"
+                    "valueString": "Am Gänseweiher"
                   }
                 ]
               }
             ],
-            "city": "Offenburg",
-            "postalCode": "77654",
+            "city": "Gießen",
+            "postalCode": "35392",
             "country": "Deutschland",
             "_country": {
               "extension": [
@@ -96,15 +95,15 @@
             }
           }
         ],
-        "birthDate": "2009-06-08",
-        "gender": "male"
+        "birthDate": "1974-02-12",
+        "gender": "female"
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-O567890128",
+      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-G789012344",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoverageGKV-O567890128",
+        "id": "019aa696-021a-72bf-b9fa-3fd5e56ba94b",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0"
@@ -123,16 +122,16 @@
             "url": "http://fhir.de/StructureDefinition/gkv/wop",
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
-              "code": "52",
-              "display": "Baden-Württemberg"
+              "code": "46",
+              "display": "Hessen"
             }
           },
           {
             "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
             "valueCoding": {
-              "code": "3",
+              "code": "1",
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
-              "display": "Familienangehoerige"
+              "display": "Mitglieder"
             }
           },
           {
@@ -144,7 +143,48 @@
               },
               {
                 "url": "gueltigBis",
-                "valueDate": "2027-06-09"
+                "valueDate": "2026-12-31"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung",
+            "extension": [
+              {
+                "url": "aerztlicheVersorgung",
+                "valueBoolean": true
+              },
+              {
+                "url": "zahnaerztlicheVersorgung",
+                "valueBoolean": true
+              },
+              {
+                "url": "stationaererBereich",
+                "valueBoolean": true
+              },
+              {
+                "url": "veranlassteLeistungen",
+                "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch",
+            "extension": [
+              {
+                "url": "art",
+                "valueCoding": {
+                  "code": "2",
+                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMRuhenderLeistungsanspruchArtCS",
+                  "display": "eingeschränkt"
+                }
+              },
+              {
+                "url": "dauer",
+                "valuePeriod": {
+                  "start": "2025-06-01",
+                  "end": "2027-12-31"
+                }
               }
             ]
           }
@@ -161,23 +201,23 @@
                 "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
               }
             ],
-            "reference": "Organization/VSDMPayorOrganization-107668422"
+            "reference": "Organization/VSDMPayorOrganization-105413578"
           }
         ],
         "status": "active",
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-GKV-O567890128"
+          "reference": "Patient/VSDMPatient-GKV-G789012344"
         },
         "period": {
-          "start": "2009-06-08"
+          "start": "1974-02-12"
         }
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-107668422",
+      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-105413578",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-107668422",
+        "id": "019aa692-5ee9-74c7-bcda-af99e8358094",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
@@ -186,7 +226,7 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
-            "value": "107668422"
+            "value": "105413578"
           }
         ],
         "address": [
@@ -212,7 +252,7 @@
             }
           }
         ],
-        "name": "Beispielkostenträger Offenburg",
+        "name": "Beispielkostenträger Gießen",
         "contact": [
           {
             "purpose": {

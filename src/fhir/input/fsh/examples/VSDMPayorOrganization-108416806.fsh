@@ -4,6 +4,7 @@ Title: "Beispielkostenträger München-Stadt"
 Description: "Beispielkostenträger München-Stadt"
 Usage: #inline
 
+* id = "019aa691-8f0b-7b18-83e0-ce95b4bb6722"
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 
 * identifier[IKNR].value = "108416806"

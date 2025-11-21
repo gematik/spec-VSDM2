@@ -4,6 +4,7 @@ Title: "C345678908 Carolinataube, Charlie (PKV)"
 Description: "Versicherungsdaten C345678908 Carolinataube, Charlie (PKV)"
 Usage: #inline
 
+* id = "019aa695-1a2a-7c65-9348-067355fa7655"
 * meta.profile[0] = Canonical(VSDMCoveragePKV|1.0.0)
 
 * extension[krankenhaus]

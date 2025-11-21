@@ -4,6 +4,7 @@ Title: "Beispielkostenträger Aachen"
 Description: "Beispielkostenträger Aachen"
 Usage: #inline
 
+* id = "019aa692-9527-7cd9-8a94-0370d748ead9"
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 
 * identifier[IKNR].value = "104178397"

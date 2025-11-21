@@ -4,6 +4,7 @@ Title: "I901234562 Ibis, Ingrid (GKV)"
 Description: "Versicherungsdaten I901234562 Ibis, Ingrid (GKV)"
 Usage: #inline
 
+* id = "019aa695-dec6-7b78-8014-c666bcc0d4a1"
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#98 "Sachsen"

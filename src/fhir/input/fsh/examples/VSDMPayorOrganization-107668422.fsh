@@ -4,6 +4,7 @@ Title: "Beispielkostenträger Offenburg"
 Description: "Beispielkostenträger Offenburg"
 Usage: #inline
 
+* id = "019aa691-efa4-7cfc-8f83-82387d397bce"
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 
 * identifier[IKNR].value = "107668422"

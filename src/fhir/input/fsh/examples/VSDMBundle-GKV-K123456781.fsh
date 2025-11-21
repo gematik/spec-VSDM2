@@ -4,6 +4,7 @@ Title: "K123456781 Kiebitz, Karin (GKV)"
 Description: "VSDM 2.0-Daten K123456781 Kiebitz, Karin (GKV)"
 Usage: #example
 
+* id = "019aa697-614f-72d8-82f2-e993e395476f"
 * meta
   * profile[0] = Canonical(VSDMBundle|1.0.0)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"

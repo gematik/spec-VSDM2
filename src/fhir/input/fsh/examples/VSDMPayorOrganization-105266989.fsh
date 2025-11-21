@@ -4,6 +4,7 @@ Title: "Beispielkostenträger Darmstadt"
 Description: "Beispielkostenträger Darmstadt"
 Usage: #inline
 
+* id = "019aa692-6f84-7efd-bb81-1a4ebbff8075"
 * meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 
 * identifier[IKNR].value = "105266989"
