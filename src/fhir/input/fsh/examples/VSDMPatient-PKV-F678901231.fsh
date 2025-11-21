@@ -4,6 +4,7 @@ Title: "F678901231 von Fasan, Frank Florian (PKV)"
 Description: "Versichertendaten F678901231 von Fasan, Frank Florian (PKV)"
 Usage: #inline
 
+* id = $idVSDMPatient-PKV-F678901231
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "F678901231"

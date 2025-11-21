@@ -4,6 +4,7 @@ Title: "Z987654321 Graf von und zu Zaunkönig, Zacharias (GKV)"
 Description: "Versicherungsdaten Z987654321 Graf von und zu Zaunkönig, Zacharias (GKV)"
 Usage: #inline
 
+* id = $idVSDMCoverageGKV-Z987654321
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#98 "Sachsen"
@@ -34,7 +35,7 @@ Usage: #inline
     * end = "2025-12-31"
 * status = #active
 * type = $csVersicherungsart#GKV
-* beneficiary.reference = "Patient/VSDMPatient-GKV-Z987654321"
+* beneficiary.reference = $urlVSDMPatient-GKV-Z987654321
 * period
   * start = "2000-01-01"
   * end = "2029-12-31"

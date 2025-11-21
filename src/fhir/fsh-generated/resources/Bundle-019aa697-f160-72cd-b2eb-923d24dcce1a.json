@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "VSDMBundle-GKV-Z987654321",
+  "id": "019aa697-f160-72cd-b2eb-923d24dcce1a",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
@@ -11,10 +11,10 @@
   "timestamp": "2025-07-14T15:16:17.890+01:00",
   "entry": [
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-Z987654321",
+      "fullUrl": "https://gematik.de/fhir/Patient/019aa694-8cec-78d8-aadb-cb6af636e899",
       "resource": {
         "resourceType": "Patient",
-        "id": "VSDMPatient-GKV-Z987654321",
+        "id": "019aa694-8cec-78d8-aadb-cb6af636e899",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
@@ -23,14 +23,14 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "Z987654321"
+            "value": "B234567895"
           }
         ],
         "name": [
           {
             "use": "official",
             "prefix": [
-              "Prof. Dr. rer. nat."
+              "Dr. med."
             ],
             "_prefix": [
               {
@@ -42,8 +42,8 @@
                 ]
               }
             ],
-            "text": "Prof. Dr. rer. nat. Zacharias Graf von und zu Zaunkönig",
-            "family": "Graf von und zu Zaunkönig",
+            "text": "Dr. med. Bernd Benjamin Graf von und zu Buntspecht",
+            "family": "Graf von und zu Buntspecht",
             "_family": {
               "extension": [
                 {
@@ -52,7 +52,7 @@
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-                  "valueString": "Zaunkönig"
+                  "valueString": "Buntspecht"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
@@ -61,7 +61,7 @@
               ]
             },
             "given": [
-              "Zacharias"
+              "Bernd Benjamin"
             ]
           }
         ],
@@ -69,70 +69,24 @@
           {
             "type": "physical",
             "line": [
-              "Zaunkönigpfad 99x",
-              "zweites Nest rechter Ast"
+              "Buntspechtallee 2A"
             ],
             "_line": [
               {
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                    "valueString": "99x"
+                    "valueString": "2a"
                   },
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-                    "valueString": "Zaunkönigpfad"
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
-                    "valueString": "zweites Nest rechter Ast"
+                    "valueString": "Buntspechtallee"
                   }
                 ]
               }
             ],
-            "city": "Zwickau",
-            "postalCode": "08066",
-            "country": "Deutschland",
-            "_country": {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
-                  "valueCoding": {
-                    "code": "DE",
-                    "system": "urn:iso:std:iso:3166"
-                  }
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
-                  "valueCoding": {
-                    "code": "D",
-                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "type": "postal",
-            "line": [
-              "Postfach 885522"
-            ],
-            "_line": [
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox",
-                    "valueString": "Postfach 885522"
-                  }
-                ]
-              }
-            ],
-            "city": "Zwickau",
-            "postalCode": "08062",
+            "city": "Bremen",
+            "postalCode": "28211",
             "country": "Deutschland",
             "_country": {
               "extension": [
@@ -154,27 +108,15 @@
             }
           }
         ],
-        "birthDate": "1987-05-16",
-        "gender": "other",
-        "_gender": {
-          "extension": [
-            {
-              "url": "http://fhir.de/StructureDefinition/gender-amtlich-de",
-              "valueCoding": {
-                "code": "X",
-                "system": "http://fhir.de/CodeSystem/gender-amtlich-de",
-                "display": "unbestimmt"
-              }
-            }
-          ]
-        }
+        "birthDate": "1988-06-22",
+        "gender": "male"
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-Z987654321",
+      "fullUrl": "https://gematik.de/fhir/Coverage/019aa696-69e7-79e0-8cb2-8149ab064196",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoverageGKV-Z987654321",
+        "id": "019aa696-69e7-79e0-8cb2-8149ab064196",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0"
@@ -193,8 +135,8 @@
             "url": "http://fhir.de/StructureDefinition/gkv/wop",
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
-              "code": "98",
-              "display": "Sachsen"
+              "code": "03",
+              "display": "Bremen"
             }
           },
           {
@@ -206,113 +148,12 @@
             }
           },
           {
-            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
-            "extension": [
-              {
-                "url": "dmp",
-                "valueCoding": {
-                  "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
-                  "code": "01",
-                  "display": "DM2"
-                }
-              },
-              {
-                "url": "zeitraum",
-                "valuePeriod": {
-                  "start": "2001-01-01"
-                }
-              },
-              {
-                "url": "digitalesDMP",
-                "valueBoolean": false
-              }
-            ]
-          },
-          {
-            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
-            "extension": [
-              {
-                "url": "dmp",
-                "valueCoding": {
-                  "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
-                  "code": "08",
-                  "display": "Depression"
-                }
-              },
-              {
-                "url": "zeitraum",
-                "valuePeriod": {
-                  "start": "2020-01-01",
-                  "end": "2023-12-31"
-                }
-              },
-              {
-                "url": "digitalesDMP",
-                "valueBoolean": true
-              }
-            ]
-          },
-          {
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
-              "code": "07",
-              "display": "SVA1"
+              "code": "04",
+              "display": "SOZ"
             },
             "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
-          },
-          {
-            "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
-            "extension": [
-              {
-                "url": "status",
-                "valueBoolean": true
-              },
-              {
-                "url": "gueltigBis",
-                "valueDate": "2025-12-31"
-              }
-            ]
-          },
-          {
-            "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung",
-            "extension": [
-              {
-                "url": "aerztlicheVersorgung",
-                "valueBoolean": true
-              },
-              {
-                "url": "zahnaerztlicheVersorgung",
-                "valueBoolean": true
-              },
-              {
-                "url": "stationaererBereich",
-                "valueBoolean": true
-              },
-              {
-                "url": "veranlassteLeistungen",
-                "valueBoolean": false
-              }
-            ]
-          },
-          {
-            "url": "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch",
-            "extension": [
-              {
-                "url": "art",
-                "valueCoding": {
-                  "code": "1",
-                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMRuhenderLeistungsanspruchArtCS",
-                  "display": "vollständig"
-                }
-              },
-              {
-                "url": "dauer",
-                "valuePeriod": {
-                  "start": "2025-01-01",
-                  "end": "2025-12-31"
-                }
-              }
-            ]
           }
         ],
         "payor": [
@@ -327,7 +168,7 @@
                 "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
               }
             ],
-            "reference": "Organization/VSDMPayorOrganization-108213958"
+            "reference": "Organization/VSDMPayorOrganization-103169760"
           },
           {
             "extension": [
@@ -340,24 +181,24 @@
                 "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
               }
             ],
-            "reference": "Organization/VSDMPayorOrganization-100293710"
+            "reference": "Organization/VSDMPayorOrganization-103215857"
           }
         ],
         "status": "active",
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-GKV-Z987654321"
+          "reference": "https://gematik.de/fhir/Patient/019aa694-8cec-78d8-aadb-cb6af636e899"
         },
         "period": {
-          "start": "2000-01-01",
-          "end": "2029-12-31"
+          "start": "2011-04-01",
+          "end": "2024-12-31"
         }
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-108213958",
+      "fullUrl": "https://gematik.de/fhir/Organization/019aa692-edfe-7659-bd03-1b492c557077",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-108213958",
+        "id": "019aa692-edfe-7659-bd03-1b492c557077",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
@@ -366,7 +207,7 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
-            "value": "108213958"
+            "value": "103169760"
           }
         ],
         "address": [
@@ -392,14 +233,14 @@
             }
           }
         ],
-        "name": "Beispielkostenträger Leipzig"
+        "name": "Beispielkostenträger Bremen"
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-100293710",
+      "fullUrl": "https://gematik.de/fhir/Organization/019aa692-a944-756a-bc42-e857b709b862",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-100293710",
+        "id": "019aa692-a944-756a-bc42-e857b709b862",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
@@ -408,7 +249,7 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
-            "value": "100293710"
+            "value": "103215857"
           }
         ],
         "address": [
@@ -434,30 +275,7 @@
             }
           }
         ],
-        "name": "Beispielkostenträger Schwerin",
-        "contact": [
-          {
-            "purpose": {
-              "coding": [
-                {
-                  "code": "BILL",
-                  "system": "http://terminology.hl7.org/CodeSystem/contactentity-type"
-                }
-              ],
-              "text": "Kontakt für Abrechnungsfragen"
-            },
-            "telecom": [
-              {
-                "system": "phone",
-                "value": "+4952116391643"
-              },
-              {
-                "system": "email",
-                "value": "contact@kostentraeger.invalid"
-              }
-            ]
-          }
-        ]
+        "name": "Beispielkostenträger Bremerhaven"
       }
     }
   ]

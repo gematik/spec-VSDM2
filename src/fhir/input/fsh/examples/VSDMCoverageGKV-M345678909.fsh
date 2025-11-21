@@ -4,6 +4,7 @@ Title: "M345678909 Mittelspecht, Michael-Martin (GKV)"
 Description: "Versicherungsdaten M345678909 Mittelspecht, Michael-Martin (GKV)"
 Usage: #inline
 
+* id = $idVSDMCoverageGKV-M345678909
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#71 "Bayern"
@@ -13,7 +14,7 @@ Usage: #inline
 * extension[versichertenart].valueCoding = $csVersichertenartGKV#3 "Familienangehoerige"
 * status = #active
 * type = $csVersicherungsart#GKV
-* beneficiary.reference = "Patient/VSDMPatient-GKV-M345678909"
+* beneficiary.reference = $urlVSDMPatient-GKV-M345678909
 * period
   * start = "2020-04-27"
 * payor[+]

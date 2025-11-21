@@ -4,6 +4,7 @@ Title: "O567890128 Ortolan, Oliver (GKV)"
 Description: "Versichertendaten O567890128 Ortolan, Oliver (GKV)"
 Usage: #inline
 
+* id = $idVSDMPatient-GKV-O567890128
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "O567890128"

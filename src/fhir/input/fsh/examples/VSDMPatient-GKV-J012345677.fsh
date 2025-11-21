@@ -4,6 +4,7 @@ Title: "J012345677 Junko, Jens-Jörg (GKV)"
 Description: "Versichertendaten J012345677 Junko, Jens-Jörg (GKV)"
 Usage: #inline
 
+* id = $idVSDMPatient-GKV-J012345677
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "J012345677"

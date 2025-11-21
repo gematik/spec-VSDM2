@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "VSDMBundle-GKV-F678901231",
+  "id": "019aa696-ac5d-779a-8691-5f755f10deeb",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
@@ -11,10 +11,10 @@
   "timestamp": "2025-07-14T15:16:17.890+01:00",
   "entry": [
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-F678901231",
+      "fullUrl": "https://gematik.de/fhir/Patient/019aa693-4d88-7efc-8b76-73f2e3afd5e7",
       "resource": {
         "resourceType": "Patient",
-        "id": "VSDMPatient-GKV-F678901231",
+        "id": "019aa693-4d88-7efc-8b76-73f2e3afd5e7",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
@@ -92,13 +92,6 @@
                     "code": "CH",
                     "system": "urn:iso:std:iso:3166"
                   }
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
-                  "valueCoding": {
-                    "code": "CH",
-                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
-                  }
                 }
               ]
             }
@@ -109,111 +102,89 @@
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-F678901231",
+      "fullUrl": "https://gematik.de/fhir/Coverage/019aa694-edc7-7231-9184-c2910d4cf37f",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoverageGKV-F678901231",
+        "id": "019aa694-edc7-7231-9184-c2910d4cf37f",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0"
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoveragePKV|1.0.0"
           ]
         },
         "type": {
           "coding": [
             {
-              "code": "GKV",
+              "code": "PKV",
               "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis"
             }
           ]
         },
         "extension": [
           {
-            "url": "http://fhir.de/StructureDefinition/gkv/wop",
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMVersichertenartPKV",
             "valueCoding": {
-              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
-              "code": "52",
-              "display": "Baden-Württemberg"
+              "code": "VN",
+              "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMVersichertenartPKVCS",
+              "display": "Versicherungsnehmer"
             }
           },
           {
-            "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
-            "valueCoding": {
-              "code": "3",
-              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
-              "display": "Familienangehoerige"
-            }
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKrankenhausleistungenPKV",
+            "extension": [
+              {
+                "url": "allgemein",
+                "valueUnsignedInt": 100
+              },
+              {
+                "url": "zweibett",
+                "valueUnsignedInt": 0
+              },
+              {
+                "url": "einbett",
+                "valueUnsignedInt": 0
+              },
+              {
+                "url": "zweibettEinbettDifferenz",
+                "valueUnsignedInt": 0
+              },
+              {
+                "url": "wahlarzt",
+                "valueBoolean": false
+              },
+              {
+                "url": "belegarzt",
+                "valueBoolean": false
+              }
+            ]
           },
           {
             "valueCoding": {
-              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
-              "code": "08",
-              "display": "SVA2"
+              "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMSozialtarifPKVCS",
+              "code": "N",
+              "display": "Notlagentarif"
             },
-            "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
-          },
-          {
-            "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
-            "extension": [
-              {
-                "url": "status",
-                "valueBoolean": true
-              },
-              {
-                "url": "gueltigBis",
-                "valueDate": "2026-09-30"
-              }
-            ]
-          },
-          {
-            "url": "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch",
-            "extension": [
-              {
-                "url": "art",
-                "valueCoding": {
-                  "code": "1",
-                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMRuhenderLeistungsanspruchArtCS",
-                  "display": "vollständig"
-                }
-              },
-              {
-                "url": "dauer",
-                "valuePeriod": {
-                  "start": "2025-01-01"
-                }
-              }
-            ]
-          }
-        ],
-        "payor": [
-          {
-            "extension": [
-              {
-                "valueCoding": {
-                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
-                  "code": "H",
-                  "display": "Haupt-Kostenträger"
-                },
-                "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
-              }
-            ],
-            "reference": "Organization/VSDMPayorOrganization-107403308"
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMSozialtarifPKV"
           }
         ],
         "status": "active",
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-GKV-F678901231"
+          "reference": "https://gematik.de/fhir/Patient/019aa693-4d88-7efc-8b76-73f2e3afd5e7"
         },
         "period": {
-          "start": "1992-12-01",
-          "end": "2027-06-30"
-        }
+          "start": "2020-01-01"
+        },
+        "payor": [
+          {
+            "reference": "Organization/VSDMPayorOrganization-168167894"
+          }
+        ]
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-107403308",
+      "fullUrl": "https://gematik.de/fhir/Organization/019aa690-ed54-74bb-9acf-d15af64e00d3",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-107403308",
+        "id": "019aa690-ed54-74bb-9acf-d15af64e00d3",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
@@ -222,7 +193,7 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
-            "value": "107403308"
+            "value": "168167894"
           }
         ],
         "address": [
@@ -236,19 +207,12 @@
                     "code": "DE",
                     "system": "urn:iso:std:iso:3166"
                   }
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
-                  "valueCoding": {
-                    "code": "D",
-                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
-                  }
                 }
               ]
             }
           }
         ],
-        "name": "Beispielkostenträger Freiburg"
+        "name": "Privatversicherung Mars"
       }
     }
   ]
