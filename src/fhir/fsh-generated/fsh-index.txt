@@ -57,7 +57,7 @@ StructureDefinition-VSDMPatient.json                                    VSDMPati
 StructureDefinition-VSDMPayorOrganization.json                          VSDMPayorOrganization                             Profile     profiles/VSDMPayorOrganization.fsh                             1 - 48
 StructureDefinition-VSDMTarifartPKV.json                                VSDMTarifartPKV                                   Extension   extensions/VSDMTarifartPKV.fsh                                 1 - 18
 StructureDefinition-VSDMVersichertenartPKV.json                         VSDMVersichertenartPKV                            Extension   extensions/VSDMVersichertenartPKV.fsh                          1 - 20
-ValueSet-VSDMDMPVS.json                                                 VSDMDMPVS                                         ValueSet    valuesets/VSDMDMPVS.fsh                                        1 - 32
+ValueSet-VSDMDMPVS.json                                                 VSDMDMPVS                                         ValueSet    valuesets/VSDMDMPVS.fsh                                        1 - 69
 ValueSet-VSDMErrorcodeVS.json                                           VSDMErrorcodeVS                                   ValueSet    valuesets/VSDMErrorcodeVS.fsh                                  1 - 8
 ValueSet-VSDMKostentraegerRolleVS.json                                  VSDMKostentraegerRolleVS                          ValueSet    valuesets/VSDMKostentraegerRolleVS.fsh                         1 - 7
 ValueSet-VSDMNamenszusatzVS.json                                        VSDMNamenszusatzVS                                ValueSet    valuesets/VSDMNamenszusatzVS.fsh                               1 - 7
