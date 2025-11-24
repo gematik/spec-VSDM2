@@ -32,7 +32,8 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes PKV z
     * Wahlarzt[x] -> "VSDMCoveragePKV.extension:krankenhaus.extension:wahlarzt"
     * Belegarzt[x] -> "VSDMCoveragePKV.extension:krankenhaus.extension:belegarzt"
 
-  * Sozialtarif -> "VSDMCoveragePKV.extension:sozialtarif"
+  * Sozialtarif -> "VSDMCoveragePKV.extension:tarifart"
+    "Es wird eine vorhandene Erweiterung verwendet; ein nicht angegebener Sozialtarif wird auf den Wert 01 Individualtarif abgebildet."
 
   * Versichertenart -> "VSDMCoveragePKV.extension:versichertenart"
 

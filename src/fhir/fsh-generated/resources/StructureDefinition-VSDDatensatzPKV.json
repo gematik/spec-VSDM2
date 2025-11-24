@@ -1544,7 +1544,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-PKV-Coverage",
-            "map": "VSDMCoveragePKV.extension:sozialtarif"
+            "map": "VSDMCoveragePKV.extension:tarifart",
+            "comment": "Es wird eine vorhandene Erweiterung verwendet; ein nicht angegebener Sozialtarif wird auf den Wert 01 Individualtarif abgebildet."
           }
         ]
       },
@@ -2479,7 +2480,8 @@
         "mapping": [
           {
             "identity": "VSD-Datensatz-PKV-Coverage",
-            "map": "VSDMCoveragePKV.extension:sozialtarif"
+            "map": "VSDMCoveragePKV.extension:tarifart",
+            "comment": "Es wird eine vorhandene Erweiterung verwendet; ein nicht angegebener Sozialtarif wird auf den Wert 01 Individualtarif abgebildet."
           }
         ]
       },

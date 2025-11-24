@@ -15,6 +15,7 @@ Usage: #inline
 * extension[beihilfe]
   * extension[anspruch].valueBoolean = true
   * extension[quote].valueUnsignedInt = 80
+* extension[tarifart].valueCoding = #01 "Individualtarif"
 * extension[versichertenart].valueCoding = VSDMVersichertenartPKVCS#VP "versicherte Person"
 * status = #active
 * type = $csVersicherungsart#PKV

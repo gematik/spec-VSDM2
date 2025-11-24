@@ -58,6 +58,11 @@ Alias: $csLOINC = http://loinc.org
 //     - VSDMOperationOutcome.issue[vsdm-error].details.coding
 Alias: $csOperationOutcomeCodes = http://terminology.hl7.org/CodeSystem/operation-outcome
 
+// PKV-Tarifart, verwendet für
+//   - VSDMTarifartPKV
+//     - VSDMCoveragePKV.extension[tarifart]
+Alias: $csTarifartPKV = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PKV_TARIFF
+
 // besondere Personengruppe, verwendet für
 //   - VSDMBesonderePersonengruppeVS
 //     - VSDMCoverageGKV.extension[besonderePersonengruppe]
@@ -103,6 +108,11 @@ Alias: $vsIssueType = http://hl7.org/fhir/ValueSet/issue-type
 //   - VSDMBesonderePersonengruppeVS
 //     - VSDMCoverageGKV.extension[besonderePersonengruppe]
 Alias: $vsPersonengruppe = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_PERSONENGRUPPE
+
+// PKV-Tarifart, verwendet für
+//   - VSDMTarifartPKV
+//     - VSDMCoveragePKV.extension[tarifart]
+Alias: $vsTarifartPKV = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_PKV_TARIFF
 
 // Versichertenstatus / Versichertenart, verwendet für
 //   - Beispiel für VSDMCoverageGKV

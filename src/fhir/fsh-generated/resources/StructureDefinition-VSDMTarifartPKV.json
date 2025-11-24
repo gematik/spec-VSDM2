@@ -1,15 +1,15 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "VSDMSozialtarifPKV",
-  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMSozialtarifPKV",
+  "id": "VSDMTarifartPKV",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMTarifartPKV",
   "version": "1.0.0",
-  "name": "VSDMSozialtarifPKV",
-  "title": "PKV-Sozialtarif",
+  "name": "VSDMTarifartPKV",
+  "title": "PKV-Tarifart",
   "status": "draft",
   "experimental": false,
   "date": "2023-12-31",
   "publisher": "gematik GmbH",
-  "description": "Anwendung eines PKV-verbandseinheitlichen Tarifs im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "description": "Tarifart des PKV-Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -34,8 +34,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "PKV-Sozialtarif",
-        "definition": "Anwendung eines PKV-verbandseinheitlichen Tarifs mit Besonderheiten bezüglich der Leistungen und privatärztliche Abrechnungen.",
+        "short": "PKV-Tarifart",
+        "definition": "Tarifart des PKV-Versicherten, inklusive Anwendung eines PKV-verbandseinheitlichen Tarifs mit Besonderheiten bezüglich der Leistungen und privatärztliche Abrechnungen.",
         "min": 0,
         "max": "*",
         "base": {
@@ -196,7 +196,7 @@
             ]
           }
         ],
-        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMSozialtarifPKV",
+        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMTarifartPKV",
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -237,7 +237,7 @@
         "isSummary": false,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMSozialtarifPKVVS"
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_PKV_TARIFF"
         },
         "mapping": [
           {
@@ -359,7 +359,7 @@
             "code": "uri"
           }
         ],
-        "patternUri": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMSozialtarifPKVCS",
+        "patternUri": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PKV_TARIFF",
         "constraint": [
           {
             "key": "ele-1",
@@ -581,8 +581,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "PKV-Sozialtarif",
-        "definition": "Anwendung eines PKV-verbandseinheitlichen Tarifs mit Besonderheiten bezüglich der Leistungen und privatärztliche Abrechnungen."
+        "short": "PKV-Tarifart",
+        "definition": "Tarifart des PKV-Versicherten, inklusive Anwendung eines PKV-verbandseinheitlichen Tarifs mit Besonderheiten bezüglich der Leistungen und privatärztliche Abrechnungen."
       },
       {
         "id": "Extension.extension",
@@ -592,7 +592,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMSozialtarifPKV"
+        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMTarifartPKV"
       },
       {
         "id": "Extension.value[x]",
@@ -604,14 +604,14 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMSozialtarifPKVVS"
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_PKV_TARIFF"
         }
       },
       {
         "id": "Extension.value[x].system",
         "path": "Extension.value[x].system",
         "min": 1,
-        "patternUri": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMSozialtarifPKVCS"
+        "patternUri": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PKV_TARIFF"
       },
       {
         "id": "Extension.value[x].code",
