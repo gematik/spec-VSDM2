@@ -44,8 +44,9 @@ RuleSet: Address-Country
   * ^comment = """
       Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur [Kodierung der Landesangabe](https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html).
       Durch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.
+      Die Bindung ist erweiterbar ausgeführt, um die Verwendung vorläufiger Codes zu ermöglichen.
     """
-  * valueCoding from $vsCountryCodeISO3166 (required)
+  * valueCoding from $vsCountryCodeISO3166 (extensible)
   * valueCoding.system = $csCountryCodeISO3166 (exactly)
 * extension[anlage8] 
   * ^short = "Länderkennzeichen nach DEÜV Anlage 8"
