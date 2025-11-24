@@ -1449,6 +1449,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -3222,7 +3223,8 @@
         "path": "Organization.address.country",
         "short": "Staat",
         "definition": "Staatsangabe",
-        "comment": "Hier ist die Staatsangabe im Volltext (z.B. zur postalischen Adressierung) anzugeben."
+        "comment": "Hier ist die Staatsangabe im Volltext (z.B. zur postalischen Adressierung) anzugeben.",
+        "mustSupport": true
       },
       {
         "id": "Organization.address.country.extension",
