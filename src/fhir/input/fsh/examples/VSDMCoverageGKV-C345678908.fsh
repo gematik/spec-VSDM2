@@ -4,6 +4,7 @@ Title: "C345678908 Carolinataube, Charlie (GKV)"
 Description: "Versicherungsdaten C345678908 Carolinataube, Charlie (GKV)"
 Usage: #inline
 
+* id = $idVSDMCoverageGKV-C345678908
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#98 "Sachsen"
@@ -25,7 +26,7 @@ Usage: #inline
 * extension[versichertenart].valueCoding = $csVersichertenartGKV#1 "Mitglieder"
 * status = #active
 * type = $csVersicherungsart#GKV
-* beneficiary.reference = "Patient/VSDMPatient-GKV-C345678908"
+* beneficiary.reference = $urlVSDMPatient-GKV-C345678908
 * period
   * start = "1979-06-11"
   * end = "2027-01-01"

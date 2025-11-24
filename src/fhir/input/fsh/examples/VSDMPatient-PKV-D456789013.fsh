@@ -4,6 +4,7 @@ Title: "D456789013 Dohle, Dara (PKV)"
 Description: "Versichertendaten D456789013 Dohle, Dara (PKV)"
 Usage: #inline
 
+* id = $idVSDMPatient-PKV-D456789013
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "D456789013"

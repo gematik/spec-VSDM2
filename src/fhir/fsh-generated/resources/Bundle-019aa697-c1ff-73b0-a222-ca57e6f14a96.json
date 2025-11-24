@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "VSDMBundle-GKV-D456789013",
+  "id": "019aa697-c1ff-73b0-a222-ca57e6f14a96",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
@@ -11,10 +11,10 @@
   "timestamp": "2025-07-14T15:16:17.890+01:00",
   "entry": [
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-D456789013",
+      "fullUrl": "https://gematik.de/fhir/Patient/019aa694-5fec-7003-9b99-6a81eea5b057",
       "resource": {
         "resourceType": "Patient",
-        "id": "VSDMPatient-GKV-D456789013",
+        "id": "019aa694-5fec-7003-9b99-6a81eea5b057",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
@@ -23,37 +23,32 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "D456789013"
+            "value": "E567890127"
           }
         ],
         "name": [
           {
             "use": "official",
-            "prefix": [
-              "Dr. rer. nat."
-            ],
-            "_prefix": [
-              {
-                "extension": [
-                  {
-                    "valueCode": "AC",
-                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
-                  }
-                ]
-              }
-            ],
-            "text": "Dr. rer. nat. Dara Dohle",
-            "family": "Dohle",
+            "text": "Elke Freifrau an der Elster",
+            "family": "Freifrau an der Elster",
             "_family": {
               "extension": [
                 {
+                  "url": "http://fhir.de/StructureDefinition/humanname-namenszusatz",
+                  "valueString": "Freifrau"
+                },
+                {
                   "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-                  "valueString": "Dohle"
+                  "valueString": "Elster"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                  "valueString": "an der"
                 }
               ]
             },
             "given": [
-              "Dara"
+              "Elke"
             ]
           }
         ],
@@ -61,24 +56,24 @@
           {
             "type": "physical",
             "line": [
-              "Dohlenallee 4-6"
+              "Elsterstraße 5"
             ],
             "_line": [
               {
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                    "valueString": "4-6"
+                    "valueString": "5"
                   },
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-                    "valueString": "Blumenweg"
+                    "valueString": "Elsterstraße"
                   }
                 ]
               }
             ],
-            "city": "Darmstadt",
-            "postalCode": "64297",
+            "city": "Erfurt",
+            "postalCode": "99095",
             "country": "Deutschland",
             "_country": {
               "extension": [
@@ -102,34 +97,34 @@
           {
             "type": "postal",
             "line": [
-              "Postfach 405060"
+              "Postfach 9821"
             ],
             "_line": [
               {
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox",
-                    "valueString": "Postfach 405060"
+                    "valueString": "Postfach 9821"
                   }
                 ]
               }
             ],
-            "city": "Darmstadt",
-            "postalCode": "64283",
-            "country": "Deutschland",
+            "city": "Graz",
+            "postalCode": "8055",
+            "country": "Österreich",
             "_country": {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
                   "valueCoding": {
-                    "code": "DE",
+                    "code": "AT",
                     "system": "urn:iso:std:iso:3166"
                   }
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
                   "valueCoding": {
-                    "code": "D",
+                    "code": "A",
                     "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
                   }
                 }
@@ -137,27 +132,15 @@
             }
           }
         ],
-        "birthDate": "1970-01-20",
-        "gender": "other",
-        "_gender": {
-          "extension": [
-            {
-              "url": "http://fhir.de/StructureDefinition/gender-amtlich-de",
-              "valueCoding": {
-                "code": "X",
-                "system": "http://fhir.de/CodeSystem/gender-amtlich-de",
-                "display": "unbestimmt"
-              }
-            }
-          ]
-        }
+        "birthDate": "1992-11-13",
+        "gender": "female"
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-D456789013",
+      "fullUrl": "https://gematik.de/fhir/Coverage/019aa696-38b1-78a5-a3e9-b10cd6e0a34d",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoverageGKV-D456789013",
+        "id": "019aa696-38b1-78a5-a3e9-b10cd6e0a34d",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0"
@@ -176,25 +159,30 @@
             "url": "http://fhir.de/StructureDefinition/gkv/wop",
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
-              "code": "46",
-              "display": "Hessen"
+              "code": "93",
+              "display": "Thüringen"
             }
           },
           {
             "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
             "valueCoding": {
-              "code": "3",
+              "code": "1",
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
-              "display": "Familienangehoerige"
+              "display": "Mitglieder"
             }
           },
           {
-            "valueCoding": {
-              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
-              "code": "06",
-              "display": "SER"
-            },
-            "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
+            "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
+            "extension": [
+              {
+                "url": "status",
+                "valueBoolean": true
+              },
+              {
+                "url": "gueltigBis",
+                "valueDate": "2026-06-30"
+              }
+            ]
           },
           {
             "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
@@ -203,19 +191,43 @@
                 "url": "dmp",
                 "valueCoding": {
                   "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
-                  "code": "05",
-                  "display": "Asthma"
+                  "code": "01",
+                  "display": "DM2"
                 }
               },
               {
                 "url": "zeitraum",
                 "valuePeriod": {
-                  "start": "2022-01-01"
+                  "start": "2001-01-01"
                 }
               },
               {
                 "url": "digitalesDMP",
                 "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
+            "extension": [
+              {
+                "url": "dmp",
+                "valueCoding": {
+                  "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+                  "code": "09",
+                  "display": "Rueckenschmerz"
+                }
+              },
+              {
+                "url": "zeitraum",
+                "valuePeriod": {
+                  "start": "2020-01-01",
+                  "end": "2023-12-31"
+                }
+              },
+              {
+                "url": "digitalesDMP",
+                "valueBoolean": true
               }
             ]
           },
@@ -236,7 +248,7 @@
               },
               {
                 "url": "veranlassteLeistungen",
-                "valueBoolean": true
+                "valueBoolean": false
               }
             ]
           }
@@ -253,23 +265,37 @@
                 "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
               }
             ],
-            "reference": "Organization/VSDMPayorOrganization-105266989"
+            "reference": "Organization/VSDMPayorOrganization-105929412"
+          },
+          {
+            "extension": [
+              {
+                "valueCoding": {
+                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
+                  "code": "A",
+                  "display": "abrechnender Kostenträger"
+                },
+                "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+              }
+            ],
+            "reference": "Organization/VSDMPayorOrganization-104547224"
           }
         ],
         "status": "active",
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-GKV-D456789013"
+          "reference": "https://gematik.de/fhir/Patient/019aa694-5fec-7003-9b99-6a81eea5b057"
         },
         "period": {
-          "start": "2021-10-01"
+          "start": "1992-11-13",
+          "end": "2026-12-31"
         }
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-105266989",
+      "fullUrl": "https://gematik.de/fhir/Organization/019aa692-3896-74e3-a3f5-ee54b04411e5",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-105266989",
+        "id": "019aa692-3896-74e3-a3f5-ee54b04411e5",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
@@ -278,7 +304,7 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
-            "value": "105266989"
+            "value": "105929412"
           }
         ],
         "address": [
@@ -304,7 +330,49 @@
             }
           }
         ],
-        "name": "Beispielkostenträger Darmstadt"
+        "name": "Beispielkostenträger Erfurt"
+      }
+    },
+    {
+      "fullUrl": "https://gematik.de/fhir/Organization/019aa692-8168-7b40-8893-eed9305defcb",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "019aa692-8168-7b40-8893-eed9305defcb",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.de/sid/arge-ik/iknr",
+            "value": "104547224"
+          }
+        ],
+        "address": [
+          {
+            "country": "Deutschland",
+            "_country": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "D",
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "name": "Beispielkostenträger Essen"
       }
     }
   ]

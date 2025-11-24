@@ -4,6 +4,7 @@ Title: "Z987654321 Graf von und zu Zaunkönig, Zacharias (GKV)"
 Description: "Versichertendaten Z987654321 Graf von und zu Zaunkönig, Zacharias (GKV)"
 Usage: #inline
 
+* id = $idVSDMPatient-GKV-Z987654321
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "Z987654321"

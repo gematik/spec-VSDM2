@@ -4,6 +4,7 @@ Title: "B234567895 Graf von und zu Buntspecht, Bernd Benjamin (PKV)"
 Description: "Versicherungsdaten B234567895 Graf von und zu Buntspecht, Bernd Benjamin (PKV)"
 Usage: #inline
 
+* id = $idVSDMCoveragePKV-B234567895
 * meta.profile[0] = Canonical(VSDMCoveragePKV|1.0.0)
 
 * extension[krankenhaus]
@@ -16,7 +17,7 @@ Usage: #inline
 * extension[versichertenart].valueCoding = VSDMVersichertenartPKVCS#VN "Versicherungsnehmer"
 * status = #active
 * type = $csVersicherungsart#PKV
-* beneficiary.reference = "Patient/VSDMPatient-PKV-B234567895"
+* beneficiary.reference = $urlVSDMPatient-PKV-B234567895
 * period
   * start = "1980-01-01"
   * end = "2025-12-31"

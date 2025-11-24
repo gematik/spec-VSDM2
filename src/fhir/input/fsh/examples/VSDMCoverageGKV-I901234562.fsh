@@ -4,6 +4,7 @@ Title: "I901234562 Ibis, Ingrid (GKV)"
 Description: "Versicherungsdaten I901234562 Ibis, Ingrid (GKV)"
 Usage: #inline
 
+* id = $idVSDMCoverageGKV-I901234562
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#98 "Sachsen"
@@ -21,7 +22,7 @@ Usage: #inline
 * extension[versichertenart].valueCoding = $csVersichertenartGKV#5 "Rentner"
 * status = #active
 * type = $csVersicherungsart#GKV
-* beneficiary.reference = "Patient/VSDMPatient-GKV-I901234562"
+* beneficiary.reference = $urlVSDMPatient-GKV-I901234562
 * period
   * start = "1942-02-28"
   * end = "2028-02-15"

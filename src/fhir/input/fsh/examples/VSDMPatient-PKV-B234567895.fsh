@@ -4,6 +4,7 @@ Title: "B234567895 Graf von und zu Buntspecht, Bernd Benjamin (PKV)"
 Description: "Versichertendaten B234567895 Graf von und zu Buntspecht, Bernd Benjamin (PKV)"
 Usage: #inline
 
+* id = $idVSDMPatient-PKV-B234567895
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "B234567895"

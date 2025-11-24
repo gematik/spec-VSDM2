@@ -4,6 +4,7 @@ Title: "B234567895 Graf von und zu Buntspecht, Bernd Benjamin (GKV)"
 Description: "Versicherungsdaten B234567895 Graf von und zu Buntspecht, Bernd Benjamin (GKV)"
 Usage: #inline
 
+* id = $idVSDMCoverageGKV-B234567895
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#03 "Bremen"
@@ -11,7 +12,7 @@ Usage: #inline
 * extension[versichertenart].valueCoding = $csVersichertenartGKV#3 "Familienangehoerige"
 * status = #active
 * type = $csVersicherungsart#GKV
-* beneficiary.reference = "Patient/VSDMPatient-GKV-B234567895"
+* beneficiary.reference = $urlVSDMPatient-GKV-B234567895
 * period
   * start = "2011-04-01"
   * end = "2024-12-31"

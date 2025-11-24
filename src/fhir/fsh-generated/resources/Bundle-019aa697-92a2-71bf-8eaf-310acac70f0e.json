@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "VSDMBundle-GKV-B234567895",
+  "id": "019aa697-92a2-71bf-8eaf-310acac70f0e",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
@@ -11,10 +11,10 @@
   "timestamp": "2025-07-14T15:16:17.890+01:00",
   "entry": [
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-B234567895",
+      "fullUrl": "https://gematik.de/fhir/Patient/019aa694-3009-76be-8a8a-854f04af6f3d",
       "resource": {
         "resourceType": "Patient",
-        "id": "VSDMPatient-GKV-B234567895",
+        "id": "019aa694-3009-76be-8a8a-854f04af6f3d",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
@@ -23,14 +23,14 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "B234567895"
+            "value": "H890123459"
           }
         ],
         "name": [
           {
             "use": "official",
             "prefix": [
-              "Dr. med."
+              "Dr.-Ing."
             ],
             "_prefix": [
               {
@@ -42,26 +42,22 @@
                 ]
               }
             ],
-            "text": "Dr. med. Bernd Benjamin Graf von und zu Buntspecht",
-            "family": "Graf von und zu Buntspecht",
+            "text": "Dr.-Ing. Hans vorm Habicht",
+            "family": "vorm Habicht",
             "_family": {
               "extension": [
                 {
-                  "url": "http://fhir.de/StructureDefinition/humanname-namenszusatz",
-                  "valueString": "Graf"
-                },
-                {
                   "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-                  "valueString": "Buntspecht"
+                  "valueString": "Habicht"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
-                  "valueString": "von und zu"
+                  "valueString": "vorm"
                 }
               ]
             },
             "given": [
-              "Bernd Benjamin"
+              "Hans"
             ]
           }
         ],
@@ -69,24 +65,33 @@
           {
             "type": "physical",
             "line": [
-              "Buntspechtallee 2A"
+              "Habichtpfad 7c",
+              "zweite Laube rechts"
             ],
             "_line": [
               {
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                    "valueString": "2a"
+                    "valueString": "7c"
                   },
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-                    "valueString": "Buntspechtallee"
+                    "valueString": "Habichtpfad"
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
+                    "valueString": "zweite Laube rechts"
                   }
                 ]
               }
             ],
-            "city": "Bremen",
-            "postalCode": "28211",
+            "city": "Hildesheim",
+            "postalCode": "31135",
             "country": "Deutschland",
             "_country": {
               "extension": [
@@ -108,15 +113,15 @@
             }
           }
         ],
-        "birthDate": "1988-06-22",
+        "birthDate": "1953-07-29",
         "gender": "male"
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-B234567895",
+      "fullUrl": "https://gematik.de/fhir/Coverage/019aa695-f016-7aee-9ee9-a8577aabdbc7",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoverageGKV-B234567895",
+        "id": "019aa695-f016-7aee-9ee9-a8577aabdbc7",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0"
@@ -135,25 +140,86 @@
             "url": "http://fhir.de/StructureDefinition/gkv/wop",
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
-              "code": "03",
-              "display": "Bremen"
+              "code": "17",
+              "display": "Niedersachsen"
             }
           },
           {
             "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
             "valueCoding": {
-              "code": "3",
+              "code": "5",
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
-              "display": "Familienangehoerige"
+              "display": "Rentner"
             }
           },
           {
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
-              "code": "04",
-              "display": "SOZ"
+              "code": "07",
+              "display": "SVA1"
             },
             "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
+            "extension": [
+              {
+                "url": "status",
+                "valueBoolean": true
+              },
+              {
+                "url": "gueltigBis",
+                "valueDate": "2024-03-31"
+              }
+            ]
+          },
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
+            "extension": [
+              {
+                "url": "dmp",
+                "valueCoding": {
+                  "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+                  "code": "01",
+                  "display": "DM2"
+                }
+              },
+              {
+                "url": "zeitraum",
+                "valuePeriod": {
+                  "start": "2001-01-01",
+                  "end": "2024-03-31"
+                }
+              },
+              {
+                "url": "digitalesDMP",
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
+            "extension": [
+              {
+                "url": "dmp",
+                "valueCoding": {
+                  "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+                  "code": "06",
+                  "display": "COPD"
+                }
+              },
+              {
+                "url": "zeitraum",
+                "valuePeriod": {
+                  "start": "2020-01-01",
+                  "end": "2023-12-31"
+                }
+              },
+              {
+                "url": "digitalesDMP",
+                "valueBoolean": true
+              }
+            ]
           }
         ],
         "payor": [
@@ -168,7 +234,7 @@
                 "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
               }
             ],
-            "reference": "Organization/VSDMPayorOrganization-103169760"
+            "reference": "Organization/VSDMPayorOrganization-102249844"
           },
           {
             "extension": [
@@ -181,24 +247,24 @@
                 "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
               }
             ],
-            "reference": "Organization/VSDMPayorOrganization-103215857"
+            "reference": "Organization/VSDMPayorOrganization-102186348"
           }
         ],
         "status": "active",
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-GKV-B234567895"
+          "reference": "https://gematik.de/fhir/Patient/019aa694-3009-76be-8a8a-854f04af6f3d"
         },
         "period": {
-          "start": "2011-04-01",
-          "end": "2024-12-31"
+          "start": "1953-01-01",
+          "end": "2024-03-31"
         }
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-103169760",
+      "fullUrl": "https://gematik.de/fhir/Organization/019aa693-0f20-7aea-81ff-debae0183f14",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-103169760",
+        "id": "019aa693-0f20-7aea-81ff-debae0183f14",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
@@ -207,7 +273,7 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
-            "value": "103169760"
+            "value": "102249844"
           }
         ],
         "address": [
@@ -233,14 +299,14 @@
             }
           }
         ],
-        "name": "Beispielkostenträger Bremen"
+        "name": "Beispielkostenträger Hildesheim"
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-103215857",
+      "fullUrl": "https://gematik.de/fhir/Organization/019aa693-1e11-74eb-9916-91d4b3071351",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-103215857",
+        "id": "019aa693-1e11-74eb-9916-91d4b3071351",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
@@ -249,7 +315,7 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
-            "value": "103215857"
+            "value": "102186348"
           }
         ],
         "address": [
@@ -275,7 +341,7 @@
             }
           }
         ],
-        "name": "Beispielkostenträger Bremerhaven"
+        "name": "Beispielkostenträger Hannover"
       }
     }
   ]

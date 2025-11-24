@@ -4,6 +4,7 @@ Title: "E567890127 Freifrau an der Elster, Elke (GKV)"
 Description: "Versicherungsdaten E567890127 Freifrau an der Elster, Elke (GKV)"
 Usage: #inline
 
+* id = $idVSDMCoverageGKV-E567890127
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#93 "Thüringen"
@@ -28,7 +29,7 @@ Usage: #inline
 * extension[versichertenart].valueCoding = $csVersichertenartGKV#1 "Mitglieder"
 * status = #active
 * type = $csVersicherungsart#GKV
-* beneficiary.reference = "Patient/VSDMPatient-GKV-E567890127"
+* beneficiary.reference = $urlVSDMPatient-GKV-E567890127
 * period
   * start = "1992-11-13"
   * end = "2026-12-31"

@@ -4,6 +4,7 @@ Title: "A123456780 Amsel, Andrea (PKV)"
 Description: "Versicherungsdaten A123456780 Amsel, Andrea (PKV)"
 Usage: #inline
 
+* id = $idVSDMCoveragePKV-A123456780
 * meta.profile[0] = Canonical(VSDMCoveragePKV|1.0.0)
 
 * extension[hinweis]
@@ -18,7 +19,7 @@ Usage: #inline
 * extension[versichertenart].valueCoding = VSDMVersichertenartPKVCS#VN "Versicherungsnehmer"
 * status = #active
 * type = $csVersicherungsart#PKV
-* beneficiary.reference = "Patient/VSDMPatient-PKV-A123456780"
+* beneficiary.reference = $urlVSDMPatient-PKV-A123456780
 * period
   * start = "2020-01-01"
 * payor[+]

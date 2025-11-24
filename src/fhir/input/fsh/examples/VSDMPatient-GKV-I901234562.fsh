@@ -4,6 +4,7 @@ Title: "I901234562 Ibis, Ingrid (GKV)"
 Description: "Versichertendaten I901234562 Ibis, Ingrid (GKV)"
 Usage: #inline
 
+* id = $idVSDMPatient-GKV-I901234562
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "I901234562"

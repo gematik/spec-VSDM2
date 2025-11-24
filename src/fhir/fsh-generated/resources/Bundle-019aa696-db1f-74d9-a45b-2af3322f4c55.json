@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "VSDMBundle-PKV-B234567895",
+  "id": "019aa696-db1f-74d9-a45b-2af3322f4c55",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
@@ -11,10 +11,10 @@
   "timestamp": "2025-07-14T15:16:17.890+01:00",
   "entry": [
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-PKV-B234567895",
+      "fullUrl": "https://gematik.de/fhir/Patient/019aa693-7f8b-71e0-87d5-b6c2f4aee454",
       "resource": {
         "resourceType": "Patient",
-        "id": "VSDMPatient-PKV-B234567895",
+        "id": "019aa693-7f8b-71e0-87d5-b6c2f4aee454",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
@@ -23,76 +23,58 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "B234567895"
+            "value": "C345678908"
           }
         ],
         "name": [
           {
             "use": "official",
-            "prefix": [
-              "Dr. med."
-            ],
-            "_prefix": [
-              {
-                "extension": [
-                  {
-                    "valueCode": "AC",
-                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
-                  }
-                ]
-              }
-            ],
-            "text": "Dr. med. Bernd Benjamin Graf von und zu Buntspecht",
-            "family": "Graf von und zu Buntspecht",
+            "text": "Charlie Carolinataube",
+            "family": "Carolinataube",
             "_family": {
               "extension": [
                 {
-                  "url": "http://fhir.de/StructureDefinition/humanname-namenszusatz",
-                  "valueString": "Graf"
-                },
-                {
                   "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-                  "valueString": "Buntspecht"
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
-                  "valueString": "von und zu"
+                  "valueString": "Carolinataube"
                 }
               ]
             },
             "given": [
-              "Bernd Benjamin"
+              "Charlie"
             ]
-          }
-        ],
-        "telecom": [
-          {
-            "system": "url",
-            "value": "matrix:@b234567895:demo-ti-messenger"
           }
         ],
         "address": [
           {
             "type": "physical",
             "line": [
-              "Buntspechtallee 2A"
+              "Taubenweg 3c",
+              "zweites Hinterhaus links"
             ],
             "_line": [
               {
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                    "valueString": "2a"
+                    "valueString": "3c"
                   },
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-                    "valueString": "Buntspechtallee"
+                    "valueString": "Taubenweg"
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
+                    "valueString": "Hinterhaus links"
                   }
                 ]
               }
             ],
-            "city": "Bremen",
-            "postalCode": "28211",
+            "city": "Chemnitz",
+            "postalCode": "09128",
             "country": "Deutschland",
             "_country": {
               "extension": [
@@ -107,15 +89,27 @@
             }
           }
         ],
-        "birthDate": "1988-06-22",
-        "gender": "male"
+        "birthDate": "1979-06-11",
+        "gender": "other",
+        "_gender": {
+          "extension": [
+            {
+              "url": "http://fhir.de/StructureDefinition/gender-amtlich-de",
+              "valueCoding": {
+                "code": "D",
+                "system": "http://fhir.de/CodeSystem/gender-amtlich-de",
+                "display": "divers"
+              }
+            }
+          ]
+        }
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoveragePKV-B234567895",
+      "fullUrl": "https://gematik.de/fhir/Coverage/019aa695-1a2a-7c65-9348-067355fa7655",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoveragePKV-B234567895",
+        "id": "019aa695-1a2a-7c65-9348-067355fa7655",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoveragePKV|1.0.0"
@@ -141,9 +135,9 @@
           {
             "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMVersichertenartPKV",
             "valueCoding": {
-              "code": "VN",
+              "code": "VP",
               "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMVersichertenartPKVCS",
-              "display": "Versicherungsnehmer"
+              "display": "versicherte Person"
             }
           },
           {
@@ -163,35 +157,47 @@
               },
               {
                 "url": "wahlarzt",
-                "valueUnsignedInt": 100
+                "valueBoolean": false
               },
               {
                 "url": "belegarzt",
-                "valueUnsignedInt": 100
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBeihilfe",
+            "extension": [
+              {
+                "url": "anspruch",
+                "valueBoolean": true
+              },
+              {
+                "url": "quote",
+                "valueUnsignedInt": 80
               }
             ]
           }
         ],
         "status": "active",
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-PKV-B234567895"
+          "reference": "https://gematik.de/fhir/Patient/019aa693-7f8b-71e0-87d5-b6c2f4aee454"
         },
         "period": {
-          "start": "1980-01-01",
-          "end": "2025-12-31"
+          "start": "2020-01-01"
         },
         "payor": [
           {
-            "reference": "Organization/VSDMPayorOrganization-168123458"
+            "reference": "Organization/VSDMPayorOrganization-168134565"
           }
         ]
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-168123458",
+      "fullUrl": "https://gematik.de/fhir/Organization/019aa691-3a52-7536-acd9-2ec675894780",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-168123458",
+        "id": "019aa691-3a52-7536-acd9-2ec675894780",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
@@ -200,7 +206,7 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
-            "value": "168123458"
+            "value": "168134565"
           }
         ],
         "address": [
@@ -219,7 +225,30 @@
             }
           }
         ],
-        "name": "Privatversicherung Neptun"
+        "name": "Privatversicherung Uranus",
+        "contact": [
+          {
+            "purpose": {
+              "coding": [
+                {
+                  "code": "BILL",
+                  "system": "http://terminology.hl7.org/CodeSystem/contactentity-type"
+                }
+              ],
+              "text": "Kontakt für Abrechnungsfragen"
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "+4952116391643"
+              },
+              {
+                "system": "email",
+                "value": "contact@kostentraeger.invalid"
+              }
+            ]
+          }
+        ]
       }
     }
   ]

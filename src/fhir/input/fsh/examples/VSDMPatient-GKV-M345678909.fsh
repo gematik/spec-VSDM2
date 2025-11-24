@@ -4,6 +4,7 @@ Title: "M345678909 Mittelspecht, Michael-Martin (GKV)"
 Description: "Versichertendaten M345678909 Mittelspecht, Michael-Martin (GKV)"
 Usage: #inline
 
+* id = $idVSDMPatient-GKV-M345678909
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "M345678909"

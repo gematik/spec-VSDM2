@@ -4,6 +4,7 @@ Title: "L234567896 Lachmöwe, Lisa (GKV)"
 Description: "Versichertendaten L234567896 Lachmöwe, Lisa (GKV)"
 Usage: #inline
 
+* id = $idVSDMPatient-GKV-L234567896
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "L234567896"

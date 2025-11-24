@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "VSDMBundle-GKV-F678901231",
+  "id": "019aa697-b14e-7875-b470-c30f8c00de1b",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
@@ -11,10 +11,10 @@
   "timestamp": "2025-07-14T15:16:17.890+01:00",
   "entry": [
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-F678901231",
+      "fullUrl": "https://gematik.de/fhir/Patient/019aa694-512a-7308-81bd-cffd96cec457",
       "resource": {
         "resourceType": "Patient",
-        "id": "VSDMPatient-GKV-F678901231",
+        "id": "019aa694-512a-7308-81bd-cffd96cec457",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
@@ -109,10 +109,10 @@
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-F678901231",
+      "fullUrl": "https://gematik.de/fhir/Coverage/019aa696-1070-728a-ad84-4b44e373daac",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoverageGKV-F678901231",
+        "id": "019aa696-1070-728a-ad84-4b44e373daac",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0"
@@ -201,7 +201,7 @@
         ],
         "status": "active",
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-GKV-F678901231"
+          "reference": "https://gematik.de/fhir/Patient/019aa694-512a-7308-81bd-cffd96cec457"
         },
         "period": {
           "start": "1992-12-01",
@@ -210,10 +210,10 @@
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-107403308",
+      "fullUrl": "https://gematik.de/fhir/Organization/019aa691-fec3-79c7-bd58-5538f03fea37",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-107403308",
+        "id": "019aa691-fec3-79c7-bd58-5538f03fea37",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"

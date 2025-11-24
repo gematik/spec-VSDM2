@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "VSDMBundle-GKV-O567890128",
+  "id": "019aa697-f160-72cd-b2eb-923d24dcce1a",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
@@ -11,10 +11,10 @@
   "timestamp": "2025-07-14T15:16:17.890+01:00",
   "entry": [
     {
-      "fullUrl": "https://gematik.de/fhir/Patient/VSDMPatient-GKV-O567890128",
+      "fullUrl": "https://gematik.de/fhir/Patient/019aa694-8cec-78d8-aadb-cb6af636e899",
       "resource": {
         "resourceType": "Patient",
-        "id": "VSDMPatient-GKV-O567890128",
+        "id": "019aa694-8cec-78d8-aadb-cb6af636e899",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
@@ -23,24 +23,45 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "O567890128"
+            "value": "B234567895"
           }
         ],
         "name": [
           {
             "use": "official",
-            "text": "Oliver Ortolan",
-            "family": "Ortolan",
+            "prefix": [
+              "Dr. med."
+            ],
+            "_prefix": [
+              {
+                "extension": [
+                  {
+                    "valueCode": "AC",
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
+                  }
+                ]
+              }
+            ],
+            "text": "Dr. med. Bernd Benjamin Graf von und zu Buntspecht",
+            "family": "Graf von und zu Buntspecht",
             "_family": {
               "extension": [
                 {
+                  "url": "http://fhir.de/StructureDefinition/humanname-namenszusatz",
+                  "valueString": "Graf"
+                },
+                {
                   "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-                  "valueString": "Ortolan"
+                  "valueString": "Buntspecht"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                  "valueString": "von und zu"
                 }
               ]
             },
             "given": [
-              "Oliver"
+              "Bernd Benjamin"
             ]
           }
         ],
@@ -48,33 +69,24 @@
           {
             "type": "physical",
             "line": [
-              "Gartenammerstraße 15",
-              "Vorderhaus"
+              "Buntspechtallee 2A"
             ],
             "_line": [
               {
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                    "valueString": "15"
+                    "valueString": "2a"
                   },
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-                    "valueString": "Gartenammerstraße"
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
-                    "valueString": "Vorderhaus"
+                    "valueString": "Buntspechtallee"
                   }
                 ]
               }
             ],
-            "city": "Offenburg",
-            "postalCode": "77654",
+            "city": "Bremen",
+            "postalCode": "28211",
             "country": "Deutschland",
             "_country": {
               "extension": [
@@ -96,15 +108,15 @@
             }
           }
         ],
-        "birthDate": "2009-06-08",
+        "birthDate": "1988-06-22",
         "gender": "male"
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Coverage/VSDMCoverageGKV-O567890128",
+      "fullUrl": "https://gematik.de/fhir/Coverage/019aa696-69e7-79e0-8cb2-8149ab064196",
       "resource": {
         "resourceType": "Coverage",
-        "id": "VSDMCoverageGKV-O567890128",
+        "id": "019aa696-69e7-79e0-8cb2-8149ab064196",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0"
@@ -123,8 +135,8 @@
             "url": "http://fhir.de/StructureDefinition/gkv/wop",
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
-              "code": "52",
-              "display": "Baden-Württemberg"
+              "code": "03",
+              "display": "Bremen"
             }
           },
           {
@@ -136,17 +148,12 @@
             }
           },
           {
-            "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
-            "extension": [
-              {
-                "url": "status",
-                "valueBoolean": true
-              },
-              {
-                "url": "gueltigBis",
-                "valueDate": "2027-06-09"
-              }
-            ]
+            "valueCoding": {
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
+              "code": "04",
+              "display": "SOZ"
+            },
+            "url": "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe"
           }
         ],
         "payor": [
@@ -161,23 +168,37 @@
                 "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
               }
             ],
-            "reference": "Organization/VSDMPayorOrganization-107668422"
+            "reference": "Organization/VSDMPayorOrganization-103169760"
+          },
+          {
+            "extension": [
+              {
+                "valueCoding": {
+                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
+                  "code": "A",
+                  "display": "abrechnender Kostenträger"
+                },
+                "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+              }
+            ],
+            "reference": "Organization/VSDMPayorOrganization-103215857"
           }
         ],
         "status": "active",
         "beneficiary": {
-          "reference": "Patient/VSDMPatient-GKV-O567890128"
+          "reference": "https://gematik.de/fhir/Patient/019aa694-8cec-78d8-aadb-cb6af636e899"
         },
         "period": {
-          "start": "2009-06-08"
+          "start": "2011-04-01",
+          "end": "2024-12-31"
         }
       }
     },
     {
-      "fullUrl": "https://gematik.de/fhir/Organization/VSDMPayorOrganization-107668422",
+      "fullUrl": "https://gematik.de/fhir/Organization/019aa692-edfe-7659-bd03-1b492c557077",
       "resource": {
         "resourceType": "Organization",
-        "id": "VSDMPayorOrganization-107668422",
+        "id": "019aa692-edfe-7659-bd03-1b492c557077",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
@@ -186,7 +207,7 @@
         "identifier": [
           {
             "system": "http://fhir.de/sid/arge-ik/iknr",
-            "value": "107668422"
+            "value": "103169760"
           }
         ],
         "address": [
@@ -212,30 +233,49 @@
             }
           }
         ],
-        "name": "Beispielkostenträger Offenburg",
-        "contact": [
+        "name": "Beispielkostenträger Bremen"
+      }
+    },
+    {
+      "fullUrl": "https://gematik.de/fhir/Organization/019aa692-a944-756a-bc42-e857b709b862",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "019aa692-a944-756a-bc42-e857b709b862",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
+          ]
+        },
+        "identifier": [
           {
-            "purpose": {
-              "coding": [
-                {
-                  "code": "BILL",
-                  "system": "http://terminology.hl7.org/CodeSystem/contactentity-type"
-                }
-              ],
-              "text": "Kontakt für Abrechnungsfragen"
-            },
-            "telecom": [
-              {
-                "system": "phone",
-                "value": "+4952116391643"
-              },
-              {
-                "system": "email",
-                "value": "contact@kostentraeger.invalid"
-              }
-            ]
+            "system": "http://fhir.de/sid/arge-ik/iknr",
+            "value": "103215857"
           }
-        ]
+        ],
+        "address": [
+          {
+            "country": "Deutschland",
+            "_country": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "D",
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "name": "Beispielkostenträger Bremerhaven"
       }
     }
   ]

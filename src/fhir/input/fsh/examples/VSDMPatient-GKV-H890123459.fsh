@@ -4,6 +4,7 @@ Title: "H890123459 vorm Habicht, Hans (GKV)"
 Description: "Versichertendaten H890123459 vorm Habicht, Hans (GKV)"
 Usage: #inline
 
+* id = $idVSDMPatient-GKV-H890123459
 * meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "H890123459"
