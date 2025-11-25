@@ -22,6 +22,7 @@ Bundle-019aa697-c1ff-73b0-a222-ca57e6f14a96.json                        VSDMBund
 Bundle-019aa697-d1e9-7c8b-a283-34cfeae9fc8e.json                        VSDMBundle-GKV-D456789013                         Instance    examples/VSDMBundle-GKV-D456789013.fsh                         1 - 21
 Bundle-019aa697-e026-7735-b898-09ead32a7fa5.json                        VSDMBundle-GKV-C345678908                         Instance    examples/VSDMBundle-GKV-C345678908.fsh                         1 - 21
 Bundle-019aa697-f160-72cd-b2eb-923d24dcce1a.json                        VSDMBundle-GKV-B234567895                         Instance    examples/VSDMBundle-GKV-B234567895.fsh                         1 - 24
+CodeSystem-VSDMBDECodeCS.json                                           VSDMBDECodeCS                                     CodeSystem  codesystems/VSDMBDECodeCS.fsh                                  1 - 201
 CodeSystem-VSDMErrorcodeCS.json                                         VSDMErrorcodeCS                                   CodeSystem  codesystems/VSDMErrorcodeCS.fsh                                1 - 23
 CodeSystem-VSDMKostentraegerRolleCS.json                                VSDMKostentraegerRolleCS                          CodeSystem  codesystems/VSDMKostentraegerRolleCS.fsh                       1 - 13
 CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json                      VSDMRuhenderLeistungsanspruchArtCS                CodeSystem  codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh             1 - 23
@@ -56,6 +57,7 @@ StructureDefinition-VSDMPatient.json                                    VSDMPati
 StructureDefinition-VSDMPayorOrganization.json                          VSDMPayorOrganization                             Profile     profiles/VSDMPayorOrganization.fsh                             1 - 48
 StructureDefinition-VSDMTarifartPKV.json                                VSDMTarifartPKV                                   Extension   extensions/VSDMTarifartPKV.fsh                                 1 - 18
 StructureDefinition-VSDMVersichertenartPKV.json                         VSDMVersichertenartPKV                            Extension   extensions/VSDMVersichertenartPKV.fsh                          1 - 20
+ValueSet-VSDMBDECodeVS.json                                             VSDMBDECodeVS                                     ValueSet    valuesets/VSDMBDECodeVS.fsh                                    1 - 7
 ValueSet-VSDMDMPVS.json                                                 VSDMDMPVS                                         ValueSet    valuesets/VSDMDMPVS.fsh                                        1 - 69
 ValueSet-VSDMErrorcodeVS.json                                           VSDMErrorcodeVS                                   ValueSet    valuesets/VSDMErrorcodeVS.fsh                                  1 - 8
 ValueSet-VSDMKostentraegerRolleVS.json                                  VSDMKostentraegerRolleVS                          ValueSet    valuesets/VSDMKostentraegerRolleVS.fsh                         1 - 7
