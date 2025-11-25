@@ -1,0 +1,33 @@
+{
+  "resourceType": "OperationOutcome",
+  "id": "VSDMOperationOutcome-InvalidHeader",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.</div>"
+  },
+  "issue": [
+    {
+      "severity": "fatal",
+      "code": "value",
+      "details": {
+        "coding": [
+          {
+            "code": "VSDSERVICE_INVALID_HEADER",
+            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
+            "display": "Der HTTP-Header [header] ist undgültig."
+          }
+        ],
+        "text": "Der HTTP-Header ZETA-PoPP-Token ist undgültig."
+      },
+      "diagnostics": "Der angegebene HTTP Header enthält nicht spezifikationskonforme Angaben.\nHierbei handelt es sich in der Regel um einen Implementierungsfehler im Clientsystem.\nPrüfen Sie den Aufbau des Headers gegen die einschlägigen Standards (v.A. RFC 2616) und korrigieren Sie die Anfrage entsprechend.",
+      "location": [
+        "http.ZETA-PoPP-Token"
+      ]
+    }
+  ]
+}

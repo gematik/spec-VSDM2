@@ -8,7 +8,7 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Das vom Clientsystem angefragte Komprimierungsverfahren implode wird nicht unterstützt.</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.</div>"
   },
   "issue": [
     {
@@ -19,14 +19,14 @@
           {
             "code": "VSDSERVICE_UNSUPPORTED_ENCODING",
             "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
-            "display": "Das vom Clientsystem angefragte Komprimierungsverfahren [encoding scheme] wird nicht unterstützt."
+            "display": "Das vom Clientsystem angefragte Kodierungsverfahren [encoding scheme] wird nicht unterstützt."
           }
         ],
-        "text": "Das vom Clientsystem angefragte Komprimierungsverfahren implode wird nicht unterstützt."
+        "text": "Das vom Clientsystem angefragte Kodierungsverfahren implode wird nicht unterstützt."
       },
-      "diagnostics": "Implementierungsfehler beim Clientsystem - der Hersteller des Clientsystems ist zu kontaktieren.",
+      "diagnostics": "Das im HTTP Header Accept-Encoding angeforderte Kodierungsschema wird vom VSDM 2.0-Fachdienst nicht unterstützt.\nDer Fachdienst kann die Daten nicht in der gewünschten Kodierung bereitstellen.\nWiederholen Sie die Anfrage unter Angabe einer unterstützten Kodierung (UTF-8).",
       "location": [
-        "http.Content-Encoding"
+        "http.Accept-Encoding"
       ]
     }
   ]
