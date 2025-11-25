@@ -1,25 +1,32 @@
+// ================================================================================================
+// 
+//   gemeinsame Metadaten
+//
 RuleSet: Meta
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * ^version = "1.0.0"
 * ^publisher = "gematik GmbH"
-* ^date = "2023-12-31" // TODO Datum vor Freigabe setzen
+* ^date = 2026-01-20
 
 RuleSet: Meta-CodeSystem
-* ^status = #active // CodeSystems with status "draft" trigger a validation error
+* ^status = #active // Caution: CodeSystems with status "draft" trigger a validation error
 * ^experimental = false
 * ^version = "1.0.0"
 * ^publisher = "gematik GmbH"
-* ^date = "2023-12-31" // TODO Datum vor Freigabe setzen
+* ^date = 2026-01-20
 
 RuleSet: Meta-Inst
-* status = #draft
+* status = #active
 * experimental = false
 * version = "1.0.0"
 * publisher = "gematik GmbH"
-* date = "2023-12-31" // TODO Datum vor Freigabe setzen
+* date = 2026-01-20
 
-// Landesangabe in Adresse
+// ================================================================================================
+// 
+//   Landesangabe in Adresse
+//
 RuleSet: Address-Country
 * ^short = "Staat"
 * ^definition = """

@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "VSDMErrorcodeVS",
   "id": "VSDMErrorcodeVS",
   "title": "VSDM-Fehlercodes",
@@ -9,7 +9,7 @@
   "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMErrorcodeVS",
   "experimental": false,
   "publisher": "gematik GmbH",
-  "date": "2023-12-31",
+  "date": "2026-01-20",
   "compose": {
     "include": [
       {

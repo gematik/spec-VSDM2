@@ -4,11 +4,11 @@
   "url": "https://gematik.de/fhir/vsdm2/ConceptMap/VSDMErrorcodeIssueSeverity",
   "title": "VSDMErrorcode zu IssueSeverity",
   "description": "Ermittlung der IssueSeverity aus dem VSDMErrorcode",
-  "status": "draft",
+  "status": "active",
   "experimental": false,
   "version": "1.0.0",
   "publisher": "gematik GmbH",
-  "date": "2023-12-31",
+  "date": "2026-01-20",
   "sourceUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMErrorcodeVS",
   "targetUri": "http://hl7.org/fhir/ValueSet/issue-severity",
   "group": [
