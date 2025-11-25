@@ -192,6 +192,14 @@
     "endLine": 21
   },
   {
+    "outputFile": "CodeSystem-VSDMBDECodeCS.json",
+    "fshName": "VSDMBDECodeCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMBDECodeCS.fsh",
+    "startLine": 1,
+    "endLine": 201
+  },
+  {
     "outputFile": "CodeSystem-VSDMErrorcodeCS.json",
     "fshName": "VSDMErrorcodeCS",
     "fshType": "CodeSystem",
@@ -478,6 +486,14 @@
     "fshFile": "extensions/VSDMVersichertenartPKV.fsh",
     "startLine": 1,
     "endLine": 20
+  },
+  {
+    "outputFile": "ValueSet-VSDMBDECodeVS.json",
+    "fshName": "VSDMBDECodeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMBDECodeVS.fsh",
+    "startLine": 1,
+    "endLine": 7
   },
   {
     "outputFile": "ValueSet-VSDMDMPVS.json",
