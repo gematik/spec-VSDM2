@@ -1562,7 +1562,7 @@
         "sliceName": "countryCode",
         "short": "Länderkennzeichen nach ISO 3166-1",
         "definition": "Kodierte Angabe des Länderkennzeichens nach ISO 3166-1.",
-        "comment": "Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur [Kodierung der Landesangabe](https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html).\nDurch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.",
+        "comment": "Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur [Kodierung der Landesangabe](https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html).\nDurch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.\nDie Bindung ist erweiterbar ausgeführt, um die Verwendung vorläufiger Codes zu ermöglichen.",
         "alias": [
           "extensions",
           "user content"
@@ -1757,7 +1757,7 @@
         "isModifier": false,
         "isSummary": false,
         "binding": {
-          "strength": "required",
+          "strength": "extensible",
           "valueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2"
         },
         "mapping": [
@@ -3250,7 +3250,7 @@
         "sliceName": "countryCode",
         "short": "Länderkennzeichen nach ISO 3166-1",
         "definition": "Kodierte Angabe des Länderkennzeichens nach ISO 3166-1.",
-        "comment": "Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur [Kodierung der Landesangabe](https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html).\nDurch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.",
+        "comment": "Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur [Kodierung der Landesangabe](https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html).\nDurch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.\nDie Bindung ist erweiterbar ausgeführt, um die Verwendung vorläufiger Codes zu ermöglichen.",
         "min": 1,
         "max": "1",
         "type": [
@@ -3267,7 +3267,7 @@
         "id": "Organization.address.country.extension:countryCode.value[x]",
         "path": "Organization.address.country.extension.value[x]",
         "binding": {
-          "strength": "required",
+          "strength": "extensible",
           "valueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2"
         }
       },
