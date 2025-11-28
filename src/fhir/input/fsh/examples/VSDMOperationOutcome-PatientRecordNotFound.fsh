@@ -1,25 +1,27 @@
 Instance: VSDMOperationOutcome-PatientRecordNotFound
 InstanceOf: VSDMOperationOutcome
 Title: "Fehlermeldung VSDSERVICE_PATIENT_RECORD_NOT_FOUND"
-Description: "Beispiel zur Fehlermeldung 'Die Versichertenstammdaten zur Versichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden.'"
+Description: "Beispiel zur Fehlermeldung 'Die Versichertenstammdaten zur Krankenversichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden.'"
 Usage: #example
 
 * text
   * status = #generated
   * div[+] = """
       <div xmlns="http://www.w3.org/1999/xhtml">
-        Die Versichertenstammdaten zur Versichertennummer 1234567890 konnten für die Institutionskennung 103456789 nicht ermittelt werden.
+        Der Patient mit der angegebenen Krankenversicherungsnummer ist bei der angesprochenen Versicherung nicht bekannt.
+        Wiederholen Sie die Stammdatenabfrage; falls der Fehler bestehen bleibt, prüfen Sie mit dem Versicherten die Gültigkeit seines Versicherungsanspruchs.
       </div>
     """
 * issue[+]
   * severity = #error "Error"
   * code = #not-found "Not Found"
   * details[+]
-    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_PATIENT_RECORD_NOT_FOUND "Die Versichertenstammdaten zur Versichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden."
+    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_PATIENT_RECORD_NOT_FOUND "Die Versichertenstammdaten zur Krankenversichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden."
     * text = "Die Versichertenstammdaten zur Versichertennummer 1234567890 konnten für die Institutionskennung 103456789 nicht ermittelt werden."
   * diagnostics = """
-      Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service 1x erneuern. 
-      Bei erneutem Fehler: Abbruch, da wahrscheinlich ein Implementierungsfehler vorliegt (Clientsystem, PoPP-Service oder Schnittstelle zu KTR-Bestandssystemen).
+      Der Patient mit der angegebenen Krankenversicherungsnummer ist bei der angesprochenen Versicherung nicht bekannt.
+      Fordern Sie ein neues PoPP-Token an. Wiederholen Sie die Dienstlokalisierung, um den korrekten zuständigen Fachdienst zu ermitteln und wiederholen Sie die Abfrage.
+      Bei erneutem Fehler wiederholen Sie die Abfrage nicht, sondern weisen Sie die Anwender auf ein möglicherweise ausgelaufenes Versicherungsverhältnis hin.
     """
   * location[+] = "http.ZETA-PoPP-Token-Content.insurerId"
   * location[+] = "http.ZETA-PoPP-Token-Content.patientId"
