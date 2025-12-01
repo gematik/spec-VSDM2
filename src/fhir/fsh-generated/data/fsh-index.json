@@ -208,14 +208,6 @@
     "endLine": 16
   },
   {
-    "outputFile": "CodeSystem-VSDMSozialtarifPKVCS.json",
-    "fshName": "VSDMSozialtarifPKVCS",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMSozialtarifPKVCS.fsh",
-    "startLine": 1,
-    "endLine": 11
-  },
-  {
     "outputFile": "CodeSystem-VSDMVersichertenartPKVCS.json",
     "fshName": "VSDMVersichertenartPKVCS",
     "fshType": "CodeSystem",
@@ -500,14 +492,6 @@
     "fshName": "VSDMRuhenderLeistungsanspruchArtVS",
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMRuhenderLeistungsanspruchArtVS.fsh",
-    "startLine": 1,
-    "endLine": 7
-  },
-  {
-    "outputFile": "ValueSet-VSDMSozialtarifPKVVS.json",
-    "fshName": "VSDMSozialtarifPKVVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMSozialtarifPKVVS.fsh",
     "startLine": 1,
     "endLine": 7
   },

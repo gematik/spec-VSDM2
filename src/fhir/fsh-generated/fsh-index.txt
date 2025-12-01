@@ -25,7 +25,6 @@ Bundle-019aa697-f160-72cd-b2eb-923d24dcce1a.json                        VSDMBund
 CodeSystem-VSDMErrorcodeCS.json                                         VSDMErrorcodeCS                                   CodeSystem  codesystems/VSDMErrorcodeCS.fsh                                1 - 23
 CodeSystem-VSDMKostentraegerRolleCS.json                                VSDMKostentraegerRolleCS                          CodeSystem  codesystems/VSDMKostentraegerRolleCS.fsh                       1 - 13
 CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json                      VSDMRuhenderLeistungsanspruchArtCS                CodeSystem  codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh             1 - 16
-CodeSystem-VSDMSozialtarifPKVCS.json                                    VSDMSozialtarifPKVCS                              CodeSystem  codesystems/VSDMSozialtarifPKVCS.fsh                           1 - 11
 CodeSystem-VSDMVersichertenartPKVCS.json                                VSDMVersichertenartPKVCS                          CodeSystem  codesystems/VSDMVersichertenartPKVCS.fsh                       1 - 14
 ConceptMap-VSDMErrorcodeIssueSeverity.json                              VSDMErrorcodeIssueSeverity                        Instance    mappings/VSDMErrorcodeIssueSeverity.fsh                        1 - 101
 ConceptMap-VSDMErrorcodeIssueType.json                                  VSDMErrorcodeIssueType                            Instance    mappings/VSDMErrorcodeIssueType.fsh                            1 - 112
@@ -62,7 +61,6 @@ ValueSet-VSDMErrorcodeVS.json                                           VSDMErro
 ValueSet-VSDMKostentraegerRolleVS.json                                  VSDMKostentraegerRolleVS                          ValueSet    valuesets/VSDMKostentraegerRolleVS.fsh                         1 - 7
 ValueSet-VSDMNamenszusatzVS.json                                        VSDMNamenszusatzVS                                ValueSet    valuesets/VSDMNamenszusatzVS.fsh                               1 - 7
 ValueSet-VSDMRuhenderLeistungsanspruchArtVS.json                        VSDMRuhenderLeistungsanspruchArtVS                ValueSet    valuesets/VSDMRuhenderLeistungsanspruchArtVS.fsh               1 - 7
-ValueSet-VSDMSozialtarifPKVVS.json                                      VSDMSozialtarifPKVVS                              ValueSet    valuesets/VSDMSozialtarifPKVVS.fsh                             1 - 7
 ValueSet-VSDMVersichertenartPKVVS.json                                  VSDMVersichertenartPKVVS                          ValueSet    valuesets/VSDMVersichertenartPKVVS.fsh                         1 - 7
 ValueSet-VSDMVorsatzwortVS.json                                         VSDMVorsatzwortVS                                 ValueSet    valuesets/VSDMVorsatzwortVS.fsh                                1 - 7
 ValueSet-VSDMWohnortprinzipVS.json                                      VSDMWohnortprinzipVS                              ValueSet    valuesets/VSDMWohnortprinzipVS.fsh                             1 - 23
