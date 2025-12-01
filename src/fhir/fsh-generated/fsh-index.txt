@@ -25,7 +25,7 @@ Bundle-019aa697-f160-72cd-b2eb-923d24dcce1a.json                        VSDMBund
 CodeSystem-VSDMErrorcodeCS.json                                         VSDMErrorcodeCS                                   CodeSystem  codesystems/VSDMErrorcodeCS.fsh                                1 - 23
 CodeSystem-VSDMKostentraegerRolleCS.json                                VSDMKostentraegerRolleCS                          CodeSystem  codesystems/VSDMKostentraegerRolleCS.fsh                       1 - 13
 CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json                      VSDMRuhenderLeistungsanspruchArtCS                CodeSystem  codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh             1 - 16
-CodeSystem-VSDMVersichertenartPKVCS.json                                VSDMVersichertenartPKVCS                          CodeSystem  codesystems/VSDMVersichertenartPKVCS.fsh                       1 - 14
+CodeSystem-VSDMVersichertenartPKVCS.json                                VSDMVersichertenartPKVCS                          CodeSystem  codesystems/VSDMVersichertenartPKVCS.fsh                       1 - 21
 ConceptMap-VSDMErrorcodeIssueSeverity.json                              VSDMErrorcodeIssueSeverity                        Instance    mappings/VSDMErrorcodeIssueSeverity.fsh                        1 - 101
 ConceptMap-VSDMErrorcodeIssueType.json                                  VSDMErrorcodeIssueType                            Instance    mappings/VSDMErrorcodeIssueType.fsh                            1 - 112
 OperationOutcome-VSDMOperationOutcome-InternalServerError.json          VSDMOperationOutcome-InternalServerError          Instance    examples/VSDMOperationOutcome-InternalServerError.fsh          1 - 20

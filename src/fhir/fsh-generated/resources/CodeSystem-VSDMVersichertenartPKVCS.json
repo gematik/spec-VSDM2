@@ -7,7 +7,7 @@
   "title": "Versichertenart (PKV)",
   "description": "PKV-Versichertenart im Versichertenstammdatenmanagement (VSDM) 2.0",
   "version": "1.0.0",
-  "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMVersichertenartPKVCS",
+  "url": "http://fhir.de/ValueSet/pkv/Versichertenart",
   "concept": [
     {
       "code": "VN",

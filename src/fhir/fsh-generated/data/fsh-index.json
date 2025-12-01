@@ -213,7 +213,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMVersichertenartPKVCS.fsh",
     "startLine": 1,
-    "endLine": 14
+    "endLine": 21
   },
   {
     "outputFile": "ConceptMap-VSDMErrorcodeIssueSeverity.json",
