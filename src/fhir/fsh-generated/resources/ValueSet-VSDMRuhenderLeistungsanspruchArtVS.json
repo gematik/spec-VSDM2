@@ -13,7 +13,7 @@
   "compose": {
     "include": [
       {
-        "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMRuhenderLeistungsanspruchArtCS"
+        "system": "http://fhir.de/CodeSystem/gkv/RuhenderLeistungsanspruchGKV"
       }
     ]
   }

@@ -205,7 +205,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh",
     "startLine": 1,
-    "endLine": 16
+    "endLine": 23
   },
   {
     "outputFile": "CodeSystem-VSDMVersichertenartPKVCS.json",

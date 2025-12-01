@@ -150,7 +150,7 @@
                 "url": "art",
                 "valueCoding": {
                   "code": "2",
-                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMRuhenderLeistungsanspruchArtCS",
+                  "system": "http://fhir.de/CodeSystem/gkv/RuhenderLeistungsanspruchGKV",
                   "display": "eingeschränkt"
                 }
               },
