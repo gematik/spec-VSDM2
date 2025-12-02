@@ -121,7 +121,7 @@
             "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMVersichertenartPKV",
             "valueCoding": {
               "code": "VN",
-              "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMVersichertenartPKVCS",
+              "system": "http://fhir.de/ValueSet/pkv/Versichertenart",
               "display": "Versicherungsnehmer"
             }
           },
