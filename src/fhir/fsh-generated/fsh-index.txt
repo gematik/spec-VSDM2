@@ -24,7 +24,7 @@ Bundle-019aa697-e026-7735-b898-09ead32a7fa5.json                        VSDMBund
 Bundle-019aa697-f160-72cd-b2eb-923d24dcce1a.json                        VSDMBundle-GKV-B234567895                         Instance    examples/VSDMBundle-GKV-B234567895.fsh                         1 - 24
 CodeSystem-VSDMErrorcodeCS.json                                         VSDMErrorcodeCS                                   CodeSystem  codesystems/VSDMErrorcodeCS.fsh                                1 - 23
 CodeSystem-VSDMKostentraegerRolleCS.json                                VSDMKostentraegerRolleCS                          CodeSystem  codesystems/VSDMKostentraegerRolleCS.fsh                       1 - 13
-CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json                      VSDMRuhenderLeistungsanspruchArtCS                CodeSystem  codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh             1 - 16
+CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json                      VSDMRuhenderLeistungsanspruchArtCS                CodeSystem  codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh             1 - 23
 CodeSystem-VSDMVersichertenartPKVCS.json                                VSDMVersichertenartPKVCS                          CodeSystem  codesystems/VSDMVersichertenartPKVCS.fsh                       1 - 21
 ConceptMap-VSDMErrorcodeIssueSeverity.json                              VSDMErrorcodeIssueSeverity                        Instance    mappings/VSDMErrorcodeIssueSeverity.fsh                        1 - 101
 ConceptMap-VSDMErrorcodeIssueType.json                                  VSDMErrorcodeIssueType                            Instance    mappings/VSDMErrorcodeIssueType.fsh                            1 - 112

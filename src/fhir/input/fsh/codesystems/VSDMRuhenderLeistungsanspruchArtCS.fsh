@@ -12,8 +12,12 @@ Description: "Art des ruhenden Leistungsanspruchs im Versichertenstammdatenmanag
     Die von diesem CodeSystem definierten Werte wurden durch die gematik zur Einführung von VSDM 1 im Jahr 2011 festgelegt und werden hier für die Verwendung in FHIR-Profilen zugänglich gemacht.
   """
 
+// Dieses CodeSystem wird absehbar durch ein identisches CodeSystem aus dem deutschen Basisprofil bzw. dem zugehörigen Terminologiepaket ersetzt.
+// (vgl. https://github.com/hl7germany/basisprofil-de-r4/pull/666)
+// Das "neue" CodeSystem wird aber erst nach dem geplanten Veröffentlichungsdatum zur Verfügung stehen.
+// Um einen breaking change zu vermeiden, erhält dieses CodeSystem wie im TC FHIR am 27.11.2025 besprochen jetzt schon die finale canonical URL.
+// Nach Veröffentlichung des neuen CodeSystem (voraussichtlich in Q1/2026) und Aktualisierung der Paketabhängigkeiten kann dieses CodeSystem dann entfallen.
+* ^url = "http://fhir.de/CodeSystem/gkv/RuhenderLeistungsanspruchGKV"
+
 * #1 "vollständig"
 * #2 "eingeschränkt"
-
-// TODO Umzug in deutsches Basisprofil klären
-// Alexander Groß (gematik) 03.09.2025: ist intern in Klärung

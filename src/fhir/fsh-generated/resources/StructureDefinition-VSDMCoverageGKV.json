@@ -295,7 +295,7 @@
       {
         "id": "Coverage.extension:ruhenderLeistungsanspruch.extension:art.value[x].system",
         "path": "Coverage.extension.extension.value[x].system",
-        "fixedUri": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMRuhenderLeistungsanspruchArtCS"
+        "fixedUri": "http://fhir.de/CodeSystem/gkv/RuhenderLeistungsanspruchGKV"
       },
       {
         "id": "Coverage.extension:ruhenderLeistungsanspruch.extension:dauer",
