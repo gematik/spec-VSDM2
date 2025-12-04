@@ -21,17 +21,6 @@
       ]
     },
     {
-      "code": "VSDSERVICE_UNKNOWN_IK",
-      "display": "Unbekannte Institutionskennung [ik].",
-      "definition": "Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
-      "property": [
-        {
-          "code": "diagnostics",
-          "valueString": "Die im PoPP-Token angegebene IK der Versicherung ist dem angesprochenen VSDM 2.0-Fachdienst nicht bekannt.\nFordern Sie ein neues PoPP-Token an. Wiederholen Sie die Dienstlokalisierung, um den korrekten zuständigen Fachdienst zu ermitteln und wiederholen Sie die Abfrage.\nBei erneutem Fehler wiederholen Sie die Abfrage mit größerem zeitlichen Abstand, um eventuell geänderte DNS-Einstellungen wirksam werden zu lassen. Halten Sie die Anwender über den Status informiert.\nBei Andauern des Fehlers über 24 h liegt möglicherweise ein Fehler in der Implementierung des Clientsystems oder des Fachdients vor."
-        }
-      ]
-    },
-    {
       "code": "VSDSERVICE_INVALID_KVNR",
       "display": "Ungültige Krankenversichertennummer [kvnr].",
       "definition": "Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
@@ -43,46 +32,24 @@
       ]
     },
     {
-      "code": "VSDSERVICE_PATIENT_RECORD_NOT_FOUND",
+      "code": "VSDSERVICE_UNKNOWN_IK",
+      "display": "Unbekannte Institutionskennung [ik].",
+      "definition": "Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
+      "property": [
+        {
+          "code": "diagnostics",
+          "valueString": "Die im PoPP-Token angegebene IK der Versicherung ist dem angesprochenen VSDM 2.0-Fachdienst nicht bekannt.\nFordern Sie ein neues PoPP-Token an. Wiederholen Sie die Dienstlokalisierung, um den korrekten zuständigen Fachdienst zu ermitteln und wiederholen Sie die Abfrage.\nBei erneutem Fehler wiederholen Sie die Abfrage mit größerem zeitlichen Abstand, um eventuell geänderte DNS-Einstellungen wirksam werden zu lassen. Halten Sie die Anwender über den Status informiert.\nBei Andauern des Fehlers über 24 h liegt möglicherweise ein Fehler in der Implementierung des Clientsystems oder des Fachdients vor."
+        }
+      ]
+    },
+    {
+      "code": "VSDSERVICE_UNKNOWN_KVNR",
       "display": "Die Versichertenstammdaten zur Krankenversichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden.",
       "definition": "Der Patient mit der angegebenen Krankenversicherungsnummer ist bei der angesprochenen Versicherung nicht bekannt.\nWiederholen Sie die Stammdatenabfrage; falls der Fehler bestehen bleibt, prüfen Sie mit dem Versicherten die Gültigkeit seines Versicherungsanspruchs.",
       "property": [
         {
           "code": "diagnostics",
-          "valueString": "  Der Patient mit der angegebenen Krankenversicherungsnummer ist bei der angesprochenen Versicherung nicht bekannt.\nFordern Sie ein neues PoPP-Token an. Wiederholen Sie die Dienstlokalisierung, um den korrekten zuständigen Fachdienst zu ermitteln und wiederholen Sie die Abfrage.\nBei erneutem Fehler wiederholen Sie die Abfrage nicht, sondern weisen Sie die Anwender auf ein möglicherweise ausgelaufenes Versicherungsverhältnis hin."
-        }
-      ]
-    },
-    {
-      "code": "VSDSERVICE_INVALID_HEADER",
-      "display": "Der HTTP-Header [header] ist undgültig.",
-      "definition": "Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
-      "property": [
-        {
-          "code": "diagnostics",
-          "valueString": "Der angegebene HTTP Header enthält nicht spezifikationskonforme Angaben.\nHierbei handelt es sich in der Regel um einen Implementierungsfehler im Clientsystem.\nPrüfen Sie den Aufbau des Headers gegen die einschlägigen Standards (v.A. RFC 2616) und korrigieren Sie die Anfrage entsprechend."
-        }
-      ]
-    },
-    {
-      "code": "VSDSERVICE_UNSUPPORTED_MEDIATYPE",
-      "display": "Das vom Clientsystem angefragte Datenformat [media type] wird nicht unterstützt.",
-      "definition": "Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
-      "property": [
-        {
-          "code": "diagnostics",
-          "valueString": "Das im HTTP Header Accept angeforderte Datenformat wird vom VSDM 2.0-Fachdienst nicht unterstützt.\nHierbei handelt es sich in der Regel um einen Implementierungsfehler im Clientsystem.\nEs sind nur die Formate application/fhir+xml und application/fhir+json erlaubt.\nStellen Sie sicher, dass nur die genannten Formate verwendet werden."
-        }
-      ]
-    },
-    {
-      "code": "VSDSERVICE_UNSUPPORTED_ENCODING",
-      "display": "Das vom Clientsystem angefragte Kodierungsverfahren [encoding scheme] wird nicht unterstützt.",
-      "definition": "Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
-      "property": [
-        {
-          "code": "diagnostics",
-          "valueString": "Das im HTTP Header Accept-Encoding angeforderte Kodierungsschema wird vom VSDM 2.0-Fachdienst nicht unterstützt.\nDer Fachdienst kann die Daten nicht in der gewünschten Kodierung bereitstellen.\nWiederholen Sie die Anfrage unter Angabe einer unterstützten Kodierung (UTF-8)."
+          "valueString": "Der Patient mit der angegebenen Krankenversicherungsnummer ist bei der angesprochenen Versicherung nicht bekannt.\nFordern Sie ein neues PoPP-Token an. Wiederholen Sie die Dienstlokalisierung, um den korrekten zuständigen Fachdienst zu ermitteln und wiederholen Sie die Abfrage.\nBei erneutem Fehler wiederholen Sie die Abfrage nicht, sondern weisen Sie die Anwender auf ein möglicherweise ausgelaufenes Versicherungsverhältnis hin."
         }
       ]
     },
@@ -98,7 +65,40 @@
       ]
     },
     {
-      "code": "VSDSERVICE_INTERNAL_SERVER_ERROR",
+      "code": "SERVICE_INVALID_HEADER",
+      "display": "Der HTTP-Header [header] ist undgültig.",
+      "definition": "Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
+      "property": [
+        {
+          "code": "diagnostics",
+          "valueString": "Der angegebene HTTP Header enthält nicht spezifikationskonforme Angaben.\nHierbei handelt es sich in der Regel um einen Implementierungsfehler im Clientsystem.\nPrüfen Sie den Aufbau des Headers gegen die einschlägigen Standards (v.A. RFC 2616) und korrigieren Sie die Anfrage entsprechend."
+        }
+      ]
+    },
+    {
+      "code": "SERVICE_UNSUPPORTED_MEDIATYPE",
+      "display": "Das vom Clientsystem angefragte Datenformat [media type] wird nicht unterstützt.",
+      "definition": "Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
+      "property": [
+        {
+          "code": "diagnostics",
+          "valueString": "Das im HTTP Header Accept angeforderte Datenformat wird vom VSDM 2.0-Fachdienst nicht unterstützt.\nHierbei handelt es sich in der Regel um einen Implementierungsfehler im Clientsystem.\nEs sind nur die Formate application/fhir+xml und application/fhir+json erlaubt.\nStellen Sie sicher, dass nur die genannten Formate verwendet werden."
+        }
+      ]
+    },
+    {
+      "code": "SERVICE_UNSUPPORTED_ENCODING",
+      "display": "Das vom Clientsystem angefragte Kodierungsverfahren [encoding scheme] wird nicht unterstützt.",
+      "definition": "Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
+      "property": [
+        {
+          "code": "diagnostics",
+          "valueString": "Das im HTTP Header Accept-Encoding angeforderte Kodierungsschema wird vom VSDM 2.0-Fachdienst nicht unterstützt.\nDer Fachdienst kann die Daten nicht in der gewünschten Kodierung bereitstellen.\nWiederholen Sie die Anfrage unter Angabe einer unterstützten Kodierung (UTF-8)."
+        }
+      ]
+    },
+    {
+      "code": "SERVICE_INTERNAL_SERVER_ERROR",
       "display": "Unerwarteter interner Fehler des Fachdienstes VSDM.",
       "definition": "Der Versichertenstammdatendienst ist aktuell nicht in der Lage, die Anfrage zu beantworten.\nBitte verwenden Sie das TI-Lagebild, um sich über mögliche Störungen zu informieren.\nWiederholen Sie die Anfrage, sobald die Störungen beseitigt sind.",
       "property": [

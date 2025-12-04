@@ -17,7 +17,7 @@
       "details": {
         "coding": [
           {
-            "code": "VSDSERVICE_INVALID_HEADER",
+            "code": "SERVICE_INVALID_HEADER",
             "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
             "display": "Der HTTP-Header [header] ist undgültig."
           }

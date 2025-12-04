@@ -1,6 +1,6 @@
 Instance: VSDMOperationOutcome-UnsupportedMediatype
 InstanceOf: VSDMOperationOutcome
-Title: "Fehlermeldung VSDSERVICE_UNSUPPORTED_MEDIATYPE"
+Title: "Fehlermeldung SERVICE_UNSUPPORTED_MEDIATYPE"
 Description: "Beispiel zur Fehlermeldung 'Das vom Clientsystem angefragte Datenformat [media type] wird nicht unterstützt.'"
 Usage: #example
 
@@ -15,7 +15,7 @@ Usage: #example
   * severity = #error "Error"
   * code = #value "Element value invalid"
   * details[+]
-    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_UNSUPPORTED_MEDIATYPE "DAs vom Clientsystem angefragte Datenformat [media type] wird nicht unterstützt."
+    * coding[0] = VSDMErrorcodeCS#SERVICE_UNSUPPORTED_MEDIATYPE "DAs vom Clientsystem angefragte Datenformat [media type] wird nicht unterstützt."
     * text = "Das vom Clientsystem angefragte Datenformat application/morse-code wird nicht unterstützt."
   * diagnostics = """
       Das im HTTP Header Accept angeforderte Datenformat wird vom VSDM 2.0-Fachdienst nicht unterstützt.

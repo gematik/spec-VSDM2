@@ -1,6 +1,6 @@
 Instance: VSDMOperationOutcome-UnsupportedEncoding
 InstanceOf: VSDMOperationOutcome
-Title: "Fehlermeldung VSDSERVICE_UNSUPPORTED_ENCODING"
+Title: "Fehlermeldung SERVICE_UNSUPPORTED_ENCODING"
 Description: "Beispiel zur Fehlermeldung 'Das vom Clientsystem angefragte Kodierungsverfahren [encoding scheme] wird nicht unterstützt.'"
 Usage: #example
 
@@ -15,7 +15,7 @@ Usage: #example
   * severity = #error "Error"
   * code = #value "Element value invalid"
   * details[+]
-    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_UNSUPPORTED_ENCODING "Das vom Clientsystem angefragte Kodierungsverfahren [encoding scheme] wird nicht unterstützt."
+    * coding[0] = VSDMErrorcodeCS#SERVICE_UNSUPPORTED_ENCODING "Das vom Clientsystem angefragte Kodierungsverfahren [encoding scheme] wird nicht unterstützt."
     * text = "Das vom Clientsystem angefragte Kodierungsverfahren implode wird nicht unterstützt."
   * diagnostics = """
       Das im HTTP Header Accept-Encoding angeforderte Kodierungsschema wird vom VSDM 2.0-Fachdienst nicht unterstützt.

@@ -17,7 +17,7 @@
       "details": {
         "coding": [
           {
-            "code": "VSDSERVICE_UNSUPPORTED_ENCODING",
+            "code": "SERVICE_UNSUPPORTED_ENCODING",
             "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
             "display": "Das vom Clientsystem angefragte Kodierungsverfahren [encoding scheme] wird nicht unterstützt."
           }

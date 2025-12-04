@@ -1,6 +1,6 @@
 Instance: VSDMOperationOutcome-InvalidHeader
 InstanceOf: VSDMOperationOutcome
-Title: "Fehlermeldung VSDSERVICE_INVALID_HEADER"
+Title: "Fehlermeldung SERVICE_INVALID_HEADER"
 Description: "Beispiel zur Fehlermeldung 'Der HTTP-Header [header] ist undgültig.'"
 Usage: #example
 
@@ -15,7 +15,7 @@ Usage: #example
   * severity = #fatal "Fatal"
   * code = #value "Element value invalid"
   * details[+]
-    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_INVALID_HEADER "Der HTTP-Header [header] ist undgültig."
+    * coding[0] = VSDMErrorcodeCS#SERVICE_INVALID_HEADER "Der HTTP-Header [header] ist undgültig."
     * text = "Der HTTP-Header ZETA-PoPP-Token ist undgültig."
   * diagnostics = """
       Der angegebene HTTP Header enthält nicht spezifikationskonforme Angaben.
