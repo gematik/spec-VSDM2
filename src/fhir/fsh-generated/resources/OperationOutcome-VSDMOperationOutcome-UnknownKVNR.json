@@ -1,6 +1,6 @@
 {
   "resourceType": "OperationOutcome",
-  "id": "VSDMOperationOutcome-PatientRecordNotFound",
+  "id": "VSDMOperationOutcome-UnknownKVNR",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome"
@@ -17,7 +17,7 @@
       "details": {
         "coding": [
           {
-            "code": "VSDSERVICE_PATIENT_RECORD_NOT_FOUND",
+            "code": "VSDSERVICE_UNKNOWN_KVNR",
             "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
             "display": "Die Versichertenstammdaten zur Krankenversichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden."
           }

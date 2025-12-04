@@ -1,33 +1,44 @@
 {
   "resourceType": "ConceptMap",
-  "id": "VSDMBDECodeHTTPStatus",
-  "url": "https://gematik.de/fhir/vsdm2/ConceptMap/VSDMBDECodeHTTPStatus",
-  "title": "VSDMBDECode zu HTTP Status",
-  "description": "Ermittlung des HTTP Status aus dem BDECode",
+  "id": "VSDMTDSCodeHTTPStatus",
+  "url": "https://gematik.de/fhir/vsdm2/ConceptMap/VSDMTDSCodeHTTPStatus",
+  "title": "VSDMTDSCode zu HTTP Status",
+  "description": "Ermittlung des HTTP Status aus dem TDSCode",
   "status": "draft",
   "experimental": false,
   "version": "1.0.0",
   "publisher": "gematik GmbH",
   "date": "2023-12-31",
-  "purpose": "Diese ConceptMap ordnet den BDE-Codes die HTTP Status Codes aus Tabelle TAB_FACHDIENST_VSDM_HTTP_STATUS_CODES zu.",
-  "sourceUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMBDECodeVS",
+  "purpose": "Diese ConceptMap ordnet den TDS-Codes die HTTP Status Codes aus Tabelle TAB_FACHDIENST_VSDM_HTTP_STATUS_CODES zu.",
+  "sourceUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMTDSCodeVS",
   "group": [
     {
-      "source": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMBDECodeCS",
+      "source": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS",
       "element": [
         {
           "code": "79010",
           "display": "Ungültige Institutionskennung [ik].",
           "target": [
             {
-              "code": "400",
-              "display": "Bad Request",
+              "code": "500",
+              "display": "Internal Server Error",
               "equivalence": "wider"
             }
           ]
         },
         {
-          "code": "79xxx",
+          "code": "79011",
+          "display": "Ungültige Krankenversichertennummer [kvnr].",
+          "target": [
+            {
+              "code": "500",
+              "display": "Internal Server Error",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "79012",
           "display": "Unbekannte Institutionskennung [ik].",
           "target": [
             {
@@ -38,23 +49,23 @@
           ]
         },
         {
-          "code": "79011",
-          "display": "Ungültige Krankenversichertennummer [kvnr].",
-          "target": [
-            {
-              "code": "400",
-              "display": "Bad Request",
-              "equivalence": "wider"
-            }
-          ]
-        },
-        {
-          "code": "79020",
+          "code": "79013",
           "display": "Die Versichertenstammdaten zur Krankenversichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden.",
           "target": [
             {
               "code": "404",
               "display": "Not Found",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "79014",
+          "display": "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden.",
+          "target": [
+            {
+              "code": "428",
+              "display": "Precondition Required",
               "equivalence": "wider"
             }
           ]
@@ -88,17 +99,6 @@
             {
               "code": "406",
               "display": "Not Acceptable",
-              "equivalence": "wider"
-            }
-          ]
-        },
-        {
-          "code": "79033",
-          "display": "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden.",
-          "target": [
-            {
-              "code": "428",
-              "display": "Precondition Required",
               "equivalence": "wider"
             }
           ]
@@ -141,8 +141,8 @@
           "display": "Der HTTP-Header ZETA-User-Info fehlt.",
           "target": [
             {
-              "code": "400",
-              "display": "Bad Request",
+              "code": "500",
+              "display": "Internal Server Error",
               "equivalence": "wider"
             }
           ]
@@ -152,8 +152,8 @@
           "display": "Der HTTP-Header ZETA-PoPP-Token-Content fehlt.",
           "target": [
             {
-              "code": "400",
-              "display": "Bad Request",
+              "code": "500",
+              "display": "Internal Server Error",
               "equivalence": "wider"
             }
           ]
@@ -163,8 +163,8 @@
           "display": "Der Inhalt des HTTP-Headers ZETA-User-Info weist Format- oder Inhaltsfehler auf.",
           "target": [
             {
-              "code": "400",
-              "display": "Bad Request",
+              "code": "500",
+              "display": "Internal Server Error",
               "equivalence": "wider"
             }
           ]
@@ -174,8 +174,8 @@
           "display": "Der Inhalt des HTTP-Headers ZETA-PoPP-Token-Content weist Format- oder Inhaltsfehler auf.",
           "target": [
             {
-              "code": "400",
-              "display": "Bad Request",
+              "code": "500",
+              "display": "Internal Server Error",
               "equivalence": "wider"
             }
           ]
