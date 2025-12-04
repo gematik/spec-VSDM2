@@ -1,7 +1,7 @@
-ValueSet: VSDMBDECodeVS
-Title: "VSDM-BDE-Codes"
-Description: "Fehlercodes der Betriebsdatenerfassung (BDE) im Versichertenstammdatenmanagement (VSDM) 2.0"
+ValueSet: VSDMTDSCodeVS
+Title: "VSDM-TDS-Codes"
+Description: "Fehlercodes der Betriebsdatenerfassung (TDS) im Versichertenstammdatenmanagement (VSDM) 2.0"
 
 * insert Meta
 
-* include codes from system VSDMBDECodeCS
+* include codes from system VSDMTDSCodeCS

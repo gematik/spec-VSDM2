@@ -184,20 +184,12 @@
     "endLine": 24
   },
   {
-    "outputFile": "CodeSystem-VSDMBDECodeCS.json",
-    "fshName": "VSDMBDECodeCS",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMBDECodeCS.fsh",
-    "startLine": 1,
-    "endLine": 201
-  },
-  {
     "outputFile": "CodeSystem-VSDMErrorcodeCS.json",
     "fshName": "VSDMErrorcodeCS",
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMErrorcodeCS.fsh",
     "startLine": 1,
-    "endLine": 131
+    "endLine": 137
   },
   {
     "outputFile": "CodeSystem-VSDMKostentraegerRolleCS.json",
@@ -216,6 +208,14 @@
     "endLine": 23
   },
   {
+    "outputFile": "CodeSystem-VSDMTDSCodeCS.json",
+    "fshName": "VSDMTDSCodeCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMTDSCodeCS.fsh",
+    "startLine": 1,
+    "endLine": 201
+  },
+  {
     "outputFile": "CodeSystem-VSDMVersichertenartPKVCS.json",
     "fshName": "VSDMVersichertenartPKVCS",
     "fshType": "CodeSystem",
@@ -224,36 +224,36 @@
     "endLine": 21
   },
   {
-    "outputFile": "ConceptMap-VSDMBDECodeErrorcode.json",
-    "fshName": "VSDMBDECodeErrorcode",
+    "outputFile": "ConceptMap-VSDMTDSCodeErrorcode.json",
+    "fshName": "VSDMTDSCodeErrorcode",
     "fshType": "Instance",
-    "fshFile": "mappings/VSDMBDECodeErrorcode.fsh",
+    "fshFile": "mappings/VSDMTDSCodeErrorcode.fsh",
     "startLine": 1,
-    "endLine": 89
+    "endLine": 95
   },
   {
-    "outputFile": "ConceptMap-VSDMBDECodeHTTPStatus.json",
-    "fshName": "VSDMBDECodeHTTPStatus",
+    "outputFile": "ConceptMap-VSDMTDSCodeHTTPStatus.json",
+    "fshName": "VSDMTDSCodeHTTPStatus",
     "fshType": "Instance",
-    "fshFile": "mappings/VSDMBDECodeHTTPStatus.fsh",
+    "fshFile": "mappings/VSDMTDSCodeHTTPStatus.fsh",
     "startLine": 1,
     "endLine": 134
   },
   {
-    "outputFile": "ConceptMap-VSDMBDECodeIssueSeverity.json",
-    "fshName": "VSDMBDECodeIssueSeverity",
+    "outputFile": "ConceptMap-VSDMTDSCodeIssueSeverity.json",
+    "fshName": "VSDMTDSCodeIssueSeverity",
     "fshType": "Instance",
-    "fshFile": "mappings/VSDMBDECodeIssueSeverity.fsh",
+    "fshFile": "mappings/VSDMTDSCodeIssueSeverity.fsh",
     "startLine": 1,
-    "endLine": 89
+    "endLine": 95
   },
   {
-    "outputFile": "ConceptMap-VSDMBDECodeIssueType.json",
-    "fshName": "VSDMBDECodeIssueType",
+    "outputFile": "ConceptMap-VSDMTDSCodeIssueType.json",
+    "fshName": "VSDMTDSCodeIssueType",
     "fshType": "Instance",
-    "fshFile": "mappings/VSDMBDECodeIssueType.fsh",
+    "fshFile": "mappings/VSDMTDSCodeIssueType.fsh",
     "startLine": 1,
-    "endLine": 90
+    "endLine": 96
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-InternalServerError.json",
@@ -296,20 +296,20 @@
     "endLine": 26
   },
   {
-    "outputFile": "OperationOutcome-VSDMOperationOutcome-PatientRecordNotFound.json",
-    "fshName": "VSDMOperationOutcome-PatientRecordNotFound",
-    "fshType": "Instance",
-    "fshFile": "examples/VSDMOperationOutcome-PatientRecordNotFound.fsh",
-    "startLine": 1,
-    "endLine": 27
-  },
-  {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-UnknownIK.json",
     "fshName": "VSDMOperationOutcome-UnknownIK",
     "fshType": "Instance",
     "fshFile": "examples/VSDMOperationOutcome-UnknownIK.fsh",
     "startLine": 1,
     "endLine": 26
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-UnknownKVNR.json",
+    "fshName": "VSDMOperationOutcome-UnknownKVNR",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-UnknownKVNR.fsh",
+    "startLine": 1,
+    "endLine": 27
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-UnsupportedEncoding.json",
@@ -456,14 +456,6 @@
     "endLine": 20
   },
   {
-    "outputFile": "ValueSet-VSDMBDECodeVS.json",
-    "fshName": "VSDMBDECodeVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMBDECodeVS.fsh",
-    "startLine": 1,
-    "endLine": 7
-  },
-  {
     "outputFile": "ValueSet-VSDMDMPVS.json",
     "fshName": "VSDMDMPVS",
     "fshType": "ValueSet",
@@ -500,6 +492,14 @@
     "fshName": "VSDMRuhenderLeistungsanspruchArtVS",
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMRuhenderLeistungsanspruchArtVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-VSDMTDSCodeVS.json",
+    "fshName": "VSDMTDSCodeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMBDECodeVS.fsh",
     "startLine": 1,
     "endLine": 7
   },

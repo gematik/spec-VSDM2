@@ -1,6 +1,6 @@
-Instance: VSDMOperationOutcome-PatientRecordNotFound
+Instance: VSDMOperationOutcome-UnknownKVNR
 InstanceOf: VSDMOperationOutcome
-Title: "Fehlermeldung VSDSERVICE_PATIENT_RECORD_NOT_FOUND"
+Title: "Fehlermeldung VSDSERVICE_UNKNOWN_KVNR"
 Description: "Beispiel zur Fehlermeldung 'Die Versichertenstammdaten zur Krankenversichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden.'"
 Usage: #example
 
@@ -16,7 +16,7 @@ Usage: #example
   * severity = #error "Error"
   * code = #not-found "Not Found"
   * details[+]
-    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_PATIENT_RECORD_NOT_FOUND "Die Versichertenstammdaten zur Krankenversichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden."
+    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_UNKNOWN_KVNR "Die Versichertenstammdaten zur Krankenversichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden."
     * text = "Die Versichertenstammdaten zur Versichertennummer 1234567890 konnten für die Institutionskennung 103456789 nicht ermittelt werden."
   * diagnostics = """
       Der Patient mit der angegebenen Krankenversicherungsnummer ist bei der angesprochenen Versicherung nicht bekannt.

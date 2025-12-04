@@ -1,27 +1,27 @@
-CodeSystem: VSDMBDECodeCS
-Title: "VSDM-BDE-Codes"
-Description: "Fehlercodes der Betriebsdatenerfassung (BDE) im Versichertenstammdatenmanagement (VSDM) 2.0"
+CodeSystem: VSDMTDSCodeCS
+Title: "VSDM-TDS-Codes"
+Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammdatenmanagement (VSDM) 2.0"
 
 * insert Meta-CodeSystem
 * ^caseSensitive = true
 * ^content = #complete
 * ^purpose = """
-    Dieses CodeSystem enthält alle Fehlercodes der Betriebsdatenerfassung (BDE), der Fachdienst gemäß Anforderung A_27012-01 und darin enthaltener Tabelle TAB_FACHDIENST_VSDM_FEHLER-REFERENZEN_UND_BDE-CODES liefern muss.
-    Diese BDE-Codes decken alle in der Spezifikation vorgesehenen Fehlersituationen ab.
+    Dieses CodeSystem enthält alle Fehlercodes des Telemetriedatenservice (TDS), der Fachdienst gemäß Anforderung A_27012-02 und darin enthaltener Tabelle TAB_FACHDIENST_VSDM_FEHLERREFERENZEN_UND_FEHLERCODES sowie den bei den jeweiligen Codes genanntnen Anforderungen liefern muss.
+    Diese TDS-Codes decken alle in der Spezifikation vorgesehenen Fehlersituationen ab.
     Dieses CodeSystem definiert die genauen Fehlerzustände und dient als Ausgangspunkt für verschiedene Zuordnungen (ConceptMaps).
     Je nach Fehlerquelle werden diese Fehler entweder an das Clientsystem oder an den HTTP Proxy des ZETA Guard adressiert.
-    Nur für die Fehlercodes mit Adressat "Clientsystem" wird eine Fehlerbeschreibung in Form einer VSDMOperationOutcome-Struktur erzeugt, die dann einen Fehlercode aus dem CodeSystem VSDMErrorcodeCS enthält.   
+    Nur für die Fehlercodes mit Adressat "Clientsystem" wird eine Fehlerbeschreibung in Form einer VSDMOperationOutcome-Struktur erzeugt, die dann einen Fehlercode aus dem CodeSystem VSDMErrorcodeCS enthält.
   """
 
 // Property zur Aufnahme des Fehler-Adressaten
 * ^property[+].code = #target
-* ^property[=].uri = "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMBDECodeCS#target"
+* ^property[=].uri = "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS#target"
 * ^property[=].description = "Fehler-Adressat (client = Clientsystem gemäß A_26770; proxy = HTTP Proxy des ZETA Guard gemäß A_26993)"
 * ^property[=].type = #code
 
 // Property zur Benennung möglicher fehlerhafter Felder
 * ^property[+].code = #location
-* ^property[=].uri = "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMBDECodeCS#location"
+* ^property[=].uri = "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS#location"
 * ^property[=].description = "fehlerhafte Felder (zur Versorgung von OperationOutcome.issue.location)"
 * ^property[=].type = #string
 
@@ -31,24 +31,8 @@ Description: "Fehlercodes der Betriebsdatenerfassung (BDE) im Versichertenstammd
       Mögliche Ursachen:
       Fehler im PoPP-Service i.V.m. Fehler im Clientsystem und/oder indirektem Angriffsversuch (PoPP-Service stellt Token trotz fehlerhafter IK aus) oder
       direkter Angriffsversuch (Angreifer kann PoPP-Signaturen fälschen).
+      Relevante Anforderung: A_28604.
     """
-    // TODO Verweis auf neue Anforderung
-  * ^property[+].code = #target
-  * ^property[=].valueCode = #client
-  * ^property[+].code = #location
-  * ^property[=].valueString = "http.ZETA-PoPP-Token-Content.insurerId"
-
-* #79xxx "Unbekannte Institutionskennung [ik]." // TODO hier muss noch ein BDE-Code vergeben werden
-  * ^definition = """
-      Die IK aus dem PoPP-Token ist dem Fachdienst nicht bekannt.
-      Mögliche Ursachen:
-      Implementierungsfehler in der Dienstlokalisierung (Clientsystem schickt korrektes PoPP-Token an den falschen Fachdienst),
-      DNS-Fehler (Namensauflösung Clientsystem liefert IP von falschem Fachdienst),
-      Konfigurationsfehler Fachdienst (z.B. falsche Datenbank-/Backend-Zuordnung),
-      Fehler im PoPP-Service i.V.m. Fehler im Clientsystem und/oder indirektem Angriffsversuch (PoPP-Service stellt Token trotz fehlerhafter IK aus) oder
-      direkter Angriffsversuch (Angreifer kann PoPP-Signaturen fälschen).
-    """
-    // TODO Verweis auf neue Anforderung
   * ^property[+].code = #target
   * ^property[=].valueCode = #client
   * ^property[+].code = #location
@@ -60,31 +44,59 @@ Description: "Fehlercodes der Betriebsdatenerfassung (BDE) im Versichertenstammd
       Mögliche Ursachen:
       Fehler im PoPP-Service i.V.m. Fehler im Clientsystem und/oder indirektem Angriffsversuch (PoPP-Service stellt Token trotz fehlerhafter KVNR aus) oder
       direkter Angriffsversuch (Angreifer kann PoPP-Signaturen fälschen).
+      Relevante Anforderung: A_28606.
     """
-    // TODO Verweis auf neue Anforderung
   * ^property[+].code = #target
   * ^property[=].valueCode = #client
   * ^property[+].code = #location
   * ^property[=].valueString = "http.ZETA-PoPP-Token-Content.patientId"
 
-* #79020 "Die Versichertenstammdaten zur Krankenversichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden."
+* #79012 "Unbekannte Institutionskennung [ik]."
+  * ^definition = """
+      Die IK aus dem PoPP-Token ist dem Fachdienst nicht bekannt.
+      Mögliche Ursachen:
+      Implementierungsfehler in der Dienstlokalisierung (Clientsystem schickt korrektes PoPP-Token an den falschen Fachdienst),
+      DNS-Fehler (Namensauflösung Clientsystem liefert IP von falschem Fachdienst),
+      Konfigurationsfehler Fachdienst (z.B. falsche Datenbank-/Backend-Zuordnung),
+      Fehler im PoPP-Service i.V.m. Fehler im Clientsystem und/oder indirektem Angriffsversuch (PoPP-Service stellt Token trotz fehlerhafter IK aus) oder
+      direkter Angriffsversuch (Angreifer kann PoPP-Signaturen fälschen).
+      Relevante Anforderung: A_28605.
+    """
+  * ^property[+].code = #target
+  * ^property[=].valueCode = #client
+  * ^property[+].code = #location
+  * ^property[=].valueString = "http.ZETA-PoPP-Token-Content.insurerId"
+
+* #79013 "Die Versichertenstammdaten zur Krankenversichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden."
   * ^definition = """
       Die KVNR aus dem PoPP-Token ist dem Fachdienst nicht bekannt.
       Mögliche Ursachen:
       Es existiert kein Versicherungsverhältnis beim adressierten Kostenträger oder das Versicherungsverhältnis ist ausgelaufen, der adressierte Kostenträger ist also nicht mehr zuständig.
+      Relevante Anforderung: A_28607.
     """
-    // TODO Verweis auf neue Anforderung
   * ^property[+].code = #target
   * ^property[=].valueCode = #client
   * ^property[+].code = #location
   * ^property[=].valueString = "http.ZETA-PoPP-Token-Content.insurerId, http.ZETA-PoPP-Token-Content.patientId"
+
+* #79014 "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden."
+  * ^definition = """
+      Der HTTP Header If-none-match fehlt.
+      Mögliche Ursachen:
+      Implementierungsfehler im Clientsystem.
+      Relevante Anforderung: A_26755-01.
+    """
+  * ^property[+].code = #target
+  * ^property[=].valueCode = #client
+  * ^property[+].code = #location
+  * ^property[=].valueString = "http.If-None-Match"
 
 * #79030 "Der HTTP-Header [header] ist undgültig."
   * ^definition = """
       Der genannte HTTP-Header weist Formatfehler auf.
       Mögliche Ursachen:
       Implementierungsfehler im Clientsystem (Verstoß gegen RFC 2616).
-      Relevante Anforderungen: A_26750, A_26751
+      Relevante Anforderungen: A_28608, A_28609.
     """
   * ^property[+].code = #target
   * ^property[=].valueCode = #client
@@ -96,7 +108,7 @@ Description: "Fehlercodes der Betriebsdatenerfassung (BDE) im Versichertenstammd
       Der HTTP-Header Accept enthält nicht unterstütztes Format.
       Mögliche Ursachen:
       Implementierungsfehler im Clientsystem.
-      Relevante Anforderungen: A_26750
+      Relevante Anforderung: A_28610.
     """
   * ^property[+].code = #target
   * ^property[=].valueCode = #client
@@ -108,51 +120,39 @@ Description: "Fehlercodes der Betriebsdatenerfassung (BDE) im Versichertenstammd
       Der HTTP-Header Accept-Encoding enthält nicht unterstütztes Kodierungsverfahren.
       Mögliche Ursachen:
       Implementierungsfehler im Clientsystem.
-      Relevante Anforderungen: A_26751
+      Relevante Anforderung: A_28611.
     """
   * ^property[+].code = #target
   * ^property[=].valueCode = #client
   * ^property[+].code = #location
   * ^property[=].valueString = "http.Accept-Encoding"
 
-* #79033 "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden."
-  * ^definition = """
-      Der HTTP Header If-none-match fehlt.
-      Mögliche Ursachen:
-      Implementierungsfehler im Clientsystem.
-      Relevante Anforderungen: A_26755-01
-    """
-  * ^property[+].code = #target
-  * ^property[=].valueCode = #client
-  * ^property[+].code = #location
-  * ^property[=].valueString = "http.If-None-Match"
-
 * #79040 "Die HTTP-Operation [http-operation] wird nicht unterstützt."
   * ^definition = """
       Die HTTP-Methode ist nicht GET.
       Mögliche Ursachen:
       Fehlkonfiguration ZETA Guard.
-      Relevante Anforderungen: A_26753
+      Relevante Anforderung: A_26753-01.
     """
   * ^property[+].code = #target
-  * ^property[=].valueCode = #proxy
+  * ^property[=].valueCode = #client
 
 * #79041 "Der angefragte Endpunkt [endpoint] wird nicht unterstützt."
   * ^definition = """
       Der HTTP-Endpunkt ist nicht /vsdservice/v1/vsdmbundle.
       Mögliche Ursachen:
       Fehlkonfiguration ZETA Guard.
-      Relevante Anforderungen: A_26735
+      Relevante Anforderung: A_28612.
     """
   * ^property[+].code = #target
-  * ^property[=].valueCode = #proxy
+  * ^property[=].valueCode = #proxy // FIXME: Client UND Proxy werden aktuell nicht unterstützt und führen zu Anforderungskonflikt
 
 * #79100 "Unerwarteter interner Fehler des Fachdienstes VSDM."
   * ^definition = """
       Der Versichertenstammdatendienst ist aktuell nicht in der Lage, die Anfrage zu beantworten.
       (Keine Aussage zu möglichen Ursachen - Protokolle des Resource Servers prüfen.)
+      Relevante Anforderung: A_28613.
     """
-    // TODO Verweis auf neue Anforderung
   * ^property[+].code = #target
   * ^property[=].valueCode = #client
 
@@ -162,7 +162,7 @@ Description: "Fehlercodes der Betriebsdatenerfassung (BDE) im Versichertenstammd
       Mögliche Ursachen:
       Fehlkonfiguration ZETA Guard oder
       Implementierungsfehler ZETA Guard.
-      Relevante Anforderungen: A_26754-01
+      Relevante Anforderung: A_28614.
     """
   * ^property[+].code = #target
   * ^property[=].valueCode = #proxy
@@ -173,7 +173,7 @@ Description: "Fehlercodes der Betriebsdatenerfassung (BDE) im Versichertenstammd
       Mögliche Ursachen:
       Fehlkonfiguration ZETA Guard oder
       Implementierungsfehler ZETA Guard.
-      Relevante Anforderungen: A_26754-01
+      Relevante Anforderung: A_28615.
     """
   * ^property[+].code = #target
   * ^property[=].valueCode = #proxy
@@ -184,7 +184,7 @@ Description: "Fehlercodes der Betriebsdatenerfassung (BDE) im Versichertenstammd
       Mögliche Ursachen:
       Fehlkonfiguration ZETA Guard oder
       Implementierungsfehler ZETA Guard.
-      Relevante Anforderungen: A_26754-01
+      Relevante Anforderung: A_28616.
     """
   * ^property[+].code = #target
   * ^property[=].valueCode = #proxy
@@ -195,7 +195,11 @@ Description: "Fehlercodes der Betriebsdatenerfassung (BDE) im Versichertenstammd
       Mögliche Ursachen:
       Fehlkonfiguration ZETA Guard oder
       Implementierungsfehler ZETA Guard.
-      Relevante Anforderungen: A_26754-01
+      Relevante Anforderung: A_28617.
     """
   * ^property[+].code = #target
   * ^property[=].valueCode = #proxy
+
+// FIXME unbekannter Code 79403 / ZETA_DPOP_VALIDATION_ERROR
+// FIXME unbekannter Code 79404 / ZETA_INVALID_ACCESSTOKEN
+// FIXME unbekannter Code 79405 / ZETA_EXPIRED_ACCESSTOKEN

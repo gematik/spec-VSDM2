@@ -17,7 +17,7 @@
       "details": {
         "coding": [
           {
-            "code": "VSDSERVICE_UNSUPPORTED_MEDIATYPE",
+            "code": "SERVICE_UNSUPPORTED_MEDIATYPE",
             "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
             "display": "DAs vom Clientsystem angefragte Datenformat [media type] wird nicht unterstützt."
           }
