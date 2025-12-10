@@ -32,8 +32,8 @@ Usage: #inline
   * start = "1953-01-01"
   * end = "2024-03-31"
 * payor[+]
-  * reference = "Organization/VSDMPayorOrganization-102249844"
+  * reference = $urlVSDMPayorOrganization-102249844
   * extension[kostentraegerRolle].valueCoding = #H "Haupt-Kostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit
 * payor[+]
-  * reference = "Organization/VSDMPayorOrganization-102186348"
+  * reference = $urlVSDMPayorOrganization-102186348
   * extension[kostentraegerRolle].valueCoding = #A "abrechnender Kostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit

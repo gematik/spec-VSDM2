@@ -184,7 +184,7 @@
                 "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
               }
             ],
-            "reference": "Organization/VSDMPayorOrganization-107933230"
+            "reference": "https://gematik.de/fhir/Organization/019aa691-c9ed-7311-8dde-26b7aeafaa08"
           }
         ],
         "status": "active",
