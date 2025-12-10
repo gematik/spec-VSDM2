@@ -192,6 +192,14 @@
     "endLine": 23
   },
   {
+    "outputFile": "CodeSystem-VSDMISO3166ErgaenzungCS.json",
+    "fshName": "VSDMISO3166ErgaenzungCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMISO3166ErgaenzungCS.fsh",
+    "startLine": 1,
+    "endLine": 35
+  },
+  {
     "outputFile": "CodeSystem-VSDMKostentraegerRolleCS.json",
     "fshName": "VSDMKostentraegerRolleCS",
     "fshType": "CodeSystem",
@@ -470,6 +478,14 @@
     "fshFile": "valuesets/VSDMErrorcodeVS.fsh",
     "startLine": 1,
     "endLine": 8
+  },
+  {
+    "outputFile": "ValueSet-VSDMISO3166ErgaenzungVS.json",
+    "fshName": "VSDMISO3166ErgaenzungVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMISO3166ErgaenzungVS.fsh",
+    "startLine": 1,
+    "endLine": 7
   },
   {
     "outputFile": "ValueSet-VSDMKostentraegerRolleVS.json",

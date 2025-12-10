@@ -1,0 +1,41 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "VSDMISO3166ErgaenzungCS",
+  "id": "VSDMISO3166ErgaenzungCS",
+  "title": "ergänzende Ländercodes",
+  "description": "ergänzende Ländercodes zu ISO 3166-1 im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "version": "1.0.0",
+  "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMISO3166ErgaenzungCS",
+  "concept": [
+    {
+      "code": "XK",
+      "display": "Kosovo, Republic of",
+      "definition": "Die Republik Kosovo ist völkerrechtlich umstritten. \n118 der 193 UNO-Mitglieder - darunter auch Deutschland - haben den Staat bisher anerkannt. \nDie formellen Kriterien für die Zuteilung eines Codes durch die ISO sind seit 2009 erfüllt; bisher ist allerdings kein Code zugeteilt worden.\nDer Code XK entspricht der To Level-Domain .xk und wird in verschiedenen Wirtschaftsbereichen bereits verwendet.\nDie mit X beginnenden Codes sind inoffizielle, behelfmäßige Zuweisungen; der Namensbereich wird von der ISO nicht vergeben.\nEine Kollision ist damit ausgeschlossen, allerdings wird der Code bei Vergabe eines offiziellen Codes ersetzt werden müssen.",
+      "designation": [
+        {
+          "language": "de-DE",
+          "value": "Kosovo, Republik"
+        }
+      ]
+    },
+    {
+      "code": "CP",
+      "display": "Clipperton",
+      "definition": "Clipperton hat seit 1. Januar 2008 den ISO-3166-2-Code FR-CP. \nAußerdem hat Clipperton einen ausnahmsweise reservierten Code ISO 3166-1:CP. \nDieser Code existiert nur aufgrund der Verwendung in anderen Standards und sollte nicht für eine Kodierung nach ISO 3166-1 verwendet werden.\nDa die Clipperton-Insel unbewohnt ist, ist die Praxisrelevanz für VSDM 2.0 gering; der Code dient lediglich der vollständigen Abdeckung durch die ConceptMap.",
+      "designation": [
+        {
+          "language": "de-DE",
+          "value": "Clipperton"
+        }
+      ]
+    }
+  ],
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "date": "2023-12-31",
+  "caseSensitive": true,
+  "purpose": "Im VSDM 2.0 werden Länderkennungen in Adressdaten grundsätzlich nach ISO 3166-1 und für den GKV-Bereich zusätzlich nach DEÜV Anlage 8 kodiert.\nDie DEÜV spiegelt den Stand in den Quellsystemen, aus denen die VSDM 2.0-Fachdienste versorgt werden, wieder.\nIn der DEÜV gibt es Ländercodes, die sich nicht auf den zum Zeitpunkt der Veröffentlichung bestehenden Stand der ISO 3166-1 abbilden lassen.\nDieses CodeSystem enthält zusätzlichen Ländercodes, um eine verlustfreie Abbildung zu ermöglichen.",
+  "count": 2
+}

@@ -23,6 +23,7 @@ Bundle-019aa697-d1e9-7c8b-a283-34cfeae9fc8e.json                        VSDMBund
 Bundle-019aa697-e026-7735-b898-09ead32a7fa5.json                        VSDMBundle-GKV-C345678908                         Instance    examples/VSDMBundle-GKV-C345678908.fsh                         1 - 21
 Bundle-019aa697-f160-72cd-b2eb-923d24dcce1a.json                        VSDMBundle-GKV-B234567895                         Instance    examples/VSDMBundle-GKV-B234567895.fsh                         1 - 24
 CodeSystem-VSDMErrorcodeCS.json                                         VSDMErrorcodeCS                                   CodeSystem  codesystems/VSDMErrorcodeCS.fsh                                1 - 23
+CodeSystem-VSDMISO3166ErgaenzungCS.json                                 VSDMISO3166ErgaenzungCS                           CodeSystem  codesystems/VSDMISO3166ErgaenzungCS.fsh                        1 - 35
 CodeSystem-VSDMKostentraegerRolleCS.json                                VSDMKostentraegerRolleCS                          CodeSystem  codesystems/VSDMKostentraegerRolleCS.fsh                       1 - 13
 CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json                      VSDMRuhenderLeistungsanspruchArtCS                CodeSystem  codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh             1 - 23
 CodeSystem-VSDMVersichertenartPKVCS.json                                VSDMVersichertenartPKVCS                          CodeSystem  codesystems/VSDMVersichertenartPKVCS.fsh                       1 - 21
@@ -58,6 +59,7 @@ StructureDefinition-VSDMTarifartPKV.json                                VSDMTari
 StructureDefinition-VSDMVersichertenartPKV.json                         VSDMVersichertenartPKV                            Extension   extensions/VSDMVersichertenartPKV.fsh                          1 - 20
 ValueSet-VSDMDMPVS.json                                                 VSDMDMPVS                                         ValueSet    valuesets/VSDMDMPVS.fsh                                        1 - 69
 ValueSet-VSDMErrorcodeVS.json                                           VSDMErrorcodeVS                                   ValueSet    valuesets/VSDMErrorcodeVS.fsh                                  1 - 8
+ValueSet-VSDMISO3166ErgaenzungVS.json                                   VSDMISO3166ErgaenzungVS                           ValueSet    valuesets/VSDMISO3166ErgaenzungVS.fsh                          1 - 7
 ValueSet-VSDMKostentraegerRolleVS.json                                  VSDMKostentraegerRolleVS                          ValueSet    valuesets/VSDMKostentraegerRolleVS.fsh                         1 - 7
 ValueSet-VSDMNamenszusatzVS.json                                        VSDMNamenszusatzVS                                ValueSet    valuesets/VSDMNamenszusatzVS.fsh                               1 - 7
 ValueSet-VSDMRuhenderLeistungsanspruchArtVS.json                        VSDMRuhenderLeistungsanspruchArtVS                ValueSet    valuesets/VSDMRuhenderLeistungsanspruchArtVS.fsh               1 - 7
