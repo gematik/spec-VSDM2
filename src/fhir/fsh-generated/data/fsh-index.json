@@ -224,6 +224,14 @@
     "endLine": 21
   },
   {
+    "outputFile": "ConceptMap-VSDMDEUEVAnlage8ISO3166.json",
+    "fshName": "VSDMDEUEVAnlage8ISO3166",
+    "fshType": "Instance",
+    "fshFile": "mappings/VSDMDEUEVAnlage8ISO3166.fsh",
+    "startLine": 1,
+    "endLine": 2031
+  },
+  {
     "outputFile": "ConceptMap-VSDMErrorcodeIssueSeverity.json",
     "fshName": "VSDMErrorcodeIssueSeverity",
     "fshType": "Instance",

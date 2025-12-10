@@ -1,0 +1,2790 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "VSDMDEUEVAnlage8ISO3166",
+  "url": "https://gematik.de/fhir/vsdm2/ConceptMap/VSDMDEUEVAnlage8ISO3166",
+  "title": "DEÜV Anlage 8 zu ISO 3166-1 (erweitert)",
+  "description": "Ermittlung des (temporären) Ländercodes nach ISO 3166-1 aus dem Ländercode nach DEÜV Anlage 8",
+  "status": "draft",
+  "experimental": false,
+  "version": "1.0.0",
+  "publisher": "gematik GmbH",
+  "date": "2023-12-31",
+  "purpose": "Diese ConceptMap ordnet den Ländercodes aus der DEÜV Anlage 8 die korrespondierenden Ländercodes nach ISO 3166-1 zu.\nWo keine offiziellen Ländercodes verfügbar sind, werden temporäre Codes aus einem lokalen CodeSystem verwendet.",
+  "sourceUri": "https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8",
+  "targetUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMISO3166ErgaenzungVS",
+  "group": [
+    {
+      "source": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+      "target": "urn:iso:std:iso:3166",
+      "element": [
+        {
+          "code": "AFG",
+          "display": "Afghanistan",
+          "target": [
+            {
+              "code": "AF",
+              "display": "Afghanistan",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "ET",
+          "display": "Ägypten",
+          "target": [
+            {
+              "code": "EG",
+              "display": "Egypt",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "AX",
+          "display": "Åland",
+          "target": [
+            {
+              "code": "AX",
+              "display": "Eland Islands",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "AL",
+          "display": "Albanien",
+          "target": [
+            {
+              "code": "AL",
+              "display": "Albania",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "DZ",
+          "display": "Algerien",
+          "target": [
+            {
+              "code": "DZ",
+              "display": "Algeria",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "AJ",
+          "display": "Amerik.-Jungferninseln",
+          "target": [
+            {
+              "code": "VI",
+              "display": "Virgin Islands,",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "AS",
+          "display": "Amerikanisch-Samoa",
+          "target": [
+            {
+              "code": "AS",
+              "display": "American Samoa",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "AND",
+          "display": "Andorra",
+          "target": [
+            {
+              "code": "AD",
+              "display": "Andorra",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "AGO",
+          "display": "Angola",
+          "target": [
+            {
+              "code": "AO",
+              "display": "Angola",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "ANG",
+          "display": "Anguilla",
+          "target": [
+            {
+              "code": "AI",
+              "display": "Anguilla",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "ANT",
+          "display": "Antigua und Barbuda",
+          "target": [
+            {
+              "code": "AG",
+              "display": "Antigua and Barbuda",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "AQU",
+          "display": "Äquatorialguinea",
+          "target": [
+            {
+              "code": "GQ",
+              "display": "Equatorial Guinea",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "RA",
+          "display": "Argentinien",
+          "target": [
+            {
+              "code": "AR",
+              "display": "Argentina",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "AQ",
+          "display": "Argentinische Antarktis",
+          "target": [
+            {
+              "code": "AQ",
+              "display": "Antarctica",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "ARM",
+          "display": "Armenien",
+          "target": [
+            {
+              "code": "AM",
+              "display": "Armenia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "AW",
+          "display": "Aruba",
+          "target": [
+            {
+              "code": "AW",
+              "display": "Aruba",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "HEL",
+          "display": "Ascension",
+          "target": [
+            {
+              "code": "SH",
+              "display": "Saint Helena, Ascension and Tristan da Cunha",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "ASE",
+          "display": "Aserbaidschan",
+          "target": [
+            {
+              "code": "AZ",
+              "display": "Azerbaijan",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "ETH",
+          "display": "Äthiopien",
+          "target": [
+            {
+              "code": "ET",
+              "display": "Ethiopia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "AUS",
+          "display": "Australien",
+          "target": [
+            {
+              "code": "AU",
+              "display": "Australia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "BS",
+          "display": "Bahamas",
+          "target": [
+            {
+              "code": "BS",
+              "display": "Bahamas",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "BRN",
+          "display": "Bahrain",
+          "target": [
+            {
+              "code": "BH",
+              "display": "Bahrain",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "BD",
+          "display": "Bangladesch",
+          "target": [
+            {
+              "code": "BD",
+              "display": "Bangladesh",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "BDS",
+          "display": "Barbados",
+          "target": [
+            {
+              "code": "BB",
+              "display": "Barbados",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "BY",
+          "display": "Belarus",
+          "target": [
+            {
+              "code": "BY",
+              "display": "Belarus",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "B",
+          "display": "Belgien",
+          "target": [
+            {
+              "code": "BE",
+              "display": "Belgium",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "BH",
+          "display": "Belize",
+          "target": [
+            {
+              "code": "BZ",
+              "display": "Belize",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "DY",
+          "display": "Benin",
+          "target": [
+            {
+              "code": "BJ",
+              "display": "Benin",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "BER",
+          "display": "Bermuda",
+          "target": [
+            {
+              "code": "BM",
+              "display": "Bermuda",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "BHT",
+          "display": "Bhutan",
+          "target": [
+            {
+              "code": "BT",
+              "display": "Bhutan",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "BOL",
+          "display": "Bolivien",
+          "target": [
+            {
+              "code": "BO",
+              "display": "Bolivia, Plurinational State of",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "BQ",
+          "display": "Bonaire, Saba, St. Eustatius",
+          "target": [
+            {
+              "code": "BQ",
+              "display": "Bonaire, Sint Eustatius and Saba",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "BIH",
+          "display": "Bosnien und Herzegowina",
+          "target": [
+            {
+              "code": "BA",
+              "display": "Bosnia and Herzegovina",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "RB",
+          "display": "Botsuana",
+          "target": [
+            {
+              "code": "BW",
+              "display": "Botswana",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "BV",
+          "display": "Bouvetinsel",
+          "target": [
+            {
+              "code": "BV",
+              "display": "Bouvet Island",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "BR",
+          "display": "Brasilien",
+          "target": [
+            {
+              "code": "BR",
+              "display": "Brazil",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "BJ",
+          "display": "Britische Jungferninseln",
+          "target": [
+            {
+              "code": "VG",
+              "display": "Virgin Islands, British",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "IO",
+          "display": "Britisches Territorium im Indischen Ozean",
+          "target": [
+            {
+              "code": "IO",
+              "display": "British Indian Ocean Territory",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "BRU",
+          "display": "Brunei Darussalam",
+          "target": [
+            {
+              "code": "BN",
+              "display": "Brunei Darussalam",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "BG",
+          "display": "Bulgarien",
+          "target": [
+            {
+              "code": "BG",
+              "display": "Bulgaria",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "HV",
+          "display": "Burkina Faso",
+          "target": [
+            {
+              "code": "BF",
+              "display": "Burkina Faso",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "RU",
+          "display": "Burundi",
+          "target": [
+            {
+              "code": "BI",
+              "display": "Burundi",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "RCH",
+          "display": "Chile",
+          "target": [
+            {
+              "code": "CL",
+              "display": "Chile",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "COI",
+          "display": "Cookinseln",
+          "target": [
+            {
+              "code": "CK",
+              "display": "Cook Islands",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "CR",
+          "display": "Costa Rica",
+          "target": [
+            {
+              "code": "CR",
+              "display": "Costa Rica",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "CI",
+          "display": "Cote d`Ivoire",
+          "target": [
+            {
+              "code": "CI",
+              "display": "Ctte d'Ivoire",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "CW",
+          "display": "Curaçao",
+          "target": [
+            {
+              "code": "CW",
+              "display": "Curagao",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "DK",
+          "display": "Dänemark",
+          "target": [
+            {
+              "code": "DK",
+              "display": "Denmark",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "D",
+          "display": "Deutschland",
+          "target": [
+            {
+              "code": "DE",
+              "display": "Germany",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "WD",
+          "display": "Dominica",
+          "target": [
+            {
+              "code": "DM",
+              "display": "Dominica",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "DOM",
+          "display": "Dominikanische Republik",
+          "target": [
+            {
+              "code": "DO",
+              "display": "Dominican Republic",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "DSC",
+          "display": "Dschibuti",
+          "target": [
+            {
+              "code": "DJ",
+              "display": "Djibouti",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "EC",
+          "display": "Ecuador",
+          "target": [
+            {
+              "code": "EC",
+              "display": "Ecuador",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "ES",
+          "display": "El Salvador",
+          "target": [
+            {
+              "code": "SV",
+              "display": "El Salvador",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "ERI",
+          "display": "Eritrea",
+          "target": [
+            {
+              "code": "ER",
+              "display": "Eritrea",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "EST",
+          "display": "Estland",
+          "target": [
+            {
+              "code": "EE",
+              "display": "Estonia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "SWZ",
+          "display": "Eswatini",
+          "target": [
+            {
+              "code": "SZ",
+              "display": "Swaziland",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "FAL",
+          "display": "Falklandinseln",
+          "target": [
+            {
+              "code": "FK",
+              "display": "Falkland Islands (Malvinas)",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "FR",
+          "display": "Färöer",
+          "target": [
+            {
+              "code": "FO",
+              "display": "Faroe Islands",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "FJI",
+          "display": "Fidschi",
+          "target": [
+            {
+              "code": "FJ",
+              "display": "Fiji",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "FIN",
+          "display": "Finnland",
+          "target": [
+            {
+              "code": "FI",
+              "display": "Finland",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "F",
+          "display": "Frankreich",
+          "target": [
+            {
+              "code": "FR",
+              "display": "France",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "TF",
+          "display": "Französische Süd- und Antarktisgebiete",
+          "target": [
+            {
+              "code": "TF",
+              "display": "French Southern Territories",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "FG",
+          "display": "Franz.-Guayana",
+          "target": [
+            {
+              "code": "GF",
+              "display": "French Guiana",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "FP",
+          "display": "Franz.-Polynesien",
+          "target": [
+            {
+              "code": "PF",
+              "display": "French Polynesia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "GAB",
+          "display": "Gabun",
+          "target": [
+            {
+              "code": "GA",
+              "display": "Gabon",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "WAG",
+          "display": "Gambia",
+          "target": [
+            {
+              "code": "GM",
+              "display": "Gambia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "GEO",
+          "display": "Georgien",
+          "target": [
+            {
+              "code": "GE",
+              "display": "Georgia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "GH",
+          "display": "Ghana",
+          "target": [
+            {
+              "code": "GH",
+              "display": "Ghana",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "GIB",
+          "display": "Gibraltar",
+          "target": [
+            {
+              "code": "GI",
+              "display": "Gibraltar",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "WG",
+          "display": "Grenada",
+          "target": [
+            {
+              "code": "GD",
+              "display": "Grenada",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "GR",
+          "display": "Griechenland",
+          "target": [
+            {
+              "code": "GR",
+              "display": "Greece",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "GRO",
+          "display": "Grönland",
+          "target": [
+            {
+              "code": "GL",
+              "display": "Greenland",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "GUA",
+          "display": "Guadeloupe",
+          "target": [
+            {
+              "code": "GP",
+              "display": "Guadeloupe",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "GUM",
+          "display": "Guam",
+          "target": [
+            {
+              "code": "GU",
+              "display": "Guam",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "GCA",
+          "display": "Guatemala",
+          "target": [
+            {
+              "code": "GT",
+              "display": "Guatemala",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "GG",
+          "display": "Guernsey",
+          "target": [
+            {
+              "code": "GG",
+              "display": "Guernsey",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "RG",
+          "display": "Guinea",
+          "target": [
+            {
+              "code": "GN",
+              "display": "Guinea",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "GUB",
+          "display": "Guinea-Bissau",
+          "target": [
+            {
+              "code": "GW",
+              "display": "Guinea-Bissau",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "GUY",
+          "display": "Guyana",
+          "target": [
+            {
+              "code": "GY",
+              "display": "Guyana",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "RH",
+          "display": "Haiti",
+          "target": [
+            {
+              "code": "HT",
+              "display": "Haiti",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "HM",
+          "display": "Heard und McDonaldinseln",
+          "target": [
+            {
+              "code": "HM",
+              "display": "Heard Island and McDonald Islands",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "HCA",
+          "display": "Honduras",
+          "target": [
+            {
+              "code": "HN",
+              "display": "Honduras",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "HKG",
+          "display": "Hongkong",
+          "target": [
+            {
+              "code": "HK",
+              "display": "Hong Kong",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "IND",
+          "display": "Indien",
+          "target": [
+            {
+              "code": "IN",
+              "display": "India",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "RI",
+          "display": "Indonesien",
+          "target": [
+            {
+              "code": "ID",
+              "display": "Indonesia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MAN",
+          "display": "Insel Man",
+          "target": [
+            {
+              "code": "IM",
+              "display": "Isle of Man",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "IRQ",
+          "display": "Irak",
+          "target": [
+            {
+              "code": "IQ",
+              "display": "Iraq",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "IR",
+          "display": "Iran",
+          "target": [
+            {
+              "code": "IR",
+              "display": "Iran, Islamic Republic of",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "IRL",
+          "display": "Irland",
+          "target": [
+            {
+              "code": "IE",
+              "display": "Ireland",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "IS",
+          "display": "Island",
+          "target": [
+            {
+              "code": "IS",
+              "display": "Iceland",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "IL",
+          "display": "Israel",
+          "target": [
+            {
+              "code": "IL",
+              "display": "Israel",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "I",
+          "display": "Italien",
+          "target": [
+            {
+              "code": "IT",
+              "display": "Italy",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "JA",
+          "display": "Jamaika",
+          "target": [
+            {
+              "code": "JM",
+              "display": "Jamaica",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "J",
+          "display": "Japan",
+          "target": [
+            {
+              "code": "JP",
+              "display": "Japan",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "YEM",
+          "display": "Jemen",
+          "target": [
+            {
+              "code": "YE",
+              "display": "Yemen",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "JE",
+          "display": "Jersey",
+          "target": [
+            {
+              "code": "JE",
+              "display": "Jersey",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "JOR",
+          "display": "Jordanien",
+          "target": [
+            {
+              "code": "JO",
+              "display": "Jordan",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "KAI",
+          "display": "Kaimaninseln",
+          "target": [
+            {
+              "code": "KY",
+              "display": "Cayman Islands",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "K",
+          "display": "Kambodscha",
+          "target": [
+            {
+              "code": "KH",
+              "display": "Cambodia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "CAM",
+          "display": "Kamerun",
+          "target": [
+            {
+              "code": "CM",
+              "display": "Cameroon",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "CDN",
+          "display": "Kanada",
+          "target": [
+            {
+              "code": "CA",
+              "display": "Canada",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "CV",
+          "display": "Cabo Verde",
+          "target": [
+            {
+              "code": "CV",
+              "display": "Cabo Verde",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "KAS",
+          "display": "Kasachstan",
+          "target": [
+            {
+              "code": "KZ",
+              "display": "Kazakhstan",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "QAT",
+          "display": "Katar",
+          "target": [
+            {
+              "code": "QA",
+              "display": "Qatar",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "EAK",
+          "display": "Kenia",
+          "target": [
+            {
+              "code": "KE",
+              "display": "Kenya",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "KIS",
+          "display": "Kirgisistan",
+          "target": [
+            {
+              "code": "KG",
+              "display": "Kyrgyzstan",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "KIB",
+          "display": "Kiribati",
+          "target": [
+            {
+              "code": "KI",
+              "display": "Kiribati",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "CC",
+          "display": "Kokosinseln",
+          "target": [
+            {
+              "code": "CC",
+              "display": "Cocos (Keeling) Islands",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "CO",
+          "display": "Kolumbien",
+          "target": [
+            {
+              "code": "CO",
+              "display": "Colombia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "KOM",
+          "display": "Komoren",
+          "target": [
+            {
+              "code": "KM",
+              "display": "Comoros",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "RCB",
+          "display": "Kongo(-Brazzaville), Republik",
+          "target": [
+            {
+              "code": "CG",
+              "display": "Congo",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "ZRE",
+          "display": "Kongo, Demokratische Republik (ehem. Zaire)",
+          "target": [
+            {
+              "code": "CD",
+              "display": "Congo, the Democratic Republic of the",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "KOR",
+          "display": "Korea, Demokratische Volksrepublik (Nordkorea)",
+          "target": [
+            {
+              "code": "KP",
+              "display": "Korea, Democratic People's Republic of",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "ROK",
+          "display": "Korea, Republik (Südkorea)",
+          "target": [
+            {
+              "code": "KR",
+              "display": "Korea, Republic of",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "HR",
+          "display": "Kroatien",
+          "target": [
+            {
+              "code": "HR",
+              "display": "Croatia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "C",
+          "display": "Kuba",
+          "target": [
+            {
+              "code": "CU",
+              "display": "Cuba",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "KWT",
+          "display": "Kuwait",
+          "target": [
+            {
+              "code": "KW",
+              "display": "Kuwait",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "LAO",
+          "display": "Laos",
+          "target": [
+            {
+              "code": "LA",
+              "display": "Lao People's Democratic Republic",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "LS",
+          "display": "Lesotho",
+          "target": [
+            {
+              "code": "LS",
+              "display": "Lesotho",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "LV",
+          "display": "Lettland",
+          "target": [
+            {
+              "code": "LV",
+              "display": "Latvia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "RL",
+          "display": "Libanon",
+          "target": [
+            {
+              "code": "LB",
+              "display": "Lebanon",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "LB",
+          "display": "Liberia",
+          "target": [
+            {
+              "code": "LR",
+              "display": "Liberia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "LAR",
+          "display": "Libyen",
+          "target": [
+            {
+              "code": "LY",
+              "display": "Libya",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "FL",
+          "display": "Liechtenstein",
+          "target": [
+            {
+              "code": "LI",
+              "display": "Liechtenstein",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "LT",
+          "display": "Litauen",
+          "target": [
+            {
+              "code": "LT",
+              "display": "Lithuania",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "L",
+          "display": "Luxemburg",
+          "target": [
+            {
+              "code": "LU",
+              "display": "Luxembourg",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MAC",
+          "display": "Macau",
+          "target": [
+            {
+              "code": "MO",
+              "display": "Macao",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "RM",
+          "display": "Madagaskar",
+          "target": [
+            {
+              "code": "MG",
+              "display": "Madagascar",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MW",
+          "display": "Malawi",
+          "target": [
+            {
+              "code": "MW",
+              "display": "Malawi",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MAL",
+          "display": "Malaysia",
+          "target": [
+            {
+              "code": "MY",
+              "display": "Malaysia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "BIO",
+          "display": "Malediven",
+          "target": [
+            {
+              "code": "MV",
+              "display": "Maldives",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "RMM",
+          "display": "Mali",
+          "target": [
+            {
+              "code": "ML",
+              "display": "Mali",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "M",
+          "display": "Malta",
+          "target": [
+            {
+              "code": "MT",
+              "display": "Malta",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MA",
+          "display": "Marokko",
+          "target": [
+            {
+              "code": "MA",
+              "display": "Morocco",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MAR",
+          "display": "Marshallinseln",
+          "target": [
+            {
+              "code": "MH",
+              "display": "Marshall Islands",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MAT",
+          "display": "Martinique",
+          "target": [
+            {
+              "code": "MQ",
+              "display": "Martinique",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "RIM",
+          "display": "Mauretanien",
+          "target": [
+            {
+              "code": "MR",
+              "display": "Mauritania",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MS",
+          "display": "Mauritius",
+          "target": [
+            {
+              "code": "MU",
+              "display": "Mauritius",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MAY",
+          "display": "Mayotte",
+          "target": [
+            {
+              "code": "YT",
+              "display": "Mayotte",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MEX",
+          "display": "Mexiko",
+          "target": [
+            {
+              "code": "MX",
+              "display": "Mexico",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MIK",
+          "display": "Mikronesien",
+          "target": [
+            {
+              "code": "FM",
+              "display": "Micronesia, Federated States of",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MD",
+          "display": "Moldau",
+          "target": [
+            {
+              "code": "MD",
+              "display": "Moldova, Republic of",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MC",
+          "display": "Monaco",
+          "target": [
+            {
+              "code": "MC",
+              "display": "Monaco",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MON",
+          "display": "Mongolei",
+          "target": [
+            {
+              "code": "MN",
+              "display": "Mongolia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MNE",
+          "display": "Montenegro",
+          "target": [
+            {
+              "code": "ME",
+              "display": "Montenegro",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MOT",
+          "display": "Montserrat",
+          "target": [
+            {
+              "code": "MS",
+              "display": "Montserrat",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MOZ",
+          "display": "Mosambik",
+          "target": [
+            {
+              "code": "MZ",
+              "display": "Mozambique",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MYA",
+          "display": "Myanmar",
+          "target": [
+            {
+              "code": "MM",
+              "display": "Myanmar",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "SWA",
+          "display": "Namibia",
+          "target": [
+            {
+              "code": "NA",
+              "display": "Namibia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "NAU",
+          "display": "Nauru",
+          "target": [
+            {
+              "code": "NR",
+              "display": "Nauru",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "UM",
+          "display": "Navassa",
+          "target": [
+            {
+              "code": "UM",
+              "display": "United States Minor Outlying Islands",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "NEP",
+          "display": "Nepal",
+          "target": [
+            {
+              "code": "NP",
+              "display": "Nepal",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "NKA",
+          "display": "Neukaledonien",
+          "target": [
+            {
+              "code": "NC",
+              "display": "New Caledonia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "NZ",
+          "display": "Neuseeland",
+          "target": [
+            {
+              "code": "NZ",
+              "display": "New Zealand",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "NIC",
+          "display": "Nicaragua",
+          "target": [
+            {
+              "code": "NI",
+              "display": "Nicaragua",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "NL",
+          "display": "Niederlande",
+          "target": [
+            {
+              "code": "NL",
+              "display": "Netherlands",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "RN",
+          "display": "Niger",
+          "target": [
+            {
+              "code": "NE",
+              "display": "Niger",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "WAN",
+          "display": "Nigeria",
+          "target": [
+            {
+              "code": "NG",
+              "display": "Nigeria",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "NIU",
+          "display": "Niue",
+          "target": [
+            {
+              "code": "NU",
+              "display": "Niue",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MK",
+          "display": "Nordmazedonien",
+          "target": [
+            {
+              "code": "MK",
+              "display": "Macedonia, the former Yugoslav Republic of",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "NMA",
+          "display": "Nördliche Marianen",
+          "target": [
+            {
+              "code": "MP",
+              "display": "Northern Mariana Islands",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "NF",
+          "display": "Norfolkinsel",
+          "target": [
+            {
+              "code": "NF",
+              "display": "Norfolk Island",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "N",
+          "display": "Norwegen",
+          "target": [
+            {
+              "code": "NO",
+              "display": "Norway",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MAO",
+          "display": "Oman",
+          "target": [
+            {
+              "code": "OM",
+              "display": "Oman",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "A",
+          "display": "Österreich",
+          "target": [
+            {
+              "code": "AT",
+              "display": "Austria",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "PK",
+          "display": "Pakistan",
+          "target": [
+            {
+              "code": "PK",
+              "display": "Pakistan",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "PSE",
+          "display": "Palästinensische Gebiete",
+          "target": [
+            {
+              "code": "PS",
+              "display": "Palestine, State of",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "PAL",
+          "display": "Palau",
+          "target": [
+            {
+              "code": "PW",
+              "display": "Palau",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "PA",
+          "display": "Panama",
+          "target": [
+            {
+              "code": "PA",
+              "display": "Panama",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "PNG",
+          "display": "Papua-Neugiunea",
+          "target": [
+            {
+              "code": "PG",
+              "display": "Papua New Guinea",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "PY",
+          "display": "Paraguay",
+          "target": [
+            {
+              "code": "PY",
+              "display": "Paraguay",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "PE",
+          "display": "Peru",
+          "target": [
+            {
+              "code": "PE",
+              "display": "Peru",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "RP",
+          "display": "Philippinen",
+          "target": [
+            {
+              "code": "PH",
+              "display": "Philippines",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "PIT",
+          "display": "Pitcairninseln",
+          "target": [
+            {
+              "code": "PN",
+              "display": "Pitcairn",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "PL",
+          "display": "Polen",
+          "target": [
+            {
+              "code": "PL",
+              "display": "Poland",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "P",
+          "display": "Portugal",
+          "target": [
+            {
+              "code": "PT",
+              "display": "Portugal",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "PRI",
+          "display": "Puerto Rico",
+          "target": [
+            {
+              "code": "PR",
+              "display": "Puerto Rico",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "REU",
+          "display": "Réunion",
+          "target": [
+            {
+              "code": "RE",
+              "display": "Riunion",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "RWA",
+          "display": "Ruanda",
+          "target": [
+            {
+              "code": "RW",
+              "display": "Rwanda",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "RO",
+          "display": "Rumänien",
+          "target": [
+            {
+              "code": "RO",
+              "display": "Romania",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "RUS",
+          "display": "Russische Föderation",
+          "target": [
+            {
+              "code": "RU",
+              "display": "Russian Federation",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "PIE",
+          "display": "Saint Pierre und Miquelon",
+          "target": [
+            {
+              "code": "PM",
+              "display": "Saint Pierre and Miquelon",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "SOL",
+          "display": "Salomonen",
+          "target": [
+            {
+              "code": "SB",
+              "display": "Solomon Islands",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "Z",
+          "display": "Sambia",
+          "target": [
+            {
+              "code": "ZM",
+              "display": "Zambia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "WS",
+          "display": "Samoa",
+          "target": [
+            {
+              "code": "WS",
+              "display": "Samoa",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "RSM",
+          "display": "San Marino",
+          "target": [
+            {
+              "code": "SM",
+              "display": "San Marino",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "STP",
+          "display": "Sao Tomé und Principe",
+          "target": [
+            {
+              "code": "ST",
+              "display": "Sao Tome and Principe",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "SAU",
+          "display": "Saudi-Arabien",
+          "target": [
+            {
+              "code": "SA",
+              "display": "Saudi Arabia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "S",
+          "display": "Schweden",
+          "target": [
+            {
+              "code": "SE",
+              "display": "Sweden",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "CH",
+          "display": "Schweiz",
+          "target": [
+            {
+              "code": "CH",
+              "display": "Switzerland",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "SN",
+          "display": "Senegal",
+          "target": [
+            {
+              "code": "SN",
+              "display": "Senegal",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "SRB",
+          "display": "Serbien",
+          "target": [
+            {
+              "code": "RS",
+              "display": "Serbia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "SY",
+          "display": "Seychellen",
+          "target": [
+            {
+              "code": "SC",
+              "display": "Seychelles",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "WAL",
+          "display": "Sierra Leone",
+          "target": [
+            {
+              "code": "SL",
+              "display": "Sierra Leone",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "ZW",
+          "display": "Simbabwe",
+          "target": [
+            {
+              "code": "ZW",
+              "display": "Zimbabwe",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "SGP",
+          "display": "Singapur",
+          "target": [
+            {
+              "code": "SG",
+              "display": "Singapore",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "SK",
+          "display": "Slowakei",
+          "target": [
+            {
+              "code": "SK",
+              "display": "Slovakia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "SLO",
+          "display": "Slowenien",
+          "target": [
+            {
+              "code": "SI",
+              "display": "Slovenia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "SP",
+          "display": "Somalia",
+          "target": [
+            {
+              "code": "SO",
+              "display": "Somalia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "E",
+          "display": "Spanien",
+          "target": [
+            {
+              "code": "ES",
+              "display": "Spain",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "CL",
+          "display": "Sri Lanka",
+          "target": [
+            {
+              "code": "LK",
+              "display": "Sri Lanka",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "BL",
+          "display": "St. Barthélemy",
+          "target": [
+            {
+              "code": "BL",
+              "display": "Saint Barthilemy",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "SCN",
+          "display": "St. Kitts und Nevis",
+          "target": [
+            {
+              "code": "KN",
+              "display": "Saint Kitts and Nevis",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "WL",
+          "display": "St. Lucia",
+          "target": [
+            {
+              "code": "LC",
+              "display": "Saint Lucia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "MF",
+          "display": "St. Martin (französischer Teil)",
+          "target": [
+            {
+              "code": "MF",
+              "display": "Saint Martin (French part)",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "SX",
+          "display": "St. Martin (niederländischer Teil)",
+          "target": [
+            {
+              "code": "SX",
+              "display": "Sint Maarten (Dutch part)",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "WV",
+          "display": "St. Vincent und die Grenadinen",
+          "target": [
+            {
+              "code": "VC",
+              "display": "Saint Vincent and the Grenadines",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "ZA",
+          "display": "Südafrika",
+          "target": [
+            {
+              "code": "ZA",
+              "display": "South Africa",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "SDN",
+          "display": "Sudan",
+          "target": [
+            {
+              "code": "SD",
+              "display": "Sudan",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "GS",
+          "display": "Südgeorgien und die südlichen Sandwichinseln",
+          "target": [
+            {
+              "code": "GS",
+              "display": "South Georgia and the South Sandwich Islands",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "SSD",
+          "display": "Südsudan",
+          "target": [
+            {
+              "code": "SS",
+              "display": "South Sudan",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "SME",
+          "display": "Suriname",
+          "target": [
+            {
+              "code": "SR",
+              "display": "Suriname",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "SJ",
+          "display": "Svalbard und Jan Mayen",
+          "target": [
+            {
+              "code": "SJ",
+              "display": "Svalbard and Jan Mayen",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "SYR",
+          "display": "Syrien",
+          "target": [
+            {
+              "code": "SY",
+              "display": "Syrian Arab Republic",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "TAD",
+          "display": "Tadschikistan",
+          "target": [
+            {
+              "code": "TJ",
+              "display": "Tajikistan",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "TWN",
+          "display": "Taiwan",
+          "target": [
+            {
+              "code": "TW",
+              "display": "Taiwan, Province of China",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "EAT",
+          "display": "Tansania",
+          "target": [
+            {
+              "code": "TZ",
+              "display": "Tanzania, United Republic of",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "T",
+          "display": "Thailand",
+          "target": [
+            {
+              "code": "TH",
+              "display": "Thailand",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "TJ",
+          "display": "China",
+          "target": [
+            {
+              "code": "CN",
+              "display": "China",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "OTI",
+          "display": "Timor-Leste",
+          "target": [
+            {
+              "code": "TL",
+              "display": "Timor-Leste",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "TG",
+          "display": "Togo",
+          "target": [
+            {
+              "code": "TG",
+              "display": "Togo",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "TOK",
+          "display": "Tokelau",
+          "target": [
+            {
+              "code": "TK",
+              "display": "Tokelau",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "TON",
+          "display": "Tonga",
+          "target": [
+            {
+              "code": "TO",
+              "display": "Tonga",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "TT",
+          "display": "Trinidad und Tobago",
+          "target": [
+            {
+              "code": "TT",
+              "display": "Trinidad and Tobago",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "CHD",
+          "display": "Tschad",
+          "target": [
+            {
+              "code": "TD",
+              "display": "Chad",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "CZ",
+          "display": "Tschechien",
+          "target": [
+            {
+              "code": "CZ",
+              "display": "Czechia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "TN",
+          "display": "Tunesien",
+          "target": [
+            {
+              "code": "TN",
+              "display": "Tunisia",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "TR",
+          "display": "Türkei",
+          "target": [
+            {
+              "code": "TR",
+              "display": "Turkey",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "TUR",
+          "display": "Turkmenistan",
+          "target": [
+            {
+              "code": "TM",
+              "display": "Turkmenistan",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "TUC",
+          "display": "Turks- und Caicosinseln",
+          "target": [
+            {
+              "code": "TC",
+              "display": "Turks and Caicos Islands",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "TUV",
+          "display": "Tuvalu",
+          "target": [
+            {
+              "code": "TV",
+              "display": "Tuvalu",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "EAU",
+          "display": "Uganda",
+          "target": [
+            {
+              "code": "UG",
+              "display": "Uganda",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "UA",
+          "display": "Ukraine",
+          "target": [
+            {
+              "code": "UA",
+              "display": "Ukraine",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "H",
+          "display": "Ungarn",
+          "target": [
+            {
+              "code": "HU",
+              "display": "Hungary",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "ROU",
+          "display": "Uruguay",
+          "target": [
+            {
+              "code": "UY",
+              "display": "Uruguay",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "USB",
+          "display": "Usbekistan",
+          "target": [
+            {
+              "code": "UZ",
+              "display": "Uzbekistan",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "VAN",
+          "display": "Vanuatu",
+          "target": [
+            {
+              "code": "VU",
+              "display": "Vanuatu",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "V",
+          "display": "Vatikanstadt",
+          "target": [
+            {
+              "code": "VA",
+              "display": "Holy See",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "YV",
+          "display": "Venezuela",
+          "target": [
+            {
+              "code": "VE",
+              "display": "Venezuela, Bolivarian Republic of",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "UAE",
+          "display": "Vereinigte Arabische Emirate",
+          "target": [
+            {
+              "code": "AE",
+              "display": "United Arab Emirates",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "USA",
+          "display": "Vereinigte Staaten",
+          "target": [
+            {
+              "code": "US",
+              "display": "United States of America",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "GB",
+          "display": "Vereinigtes Königreich",
+          "target": [
+            {
+              "code": "GB",
+              "display": "United Kingdom of Great Britain and Northern Ireland",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "VN",
+          "display": "Vietnam",
+          "target": [
+            {
+              "code": "VN",
+              "display": "Viet Nam",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "WF",
+          "display": "Wallis und Futuna",
+          "target": [
+            {
+              "code": "WF",
+              "display": "Wallis and Futuna",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "CX",
+          "display": "Weihnachtsinsel",
+          "target": [
+            {
+              "code": "CX",
+              "display": "Christmas Island",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "EH",
+          "display": "Westsahara",
+          "target": [
+            {
+              "code": "EH",
+              "display": "Western Sahara",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "RCA",
+          "display": "Zentralafrikanische Republik",
+          "target": [
+            {
+              "code": "CF",
+              "display": "Central African Republic",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "CY",
+          "display": "Zypern",
+          "target": [
+            {
+              "code": "CY",
+              "display": "Cyprus",
+              "equivalence": "equal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+      "target": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMISO3166ErgaenzungCS",
+      "element": [
+        {
+          "code": "KOS",
+          "display": "Kosovo",
+          "target": [
+            {
+              "code": "XK",
+              "display": "Kosovo, Republic of",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "CP",
+          "display": "Clipperton",
+          "target": [
+            {
+              "code": "CP",
+              "display": "Clipperton",
+              "equivalence": "equal"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
