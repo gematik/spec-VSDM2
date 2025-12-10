@@ -239,6 +239,15 @@
         "path": "Patient.address.country",
         "definition": "Staatsangabe",
         "comment": "Hier ist die Staatsangabe im Volltext (z.B. zur postalischen Adressierung) anzugeben.",
+        "constraint": [
+          {
+            "key": "country-any-iso3166-present-1",
+            "severity": "error",
+            "human": "Das Land muss nach ISO 3166-1 oder mit temporärem Code kodiert werden.",
+            "expression": "extension('http://hl7.org/fhir/StructureDefinition/iso21090-codedString').value.ofType(Coding).where(system = 'urn:iso:std:iso:3166' or system = 'https://gematik.de/fhir/vsdm2/CodeSystem/VSDMISO3166ErgaenzungCS').count() = 1",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -256,8 +265,7 @@
               "path": "value.ofType(Coding).system"
             }
           ]
-        },
-        "min": 1
+        }
       },
       {
         "id": "Patient.address:StrassenAdresse.country.extension:countryCode",
@@ -266,7 +274,7 @@
         "short": "Länderkennzeichen nach ISO 3166-1",
         "definition": "Kodierte Angabe des Länderkennzeichens nach ISO 3166-1.",
         "comment": "Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur [Kodierung der Landesangabe](https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html).\nDurch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.\nDie Bindung ist erweiterbar ausgeführt, um die Verwendung vorläufiger Codes zu ermöglichen.",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -290,6 +298,38 @@
         "id": "Patient.address:StrassenAdresse.country.extension:countryCode.value[x].system",
         "path": "Patient.address.country.extension.value[x].system",
         "fixedUri": "urn:iso:std:iso:3166"
+      },
+      {
+        "id": "Patient.address:StrassenAdresse.country.extension:temporaryCountryCode",
+        "path": "Patient.address.country.extension",
+        "sliceName": "temporaryCountryCode",
+        "short": "Länderkennzeichen in Anlehnung an ISO 3166-1",
+        "definition": "Kodierte Angabe des Länderkennzeichens mit temporärem Wert in Anlehnung an ISO 3166-1.",
+        "comment": "In der DEÜV gibt es Ländercodes, die sich nicht auf den zum Zeitpunkt der Veröffentlichung bestehenden Stand der ISO 3166-1 abbilden lassen.\nUm eine Abbildung ohne Informationsverlust zu ermöglichen, wird mit diesem Slice die Verwendung eines alternativen CodeSystem ermöglicht.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/iso21090-codedString"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:StrassenAdresse.country.extension:temporaryCountryCode.value[x]",
+        "path": "Patient.address.country.extension.value[x]",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMISO3166ErgaenzungVS"
+        }
+      },
+      {
+        "id": "Patient.address:StrassenAdresse.country.extension:temporaryCountryCode.value[x].system",
+        "path": "Patient.address.country.extension.value[x].system",
+        "fixedUri": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMISO3166ErgaenzungCS"
       },
       {
         "id": "Patient.address:StrassenAdresse.country.extension:anlage8",
@@ -378,6 +418,15 @@
         "path": "Patient.address.country",
         "definition": "Staatsangabe",
         "comment": "Hier ist die Staatsangabe im Volltext (z.B. zur postalischen Adressierung) anzugeben.",
+        "constraint": [
+          {
+            "key": "country-any-iso3166-present-1",
+            "severity": "error",
+            "human": "Das Land muss nach ISO 3166-1 oder mit temporärem Code kodiert werden.",
+            "expression": "extension('http://hl7.org/fhir/StructureDefinition/iso21090-codedString').value.ofType(Coding).where(system = 'urn:iso:std:iso:3166' or system = 'https://gematik.de/fhir/vsdm2/CodeSystem/VSDMISO3166ErgaenzungCS').count() = 1",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -395,8 +444,7 @@
               "path": "value.ofType(Coding).system"
             }
           ]
-        },
-        "min": 1
+        }
       },
       {
         "id": "Patient.address:PostfachAdresse.country.extension:countryCode",
@@ -405,7 +453,7 @@
         "short": "Länderkennzeichen nach ISO 3166-1",
         "definition": "Kodierte Angabe des Länderkennzeichens nach ISO 3166-1.",
         "comment": "Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur [Kodierung der Landesangabe](https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html).\nDurch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.\nDie Bindung ist erweiterbar ausgeführt, um die Verwendung vorläufiger Codes zu ermöglichen.",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -429,6 +477,38 @@
         "id": "Patient.address:PostfachAdresse.country.extension:countryCode.value[x].system",
         "path": "Patient.address.country.extension.value[x].system",
         "fixedUri": "urn:iso:std:iso:3166"
+      },
+      {
+        "id": "Patient.address:PostfachAdresse.country.extension:temporaryCountryCode",
+        "path": "Patient.address.country.extension",
+        "sliceName": "temporaryCountryCode",
+        "short": "Länderkennzeichen in Anlehnung an ISO 3166-1",
+        "definition": "Kodierte Angabe des Länderkennzeichens mit temporärem Wert in Anlehnung an ISO 3166-1.",
+        "comment": "In der DEÜV gibt es Ländercodes, die sich nicht auf den zum Zeitpunkt der Veröffentlichung bestehenden Stand der ISO 3166-1 abbilden lassen.\nUm eine Abbildung ohne Informationsverlust zu ermöglichen, wird mit diesem Slice die Verwendung eines alternativen CodeSystem ermöglicht.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/iso21090-codedString"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:PostfachAdresse.country.extension:temporaryCountryCode.value[x]",
+        "path": "Patient.address.country.extension.value[x]",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMISO3166ErgaenzungVS"
+        }
+      },
+      {
+        "id": "Patient.address:PostfachAdresse.country.extension:temporaryCountryCode.value[x].system",
+        "path": "Patient.address.country.extension.value[x].system",
+        "fixedUri": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMISO3166ErgaenzungCS"
       },
       {
         "id": "Patient.address:PostfachAdresse.country.extension:anlage8",
