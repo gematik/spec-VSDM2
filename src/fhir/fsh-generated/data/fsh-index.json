@@ -184,6 +184,14 @@
     "endLine": 24
   },
   {
+    "outputFile": "Bundle-019b0758-2d32-7576-99c7-f90818235c4f.json",
+    "fshName": "VSDMBundle-GKV-P678901232",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMBundle-GKV-P678901232.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
     "outputFile": "CodeSystem-VSDMErrorcodeCS.json",
     "fshName": "VSDMErrorcodeCS",
     "fshType": "CodeSystem",
