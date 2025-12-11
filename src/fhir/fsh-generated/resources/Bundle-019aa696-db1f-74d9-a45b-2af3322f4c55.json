@@ -188,7 +188,7 @@
         },
         "payor": [
           {
-            "reference": "Organization/VSDMPayorOrganization-168134565"
+            "reference": "https://gematik.de/fhir/Organization/019aa691-3a52-7536-acd9-2ec675894780"
           }
         ]
       }

@@ -182,7 +182,7 @@
         },
         "payor": [
           {
-            "reference": "Organization/VSDMPayorOrganization-168123458"
+            "reference": "https://gematik.de/fhir/Organization/019aa691-5647-7b09-905e-e0130ecd0bbd"
           }
         ]
       }

@@ -23,4 +23,4 @@ Usage: #inline
 * period
   * start = "2020-01-01"
 * payor[+]
-  * reference = "Organization/VSDMPayorOrganization-168112342"
+  * reference = $urlVSDMPayorOrganization-168112342
