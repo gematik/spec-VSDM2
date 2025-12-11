@@ -184,12 +184,28 @@
     "endLine": 24
   },
   {
+    "outputFile": "Bundle-019b0758-2d32-7576-99c7-f90818235c4f.json",
+    "fshName": "VSDMBundle-GKV-P678901232",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMBundle-GKV-P678901232.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
     "outputFile": "CodeSystem-VSDMErrorcodeCS.json",
     "fshName": "VSDMErrorcodeCS",
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMErrorcodeCS.fsh",
     "startLine": 1,
     "endLine": 23
+  },
+  {
+    "outputFile": "CodeSystem-VSDMISO3166ErgaenzungCS.json",
+    "fshName": "VSDMISO3166ErgaenzungCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMISO3166ErgaenzungCS.fsh",
+    "startLine": 1,
+    "endLine": 35
   },
   {
     "outputFile": "CodeSystem-VSDMKostentraegerRolleCS.json",
@@ -214,6 +230,14 @@
     "fshFile": "codesystems/VSDMVersichertenartPKVCS.fsh",
     "startLine": 1,
     "endLine": 21
+  },
+  {
+    "outputFile": "ConceptMap-VSDMDEUEVAnlage8ISO3166.json",
+    "fshName": "VSDMDEUEVAnlage8ISO3166",
+    "fshType": "Instance",
+    "fshFile": "mappings/VSDMDEUEVAnlage8ISO3166.fsh",
+    "startLine": 1,
+    "endLine": 2031
   },
   {
     "outputFile": "ConceptMap-VSDMErrorcodeIssueSeverity.json",
@@ -470,6 +494,14 @@
     "fshFile": "valuesets/VSDMErrorcodeVS.fsh",
     "startLine": 1,
     "endLine": 8
+  },
+  {
+    "outputFile": "ValueSet-VSDMISO3166ErgaenzungVS.json",
+    "fshName": "VSDMISO3166ErgaenzungVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMISO3166ErgaenzungVS.fsh",
+    "startLine": 1,
+    "endLine": 7
   },
   {
     "outputFile": "ValueSet-VSDMKostentraegerRolleVS.json",

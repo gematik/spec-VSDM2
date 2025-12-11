@@ -34,7 +34,8 @@ RuleSet: Address-Country
   * ^slicing.discriminator[=].path = "url"
   * ^slicing.discriminator[+].type = #value
   * ^slicing.discriminator[=].path = "value.ofType(Coding).system"
-* extension contains $extCodedString named countryCode 1..1 MS and
+* extension contains $extCodedString named countryCode 0..1 MS and
+                     $extCodedString named temporaryCountryCode 0..1 MS and
                      $extCodedString named anlage8 0..1 MS
 * extension[countryCode]
   * ^short = "Länderkennzeichen nach ISO 3166-1"
@@ -48,6 +49,17 @@ RuleSet: Address-Country
     """
   * valueCoding from $vsCountryCodeISO3166 (extensible)
   * valueCoding.system = $csCountryCodeISO3166 (exactly)
+* extension[temporaryCountryCode]
+  * ^short = "Länderkennzeichen in Anlehnung an ISO 3166-1"
+  * ^definition = """
+      Kodierte Angabe des Länderkennzeichens mit temporärem Wert in Anlehnung an ISO 3166-1.
+    """
+  * ^comment = """
+      In der DEÜV gibt es Ländercodes, die sich nicht auf den zum Zeitpunkt der Veröffentlichung bestehenden Stand der ISO 3166-1 abbilden lassen.
+      Um eine Abbildung ohne Informationsverlust zu ermöglichen, wird mit diesem Slice die Verwendung eines alternativen CodeSystem ermöglicht.
+    """
+  * valueCoding from VSDMISO3166ErgaenzungVS (extensible)
+  * valueCoding.system = Canonical(VSDMISO3166ErgaenzungCS) (exactly)
 * extension[anlage8] 
   * ^short = "Länderkennzeichen nach DEÜV Anlage 8"
   * ^definition = """
@@ -58,3 +70,4 @@ RuleSet: Address-Country
     """
   * valueCoding from $vsAnlage8Laenderkennzeichen (required)
   * valueCoding.system = $csAnlage8Laenderkennzeichen (exactly)
+* obeys country-any-iso3166-present-1
