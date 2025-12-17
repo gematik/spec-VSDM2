@@ -22,5 +22,5 @@ Usage: #inline
   * city = "Prishtina"
   * postalCode = "10000"
   * country = "Kosovo"
-    * extension[temporaryCountryCode].valueCoding = VSDMISO3166ErgaenzungCS#XK
+    * extension[countryCode].valueCoding = VSDMISO3166ErgaenzungCS#XK
     * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#KOS

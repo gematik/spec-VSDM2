@@ -496,12 +496,12 @@
     "endLine": 8
   },
   {
-    "outputFile": "ValueSet-VSDMISO3166ErgaenzungVS.json",
-    "fshName": "VSDMISO3166ErgaenzungVS",
+    "outputFile": "ValueSet-VSDMISO3166VS.json",
+    "fshName": "VSDMISO3166VS",
     "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMISO3166ErgaenzungVS.fsh",
+    "fshFile": "valuesets/VSDMISO3166VS.fsh",
     "startLine": 1,
-    "endLine": 7
+    "endLine": 8
   },
   {
     "outputFile": "ValueSet-VSDMKostentraegerRolleVS.json",
