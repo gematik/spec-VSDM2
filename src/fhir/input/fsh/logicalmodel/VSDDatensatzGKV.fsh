@@ -27,7 +27,7 @@ Description: """
       // Typ AN ist hier auf den ersten Blick unerwartet, hängt aber vielleicht mit der Definition von ISO8601Date zusammen.
     * Vorname 1..1 string "Vorname des Versicherten" """
         Gibt den Vornamen der Person an.
-        Alle Vornamen der Person (max. 5) werden eingegeben. Mehrere Vornamen werden durch Leerzeichen oder Bindestrich getrennt.
+        Es werden alle Vornamen der Person angegeben. Mehrere Vornamen werden durch Leerzeichen oder Bindestrich getrennt.
         Länge: 45
         Typ: AN
       """

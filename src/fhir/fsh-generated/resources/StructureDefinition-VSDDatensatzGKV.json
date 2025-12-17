@@ -104,7 +104,7 @@
         "id": "VSDDatensatzGKV.Versichertendaten.Versicherter.Vorname",
         "path": "VSDDatensatzGKV.Versichertendaten.Versicherter.Vorname",
         "short": "Vorname des Versicherten",
-        "definition": "Gibt den Vornamen der Person an.\nAlle Vornamen der Person (max. 5) werden eingegeben. Mehrere Vornamen werden durch Leerzeichen oder Bindestrich getrennt.\nLänge: 45\nTyp: AN",
+        "definition": "Gibt den Vornamen der Person an.\nEs werden alle Vornamen der Person angegeben. Mehrere Vornamen werden durch Leerzeichen oder Bindestrich getrennt.\nLänge: 45\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
