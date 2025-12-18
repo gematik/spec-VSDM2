@@ -11,7 +11,7 @@ Usage: #definition
   """
 
 * sourceUri = $vsAnlage8Laenderkennzeichen
-* targetUri = $vsCountryCodeISO3166
+* targetUri = Canonical(VSDMISO3166VS)
 * group[+]
   * source = $csAnlage8Laenderkennzeichen
   * target = $csCountryCodeISO3166
@@ -2009,7 +2009,7 @@ Usage: #definition
       * equivalence = #equal
 
 * sourceUri = $vsAnlage8Laenderkennzeichen
-* targetUri = Canonical(VSDMISO3166ErgaenzungVS)
+* targetUri = Canonical(VSDMISO3166VS)
 * group[+]
   * source = $csAnlage8Laenderkennzeichen
   * target = Canonical(VSDMISO3166ErgaenzungCS)

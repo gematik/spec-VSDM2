@@ -1,0 +1,23 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "VSDMISO3166VS",
+  "id": "VSDMISO3166VS",
+  "title": "Ländercodes nach ISO 3166-1 mit Erweiterungen",
+  "description": "Ländercodes nach ISO 3166-1 mit Erweiterungen im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "version": "1.0.0",
+  "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMISO3166VS",
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "date": "2023-12-31",
+  "compose": {
+    "include": [
+      {
+        "system": "urn:iso:std:iso:3166"
+      },
+      {
+        "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMISO3166ErgaenzungCS"
+      }
+    ]
+  }
+}

@@ -11,7 +11,7 @@
   "date": "2023-12-31",
   "purpose": "Diese ConceptMap ordnet den Ländercodes aus der DEÜV Anlage 8 die korrespondierenden Ländercodes nach ISO 3166-1 zu.\nWo keine offiziellen Ländercodes verfügbar sind, werden temporäre Codes aus einem lokalen CodeSystem verwendet.",
   "sourceUri": "https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8",
-  "targetUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMISO3166ErgaenzungVS",
+  "targetUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMISO3166VS",
   "group": [
     {
       "source": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",

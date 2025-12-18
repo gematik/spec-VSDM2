@@ -61,7 +61,7 @@ StructureDefinition-VSDMTarifartPKV.json                                VSDMTari
 StructureDefinition-VSDMVersichertenartPKV.json                         VSDMVersichertenartPKV                            Extension   extensions/VSDMVersichertenartPKV.fsh                          1 - 20
 ValueSet-VSDMDMPVS.json                                                 VSDMDMPVS                                         ValueSet    valuesets/VSDMDMPVS.fsh                                        1 - 69
 ValueSet-VSDMErrorcodeVS.json                                           VSDMErrorcodeVS                                   ValueSet    valuesets/VSDMErrorcodeVS.fsh                                  1 - 8
-ValueSet-VSDMISO3166ErgaenzungVS.json                                   VSDMISO3166ErgaenzungVS                           ValueSet    valuesets/VSDMISO3166ErgaenzungVS.fsh                          1 - 7
+ValueSet-VSDMISO3166VS.json                                             VSDMISO3166VS                                     ValueSet    valuesets/VSDMISO3166VS.fsh                                    1 - 8
 ValueSet-VSDMKostentraegerRolleVS.json                                  VSDMKostentraegerRolleVS                          ValueSet    valuesets/VSDMKostentraegerRolleVS.fsh                         1 - 7
 ValueSet-VSDMNamenszusatzVS.json                                        VSDMNamenszusatzVS                                ValueSet    valuesets/VSDMNamenszusatzVS.fsh                               1 - 7
 ValueSet-VSDMRuhenderLeistungsanspruchArtVS.json                        VSDMRuhenderLeistungsanspruchArtVS                ValueSet    valuesets/VSDMRuhenderLeistungsanspruchArtVS.fsh               1 - 7
