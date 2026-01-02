@@ -20,7 +20,7 @@ Die nachfolgenden Logical Models "Versichertendaten" und "Versicherungsdaten" di
 
 Weitere in den FHIR-Profilen Patient und Coverage befindliche Felder aus dem Basisdatensatz werden bei der Befüllung und Übertragung des Datensatzes nicht beachtet. Das Logical Model bildet den kompletten VSD-Datensatz ab.
 
-#### Versichertendaten
+#### Versichertendaten GKV
 
 ![Alt-Text](/images/LMVersichertendatenGKV.png)
 
@@ -30,9 +30,13 @@ Weitere in den FHIR-Profilen Patient und Coverage befindliche Felder aus dem Bas
 ![Alt-Text](/images/LMVersicherungsdatenGKV.png)
 
 
-#### Versicherungsdaten PKV
+#### Versichertendaten PKV
+
+![Alt-Text](/images/LMVersichertendatenPKV.png)
  
-ToDo: Abbildung logical model PKV einfügen
+#### Versicherungsdaten PKV
+
+![Alt-Text](/images/LMVersicherungsdatenPKV.png)
 
 
 ### Mapping
