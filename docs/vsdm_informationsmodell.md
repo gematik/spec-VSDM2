@@ -22,12 +22,12 @@ Weitere in den FHIR-Profilen Patient und Coverage befindliche Felder aus dem Bas
 
 #### Versichertendaten
 
-![Alt-Text](/images/logicalmodelVersichertendaten.png)
+![Alt-Text](/images/LMVersichertendatenGKV.png)
 
 
 #### Versicherungsdaten GKV
 
-![Alt-Text](/images/logicalmodelVersicherungsdaten.png)
+![Alt-Text](/images/LMVersicherungsdatenGKV.png)
 
 
 #### Versicherungsdaten PKV
