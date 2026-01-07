@@ -1,0 +1,122 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "VSDMTDSCodeErrorcode",
+  "url": "https://gematik.de/fhir/vsdm2/ConceptMap/VSDMTDSCodeErrorcode",
+  "title": "VSDMTDSCode zu VSDMErrorcode",
+  "description": "Ermittlung des VSDMErrorcode aus dem TDS-Code",
+  "status": "draft",
+  "experimental": false,
+  "version": "1.0.0",
+  "publisher": "gematik GmbH",
+  "date": "2023-12-31",
+  "purpose": "Diese ConceptMap ordnet den TDS-Codes die VSDMErrorcodes gemäß Tabelle TAB_FACHDIENST_VSDM_FEHLERREFERENZEN_UND_FEHLERCODES aus Anforderung A_27012-01 zu.\nWichtig: Hier werden nur die TDS-Codes mit Fehler-Adressat \"Clientsystem\" erfasst, da für Fehler mit Adressat \"HTTP-Proxy\" keine VSDMOperationOutcome-Ressource erzeugt wird.",
+  "sourceUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMTDSCodeVS",
+  "targetUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMErrorcodeVS",
+  "group": [
+    {
+      "source": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS",
+      "target": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
+      "element": [
+        {
+          "code": "79010",
+          "display": "Ungültige Institutionskennung [ik].",
+          "target": [
+            {
+              "code": "VSDSERVICE_INVALID_IK",
+              "display": "Ungültige Institutionskennung [ik].",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "79011",
+          "display": "Ungültige Krankenversichertennummer [kvnr].",
+          "target": [
+            {
+              "code": "VSDSERVICE_INVALID_KVNR",
+              "display": "Ungültige Krankenversichertennummer [kvnr].",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "79012",
+          "display": "Unbekannte Institutionskennung [ik].",
+          "target": [
+            {
+              "code": "VSDSERVICE_UNKNOWN_IK",
+              "display": "Unbekannte Institutionskennung [ik].",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "79013",
+          "display": "Die Versichertenstammdaten zur Krankenversichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden.",
+          "target": [
+            {
+              "code": "VSDSERVICE_UNKNOWN_KVNR",
+              "display": "Die Versichertenstammdaten zur Krankenversichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden.",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "79014",
+          "display": "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden.",
+          "target": [
+            {
+              "code": "VSDSERVICE_INVALID_PATIENT_RECORD_VERSION",
+              "display": "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden.",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "79030",
+          "display": "Der HTTP-Header [header] ist undgültig.",
+          "target": [
+            {
+              "code": "SERVICE_INVALID_HEADER",
+              "display": "Der HTTP-Header [header] ist undgültig.",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "79031",
+          "display": "Das vom Clientsystem angefragte Datenformat [media type] wird nicht unterstützt.",
+          "target": [
+            {
+              "code": "SERVICE_UNSUPPORTED_MEDIATYPE",
+              "display": "Das vom Clientsystem angefragte Datenformat [media type] wird nicht unterstützt.",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "79032",
+          "display": "Das vom Clientsystem angefragte Kodierungsverfahren [encoding scheme] wird nicht unterstützt.",
+          "target": [
+            {
+              "code": "SERVICE_UNSUPPORTED_ENCODING",
+              "display": "Das vom Clientsystem angefragte Kodierungsverfahren [encoding scheme] wird nicht unterstützt.",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "79100",
+          "display": "Unerwarteter interner Fehler des Fachdienstes VSDM.",
+          "target": [
+            {
+              "code": "SERVICE_INTERNAL_SERVER_ERROR",
+              "display": "Unerwarteter interner Fehler des Fachdienstes VSDM.",
+              "equivalence": "equal"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
