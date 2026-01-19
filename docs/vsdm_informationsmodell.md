@@ -17,7 +17,7 @@ Links im Simplifier
 
 Logical Model für die GKV: [LogicalModelVSDM2.0-GKV](https://simplifier.net/vsdm2/vsddatensatzgkv)
 
-Logical MOdel für die PKV: [LogicalModelVSDM2.0-PKV](https://simplifier.net/vsdm2/vsddatensatzpkv)
+Logical Model für die PKV: [LogicalModelVSDM2.0-PKV](https://simplifier.net/vsdm2/vsddatensatzpkv)
 
 Die nachfolgenden Logical Models "Versichertendaten" und "Versicherungsdaten" dienen zur Beschreibung der VSD für die gesetzliche und private Krankenversicherung und als Grundlage zur Definition der FHIR-Profile für VSDM 2.0.
 
@@ -52,7 +52,9 @@ Ziel ist es sicherzustellen, dass die Daten aus dem Logical Model korrekt in bei
 
 Die Mappingtabellen zu Patient und Coverage befinden sich hier:
 
-[Mapping logicalmodel-FHIR-Profile](https://simplifier.net/vsdm2/GEM_VSDM2_LOG_VSD_Confirmation/~mappings)
+[Mapping logicalmodel-FHIR-Profile GKV](https://simplifier.net/vsdm2/VSDDatensatzGKV/~mappings)
+
+[Mapping logicalmodel-FHIR-Profile PKV](https://simplifier.net/vsdm2/VSDDatensatzPKV/~mappings)
 
 
 
