@@ -14,7 +14,7 @@ Jedes Element des Datensatzen wird wiefolgt beschrieben:
 - Definition
 
 Link Simplifier
-[LogicalModelVSDM2.0](https://simplifier.net/vsdm2/gem_vsdm2_log_vsd_confirmation)
+[LogicalModelVSDM2.0](https://simplifier.net/vsdm2/vsddatensatzgkv)
 
 Die nachfolgenden Logical Models "Versichertendaten" und "Versicherungsdaten" dienen zur Beschreibung der VSD für die gesetzliche und private Krankenversicherung und als Grundlage zur Definition der FHIR-Profile für VSDM 2.0.
 
