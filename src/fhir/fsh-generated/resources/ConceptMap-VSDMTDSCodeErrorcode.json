@@ -19,44 +19,44 @@
       "element": [
         {
           "code": "79010",
-          "display": "Ungültige Institutionskennung [ik].",
+          "display": "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf.",
           "target": [
             {
               "code": "VSDSERVICE_INVALID_IK",
-              "display": "Ungültige Institutionskennung [ik].",
+              "display": "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf.",
               "equivalence": "equal"
             }
           ]
         },
         {
           "code": "79011",
-          "display": "Ungültige Krankenversichertennummer [kvnr].",
+          "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf.",
           "target": [
             {
               "code": "VSDSERVICE_INVALID_KVNR",
-              "display": "Ungültige Krankenversichertennummer [kvnr].",
+              "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf.",
               "equivalence": "equal"
             }
           ]
         },
         {
           "code": "79012",
-          "display": "Unbekannte Institutionskennung [ik].",
+          "display": "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt.",
           "target": [
             {
               "code": "VSDSERVICE_UNKNOWN_IK",
-              "display": "Unbekannte Institutionskennung [ik].",
+              "display": "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt.",
               "equivalence": "equal"
             }
           ]
         },
         {
           "code": "79013",
-          "display": "Die Versichertenstammdaten zur Krankenversichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden.",
+          "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt.",
           "target": [
             {
               "code": "VSDSERVICE_UNKNOWN_KVNR",
-              "display": "Die Versichertenstammdaten zur Krankenversichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden.",
+              "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt.",
               "equivalence": "equal"
             }
           ]
@@ -74,11 +74,11 @@
         },
         {
           "code": "79030",
-          "display": "Der HTTP-Header [header] ist undgültig.",
+          "display": "Der HTTP-Header [header] ist ungültig.",
           "target": [
             {
               "code": "SERVICE_INVALID_HEADER",
-              "display": "Der HTTP-Header [header] ist undgültig.",
+              "display": "Der HTTP-Header [header] ist ungültig.",
               "equivalence": "equal"
             }
           ]
@@ -95,12 +95,12 @@
           ]
         },
         {
-          "code": "79032",
-          "display": "Das vom Clientsystem angefragte Kodierungsverfahren [encoding scheme] wird nicht unterstützt.",
+          "code": "79040",
+          "display": "Die HTTP-Operation [http-operation] wird nicht unterstützt.",
           "target": [
             {
-              "code": "SERVICE_UNSUPPORTED_ENCODING",
-              "display": "Das vom Clientsystem angefragte Kodierungsverfahren [encoding scheme] wird nicht unterstützt.",
+              "code": "SERVICE_INVALID_HTTP_OPERATION",
+              "display": "Die HTTP-Operation [http-operation] wird nicht unterstützt.",
               "equivalence": "equal"
             }
           ]

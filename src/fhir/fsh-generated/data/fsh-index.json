@@ -197,7 +197,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMErrorcodeCS.fsh",
     "startLine": 1,
-    "endLine": 137
+    "endLine": 131
   },
   {
     "outputFile": "CodeSystem-VSDMISO3166ErgaenzungCS.json",
@@ -229,7 +229,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMTDSCodeCS.fsh",
     "startLine": 1,
-    "endLine": 201
+    "endLine": 179
   },
   {
     "outputFile": "CodeSystem-VSDMVersichertenartPKVCS.json",
@@ -253,7 +253,7 @@
     "fshType": "Instance",
     "fshFile": "mappings/VSDMTDSCodeErrorcode.fsh",
     "startLine": 1,
-    "endLine": 95
+    "endLine": 89
   },
   {
     "outputFile": "ConceptMap-VSDMTDSCodeHTTPStatus.json",
@@ -261,7 +261,7 @@
     "fshType": "Instance",
     "fshFile": "mappings/VSDMTDSCodeHTTPStatus.fsh",
     "startLine": 1,
-    "endLine": 134
+    "endLine": 118
   },
   {
     "outputFile": "ConceptMap-VSDMTDSCodeIssueSeverity.json",
@@ -269,7 +269,7 @@
     "fshType": "Instance",
     "fshFile": "mappings/VSDMTDSCodeIssueSeverity.fsh",
     "startLine": 1,
-    "endLine": 95
+    "endLine": 89
   },
   {
     "outputFile": "ConceptMap-VSDMTDSCodeIssueType.json",
@@ -277,7 +277,7 @@
     "fshType": "Instance",
     "fshFile": "mappings/VSDMTDSCodeIssueType.fsh",
     "startLine": 1,
-    "endLine": 96
+    "endLine": 90
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-InternalServerError.json",
@@ -286,6 +286,14 @@
     "fshFile": "examples/VSDMOperationOutcome-InternalServerError.fsh",
     "startLine": 1,
     "endLine": 22
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidHTTPOperation.json",
+    "fshName": "VSDMOperationOutcome-InvalidHTTPOperation",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-InvalidHTTPOperation.fsh",
+    "startLine": 1,
+    "endLine": 20
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidHeader.json",
@@ -334,14 +342,6 @@
     "fshFile": "examples/VSDMOperationOutcome-UnknownKVNR.fsh",
     "startLine": 1,
     "endLine": 27
-  },
-  {
-    "outputFile": "OperationOutcome-VSDMOperationOutcome-UnsupportedEncoding.json",
-    "fshName": "VSDMOperationOutcome-UnsupportedEncoding",
-    "fshType": "Instance",
-    "fshFile": "examples/VSDMOperationOutcome-UnsupportedEncoding.fsh",
-    "startLine": 1,
-    "endLine": 25
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-UnsupportedMediatype.json",

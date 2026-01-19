@@ -1,7 +1,7 @@
 Instance: VSDMOperationOutcome-UnknownIK
 InstanceOf: VSDMOperationOutcome
 Title: "Fehlermeldung VSDSERVICE_UNKNOWN_IK"
-Description: "Beispiel zur Fehlermeldung 'Unbekannte Institutionskennung [ik].'"
+Description: "Beispiel zur Fehlermeldung 'Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt.'"
 Usage: #example
 
 * text
@@ -15,7 +15,7 @@ Usage: #example
   * severity = #error "Error"
   * code = #not-found "Not Found"
   * details[+]
-    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_UNKNOWN_IK "Unbekannte Institutionskennung [ik]."
+    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_UNKNOWN_IK "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
     * text = "Unbekannte Institutionskennung 103456789."
   * diagnostics = """
       Die im PoPP-Token angegebene IK der Versicherung ist dem angesprochenen VSDM 2.0-Fachdienst nicht bekannt.

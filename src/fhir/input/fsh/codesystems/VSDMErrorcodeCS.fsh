@@ -18,8 +18,8 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
 * ^property[=].description = "Technische Informationen zur Fehlerdiagnose"
 * ^property[=].type = #string
 
-// #79010 "Ungültige Institutionskennung [ik]."
-* #VSDSERVICE_INVALID_IK "Ungültige Institutionskennung [ik]."
+// #79010 "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf."
+* #VSDSERVICE_INVALID_IK "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf."
   * ^definition = """
       Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.
     """
@@ -31,8 +31,8 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
        In diesem Fall liegt wahrscheinlich eine Störung des zentralen PoPP-Service vor.
     """
 
-// #79011 "Ungültige Krankenversichertennummer [kvnr]."
-* #VSDSERVICE_INVALID_KVNR "Ungültige Krankenversichertennummer [kvnr]."
+// #79011 "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf."
+* #VSDSERVICE_INVALID_KVNR "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf."
   * ^definition = """
       Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.
     """
@@ -44,8 +44,8 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
       In diesem Fall liegt wahrscheinlich eine Störung des zentralen PoPP-Service vor.
     """
 
-// #79012 "Unbekannte Institutionskennung [ik]."
-* #VSDSERVICE_UNKNOWN_IK "Unbekannte Institutionskennung [ik]."
+// #79012 "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
+* #VSDSERVICE_UNKNOWN_IK "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
   * ^definition = """
       Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.
     """
@@ -57,8 +57,8 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
       Bei Andauern des Fehlers über 24 h liegt möglicherweise ein Fehler in der Implementierung des Clientsystems oder des Fachdients vor.
     """
 
-// #79013 "Die Versichertenstammdaten zur Krankenversichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden."
-* #VSDSERVICE_UNKNOWN_KVNR "Die Versichertenstammdaten zur Krankenversichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden."
+// #79013 "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt."
+* #VSDSERVICE_UNKNOWN_KVNR "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt."
   * ^definition = """
       Der Patient mit der angegebenen Krankenversicherungsnummer ist bei der angesprochenen Versicherung nicht bekannt.
       Wiederholen Sie die Stammdatenabfrage; falls der Fehler bestehen bleibt, prüfen Sie mit dem Versicherten die Gültigkeit seines Versicherungsanspruchs.
@@ -83,8 +83,8 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
       Wiederholen Sie die Anfrage unter Angabe eines gültigen Werts.
     """
 
-// #79030 "Der HTTP-Header [header] ist undgültig."
-* #SERVICE_INVALID_HEADER "Der HTTP-Header [header] ist undgültig."
+// #79030 "Der HTTP-Header [header] ist ungültig."
+* #SERVICE_INVALID_HEADER "Der HTTP-Header [header] ist ungültig."
   * ^definition = """
       Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.
     """
@@ -92,7 +92,7 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
   * ^property[=].valueString = """
       Der angegebene HTTP Header enthält nicht spezifikationskonforme Angaben.
       Hierbei handelt es sich in der Regel um einen Implementierungsfehler im Clientsystem.
-      Prüfen Sie den Aufbau des Headers gegen die einschlägigen Standards (v.A. RFC 2616) und korrigieren Sie die Anfrage entsprechend.
+      Prüfen Sie den Aufbau des Headers gegen die einschlägigen Standards (v.A. RFC 9110) und korrigieren Sie die Anfrage entsprechend.
     """
 
 // #79031 "Das vom Clientsystem angefragte Datenformat [media type] wird nicht unterstützt."
@@ -108,23 +108,17 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
       Stellen Sie sicher, dass nur die genannten Formate verwendet werden.
     """
 
-// #79032 "Das vom Clientsystem angefragte Kodierungsverfahren [encoding scheme] wird nicht unterstützt."
-* #SERVICE_UNSUPPORTED_ENCODING "Das vom Clientsystem angefragte Kodierungsverfahren [encoding scheme] wird nicht unterstützt."
+// #79040 "Die HTTP-Operation [http-operation] wird nicht unterstützt."
+* #SERVICE_INVALID_HTTP_OPERATION "Die HTTP-Operation [http-operation] wird nicht unterstützt."
   * ^definition = """
       Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.
     """
   * ^property[+].code = #diagnostics
   * ^property[=].valueString = """
-      Das im HTTP Header Accept-Encoding angeforderte Kodierungsschema wird vom VSDM 2.0-Fachdienst nicht unterstützt.
-      Der Fachdienst kann die Daten nicht in der gewünschten Kodierung bereitstellen.
-      Wiederholen Sie die Anfrage unter Angabe einer unterstützten Kodierung (UTF-8).
+      Die in der HTTP-Anfrage verwendete Methode (Verb) wird vom VSDM 2.0-Fachdienst nicht unterstützt.
+      Hierbei handelt es sich in der Regel um einen Implementierungsfehler im Clientsystem.
+      Es darf nur die Methode GET verwendet werden.
     """
-
-// FIXME 70949 / SERVICE_INVALID_HTTP_OPERATION
-// Kommentierung: Laut Spezifikation soll die Fehlermeldung an den Adressaten Clientsystem gesendet werden. Der Fehler kann aber nur auftreten, wenn der ZETA Guard versagt hat und den Zugriff mit einer Policy-fremden Methode zugelassen hat. Es sollte geprüft werden, ob hierfür nicht der Adressat HTTP Proxy ausreichend ist.
-
-// FIXME 79041 / SERVICE_INVALID_ENDPOINT
-// Kommentierung; Laut Spezifikation soll die Fehlermeldung an den Adressaten Clientsystem gesendet werden. Der Fehler kann aber nur auftreten, wenn der ZETA Guard versagt hat und den Zugriff auf einen Policy-fremde Endpunkt zugelassen hat. Es sollte geprüft werden, ob hierfür nicht der Adressat HTTP Proxy ausreichend ist.
 
 // #79100 "Unerwarteter interner Fehler des Fachdienstes VSDM."
 * #SERVICE_INTERNAL_SERVER_ERROR "Unerwarteter interner Fehler des Fachdienstes VSDM."
@@ -139,7 +133,3 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
       Wiederholen Sie die Anfrage.
       Beachten Sie dazu das in A_25339 in gemSpec_ZETA beschriebene Exponential-Backoff-Verfahren, um eine Überlastung des Diensts oder eine temporäre Sperre aufgrund zuvieler Zugriffe zu vermeiden.
     """
-
-// FIXME unbekannter Code 79403 / ZETA_DPOP_VALIDATION_ERROR
-// FIXME unbekannter Code 79404 / ZETA_INVALID_ACCESSTOKEN
-// FIXME unbekannter Code 79405 / ZETA_EXPIRED_ACCESSTOKEN

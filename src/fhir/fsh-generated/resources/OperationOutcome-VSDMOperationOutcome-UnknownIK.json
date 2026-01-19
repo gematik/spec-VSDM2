@@ -19,7 +19,7 @@
           {
             "code": "VSDSERVICE_UNKNOWN_IK",
             "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
-            "display": "Unbekannte Institutionskennung [ik]."
+            "display": "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
           }
         ],
         "text": "Unbekannte Institutionskennung 103456789."

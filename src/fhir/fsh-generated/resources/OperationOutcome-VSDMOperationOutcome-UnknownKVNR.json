@@ -19,7 +19,7 @@
           {
             "code": "VSDSERVICE_UNKNOWN_KVNR",
             "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
-            "display": "Die Versichertenstammdaten zur Krankenversichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden."
+            "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt."
           }
         ],
         "text": "Die Versichertenstammdaten zur Versichertennummer 1234567890 konnten für die Institutionskennung 103456789 nicht ermittelt werden."

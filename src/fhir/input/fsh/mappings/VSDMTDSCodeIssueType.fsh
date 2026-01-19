@@ -18,7 +18,7 @@ Usage: #definition
 
   * element[+]
     * code = #79010
-    * display = "Ungültige Institutionskennung [ik]."
+    * display = "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf."
     * target[+]
       * code = #value
       * display = "Element value invalid"
@@ -26,7 +26,7 @@ Usage: #definition
 
   * element[+]
     * code = #79011
-    * display = "Ungültige Krankenversichertennummer [kvnr]."
+    * display = "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf."
     * target[+]
       * code = #value
       * display = "Element value invalid"
@@ -34,7 +34,7 @@ Usage: #definition
 
   * element[+]
     * code = #79012
-    * display = "Unbekannte Institutionskennung [ik]."
+    * display = "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
     * target[+]
       * code = #not-found
       * display = "Not Found"
@@ -42,7 +42,7 @@ Usage: #definition
 
   * element[+]
     * code = #79013
-    * display = "Die Versichertenstammdaten zur Krankenversichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden."
+    * display = "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt."
     * target[+]
       * code = #not-found
       * display = "Not Found"
@@ -58,7 +58,7 @@ Usage: #definition
 
   * element[+]
     * code = #79030
-    * display = "Der HTTP-Header [header] ist undgültig."
+    * display = "Der HTTP-Header [header] ist ungültig."
     * target[+]
       * code = #value
       * display = "Element value invalid"
@@ -74,18 +74,12 @@ Usage: #definition
       * equivalence = #wider // The target mapping is wider in meaning than the source concept.
 
   * element[+]
-    * code = #79032
-    * display = "Das vom Clientsystem angefragte Kodierungsverfahren [encoding scheme] wird nicht unterstützt."
+    * code = #79040
+    * display = "Die HTTP-Operation [http-operation] wird nicht unterstützt."
     * target[+]
       * code = #value
       * display = "Element value invalid"
       * equivalence = #wider // The target mapping is wider in meaning than the source concept.
-
-// FIXME 70949 / SERVICE_INVALID_HTTP_OPERATION
-// Kommentierung: Laut Spezifikation soll die Fehlermeldung an den Adressaten Clientsystem gesendet werden. Der Fehler kann aber nur auftreten, wenn der ZETA Guard versagt hat und den Zugriff mit einer Policy-fremden Methode zugelassen hat. Es sollte geprüft werden, ob hierfür nicht der Adressat HTTP Proxy ausreichend ist.
-
-// FIXME 79041 / SERVICE_INVALID_ENDPOINT
-// Kommentierung; Laut Spezifikation soll die Fehlermeldung an den Adressaten Clientsystem gesendet werden. Der Fehler kann aber nur auftreten, wenn der ZETA Guard versagt hat und den Zugriff auf einen Policy-fremde Endpunkt zugelassen hat. Es sollte geprüft werden, ob hierfür nicht der Adressat HTTP Proxy ausreichend ist.
 
   * element[+]
     * code = #79100
@@ -94,7 +88,3 @@ Usage: #definition
       * code = #transient
       * display = "Transient Issue"
       * equivalence = #wider // The target mapping is wider in meaning than the source concept.
-
-// FIXME unbekannter Code 79403 / ZETA_DPOP_VALIDATION_ERROR
-// FIXME unbekannter Code 79404 / ZETA_INVALID_ACCESSTOKEN
-// FIXME unbekannter Code 79405 / ZETA_EXPIRED_ACCESSTOKEN

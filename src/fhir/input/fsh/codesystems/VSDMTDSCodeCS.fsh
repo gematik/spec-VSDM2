@@ -25,7 +25,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
 * ^property[=].description = "fehlerhafte Felder (zur Versorgung von OperationOutcome.issue.location)"
 * ^property[=].type = #string
 
-* #79010 "Ungültige Institutionskennung [ik]."
+* #79010 "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf."
   * ^definition = """
       Die IK aus dem PoPP-Token weist Formatfehler auf.
       Mögliche Ursachen:
@@ -38,7 +38,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
   * ^property[+].code = #location
   * ^property[=].valueString = "http.ZETA-PoPP-Token-Content.insurerId"
 
-* #79011 "Ungültige Krankenversichertennummer [kvnr]."
+* #79011 "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf."
   * ^definition = """
       Die KVNR aus dem PoPP-Token weist Formatfehler auf.
       Mögliche Ursachen:
@@ -51,7 +51,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
   * ^property[+].code = #location
   * ^property[=].valueString = "http.ZETA-PoPP-Token-Content.patientId"
 
-* #79012 "Unbekannte Institutionskennung [ik]."
+* #79012 "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
   * ^definition = """
       Die IK aus dem PoPP-Token ist dem Fachdienst nicht bekannt.
       Mögliche Ursachen:
@@ -67,7 +67,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
   * ^property[+].code = #location
   * ^property[=].valueString = "http.ZETA-PoPP-Token-Content.insurerId"
 
-* #79013 "Die Versichertenstammdaten zur Krankenversichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden."
+* #79013 "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt."
   * ^definition = """
       Die KVNR aus dem PoPP-Token ist dem Fachdienst nicht bekannt.
       Mögliche Ursachen:
@@ -91,7 +91,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
   * ^property[+].code = #location
   * ^property[=].valueString = "http.If-None-Match"
 
-* #79030 "Der HTTP-Header [header] ist undgültig."
+* #79030 "Der HTTP-Header [header] ist ungültig."
   * ^definition = """
       Der genannte HTTP-Header weist Formatfehler auf.
       Mögliche Ursachen:
@@ -115,18 +115,6 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
   * ^property[+].code = #location
   * ^property[=].valueString = "http.Accept"
 
-* #79032 "Das vom Clientsystem angefragte Kodierungsverfahren [encoding scheme] wird nicht unterstützt."
-  * ^definition = """
-      Der HTTP-Header Accept-Encoding enthält nicht unterstütztes Kodierungsverfahren.
-      Mögliche Ursachen:
-      Implementierungsfehler im Clientsystem.
-      Relevante Anforderung: A_28611.
-    """
-  * ^property[+].code = #target
-  * ^property[=].valueCode = #client
-  * ^property[+].code = #location
-  * ^property[=].valueString = "http.Accept-Encoding"
-
 * #79040 "Die HTTP-Operation [http-operation] wird nicht unterstützt."
   * ^definition = """
       Die HTTP-Methode ist nicht GET.
@@ -136,16 +124,6 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
     """
   * ^property[+].code = #target
   * ^property[=].valueCode = #client
-
-* #79041 "Der angefragte Endpunkt [endpoint] wird nicht unterstützt."
-  * ^definition = """
-      Der HTTP-Endpunkt ist nicht /vsdservice/v1/vsdmbundle.
-      Mögliche Ursachen:
-      Fehlkonfiguration ZETA Guard.
-      Relevante Anforderung: A_28612.
-    """
-  * ^property[+].code = #target
-  * ^property[=].valueCode = #proxy // FIXME: Client UND Proxy werden aktuell nicht unterstützt und führen zu Anforderungskonflikt
 
 * #79100 "Unerwarteter interner Fehler des Fachdienstes VSDM."
   * ^definition = """
@@ -199,7 +177,3 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
     """
   * ^property[+].code = #target
   * ^property[=].valueCode = #proxy
-
-// FIXME unbekannter Code 79403 / ZETA_DPOP_VALIDATION_ERROR
-// FIXME unbekannter Code 79404 / ZETA_INVALID_ACCESSTOKEN
-// FIXME unbekannter Code 79405 / ZETA_EXPIRED_ACCESSTOKEN

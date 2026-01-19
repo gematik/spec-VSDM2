@@ -19,7 +19,7 @@
           {
             "code": "VSDSERVICE_INVALID_KVNR",
             "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
-            "display": "Ungültige Krankenversichertennummer [kvnr]."
+            "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf."
           }
         ],
         "text": "Ungültige Krankenversichertennummer 1234567890."

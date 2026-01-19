@@ -19,7 +19,7 @@
       "element": [
         {
           "code": "79010",
-          "display": "Ungültige Institutionskennung [ik].",
+          "display": "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf.",
           "target": [
             {
               "code": "fatal",
@@ -30,7 +30,7 @@
         },
         {
           "code": "79011",
-          "display": "Ungültige Krankenversichertennummer [kvnr].",
+          "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf.",
           "target": [
             {
               "code": "fatal",
@@ -41,7 +41,7 @@
         },
         {
           "code": "79012",
-          "display": "Unbekannte Institutionskennung [ik].",
+          "display": "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt.",
           "target": [
             {
               "code": "error",
@@ -52,7 +52,7 @@
         },
         {
           "code": "79013",
-          "display": "Die Versichertenstammdaten zur Krankenversichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden.",
+          "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt.",
           "target": [
             {
               "code": "error",
@@ -74,7 +74,7 @@
         },
         {
           "code": "79030",
-          "display": "Der HTTP-Header [header] ist undgültig.",
+          "display": "Der HTTP-Header [header] ist ungültig.",
           "target": [
             {
               "code": "fatal",
@@ -95,12 +95,12 @@
           ]
         },
         {
-          "code": "79032",
-          "display": "Das vom Clientsystem angefragte Kodierungsverfahren [encoding scheme] wird nicht unterstützt.",
+          "code": "79040",
+          "display": "Die HTTP-Operation [http-operation] wird nicht unterstützt.",
           "target": [
             {
-              "code": "error",
-              "display": "Error",
+              "code": "fatal",
+              "display": "Fatal",
               "equivalence": "wider"
             }
           ]

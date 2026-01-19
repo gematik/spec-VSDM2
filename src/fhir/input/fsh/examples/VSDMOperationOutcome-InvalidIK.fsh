@@ -1,7 +1,7 @@
 Instance: VSDMOperationOutcome-InvalidIK
 InstanceOf: VSDMOperationOutcome
 Title: "Fehlermeldung VSDSERVICE_INVALID_IK"
-Description: "Beispiel zur Fehlermeldung 'Ungültige Institutionskennung [ik].'"
+Description: "Beispiel zur Fehlermeldung 'Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf.'"
 Usage: #example
 
 * text
@@ -15,7 +15,7 @@ Usage: #example
   * severity = #fatal "Fatal"
   * code = #value "Element value invalid"
   * details[+]
-    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_INVALID_IK "Ungültige Institutionskennung [ik]."
+    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_INVALID_IK "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf."
     * text = "Ungültige Institutionskennung 103456789."
   * diagnostics = """
       Die im PoPP-Token enthaltene IK der Versicherung ist ungültig (Formatfehler).

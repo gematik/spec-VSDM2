@@ -11,7 +11,7 @@
   "concept": [
     {
       "code": "VSDSERVICE_INVALID_IK",
-      "display": "Ungültige Institutionskennung [ik].",
+      "display": "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf.",
       "definition": "Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
       "property": [
         {
@@ -22,7 +22,7 @@
     },
     {
       "code": "VSDSERVICE_INVALID_KVNR",
-      "display": "Ungültige Krankenversichertennummer [kvnr].",
+      "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf.",
       "definition": "Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
       "property": [
         {
@@ -33,7 +33,7 @@
     },
     {
       "code": "VSDSERVICE_UNKNOWN_IK",
-      "display": "Unbekannte Institutionskennung [ik].",
+      "display": "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt.",
       "definition": "Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
       "property": [
         {
@@ -44,7 +44,7 @@
     },
     {
       "code": "VSDSERVICE_UNKNOWN_KVNR",
-      "display": "Die Versichertenstammdaten zur Krankenversichertennummer [kvnr] konnten für die Institutionskennung [ik] nicht ermittelt werden.",
+      "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt.",
       "definition": "Der Patient mit der angegebenen Krankenversicherungsnummer ist bei der angesprochenen Versicherung nicht bekannt.\nWiederholen Sie die Stammdatenabfrage; falls der Fehler bestehen bleibt, prüfen Sie mit dem Versicherten die Gültigkeit seines Versicherungsanspruchs.",
       "property": [
         {
@@ -66,12 +66,12 @@
     },
     {
       "code": "SERVICE_INVALID_HEADER",
-      "display": "Der HTTP-Header [header] ist undgültig.",
+      "display": "Der HTTP-Header [header] ist ungültig.",
       "definition": "Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
       "property": [
         {
           "code": "diagnostics",
-          "valueString": "Der angegebene HTTP Header enthält nicht spezifikationskonforme Angaben.\nHierbei handelt es sich in der Regel um einen Implementierungsfehler im Clientsystem.\nPrüfen Sie den Aufbau des Headers gegen die einschlägigen Standards (v.A. RFC 2616) und korrigieren Sie die Anfrage entsprechend."
+          "valueString": "Der angegebene HTTP Header enthält nicht spezifikationskonforme Angaben.\nHierbei handelt es sich in der Regel um einen Implementierungsfehler im Clientsystem.\nPrüfen Sie den Aufbau des Headers gegen die einschlägigen Standards (v.A. RFC 9110) und korrigieren Sie die Anfrage entsprechend."
         }
       ]
     },
@@ -87,13 +87,13 @@
       ]
     },
     {
-      "code": "SERVICE_UNSUPPORTED_ENCODING",
-      "display": "Das vom Clientsystem angefragte Kodierungsverfahren [encoding scheme] wird nicht unterstützt.",
+      "code": "SERVICE_INVALID_HTTP_OPERATION",
+      "display": "Die HTTP-Operation [http-operation] wird nicht unterstützt.",
       "definition": "Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
       "property": [
         {
           "code": "diagnostics",
-          "valueString": "Das im HTTP Header Accept-Encoding angeforderte Kodierungsschema wird vom VSDM 2.0-Fachdienst nicht unterstützt.\nDer Fachdienst kann die Daten nicht in der gewünschten Kodierung bereitstellen.\nWiederholen Sie die Anfrage unter Angabe einer unterstützten Kodierung (UTF-8)."
+          "valueString": "Die in der HTTP-Anfrage verwendete Methode (Verb) wird vom VSDM 2.0-Fachdienst nicht unterstützt.\nHierbei handelt es sich in der Regel um einen Implementierungsfehler im Clientsystem.\nEs darf nur die Methode GET verwendet werden."
         }
       ]
     },
