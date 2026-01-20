@@ -55,6 +55,9 @@ RuleSet: Address-Country
     """
   * ^comment = """
       Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.
+      Die Kodierung nach DEÜV ist im GKV-Bereich eine Pflichtangabe, im PKV-Bereich ist sie optional.
+      Um diese Vorgabe einer konditionalen Prüfung umzusetzen, sind die Invarianten VSDMCoverageGKV-address-* an der VSDMCoverageGKV-Struktur hinterlegt.
+      Diese Invarianten erzwingen die Angabe des Länderkennzeichens nach DEÜV, sobald auf die Ressource, die die Adresse enthält, aus einem GKV-Versicherungsverhältnis referenziert wird.
     """
   * valueCoding from $vsAnlage8Laenderkennzeichen (required)
   * valueCoding.system = $csAnlage8Laenderkennzeichen (exactly)
