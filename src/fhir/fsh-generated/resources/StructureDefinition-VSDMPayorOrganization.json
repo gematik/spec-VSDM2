@@ -130,7 +130,7 @@
         "sliceName": "anlage8",
         "short": "Länderkennzeichen nach DEÜV Anlage 8",
         "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8. ",
-        "comment": "Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.",
+        "comment": "Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.\nDie Kodierung nach DEÜV ist im GKV-Bereich eine Pflichtangabe, im PKV-Bereich ist sie optional.\nUm diese Vorgabe einer konditionalen Prüfung umzusetzen, sind die Invarianten VSDMCoverageGKV-address-* an der VSDMCoverageGKV-Struktur hinterlegt.\nDiese Invarianten erzwingen die Angabe des Länderkennzeichens nach DEÜV, sobald auf die Ressource, die die Adresse enthält, aus einem GKV-Versicherungsverhältnis referenziert wird.",
         "min": 0,
         "max": "1",
         "type": [
