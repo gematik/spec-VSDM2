@@ -1,0 +1,164 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "VSDMTDSCodeHTTPStatus",
+  "url": "https://gematik.de/fhir/vsdm2/ConceptMap/VSDMTDSCodeHTTPStatus",
+  "title": "VSDMTDSCode zu HTTP Status",
+  "description": "Ermittlung des HTTP Status aus dem TDSCode",
+  "status": "draft",
+  "experimental": false,
+  "version": "1.0.0",
+  "publisher": "gematik GmbH",
+  "date": "2023-12-31",
+  "purpose": "Diese ConceptMap ordnet den TDS-Codes die HTTP Status Codes aus Tabelle TAB_FACHDIENST_VSDM_HTTP_STATUS_CODES zu.",
+  "sourceUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMTDSCodeVS",
+  "group": [
+    {
+      "source": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS",
+      "element": [
+        {
+          "code": "79010",
+          "display": "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf.",
+          "target": [
+            {
+              "code": "400",
+              "display": "Bad Request",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "79011",
+          "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf.",
+          "target": [
+            {
+              "code": "400",
+              "display": "Bad Request",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "79012",
+          "display": "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt.",
+          "target": [
+            {
+              "code": "400",
+              "display": "Bad Request",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "79013",
+          "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt.",
+          "target": [
+            {
+              "code": "404",
+              "display": "Not Found",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "79014",
+          "display": "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden.",
+          "target": [
+            {
+              "code": "428",
+              "display": "Precondition Required",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "79030",
+          "display": "Der HTTP-Header [header] ist ungültig.",
+          "target": [
+            {
+              "code": "400",
+              "display": "Bad Request",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "79031",
+          "display": "Das vom Clientsystem angefragte Datenformat [media type] wird nicht unterstützt.",
+          "target": [
+            {
+              "code": "406",
+              "display": "Not Acceptable",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "79040",
+          "display": "Die HTTP-Operation [http-operation] wird nicht unterstützt.",
+          "target": [
+            {
+              "code": "405",
+              "display": "Method Not Allowed",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "79100",
+          "display": "Unerwarteter interner Fehler des Fachdienstes VSDM.",
+          "target": [
+            {
+              "code": "500",
+              "display": "Internal Server Error",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "79206",
+          "display": "Der HTTP-Header ZETA-User-Info fehlt.",
+          "target": [
+            {
+              "code": "400",
+              "display": "Bad Request",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "79207",
+          "display": "Der HTTP-Header ZETA-PoPP-Token-Content fehlt.",
+          "target": [
+            {
+              "code": "400",
+              "display": "Bad Request",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "79401",
+          "display": "Der Inhalt des HTTP-Headers ZETA-User-Info weist Format- oder Inhaltsfehler auf.",
+          "target": [
+            {
+              "code": "400",
+              "display": "Bad Request",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "79402",
+          "display": "Der Inhalt des HTTP-Headers ZETA-PoPP-Token-Content weist Format- oder Inhaltsfehler auf.",
+          "target": [
+            {
+              "code": "400",
+              "display": "Bad Request",
+              "equivalence": "wider"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

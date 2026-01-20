@@ -1,0 +1,204 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "VSDMTDSCodeCS",
+  "id": "VSDMTDSCodeCS",
+  "title": "VSDM-TDS-Codes",
+  "description": "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "version": "1.0.0",
+  "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS",
+  "concept": [
+    {
+      "code": "79010",
+      "display": "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf.",
+      "definition": "Die IK aus dem PoPP-Token weist Formatfehler auf.\nMögliche Ursachen:\nFehler im PoPP-Service i.V.m. Fehler im Clientsystem und/oder indirektem Angriffsversuch (PoPP-Service stellt Token trotz fehlerhafter IK aus) oder\ndirekter Angriffsversuch (Angreifer kann PoPP-Signaturen fälschen).\nRelevante Anforderung: A_28604.",
+      "property": [
+        {
+          "code": "target",
+          "valueCode": "client"
+        },
+        {
+          "code": "location",
+          "valueString": "http.ZETA-PoPP-Token-Content.insurerId"
+        }
+      ]
+    },
+    {
+      "code": "79011",
+      "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf.",
+      "definition": "Die KVNR aus dem PoPP-Token weist Formatfehler auf.\nMögliche Ursachen:\nFehler im PoPP-Service i.V.m. Fehler im Clientsystem und/oder indirektem Angriffsversuch (PoPP-Service stellt Token trotz fehlerhafter KVNR aus) oder\ndirekter Angriffsversuch (Angreifer kann PoPP-Signaturen fälschen).\nRelevante Anforderung: A_28606.",
+      "property": [
+        {
+          "code": "target",
+          "valueCode": "client"
+        },
+        {
+          "code": "location",
+          "valueString": "http.ZETA-PoPP-Token-Content.patientId"
+        }
+      ]
+    },
+    {
+      "code": "79012",
+      "display": "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt.",
+      "definition": "Die IK aus dem PoPP-Token ist dem Fachdienst nicht bekannt.\nMögliche Ursachen:\nImplementierungsfehler in der Dienstlokalisierung (Clientsystem schickt korrektes PoPP-Token an den falschen Fachdienst),\nDNS-Fehler (Namensauflösung Clientsystem liefert IP von falschem Fachdienst),\nKonfigurationsfehler Fachdienst (z.B. falsche Datenbank-/Backend-Zuordnung),\nFehler im PoPP-Service i.V.m. Fehler im Clientsystem und/oder indirektem Angriffsversuch (PoPP-Service stellt Token trotz fehlerhafter IK aus) oder\ndirekter Angriffsversuch (Angreifer kann PoPP-Signaturen fälschen).\nRelevante Anforderung: A_28605.",
+      "property": [
+        {
+          "code": "target",
+          "valueCode": "client"
+        },
+        {
+          "code": "location",
+          "valueString": "http.ZETA-PoPP-Token-Content.insurerId"
+        }
+      ]
+    },
+    {
+      "code": "79013",
+      "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt.",
+      "definition": "Die KVNR aus dem PoPP-Token ist dem Fachdienst nicht bekannt.\nMögliche Ursachen:\nEs existiert kein Versicherungsverhältnis beim adressierten Kostenträger oder das Versicherungsverhältnis ist ausgelaufen, der adressierte Kostenträger ist also nicht mehr zuständig.\nRelevante Anforderung: A_28607.",
+      "property": [
+        {
+          "code": "target",
+          "valueCode": "client"
+        },
+        {
+          "code": "location",
+          "valueString": "http.ZETA-PoPP-Token-Content.insurerId, http.ZETA-PoPP-Token-Content.patientId"
+        }
+      ]
+    },
+    {
+      "code": "79014",
+      "display": "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden.",
+      "definition": "Der HTTP Header If-none-match fehlt.\nMögliche Ursachen:\nImplementierungsfehler im Clientsystem.\nRelevante Anforderung: A_26755-01.",
+      "property": [
+        {
+          "code": "target",
+          "valueCode": "client"
+        },
+        {
+          "code": "location",
+          "valueString": "http.If-None-Match"
+        }
+      ]
+    },
+    {
+      "code": "79030",
+      "display": "Der HTTP-Header [header] ist ungültig.",
+      "definition": "Der genannte HTTP-Header weist Formatfehler auf.\nMögliche Ursachen:\nImplementierungsfehler im Clientsystem (Verstoß gegen RFC 2616).\nRelevante Anforderungen: A_28608, A_28609.",
+      "property": [
+        {
+          "code": "target",
+          "valueCode": "client"
+        },
+        {
+          "code": "location",
+          "valueString": "http.[header]"
+        }
+      ]
+    },
+    {
+      "code": "79031",
+      "display": "Das vom Clientsystem angefragte Datenformat [media type] wird nicht unterstützt.",
+      "definition": "Der HTTP-Header Accept enthält nicht unterstütztes Format.\nMögliche Ursachen:\nImplementierungsfehler im Clientsystem.\nRelevante Anforderung: A_28610.",
+      "property": [
+        {
+          "code": "target",
+          "valueCode": "client"
+        },
+        {
+          "code": "location",
+          "valueString": "http.Accept"
+        }
+      ]
+    },
+    {
+      "code": "79040",
+      "display": "Die HTTP-Operation [http-operation] wird nicht unterstützt.",
+      "definition": "Die HTTP-Methode ist nicht GET.\nMögliche Ursachen:\nFehlkonfiguration ZETA Guard.\nRelevante Anforderung: A_26753-01.",
+      "property": [
+        {
+          "code": "target",
+          "valueCode": "client"
+        }
+      ]
+    },
+    {
+      "code": "79100",
+      "display": "Unerwarteter interner Fehler des Fachdienstes VSDM.",
+      "definition": "Der Versichertenstammdatendienst ist aktuell nicht in der Lage, die Anfrage zu beantworten.\n(Keine Aussage zu möglichen Ursachen - Protokolle des Resource Servers prüfen.)\nRelevante Anforderung: A_28613.",
+      "property": [
+        {
+          "code": "target",
+          "valueCode": "client"
+        }
+      ]
+    },
+    {
+      "code": "79206",
+      "display": "Der HTTP-Header ZETA-User-Info fehlt.",
+      "definition": "Der HTTP-Header ZETA-User-Info muss vom HTTP Proxy des ZETA Guard in die weitergeleitete Anfrage eingefügt werden.\nMögliche Ursachen:\nFehlkonfiguration ZETA Guard oder\nImplementierungsfehler ZETA Guard.\nRelevante Anforderung: A_28614.",
+      "property": [
+        {
+          "code": "target",
+          "valueCode": "proxy"
+        }
+      ]
+    },
+    {
+      "code": "79207",
+      "display": "Der HTTP-Header ZETA-PoPP-Token-Content fehlt.",
+      "definition": "Der HTTP-Header ZETA-PoPP-Token-Content muss vom HTTP Proxy des ZETA Guard in die weitergeleitete Anfrage eingefügt werden.\nMögliche Ursachen:\nFehlkonfiguration ZETA Guard oder\nImplementierungsfehler ZETA Guard.\nRelevante Anforderung: A_28615.",
+      "property": [
+        {
+          "code": "target",
+          "valueCode": "proxy"
+        }
+      ]
+    },
+    {
+      "code": "79401",
+      "display": "Der Inhalt des HTTP-Headers ZETA-User-Info weist Format- oder Inhaltsfehler auf.",
+      "definition": "Der HTTP-Header ZETA-User-Info muss vom HTTP Proxy des ZETA Guard mit den Daten aus der Client-Registrierung und -Anmeldung erstellt werden.\nMögliche Ursachen:\nFehlkonfiguration ZETA Guard oder\nImplementierungsfehler ZETA Guard.\nRelevante Anforderung: A_28616.",
+      "property": [
+        {
+          "code": "target",
+          "valueCode": "proxy"
+        }
+      ]
+    },
+    {
+      "code": "79402",
+      "display": "Der Inhalt des HTTP-Headers ZETA-PoPP-Token-Content weist Format- oder Inhaltsfehler auf.",
+      "definition": "Der HTTP-Header ZETA-PoPP-Token-Content muss vom HTTP Proxy des ZETA Guard aus den Inhalten des PoPP-Tokens erstellt werden.\nMögliche Ursachen:\nFehlkonfiguration ZETA Guard oder\nImplementierungsfehler ZETA Guard.\nRelevante Anforderung: A_28617.",
+      "property": [
+        {
+          "code": "target",
+          "valueCode": "proxy"
+        }
+      ]
+    }
+  ],
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "date": "2023-12-31",
+  "caseSensitive": true,
+  "purpose": "Dieses CodeSystem enthält alle Fehlercodes des Telemetriedatenservice (TDS), der Fachdienst gemäß Anforderung A_27012-02 und darin enthaltener Tabelle TAB_FACHDIENST_VSDM_FEHLERREFERENZEN_UND_FEHLERCODES sowie den bei den jeweiligen Codes genanntnen Anforderungen liefern muss.\nDiese TDS-Codes decken alle in der Spezifikation vorgesehenen Fehlersituationen ab.\nDieses CodeSystem definiert die genauen Fehlerzustände und dient als Ausgangspunkt für verschiedene Zuordnungen (ConceptMaps).\nJe nach Fehlerquelle werden diese Fehler entweder an das Clientsystem oder an den HTTP Proxy des ZETA Guard adressiert.\nNur für die Fehlercodes mit Adressat \"Clientsystem\" wird eine Fehlerbeschreibung in Form einer VSDMOperationOutcome-Struktur erzeugt, die dann einen Fehlercode aus dem CodeSystem VSDMErrorcodeCS enthält.",
+  "property": [
+    {
+      "code": "target",
+      "uri": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS#target",
+      "description": "Fehler-Adressat (client = Clientsystem gemäß A_26770; proxy = HTTP Proxy des ZETA Guard gemäß A_26993)",
+      "type": "code"
+    },
+    {
+      "code": "location",
+      "uri": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS#location",
+      "description": "fehlerhafte Felder (zur Versorgung von OperationOutcome.issue.location)",
+      "type": "string"
+    }
+  ],
+  "count": 13
+}

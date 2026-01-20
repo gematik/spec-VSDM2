@@ -8,7 +8,7 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Der vom Clientsystem angefragte Medientyp application/morse-code wird nicht unterstützt.</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.</div>"
   },
   "issue": [
     {
@@ -17,14 +17,14 @@
       "details": {
         "coding": [
           {
-            "code": "VSDSERVICE_UNSUPPORTED_MEDIATYPE",
+            "code": "SERVICE_UNSUPPORTED_MEDIATYPE",
             "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
-            "display": "Der vom Clientsystem angefragte Medientyp [media type] wird nicht unterstützt."
+            "display": "DAs vom Clientsystem angefragte Datenformat [media type] wird nicht unterstützt."
           }
         ],
-        "text": "Der vom Clientsystem angefragte Medientyp application/morse-code wird nicht unterstützt."
+        "text": "Das vom Clientsystem angefragte Datenformat application/morse-code wird nicht unterstützt."
       },
-      "diagnostics": "Implementierungsfehler beim Clientsystem - der Hersteller des Clientsystems ist zu kontaktieren.",
+      "diagnostics": "Das im HTTP Header Accept angeforderte Datenformat wird vom VSDM 2.0-Fachdienst nicht unterstützt.\nHierbei handelt es sich in der Regel um einen Implementierungsfehler im Clientsystem.\nEs sind nur die Formate application/fhir+xml und application/fhir+json erlaubt.\nStellen Sie sicher, dass nur die genannten Formate verwendet werden.",
       "location": [
         "http.Accept"
       ]

@@ -8,7 +8,7 @@ Usage: #example
   * status = #generated
   * div[+] = """
       <div xmlns="http://www.w3.org/1999/xhtml">
-        Der Änderungsindikator 0xdeadbeef kann nicht verarbeitet werden.
+        Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.
       </div>
     """
 * issue[+]
@@ -16,8 +16,11 @@ Usage: #example
   * code = #value "Element value invalid"
   * details[+]
     * coding[0] = VSDMErrorcodeCS#VSDSERVICE_INVALID_PATIENT_RECORD_VERSION "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden."
-    * text = "Der Änderungsindikator 0xdeadbeef kann nicht verarbeitet werden."
+    * text = "Der Änderungsindikator '' kann nicht verarbeitet werden."
   * diagnostics = """
-      Implementierungsfehler beim Clientsystem - der Hersteller des Clientsystems ist zu kontaktieren.
+      Der HTTP Header If-none-match fehlt.
+      Mit diesem Header muss das Clientsystem den letzten bekannten Aktualitätswert mitteilen.
+      Falls kein Wert vorliegt, muss der Header mit 0 gefüllt werden.
+      Wiederholen Sie die Anfrage unter Angabe eines gültigen Werts.
     """
   * location[+] = "http.If-None-Match"

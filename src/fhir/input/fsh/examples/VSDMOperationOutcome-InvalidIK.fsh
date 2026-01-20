@@ -1,24 +1,26 @@
 Instance: VSDMOperationOutcome-InvalidIK
 InstanceOf: VSDMOperationOutcome
 Title: "Fehlermeldung VSDSERVICE_INVALID_IK"
-Description: "Beispiel zur Fehlermeldung 'Ungültige oder nicht bekannte Institutionskennung [ik].'"
+Description: "Beispiel zur Fehlermeldung 'Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf.'"
 Usage: #example
 
 * text
   * status = #generated
   * div[+] = """
       <div xmlns="http://www.w3.org/1999/xhtml">
-        Ungültige oder nicht bekannte Institutionskennung 103456789.
+        Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.
       </div>
     """
 * issue[+]
   * severity = #fatal "Fatal"
-  * code = #not-found "Not Found"
+  * code = #value "Element value invalid"
   * details[+]
-    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_INVALID_IK "Ungültige oder nicht bekannte Institutionskennung [ik]."
-    * text = "Ungültige oder nicht bekannte Institutionskennung 103456789."
+    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_INVALID_IK "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf."
+    * text = "Ungültige Institutionskennung 103456789."
   * diagnostics = """
-      Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service 1x erneuern. 
-      Bei erneutem Fehler: Abbruch, da wahrscheinlich ein Implementierungsfehler vorliegt (Clientsystem oder PoPP-Service) oder der Kostenträger nicht von diesem Farchdienst-Anbieter vertreten wird (fehlerhafter DNS-Eintrag).
+      Die im PoPP-Token enthaltene IK der Versicherung ist ungültig (Formatfehler).
+      Fordern Sie ein neues PoPP-Token an und wiederholen Sie die Abfrage beim zuständigen VSDM 2.0-Fachdienst.
+      Bei erneutem Fehler wiederholen Sie die Abfrage nicht, sondern brechen Sie mit einer Fehlermeldung ab.
+      In diesem Fall liegt wahrscheinlich eine Störung des zentralen PoPP-Service vor.
     """
   * location[+] = "http.ZETA-PoPP-Token-Content.insurerId"

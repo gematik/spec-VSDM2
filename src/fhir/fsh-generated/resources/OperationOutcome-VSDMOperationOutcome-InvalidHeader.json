@@ -1,6 +1,6 @@
 {
   "resourceType": "OperationOutcome",
-  "id": "VSDMOperationOutcome-InvalidHTTPOperation",
+  "id": "VSDMOperationOutcome-InvalidHeader",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome"
@@ -17,14 +17,17 @@
       "details": {
         "coding": [
           {
-            "code": "SERVICE_INVALID_HTTP_OPERATION",
+            "code": "SERVICE_INVALID_HEADER",
             "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
-            "display": "Die HTTP-Operation [http-operation] wird nicht unterstützt."
+            "display": "Der HTTP-Header [header] ist ungültig."
           }
         ],
-        "text": "Die HTTP-Operation PUT wird nicht unterstützt."
+        "text": "Der HTTP-Header ZETA-PoPP-Token ist ungültig."
       },
-      "diagnostics": "Die in der HTTP-Anfrage verwendete Methode (Verb) wird vom VSDM 2.0-Fachdienst nicht unterstützt.\nHierbei handelt es sich in der Regel um einen Implementierungsfehler im Clientsystem.\nEs darf nur die Methode GET verwendet werden."
+      "diagnostics": "Der angegebene HTTP Header enthält nicht spezifikationskonforme Angaben.\nHierbei handelt es sich in der Regel um einen Implementierungsfehler im Clientsystem.\nPrüfen Sie den Aufbau des Headers gegen die einschlägigen Standards (v.A. RFC 2616) und korrigieren Sie die Anfrage entsprechend.",
+      "location": [
+        "http.ZETA-PoPP-Token"
+      ]
     }
   ]
 }

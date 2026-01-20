@@ -197,7 +197,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMErrorcodeCS.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 131
   },
   {
     "outputFile": "CodeSystem-VSDMISO3166ErgaenzungCS.json",
@@ -224,6 +224,14 @@
     "endLine": 23
   },
   {
+    "outputFile": "CodeSystem-VSDMTDSCodeCS.json",
+    "fshName": "VSDMTDSCodeCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMTDSCodeCS.fsh",
+    "startLine": 1,
+    "endLine": 179
+  },
+  {
     "outputFile": "CodeSystem-VSDMVersichertenartPKVCS.json",
     "fshName": "VSDMVersichertenartPKVCS",
     "fshType": "CodeSystem",
@@ -240,20 +248,36 @@
     "endLine": 2031
   },
   {
-    "outputFile": "ConceptMap-VSDMErrorcodeIssueSeverity.json",
-    "fshName": "VSDMErrorcodeIssueSeverity",
+    "outputFile": "ConceptMap-VSDMTDSCodeErrorcode.json",
+    "fshName": "VSDMTDSCodeErrorcode",
     "fshType": "Instance",
-    "fshFile": "mappings/VSDMErrorcodeIssueSeverity.fsh",
+    "fshFile": "mappings/VSDMTDSCodeErrorcode.fsh",
     "startLine": 1,
-    "endLine": 101
+    "endLine": 89
   },
   {
-    "outputFile": "ConceptMap-VSDMErrorcodeIssueType.json",
-    "fshName": "VSDMErrorcodeIssueType",
+    "outputFile": "ConceptMap-VSDMTDSCodeHTTPStatus.json",
+    "fshName": "VSDMTDSCodeHTTPStatus",
     "fshType": "Instance",
-    "fshFile": "mappings/VSDMErrorcodeIssueType.fsh",
+    "fshFile": "mappings/VSDMTDSCodeHTTPStatus.fsh",
     "startLine": 1,
-    "endLine": 112
+    "endLine": 118
+  },
+  {
+    "outputFile": "ConceptMap-VSDMTDSCodeIssueSeverity.json",
+    "fshName": "VSDMTDSCodeIssueSeverity",
+    "fshType": "Instance",
+    "fshFile": "mappings/VSDMTDSCodeIssueSeverity.fsh",
+    "startLine": 1,
+    "endLine": 89
+  },
+  {
+    "outputFile": "ConceptMap-VSDMTDSCodeIssueType.json",
+    "fshName": "VSDMTDSCodeIssueType",
+    "fshType": "Instance",
+    "fshFile": "mappings/VSDMTDSCodeIssueType.fsh",
+    "startLine": 1,
+    "endLine": 90
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-InternalServerError.json",
@@ -261,15 +285,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMOperationOutcome-InternalServerError.fsh",
     "startLine": 1,
-    "endLine": 20
-  },
-  {
-    "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidEndpoint.json",
-    "fshName": "VSDMOperationOutcome-InvalidEndpoint",
-    "fshType": "Instance",
-    "fshFile": "examples/VSDMOperationOutcome-InvalidEndpoint.fsh",
-    "startLine": 1,
-    "endLine": 20
+    "endLine": 22
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidHTTPOperation.json",
@@ -280,12 +296,20 @@
     "endLine": 20
   },
   {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidHeader.json",
+    "fshName": "VSDMOperationOutcome-InvalidHeader",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-InvalidHeader.fsh",
+    "startLine": 1,
+    "endLine": 25
+  },
+  {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidIK.json",
     "fshName": "VSDMOperationOutcome-InvalidIK",
     "fshType": "Instance",
     "fshFile": "examples/VSDMOperationOutcome-InvalidIK.fsh",
     "startLine": 1,
-    "endLine": 24
+    "endLine": 26
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidKVNR.json",
@@ -293,7 +317,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMOperationOutcome-InvalidKVNR.fsh",
     "startLine": 1,
-    "endLine": 24
+    "endLine": 26
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidPatientRecordVersion.json",
@@ -301,31 +325,23 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMOperationOutcome-InvalidPatientRecordVersion.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 26
   },
   {
-    "outputFile": "OperationOutcome-VSDMOperationOutcome-MissingOrInvalidHeader.json",
-    "fshName": "VSDMOperationOutcome-MissingOrInvalidHeader",
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-UnknownIK.json",
+    "fshName": "VSDMOperationOutcome-UnknownIK",
     "fshType": "Instance",
-    "fshFile": "examples/VSDMOperationOutcome-MissingOrInvalidHeader.fsh",
+    "fshFile": "examples/VSDMOperationOutcome-UnknownIK.fsh",
     "startLine": 1,
-    "endLine": 24
+    "endLine": 26
   },
   {
-    "outputFile": "OperationOutcome-VSDMOperationOutcome-PatientRecordNotFound.json",
-    "fshName": "VSDMOperationOutcome-PatientRecordNotFound",
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-UnknownKVNR.json",
+    "fshName": "VSDMOperationOutcome-UnknownKVNR",
     "fshType": "Instance",
-    "fshFile": "examples/VSDMOperationOutcome-PatientRecordNotFound.fsh",
+    "fshFile": "examples/VSDMOperationOutcome-UnknownKVNR.fsh",
     "startLine": 1,
-    "endLine": 25
-  },
-  {
-    "outputFile": "OperationOutcome-VSDMOperationOutcome-UnsupportedEncoding.json",
-    "fshName": "VSDMOperationOutcome-UnsupportedEncoding",
-    "fshType": "Instance",
-    "fshFile": "examples/VSDMOperationOutcome-UnsupportedEncoding.fsh",
-    "startLine": 1,
-    "endLine": 23
+    "endLine": 27
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-UnsupportedMediatype.json",
@@ -333,23 +349,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMOperationOutcome-UnsupportedMediatype.fsh",
     "startLine": 1,
-    "endLine": 23
-  },
-  {
-    "outputFile": "OperationOutcome-VSDMOperationOutcome-VSDDNotReachable.json",
-    "fshName": "VSDMOperationOutcome-VSDDNotReachable",
-    "fshType": "Instance",
-    "fshFile": "examples/VSDMOperationOutcome-VSDDNotReachable.fsh",
-    "startLine": 1,
-    "endLine": 20
-  },
-  {
-    "outputFile": "OperationOutcome-VSDMOperationOutcome-VSDDTimeout.json",
-    "fshName": "VSDMOperationOutcome-VSDDTimeout",
-    "fshType": "Instance",
-    "fshFile": "examples/VSDMOperationOutcome-VSDDTimeout.fsh",
-    "startLine": 1,
-    "endLine": 20
+    "endLine": 26
   },
   {
     "outputFile": "StructureDefinition-VSDDatensatzGKV.json",
@@ -524,6 +524,14 @@
     "fshName": "VSDMRuhenderLeistungsanspruchArtVS",
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMRuhenderLeistungsanspruchArtVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-VSDMTDSCodeVS.json",
+    "fshName": "VSDMTDSCodeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMBDECodeVS.fsh",
     "startLine": 1,
     "endLine": 7
   },
