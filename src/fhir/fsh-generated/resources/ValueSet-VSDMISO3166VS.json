@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "VSDMISO3166VS",
   "id": "VSDMISO3166VS",
   "title": "Ländercodes nach ISO 3166-1 mit Erweiterungen",
@@ -9,7 +9,7 @@
   "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMISO3166VS",
   "experimental": false,
   "publisher": "gematik GmbH",
-  "date": "2023-12-31",
+  "date": "2026-01-20",
   "compose": {
     "include": [
       {

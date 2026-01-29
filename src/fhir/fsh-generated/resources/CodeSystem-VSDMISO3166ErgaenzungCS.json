@@ -34,7 +34,7 @@
   ],
   "experimental": false,
   "publisher": "gematik GmbH",
-  "date": "2023-12-31",
+  "date": "2026-01-20",
   "caseSensitive": true,
   "purpose": "Im VSDM 2.0 werden Länderkennungen in Adressdaten grundsätzlich nach ISO 3166-1 und für den GKV-Bereich zusätzlich nach DEÜV Anlage 8 kodiert.\nDie DEÜV spiegelt den Stand in den Quellsystemen, aus denen die VSDM 2.0-Fachdienste versorgt werden, wieder.\nIn der DEÜV gibt es Ländercodes, die sich nicht auf den zum Zeitpunkt der Veröffentlichung bestehenden Stand der ISO 3166-1 abbilden lassen.\nDieses CodeSystem enthält zusätzlichen Ländercodes, um eine verlustfreie Abbildung zu ermöglichen.",
   "count": 2
