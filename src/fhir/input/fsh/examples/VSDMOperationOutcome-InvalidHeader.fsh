@@ -16,10 +16,10 @@ Usage: #example
   * code = #value "Element value invalid"
   * details[+]
     * coding[0] = VSDMErrorcodeCS#SERVICE_INVALID_HEADER "Der HTTP-Header [header] ist ungültig."
-    * text = "Der HTTP-Header ZETA-PoPP-Token ist ungültig."
+    * text = "Der HTTP-Header Accept ist ungültig."
   * diagnostics = """
       Der angegebene HTTP Header enthält nicht spezifikationskonforme Angaben.
       Hierbei handelt es sich in der Regel um einen Implementierungsfehler im Clientsystem.
-      Prüfen Sie den Aufbau des Headers gegen die einschlägigen Standards (v.A. RFC 2616) und korrigieren Sie die Anfrage entsprechend.
+      Prüfen Sie den Aufbau des Headers gegen die einschlägigen Standards (v.A. RFC 9110) und korrigieren Sie die Anfrage entsprechend.
     """
-  * location[+] = "http.ZETA-PoPP-Token"
+  * location[+] = "http.Accept"

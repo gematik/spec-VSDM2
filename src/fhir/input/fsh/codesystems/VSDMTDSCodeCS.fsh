@@ -95,7 +95,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
   * ^definition = """
       Der genannte HTTP-Header weist Formatfehler auf.
       Mögliche Ursachen:
-      Implementierungsfehler im Clientsystem (Verstoß gegen RFC 2616).
+      Implementierungsfehler im Clientsystem (Verstoß gegen RFC 9110).
       Relevante Anforderungen: A_28608, A_28609.
     """
   * ^property[+].code = #target
