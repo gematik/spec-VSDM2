@@ -20,9 +20,9 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
 * ^property[=].type = #code
 
 // Property zur Benennung möglicher fehlerhafter Felder
-* ^property[+].code = #location
-* ^property[=].uri = "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS#location"
-* ^property[=].description = "fehlerhafte Felder (zur Versorgung von OperationOutcome.issue.location)"
+* ^property[+].code = #expression
+* ^property[=].uri = "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS#expression"
+* ^property[=].description = "fehlerhafte Felder (zur Versorgung von OperationOutcome.issue.expression)"
 * ^property[=].type = #string
 
 * #79010 "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf."
@@ -35,7 +35,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
     """
   * ^property[+].code = #target
   * ^property[=].valueCode = #client
-  * ^property[+].code = #location
+  * ^property[+].code = #expression
   * ^property[=].valueString = "http.ZETA-PoPP-Token-Content.insurerId"
 
 * #79011 "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf."
@@ -48,7 +48,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
     """
   * ^property[+].code = #target
   * ^property[=].valueCode = #client
-  * ^property[+].code = #location
+  * ^property[+].code = #expression
   * ^property[=].valueString = "http.ZETA-PoPP-Token-Content.patientId"
 
 * #79012 "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
@@ -64,7 +64,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
     """
   * ^property[+].code = #target
   * ^property[=].valueCode = #client
-  * ^property[+].code = #location
+  * ^property[+].code = #expression
   * ^property[=].valueString = "http.ZETA-PoPP-Token-Content.insurerId"
 
 * #79013 "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt."
@@ -76,7 +76,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
     """
   * ^property[+].code = #target
   * ^property[=].valueCode = #client
-  * ^property[+].code = #location
+  * ^property[+].code = #expression
   * ^property[=].valueString = "http.ZETA-PoPP-Token-Content.insurerId, http.ZETA-PoPP-Token-Content.patientId"
 
 * #79014 "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden."
@@ -88,7 +88,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
     """
   * ^property[+].code = #target
   * ^property[=].valueCode = #client
-  * ^property[+].code = #location
+  * ^property[+].code = #expression
   * ^property[=].valueString = "http.If-None-Match"
 
 * #79030 "Der HTTP-Header [header] ist ungültig."
@@ -100,7 +100,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
     """
   * ^property[+].code = #target
   * ^property[=].valueCode = #client
-  * ^property[+].code = #location
+  * ^property[+].code = #expression
   * ^property[=].valueString = "http.[header]"
 
 * #79031 "Das vom Clientsystem angefragte Datenformat [media type] wird nicht unterstützt."
@@ -112,7 +112,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
     """
   * ^property[+].code = #target
   * ^property[=].valueCode = #client
-  * ^property[+].code = #location
+  * ^property[+].code = #expression
   * ^property[=].valueString = "http.Accept"
 
 * #79040 "Die HTTP-Operation [http-operation] wird nicht unterstützt."

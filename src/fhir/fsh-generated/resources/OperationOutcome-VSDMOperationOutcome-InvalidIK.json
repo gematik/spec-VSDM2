@@ -25,7 +25,7 @@
         "text": "Ungültige Institutionskennung 103456789."
       },
       "diagnostics": "Die im PoPP-Token enthaltene IK der Versicherung ist ungültig (Formatfehler).\nFordern Sie ein neues PoPP-Token an und wiederholen Sie die Abfrage beim zuständigen VSDM 2.0-Fachdienst.\nBei erneutem Fehler wiederholen Sie die Abfrage nicht, sondern brechen Sie mit einer Fehlermeldung ab.\nIn diesem Fall liegt wahrscheinlich eine Störung des zentralen PoPP-Service vor.",
-      "location": [
+      "expression": [
         "http.ZETA-PoPP-Token-Content.insurerId"
       ]
     }

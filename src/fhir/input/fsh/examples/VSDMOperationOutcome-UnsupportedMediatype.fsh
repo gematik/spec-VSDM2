@@ -25,4 +25,4 @@ Usage: #example
       Es sind nur die Formate application/fhir+xml und application/fhir+json erlaubt.
       Stellen Sie sicher, dass nur die genannten Formate verwendet werden.
     """
-  * location[+] = "http.Accept"
+  * expression[+] = "http.Accept"

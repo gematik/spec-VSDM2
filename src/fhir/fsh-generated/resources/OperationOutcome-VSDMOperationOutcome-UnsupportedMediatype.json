@@ -25,7 +25,7 @@
         "text": "Das vom Clientsystem angefragte Datenformat application/morse-code wird nicht unterstützt."
       },
       "diagnostics": "Das im HTTP Header Accept angeforderte Datenformat wird vom VSDM 2.0-Fachdienst nicht unterstützt.\nHierbei handelt es sich in der Regel um einen Implementierungsfehler im Clientsystem.\nEs sind nur die Formate application/fhir+xml und application/fhir+json erlaubt.\nStellen Sie sicher, dass nur die genannten Formate verwendet werden.",
-      "location": [
+      "expression": [
         "http.Accept"
       ]
     }

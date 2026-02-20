@@ -25,4 +25,4 @@ Usage: #example
       Bei erneutem Fehler wiederholen Sie die Abfrage nicht, sondern brechen Sie mit einer Fehlermeldung ab.
       In diesem Fall liegt wahrscheinlich eine Störung des zentralen PoPP-Service vor.
     """
-  * location[+] = "http.ZETA-PoPP-Token-Content.patientId"
+  * expression[+] = "http.ZETA-PoPP-Token-Content.patientId"

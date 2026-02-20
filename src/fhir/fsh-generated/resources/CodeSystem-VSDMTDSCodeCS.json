@@ -19,7 +19,7 @@
           "valueCode": "client"
         },
         {
-          "code": "location",
+          "code": "expression",
           "valueString": "http.ZETA-PoPP-Token-Content.insurerId"
         }
       ]
@@ -34,7 +34,7 @@
           "valueCode": "client"
         },
         {
-          "code": "location",
+          "code": "expression",
           "valueString": "http.ZETA-PoPP-Token-Content.patientId"
         }
       ]
@@ -49,7 +49,7 @@
           "valueCode": "client"
         },
         {
-          "code": "location",
+          "code": "expression",
           "valueString": "http.ZETA-PoPP-Token-Content.insurerId"
         }
       ]
@@ -64,7 +64,7 @@
           "valueCode": "client"
         },
         {
-          "code": "location",
+          "code": "expression",
           "valueString": "http.ZETA-PoPP-Token-Content.insurerId, http.ZETA-PoPP-Token-Content.patientId"
         }
       ]
@@ -79,7 +79,7 @@
           "valueCode": "client"
         },
         {
-          "code": "location",
+          "code": "expression",
           "valueString": "http.If-None-Match"
         }
       ]
@@ -94,7 +94,7 @@
           "valueCode": "client"
         },
         {
-          "code": "location",
+          "code": "expression",
           "valueString": "http.[header]"
         }
       ]
@@ -109,7 +109,7 @@
           "valueCode": "client"
         },
         {
-          "code": "location",
+          "code": "expression",
           "valueString": "http.Accept"
         }
       ]
@@ -194,9 +194,9 @@
       "type": "code"
     },
     {
-      "code": "location",
-      "uri": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS#location",
-      "description": "fehlerhafte Felder (zur Versorgung von OperationOutcome.issue.location)",
+      "code": "expression",
+      "uri": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS#expression",
+      "description": "fehlerhafte Felder (zur Versorgung von OperationOutcome.issue.expression)",
       "type": "string"
     }
   ],

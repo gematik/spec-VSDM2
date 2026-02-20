@@ -25,4 +25,4 @@ Usage: #example
       Bei erneutem Fehler wiederholen Sie die Abfrage mit größerem zeitlichen Abstand, um eventuell geänderte DNS-Einstellungen wirksam werden zu lassen. Halten Sie die Anwender über den Status informiert.
       Bei Andauern des Fehlers über 24 h liegt möglicherweise ein Fehler in der Implementierung des Clientsystems oder des Fachdients vor.
     """
-  * location[+] = "http.ZETA-PoPP-Token-Content.insurerId"
+  * expression[+] = "http.ZETA-PoPP-Token-Content.insurerId"
