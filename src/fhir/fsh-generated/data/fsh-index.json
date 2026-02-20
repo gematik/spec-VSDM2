@@ -285,7 +285,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMOperationOutcome-InternalServerError.fsh",
     "startLine": 1,
-    "endLine": 22
+    "endLine": 24
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidHTTPOperation.json",
@@ -293,7 +293,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMOperationOutcome-InvalidHTTPOperation.fsh",
     "startLine": 1,
-    "endLine": 20
+    "endLine": 22
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidHeader.json",
@@ -301,7 +301,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMOperationOutcome-InvalidHeader.fsh",
     "startLine": 1,
-    "endLine": 25
+    "endLine": 27
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidIK.json",
@@ -309,7 +309,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMOperationOutcome-InvalidIK.fsh",
     "startLine": 1,
-    "endLine": 26
+    "endLine": 28
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidKVNR.json",
@@ -317,7 +317,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMOperationOutcome-InvalidKVNR.fsh",
     "startLine": 1,
-    "endLine": 26
+    "endLine": 28
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidPatientRecordVersion.json",
@@ -325,7 +325,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMOperationOutcome-InvalidPatientRecordVersion.fsh",
     "startLine": 1,
-    "endLine": 26
+    "endLine": 28
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-UnknownIK.json",
@@ -333,7 +333,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMOperationOutcome-UnknownIK.fsh",
     "startLine": 1,
-    "endLine": 26
+    "endLine": 28
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-UnknownKVNR.json",
@@ -341,7 +341,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMOperationOutcome-UnknownKVNR.fsh",
     "startLine": 1,
-    "endLine": 27
+    "endLine": 29
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-UnsupportedMediatype.json",
@@ -349,7 +349,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMOperationOutcome-UnsupportedMediatype.fsh",
     "startLine": 1,
-    "endLine": 26
+    "endLine": 28
   },
   {
     "outputFile": "StructureDefinition-VSDDatensatzGKV.json",
