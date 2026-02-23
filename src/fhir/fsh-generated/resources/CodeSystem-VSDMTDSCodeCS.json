@@ -87,7 +87,7 @@
     {
       "code": "79030",
       "display": "Der HTTP-Header [header] ist ungültig.",
-      "definition": "Der genannte HTTP-Header weist Formatfehler auf.\nMögliche Ursachen:\nImplementierungsfehler im Clientsystem (Verstoß gegen RFC 2616).\nRelevante Anforderungen: A_28608, A_28609.",
+      "definition": "Der genannte HTTP-Header weist Formatfehler auf.\nMögliche Ursachen:\nImplementierungsfehler im Clientsystem (Verstoß gegen RFC 9110).\nRelevante Anforderungen: A_28608, A_28609.",
       "property": [
         {
           "code": "target",
