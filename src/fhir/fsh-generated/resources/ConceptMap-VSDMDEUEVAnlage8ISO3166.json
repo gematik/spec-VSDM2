@@ -216,6 +216,17 @@
           ]
         },
         {
+          "code": "AU",
+          "display": "Ashmore- und Cartierinseln",
+          "target": [
+            {
+              "code": "AU",
+              "display": "Australia",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
           "code": "ETH",
           "display": "Äthiopien",
           "target": [
@@ -233,7 +244,7 @@
             {
               "code": "AU",
               "display": "Australia",
-              "equivalence": "equal"
+              "equivalence": "wider"
             }
           ]
         },

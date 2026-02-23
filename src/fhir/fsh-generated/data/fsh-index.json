@@ -245,7 +245,7 @@
     "fshType": "Instance",
     "fshFile": "mappings/VSDMDEUEVAnlage8ISO3166.fsh",
     "startLine": 1,
-    "endLine": 2031
+    "endLine": 2039
   },
   {
     "outputFile": "ConceptMap-VSDMTDSCodeErrorcode.json",

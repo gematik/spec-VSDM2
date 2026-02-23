@@ -161,6 +161,14 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
+    * code = #AU
+    * display = "Ashmore- und Cartierinseln"
+    * target[+]
+      * code = #AU
+      * display = "Australia"
+      * equivalence = #wider
+
+  * element[+]
     * code = #ETH 
     * display = "Äthiopien"
     * target[+]
@@ -174,7 +182,7 @@ Usage: #definition
     * target[+]
       * code = #AU
       * display = "Australia"
-      * equivalence = #equal
+      * equivalence = #wider
 
   * element[+]
     * code = #BS 
