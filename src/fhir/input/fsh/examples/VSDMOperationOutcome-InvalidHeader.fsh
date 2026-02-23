@@ -4,6 +4,8 @@ Title: "Fehlermeldung SERVICE_INVALID_HEADER"
 Description: "Beispiel zur Fehlermeldung 'Der HTTP-Header [header] ist ungültig.'"
 Usage: #example
 
+* meta
+  * profile[0] = Canonical(VSDMOperationOutcome|1.0.0)
 * text
   * status = #generated
   * div[+] = """

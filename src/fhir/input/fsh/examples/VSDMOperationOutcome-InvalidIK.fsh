@@ -4,6 +4,8 @@ Title: "Fehlermeldung VSDSERVICE_INVALID_IK"
 Description: "Beispiel zur Fehlermeldung 'Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf.'"
 Usage: #example
 
+* meta
+  * profile[0] = Canonical(VSDMOperationOutcome|1.0.0)
 * text
   * status = #generated
   * div[+] = """

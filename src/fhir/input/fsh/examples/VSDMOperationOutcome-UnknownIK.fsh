@@ -4,6 +4,8 @@ Title: "Fehlermeldung VSDSERVICE_UNKNOWN_IK"
 Description: "Beispiel zur Fehlermeldung 'Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt.'"
 Usage: #example
 
+* meta
+  * profile[0] = Canonical(VSDMOperationOutcome|1.0.0)
 * text
   * status = #generated
   * div[+] = """

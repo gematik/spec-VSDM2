@@ -4,6 +4,8 @@ Title: "Fehlermeldung VSDSERVICE_UNKNOWN_KVNR"
 Description: "Beispiel zur Fehlermeldung 'Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt.'"
 Usage: #example
 
+* meta
+  * profile[0] = Canonical(VSDMOperationOutcome|1.0.0)
 * text
   * status = #generated
   * div[+] = """

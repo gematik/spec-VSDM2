@@ -4,6 +4,8 @@ Title: "Fehlermeldung SERVICE_INTERNAL_SERVER_ERROR"
 Description: "Beispiel zur Fehlermeldung 'Unerwarteter interner Fehler des Fachdienstes VSDM.'"
 Usage: #example
 
+* meta
+  * profile[0] = Canonical(VSDMOperationOutcome|1.0.0)
 * text
   * status = #generated
   * div[+] = """
