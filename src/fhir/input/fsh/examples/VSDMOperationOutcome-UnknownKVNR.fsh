@@ -25,5 +25,5 @@ Usage: #example
       Fordern Sie ein neues PoPP-Token an. Wiederholen Sie die Dienstlokalisierung, um den korrekten zuständigen Fachdienst zu ermitteln und wiederholen Sie die Abfrage.
       Bei erneutem Fehler wiederholen Sie die Abfrage nicht, sondern weisen Sie die Anwender auf ein möglicherweise ausgelaufenes Versicherungsverhältnis hin.
     """
-  * location[+] = "http.ZETA-PoPP-Token-Content.insurerId"
-  * location[+] = "http.ZETA-PoPP-Token-Content.patientId"
+  * expression[+] = "http.ZETA-PoPP-Token-Content.insurerId"
+  * expression[+] = "http.ZETA-PoPP-Token-Content.patientId"

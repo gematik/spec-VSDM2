@@ -24,4 +24,4 @@ Usage: #example
       Hierbei handelt es sich in der Regel um einen Implementierungsfehler im Clientsystem.
       Prüfen Sie den Aufbau des Headers gegen die einschlägigen Standards (v.A. RFC 9110) und korrigieren Sie die Anfrage entsprechend.
     """
-  * location[+] = "http.Accept"
+  * expression[+] = "http.Accept"

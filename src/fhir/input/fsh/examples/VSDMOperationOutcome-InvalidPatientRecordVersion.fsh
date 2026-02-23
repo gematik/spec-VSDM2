@@ -25,4 +25,4 @@ Usage: #example
       Falls kein Wert vorliegt, muss der Header mit 0 gefüllt werden.
       Wiederholen Sie die Anfrage unter Angabe eines gültigen Werts.
     """
-  * location[+] = "http.If-None-Match"
+  * expression[+] = "http.If-None-Match"
