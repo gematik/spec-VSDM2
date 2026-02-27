@@ -59,7 +59,21 @@ paths:
       tags:
         - Vsdm
       summary: Returns a VSDMBundle for the specified patient.
-      description: Returns a VSDMBundle with VSD about a specific patient that is addressed within the PoPP-Token in the request header.
+      description: |
+        Returns a VSDMBundle with VSD about a specific patient that is addressed within the PoPP-Token in the request header.
+        
+        **FHIR DEVIATION NOTICE:**
+        This endpoint deviates from standard FHIR REST patterns:
+        - Standard FHIR: GET /Bundle/{id}
+        - VSDM2: GET /vsdservice/v1/vsdmbundle (no ID in path)
+        
+        **Rationale:**
+        - Security: Patient KVNR is not exposed in URL
+        - Context-based: Patient identified via KVNR in PoPP token header
+        - Singleton: Exactly one current VSDMBundle per patient
+        
+        Despite this deviation, VSDMBundle remains a FHIR Resource with
+        standard resource semantics (ETag, conditional requests, etc.).
       operationId: getVSDMBundle
       security:
         - oAuthVsdm: [ vsdservice ]

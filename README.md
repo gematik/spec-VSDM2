@@ -132,6 +132,10 @@ Wie oben erwähnt, wird das VSDM 2.0 auf die Verwendung einer RESTful FHIR-API r
 
 [vsdm2.yaml](./src/openapi/vsdm2.yaml).
 
+Zusätzliche Informationen zu Design-Entscheidungen und Abweichungen vom FHIR-Standard finden Sie hier:
+
+[API Design & FHIR-Konformität](docs/vsdm_api_design.md)
+
 
 
 # Kontakt
