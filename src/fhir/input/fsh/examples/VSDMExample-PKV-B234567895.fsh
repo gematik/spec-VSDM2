@@ -80,3 +80,5 @@ Usage: #inline
   * end = "2025-12-31"
 * payor[+]
   * reference = $urlVSDMPayorOrganization-168123458
+  * identifier[+].value = "168123458"
+  * display = "Privatversicherung Neptun"

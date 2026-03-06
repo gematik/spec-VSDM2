@@ -198,7 +198,11 @@
         },
         "payor": [
           {
-            "reference": "https://gematik.de/fhir/Organization/019aa691-0595-7235-8c71-f9bfc5cc579c"
+            "reference": "https://gematik.de/fhir/Organization/019aa691-0595-7235-8c71-f9bfc5cc579c",
+            "identifier": {
+              "value": "168156788"
+            },
+            "display": "Privatversicherung Jupiter"
           }
         ]
       }

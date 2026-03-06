@@ -169,7 +169,11 @@
         },
         "payor": [
           {
-            "reference": "https://gematik.de/fhir/Organization/019aa691-6ac1-7cb4-94fe-c2bce5e1a343"
+            "reference": "https://gematik.de/fhir/Organization/019aa691-6ac1-7cb4-94fe-c2bce5e1a343",
+            "identifier": {
+              "value": "168112342"
+            },
+            "display": "Privatversicherung Pluto"
           }
         ]
       }

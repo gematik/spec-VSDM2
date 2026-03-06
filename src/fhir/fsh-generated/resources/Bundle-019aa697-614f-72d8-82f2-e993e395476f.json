@@ -165,30 +165,20 @@
         ],
         "payor": [
           {
-            "extension": [
-              {
-                "valueCoding": {
-                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
-                  "code": "H",
-                  "display": "Haupt-Kostenträger"
-                },
-                "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
-              }
-            ],
-            "reference": "https://gematik.de/fhir/Organization/019aa692-4c73-750d-ac25-19ba533f5031"
+            "identifier": {
+              "system": "http://fhir.de/sid/arge-ik/iknr",
+              "value": "105532787"
+            },
+            "reference": "https://gematik.de/fhir/Organization/019aa692-4c73-750d-ac25-19ba533f5031",
+            "display": "Beispielkostenträger Kassel"
           },
           {
-            "extension": [
-              {
-                "valueCoding": {
-                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
-                  "code": "A",
-                  "display": "abrechnender Kostenträger"
-                },
-                "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
-              }
-            ],
-            "reference": "https://gematik.de/fhir/Organization/019aa692-2475-7b66-9662-0056c28a32b0"
+            "identifier": {
+              "system": "http://fhir.de/sid/arge-ik/iknr",
+              "value": "106339922"
+            },
+            "reference": "https://gematik.de/fhir/Organization/019aa692-2475-7b66-9662-0056c28a32b0",
+            "display": "Beispielkostenträger Koblenz"
           }
         ],
         "status": "active",

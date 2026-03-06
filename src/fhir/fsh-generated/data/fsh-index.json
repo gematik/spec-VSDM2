@@ -208,14 +208,6 @@
     "endLine": 35
   },
   {
-    "outputFile": "CodeSystem-VSDMKostentraegerRolleCS.json",
-    "fshName": "VSDMKostentraegerRolleCS",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMKostentraegerRolleCS.fsh",
-    "startLine": 1,
-    "endLine": 13
-  },
-  {
     "outputFile": "CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json",
     "fshName": "VSDMRuhenderLeistungsanspruchArtCS",
     "fshType": "CodeSystem",
@@ -397,7 +389,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverageGKV.fsh",
     "startLine": 1,
-    "endLine": 187
+    "endLine": 184
   },
   {
     "outputFile": "StructureDefinition-VSDMCoveragePKV.json",
@@ -422,14 +414,6 @@
     "fshFile": "extensions/VSDMHinweisPKV.fsh",
     "startLine": 1,
     "endLine": 39
-  },
-  {
-    "outputFile": "StructureDefinition-VSDMKostentraegerRolle.json",
-    "fshName": "VSDMKostentraegerRolle",
-    "fshType": "Extension",
-    "fshFile": "extensions/VSDMKostentraegerRolle.fsh",
-    "startLine": 1,
-    "endLine": 19
   },
   {
     "outputFile": "StructureDefinition-VSDMKrankenhausleistungenPKV.json",
@@ -502,14 +486,6 @@
     "fshFile": "valuesets/VSDMISO3166VS.fsh",
     "startLine": 1,
     "endLine": 8
-  },
-  {
-    "outputFile": "ValueSet-VSDMKostentraegerRolleVS.json",
-    "fshName": "VSDMKostentraegerRolleVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMKostentraegerRolleVS.fsh",
-    "startLine": 1,
-    "endLine": 7
   },
   {
     "outputFile": "ValueSet-VSDMNamenszusatzVS.json",

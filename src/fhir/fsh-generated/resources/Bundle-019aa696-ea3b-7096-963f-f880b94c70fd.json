@@ -182,7 +182,11 @@
         },
         "payor": [
           {
-            "reference": "https://gematik.de/fhir/Organization/019aa691-5647-7b09-905e-e0130ecd0bbd"
+            "reference": "https://gematik.de/fhir/Organization/019aa691-5647-7b09-905e-e0130ecd0bbd",
+            "identifier": {
+              "value": "168123458"
+            },
+            "display": "Privatversicherung Neptun"
           }
         ]
       }

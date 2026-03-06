@@ -188,7 +188,11 @@
         },
         "payor": [
           {
-            "reference": "https://gematik.de/fhir/Organization/019aa691-3a52-7536-acd9-2ec675894780"
+            "reference": "https://gematik.de/fhir/Organization/019aa691-3a52-7536-acd9-2ec675894780",
+            "identifier": {
+              "value": "168134565"
+            },
+            "display": "Privatversicherung Uranus"
           }
         ]
       }

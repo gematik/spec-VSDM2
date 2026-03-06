@@ -158,30 +158,20 @@
         ],
         "payor": [
           {
-            "extension": [
-              {
-                "valueCoding": {
-                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
-                  "code": "H",
-                  "display": "Haupt-Kostenträger"
-                },
-                "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
-              }
-            ],
-            "reference": "https://gematik.de/fhir/Organization/019aa692-edfe-7659-bd03-1b492c557077"
+            "identifier": {
+              "system": "http://fhir.de/sid/arge-ik/iknr",
+              "value": "103169760"
+            },
+            "reference": "https://gematik.de/fhir/Organization/019aa692-edfe-7659-bd03-1b492c557077",
+            "display": "Beispielkostenträger Bremen"
           },
           {
-            "extension": [
-              {
-                "valueCoding": {
-                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
-                  "code": "A",
-                  "display": "abrechnender Kostenträger"
-                },
-                "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
-              }
-            ],
-            "reference": "https://gematik.de/fhir/Organization/019aa692-a944-756a-bc42-e857b709b862"
+            "identifier": {
+              "system": "http://fhir.de/sid/arge-ik/iknr",
+              "value": "103215857"
+            },
+            "reference": "https://gematik.de/fhir/Organization/019aa692-a944-756a-bc42-e857b709b862",
+            "display": "Beispielkostenträger Bremerhaven"
           }
         ],
         "status": "active",

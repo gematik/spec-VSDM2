@@ -381,120 +381,61 @@
       {
         "id": "Coverage.payor",
         "path": "Coverage.payor",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "extension('https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle').value"
-            }
-          ],
-          "rules": "open"
-        },
-        "short": "Kostenträger"
-      },
-      {
-        "id": "Coverage.payor.extension:kostentraegerRolle",
-        "path": "Coverage.payor.extension",
-        "sliceName": "kostentraegerRolle",
-        "short": "Rolle des Kostenträgers",
-        "definition": "Rolle des Kostenträgers (Haupt- oder abrechnender Kostenträger)",
-        "min": 0,
-        "max": "1",
+        "short": "Kostenträger",
+        "definition": "Gibt den gesetzlichen Kostenträger des Versicherten an.\nDer Haupt-Kostenträger ist verpflichtend in der ersten Position anzugeben.\nEin etwaiger abweichender abrechnender Kostenträger kann als zweite Referenz angegeben werden.",
+        "comment": "Zur Kompatibilität mit den etablierten Profilen (z.B. ISIK) werden neben der Referenz innerhalb des Bundles auch der Identifier und der Name in der Referenz hinterlegt.\nInnerhalb des VSDM-Bundles werden die Kostenträger als VSDMPayorOrganization-Ressourcen übermittelt; der Verweis erfolgt über die reference-Angabe.",
+        "max": "2",
         "type": [
           {
-            "code": "Extension",
-            "profile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization"
             ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "VSDMCoverageGKV-payor-1",
+            "severity": "error",
+            "human": "Die IK-Nummer in der Kostenträger-Referenz muss mit der IK-Nummer in der referenzierten Organisation übereinstimmen.",
+            "expression": "resolve().identifier.exists(value = $this.value)",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV"
+          },
+          {
+            "key": "VSDMCoverageGKV-payor-2",
+            "severity": "error",
+            "human": "Der Anzeigetext der Kostenträger-Referenz muss mit dem Anzeigenamen der referenzierten Organisation übereinstimmen.",
+            "expression": "resolve().name = $this.display",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV"
           }
         ],
         "mustSupport": true
       },
       {
-        "id": "Coverage.payor:Hauptkostentraeger",
-        "path": "Coverage.payor",
-        "sliceName": "Hauptkostentraeger",
+        "id": "Coverage.payor.reference",
+        "path": "Coverage.payor.reference",
         "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization"
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {
-        "id": "Coverage.payor:Hauptkostentraeger.extension:kostentraegerRolle",
-        "path": "Coverage.payor.extension",
-        "sliceName": "kostentraegerRolle",
-        "short": "Rolle des Kostenträgers",
-        "definition": "Rolle des Kostenträgers (Haupt- oder abrechnender Kostenträger)",
-        "min": 0,
-        "max": "1",
+        "id": "Coverage.payor.identifier",
+        "path": "Coverage.payor.identifier",
+        "min": 1,
         "type": [
           {
-            "code": "Extension",
+            "code": "Identifier",
             "profile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
+              "http://fhir.de/StructureDefinition/identifier-iknr"
             ]
           }
         ],
         "mustSupport": true
       },
       {
-        "id": "Coverage.payor:Hauptkostentraeger.extension:kostentraegerRolle.value[x]",
-        "path": "Coverage.payor.extension.value[x]",
-        "patternCoding": {
-          "code": "H",
-          "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
-          "display": "Haupt-Kostenträger"
-        }
-      },
-      {
-        "id": "Coverage.payor:abrechnenderKostentraeger",
-        "path": "Coverage.payor",
-        "sliceName": "abrechnenderKostentraeger",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization"
-            ]
-          }
-        ],
+        "id": "Coverage.payor.display",
+        "path": "Coverage.payor.display",
+        "min": 1,
         "mustSupport": true
-      },
-      {
-        "id": "Coverage.payor:abrechnenderKostentraeger.extension:kostentraegerRolle",
-        "path": "Coverage.payor.extension",
-        "sliceName": "kostentraegerRolle",
-        "short": "Rolle des Kostenträgers",
-        "definition": "Rolle des Kostenträgers (Haupt- oder abrechnender Kostenträger)",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Coverage.payor:abrechnenderKostentraeger.extension:kostentraegerRolle.value[x]",
-        "path": "Coverage.payor.extension.value[x]",
-        "patternCoding": {
-          "code": "A",
-          "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
-          "display": "abrechnender Kostenträger"
-        }
       }
     ]
   }

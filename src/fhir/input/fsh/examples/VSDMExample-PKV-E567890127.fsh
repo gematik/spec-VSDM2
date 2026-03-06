@@ -84,3 +84,5 @@ Usage: #inline
   * start = "2020-01-01"
 * payor[+]
   * reference = $urlVSDMPayorOrganization-168156788
+  * identifier[+].value = "168156788"
+  * display = "Privatversicherung Jupiter"

@@ -76,7 +76,9 @@ Usage: #inline
   * end = "2024-12-31"
 * payor[+]
   * reference = $urlVSDMPayorOrganization-103169760
-  * extension[kostentraegerRolle].valueCoding = #H "Haupt-Kostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit
+  * identifier[+].value = "103169760"
+  * display = "Beispielkostenträger Bremen"
 * payor[+]
   * reference = $urlVSDMPayorOrganization-103215857
-  * extension[kostentraegerRolle].valueCoding = #A "abrechnender Kostenträger" // Textangabe ist optional, verbessert allerdings die Lesbarkeit
+  * identifier[+].value = "103215857"
+  * display = "Beispielkostenträger Bremerhaven"

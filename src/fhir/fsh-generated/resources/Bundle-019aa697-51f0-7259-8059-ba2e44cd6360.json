@@ -163,17 +163,12 @@
         ],
         "payor": [
           {
-            "extension": [
-              {
-                "valueCoding": {
-                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
-                  "code": "H",
-                  "display": "Haupt-Kostenträger"
-                },
-                "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
-              }
-            ],
-            "reference": "https://gematik.de/fhir/Organization/019aa693-005c-7770-a3b5-870d536e2163"
+            "identifier": {
+              "system": "http://fhir.de/sid/arge-ik/iknr",
+              "value": "102343996"
+            },
+            "reference": "https://gematik.de/fhir/Organization/019aa693-005c-7770-a3b5-870d536e2163",
+            "display": "Beispielkostenträger Lüneburg"
           }
         ],
         "status": "active",

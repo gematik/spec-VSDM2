@@ -142,17 +142,12 @@
         ],
         "payor": [
           {
-            "extension": [
-              {
-                "valueCoding": {
-                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
-                  "code": "H",
-                  "display": "Haupt-Kostenträger"
-                },
-                "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
-              }
-            ],
-            "reference": "Organization/VSDMPayorOrganization-107668422"
+            "identifier": {
+              "system": "http://fhir.de/sid/arge-ik/iknr",
+              "value": "107668422"
+            },
+            "reference": "https://gematik.de/fhir/Organization/019aa691-efa4-7cfc-8f83-82387d397bce",
+            "display": "Beispielkostenträger Offenburg"
           }
         ],
         "status": "active",

@@ -175,7 +175,11 @@
         },
         "payor": [
           {
-            "reference": "https://gematik.de/fhir/Organization/019aa690-ed54-74bb-9acf-d15af64e00d3"
+            "reference": "https://gematik.de/fhir/Organization/019aa690-ed54-74bb-9acf-d15af64e00d3",
+            "identifier": {
+              "value": "168167894"
+            },
+            "display": "Privatversicherung Mars"
           }
         ]
       }

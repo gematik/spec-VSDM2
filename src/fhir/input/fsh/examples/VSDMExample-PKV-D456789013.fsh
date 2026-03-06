@@ -81,3 +81,5 @@ Usage: #inline
   * start = "1980-01-01"
 * payor[+]
   * reference = $urlVSDMPayorOrganization-168145671
+  * identifier[+].value = "168145671"
+  * display = "Privatversicherung Saturn"
