@@ -21,34 +21,8 @@ externalDocs:
   description: FHIR Specification VSDM 2
   url: https://simplifier.net/vsdm2
 servers:
-  - url: https://101575519.prod.vsdm2.ti-dienste.de
-    description: TK Production server (PU)
-  - url: https://109723913.prod.vsdm2.ti-dienste.de
-    description: BKK VBU Production server (PU)
-  - url: https://{iknummer}.prod.vsdm2.ti-dienste.de
-    description: address schema vsdm backends - productive environment
-    variables:
-      iknummer:
-        default: "111111111"
-        description: Institutional identifier for a specific health insurer.
-  - url: https://{iknummer}.ref.vsdm2.ti-dienste.de
-    description: address schema vsdm backends - reference environment
-    variables:
-      iknummer:
-        default: "111111111"
-        description: Institutional identifier for a specific health insurer.
-  - url: https://{iknummer}.test.vsdm2.ti-dienste.de
-    description: address schema vsdm backends - test environment
-    variables:
-      iknummer:
-        default: "111111111"
-        description: Institutional identifier for a specific health insurer.
-  - url: https://{iknummer}.dev.vsdm2.ti-dienste.de
-    description: address schema vsdm backends - development environment
-    variables:
-      iknummer:
-        default: "111111111"
-        description: Institutional identifier for a specific health insurer.
+  - url: https://{resource_fqdn}.de
+    description: Example Hostname for a given VSDM service, taken from the /.well-known/ti-service-provider-metadata "Fachdienstlokalisierung" Endpoint of the ZETA HTTP proxy
 tags:
   - name: Vsdm
     description: Endpoint of the application "Versichertenstammdatenmanagement" (VSDM) to retrieve a VSDMBundle FHIR-Resource (Versichertenstammdaten; VSD) of a specific patient.
@@ -62,6 +36,10 @@ paths:
       description: |
         Returns a VSDMBundle with VSD about a specific patient that is addressed within the PoPP-Token in the request header.
         
+        To localize this endpoint, clients have to find the health insurer specific "resource_fqdn" 
+        by querying the /.well-known/ti-service-provider-metadata endpoint first 
+        using https://{iknummer}.{betriebsumgebung}.vsdm2.ti-dienste.de.
+
         **FHIR DEVIATION NOTICE:**
         This endpoint deviates from standard FHIR REST patterns:
         - Standard FHIR: GET /Bundle/{id}
@@ -460,7 +438,7 @@ components:
       description: This API uses OAuth 2, to gain access clients need an Access-Token and to proof "Versorgungskontext" with a PoPP-Token in addition
       flows:
         authorizationCode:
-          authorizationUrl: https://101575519.prod.vsdm2.ti-dienste.de/auth
-          tokenUrl: https://101575519.prod.vsdm2.ti-dienste.de/token
+          authorizationUrl: https://<authZ_server_resource_fqdn>.de/auth
+          tokenUrl: https://<authZ_server_resource_fqdn>.de/token
           scopes:
             vsdservice: allows practitioners to access the VSDService API of the "Versichertenstammdatendienst"
