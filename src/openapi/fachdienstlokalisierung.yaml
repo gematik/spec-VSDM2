@@ -40,7 +40,7 @@ servers:
     variables:
       iknummer:
         default: "111111111"
-        description: Institutional identifier for a specific health insurer.tags
+        description: Institutional identifier for a specific health insurer.
 tags:
   - name: ti-sp
     description: Endpoints to work with TI service provider.
@@ -124,7 +124,6 @@ components:
           schema:
             $ref: '#/components/schemas/ServerErrorProblem'
           example:
-            type: 'https://github.com/gematik/zeta/blob/main/src/schemas/ti-sp-well-known.yaml'
             title: 'Internal Server Error'
             status: 500
             detail: 'Failed to retrieve TI service provider metadata for the requested health insurer (IK-Nummer).'

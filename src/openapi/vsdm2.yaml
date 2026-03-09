@@ -112,12 +112,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/VSDMOperationOutcome'
-        '403':
-          description: Forbidden
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/VSDMOperationOutcome'
         '404':
           description: Not Found
           content:
@@ -126,6 +120,12 @@ paths:
                 $ref: '#/components/schemas/VSDMOperationOutcome'
         '405':
           description: Method Not Allowed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
+        '406':
+          description: Not Acceptable
           content:
             application/json:
               schema:
@@ -142,19 +142,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/VSDMOperationOutcome'
-        '502':
-          description: Bad Gateway
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/VSDMOperationOutcome'
-        '504':
-          description: Gateway Timeout
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/VSDMOperationOutcome'
-
 components:
   parameters:
     ETag:
@@ -418,27 +405,13 @@ components:
               ]
           }
         ]
-    ErrorType:
-      description: Error object with additional information about the occurred error
-      type: object
-      properties:
-        errorCode:
-          description: Error condition specifier
-          type: string
-          examples: [unauthorized, forbidden, internalError]
-        errorDetail:
-          description: Additional details regarding the error condition (if applicable)
-          type: string
-          examples: [User is not authorized, Request is forbidden, Server cannot handle request for now]
-      required:
-        - errorCode
   securitySchemes:
     oAuthVsdm:
       type: oauth2
       description: This API uses OAuth 2, to gain access clients need an Access-Token and to proof "Versorgungskontext" with a PoPP-Token in addition
       flows:
         authorizationCode:
-          authorizationUrl: https://<authZ_server_resource_fqdn>.de/auth
-          tokenUrl: https://<authZ_server_resource_fqdn>.de/token
+          authorizationUrl: https://{resource_fqdn}.de/auth
+          tokenUrl: https://{resource_fqdn}.de.de/token
           scopes:
             vsdservice: allows practitioners to access the VSDService API of the "Versichertenstammdatendienst"
