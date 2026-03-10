@@ -3,7 +3,7 @@
   "id": "VSDMOperationOutcome-InvalidKVNR",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome|1.0.0"
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome|1.0.0-rc6"
     ]
   },
   "text": {

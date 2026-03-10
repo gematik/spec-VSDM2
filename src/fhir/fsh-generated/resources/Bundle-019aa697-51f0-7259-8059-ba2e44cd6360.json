@@ -3,7 +3,7 @@
   "id": "019aa697-51f0-7259-8059-ba2e44cd6360",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0-rc6"
     ],
     "lastUpdated": "2025-07-14T15:16:17.890+01:00"
   },
@@ -17,7 +17,7 @@
         "id": "019aa693-f5c1-7f37-a51f-0cffee08db71",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0-rc6"
           ]
         },
         "identifier": [
@@ -98,7 +98,7 @@
         "id": "019aa695-ad4a-787f-b8f4-a13e81110e87",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0"
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0-rc6"
           ]
         },
         "type": {
@@ -163,17 +163,12 @@
         ],
         "payor": [
           {
-            "extension": [
-              {
-                "valueCoding": {
-                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMKostentraegerRolleCS",
-                  "code": "H",
-                  "display": "Haupt-Kostenträger"
-                },
-                "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle"
-              }
-            ],
-            "reference": "https://gematik.de/fhir/Organization/019aa693-005c-7770-a3b5-870d536e2163"
+            "identifier": {
+              "system": "http://fhir.de/sid/arge-ik/iknr",
+              "value": "102343996"
+            },
+            "reference": "https://gematik.de/fhir/Organization/019aa693-005c-7770-a3b5-870d536e2163",
+            "display": "Beispielkostenträger Lüneburg"
           }
         ],
         "status": "active",
@@ -192,7 +187,7 @@
         "id": "019aa693-005c-7770-a3b5-870d536e2163",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0-rc6"
           ]
         },
         "identifier": [

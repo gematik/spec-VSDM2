@@ -5,7 +5,7 @@ Description: "Beispiel zur Fehlermeldung 'Unerwarteter interner Fehler des Fachd
 Usage: #example
 
 * meta
-  * profile[0] = Canonical(VSDMOperationOutcome|1.0.0)
+  * profile[0] = Canonical(VSDMOperationOutcome|1.0.0-rc6)
 * text
   * status = #generated
   * div[+] = """

@@ -163,28 +163,25 @@ Description: "Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdaten
         Für den Fall der Authentifikation mit einer elektronischen Identität liegt ohnehin kein eGK-Gültigkeitsdatum vor.
       """
 
-// Extension und Slicing zur Unterscheidung von Haupt- und abrechnendem Kostenträger
-* payor
+// Zuordnung aus Versicherungsdaten -> Kostentraeger und AbrechnenderKostentraeger
+* payor only Reference(VSDMPayorOrganization)
+* payor 1..2 MS
   * ^short = "Kostenträger"
-  * extension contains VSDMKostentraegerRolle named kostentraegerRolle 0..1 
-  * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "extension('https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKostentraegerRolle').value"
-  * ^slicing.rules = #open
-  * extension[kostentraegerRolle] MS
-    * ^short = "Rolle des Kostenträgers"
-    * ^definition = """
-        Rolle des Kostenträgers (Haupt- oder abrechnender Kostenträger)
-      """
-
-// Zuordnung aus Versicherungsdaten -> Kostentraeger 
-* payor contains Hauptkostentraeger 1..1 MS
-* payor[Hauptkostentraeger] only Reference(VSDMPayorOrganization)
-  * extension[kostentraegerRolle].valueCoding = VSDMKostentraegerRolleCS#H "Haupt-Kostenträger"
-
-// Zuordnung aus Versicherungsdaten -> AbrechnenderKostentraeger 
-* payor contains abrechnenderKostentraeger 0..1 MS
-* payor[abrechnenderKostentraeger] only Reference(VSDMPayorOrganization)
-  * extension[kostentraegerRolle].valueCoding = VSDMKostentraegerRolleCS#A "abrechnender Kostenträger"
+  * ^definition = """
+      Gibt den gesetzlichen Kostenträger des Versicherten an.
+      Der Haupt-Kostenträger ist verpflichtend in der ersten Position anzugeben.
+      Ein etwaiger abweichender abrechnender Kostenträger kann als zweite Referenz angegeben werden.
+    """
+  * ^comment = """
+      Zur Kompatibilität mit den etablierten Profilen (z.B. ISIK) werden neben der Referenz innerhalb des Bundles auch der Identifier und der Name in der Referenz hinterlegt.
+      Innerhalb des VSDM-Bundles werden die Kostenträger als VSDMPayorOrganization-Ressourcen übermittelt; der Verweis erfolgt über die reference-Angabe.
+    """
+  * reference 1..1 MS
+  * identifier 1..1 MS
+  * identifier only IdentifierIknr
+  * display 1..1 MS
+  * obeys VSDMCoverageGKV-payor-1
+  * obeys VSDMCoverageGKV-payor-2
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -201,4 +198,14 @@ Severity: #error
 Invariant: VSDMCoverageGKV-address-2
 Description: "Für GKV-Versicherte ist die Angabe des Länderkennzeichens nach DEÜV Anlage 8 in Adressen des Kostenträgers erforderlich."
 Expression: "payor.all(resolve().address.all(country.extension('http://hl7.org/fhir/StructureDefinition/iso21090-codedString').value.ofType(Coding).where(system = 'http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen').exists()))"
+Severity: #error
+
+Invariant: VSDMCoverageGKV-payor-1
+Description: "Die IK-Nummer in der Kostenträger-Referenz muss mit der IK-Nummer in der referenzierten Organisation übereinstimmen."
+Expression: "resolve().identifier.exists(value = $this.value)"
+Severity: #error
+
+Invariant: VSDMCoverageGKV-payor-2
+Description: "Der Anzeigetext der Kostenträger-Referenz muss mit dem Anzeigenamen der referenzierten Organisation übereinstimmen."
+Expression: "resolve().name = $this.display"
 Severity: #error
