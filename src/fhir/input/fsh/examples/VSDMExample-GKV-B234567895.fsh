@@ -69,7 +69,7 @@ Usage: #inline
 * extension[besonderePersonengruppe].valueCoding = #04 "SOZ" // "BSHG (Bundessozialhilfegesetz) § 264 SGB V"
 * extension[versichertenart].valueCoding = $csVersichertenartGKV#3 "Familienangehoerige"
 * status = #active
-* type = $csVersicherungsart#GKV
+* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-B234567895
 * period
   * start = "2011-04-01"

@@ -133,7 +133,7 @@
       {
         "id": "Coverage.type",
         "path": "Coverage.type",
-        "fixedCodeableConcept": {
+        "patternCodeableConcept": {
           "coding": [
             {
               "code": "PKV",

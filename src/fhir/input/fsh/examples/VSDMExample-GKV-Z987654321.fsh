@@ -103,7 +103,7 @@ Usage: #inline
     * start = "2025-01-01"
     * end = "2025-12-31"
 * status = #active
-* type = $csVersicherungsart#GKV
+* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-Z987654321
 * period
   * start = "2000-01-01"

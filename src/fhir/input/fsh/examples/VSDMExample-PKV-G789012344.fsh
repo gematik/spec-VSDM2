@@ -72,7 +72,7 @@ Usage: #inline
 * extension[tarifart].valueCoding = #03 "Basistarif"
 * extension[versichertenart].valueCoding = VSDMVersichertenartPKVCS#VN "Versicherungsnehmer"
 * status = #active
-* type = $csVersicherungsart#PKV
+* type = $csVersicherungsart#PKV "private Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-PKV-G789012344
 * period
   * start = "1974-02-12"

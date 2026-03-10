@@ -61,7 +61,7 @@ Usage: #inline
 * extension[WOP].valueCoding = $csWOP#38 "Nordrhein"
 * extension[versichertenart].valueCoding = $csVersichertenartGKV#1 "Mitglieder"
 * status = #active
-* type = $csVersicherungsart#GKV
+* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-A123456780
 * period
   * start = "1997-12-28"

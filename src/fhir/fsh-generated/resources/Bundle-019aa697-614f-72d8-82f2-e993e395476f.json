@@ -101,7 +101,8 @@
           "coding": [
             {
               "code": "GKV",
-              "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis"
+              "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+              "display": "gesetzliche Krankenversicherung"
             }
           ]
         },

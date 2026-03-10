@@ -70,7 +70,7 @@ Usage: #inline
 * extension[tarifart].valueCoding = #04 "Notlagentarif"
 * extension[versichertenart].valueCoding = VSDMVersichertenartPKVCS#VN "Versicherungsnehmer"
 * status = #active
-* type = $csVersicherungsart#PKV
+* type = $csVersicherungsart#PKV "private Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-PKV-F678901231
 * period
   * start = "2020-01-01"

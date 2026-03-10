@@ -115,7 +115,8 @@
           "coding": [
             {
               "code": "PKV",
-              "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis"
+              "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+              "display": "private Krankenversicherung"
             }
           ]
         },
