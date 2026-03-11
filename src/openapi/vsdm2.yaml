@@ -172,203 +172,215 @@ components:
         [
           {
             "resourceType": "Bundle",
-            "id": "9b6ac30d-246d-4eab-af83-544564792089",
+            "id": "019aa690-d14a-79a3-a078-3807df1b87f4",
             "meta": {
               "profile": [
-                "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle"
-              ]
-            },
-            "type": "document",
-            "identifier": {
-              "system": "urn:ietf:rfc:3986",
-              "value": "urn:uuid:9b6ac30d-246d-4eab-af83-544564792089"
-            },
-            "signature": {
-              "sigFormat": "application/pkcs7-mime",
-              "who": {
-                "identifier": {
-                  "system": "https://fhir.de/sid/arge-ik/iknr",
-                  "value": "12345678"
-                }
-              },
-              "type": [
-                {
-                  "system": "urn:iso-astm:E1762-95:2013",
-                  "code": "1.2.840.10065.1.12.1.7",
-                  "display": "Consent Signature"
-                }
+                "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0-rc6"
               ],
-              "when": "2023-11-03T12:02:23.157+01:00",
-              "data": "dGhpcyBibG9iIGlzIHNuaXBwZWQ="
+              "lastUpdated": "2025-07-14T15:16:17.890+01:00"
             },
-            "timestamp": "2023-11-03T12:02:23.157+01:00",
+            "type": "collection",
+            "timestamp": "2025-07-14T15:16:17.890+01:00",
             "entry": [
               {
-                "fullUrl": "https://gematik.de/fhir/Composition/c624cf47-e235-4624-af71-0a09dc9254dc",
-                "resource": {
-                  "resourceType": "Composition",
-                  "id": "c624cf47-e235-4624-af71-0a09dc9254dc",
-                  "meta": {
-                    "profile": [
-                      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMComposition"
-                    ]
-                  },
-                  "status": "final",
-                  "author": [
-                    {
-                      "identifier": {
-                        "system": "https://fhir.de/sid/arge-ik/iknr",
-                        "value": "12345678"
-                      }
-                    }
-                  ],
-                  "type": {
-                    "coding": [
-                      {
-                        "code": "not-applicable",
-                        "system": "https://terminology.hl7.org/CodeSystem/data-absent-reason"
-                      }
-                    ]
-                  },
-                  "date": "2023-11-03T12:02:23.157+01:00",
-                  "title": "VSDM 2 data",
-                  "section": [
-                    {
-                      "entry": [
-                        {
-                          "reference": "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
-                        }
-                      ]
-                    },
-                    {
-                      "entry": [
-                        {
-                          "reference": "Coverage/2d4da53a-413a-48fe-b908-2e67b5761523"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              },
-              {
-                "fullUrl": "https://gematik.de/fhir/Patient/437f2555-2396-4c64-a656-e9553161ca3c",
+                "fullUrl": "https://gematik.de/fhir/Patient/019aa694-9c4e-7540-be3c-0ef324476863",
                 "resource": {
                   "resourceType": "Patient",
-                  "id": "437f2555-2396-4c64-a656-e9553161ca3c",
+                  "id": "019aa694-9c4e-7540-be3c-0ef324476863",
                   "meta": {
                     "profile": [
-                      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
+                      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0-rc6"
                     ]
                   },
+                  "identifier": [
+                    {
+                      "system": "http://fhir.de/sid/gkv/kvid-10",
+                      "value": "A123456780"
+                    }
+                  ],
                   "name": [
                     {
                       "use": "official",
-                      "family": "Königstein",
+                      "text": "Andrea Amsel",
+                      "family": "Amsel",
                       "_family": {
                         "extension": [
                           {
-                            "url": "https://hl7.org/fhir/StructureDefinition/humanname-own-name",
-                            "valueString": "Königstein"
+                            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                            "valueString": "Amsel"
                           }
                         ]
                       },
                       "given": [
-                        "Ludger"
+                        "Andrea"
                       ]
-                    }
-                  ],
-                  "identifier": [
-                    {
-                      "system": "https://fhir.de/sid/gkv/kvid-10",
-                      "value": "T024791905"
                     }
                   ],
                   "address": [
                     {
+                      "type": "physical",
                       "line": [
-                        "Blumenweg 14"
+                        "Amselweg 1"
                       ],
                       "_line": [
                         {
                           "extension": [
                             {
-                              "url": "https://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                              "valueString": "14"
+                              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                              "valueString": "1"
                             },
                             {
-                              "url": "https://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-                              "valueString": "Blumenweg"
+                              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                              "valueString": "Amselweg"
                             }
                           ]
                         }
                       ],
-                      "type": "both",
-                      "city": "Esens",
-                      "postalCode": "26427",
-                      "country": "D"
+                      "city": "Aachen",
+                      "postalCode": "52070",
+                      "country": "Deutschland",
+                      "_country": {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                            "valueCoding": {
+                              "code": "DE",
+                              "system": "urn:iso:std:iso:3166"
+                            }
+                          },
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                            "valueCoding": {
+                              "code": "D",
+                              "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
+                            }
+                          }
+                        ]
+                      }
                     }
                   ],
-                  "birthDate": "1935-06-22",
-                  "telecom": [
-                    {
-                      "system": "url",
-                      "value": "matrix:@T024791905:aok-nord.de"
-                    }
-                  ],
-                  "photo": [
-                    {
-                      "contentType": "image/gif",
-                      "data": "R0lGODlhEwARAPcAAAAAAAAA/+"
-                    }
-                  ]
+                  "birthDate": "1997-12-28",
+                  "gender": "female"
                 }
               },
               {
-                "fullUrl": "https://gematik.de/fhir/Coverage/2d4da53a-413a-48fe-b908-2e67b5761523",
+                "fullUrl": "https://gematik.de/fhir/Coverage/019aa696-775a-7062-8e34-ad28ac640060",
                 "resource": {
                   "resourceType": "Coverage",
-                  "id": "2d4da53a-413a-48fe-b908-2e67b5761523",
+                  "id": "019aa696-775a-7062-8e34-ad28ac640060",
                   "meta": {
                     "profile": [
-                      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
+                      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0-rc6"
                     ]
                   },
-                  "status": "active",
-                  "payor": [
-                    {
-                      "identifier": {
-                        "system": "https://fhir.de/sid/arge-ik/iknr",
-                        "value": "12345678"
-                      },
-                      "display": "Test GKV Krankenkasse"
-                    }
-                  ],
-                  "extension": [
-                    {
-                      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMFestzuschusshoeheEX",
-                      "valueCoding": {
-                        "code": "1",
-                        "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMFestzuschusshoeheCS",
-                        "display": "70 % / fünf Jahre durchgehend"
-                      }
-                    }
-                  ],
                   "type": {
                     "coding": [
                       {
-                        "system": "https://fhir.de/CodeSystem/versicherungsart-de-basis",
                         "code": "GKV",
-                        "display": "Gesetzliche Krankenversicherung"
+                        "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis"
                       }
                     ]
                   },
-                  "period": {
-                    "start": "2022-04-01",
-                    "end": "2027-07-31"
-                  },
+                  "extension": [
+                    {
+                      "url": "http://fhir.de/StructureDefinition/gkv/wop",
+                      "valueCoding": {
+                        "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+                        "code": "38",
+                        "display": "Nordrhein"
+                      }
+                    },
+                    {
+                      "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
+                      "valueCoding": {
+                        "code": "1",
+                        "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
+                        "display": "Mitglieder"
+                      }
+                    }
+                  ],
+                  "payor": [
+                    {
+                      "identifier": {
+                        "system": "http://fhir.de/sid/arge-ik/iknr",
+                        "value": "104178397"
+                      },
+                      "reference": "https://gematik.de/fhir/Organization/019aa692-9527-7cd9-8a94-0370d748ead9",
+                      "display": "Beispielkostenträger Aachen"
+                    }
+                  ],
+                  "status": "active",
                   "beneficiary": {
-                    "reference": "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
+                    "reference": "https://gematik.de/fhir/Patient/019aa694-9c4e-7540-be3c-0ef324476863"
+                  },
+                  "period": {
+                    "start": "1997-12-28"
                   }
+                }
+              },
+              {
+                "fullUrl": "https://gematik.de/fhir/Organization/019aa692-9527-7cd9-8a94-0370d748ead9",
+                "resource": {
+                  "resourceType": "Organization",
+                  "id": "019aa692-9527-7cd9-8a94-0370d748ead9",
+                  "meta": {
+                    "profile": [
+                      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0-rc6"
+                    ]
+                  },
+                  "identifier": [
+                    {
+                      "system": "http://fhir.de/sid/arge-ik/iknr",
+                      "value": "104178397"
+                    }
+                  ],
+                  "address": [
+                    {
+                      "country": "Deutschland",
+                      "_country": {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                            "valueCoding": {
+                              "code": "DE",
+                              "system": "urn:iso:std:iso:3166"
+                            }
+                          },
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                            "valueCoding": {
+                              "code": "D",
+                              "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "name": "Beispielkostenträger Aachen",
+                  "contact": [
+                    {
+                      "purpose": {
+                        "coding": [
+                          {
+                            "code": "BILL",
+                            "system": "http://terminology.hl7.org/CodeSystem/contactentity-type"
+                          }
+                        ],
+                        "text": "Kontakt für Abrechnungsfragen"
+                      },
+                      "telecom": [
+                        {
+                          "system": "phone",
+                          "value": "+4952116391643"
+                        },
+                        {
+                          "system": "email",
+                          "value": "contact@kostentraeger.invalid"
+                        }
+                      ]
+                    }
+                  ]
                 }
               }
             ]
