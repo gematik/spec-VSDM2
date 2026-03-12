@@ -87,7 +87,7 @@ Usage: #inline
     * end = "2025-12-31"
 * extension[versichertenart].valueCoding = $csVersichertenartGKV#5 "Rentner"
 * status = #active
-* type = $csVersicherungsart#GKV
+* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-J012345677
 * period
   * start = "1964-05-01"
