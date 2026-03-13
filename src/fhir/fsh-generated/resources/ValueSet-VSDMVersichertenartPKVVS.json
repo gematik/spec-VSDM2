@@ -9,7 +9,7 @@
   "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMVersichertenartPKVVS",
   "experimental": false,
   "publisher": "gematik GmbH",
-  "date": "2026-01-30",
+  "date": "2026-03-13",
   "compose": {
     "include": [
       {
