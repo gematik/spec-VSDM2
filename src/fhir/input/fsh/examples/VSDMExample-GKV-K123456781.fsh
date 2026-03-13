@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-GKV-K123456781
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.0-rc6)
+  * profile[0] = Canonical(VSDMBundle|1.0.0-rc7)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -31,7 +31,7 @@ Description: "Versichertendaten K123456781 Kiebitz, Karin (GKV)"
 Usage: #inline
 
 * id = $idVSDMPatient-GKV-K123456781
-* meta.profile[0] = Canonical(VSDMPatient|1.0.0-rc6)
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0-rc7)
 
 * identifier[KVNR].value = "K123456781"
 * birthDate = "1933"
@@ -58,7 +58,7 @@ Description: "Versicherungsdaten K123456781 Kiebitz, Karin (GKV)"
 Usage: #inline
 
 * id = $idVSDMCoverageGKV-K123456781
-* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0-rc6)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0-rc7)
 
 * extension[WOP].valueCoding = $csWOP#46 "Hessen"
 * extension[kostenerstattung]

@@ -6,7 +6,7 @@
   "description": "Ermittlung des HTTP Status aus dem TDSCode",
   "status": "active",
   "experimental": false,
-  "version": "1.0.0-rc6",
+  "version": "1.0.0-rc7",
   "publisher": "gematik GmbH",
   "date": "2026-01-30",
   "purpose": "Diese ConceptMap ordnet den TDS-Codes die HTTP Status Codes aus Tabelle TAB_FACHDIENST_VSDM_HTTP_STATUS_CODES zu.",

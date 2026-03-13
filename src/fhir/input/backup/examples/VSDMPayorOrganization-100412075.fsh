@@ -4,7 +4,7 @@ Title: "Beispielkostenträger Neubrandenburg"
 Description: "Beispielkostenträger Neubrandenburg"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0-rc6)
+* meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0-rc7)
 
 * identifier[IKNR].value = "100412075"
 * name = "Beispielkostenträger Neubrandenburg"

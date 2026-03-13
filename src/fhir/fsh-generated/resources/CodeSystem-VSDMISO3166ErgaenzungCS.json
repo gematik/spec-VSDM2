@@ -6,7 +6,7 @@
   "id": "VSDMISO3166ErgaenzungCS",
   "title": "ergänzende Ländercodes",
   "description": "ergänzende Ländercodes zu ISO 3166-1 im Versichertenstammdatenmanagement (VSDM) 2.0",
-  "version": "1.0.0-rc6",
+  "version": "1.0.0-rc7",
   "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMISO3166ErgaenzungCS",
   "concept": [
     {

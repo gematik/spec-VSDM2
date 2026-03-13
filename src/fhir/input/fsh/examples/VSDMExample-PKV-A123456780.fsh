@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-PKV-A123456780
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.0-rc6)
+  * profile[0] = Canonical(VSDMBundle|1.0.0-rc7)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -28,7 +28,7 @@ Description: "Versichertendaten A123456780 Amsel, Andrea (PKV)"
 Usage: #inline
 
 * id = $idVSDMPatient-PKV-A123456780
-* meta.profile[0] = Canonical(VSDMPatient|1.0.0-rc6)
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0-rc7)
 
 * identifier[KVNR].value = "A123456780"
 * birthDate = "1997-12-28"
@@ -58,7 +58,7 @@ Description: "Versicherungsdaten A123456780 Amsel, Andrea (PKV)"
 Usage: #inline
 
 * id = $idVSDMCoveragePKV-A123456780
-* meta.profile[0] = Canonical(VSDMCoveragePKV|1.0.0-rc6)
+* meta.profile[0] = Canonical(VSDMCoveragePKV|1.0.0-rc7)
 
 * extension[hinweis]
   * extension[text].valueMarkdown = "Beihilfetaxe für Physio"
