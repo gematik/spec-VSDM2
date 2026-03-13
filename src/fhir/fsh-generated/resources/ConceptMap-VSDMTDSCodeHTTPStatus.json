@@ -8,7 +8,7 @@
   "experimental": false,
   "version": "1.0.0-rc7",
   "publisher": "gematik GmbH",
-  "date": "2026-01-30",
+  "date": "2026-03-13",
   "purpose": "Diese ConceptMap ordnet den TDS-Codes die HTTP Status Codes aus Tabelle TAB_FACHDIENST_VSDM_HTTP_STATUS_CODES zu.",
   "sourceUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMTDSCodeVS",
   "group": [

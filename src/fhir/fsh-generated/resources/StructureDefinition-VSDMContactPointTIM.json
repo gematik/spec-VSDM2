@@ -7,7 +7,7 @@
   "title": "TI-Messenger-ID",
   "status": "active",
   "experimental": false,
-  "date": "2026-01-30",
+  "date": "2026-03-13",
   "publisher": "gematik GmbH",
   "description": "Matrix-ID (MXID) für TI-Messenger im Versichertenstammdatenmanagement (VSDM) 2.0",
   "fhirVersion": "4.0.1",
