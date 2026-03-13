@@ -6,7 +6,7 @@
   "id": "VSDMErrorcodeCS",
   "title": "VSDM-Fehlercodes",
   "description": "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (VSDM) 2.0",
-  "version": "1.0.0-rc6",
+  "version": "1.0.0-rc7",
   "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
   "concept": [
     {

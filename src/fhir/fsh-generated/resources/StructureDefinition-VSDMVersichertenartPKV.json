@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMVersichertenartPKV",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMVersichertenartPKV",
-  "version": "1.0.0-rc6",
+  "version": "1.0.0-rc7",
   "name": "VSDMVersichertenartPKV",
   "title": "Versichertenart (PKV)",
   "status": "active",

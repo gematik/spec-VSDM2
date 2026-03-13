@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-GKV-J012345677
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.0-rc6)
+  * profile[0] = Canonical(VSDMBundle|1.0.0-rc7)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -28,7 +28,7 @@ Description: "Versichertendaten J012345677 Junko, Jens-Jörg (GKV)"
 Usage: #inline
 
 * id = $idVSDMPatient-GKV-J012345677
-* meta.profile[0] = Canonical(VSDMPatient|1.0.0-rc6)
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0-rc7)
 
 * identifier[KVNR].value = "J012345677"
 * birthDate = "1958-12"
@@ -64,7 +64,7 @@ Description: "Versicherungsdaten J012345677 Junko, Jens-Jörg (GKV)"
 Usage: #inline
 
 * id = $idVSDMCoverageGKV-J012345677
-* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0-rc6)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0-rc7)
 
 * extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"
 * extension[besonderePersonengruppe].valueCoding = #09 "ASY" // "Empfänger von Gesundheitsleistungen nach §§ 4 und 6 des Asylbewerberleistungsgesetzes (AsylbLG)"

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMBundle",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle",
-  "version": "1.0.0-rc6",
+  "version": "1.0.0-rc7",
   "name": "VSDMBundle",
   "title": "Versichertenstammdaten",
   "status": "active",

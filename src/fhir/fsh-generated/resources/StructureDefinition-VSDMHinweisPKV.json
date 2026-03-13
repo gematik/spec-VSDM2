@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMHinweisPKV",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMHinweisPKV",
-  "version": "1.0.0-rc6",
+  "version": "1.0.0-rc7",
   "name": "VSDMHinweisPKV",
   "title": "Hinweise an PKV-Leistungserbringer",
   "status": "active",
