@@ -21,7 +21,7 @@ externalDocs:
   description: FHIR Specification VSDM 2
   url: https://simplifier.net/vsdm2
 servers:
-  - url: https://{resource_fqdn}.de
+  - url: https://{resource_fqdn}
     description: Example Hostname for a given VSDM service, taken from the /.well-known/ti-service-provider-metadata "Fachdienstlokalisierung" Endpoint of the ZETA HTTP proxy
 tags:
   - name: Vsdm
@@ -427,7 +427,7 @@ components:
       description: This API uses OAuth 2, to gain access clients need an Access-Token and to proof "Versorgungskontext" with a PoPP-Token in addition
       flows:
         authorizationCode:
-          authorizationUrl: https://{resource_fqdn}.de/auth
-          tokenUrl: https://{resource_fqdn}.de.de/token
+          authorizationUrl: https://{resource_fqdn}/auth
+          tokenUrl: https://{resource_fqdn}/token
           scopes:
             vsdservice: allows practitioners to access the VSDService API of the "Versichertenstammdatendienst"

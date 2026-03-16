@@ -89,7 +89,7 @@ components:
             The time-to-live in seconds for the cached metadata. This is the maximum
             time that the metadata should be cached before it needs to be refreshed.
       example:
-        resourceFqdn: https://{resource_fqdn}.de
+        resourceFqdn: https://{resource_fqdn}
         scheme: https
         cacheTtl: 86400
     Problem:
