@@ -29,14 +29,6 @@ servers:
     description: Testumgebung (TU)
   - url: https://service-discovery.dev.ti-platform.de
     description: Entwicklungsumgebung (DEV)
-  - url: https://prod.vsdm.ti-dienste.tk.de
-    description: Techniker Krankenkasse Produktivumgebung
-  - url: https://ref.vsdm.ti-dienste.tk.de
-    description: Techniker Krankenkasse Referenzumgebung
-  - url: https://test.vsdm.ti-dienste.tk.de
-    description: Techniker Krankenkasse Testumgebung
-  - url: https://dev.vsdm.ti-dienste.tk.de
-    description: Techniker Krankenkasse Entwicklungsumgebung
 tags:
   - name: Service Discovery
     description: Endpunkt zur Lokalisierung von TI-Fachdiensten.

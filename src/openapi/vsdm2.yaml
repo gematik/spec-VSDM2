@@ -21,8 +21,16 @@ externalDocs:
   description: FHIR Specification VSDM 2
   url: https://simplifier.net/vsdm2
 servers:
-  - url: https://{resource_fqdn}
-    description: Example Hostname for a given VSDM service, taken from the /.well-known/ti-service-provider-metadata "Fachdienstlokalisierung" Endpoint of the ZETA HTTP proxy
+  - url: https://vsdm2.prod.anbieter-123.de
+    description: Beispieladresse zum Fachdienst VSDM 2
+  - url: https://prod.vsdm.ti-dienste.tk.de
+    description: Techniker Krankenkasse Produktivumgebung
+  - url: https://ref.vsdm.ti-dienste.tk.de
+    description: Techniker Krankenkasse Referenzumgebung
+  - url: https://test.vsdm.ti-dienste.tk.de
+    description: Techniker Krankenkasse Testumgebung
+  - url: https://dev.vsdm.ti-dienste.tk.de
+    description: Techniker Krankenkasse Entwicklungsumgebung
 tags:
   - name: Vsdm
     description: Endpoint of the application "Versichertenstammdatenmanagement" (VSDM) to retrieve a VSDMBundle FHIR-Resource (Versichertenstammdaten; VSD) of a specific patient.
@@ -36,9 +44,8 @@ paths:
       description: |
         Returns a VSDMBundle with VSD about a specific patient that is addressed within the PoPP-Token in the request header.
         
-        To localize this endpoint, clients have to find the health insurer specific "resource_fqdn" 
-        by querying the /.well-known/ti-service-provider-metadata endpoint first 
-        using https://{iknummer}.{betriebsumgebung}.vsdm2.ti-dienste.de.
+        To localize this endpoint, clients have to find the health insurer specific fqdn 
+        by querying the gematik service discovery endpoint first using https://service-discovery.prod.ti-platform.de.
 
         **FHIR DEVIATION NOTICE:**
         This endpoint deviates from standard FHIR REST patterns:
@@ -427,7 +434,7 @@ components:
       description: This API uses OAuth 2, to gain access clients need an Access-Token and to proof "Versorgungskontext" with a PoPP-Token in addition
       flows:
         authorizationCode:
-          authorizationUrl: https://{resource_fqdn}/auth
-          tokenUrl: https://{resource_fqdn}/token
+          authorizationUrl: https://vsdm2.prod.anbieter-123.de/auth
+          tokenUrl: https://vsdm2.prod.anbieter-123.de/token
           scopes:
             vsdservice: allows practitioners to access the VSDService API of the "Versichertenstammdatendienst"
