@@ -402,10 +402,10 @@ components:
       examples: [
         {
           "resourceType": "OperationOutcome",
-          "id": "VSDMOperationOutcome-example-invalidik",
+          "id": "VSDMOperationOutcome-UnknownIK",
           "meta": {
-            "profile":  [
-                "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome|1.0.0"
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome|1.0.0-rc7"
             ]
           },
           "text": {
@@ -414,19 +414,22 @@ components:
           },
           "issue": [
             {
-              "severity": "fatal",
-              "code": "value",
+              "severity": "error",
+              "code": "not-found",
               "details": {
-                "coding":  [
-                    {
-                      "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
-                      "code": "VSDSERVICE_INVALID_IK",
-                      "display": "Ungültige oder nicht bekannte Institutionskennung <ik>."
-                    }
-                  ],
-                "text": "Ungültige Krankenversichertennummer 1234567890."
+                "coding": [
+                  {
+                    "code": "VSDSERVICE_UNKNOWN_IK",
+                    "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
+                    "display": "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
+                  }
+                ],
+                "text": "Unbekannte Institutionskennung 103456789."
               },
-              "diagnostics": "Die im PoPP-Token enthaltene Krankenversicherungsnummer ist ungültig (Formatfehler).\nFordern Sie ein neues PoPP-Token an und wiederholen Sie die Abfrage beim zuständigen VSDM 2.0-Fachdienst.\nBei erneutem Fehler wiederholen Sie die Abfrage nicht, sondern brechen Sie mit einer Fehlermeldung ab.\nIn diesem Fall liegt wahrscheinlich eine Störung des zentralen PoPP-Service vor.",
+              "diagnostics": "Die im PoPP-Token angegebene IK der Versicherung ist dem angesprochenen VSDM 2.0-Fachdienst nicht bekannt.\nFordern Sie ein neues PoPP-Token an. Wiederholen Sie die Dienstlokalisierung, um den korrekten zuständigen Fachdienst zu ermitteln und wiederholen Sie die Abfrage.\nBei erneutem Fehler wiederholen Sie die Abfrage mit größerem zeitlichen Abstand, um eventuell geänderte DNS-Einstellungen wirksam werden zu lassen. Halten Sie die Anwender über den Status informiert.\nBei Andauern des Fehlers über 24 h liegt möglicherweise ein Fehler in der Implementierung des Clientsystems oder des Fachdients vor.",
+              "expression": [
+                "http.ZETA-PoPP-Token-Content.insurerId"
+              ]
             }
           ]
         }
