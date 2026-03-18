@@ -1,0 +1,200 @@
+openapi: 3.1.0
+info:
+  title: TI Service Discovery
+  description: |
+    Statische JSON-Ressource (`catalog.json`) zur Lokalisierung der krankenkassenspezifischen
+    FQDN (und damit des Diensteanbieters) für den ZETA (TI 2.0) Request-Flow.
+
+    Dieses API-Dokument spezifiziert den Vertrag zwischen einem Primärsystem und dem
+    Endpunkt des TI-Service-Discovery-Dienstes.
+
+    Der Abruf der `catalog.json` ist Voraussetzung für die in der VSDM-2-OpenAPI-Definition
+    beschriebenen Ressourcen-Anfragen sowie Auth-/Token-Flows.
+  contact:
+    name: gematik GmbH
+    url: https://www.gematik.de
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+  version: 1.0.0
+externalDocs:
+  description: JSON Schema für catalog.json
+  url: https://github.com/gematik/spec-VSDM2/tree/main/src/schemas/catalog.schema.json
+servers:
+  - url: https://service-discovery.prod.ti-platform.de
+    description: Produktivumgebung (PU)
+  - url: https://service-discovery.ref.ti-platform.de
+    description: Referenzumgebung (RU)
+  - url: https://service-discovery.test.ti-platform.de
+    description: Testumgebung (TU)
+  - url: https://service-discovery.dev.ti-platform.de
+    description: Entwicklungsumgebung (DEV)
+tags:
+  - name: Service Discovery
+    description: Endpunkt zur Lokalisierung von TI-Fachdiensten.
+paths:
+  /catalog.json:
+    get:
+      tags:
+        - Service Discovery
+      summary: TI Service Catalog abrufen
+      description: |
+        Liefert ein Mapping von IK-Nummern auf krankenkassenspezifische FQDNs
+        sowie die zugehörigen Service-Instanzen der TI.
+
+        Das Dokument ist eine statische JSON-Ressource und kann über `ETag`
+        und `Cache-Control` Header effizient gecacht werden.
+      operationId: getServiceCatalog
+      responses:
+        "200":
+          description: OK
+          headers:
+            ETag:
+              description: Revisionsnummer als Entity-Tag für Caching.
+              schema:
+                type: string
+              example: '"rev-47"'
+            Cache-Control:
+              description: Caching-Direktive.
+              schema:
+                type: string
+              example: max-age=3600
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Catalog"
+              example:
+                format_version: "1.0.0"
+                revision: 47
+                env: prod
+                service_instances:
+                  vsdm-1:
+                    type: vsdm
+                    url: https://prod.vsdm.ti-dienste.tk.de
+                  erp:
+                    type: erp
+                    url: https://erp.ti-dienste.de
+                  idp:
+                    type: idp
+                    url: https://idp.ti-dienste.de/.well-known/openid-configuration
+                  vzd:
+                    type: vzd
+                    url: https://fhir-directory.ti-dienste.de/fhir
+                routing:
+                  vsdm:
+                    "101575519": vsdm-1
+        "500":
+          description: Internal Server Error
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/Problem"
+              example:
+                type: https://service-discovery.ti-platform.de/errors/internal
+                title: Internal Server Error
+                status: 500
+                detail: Failed to retrieve TI service discovery document.
+                instance: /catalog.json
+components:
+  schemas:
+    Catalog:
+      type: object
+      description: TI Service Catalog — Verzeichnis aller Service-Instanzen und IK-basiertes Routing.
+      required:
+        - format_version
+        - revision
+        - env
+        - service_instances
+      additionalProperties: false
+      properties:
+        format_version:
+          type: string
+          pattern: '^[0-9]+\.[0-9]+\.[0-9]+$'
+          description: Semantische Versionsnummer des Formats.
+          examples:
+            - "1.0.0"
+        revision:
+          type: integer
+          minimum: 1
+          description: Fortlaufend steigende Nummer. Wird bei jeder Änderung erhöht.
+          examples:
+            - 47
+        env:
+          type: string
+          enum:
+            - dev
+            - test
+            - ref
+            - prod
+          description: Zielumgebung. Pro Umgebung existiert eine eigene Datei.
+        service_instances:
+          type: object
+          description: Map von Service-Instanz-ID auf Service-Definition.
+          minProperties: 1
+          additionalProperties:
+            $ref: "#/components/schemas/ServiceInstance"
+        routing:
+          type: object
+          description: |
+            Map von Diensttyp auf Routing-Tabelle.
+            Jede Routing-Tabelle bildet IK-Nummern auf Service-Instanz-IDs ab.
+            Nur nötig wenn mehrere Instanzen eines Diensttyps existieren.
+          additionalProperties:
+            $ref: "#/components/schemas/RoutingTable"
+    ServiceInstance:
+      type: object
+      description: Einzelne Service-Instanz.
+      required:
+        - type
+        - url
+      additionalProperties: false
+      properties:
+        type:
+          type: string
+          pattern: '^[a-z][a-z0-9-]*$'
+          description: Diensttyp-Bezeichner.
+          examples:
+            - vsdm
+            - epa
+            - erp
+            - idp
+            - vzd
+        url:
+          type: string
+          format: uri
+          description: URL der Service-Instanz.
+          examples:
+            - https://dev.vsdm.ti-dienste.tk.de
+    RoutingTable:
+      type: object
+      description: |
+        Routing-Tabelle für einen Diensttyp.
+        Schlüssel ist eine IK-Nummer, Wert ist eine Service-Instanz-ID
+        die als Schlüssel in `service_instances` existieren muss.
+      minProperties: 1
+      additionalProperties:
+        type: string
+      examples:
+        - "109519005": vsdm-1
+          "108310400": vsdm-1
+          "101575519": vsdm-2
+    Problem:
+      type: object
+      description: Fehlerobjekt gemäß RFC 9457 (Problem Details for HTTP APIs).
+      properties:
+        type:
+          type: string
+          format: uri
+          description: URI-Referenz die den Problemtyp identifiziert.
+        title:
+          type: string
+          description: Kurze, menschenlesbare Zusammenfassung des Problemtyps.
+        status:
+          type: integer
+          description: HTTP-Statuscode für dieses Auftreten des Problems.
+        detail:
+          type: string
+          description: Menschenlesbare Erklärung spezifisch für dieses Auftreten.
+        instance:
+          type: string
+          description: Referenz die das spezifische Auftreten identifiziert.
