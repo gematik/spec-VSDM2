@@ -70,9 +70,6 @@ paths:
                 service_instances:
                   vsdm-1:
                     type: vsdm
-                    url: https://vsdm1.prod.anbieter-123.de
-                  vsdm-2:
-                    type: vsdm
                     url: https://prod.vsdm.ti-dienste.tk.de
                   erp:
                     type: erp
@@ -85,8 +82,7 @@ paths:
                     url: https://fhir-directory.ti-dienste.de/fhir
                 routing:
                   vsdm:
-                    "109519005": vsdm-1
-                    "101575519": vsdm-2
+                    "101575519": vsdm-1
         "500":
           description: Internal Server Error
           content:
@@ -168,7 +164,7 @@ components:
           format: uri
           description: URL der Service-Instanz.
           examples:
-            - https://vsdm1.prod.vsdm.de
+            - https://dev.vsdm.ti-dienste.tk.de
     RoutingTable:
       type: object
       description: |
