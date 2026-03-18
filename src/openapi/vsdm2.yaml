@@ -44,8 +44,11 @@ paths:
       description: |
         Returns a VSDMBundle with VSD about a specific patient that is addressed within the PoPP-Token in the request header.
         
-        To localize this endpoint, clients have to find the health insurer specific fqdn 
-        by querying the gematik service discovery endpoint first using https://service-discovery.prod.ti-platform.de.
+        To localize the corresponding health service providers fqdn, clients are required to query
+        the gematik service discovery service beforehand using https://service-discovery.prod.ti-platform.de.
+        The service discovery document must be fetched before calling this API, this can happen completely 
+        asynchronous and unrelated to the actual vsdm usecase. 
+        Reference: #/src/openapi/servicediscovery.yaml
 
         **FHIR DEVIATION NOTICE:**
         This endpoint deviates from standard FHIR REST patterns:
