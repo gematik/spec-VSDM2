@@ -167,7 +167,7 @@ components:
       description: Base64URL encoded "Pruefziffer"
       schema:
         type: string
-      example: RGllcy1pc3QtZWluZS1CZWlzcGllbC1QcsO8ZnppZmZlci1uYWNoLUFfMjY3OTAtdW5kLUFfMjY3NjYtdGFkYTE=
+      example: RGllcy1pc3QtZWluZS1CZWlzcGllbC1QcsO8ZnppZmZlci1uYWNoLUFfMjY3OTAh
   schemas:
     GetVSDMBundleResponse:
       description: Response including the requested VSDMBundle
