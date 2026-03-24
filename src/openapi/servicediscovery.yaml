@@ -22,13 +22,13 @@ externalDocs:
   url: https://github.com/gematik/spec-VSDM2/tree/main/src/schemas/catalog.schema.json
 servers:
   - url: https://service-discovery.prod.ti-platform.de
-    description: Produktivumgebung (PU)
+    description: Produktivinstanz (PU)
   - url: https://service-discovery.ref.ti-platform.de
-    description: Referenzumgebung (RU)
+    description: Referenzinstanz (RU)
   - url: https://service-discovery.test.ti-platform.de
-    description: Testumgebung (TU)
+    description: Testinstanz (TU)
   - url: https://service-discovery.dev.ti-platform.de
-    description: Entwicklungsumgebung (DEV)
+    description: Entwicklungsinstanz (DEV)
 tags:
   - name: Service Discovery
     description: Endpunkt zur Lokalisierung von TI-Fachdiensten.
@@ -126,7 +126,7 @@ components:
             - test
             - ref
             - prod
-          description: Zielumgebung. Pro Umgebung existiert eine eigene Datei.
+          description: Zielumgebung. Pro Stage/Umgebung existiert eine eigene Datei.
         service_instances:
           type: object
           description: Map von Service-Instanz-ID auf Service-Definition.
