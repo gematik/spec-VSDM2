@@ -20,14 +20,6 @@ Die nachfolgenden Tabellen der Fehlercodes sollen als Auszug einen Überblick ü
 | Service_INVALID_HTTP_OPERATION | Die HTTP-Operation (http-operation) wird nicht unterstützt. | Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller. |
 | SERVICE_INTERNAL_SERVER_ERROR | Unerwarteter interner Fehler des Fachdienstes VSDM.  | Der Versichertenstammdatendienst ist aktuell nicht in der Lage, die Anfrage zu beantworten. Bitte verwenden Sie das TI-Lagebild, um sich über mögliche Störungen zu informieren. Wiederholen Sie die Anfrage, sobald die Störungen beseitigt sind. |
 
-**Fehlermeldungen des Fachdienstes VSDM**
-
-| Code | Anzeige | Handlungsempfehlung |
-| :------------- | :------------ | :-------------- |
-| VSD_SERVICE_INTERNAL_SERVER_ERROR | Unerwarteter interner Fehler des Fachdienstes VSDM.  | Wiederholungsversuch in 15 Minuten Abständen. Abbruch nach 8 Versuchen. |
-| VSDSERVICE_VSDD_NOTREACHABLE | Fachdienst VSDM ist für den Kostenträger (ik) nicht erreichbar. | Wiederholungsversuch in 15 Minuten Abständen. Abbruch nach 8 Versuchen. |
-| VSDSERVICE_VSDD_TIMEOUT | Fachdienst VSDM für den Kostenträger (ik) hat das Zeitlimit für eine Antwort überschritten.  | Wiederholungsversuch in 15 Minuten Abständen. Abbruch nach 8 Versuchen. |
-
 # Beispiel
 
 Abbruch des Anwendungsfall "Abruf VSD" aufgrund ungültiger KVNR
