@@ -12,13 +12,13 @@ Die nachfolgenden Tabellen der Fehlercodes sollen als Auszug einen Überblick ü
 |:------------- | :------------ | :-------------- |
 | VSDSERVICE_INVALID_IK | Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf. | Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller. |
 | VSDSERVICE_INVALID_KVNR | Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf. | Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller. |
-| VSDSERVICE_PATIENT_RECORD_NOT_FOUND |Die Versichertenstammdaten zur Versichertennummer (kvnr) konnten für die Institutionskennung <ik> nicht ermittelt werden. | Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service 1 x erneuern. Bei erneutem Fehler: Abbruch, da wahrscheinlich ein Implementierungsfehler vorliegt (Clientsystem, PoPP-Service oder Schnittstelle zu KTR-Bestandssystemen). |
-| VSDSERVICE_MISSING_OR_INVALID_HEADER | Der erforderliche HTTP-Header (header) fehlt oder ist undgültig. | Im Falle des Headers PoPP: Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service 1 x erneuern. Bei erneutem Fehler: Abbruch, da wahrscheinlich ein Implementierungsfehler vorliegt (Clientsystem). |
-| VSDSERVICE_UNSUPPORTED_MEDIATYPE | Der vom Clientsystem angefragte Medientyp (media type) wird nicht unterstützt. | ./. (Implementierungsfehler) |
-| VSDSERVICE_UNSUPPORTED_ENCODING | Das vom Clientsystem angefragte Komprimierungsverfahren (encoding scheme) wird nicht unterstützt. | ./. (Implementierungsfehler) |
-| VSDSERVICE_INVALID_PATIENT_RECORD_VERSION | Der Änderungsindikator <etag_value> kann nicht verarbeitet werden. | ./. (Implementierungsfehler) |
-| VSDSERVICE_INVALID_HTTP_OPERATION | Die HTTP-Operation (http-operation) wird nicht unterstützt. | ./. (Implementierungsfehler) |
-| VSDSERVICE_INVALID_ENDPOINT | Der angefragte Endpunkt (endpoint) wird nicht unterstützt.  | ./. (Implementierungsfehler) |
+| VSDSERVICE_UNKNOWN_IK | Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt. | Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller. |
+| VSDSERVICE_UNKNOWN_KVNR | Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt. | Der Patient mit der angegebenen Krankenversicherungsnummer ist bei der angesprochenen Versicherung nicht bekannt. Wiederholen Sie die Stammdatenabfrage; falls der Fehler bestehen bleibt, prüfen Sie mit dem Versicherten die Gültigkeit seines Versicherungsanspruchs. |
+| VVSDSERVICE_INVALID_PATIENT_RECORD_VERSION | Der Änderungsindikator [etag_value] kann nicht verarbeitet werden. | Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller. |
+| SERVICE_INVALID_HEADER | Der HTTP-Header [header] ist ungültig.. | Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller. |
+| SERVICE_UNSUPPORTED_MEDIATYPE | Das vom Clientsystem angefragte Datenformat [media type] wird nicht unterstützt. | Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller. |
+| Service_INVALID_HTTP_OPERATION | Die HTTP-Operation (http-operation) wird nicht unterstützt. | Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller. |
+| SERVICE_INTERNAL_SERVER_ERROR | Unerwarteter interner Fehler des Fachdienstes VSDM.  | Der Versichertenstammdatendienst ist aktuell nicht in der Lage, die Anfrage zu beantworten. Bitte verwenden Sie das TI-Lagebild, um sich über mögliche Störungen zu informieren. Wiederholen Sie die Anfrage, sobald die Störungen beseitigt sind. |
 
 **Fehlermeldungen des Fachdienstes VSDM**
 
