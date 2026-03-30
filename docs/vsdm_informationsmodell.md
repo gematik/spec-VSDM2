@@ -1,9 +1,10 @@
-# 1 Hinweise zum Informationsmodell VSDM 2.0
+# 1. Hinweise zum Informationsmodell VSDM 2.0
 
 Mit der Einführung von VSDM 2.0 wird FHIR (Fast Healthcare Interoperability Resources) zur Datenübertragung verwendet. 
 Ziel der FHIR-Implementierung für VSDM 2.0 ist eine konsistente Datenhaltung und einen effizienten Austausch von Versichertenstammdaten zwischen dem Fachdienst VSDM 2.0 und den Primärsystemen zu gewährleisten. FHIR bietet hierfür eine Grundlage, die sich flexibel an spezifische Anforderungen anpassen lässt.
 
-### Logical Model 
+
+### 1.1 Logical Model 
 
 Das Logical Model beschreibt die Struktur der Versichertenstammdaten aus fachlicher Sicht. Es dient als Grundlage für die Ableitung von FHIR-Profilen und unterstützt die Kommunikation zwischen Fachdomäne und technischer Umsetzung.
 Jedes Element des Datensatzen wird wiefolgt beschrieben:
@@ -57,6 +58,7 @@ Die Mappingtabellen zu Patient und Coverage befinden sich hier:
 [Mapping logicalmodel-FHIR-Profile PKV](https://simplifier.net/vsdm2/VSDDatensatzPKV/~mappings)
 
 
+### 1.2 FHIR-Profile
 
 
 # 2. Hinweise zum verkürzten VSD-Datensatz auf der eGK
