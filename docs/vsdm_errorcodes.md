@@ -4,7 +4,7 @@ Im Arbeitsablauf des Nutzers können Fehler beim Abruf der VSD vom Fachdienst VS
 
 Nutzer sollen an der Anwendungsoberfläche des Primärsystems eine Handlungsanweisung erhalten die ihm erlauben, auf Warnungen und Fehlermeldungen in geeigneter Weise reagieren zu können.
 
-Die nachfolgenden Tabellen der Fehlercodes sollen als Auszug einen Überblick über mögliche Fehlersituationen vermitteln. Die Fehlertexte in den Tabellen enthalten Kurzbeschreibungen der Fehler und sind keine Vorgaben für Fehlermeldungen des Primärsystems. Hier soll der Hersteller darauf achten, für die Zielgruppe verständliche Formulierungen zu verwenden.
+Die nachfolgende Tabelle enthält die im Fehlerfall vom Fachdienst VSDM 2.0 zurückgelieferten Fehlercodes an das Primärsystem und den daraus resultierenden Handlungsempfehlungen sowohl für die LEI als auch für den Servicedienstleister der LEI.
 
 **Fehlermeldungen am PS**
 
