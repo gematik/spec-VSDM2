@@ -8,9 +8,9 @@ Die nachfolgenden Tabellen der Fehlercodes sollen als Auszug einen Überblick ü
 
 **Fehlermeldungen am PS**
 
-| Code | Anzeige | Handlungsempfehlung |
+| Code | Handlungsempfehlung LEI | Handlungsempfehlung Dienstleister |
 |:------------- | :------------ | :-------------- |
-| VSDSERVICE_INVALID_IK | Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf. | Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller. |
+| VSDSERVICE_INVALID_IK | Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller | Die im PoPP-Token enthaltene IK der Versicherung ist ungültig (Formatfehler). Fordern Sie ein neues PoPP-Token an und wiederholen Sie die Abfrage beim zuständigen VSDM 2.0-Fachdienst. Bei erneutem Fehler wiederholen Sie die Abfrage nicht, sondern brechen Sie mit einer Fehlermeldung ab. In diesem Fall liegt wahrscheinlich eine Störung des zentralen PoPP-Service vor. |
 | VSDSERVICE_INVALID_KVNR | Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf. | Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller. |
 | VSDSERVICE_UNKNOWN_IK | Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt. | Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller. |
 | VSDSERVICE_UNKNOWN_KVNR | Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt. | Der Patient mit der angegebenen Krankenversicherungsnummer ist bei der angesprochenen Versicherung nicht bekannt. Wiederholen Sie die Stammdatenabfrage; falls der Fehler bestehen bleibt, prüfen Sie mit dem Versicherten die Gültigkeit seines Versicherungsanspruchs. |
