@@ -83,6 +83,19 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
       Wiederholen Sie die Anfrage unter Angabe eines gültigen Werts.
     """
 
+// #79015 "Die vom Clientsystem angefragte Profilversion wird nicht unterstützt."
+* #VSDSERVICE_INVALID_PROFILE_VERSION "Die vom Clientsystem angefragte Profilversion [profile_version] wird nicht unterstützt."
+  * ^definition = """
+      Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.
+    """
+  * ^property[+].code = #diagnostics
+  * ^property[=].valueString = """
+      Das Clientsystem hat mit dem optionalen Parameter profileVersion eine Profilversion angefordert, die vom Fachdienst nicht unterstützt wird. 
+      Das Clientsystem muss den Parameter entweder mit einer unterstützten Version gemäß der aktuellen gematik-Vorgaben füllen oder eine Anfrage ohne den Parameter stellen.
+      Wenn das Clientsystem den Parameter nicht übergibt, liefert der Fachdienst die jeweils aktuelle Standardversion.
+      Wiederholen Sie die Anfrage unter Angabe eines gültigen Werts oder ohne den optionalen Parameter.
+    """
+
 // #79030 "Der HTTP-Header [header] ist ungültig."
 * #SERVICE_INVALID_HEADER "Der HTTP-Header [header] ist ungültig."
   * ^definition = """

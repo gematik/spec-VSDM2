@@ -197,7 +197,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMErrorcodeCS.fsh",
     "startLine": 1,
-    "endLine": 131
+    "endLine": 144
   },
   {
     "outputFile": "CodeSystem-VSDMISO3166ErgaenzungCS.json",
@@ -221,7 +221,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMTDSCodeCS.fsh",
     "startLine": 1,
-    "endLine": 179
+    "endLine": 189
   },
   {
     "outputFile": "CodeSystem-VSDMVersichertenartPKVCS.json",
@@ -245,7 +245,7 @@
     "fshType": "Instance",
     "fshFile": "mappings/VSDMTDSCodeErrorcode.fsh",
     "startLine": 1,
-    "endLine": 89
+    "endLine": 97
   },
   {
     "outputFile": "ConceptMap-VSDMTDSCodeHTTPStatus.json",
@@ -253,7 +253,7 @@
     "fshType": "Instance",
     "fshFile": "mappings/VSDMTDSCodeHTTPStatus.fsh",
     "startLine": 1,
-    "endLine": 118
+    "endLine": 126
   },
   {
     "outputFile": "ConceptMap-VSDMTDSCodeIssueSeverity.json",
@@ -261,7 +261,7 @@
     "fshType": "Instance",
     "fshFile": "mappings/VSDMTDSCodeIssueSeverity.fsh",
     "startLine": 1,
-    "endLine": 89
+    "endLine": 97
   },
   {
     "outputFile": "ConceptMap-VSDMTDSCodeIssueType.json",
@@ -269,7 +269,7 @@
     "fshType": "Instance",
     "fshFile": "mappings/VSDMTDSCodeIssueType.fsh",
     "startLine": 1,
-    "endLine": 90
+    "endLine": 98
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-InternalServerError.json",
@@ -316,6 +316,14 @@
     "fshName": "VSDMOperationOutcome-InvalidPatientRecordVersion",
     "fshType": "Instance",
     "fshFile": "examples/VSDMOperationOutcome-InvalidPatientRecordVersion.fsh",
+    "startLine": 1,
+    "endLine": 28
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidProfileVersion.json",
+    "fshName": "VSDMOperationOutcome-InvalidProfileVersion",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-InvalidProfileVersion.fsh",
     "startLine": 1,
     "endLine": 28
   },

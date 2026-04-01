@@ -54,6 +54,14 @@ Usage: #definition
       * equivalence = #wider //  target mapping is wider in meaning than the source concept.
 
   * element[+]
+    * code = #79015
+    * display = "Die vom Clientsystem angefragte Profilversion wird nicht unterstützt."
+    * target[+]
+      * code = #400 
+      * display = "Bad Request"
+      * equivalence = #wider //  target mapping is wider in meaning than the source concept.
+
+  * element[+]
     * code = #79030
     * display = "Der HTTP-Header [header] ist ungültig."
     * target[+]

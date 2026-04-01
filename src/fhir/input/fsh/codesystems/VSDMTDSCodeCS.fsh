@@ -91,6 +91,16 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
   * ^property[+].code = #expression
   * ^property[=].valueString = "http.If-None-Match"
 
+* #79015 "Die vom Clientsystem angefragte Profilversion wird nicht unterstützt."
+  * ^definition = """
+      Das Clientsystem hat mit dem optionalen Parameter profileVersion eine Profilversion angefordert, die vom Fachdienst nicht unterstützt wird. 
+      Mögliche Ursachen:
+      Implementierungsfehler im Clientsystem.
+      Relevante Anforderung: A_28047-01.
+    """
+  * ^property[+].code = #target
+  * ^property[=].valueCode = #client
+  
 * #79030 "Der HTTP-Header [header] ist ungültig."
   * ^definition = """
       Der genannte HTTP-Header weist Formatfehler auf.

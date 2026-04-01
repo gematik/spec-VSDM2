@@ -57,6 +57,14 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
+    * code = #79015
+    * display = "Die vom Clientsystem angefragte Profilversion wird nicht unterstützt."
+    * target[+]
+      * code = #VSDSERVICE_INVALID_PROFILE_VERSION
+      * display = "Die vom Clientsystem angefragte Profilversion [profile_version] wird nicht unterstützt."
+      * equivalence = #equal
+
+  * element[+]
     * code = #79030
     * display = "Der HTTP-Header [header] ist ungültig."
     * target[+]
