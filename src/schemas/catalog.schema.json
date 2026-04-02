@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://service-discovery.prod.ti-platform.de/schema/catalog.schema.json",
+  "title": "TI Service Catalog",
+  "description": "Machine-readable catalog of Telematikinfrastruktur service instances and routing rules.",
+  "type": "object",
+  "required": ["format_version", "revision", "env", "service_instances"],
+  "additionalProperties": false,
+  "properties": {
+    "format_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Semantic version of the catalog format.",
+      "examples": ["1.0.0"]
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Monotonically increasing revision number. Incremented on every change."
+    },
+    "env": {
+      "type": "string",
+      "enum": ["dev", "test", "ref", "prod"],
+      "description": "Target environment. One catalog file per environment."
+    },
+    "service_instances": {
+      "type": "object",
+      "description": "Map of service instance ID to service definition.",
+      "minProperties": 1,
+      "additionalProperties": {
+        "$ref": "#/$defs/service_instance"
+      }
+    },
+    "routing": {
+      "type": "object",
+      "description": "Map of service type to routing table. Each routing table maps a selector value (e.g. IK-Nr) to a service instance ID.",
+      "additionalProperties": {
+        "$ref": "#/$defs/routing_table"
+      }
+    }
+  },
+  "$defs": {
+    "service_instance": {
+      "type": "object",
+      "required": ["type", "url"],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$",
+          "description": "Service type identifier.",
+          "examples": [
+            "epa",
+            "erp",
+            "vsdm",
+            "idp",
+            "vzd",
+            "federation-master",
+            "tsl-download",
+            "fhir-directory"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Service URL. Base URL or full endpoint depending on service type."
+        }
+      }
+    },
+    "routing_table": {
+      "type": "object",
+      "description": "Maps selector values to service instance IDs. Keys are selector values (e.g. IK-Nr), values are service instance IDs that must exist in service_instances.",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "string",
+        "description": "Service instance ID. Must be a key in service_instances."
+      }
+    }
+  }
+}
