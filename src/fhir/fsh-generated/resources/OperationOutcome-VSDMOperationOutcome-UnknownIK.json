@@ -22,7 +22,7 @@
             "display": "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
           }
         ],
-        "text": "Unbekannte Institutionskennung 103456789."
+        "text": "Institutionskennung 103456789 aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
       },
       "diagnostics": "Die im PoPP-Token angegebene IK der Versicherung ist dem angesprochenen VSDM 2.0-Fachdienst nicht bekannt.\nFordern Sie ein neues PoPP-Token an. Wiederholen Sie die Dienstlokalisierung, um den korrekten zuständigen Fachdienst zu ermitteln und wiederholen Sie die Abfrage.\nBei erneutem Fehler wiederholen Sie die Abfrage mit größerem zeitlichen Abstand, um eventuell geänderte DNS-Einstellungen wirksam werden zu lassen. Halten Sie die Anwender über den Status informiert.\nBei Andauern des Fehlers über 24 h liegt möglicherweise ein Fehler in der Implementierung des Clientsystems oder des Fachdients vor.",
       "expression": [

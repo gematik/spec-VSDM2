@@ -18,7 +18,7 @@ Usage: #example
   * code = #value "Element value invalid"
   * details[+]
     * coding[0] = VSDMErrorcodeCS#VSDSERVICE_INVALID_KVNR "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf."
-    * text = "Ungültige Krankenversichertennummer 1234567890."
+    * text = "Krankenversichertennummer 1234567890 aus dem PoPP-Token weist Formatfehler auf."
   * diagnostics = """
       Die im PoPP-Token enthaltene Krankenversicherungsnummer ist ungültig (Formatfehler).
       Fordern Sie ein neues PoPP-Token an und wiederholen Sie die Abfrage beim zuständigen VSDM 2.0-Fachdienst.
