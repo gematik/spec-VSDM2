@@ -59,7 +59,7 @@ Die Mappingtabellen zu Patient und Coverage befinden sich hier:
 
 
 ### 1.2 FHIR-Profile
-Hier finden Sie die veröffentlichten FHIR-Profile für VSDM 2.0 in der jeweils aktuellen Version: [FHIR-Profile VSDM 2.0](https://simplifier.net/vsdm2/~releases))
+Hier finden Sie die veröffentlichten FHIR-Profile für VSDM 2.0 in der jeweils aktuellen Version: [FHIR-Profile VSDM 2.0](https://simplifier.net/vsdm2/~releases)
 
 Dabei nehmen insbesondere die Ressourcen Patient und Coverage eine zentrale Rolle ein, da sie gemeinsam die Identität der versicherten Person sowie deren Versicherungsverhältnis abbilden.
 
