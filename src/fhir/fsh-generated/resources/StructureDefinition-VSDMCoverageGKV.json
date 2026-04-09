@@ -157,7 +157,8 @@
         "id": "Coverage.extension:zuzahlungsstatus.extension:status",
         "path": "Coverage.extension.extension",
         "sliceName": "status",
-        "comment": "Wenn keine Zuzahlungsbefreiung vorliegt (der Wert also false wäre), entfällt die gesamte Extension."
+        "comment": "Wenn keine Zuzahlungsbefreiung vorliegt (der Wert also false wäre), entfällt die gesamte Extension.",
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:zuzahlungsstatus.extension:status.value[x]",
@@ -169,12 +170,8 @@
         "path": "Coverage.extension.extension",
         "sliceName": "gueltigBis",
         "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "Coverage.extension:zuzahlungsstatus.extension:gueltigBis.value[x]",
-        "path": "Coverage.extension.extension.value[x]",
-        "min": 1
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:dmp",
@@ -223,7 +220,8 @@
         "path": "Coverage.extension.extension",
         "sliceName": "aerztlicheVersorgung",
         "short": "Ärztliche Versorgung",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:kostenerstattung.extension:aerztlicheVersorgung.value[x]",
@@ -235,7 +233,8 @@
         "path": "Coverage.extension.extension",
         "sliceName": "zahnaerztlicheVersorgung",
         "short": "Zahnärztliche Versorgung",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:kostenerstattung.extension:zahnaerztlicheVersorgung.value[x]",
@@ -247,7 +246,8 @@
         "path": "Coverage.extension.extension",
         "sliceName": "stationaererBereich",
         "short": "Stationärer Bereich",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:kostenerstattung.extension:stationaererBereich.value[x]",
@@ -259,7 +259,8 @@
         "path": "Coverage.extension.extension",
         "sliceName": "veranlassteLeistungen",
         "short": "Veranlasste Leistungen",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:kostenerstattung.extension:veranlassteLeistungen.value[x]",
@@ -288,7 +289,8 @@
       {
         "id": "Coverage.extension:ruhenderLeistungsanspruch.extension:art",
         "path": "Coverage.extension.extension",
-        "sliceName": "art"
+        "sliceName": "art",
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:ruhenderLeistungsanspruch.extension:art.value[x]",
@@ -307,7 +309,8 @@
       {
         "id": "Coverage.extension:ruhenderLeistungsanspruch.extension:dauer",
         "path": "Coverage.extension.extension",
-        "sliceName": "dauer"
+        "sliceName": "dauer",
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:ruhenderLeistungsanspruch.extension:dauer.value[x]",
