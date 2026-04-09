@@ -125,7 +125,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
   * ^property[+].code = #expression
   * ^property[=].valueString = "http.Accept"
 
-* #79040 "Die HTTP-Operation [http-operation] wird nicht unterstützt."
+* #79040 "Die HTTP-Operation [http_operation] wird nicht unterstützt."
   * ^definition = """
       Die HTTP-Methode ist nicht GET.
       Mögliche Ursachen:

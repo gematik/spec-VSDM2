@@ -99,7 +99,7 @@
     },
     {
       "code": "SERVICE_INVALID_HTTP_OPERATION",
-      "display": "Die HTTP-Operation [http-operation] wird nicht unterstützt.",
+      "display": "Die HTTP-Operation [http_operation] wird nicht unterstützt.",
       "definition": "Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
       "property": [
         {

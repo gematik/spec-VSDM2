@@ -82,10 +82,10 @@ Usage: #definition
 
   * element[+]
     * code = #79040
-    * display = "Die HTTP-Operation [http-operation] wird nicht unterstützt."
+    * display = "Die HTTP-Operation [http_operation] wird nicht unterstützt."
     * target[+]
       * code = #SERVICE_INVALID_HTTP_OPERATION
-      * display = "Die HTTP-Operation [http-operation] wird nicht unterstützt."
+      * display = "Die HTTP-Operation [http_operation] wird nicht unterstützt."
       * equivalence = #equal
 
   * element[+]

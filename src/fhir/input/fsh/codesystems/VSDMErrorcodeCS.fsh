@@ -121,8 +121,8 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
       Stellen Sie sicher, dass nur die genannten Formate verwendet werden.
     """
 
-// #79040 "Die HTTP-Operation [http-operation] wird nicht unterstützt."
-* #SERVICE_INVALID_HTTP_OPERATION "Die HTTP-Operation [http-operation] wird nicht unterstützt."
+// #79040 "Die HTTP-Operation [http_operation] wird nicht unterstützt."
+* #SERVICE_INVALID_HTTP_OPERATION "Die HTTP-Operation [http_operation] wird nicht unterstützt."
   * ^definition = """
       Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.
     """

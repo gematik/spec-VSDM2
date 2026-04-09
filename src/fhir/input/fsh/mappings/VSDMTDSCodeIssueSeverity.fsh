@@ -82,7 +82,7 @@ Usage: #definition
 
   * element[+]
     * code = #79040
-    * display = "Die HTTP-Operation [http-operation] wird nicht unterstützt."
+    * display = "Die HTTP-Operation [http_operation] wird nicht unterstützt."
     * target[+]
       * code = #fatal
       * display = "Fatal"
