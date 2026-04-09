@@ -347,12 +347,6 @@
         "mustSupport": true
       },
       {
-        "id": "Patient.address:PostfachAdresse.line.extension:Adresszusatz",
-        "path": "Patient.address.line.extension",
-        "sliceName": "Adresszusatz",
-        "mustSupport": true
-      },
-      {
         "id": "Patient.address:PostfachAdresse.line.extension:Postfach",
         "path": "Patient.address.line.extension",
         "sliceName": "Postfach",

@@ -445,7 +445,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 195
+    "endLine": 194
   },
   {
     "outputFile": "StructureDefinition-VSDMPayorOrganization.json",
