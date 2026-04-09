@@ -397,7 +397,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverageGKV.fsh",
     "startLine": 1,
-    "endLine": 184
+    "endLine": 191
   },
   {
     "outputFile": "StructureDefinition-VSDMCoveragePKV.json",
