@@ -121,7 +121,12 @@ Description: "Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdaten
     * value[x] 1..1
     * valueCoding from VSDMRuhenderLeistungsanspruchArtVS
       * system = Canonical(VSDMRuhenderLeistungsanspruchArtCS) (exactly)
-  * extension[dauer].value[x] 1..1
+  * extension[dauer]
+    * valuePeriod 1..1
+      * start 1..1
+        * obeys date-precision-1
+      * end 0..1
+        * obeys date-precision-1
 
 // Zuordnung aus Versicherungsdaten -> Versichertenart
 * extension contains $extVersichertenart named versichertenart 1..1 MS
@@ -153,6 +158,7 @@ Description: "Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdaten
     * ^definition = """
         Gibt den Beginn des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an. 
       """
+    * obeys date-precision-1
   * end MS
     * ^short = "Ende des Versicherungsschutzes"
     * ^definition = """
@@ -162,6 +168,7 @@ Description: "Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdaten
         Hier kann nicht das Ende der Gültigkeit einer konkreten eGK angegeben werden, weil der VSDM 2.0 Resource Server keine Kenntnis davon erlangt, welche konkrete eGK verwendet wurde.
         Für den Fall der Authentifikation mit einer elektronischen Identität liegt ohnehin kein eGK-Gültigkeitsdatum vor.
       """
+    * obeys date-precision-1
 
 // Zuordnung aus Versicherungsdaten -> Kostentraeger und AbrechnenderKostentraeger
 * payor only Reference(VSDMPayorOrganization)
