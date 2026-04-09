@@ -69,13 +69,12 @@ Description: "Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdaten
   * ^requirements = """
       Befreiung des Versicherten von der Zuzahlungspflicht nach § 62 Abs. 3 SGB V.
     """ 
-  * extension[status]
+  * extension[status] MS 
     * ^comment = """
         Wenn keine Zuzahlungsbefreiung vorliegt (der Wert also false wäre), entfällt die gesamte Extension.
       """
     * valueBoolean = true
-  * extension[gueltigBis] 1..1
-  * extension[gueltigBis].valueDate 1..1
+  * extension[gueltigBis] 1..1 MS
 
 // Zuordnung aus Versicherungsdaten -> DMP
 * extension contains VSDMDMPTeilnahme named dmp 0..* MS
@@ -95,16 +94,16 @@ Description: "Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdaten
   * ^comment = """
       Hinweise zur Verwendung siehe auch [Extensions für Coverage](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html) im deutschen Basisprofil
     """
-  * extension[aerztlicheVersorgung] 1..1
+  * extension[aerztlicheVersorgung] 1..1 MS
     * ^short = "Ärztliche Versorgung"
     * value[x] 1..1
-  * extension[zahnaerztlicheVersorgung] 1..1
+  * extension[zahnaerztlicheVersorgung] 1..1 MS
     * ^short = "Zahnärztliche Versorgung"
     * value[x] 1..1
-  * extension[stationaererBereich] 1..1
+  * extension[stationaererBereich] 1..1 MS
     * ^short = "Stationärer Bereich"
     * value[x] 1..1
-  * extension[veranlassteLeistungen] 1..1
+  * extension[veranlassteLeistungen] 1..1 MS
     * ^short = "Veranlasste Leistungen"
     * value[x] 1..1
 
@@ -118,11 +117,11 @@ Description: "Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdaten
   * ^comment = """
       Hinweise zur Verwendung siehe auch [Extensions für Coverage](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-ExtensionsfrCoverage.html) im deutschen Basisprofil
     """
-  * extension[art]
+  * extension[art] MS
     * value[x] 1..1
     * valueCoding from VSDMRuhenderLeistungsanspruchArtVS
       * system = Canonical(VSDMRuhenderLeistungsanspruchArtCS) (exactly)
-  * extension[dauer]
+  * extension[dauer] MS
     * valuePeriod 1..1
       * start 1..1
         * obeys date-precision-1

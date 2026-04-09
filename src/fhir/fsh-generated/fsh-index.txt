@@ -48,13 +48,13 @@ StructureDefinition-VSDDatensatzPKV.json                                VSDDaten
 StructureDefinition-VSDMBeihilfe.json                                   VSDMBeihilfe                                      Extension   extensions/VSDMBeihilfe.fsh                                    1 - 41
 StructureDefinition-VSDMBundle.json                                     VSDMBundle                                        Profile     profiles/VSDMBundle.fsh                                        1 - 54
 StructureDefinition-VSDMContactPointTIM.json                            VSDMContactPointTIM                               Profile     profiles/VSDMContactPointTIM.fsh                               1 - 18
-StructureDefinition-VSDMCoverageGKV.json                                VSDMCoverageGKV                                   Profile     profiles/VSDMCoverageGKV.fsh                                   1 - 192
+StructureDefinition-VSDMCoverageGKV.json                                VSDMCoverageGKV                                   Profile     profiles/VSDMCoverageGKV.fsh                                   1 - 191
 StructureDefinition-VSDMCoveragePKV.json                                VSDMCoveragePKV                                   Profile     profiles/VSDMCoveragePKV.fsh                                   1 - 89
 StructureDefinition-VSDMDMPTeilnahme.json                               VSDMDMPTeilnahme                                  Extension   extensions/VSDMDMPTeilnahme.fsh                                1 - 54
 StructureDefinition-VSDMHinweisPKV.json                                 VSDMHinweisPKV                                    Extension   extensions/VSDMHinweisPKV.fsh                                  1 - 39
 StructureDefinition-VSDMKrankenhausleistungenPKV.json                   VSDMKrankenhausleistungenPKV                      Extension   extensions/VSDMKrankenhausleistungenPKV.fsh                    1 - 90
-StructureDefinition-VSDMOperationOutcome.json                           VSDMOperationOutcome                              Profile     profiles/VSDMOperationOutcome.fsh                              1 - 79
-StructureDefinition-VSDMPatient.json                                    VSDMPatient                                       Profile     profiles/VSDMPatient.fsh                                       1 - 195
+StructureDefinition-VSDMOperationOutcome.json                           VSDMOperationOutcome                              Profile     profiles/VSDMOperationOutcome.fsh                              1 - 82
+StructureDefinition-VSDMPatient.json                                    VSDMPatient                                       Profile     profiles/VSDMPatient.fsh                                       1 - 194
 StructureDefinition-VSDMPayorOrganization.json                          VSDMPayorOrganization                             Profile     profiles/VSDMPayorOrganization.fsh                             1 - 48
 StructureDefinition-VSDMTarifartPKV.json                                VSDMTarifartPKV                                   Extension   extensions/VSDMTarifartPKV.fsh                                 1 - 18
 StructureDefinition-VSDMVersichertenartPKV.json                         VSDMVersichertenartPKV                            Extension   extensions/VSDMVersichertenartPKV.fsh                          1 - 20

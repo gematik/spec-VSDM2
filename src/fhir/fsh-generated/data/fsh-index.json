@@ -397,7 +397,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverageGKV.fsh",
     "startLine": 1,
-    "endLine": 192
+    "endLine": 191
   },
   {
     "outputFile": "StructureDefinition-VSDMCoveragePKV.json",
@@ -437,7 +437,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMOperationOutcome.fsh",
     "startLine": 1,
-    "endLine": 79
+    "endLine": 82
   },
   {
     "outputFile": "StructureDefinition-VSDMPatient.json",
@@ -445,7 +445,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 195
+    "endLine": 194
   },
   {
     "outputFile": "StructureDefinition-VSDMPayorOrganization.json",

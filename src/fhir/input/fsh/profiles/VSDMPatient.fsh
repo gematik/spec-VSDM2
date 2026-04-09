@@ -171,7 +171,6 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
     * ^comment = """
         Hinweise zur Abbildung von Adressen und Beispiele siehe [Adresse (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Addresse) im deutschen Basisprofil.
       """
-    * extension[Adresszusatz] MS
     * extension[Postfach] MS
   * city MS
   * postalCode MS
