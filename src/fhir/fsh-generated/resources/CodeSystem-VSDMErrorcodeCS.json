@@ -88,7 +88,7 @@
     },
     {
       "code": "SERVICE_UNSUPPORTED_MEDIATYPE",
-      "display": "Das vom Clientsystem angefragte Datenformat [media type] wird nicht unterstützt.",
+      "display": "Das vom Clientsystem angefragte Datenformat [media_type] wird nicht unterstützt.",
       "definition": "Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
       "property": [
         {
@@ -99,7 +99,7 @@
     },
     {
       "code": "SERVICE_INVALID_HTTP_OPERATION",
-      "display": "Die HTTP-Operation [http-operation] wird nicht unterstützt.",
+      "display": "Die HTTP-Operation [http_operation] wird nicht unterstützt.",
       "definition": "Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
       "property": [
         {

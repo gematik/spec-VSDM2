@@ -19,7 +19,7 @@
           {
             "code": "SERVICE_INVALID_HTTP_OPERATION",
             "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
-            "display": "Die HTTP-Operation [http-operation] wird nicht unterstützt."
+            "display": "Die HTTP-Operation [http_operation] wird nicht unterstützt."
           }
         ],
         "text": "Die HTTP-Operation PUT wird nicht unterstützt."

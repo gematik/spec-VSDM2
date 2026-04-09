@@ -1,7 +1,7 @@
 Instance: VSDMOperationOutcome-InvalidHTTPOperation
 InstanceOf: VSDMOperationOutcome
 Title: "Fehlermeldung SERVICE_INVALID_HTTP_OPERATION"
-Description: "Beispiel zur Fehlermeldung 'Die HTTP-Operation [http-operation] wird nicht unterstützt.'"
+Description: "Beispiel zur Fehlermeldung 'Die HTTP-Operation [http_operation] wird nicht unterstützt.'"
 Usage: #example
 
 * meta
@@ -17,7 +17,7 @@ Usage: #example
   * severity = #fatal "Fatal"
   * code = #value "Element value invalid"
   * details[+]
-    * coding[0] = VSDMErrorcodeCS#SERVICE_INVALID_HTTP_OPERATION "Die HTTP-Operation [http-operation] wird nicht unterstützt."
+    * coding[0] = VSDMErrorcodeCS#SERVICE_INVALID_HTTP_OPERATION "Die HTTP-Operation [http_operation] wird nicht unterstützt."
     * text = "Die HTTP-Operation PUT wird nicht unterstützt."
   * diagnostics = """
       Die in der HTTP-Anfrage verwendete Methode (Verb) wird vom VSDM 2.0-Fachdienst nicht unterstützt.

@@ -112,7 +112,7 @@
     },
     {
       "code": "79031",
-      "display": "Das vom Clientsystem angefragte Datenformat [media type] wird nicht unterstützt.",
+      "display": "Das vom Clientsystem angefragte Datenformat [media_type] wird nicht unterstützt.",
       "definition": "Der HTTP-Header Accept enthält nicht unterstütztes Format.\nMögliche Ursachen:\nImplementierungsfehler im Clientsystem.\nRelevante Anforderung: A_28610.",
       "property": [
         {
@@ -127,7 +127,7 @@
     },
     {
       "code": "79040",
-      "display": "Die HTTP-Operation [http-operation] wird nicht unterstützt.",
+      "display": "Die HTTP-Operation [http_operation] wird nicht unterstützt.",
       "definition": "Die HTTP-Methode ist nicht GET.\nMögliche Ursachen:\nFehlkonfiguration ZETA Guard.\nRelevante Anforderung: A_26753-01.",
       "property": [
         {
