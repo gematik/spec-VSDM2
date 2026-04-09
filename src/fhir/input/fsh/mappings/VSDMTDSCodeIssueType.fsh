@@ -75,7 +75,7 @@ Usage: #definition
 
   * element[+]
     * code = #79031
-    * display = "Das vom Clientsystem angefragte Datenformat [media type] wird nicht unterstützt."
+    * display = "Das vom Clientsystem angefragte Datenformat [media_type] wird nicht unterstützt."
     * target[+]
       * code = #value
       * display = "Element value invalid"

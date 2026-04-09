@@ -113,7 +113,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
   * ^property[+].code = #expression
   * ^property[=].valueString = "http.[header]"
 
-* #79031 "Das vom Clientsystem angefragte Datenformat [media type] wird nicht unterstützt."
+* #79031 "Das vom Clientsystem angefragte Datenformat [media_type] wird nicht unterstützt."
   * ^definition = """
       Der HTTP-Header Accept enthält nicht unterstütztes Format.
       Mögliche Ursachen:

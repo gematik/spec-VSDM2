@@ -108,8 +108,8 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
       Prüfen Sie den Aufbau des Headers gegen die einschlägigen Standards (v.A. RFC 9110) und korrigieren Sie die Anfrage entsprechend.
     """
 
-// #79031 "Das vom Clientsystem angefragte Datenformat [media type] wird nicht unterstützt."
-* #SERVICE_UNSUPPORTED_MEDIATYPE "Das vom Clientsystem angefragte Datenformat [media type] wird nicht unterstützt."
+// #79031 "Das vom Clientsystem angefragte Datenformat [media_type] wird nicht unterstützt."
+* #SERVICE_UNSUPPORTED_MEDIATYPE "Das vom Clientsystem angefragte Datenformat [media_type] wird nicht unterstützt."
   * ^definition = """
       Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.
     """

@@ -19,7 +19,7 @@
           {
             "code": "SERVICE_UNSUPPORTED_MEDIATYPE",
             "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
-            "display": "Das vom Clientsystem angefragte Datenformat [media type] wird nicht unterstützt."
+            "display": "Das vom Clientsystem angefragte Datenformat [media_type] wird nicht unterstützt."
           }
         ],
         "text": "Das vom Clientsystem angefragte Datenformat application/morse-code wird nicht unterstützt."
