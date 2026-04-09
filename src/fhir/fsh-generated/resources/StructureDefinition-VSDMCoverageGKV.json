@@ -33,6 +33,13 @@
             "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV"
           },
           {
+            "key": "VSDMCoverageGKV-gender-2",
+            "severity": "error",
+            "human": "Für GKV-Versicherte ist die Geschlechtsangabe 'unknown' nicht erlaubt.",
+            "expression": "beneficiary.resolve().gender != 'unknown'",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV"
+          },
+          {
             "key": "VSDMCoverageGKV-address-1",
             "severity": "error",
             "human": "Für GKV-Versicherte ist die Angabe des Länderkennzeichens nach DEÜV Anlage 8 in Adressen des Patienten erforderlich.",
