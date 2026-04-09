@@ -79,3 +79,4 @@ Description: "Strukturierte Fehlermeldung im Versichertenstammdatenmanagement (V
     * ^comment = """
         Dieses Feld darf keine technischen Interna des Fachdienstes (stack traces o.ä.) enthalten.
       """
+  * expression MS

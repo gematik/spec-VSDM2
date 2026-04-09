@@ -437,7 +437,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMOperationOutcome.fsh",
     "startLine": 1,
-    "endLine": 79
+    "endLine": 82
   },
   {
     "outputFile": "StructureDefinition-VSDMPatient.json",

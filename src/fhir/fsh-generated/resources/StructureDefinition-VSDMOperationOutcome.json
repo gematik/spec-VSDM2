@@ -119,6 +119,11 @@
         "comment": "Dieses Feld darf keine technischen Interna des Fachdienstes (stack traces o.ä.) enthalten.",
         "min": 1,
         "mustSupport": true
+      },
+      {
+        "id": "OperationOutcome.issue.expression",
+        "path": "OperationOutcome.issue.expression",
+        "mustSupport": true
       }
     ]
   }

@@ -53,7 +53,7 @@ StructureDefinition-VSDMCoveragePKV.json                                VSDMCove
 StructureDefinition-VSDMDMPTeilnahme.json                               VSDMDMPTeilnahme                                  Extension   extensions/VSDMDMPTeilnahme.fsh                                1 - 54
 StructureDefinition-VSDMHinweisPKV.json                                 VSDMHinweisPKV                                    Extension   extensions/VSDMHinweisPKV.fsh                                  1 - 39
 StructureDefinition-VSDMKrankenhausleistungenPKV.json                   VSDMKrankenhausleistungenPKV                      Extension   extensions/VSDMKrankenhausleistungenPKV.fsh                    1 - 90
-StructureDefinition-VSDMOperationOutcome.json                           VSDMOperationOutcome                              Profile     profiles/VSDMOperationOutcome.fsh                              1 - 79
+StructureDefinition-VSDMOperationOutcome.json                           VSDMOperationOutcome                              Profile     profiles/VSDMOperationOutcome.fsh                              1 - 82
 StructureDefinition-VSDMPatient.json                                    VSDMPatient                                       Profile     profiles/VSDMPatient.fsh                                       1 - 194
 StructureDefinition-VSDMPayorOrganization.json                          VSDMPayorOrganization                             Profile     profiles/VSDMPayorOrganization.fsh                             1 - 48
 StructureDefinition-VSDMTarifartPKV.json                                VSDMTarifartPKV                                   Extension   extensions/VSDMTarifartPKV.fsh                                 1 - 18
