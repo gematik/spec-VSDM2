@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
   <diagram id="XZqBrHnGn3-9SLynYtlv" name="Seite-1">
-    <mxGraphModel dx="1620" dy="902" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1886" dy="945" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -141,7 +141,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Ux8lGl-wnyfo4ktNm6vA-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FF6666;align=right;" value="" vertex="1">
-          <mxGeometry height="20" width="270" x="300" y="220" as="geometry" />
+          <mxGeometry height="20" width="310" x="300" y="220" as="geometry" />
         </mxCell>
         <mxCell id="Ux8lGl-wnyfo4ktNm6vA-15" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="&lt;span style=&quot;text-align: right;&quot;&gt;&lt;font color=&quot;#ff6666&quot;&gt;ZETA/ASL-Kanal@&lt;/font&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;text-align: right;&quot;&gt;&lt;font color=&quot;#ff6666&quot;&gt;Komponenten-PKI TI&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="56" width="110" x="340" y="240" as="geometry" />
@@ -380,6 +380,15 @@
         </mxCell>
         <mxCell id="axwi4brHFKcjn__SztSx-2" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.user;" value="Anbieter VSDD" vertex="1">
           <mxGeometry height="60" width="60" x="1180" y="699.75" as="geometry" />
+        </mxCell>
+        <mxCell id="p948fsq9a4m8vsMt5xR8-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="HTTP-Proxy" vertex="1">
+          <mxGeometry height="70" width="120" x="610" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="snjUx345vWtReWRUE-BO-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;verticalAlign=top;strokeColor=#FFB570;dashed=1;strokeWidth=2;align=left;" value="&amp;nbsp;PDP&amp;nbsp;" vertex="1">
+          <mxGeometry height="200" width="300" x="520" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="snjUx345vWtReWRUE-BO-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;verticalAlign=top;strokeColor=#FFB570;dashed=1;strokeWidth=2;align=left;" value="&amp;nbsp;PEP&amp;nbsp;" vertex="1">
+          <mxGeometry height="110" width="300" x="520" y="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
