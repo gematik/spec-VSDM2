@@ -19,6 +19,7 @@ Description: "Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdaten
 
 // Invarianten auf Strukturebene
 * obeys VSDMCoverageGKV-gender-1           // Pflichtangabe Geschlecht
+* obeys VSDMCoverageGKV-gender-2           // Geschlechtsangabe 'unknown' verboten
 * obeys VSDMCoverageGKV-address-1          // Pflichtangabe Länderkennzeichen nach DEÜV im Patient
 * obeys VSDMCoverageGKV-address-2          // Pflichtangabe Länderkennzeichen nach DEÜV im Kostenträger
 
@@ -195,6 +196,11 @@ Description: "Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdaten
 Invariant: VSDMCoverageGKV-gender-1
 Description: "Für GKV-Versicherte ist die Angabe des Geschlechts erforderlich."
 Expression: "beneficiary.resolve().gender.exists()"
+Severity: #error
+
+Invariant: VSDMCoverageGKV-gender-2
+Description: "Für GKV-Versicherte ist die Geschlechtsangabe 'unknown' nicht erlaubt."
+Expression: "beneficiary.resolve().gender != 'unknown'"
 Severity: #error
 
 Invariant: VSDMCoverageGKV-address-1
