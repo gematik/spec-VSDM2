@@ -13,7 +13,7 @@ applyExtensionMetadataToRoot: false
 dependencies:
   hl7.fhir.r4.core: 4.0.1
   de.basisprofil.r4: 1.5.4
-  de.gematik.terminology: 1.0.8
+  de.gematik.terminology: 1.0.9
   de.gematik.ti: 1.2.0
   kbv.basis: 1.8.0
   kbv.all.st: 1.34.0
