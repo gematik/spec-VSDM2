@@ -25,6 +25,12 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 - Die Platzhalter in den Fehlermeldungen wurden mit einheitlichen Trennern (Unterstrich) versehen. 
   Dazu wurde `[media type]` durch `[media_type]` und `[http-operation]` durch `[http_operation]` ersetzt.
   ([issue 129](https://github.com/gematik/spec-VSDM2/issues/129))
+- Aktualisierung der Paketabhängigkeiten 
+  ([issue 137](https://github.com/gematik/spec-VSDM2/issues/137))
+  - `de.gematik.terminology` von Version 1.0.8 auf Version 1.0.9 
+  - `de.gematik.ti` von Version 1.2.0 auf Version 1.3.1 
+  - `kbv.all.st` von Version 1.34.0 auf Version 1.37.0 
+  - `kbv.ita.for` von Version 1.3.0 auf Version 1.3.1
 
 ### Abkündigung
 
