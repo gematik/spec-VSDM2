@@ -161,7 +161,6 @@
       {
         "id": "Patient.birthDate",
         "path": "Patient.birthDate",
-        "short": "Geburtsdatum",
         "definition": "Das Geburtsdatum des Versicherten ist in den VSD eine Pflichtangabe. \nPartielle Datumsangaben sind allerdings zulässig.",
         "comment": "Hinweise insbesondere zur Angabe unvollständiger Datumswerte siehe [Geburtsdatum (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geburtsdatum)."
       },
