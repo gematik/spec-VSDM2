@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-GKV-E567890127
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.0-rc7)
+  * profile[0] = Canonical(VSDMBundle|1.0.0-rc8)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -31,7 +31,7 @@ Description: "Versichertendaten E567890127 Freifrau an der Elster, Elke (GKV)"
 Usage: #inline
 
 * id = $idVSDMPatient-GKV-E567890127
-* meta.profile[0] = Canonical(VSDMPatient|1.0.0-rc7)
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0-rc8)
 
 * identifier[KVNR].value = "E567890127"
 * birthDate = "1992-11-13"
@@ -69,7 +69,7 @@ Description: "Versicherungsdaten E567890127 Freifrau an der Elster, Elke (GKV)"
 Usage: #inline
 
 * id = $idVSDMCoverageGKV-E567890127
-* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0-rc7)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0-rc8)
 
 * extension[WOP].valueCoding = $csWOP#93 "Thüringen"
 * extension[zuzahlungsstatus] 

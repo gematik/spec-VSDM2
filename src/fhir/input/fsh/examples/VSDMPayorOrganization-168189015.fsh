@@ -5,7 +5,7 @@ Description: "Privatversicherung Merkur"
 Usage: #inline
 
 * id = $idVSDMPayorOrganization-168189015
-* meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0-rc7)
+* meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0-rc8)
 
 * identifier[IKNR].value = "168189015"
 * name = "Privatversicherung Merkur"

@@ -4,7 +4,7 @@ Title: "Beispielkostenträger Potsdam"
 Description: "Beispielkostenträger Potsdam"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0-rc7)
+* meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0-rc8)
 
 * identifier[IKNR].value = "100629189"
 * name = "Beispielkostenträger Potsdam"
