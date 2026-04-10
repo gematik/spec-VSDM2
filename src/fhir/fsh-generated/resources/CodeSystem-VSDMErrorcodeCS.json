@@ -6,7 +6,7 @@
   "id": "VSDMErrorcodeCS",
   "title": "VSDM-Fehlercodes",
   "description": "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (VSDM) 2.0",
-  "version": "1.0.0-rc7",
+  "version": "1.0.0-rc8",
   "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
   "concept": [
     {
@@ -122,7 +122,7 @@
   ],
   "experimental": false,
   "publisher": "gematik GmbH",
-  "date": "2026-03-13",
+  "date": "2026-04-10",
   "caseSensitive": true,
   "purpose": "Dieses CodeSystem enthält die an das Clientsystem zu sendenden fachspezifischen Fehlercodes im Versichertenstammdatenmanagement (VSDM) 2.0.\nFür diese Fehlercodes wird eine Fehlerbeschreibung in Form einer VSDMOperationOutcome-Struktur erzeugt, die dann einen Fehlercode aus diesem CodeSystem enthält.\nDie Definition der einzelnen Codes enthält den Meldungstext, der als narrative content für den Anwender des Clientsystems bestimmt ist.\nDie Eigenschaft diagnostics enthält die technischen Zusatzinformationen, die im Element VSDMOperationOutcome.issue.diagnostics der Antwortstruktur angegeben werden sollen.",
   "property": [
