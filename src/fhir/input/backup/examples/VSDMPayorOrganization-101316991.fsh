@@ -4,7 +4,7 @@ Title: "Beispielkostenträger Schleswig-Holstein"
 Description: "Beispielkostenträger Schleswig-Holstein"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0-rc7)
+* meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0-rc8)
 
 * identifier[IKNR].value = "101316991"
 * name = "Beispielkostenträger Schleswig-Holstein"

@@ -9,6 +9,20 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 ### Neu
 
+### Änderung
+
+### Abkündigung
+
+### Entfernung
+
+### Fehlerbehebung
+
+### Security
+
+## [1.0.0-rc8] - 2026-04-10
+
+### Neu
+
 - Eine neue Fehlermeldung mit dem TDS-Code 79015 und dem Fehlercode `VSDSERVICE_INVALID_PROFILE_VERSION` zur Signalisierung einer ungültigen Versionsangabe im Request wurde eingefügt.
   Dazu wurden die CodeSystems `VSDMTDSCodeCS` und `VSDMErrorcodeCS` sowie die zugehörigen ConceptMaps angepasst.
   ([issue 125](https://github.com/gematik/spec-VSDM2/issues/125))
@@ -34,7 +48,11 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 ### Abkündigung
 
+(keine)
+
 ### Entfernung
+
+(keine)
 
 ### Fehlerbehebung
 
@@ -42,6 +60,8 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
   ([issue 122](https://github.com/gematik/spec-VSDM2/issues/122))
 
 ### Security
+
+(keine)
 
 ## [1.0.0-rc7] - 2026-03-13
 
@@ -107,3 +127,4 @@ _(Release Notes aus der Simplifier-Veröffentlichung übernommen)_
 [1.0.0-rc5]: https://simplifier.net/packages/de.gematik.vsdm2/1.0.0-rc5
 [1.0.0-rc6]: https://simplifier.net/packages/de.gematik.vsdm2/1.0.0-rc6
 [1.0.0-rc7]: https://simplifier.net/packages/de.gematik.vsdm2/1.0.0-rc7
+[1.0.0-rc8]: https://simplifier.net/packages/de.gematik.vsdm2/1.0.0-rc8
