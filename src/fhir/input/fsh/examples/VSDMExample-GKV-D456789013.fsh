@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-GKV-D456789013
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.0-rc8)
+  * profile[0] = Canonical(VSDMBundle|1.0.0)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -28,7 +28,7 @@ Description: "Versichertendaten D456789013 Dohle, Dara (GKV)"
 Usage: #inline
 
 * id = $idVSDMPatient-GKV-D456789013
-* meta.profile[0] = Canonical(VSDMPatient|1.0.0-rc8)
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "D456789013"
 * birthDate = "1970-01-20"
@@ -67,7 +67,7 @@ Description: "Versicherungsdaten D456789013 Dohle, Dara (GKV)"
 Usage: #inline
 
 * id = $idVSDMCoverageGKV-D456789013
-* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0-rc8)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#46 "Hessen"
 * extension[besonderePersonengruppe].valueCoding = #06 "SER" // "SER (Soziales Entschädigungsrecht)"

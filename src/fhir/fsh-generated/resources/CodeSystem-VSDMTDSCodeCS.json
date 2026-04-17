@@ -6,7 +6,7 @@
   "id": "VSDMTDSCodeCS",
   "title": "VSDM-TDS-Codes",
   "description": "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammdatenmanagement (VSDM) 2.0",
-  "version": "1.0.0-rc8",
+  "version": "1.0.0",
   "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS",
   "concept": [
     {
@@ -194,7 +194,7 @@
   ],
   "experimental": false,
   "publisher": "gematik GmbH",
-  "date": "2026-04-10",
+  "date": "2026-04-17",
   "caseSensitive": true,
   "purpose": "Dieses CodeSystem enthält alle Fehlercodes des Telemetriedatenservice (TDS), der Fachdienst gemäß Anforderung A_27012-02 und darin enthaltener Tabelle TAB_FACHDIENST_VSDM_FEHLERREFERENZEN_UND_FEHLERCODES sowie den bei den jeweiligen Codes genanntnen Anforderungen liefern muss.\nDiese TDS-Codes decken alle in der Spezifikation vorgesehenen Fehlersituationen ab.\nDieses CodeSystem definiert die genauen Fehlerzustände und dient als Ausgangspunkt für verschiedene Zuordnungen (ConceptMaps).\nJe nach Fehlerquelle werden diese Fehler entweder an das Clientsystem oder an den HTTP Proxy des ZETA Guard adressiert.\nNur für die Fehlercodes mit Adressat \"Clientsystem\" wird eine Fehlerbeschreibung in Form einer VSDMOperationOutcome-Struktur erzeugt, die dann einen Fehlercode aus dem CodeSystem VSDMErrorcodeCS enthält.",
   "property": [
