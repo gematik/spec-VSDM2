@@ -19,6 +19,10 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 ### Security
 
+## [1.0.0] - 2026-04-17
+
+Keine inhaltlichen Änderungen gegenüber Version 1.0.0-rc8.
+
 ## [1.0.0-rc8] - 2026-04-10
 
 ### Neu

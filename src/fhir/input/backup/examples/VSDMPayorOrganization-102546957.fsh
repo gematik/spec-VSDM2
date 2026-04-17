@@ -4,7 +4,7 @@ Title: "Beispielkostenträger Osnabrück"
 Description: "Beispielkostenträger Osnabrück"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0-rc8)
+* meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
 
 * identifier[IKNR].value = "102546957"
 * name = "Beispielkostenträger Osnabrück"

@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-GKV-H890123459
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.0-rc8)
+  * profile[0] = Canonical(VSDMBundle|1.0.0)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -31,7 +31,7 @@ Description: "Versichertendaten H890123459 vorm Habicht, Hans (GKV)"
 Usage: #inline
 
 * id = $idVSDMPatient-GKV-H890123459
-* meta.profile[0] = Canonical(VSDMPatient|1.0.0-rc8)
+* meta.profile[0] = Canonical(VSDMPatient|1.0.0)
 
 * identifier[KVNR].value = "H890123459"
 * birthDate = "1953-07-29"
@@ -64,7 +64,7 @@ Description: "Versicherungsdaten H890123459 vorm Habicht, Hans (GKV)"
 Usage: #inline
 
 * id = $idVSDMCoverageGKV-H890123459
-* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0-rc8)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
 
 * extension[WOP].valueCoding = $csWOP#17 "Niedersachsen" 
 * extension[besonderePersonengruppe].valueCoding = #07 "SVA1" // "SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht: - Personen mit Wohnsitz im Inland, Abrechnung nach Aufwand"

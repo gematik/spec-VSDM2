@@ -5,23 +5,23 @@
 RuleSet: Meta
 * ^status = #active
 * ^experimental = false
-* ^version = "1.0.0-rc8"
+* ^version = "1.0.0"
 * ^publisher = "gematik GmbH"
-* ^date = 2026-04-10
+* ^date = 2026-04-17
 
 RuleSet: Meta-CodeSystem
 * ^status = #active // Caution: CodeSystems with status "draft" trigger a validation error
 * ^experimental = false
-* ^version = "1.0.0-rc8"
+* ^version = "1.0.0"
 * ^publisher = "gematik GmbH"
-* ^date = 2026-04-10
+* ^date = 2026-04-17
 
 RuleSet: Meta-Inst
 * status = #active
 * experimental = false
-* version = "1.0.0-rc8"
+* version = "1.0.0"
 * publisher = "gematik GmbH"
-* date = 2026-04-10
+* date = 2026-04-17
 
 // ================================================================================================
 // 
