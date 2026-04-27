@@ -17,7 +17,7 @@
       "details": {
         "coding": [
           {
-            "code": "VSDSERVICE_INVALID_PATIENT_RECORD_VERSION",
+            "code": "VSDSERVICE_MISSING_PATIENT_RECORD_VERSION",
             "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
             "display": "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden."
           }
