@@ -10,12 +10,12 @@
   "publisher": "gematik GmbH",
   "date": "2026-04-17",
   "purpose": "Diese ConceptMap ordnet den TDS-Codes die VSDMErrorcodes gemäß Tabelle TAB_FACHDIENST_VSDM_FEHLERREFERENZEN_UND_FEHLERCODES aus Anforderung A_27012-01 zu.\nWichtig: Hier werden nur die TDS-Codes mit Fehler-Adressat \"Clientsystem\" erfasst, da für Fehler mit Adressat \"HTTP-Proxy\" keine VSDMOperationOutcome-Ressource erzeugt wird.",
-  "sourceUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMTDSCodeVS",
-  "targetUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMErrorcodeVS",
+  "sourceUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMTDSCodeVS|1.0.1-dev",
+  "targetUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMErrorcodeVS|1.0.1-dev",
   "group": [
     {
-      "source": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS",
-      "target": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
+      "source": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS|1.0.1-dev",
+      "target": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS|1.0.1-dev",
       "element": [
         {
           "code": "79010",
