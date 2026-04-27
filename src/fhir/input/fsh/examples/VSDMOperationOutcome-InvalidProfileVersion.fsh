@@ -18,11 +18,10 @@ Usage: #example
   * code = #value "Element value invalid"
   * details[+]
     * coding[0] = VSDMErrorcodeCS#VSDSERVICE_INVALID_PROFILE_VERSION "Die vom Clientsystem angefragte Profilversion [profile_version] wird nicht unterstützt."
-    * text = "Die vom Clientsystem angefragte Profilversion 1.42.0 wird nicht unterstützt."
+    * text = "Die vom Clientsystem angefragte Profilversion 1.42 wird nicht unterstützt."
   * diagnostics = """
-      Das Clientsystem hat mit dem optionalen Parameter profileVersion eine Profilversion angefordert, die vom Fachdienst nicht unterstützt wird. 
-      Das Clientsystem muss den Parameter entweder mit einer unterstützten Version gemäß der aktuellen gematik-Vorgaben füllen oder eine Anfrage ohne den Parameter stellen.
-      Wenn das Clientsystem den Parameter nicht übergibt, liefert der Fachdienst die jeweils aktuelle Standardversion.
-      Wiederholen Sie die Anfrage unter Angabe eines gültigen Werts oder ohne den optionalen Parameter.
+      Das Clientsystem hat mit dem verpflichtenden Parameter profileVersion eine Profilversion angefordert, die vom Fachdienst nicht unterstützt wird. 
+      Das Clientsystem muss den Parameter mit einer unterstützten Major-/Minor-Version gemäß der aktuellen gematik-Vorgaben füllen.
+      Wiederholen Sie die Anfrage unter Angabe eines gültigen Werts.
     """
   * expression[+] = "http.profileVersion"

@@ -87,7 +87,7 @@
     {
       "code": "79015",
       "display": "Die vom Clientsystem angefragte Profilversion wird nicht unterstützt.",
-      "definition": "Das Clientsystem hat mit dem optionalen Parameter profileVersion eine Profilversion angefordert, die vom Fachdienst nicht unterstützt wird. \nMögliche Ursachen:\nImplementierungsfehler im Clientsystem.\nRelevante Anforderung: A_28047-01.",
+      "definition": "Das Clientsystem hat mit dem Parameter profileVersion eine Profilversion angefordert, die vom Fachdienst nicht unterstützt wird. \nMögliche Ursachen:\nImplementierungsfehler im Clientsystem.\nRelevante Anforderung: A_28047-01.",
       "property": [
         {
           "code": "target",
