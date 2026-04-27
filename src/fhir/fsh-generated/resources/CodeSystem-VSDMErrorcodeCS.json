@@ -54,7 +54,7 @@
       ]
     },
     {
-      "code": "VSDSERVICE_INVALID_PATIENT_RECORD_VERSION",
+      "code": "VSDSERVICE_MISSING_PATIENT_RECORD_VERSION",
       "display": "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden.",
       "definition": "Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
       "property": [

@@ -71,7 +71,7 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
     """
 
 // #79014 "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden."
-* #VSDSERVICE_INVALID_PATIENT_RECORD_VERSION "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden."
+* #VSDSERVICE_MISSING_PATIENT_RECORD_VERSION "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden."
   * ^definition = """
       Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.
     """

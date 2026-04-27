@@ -52,7 +52,7 @@ Usage: #definition
     * code = #79014
     * display = "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden."
     * target[+]
-      * code = #VSDSERVICE_INVALID_PATIENT_RECORD_VERSION
+      * code = #VSDSERVICE_MISSING_PATIENT_RECORD_VERSION
       * display = "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden."
       * equivalence = #equal
 
