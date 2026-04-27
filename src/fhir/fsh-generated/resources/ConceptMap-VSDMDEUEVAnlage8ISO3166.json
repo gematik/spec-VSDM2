@@ -6,7 +6,7 @@
   "description": "Ermittlung des (temporären) Ländercodes nach ISO 3166-1 aus dem Ländercode nach DEÜV Anlage 8",
   "status": "active",
   "experimental": false,
-  "version": "1.0.0",
+  "version": "1.0.1-dev",
   "publisher": "gematik GmbH",
   "date": "2026-04-17",
   "purpose": "Diese ConceptMap ordnet den Ländercodes aus der DEÜV Anlage 8 die korrespondierenden Ländercodes nach ISO 3166-1 zu.\nWo keine offiziellen Ländercodes verfügbar sind, werden temporäre Codes aus einem lokalen CodeSystem verwendet.",

@@ -4,12 +4,11 @@ name: CI (FHIR Validation)
 
 # Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch.
-  # Added working branch to support clean-up of current validation issues - will be removed once branch is merged.
+  # Triggers the workflow on push or pull request events but only for the master and main development branch.
   push:
-    branches: [ main, adesso-update-mapping ]
+    branches: [ main, develop ]
   pull_request:
-    branches: [ main, adesso-update-mapping ]
+    branches: [ main, develop ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:

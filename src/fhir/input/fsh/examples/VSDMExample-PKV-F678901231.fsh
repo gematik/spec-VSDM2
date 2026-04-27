@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-PKV-F678901231
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.0)
+  * profile[0] = Canonical(VSDMBundle|1.0.1-dev)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -28,7 +28,7 @@ Description: "Versichertendaten F678901231 von Fasan, Frank Florian (PKV)"
 Usage: #inline
 
 * id = $idVSDMPatient-PKV-F678901231
-* meta.profile[0] = Canonical(VSDMPatient|1.0.0)
+* meta.profile[0] = Canonical(VSDMPatient|1.0.1-dev)
 
 * identifier[KVNR].value = "F678901231"
 * birthDate = "1983-01-19"
@@ -58,7 +58,7 @@ Description: "Versicherungsdaten F678901231 von Fasan, Frank Florian (PKV)"
 Usage: #inline
 
 * id = $idVSDMCoveragePKV-F678901231
-* meta.profile[0] = Canonical(VSDMCoveragePKV|1.0.0)
+* meta.profile[0] = Canonical(VSDMCoveragePKV|1.0.1-dev)
 
 * extension[krankenhaus]
   * extension[allgemein].valueUnsignedInt = 100
