@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMTarifartPKV",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMTarifartPKV",
-  "version": "1.0.0",
+  "version": "1.0.1-dev",
   "name": "VSDMTarifartPKV",
   "title": "PKV-Tarifart",
   "status": "active",

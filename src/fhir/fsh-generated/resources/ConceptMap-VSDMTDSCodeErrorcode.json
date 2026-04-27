@@ -6,7 +6,7 @@
   "description": "Ermittlung des VSDMErrorcode aus dem TDS-Code",
   "status": "active",
   "experimental": false,
-  "version": "1.0.0",
+  "version": "1.0.1-dev",
   "publisher": "gematik GmbH",
   "date": "2026-04-17",
   "purpose": "Diese ConceptMap ordnet den TDS-Codes die VSDMErrorcodes gemäß Tabelle TAB_FACHDIENST_VSDM_FEHLERREFERENZEN_UND_FEHLERCODES aus Anforderung A_27012-01 zu.\nWichtig: Hier werden nur die TDS-Codes mit Fehler-Adressat \"Clientsystem\" erfasst, da für Fehler mit Adressat \"HTTP-Proxy\" keine VSDMOperationOutcome-Ressource erzeugt wird.",

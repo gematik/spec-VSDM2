@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-GKV-Z987654321
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.0)
+  * profile[0] = Canonical(VSDMBundle|1.0.1-dev)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -31,7 +31,7 @@ Description: "Versichertendaten Z987654321 Graf von und zu Zaunkönig, Zacharias
 Usage: #inline
 
 * id = $idVSDMPatient-GKV-Z987654321
-* meta.profile[0] = Canonical(VSDMPatient|1.0.0)
+* meta.profile[0] = Canonical(VSDMPatient|1.0.1-dev)
 
 * identifier[KVNR].value = "Z987654321"
 * birthDate = "1987-05-16"
@@ -74,7 +74,7 @@ Description: "Versicherungsdaten Z987654321 Graf von und zu Zaunkönig, Zacharia
 Usage: #inline
 
 * id = $idVSDMCoverageGKV-Z987654321
-* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.0)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.1-dev)
 
 * extension[WOP].valueCoding = $csWOP#98 "Sachsen"
 * extension[dmp][+]

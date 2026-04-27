@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMCoveragePKV",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoveragePKV",
-  "version": "1.0.0",
+  "version": "1.0.1-dev",
   "name": "VSDMCoveragePKV",
   "title": "Versicherungsdaten PKV",
   "status": "active",

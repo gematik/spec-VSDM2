@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMCoverageGKV",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV",
-  "version": "1.0.0",
+  "version": "1.0.1-dev",
   "name": "VSDMCoverageGKV",
   "title": "Versicherungsdaten GKV",
   "status": "active",

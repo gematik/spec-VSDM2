@@ -6,7 +6,7 @@
   "id": "VSDMRuhenderLeistungsanspruchArtCS",
   "title": "Art des ruhenden Leistungsanspruchs",
   "description": "Art des ruhenden Leistungsanspruchs im Versichertenstammdatenmanagement (VSDM) 2.0",
-  "version": "1.0.0",
+  "version": "1.0.1-dev",
   "url": "http://fhir.de/CodeSystem/gkv/RuhenderLeistungsanspruchGKV",
   "concept": [
     {

@@ -4,7 +4,7 @@ Title: "Beispielkostenträger Schwaben"
 Description: "Beispielkostenträger Schwaben"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.0)
+* meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.1-dev)
 
 * identifier[IKNR].value = "109149007"
 * name = "Beispielkostenträger Schwaben"

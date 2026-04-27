@@ -5,7 +5,7 @@
   "id": "VSDMVorsatzwortVS",
   "title": "Namensvorsatzwort",
   "description": "Namensvorsatzwort nach DEÜV Anlage 6 im Versichertenstammdatenmanagement (VSDM) 2.0",
-  "version": "1.0.0",
+  "version": "1.0.1-dev",
   "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMVorsatzwortVS",
   "experimental": false,
   "publisher": "gematik GmbH",

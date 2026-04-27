@@ -6,7 +6,7 @@
   "id": "VSDMTDSCodeCS",
   "title": "VSDM-TDS-Codes",
   "description": "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammdatenmanagement (VSDM) 2.0",
-  "version": "1.0.0",
+  "version": "1.0.1-dev",
   "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS",
   "concept": [
     {
