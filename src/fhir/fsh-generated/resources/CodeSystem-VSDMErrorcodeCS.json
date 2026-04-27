@@ -71,7 +71,7 @@
       "property": [
         {
           "code": "diagnostics",
-          "valueString": "Das Clientsystem hat mit dem optionalen Parameter profileVersion eine Profilversion angefordert, die vom Fachdienst nicht unterstützt wird. \nDas Clientsystem muss den Parameter entweder mit einer unterstützten Version gemäß der aktuellen gematik-Vorgaben füllen oder eine Anfrage ohne den Parameter stellen.\nWenn das Clientsystem den Parameter nicht übergibt, liefert der Fachdienst die jeweils aktuelle Standardversion.\nWiederholen Sie die Anfrage unter Angabe eines gültigen Werts oder ohne den optionalen Parameter."
+          "valueString": "Das Clientsystem hat mit dem verpflichtenden Parameter profileVersion eine Profilversion angefordert, die vom Fachdienst nicht unterstützt wird. \nDas Clientsystem muss den Parameter mit einer unterstützten Major-/Minor-Version gemäß der aktuellen gematik-Vorgaben füllen.\nWiederholen Sie die Anfrage unter Angabe eines gültigen Werts."
         }
       ]
     },

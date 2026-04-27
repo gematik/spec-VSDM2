@@ -197,7 +197,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMErrorcodeCS.fsh",
     "startLine": 1,
-    "endLine": 144
+    "endLine": 143
   },
   {
     "outputFile": "CodeSystem-VSDMISO3166ErgaenzungCS.json",
@@ -325,7 +325,7 @@
     "fshType": "Instance",
     "fshFile": "examples/VSDMOperationOutcome-InvalidProfileVersion.fsh",
     "startLine": 1,
-    "endLine": 28
+    "endLine": 27
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-UnknownIK.json",

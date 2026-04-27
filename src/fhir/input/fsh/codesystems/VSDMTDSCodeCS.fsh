@@ -93,7 +93,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
 
 * #79015 "Die vom Clientsystem angefragte Profilversion wird nicht unterstützt."
   * ^definition = """
-      Das Clientsystem hat mit dem optionalen Parameter profileVersion eine Profilversion angefordert, die vom Fachdienst nicht unterstützt wird. 
+      Das Clientsystem hat mit dem Parameter profileVersion eine Profilversion angefordert, die vom Fachdienst nicht unterstützt wird. 
       Mögliche Ursachen:
       Implementierungsfehler im Clientsystem.
       Relevante Anforderung: A_28047-01.
