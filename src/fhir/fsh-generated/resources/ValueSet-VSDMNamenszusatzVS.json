@@ -1,0 +1,20 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "VSDMNamenszusatzVS",
+  "id": "VSDMNamenszusatzVS",
+  "title": "Namenszusatz",
+  "description": "Namenszusatz nach DEÜV Anlage 7 im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "version": "1.0.0",
+  "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMNamenszusatzVS",
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "date": "2026-04-17",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhir.de/CodeSystem/deuev/anlage-7-namenszusaetze"
+      }
+    ]
+  }
+}

@@ -1,9 +1,10 @@
-# 1 Hinweise zum Informationsmodell VSDM 2.0
+# 1. Hinweise zum Informationsmodell VSDM 2.0
 
 Mit der Einführung von VSDM 2.0 wird FHIR (Fast Healthcare Interoperability Resources) zur Datenübertragung verwendet. 
 Ziel der FHIR-Implementierung für VSDM 2.0 ist eine konsistente Datenhaltung und einen effizienten Austausch von Versichertenstammdaten zwischen dem Fachdienst VSDM 2.0 und den Primärsystemen zu gewährleisten. FHIR bietet hierfür eine Grundlage, die sich flexibel an spezifische Anforderungen anpassen lässt.
 
-### Logical Model 
+
+### 1.1 Logical Model 
 
 Das Logical Model beschreibt die Struktur der Versichertenstammdaten aus fachlicher Sicht. Es dient als Grundlage für die Ableitung von FHIR-Profilen und unterstützt die Kommunikation zwischen Fachdomäne und technischer Umsetzung.
 Jedes Element des Datensatzen wird wiefolgt beschrieben:
@@ -13,22 +14,36 @@ Jedes Element des Datensatzen wird wiefolgt beschrieben:
 - Beschreibung
 - Definition
 
-Link Simplifier
-[LogicalModelVSDM2.0](https://simplifier.net/vsdm2/gem_vsdm2_log_vsd_confirmation)
+Links im Simplifier
 
-Die nachfolgenden Logical Models "Versichertendaten" und "Versicherungsdaten" dienen zur Beschreibung der VSD und als Grundlage zur Definition der FHIR-Profile für VSDM 2.0.
+Logical Model für die GKV: [LogicalModelVSDM2.0-GKV](https://simplifier.net/vsdm2/vsddatensatzgkv)
+
+Logical Model für die PKV: [LogicalModelVSDM2.0-PKV](https://simplifier.net/vsdm2/vsddatensatzpkv)
+
+Die nachfolgenden Logical Models "Versichertendaten" und "Versicherungsdaten" dienen zur Beschreibung der VSD für die gesetzliche und private Krankenversicherung und als Grundlage zur Definition der FHIR-Profile für VSDM 2.0.
 
 Weitere in den FHIR-Profilen Patient und Coverage befindliche Felder aus dem Basisdatensatz werden bei der Befüllung und Übertragung des Datensatzes nicht beachtet. Das Logical Model bildet den kompletten VSD-Datensatz ab.
 
-#### Versichertendaten
+### Gesetzliche Krankenversicherung
 
-![Alt-Text](/images/logicalmodelVersichertendaten.png)
+#### Versichertendaten GKV
+
+![Alt-Text](/images/LMVersichertendatenGKV.png)
+
+#### Versicherungsdaten GKV
+
+![Alt-Text](/images/LMVersicherungsdatenGKV.png)
 
 
-#### Versicherungsdaten
+### Private Krankenversicherung
 
-![Alt-Text](/images/logicalmodelVersicherungsdaten.png)
+#### Versichertendaten PKV
+
+![Alt-Text](/images/LMVersichertendatenPKV.png)
  
+#### Versicherungsdaten PKV
+
+![Alt-Text](/images/LMVersicherungsdatenPKV.png)
 
 
 ### Mapping
@@ -38,10 +53,15 @@ Ziel ist es sicherzustellen, dass die Daten aus dem Logical Model korrekt in bei
 
 Die Mappingtabellen zu Patient und Coverage befinden sich hier:
 
-[Mapping logicalmodel-FHIR-Profile](https://simplifier.net/vsdm2/GEM_VSDM2_LOG_VSD_Confirmation/~mappings)
+[Mapping logicalmodel-FHIR-Profile GKV](https://simplifier.net/vsdm2/VSDDatensatzGKV/~mappings)
+
+[Mapping logicalmodel-FHIR-Profile PKV](https://simplifier.net/vsdm2/VSDDatensatzPKV/~mappings)
 
 
+### 1.2 FHIR-Profile
+Hier finden Sie die veröffentlichten FHIR-Profile für VSDM 2.0 in der jeweils aktuellen Version: [FHIR-Profile VSDM 2.0](https://simplifier.net/vsdm2/~releases)
 
+Dabei nehmen insbesondere die Ressourcen Patient und Coverage eine zentrale Rolle ein, da sie gemeinsam die Identität der versicherten Person sowie deren Versicherungsverhältnis abbilden.
 
 # 2. Hinweise zum verkürzten VSD-Datensatz auf der eGK
 

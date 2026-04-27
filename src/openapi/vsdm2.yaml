@@ -21,34 +21,16 @@ externalDocs:
   description: FHIR Specification VSDM 2
   url: https://simplifier.net/vsdm2
 servers:
-  - url: https://101575519.prod.vsdm2.ti-dienste.de
-    description: TK Production server (PU)
-  - url: https://109723913.prod.vsdm2.ti-dienste.de
-    description: BKK VBU Production server (PU)
-  - url: https://{iknummer}.prod.vsdm2.ti-dienste.de
-    description: address schema vsdm backends - productive environment
-    variables:
-      iknummer:
-        default: "111111111"
-        description: Institutional identifier for a specific health insurer.
-  - url: https://{iknummer}.ref.vsdm2.ti-dienste.de
-    description: address schema vsdm backends - reference environment
-    variables:
-      iknummer:
-        default: "111111111"
-        description: Institutional identifier for a specific health insurer.
-  - url: https://{iknummer}.test.vsdm2.ti-dienste.de
-    description: address schema vsdm backends - test environment
-    variables:
-      iknummer:
-        default: "111111111"
-        description: Institutional identifier for a specific health insurer.
-  - url: https://{iknummer}.dev.vsdm2.ti-dienste.de
-    description: address schema vsdm backends - development environment
-    variables:
-      iknummer:
-        default: "111111111"
-        description: Institutional identifier for a specific health insurer.
+  - url: https://vsdm2.prod.anbieter-123.de
+    description: Beispieladresse zum Fachdienst VSDM 2
+  - url: https://prod.vsdm.ti-dienste.tk.de
+    description: Techniker Krankenkasse Produktivumgebung
+  - url: https://ref.vsdm.ti-dienste.tk.de
+    description: Techniker Krankenkasse Referenzumgebung
+  - url: https://test.vsdm.ti-dienste.tk.de
+    description: Techniker Krankenkasse Testumgebung
+  - url: https://dev.vsdm.ti-dienste.tk.de
+    description: Techniker Krankenkasse Entwicklungsumgebung
 tags:
   - name: Vsdm
     description: Endpoint of the application "Versichertenstammdatenmanagement" (VSDM) to retrieve a VSDMBundle FHIR-Resource (Versichertenstammdaten; VSD) of a specific patient.
@@ -59,7 +41,27 @@ paths:
       tags:
         - Vsdm
       summary: Returns a VSDMBundle for the specified patient.
-      description: Returns a VSDMBundle with VSD about a specific patient that is addressed within the PoPP-Token in the request header.
+      description: |
+        Returns a VSDMBundle with VSD about a specific patient that is addressed within the PoPP-Token in the request header.
+        
+        To localize the corresponding health service providers fqdn, clients are required to query
+        the gematik service discovery service beforehand using https://service-discovery.prod.ti-platform.de.
+        The service discovery document must be fetched before calling this API, this can happen completely 
+        asynchronous and unrelated to the actual vsdm usecase. 
+        Reference: #/src/openapi/servicediscovery.yaml
+
+        **FHIR DEVIATION NOTICE:**
+        This endpoint deviates from standard FHIR REST patterns:
+        - Standard FHIR: GET /Bundle/{id}
+        - VSDM2: GET /vsdservice/v1/vsdmbundle (no ID in path)
+        
+        **Rationale:**
+        - Security: Patient KVNR is not exposed in URL
+        - Context-based: Patient identified via KVNR in PoPP token header
+        - Singleton: Exactly one current VSDMBundle per patient
+        
+        Despite this deviation, VSDMBundle remains a FHIR Resource with
+        standard resource semantics (ETag, conditional requests, etc.).
       operationId: getVSDMBundle
       security:
         - oAuthVsdm: [ vsdservice ]
@@ -120,12 +122,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/VSDMOperationOutcome'
-        '403':
-          description: Forbidden
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/VSDMOperationOutcome'
         '404':
           description: Not Found
           content:
@@ -134,6 +130,12 @@ paths:
                 $ref: '#/components/schemas/VSDMOperationOutcome'
         '405':
           description: Method Not Allowed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
+        '406':
+          description: Not Acceptable
           content:
             application/json:
               schema:
@@ -150,19 +152,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/VSDMOperationOutcome'
-        '502':
-          description: Bad Gateway
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/VSDMOperationOutcome'
-        '504':
-          description: Gateway Timeout
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/VSDMOperationOutcome'
-
 components:
   parameters:
     ETag:
@@ -178,7 +167,7 @@ components:
       description: Base64URL encoded "Pruefziffer"
       schema:
         type: string
-      example: VDAyMzU5MDA1MDE3MjY3Mzc2MDFVVDLYyBOm-EDF0oe1aW_ndQe2p36MGAzvyBk
+      example: RGllcy1pc3QtZWluZS1CZWlzcGllbC1QcsO8ZnppZmZlci1uYWNoLUFfMjY3OTAh
   schemas:
     GetVSDMBundleResponse:
       description: Response including the requested VSDMBundle
@@ -188,265 +177,247 @@ components:
           $ref: '#/components/schemas/VSDMBundle'
     VSDMBundle:
       type: object
-      description: 'https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle'
-      examples:
-        [
-          {
-            "resourceType": "Bundle",
-            "id": "9b6ac30d-246d-4eab-af83-544564792089",
-            "meta": {
-              "profile": [
-                "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle"
-              ]
-            },
-            "type": "document",
-            "identifier": {
-              "system": "urn:ietf:rfc:3986",
-              "value": "urn:uuid:9b6ac30d-246d-4eab-af83-544564792089"
-            },
-            "signature": {
-              "sigFormat": "application/pkcs7-mime",
-              "who": {
-                "identifier": {
-                  "system": "https://fhir.de/sid/arge-ik/iknr",
-                  "value": "12345678"
-                }
-              },
-              "type": [
-                {
-                  "system": "urn:iso-astm:E1762-95:2013",
-                  "code": "1.2.840.10065.1.12.1.7",
-                  "display": "Consent Signature"
-                }
-              ],
-              "when": "2023-11-03T12:02:23.157+01:00",
-              "data": "dGhpcyBibG9iIGlzIHNuaXBwZWQ="
-            },
-            "timestamp": "2023-11-03T12:02:23.157+01:00",
-            "entry": [
-              {
-                "fullUrl": "https://gematik.de/fhir/Composition/c624cf47-e235-4624-af71-0a09dc9254dc",
-                "resource": {
-                  "resourceType": "Composition",
-                  "id": "c624cf47-e235-4624-af71-0a09dc9254dc",
-                  "meta": {
-                    "profile": [
-                      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMComposition"
-                    ]
-                  },
-                  "status": "final",
-                  "author": [
-                    {
-                      "identifier": {
-                        "system": "https://fhir.de/sid/arge-ik/iknr",
-                        "value": "12345678"
-                      }
-                    }
-                  ],
-                  "type": {
-                    "coding": [
-                      {
-                        "code": "not-applicable",
-                        "system": "https://terminology.hl7.org/CodeSystem/data-absent-reason"
-                      }
-                    ]
-                  },
-                  "date": "2023-11-03T12:02:23.157+01:00",
-                  "title": "VSDM 2 data",
-                  "section": [
-                    {
-                      "entry": [
+      description: 'https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0'
+      examples: [
+        {
+          "resourceType": "Bundle",
+          "id": "019aa690-d14a-79a3-a078-3807df1b87f4",
+          "meta": {
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
+            ],
+            "lastUpdated": "2025-07-14T15:16:17.890+01:00"
+          },
+          "type": "collection",
+          "timestamp": "2025-07-14T15:16:17.890+01:00",
+          "entry": [
+            {
+              "fullUrl": "https://gematik.de/fhir/Patient/019aa694-9c4e-7540-be3c-0ef324476863",
+              "resource": {
+                "resourceType": "Patient",
+                "id": "019aa694-9c4e-7540-be3c-0ef324476863",
+                "meta": {
+                  "profile": [
+                    "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
+                  ]
+                },
+                "identifier": [
+                  {
+                    "system": "http://fhir.de/sid/gkv/kvid-10",
+                    "value": "A123456780"
+                  }
+                ],
+                "name": [
+                  {
+                    "use": "official",
+                    "text": "Andrea Amsel",
+                    "family": "Amsel",
+                    "_family": {
+                      "extension": [
                         {
-                          "reference": "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
+                          "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                          "valueString": "Amsel"
                         }
                       ]
                     },
-                    {
-                      "entry": [
-                        {
-                          "reference": "Coverage/2d4da53a-413a-48fe-b908-2e67b5761523"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              },
-              {
-                "fullUrl": "https://gematik.de/fhir/Patient/437f2555-2396-4c64-a656-e9553161ca3c",
-                "resource": {
-                  "resourceType": "Patient",
-                  "id": "437f2555-2396-4c64-a656-e9553161ca3c",
-                  "meta": {
-                    "profile": [
-                      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
+                    "given": [
+                      "Andrea"
                     ]
-                  },
-                  "name": [
-                    {
-                      "use": "official",
-                      "family": "Königstein",
-                      "_family": {
+                  }
+                ],
+                "address": [
+                  {
+                    "type": "physical",
+                    "line": [
+                      "Amselweg 1"
+                    ],
+                    "_line": [
+                      {
                         "extension": [
                           {
-                            "url": "https://hl7.org/fhir/StructureDefinition/humanname-own-name",
-                            "valueString": "Königstein"
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                            "valueString": "1"
+                          },
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                            "valueString": "Amselweg"
                           }
                         ]
-                      },
-                      "given": [
-                        "Ludger"
+                      }
+                    ],
+                    "city": "Aachen",
+                    "postalCode": "52070",
+                    "country": "Deutschland",
+                    "_country": {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                          "valueCoding": {
+                            "code": "DE",
+                            "system": "urn:iso:std:iso:3166"
+                          }
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                          "valueCoding": {
+                            "code": "D",
+                            "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
+                          }
+                        }
                       ]
                     }
-                  ],
-                  "identifier": [
+                  }
+                ],
+                "birthDate": "1997-12-28",
+                "gender": "female"
+              }
+            },
+            {
+              "fullUrl": "https://gematik.de/fhir/Coverage/019aa696-775a-7062-8e34-ad28ac640060",
+              "resource": {
+                "resourceType": "Coverage",
+                "id": "019aa696-775a-7062-8e34-ad28ac640060",
+                "meta": {
+                  "profile": [
+                    "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0"
+                  ]
+                },
+                "type": {
+                  "coding": [
                     {
-                      "system": "https://fhir.de/sid/gkv/kvid-10",
-                      "value": "T024791905"
-                    }
-                  ],
-                  "address": [
-                    {
-                      "line": [
-                        "Blumenweg 14"
-                      ],
-                      "_line": [
-                        {
-                          "extension": [
-                            {
-                              "url": "https://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                              "valueString": "14"
-                            },
-                            {
-                              "url": "https://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-                              "valueString": "Blumenweg"
-                            }
-                          ]
-                        }
-                      ],
-                      "type": "both",
-                      "city": "Esens",
-                      "postalCode": "26427",
-                      "country": "D"
-                    }
-                  ],
-                  "birthDate": "1935-06-22",
-                  "telecom": [
-                    {
-                      "system": "url",
-                      "value": "matrix:@T024791905:aok-nord.de"
-                    }
-                  ],
-                  "photo": [
-                    {
-                      "contentType": "image/gif",
-                      "data": "R0lGODlhEwARAPcAAAAAAAAA/+"
+                      "code": "GKV",
+                      "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+                      "display": "gesetzliche Krankenversicherung"
                     }
                   ]
-                }
-              },
-              {
-                "fullUrl": "https://gematik.de/fhir/Coverage/2d4da53a-413a-48fe-b908-2e67b5761523",
-                "resource": {
-                  "resourceType": "Coverage",
-                  "id": "2d4da53a-413a-48fe-b908-2e67b5761523",
-                  "meta": {
-                    "profile": [
-                      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverage"
-                    ]
-                  },
-                  "status": "active",
-                  "payor": [
-                    {
-                      "identifier": {
-                        "system": "https://fhir.de/sid/arge-ik/iknr",
-                        "value": "12345678"
-                      },
-                      "display": "Test GKV Krankenkasse"
+                },
+                "extension": [
+                  {
+                    "url": "http://fhir.de/StructureDefinition/gkv/wop",
+                    "valueCoding": {
+                      "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+                      "code": "38",
+                      "display": "Nordrhein"
                     }
-                  ],
-                  "extension": [
-                    {
-                      "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMFestzuschusshoeheEX",
-                      "valueCoding": {
-                        "code": "1",
-                        "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMFestzuschusshoeheCS",
-                        "display": "70 % / fünf Jahre durchgehend"
-                      }
+                  },
+                  {
+                    "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
+                    "valueCoding": {
+                      "code": "1",
+                      "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
+                      "display": "Mitglieder"
                     }
-                  ],
-                  "type": {
-                    "coding": [
-                      {
-                        "system": "https://fhir.de/CodeSystem/versicherungsart-de-basis",
-                        "code": "GKV",
-                        "display": "Gesetzliche Krankenversicherung"
-                      }
-                    ]
-                  },
-                  "period": {
-                    "start": "2022-04-01",
-                    "end": "2027-07-31"
-                  },
-                  "beneficiary": {
-                    "reference": "Patient/437f2555-2396-4c64-a656-e9553161ca3c"
                   }
+                ],
+                "payor": [
+                  {
+                    "identifier": {
+                      "system": "http://fhir.de/sid/arge-ik/iknr",
+                      "value": "104178397"
+                    },
+                    "reference": "https://gematik.de/fhir/Organization/019aa692-9527-7cd9-8a94-0370d748ead9",
+                    "display": "Beispielkostenträger Aachen"
+                  }
+                ],
+                "status": "active",
+                "beneficiary": {
+                  "reference": "https://gematik.de/fhir/Patient/019aa694-9c4e-7540-be3c-0ef324476863"
+                },
+                "period": {
+                  "start": "1997-12-28"
                 }
               }
-            ]
-          }
-        ]
+            },
+            {
+              "fullUrl": "https://gematik.de/fhir/Organization/019aa692-9527-7cd9-8a94-0370d748ead9",
+              "resource": {
+                "resourceType": "Organization",
+                "id": "019aa692-9527-7cd9-8a94-0370d748ead9",
+                "meta": {
+                  "profile": [
+                    "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
+                  ]
+                },
+                "identifier": [
+                  {
+                    "system": "http://fhir.de/sid/arge-ik/iknr",
+                    "value": "104178397"
+                  }
+                ],
+                "address": [
+                  {
+                    "country": "Deutschland",
+                    "_country": {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                          "valueCoding": {
+                            "code": "DE",
+                            "system": "urn:iso:std:iso:3166"
+                          }
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                          "valueCoding": {
+                            "code": "D",
+                            "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "name": "Beispielkostenträger Aachen"
+              }
+            }
+          ]
+        }
+      ]
     VSDMOperationOutcome:
       type: object
-      description: 'https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome'
-      examples:
-        [
-          {
-              "resourceType": "OperationOutcome",
-              "id": "example-vsdm-operationoutcome",
-              "meta": {
-                  "profile":  [
-                      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome"
-                  ]
-              },
-              "issue":  [
+      description: 'https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome|1.0.0'
+      examples: [
+        {
+          "resourceType": "OperationOutcome",
+          "id": "VSDMOperationOutcome-UnknownIK",
+          "meta": {
+            "profile": [
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome|1.0.0"
+            ]
+          },
+          "text": {
+            "status": "generated",
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.</div>"
+          },
+          "issue": [
+            {
+              "severity": "error",
+              "code": "not-found",
+              "details": {
+                "coding": [
                   {
-                      "severity": "fatal",
-                      "code": "invalid",
-                      "details": {
-                          "coding":  [
-                              {
-                                  "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
-                                  "code": "VSDSERVICE_INVALID_IK",
-                                  "display": "Ungültige oder nicht bekannte Institutionskennung <ik>."
-                              }
-                          ],
-                          "text": "Nachweis zum Versorgungskontext mittels eGK oder GesundheitsID am PoPP-Service 1 x erneuern. Bei erneutem Fehler: Abbruch, da wahrscheinlich ein Implementierungsfehler vorliegt (Clientsystem oder PoPP-Service) oder die KTR gar nicht bei diesem FD-Anbieter ist (fehlerhafter DNS-Eintrag)."
-                      }
+                    "code": "VSDSERVICE_UNKNOWN_IK",
+                    "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
+                    "display": "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
                   }
+                ],
+                "text": "Institutionskennung 103456789 aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
+              },
+              "diagnostics": "Die im PoPP-Token angegebene IK der Versicherung ist dem angesprochenen VSDM 2.0-Fachdienst nicht bekannt.\nFordern Sie ein neues PoPP-Token an. Wiederholen Sie die Dienstlokalisierung, um den korrekten zuständigen Fachdienst zu ermitteln und wiederholen Sie die Abfrage.\nBei erneutem Fehler wiederholen Sie die Abfrage mit größerem zeitlichen Abstand, um eventuell geänderte DNS-Einstellungen wirksam werden zu lassen. Halten Sie die Anwender über den Status informiert.\nBei Andauern des Fehlers über 24 h liegt möglicherweise ein Fehler in der Implementierung des Clientsystems oder des Fachdients vor.",
+              "expression": [
+                "http.ZETA-PoPP-Token-Content.insurerId"
               ]
-          }
-        ]
-    ErrorType:
-      description: Error object with additional information about the occurred error
-      type: object
-      properties:
-        errorCode:
-          description: Error condition specifier
-          type: string
-          examples: [unauthorized, forbidden, internalError]
-        errorDetail:
-          description: Additional details regarding the error condition (if applicable)
-          type: string
-          examples: [User is not authorized, Request is forbidden, Server cannot handle request for now]
-      required:
-        - errorCode
+            }
+          ]
+        }
+      ]
   securitySchemes:
     oAuthVsdm:
       type: oauth2
       description: This API uses OAuth 2, to gain access clients need an Access-Token and to proof "Versorgungskontext" with a PoPP-Token in addition
       flows:
         authorizationCode:
-          authorizationUrl: https://101575519.prod.vsdm2.ti-dienste.de/auth
-          tokenUrl: https://101575519.prod.vsdm2.ti-dienste.de/token
+          authorizationUrl: https://vsdm2.prod.anbieter-123.de/auth
+          tokenUrl: https://vsdm2.prod.anbieter-123.de/token
           scopes:
             vsdservice: allows practitioners to access the VSDService API of the "Versichertenstammdatendienst"

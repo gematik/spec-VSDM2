@@ -3,9 +3,13 @@
 # Spezifikation VSDM 2.0 FHIR-Profile und API
 
 ## Disclaimer
-Dieses Dokument beschreibt die für die Implementierung des Versicherungsstammdatenmanagements (VSDM) 2.0 erforderlichen Vorgaben. Weitere Vorgaben zur Implementierung der Anteile von PoPP und Zero Trust sind zum Stand der Veröffentlichung von VSDM 2.0 nicht Bestandteil dieses Dokuments. Die Aufnahme der Implementierungsvorgaben aus PoPP und Zero Trust in den ILF für VSDM 2.0 erfolgt iterativ sobald die notwendigen Informationen aus diesen Implementierungsleitfäden vorliegen.
+Dieses Dokument beschreibt die für die Implementierung des Versicherungsstammdatenmanagements (VSDM) 2.0 erforderlichen Vorgaben. Weitere Vorgaben zur Implementierung der Anteile von PoPP und Zero Trust sind nicht Bestandteil dieses Dokuments. Die Implementierungsvorgaben für PoPP und Zero Trust erfolgt in den jeweiligen Implementierungsleitfäden der Produkttypen.
 
 Die in der Spezifikation VSDM 2.0 [gemSpec_VSDM_2] enthaltenen und in den Steckbrief [gemSST_CS_VSDM_2] ausgeleiteten Anforderungen an Clientsysteme haben informativen Charakter und treffen Festlegungen über diesen Implementierungsleitfaden hinaus. Die Anforderungen dienen zur Unterstützung der Implementierung durch Primärsystemhersteller.
+
+Neben diesem Implementierungsleitfaden stellt die gematik zusätzlich eine OpenAPI-Beschreibung in GitHub zur Verfügung. Diese umfasst zusätzliche Informationen und Hinweise an die PS-Hersteller aus Entwicklersicht.
+
+Dieser Implementierungsleitfaden betrachtet Vorgaben für GKV und PKV.
 
 ## Einleitung
 Die gematik geht neue Wege und möchte auf diesem Weg die Nutzung der Schnittstellen rund um das VSDM 2.0 vorstellen. Die Beschreibung dieser API ergänzt die normativen Dokumente der gematik sowie die Festlegungen über die VSDM-Profile (inkl. Beispielen) des genutzten FHIR-Standards.
@@ -15,9 +19,17 @@ Auf den folgenden Seiten stellt die gematik die Nutzung der Schnittstellen durch
 ## Was ist VSDM 2.0
 
 VSDM steht für „Versichertenstammdatenmanagement“. Es ist ein Teil der Telematikinfrastruktur (TI) im deutschen Gesundheitswesen und dient der Verwaltung und dem Abgleich der Stammdaten von gesetzlich versicherten Personen.
-VSDM 2.0 ist die Weiterentwicklung des bestehenden VSDM 1.0. Die Versichertenstammdaten (VSD) werden mit VSDM 2.0 nicht mehr auf der eGK des Versicherten gespeichert und aktualisiert sondern direkt vom Primärsystem (PS) des Leistungserbringers (LE) vom Fachdienst der Krankenkasse abgerufen und ggf. im PS aktualisiert.
+Mit dem Versichertenstammdatenmanagement (VSDM) 2.0 wird die bisherige Verarbeitung von Versichertenstammdaten innerhalb der Telematikinfrastruktur (TI) grundlegend modernisiert. Ziel ist es, die Aktualisierung, Prüfung und Bereitstellung von Stammdaten effizienter, sicherer und flexibler zu gestalten – sowohl für die gesetzliche Krankenversicherung (GKV) als auch für die private Krankenversicherung (PKV).
+
+VSDM 2.0 ist die Weiterentwicklung des bestehenden VSDM 1.0. Während im bisherigen VSDM (Version 1) die Prüfung der Versichertenstammdaten ausschließlich über die elektronische Gesundheitskarte (eGK) erfolgte, erweitert VSDM 2.0 das Verfahren um neue technische Möglichkeiten und standardisierte Schnittstellen. Dadurch wird eine bessere Integration in bestehende Primärsysteme, eine verbesserte Nutzererfahrung sowie eine höhere Prozesssicherheit im Praxis- und Klinikalltag erreicht.
+
+Die Versichertenstammdaten (VSD) werden mit VSDM 2.0 nicht mehr auf der eGK des Versicherten gespeichert und aktualisiert sondern direkt vom Primärsystem (PS) des Leistungserbringers (LE) vom Fachdienst der Krankenkasse bzw. der privaten Krankenversicherung abgerufen und ggf. im PS aktualisiert. Durch die Entkopplung von VSD und eGK können alle Krankenversicherungen (gesetzliche wie private) gemeinschaftlich betrachtet werden.
 Während bei VSDM 1.0 in den Anwendungsfällen die Komponenten Konnektor, eHealth Kartenterminals, eGK, SMC-B, Intermediär und schließlich die VSDM-Backend-Dienste des Versicherers zum Einsatz kommen, reduziert VSDM 2.0 die Abhängigkeiten von diesen Komponenten. 
 Mit der Initiative TI 2.0 wird die gesamte Infrastruktur modernisiert und auf den neuesten Stand der Sicherheits- und Architekturprinzipien gebracht.
+
+Dieser Implementierungsleitfaden richtet sich an Primärsystemhersteller und beschreibt die technischen, organisatorischen und fachlichen Anforderungen für die Integration der VSDM 2.0-Schnittstellen in Praxisverwaltungssysteme, Krankenhausinformationssysteme und weitere primäre Anwendungssysteme. Dabei werden die unterschiedlichen Rahmenbedingungen und Datenflüsse von GKV und PKV berücksichtigt, um eine einheitliche, standardkonforme Umsetzung sicherzustellen. Neben der Beschreibung der Schnittstellen werden praxisnahe Hinweise zur Implementierung gegeben.
+
+Die Harmonisierung der Verfahren zwischen GKV und PKV ist ein zentrales Ziel von VSDM 2.0. Sie schafft die Grundlage für eine einheitliche Kommunikation und vereinfacht die Integration in unterschiedliche Systemlandschaften. Damit leistet VSDM 2.0 einen wichtigen Beitrag zur digitalen Vernetzung im Gesundheitswesen und bildet eine Voraussetzung für zukünftige Anwendungen der elektronischen Gesundheitskarte und der TI 2.0.
 
 In der TI 2.0 wird der Nachweis des Versorgungskontextes mittels PoPP („Proof-of-Patient-Presence“) von fachlichen Anwendungsfällen entkoppelt. Bei VSDM 2.0  ist dies die Bereitstellung demografischer Daten. Die Versicherer stellen also eine einfache FHIR-REST-API bereit, mit der die Client-Software der Arztpraxis „nur“ zusätzliche Daten anfordert, indem sie ein legitimes PoPP-Token bereitstellt.
 
@@ -50,7 +62,6 @@ Im Rahmen der Anwendungsfälle finden im Primärsystem weitere Abläufe im Zusam
 
 [Primärsystem-Interaktionen](docs/vsdm_psinteraktionen.md)
 
-
 ## Informationsmodell VSD
 Hier geht es zur Informationsseite zum neuen Informationsmodell für VSDM 2.0.
 
@@ -80,12 +91,20 @@ Hier geht es zur Informationsseite zu Statuscodes
 
 In VSDM 1.0 wurde ein proprietäres XML-Datenformat in einer SOAP-Servicekette verwendet. Mit VSDM 2.0 wird der VSD Datensatz in den FHIR-Standard migriert, der im deutschen Gesundheitswesen immer mehr zum Einsatz kommt. Die FHIR-Profile und Beispielressourcen werden im offiziellen [VSDM 2 simplifier project](https://simplifier.net/vsdm2) veröffentlicht.
 
-## Mitgeltende Dokumente und Informationen
+## Mitgeltende Dokumente
 Hier finden Sie eine Übersicht zu den weiterführenden Dokumenten zur Implementierung.
 
 - [Spezifikation VSDM 2.0](https://gemspec.gematik.de/prereleases/Draft_ZeroTrust_VSDM2_24_1/gemSpec_VSDM_2_V1.0.0_CC/)
 - [FHIR-Profile VSDM 2.0](https://simplifier.net/vsdm2)
 - [Steckbrief Clientsystem-Schnittstelle zum VSDM 2.0](https://gemspec.gematik.de/docs/gemSST/gemSST_CS_VSDM_2)
+
+## Weiterführende Informationen
+
+| Quelle | Herausgeber: Titel |
+| :------------- | :------------ |
+| gemSpec_PoPP_Service | gematik: Spezifikation Proof of Patient Presence-Service  |
+| gemSpec_ZETA | gematik: Spezifikation Zero Trust Access (ZETA) |
+| gemGlossar | gematik: Glossar der Telematikinfrastruktur | 
 
 
 ## Branch Modell
@@ -114,6 +133,10 @@ Unless required by applicable law or agreed to in writing, software distributed 
 Wie oben erwähnt, wird das VSDM 2.0 auf die Verwendung einer RESTful FHIR-API reduziert, die hier dokumentiert ist:
 
 [vsdm2.yaml](./src/openapi/vsdm2.yaml).
+
+Zusätzliche Informationen zu Design-Entscheidungen und Abweichungen vom FHIR-Standard finden Sie hier:
+
+[API Design & FHIR-Konformität](docs/vsdm_api_design.md)
 
 
 

@@ -1,0 +1,33 @@
+{
+  "resourceType": "OperationOutcome",
+  "id": "VSDMOperationOutcome-InvalidHeader",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome|1.0.0"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.</div>"
+  },
+  "issue": [
+    {
+      "severity": "fatal",
+      "code": "value",
+      "details": {
+        "coding": [
+          {
+            "code": "SERVICE_INVALID_HEADER",
+            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
+            "display": "Der HTTP-Header [header] ist ungültig."
+          }
+        ],
+        "text": "Der HTTP-Header Accept ist ungültig."
+      },
+      "diagnostics": "Der angegebene HTTP Header enthält nicht spezifikationskonforme Angaben.\nHierbei handelt es sich in der Regel um einen Implementierungsfehler im Clientsystem.\nPrüfen Sie den Aufbau des Headers gegen die einschlägigen Standards (v.A. RFC 9110) und korrigieren Sie die Anfrage entsprechend.",
+      "expression": [
+        "http.Accept"
+      ]
+    }
+  ]
+}

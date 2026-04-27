@@ -1,0 +1,33 @@
+{
+  "resourceType": "OperationOutcome",
+  "id": "VSDMOperationOutcome-InvalidPatientRecordVersion",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome|1.0.0"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.</div>"
+  },
+  "issue": [
+    {
+      "severity": "error",
+      "code": "value",
+      "details": {
+        "coding": [
+          {
+            "code": "VSDSERVICE_INVALID_PATIENT_RECORD_VERSION",
+            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
+            "display": "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden."
+          }
+        ],
+        "text": "Der Änderungsindikator '' kann nicht verarbeitet werden."
+      },
+      "diagnostics": "Der HTTP Header If-none-match fehlt.\nMit diesem Header muss das Clientsystem den letzten bekannten Aktualitätswert mitteilen.\nFalls kein Wert vorliegt, muss der Header mit 0 gefüllt werden.\nWiederholen Sie die Anfrage unter Angabe eines gültigen Werts.",
+      "expression": [
+        "http.If-None-Match"
+      ]
+    }
+  ]
+}

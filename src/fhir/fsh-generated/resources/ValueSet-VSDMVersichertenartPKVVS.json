@@ -1,0 +1,20 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "VSDMVersichertenartPKVVS",
+  "id": "VSDMVersichertenartPKVVS",
+  "title": "Versichertenart (PKV)",
+  "description": "PKV-Versichertenart im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "version": "1.0.0",
+  "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMVersichertenartPKVVS",
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "date": "2026-04-17",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhir.de/ValueSet/pkv/Versichertenart"
+      }
+    ]
+  }
+}

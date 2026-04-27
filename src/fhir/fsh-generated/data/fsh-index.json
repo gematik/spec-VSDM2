@@ -1,0 +1,546 @@
+[
+  {
+    "outputFile": "Bundle-019aa690-d14a-79a3-a078-3807df1b87f4.json",
+    "fshName": "VSDMBundle-GKV-A123456780",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-GKV-A123456780.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Bundle-019aa696-8e77-7f16-be44-d702d1b6af67.json",
+    "fshName": "VSDMBundle-PKV-G789012344",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-PKV-G789012344.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Bundle-019aa696-ac5d-779a-8691-5f755f10deeb.json",
+    "fshName": "VSDMBundle-PKV-F678901231",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-PKV-F678901231.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Bundle-019aa696-bd25-77dd-836d-83543d1f2819.json",
+    "fshName": "VSDMBundle-PKV-E567890127",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-PKV-E567890127.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Bundle-019aa696-cb86-73e1-868c-f7d408bf40ad.json",
+    "fshName": "VSDMBundle-PKV-D456789013",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-PKV-D456789013.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Bundle-019aa696-db1f-74d9-a45b-2af3322f4c55.json",
+    "fshName": "VSDMBundle-PKV-C345678908",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-PKV-C345678908.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Bundle-019aa696-ea3b-7096-963f-f880b94c70fd.json",
+    "fshName": "VSDMBundle-PKV-B234567895",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-PKV-B234567895.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Bundle-019aa696-fa51-7296-8ee8-1e7e7f9b9e2a.json",
+    "fshName": "VSDMBundle-PKV-A123456780",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-PKV-A123456780.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Bundle-019aa697-0b30-7415-95c1-85b85718f5e5.json",
+    "fshName": "VSDMBundle-GKV-Z987654321",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-GKV-Z987654321.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "Bundle-019aa697-19f6-77e3-a394-ea9948e9e019.json",
+    "fshName": "VSDMBundle-GKV-O567890128",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-GKV-O567890128.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Bundle-019aa697-29dd-7ad1-a12c-32a14b4ed62b.json",
+    "fshName": "VSDMBundle-GKV-N456789014",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-GKV-N456789014.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "Bundle-019aa697-3a4c-7303-be74-43a250b6c5dd.json",
+    "fshName": "VSDMBundle-GKV-M345678909",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-GKV-M345678909.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Bundle-019aa697-51f0-7259-8059-ba2e44cd6360.json",
+    "fshName": "VSDMBundle-GKV-L234567896",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-GKV-L234567896.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Bundle-019aa697-614f-72d8-82f2-e993e395476f.json",
+    "fshName": "VSDMBundle-GKV-K123456781",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-GKV-K123456781.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "Bundle-019aa697-6fff-70ea-b912-a69e99e4e4bc.json",
+    "fshName": "VSDMBundle-GKV-J012345677",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-GKV-J012345677.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Bundle-019aa697-806f-7c2e-9e3b-d4d8df01c218.json",
+    "fshName": "VSDMBundle-GKV-I901234562",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-GKV-I901234562.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Bundle-019aa697-92a2-71bf-8eaf-310acac70f0e.json",
+    "fshName": "VSDMBundle-GKV-H890123459",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-GKV-H890123459.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "Bundle-019aa697-a20c-737c-ba9d-a1c58f4e7356.json",
+    "fshName": "VSDMBundle-GKV-G789012344",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-GKV-G789012344.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Bundle-019aa697-b14e-7875-b470-c30f8c00de1b.json",
+    "fshName": "VSDMBundle-GKV-F678901231",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-GKV-F678901231.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Bundle-019aa697-c1ff-73b0-a222-ca57e6f14a96.json",
+    "fshName": "VSDMBundle-GKV-E567890127",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-GKV-E567890127.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "Bundle-019aa697-d1e9-7c8b-a283-34cfeae9fc8e.json",
+    "fshName": "VSDMBundle-GKV-D456789013",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-GKV-D456789013.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Bundle-019aa697-e026-7735-b898-09ead32a7fa5.json",
+    "fshName": "VSDMBundle-GKV-C345678908",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-GKV-C345678908.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Bundle-019aa697-f160-72cd-b2eb-923d24dcce1a.json",
+    "fshName": "VSDMBundle-GKV-B234567895",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-GKV-B234567895.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "Bundle-019b0758-2d32-7576-99c7-f90818235c4f.json",
+    "fshName": "VSDMBundle-GKV-P678901232",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMExample-GKV-P678901232.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "CodeSystem-VSDMErrorcodeCS.json",
+    "fshName": "VSDMErrorcodeCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMErrorcodeCS.fsh",
+    "startLine": 1,
+    "endLine": 144
+  },
+  {
+    "outputFile": "CodeSystem-VSDMISO3166ErgaenzungCS.json",
+    "fshName": "VSDMISO3166ErgaenzungCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMISO3166ErgaenzungCS.fsh",
+    "startLine": 1,
+    "endLine": 35
+  },
+  {
+    "outputFile": "CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json",
+    "fshName": "VSDMRuhenderLeistungsanspruchArtCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "CodeSystem-VSDMTDSCodeCS.json",
+    "fshName": "VSDMTDSCodeCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMTDSCodeCS.fsh",
+    "startLine": 1,
+    "endLine": 189
+  },
+  {
+    "outputFile": "CodeSystem-VSDMVersichertenartPKVCS.json",
+    "fshName": "VSDMVersichertenartPKVCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/VSDMVersichertenartPKVCS.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "ConceptMap-VSDMDEUEVAnlage8ISO3166.json",
+    "fshName": "VSDMDEUEVAnlage8ISO3166",
+    "fshType": "Instance",
+    "fshFile": "mappings/VSDMDEUEVAnlage8ISO3166.fsh",
+    "startLine": 1,
+    "endLine": 2039
+  },
+  {
+    "outputFile": "ConceptMap-VSDMTDSCodeErrorcode.json",
+    "fshName": "VSDMTDSCodeErrorcode",
+    "fshType": "Instance",
+    "fshFile": "mappings/VSDMTDSCodeErrorcode.fsh",
+    "startLine": 1,
+    "endLine": 97
+  },
+  {
+    "outputFile": "ConceptMap-VSDMTDSCodeHTTPStatus.json",
+    "fshName": "VSDMTDSCodeHTTPStatus",
+    "fshType": "Instance",
+    "fshFile": "mappings/VSDMTDSCodeHTTPStatus.fsh",
+    "startLine": 1,
+    "endLine": 126
+  },
+  {
+    "outputFile": "ConceptMap-VSDMTDSCodeIssueSeverity.json",
+    "fshName": "VSDMTDSCodeIssueSeverity",
+    "fshType": "Instance",
+    "fshFile": "mappings/VSDMTDSCodeIssueSeverity.fsh",
+    "startLine": 1,
+    "endLine": 97
+  },
+  {
+    "outputFile": "ConceptMap-VSDMTDSCodeIssueType.json",
+    "fshName": "VSDMTDSCodeIssueType",
+    "fshType": "Instance",
+    "fshFile": "mappings/VSDMTDSCodeIssueType.fsh",
+    "startLine": 1,
+    "endLine": 98
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-InternalServerError.json",
+    "fshName": "VSDMOperationOutcome-InternalServerError",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-InternalServerError.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidHTTPOperation.json",
+    "fshName": "VSDMOperationOutcome-InvalidHTTPOperation",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-InvalidHTTPOperation.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidHeader.json",
+    "fshName": "VSDMOperationOutcome-InvalidHeader",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-InvalidHeader.fsh",
+    "startLine": 1,
+    "endLine": 27
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidIK.json",
+    "fshName": "VSDMOperationOutcome-InvalidIK",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-InvalidIK.fsh",
+    "startLine": 1,
+    "endLine": 28
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidKVNR.json",
+    "fshName": "VSDMOperationOutcome-InvalidKVNR",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-InvalidKVNR.fsh",
+    "startLine": 1,
+    "endLine": 28
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidPatientRecordVersion.json",
+    "fshName": "VSDMOperationOutcome-InvalidPatientRecordVersion",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-InvalidPatientRecordVersion.fsh",
+    "startLine": 1,
+    "endLine": 28
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidProfileVersion.json",
+    "fshName": "VSDMOperationOutcome-InvalidProfileVersion",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-InvalidProfileVersion.fsh",
+    "startLine": 1,
+    "endLine": 28
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-UnknownIK.json",
+    "fshName": "VSDMOperationOutcome-UnknownIK",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-UnknownIK.fsh",
+    "startLine": 1,
+    "endLine": 28
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-UnknownKVNR.json",
+    "fshName": "VSDMOperationOutcome-UnknownKVNR",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-UnknownKVNR.fsh",
+    "startLine": 1,
+    "endLine": 29
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-UnsupportedMediatype.json",
+    "fshName": "VSDMOperationOutcome-UnsupportedMediatype",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-UnsupportedMediatype.fsh",
+    "startLine": 1,
+    "endLine": 28
+  },
+  {
+    "outputFile": "StructureDefinition-VSDDatensatzGKV.json",
+    "fshName": "VSDDatensatzGKV",
+    "fshType": "Logical",
+    "fshFile": "logicalmodel/VSDDatensatzGKV.fsh",
+    "startLine": 1,
+    "endLine": 300
+  },
+  {
+    "outputFile": "StructureDefinition-VSDDatensatzPKV.json",
+    "fshName": "VSDDatensatzPKV",
+    "fshType": "Logical",
+    "fshFile": "logicalmodel/VSDDatensatzPKV.fsh",
+    "startLine": 1,
+    "endLine": 176
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMBeihilfe.json",
+    "fshName": "VSDMBeihilfe",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMBeihilfe.fsh",
+    "startLine": 1,
+    "endLine": 41
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMBundle.json",
+    "fshName": "VSDMBundle",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMBundle.fsh",
+    "startLine": 1,
+    "endLine": 54
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMContactPointTIM.json",
+    "fshName": "VSDMContactPointTIM",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMContactPointTIM.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMCoverageGKV.json",
+    "fshName": "VSDMCoverageGKV",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMCoverageGKV.fsh",
+    "startLine": 1,
+    "endLine": 191
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMCoveragePKV.json",
+    "fshName": "VSDMCoveragePKV",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMCoveragePKV.fsh",
+    "startLine": 1,
+    "endLine": 89
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMDMPTeilnahme.json",
+    "fshName": "VSDMDMPTeilnahme",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMDMPTeilnahme.fsh",
+    "startLine": 1,
+    "endLine": 54
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMHinweisPKV.json",
+    "fshName": "VSDMHinweisPKV",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMHinweisPKV.fsh",
+    "startLine": 1,
+    "endLine": 39
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMKrankenhausleistungenPKV.json",
+    "fshName": "VSDMKrankenhausleistungenPKV",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMKrankenhausleistungenPKV.fsh",
+    "startLine": 1,
+    "endLine": 90
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMOperationOutcome.json",
+    "fshName": "VSDMOperationOutcome",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMOperationOutcome.fsh",
+    "startLine": 1,
+    "endLine": 82
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMPatient.json",
+    "fshName": "VSDMPatient",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMPatient.fsh",
+    "startLine": 1,
+    "endLine": 194
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMPayorOrganization.json",
+    "fshName": "VSDMPayorOrganization",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMPayorOrganization.fsh",
+    "startLine": 1,
+    "endLine": 48
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMTarifartPKV.json",
+    "fshName": "VSDMTarifartPKV",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMTarifartPKV.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMVersichertenartPKV.json",
+    "fshName": "VSDMVersichertenartPKV",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMVersichertenartPKV.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "ValueSet-VSDMDMPVS.json",
+    "fshName": "VSDMDMPVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMDMPVS.fsh",
+    "startLine": 1,
+    "endLine": 69
+  },
+  {
+    "outputFile": "ValueSet-VSDMErrorcodeVS.json",
+    "fshName": "VSDMErrorcodeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMErrorcodeVS.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "ValueSet-VSDMISO3166VS.json",
+    "fshName": "VSDMISO3166VS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMISO3166VS.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "ValueSet-VSDMNamenszusatzVS.json",
+    "fshName": "VSDMNamenszusatzVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMNamenszusatzVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-VSDMRuhenderLeistungsanspruchArtVS.json",
+    "fshName": "VSDMRuhenderLeistungsanspruchArtVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMRuhenderLeistungsanspruchArtVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-VSDMTDSCodeVS.json",
+    "fshName": "VSDMTDSCodeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMBDECodeVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-VSDMVersichertenartPKVVS.json",
+    "fshName": "VSDMVersichertenartPKVVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMVersichertenartPKVVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-VSDMVorsatzwortVS.json",
+    "fshName": "VSDMVorsatzwortVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMVorsatzwortVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-VSDMWohnortprinzipVS.json",
+    "fshName": "VSDMWohnortprinzipVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/VSDMWohnortprinzipVS.fsh",
+    "startLine": 1,
+    "endLine": 23
+  }
+]

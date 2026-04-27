@@ -1,0 +1,277 @@
+{
+  "resourceType": "Bundle",
+  "id": "019aa697-29dd-7ad1-a12c-32a14b4ed62b",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
+    ],
+    "lastUpdated": "2025-07-14T15:16:17.890+01:00"
+  },
+  "type": "collection",
+  "timestamp": "2025-07-14T15:16:17.890+01:00",
+  "entry": [
+    {
+      "fullUrl": "https://gematik.de/fhir/Patient/019aa693-d14a-7370-bdb9-19b88d14f8d1",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "019aa693-d14a-7370-bdb9-19b88d14f8d1",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "N456789014"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "text": "Nina Nicole Nachtigall",
+            "family": "Nachtigall",
+            "_family": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                  "valueString": "Nachtigall"
+                }
+              ]
+            },
+            "given": [
+              "Nina Nicole"
+            ]
+          }
+        ],
+        "address": [
+          {
+            "type": "physical",
+            "line": [
+              "Sängerweg 14"
+            ],
+            "_line": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                    "valueString": "14"
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                    "valueString": "Sängerweg"
+                  }
+                ]
+              }
+            ],
+            "city": "Stuttgart",
+            "postalCode": "70180",
+            "country": "Deutschland",
+            "_country": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "D",
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "birthDate": "2011-06-22",
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "https://gematik.de/fhir/Coverage/019aa695-89de-7f4d-852f-0a8d9802e333",
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "019aa695-89de-7f4d-852f-0a8d9802e333",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.0"
+          ]
+        },
+        "type": {
+          "coding": [
+            {
+              "code": "GKV",
+              "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+              "display": "gesetzliche Krankenversicherung"
+            }
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/wop",
+            "valueCoding": {
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+              "code": "52",
+              "display": "Baden-Württemberg"
+            }
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
+            "valueCoding": {
+              "code": "3",
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
+              "display": "Familienangehoerige"
+            }
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
+            "extension": [
+              {
+                "url": "status",
+                "valueBoolean": true
+              },
+              {
+                "url": "gueltigBis",
+                "valueDate": "2029-06-22"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/gkv/kostenerstattung",
+            "extension": [
+              {
+                "url": "aerztlicheVersorgung",
+                "valueBoolean": true
+              },
+              {
+                "url": "zahnaerztlicheVersorgung",
+                "valueBoolean": true
+              },
+              {
+                "url": "stationaererBereich",
+                "valueBoolean": true
+              },
+              {
+                "url": "veranlassteLeistungen",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ],
+        "payor": [
+          {
+            "identifier": {
+              "system": "http://fhir.de/sid/arge-ik/iknr",
+              "value": "108028771"
+            },
+            "reference": "https://gematik.de/fhir/Organization/019aa691-a2d5-76a6-b3a0-f2210545a698",
+            "display": "Beispielkostenträger Nord-Württemberg"
+          },
+          {
+            "identifier": {
+              "system": "http://fhir.de/sid/arge-ik/iknr",
+              "value": "109083613"
+            },
+            "reference": "https://gematik.de/fhir/Organization/019aa691-7b2d-741f-b40f-0eefa2596dd6",
+            "display": "Beispielkostenträger Niederbayern"
+          }
+        ],
+        "status": "active",
+        "beneficiary": {
+          "reference": "https://gematik.de/fhir/Patient/019aa693-d14a-7370-bdb9-19b88d14f8d1"
+        },
+        "period": {
+          "start": "2011-06-22"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://gematik.de/fhir/Organization/019aa691-a2d5-76a6-b3a0-f2210545a698",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "019aa691-a2d5-76a6-b3a0-f2210545a698",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.de/sid/arge-ik/iknr",
+            "value": "108028771"
+          }
+        ],
+        "address": [
+          {
+            "country": "Deutschland",
+            "_country": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "D",
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "name": "Beispielkostenträger Nord-Württemberg"
+      }
+    },
+    {
+      "fullUrl": "https://gematik.de/fhir/Organization/019aa691-7b2d-741f-b40f-0eefa2596dd6",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "019aa691-7b2d-741f-b40f-0eefa2596dd6",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.de/sid/arge-ik/iknr",
+            "value": "109083613"
+          }
+        ],
+        "address": [
+          {
+            "country": "Deutschland",
+            "_country": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "D",
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "name": "Beispielkostenträger Niederbayern"
+      }
+    }
+  ]
+}

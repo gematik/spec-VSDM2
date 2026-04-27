@@ -1,0 +1,270 @@
+{
+  "resourceType": "Bundle",
+  "id": "019aa696-bd25-77dd-836d-83543d1f2819",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.0"
+    ],
+    "lastUpdated": "2025-07-14T15:16:17.890+01:00"
+  },
+  "type": "collection",
+  "timestamp": "2025-07-14T15:16:17.890+01:00",
+  "entry": [
+    {
+      "fullUrl": "https://gematik.de/fhir/Patient/019aa693-609d-7da9-8344-99aef4564d7f",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "019aa693-609d-7da9-8344-99aef4564d7f",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "E567890127"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "text": "Elke Freifrau an der Elster",
+            "family": "Freifrau an der Elster",
+            "_family": {
+              "extension": [
+                {
+                  "url": "http://fhir.de/StructureDefinition/humanname-namenszusatz",
+                  "valueString": "Freifrau"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                  "valueString": "Elster"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                  "valueString": "an der"
+                }
+              ]
+            },
+            "given": [
+              "Elke"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "matrix:@e567890127:demo-ti-messenger"
+          }
+        ],
+        "address": [
+          {
+            "type": "physical",
+            "line": [
+              "Elsterstraße 5"
+            ],
+            "_line": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                    "valueString": "5"
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                    "valueString": "Elsterstraße"
+                  }
+                ]
+              }
+            ],
+            "city": "Erfurt",
+            "postalCode": "99095",
+            "country": "Deutschland",
+            "_country": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "postal",
+            "line": [
+              "Postfach 9821"
+            ],
+            "_line": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox",
+                    "valueString": "Postfach 9821"
+                  }
+                ]
+              }
+            ],
+            "city": "Graz",
+            "postalCode": "8055",
+            "country": "Österreich",
+            "_country": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "AT",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "birthDate": "1992-11-13",
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "https://gematik.de/fhir/Coverage/019aa694-fd12-70dd-9861-370e431a0227",
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "019aa694-fd12-70dd-9861-370e431a0227",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoveragePKV|1.0.0"
+          ]
+        },
+        "type": {
+          "coding": [
+            {
+              "code": "PKV",
+              "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+              "display": "private Krankenversicherung"
+            }
+          ]
+        },
+        "extension": [
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMTarifartPKV",
+            "valueCoding": {
+              "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PKV_TARIFF",
+              "code": "02",
+              "display": "Standardtarif"
+            }
+          },
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMVersichertenartPKV",
+            "valueCoding": {
+              "code": "VN",
+              "system": "http://fhir.de/ValueSet/pkv/Versichertenart",
+              "display": "Versicherungsnehmer"
+            }
+          },
+          {
+            "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKrankenhausleistungenPKV",
+            "extension": [
+              {
+                "url": "allgemein",
+                "valueUnsignedInt": 100
+              },
+              {
+                "url": "zweibett",
+                "valueUnsignedInt": 100
+              },
+              {
+                "url": "einbett",
+                "valueUnsignedInt": 100
+              },
+              {
+                "url": "wahlarzt",
+                "valueBoolean": false
+              },
+              {
+                "url": "belegarzt",
+                "valueBoolean": false
+              }
+            ]
+          }
+        ],
+        "status": "active",
+        "beneficiary": {
+          "reference": "https://gematik.de/fhir/Patient/019aa693-609d-7da9-8344-99aef4564d7f"
+        },
+        "period": {
+          "start": "2020-01-01"
+        },
+        "payor": [
+          {
+            "reference": "https://gematik.de/fhir/Organization/019aa691-0595-7235-8c71-f9bfc5cc579c",
+            "identifier": {
+              "value": "168156788"
+            },
+            "display": "Privatversicherung Jupiter"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://gematik.de/fhir/Organization/019aa691-0595-7235-8c71-f9bfc5cc579c",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "019aa691-0595-7235-8c71-f9bfc5cc579c",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.de/sid/arge-ik/iknr",
+            "value": "168156788"
+          }
+        ],
+        "address": [
+          {
+            "country": "Deutschland",
+            "_country": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
+                  "valueCoding": {
+                    "code": "DE",
+                    "system": "urn:iso:std:iso:3166"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "name": "Privatversicherung Jupiter",
+        "contact": [
+          {
+            "purpose": {
+              "coding": [
+                {
+                  "code": "BILL",
+                  "system": "http://terminology.hl7.org/CodeSystem/contactentity-type"
+                }
+              ],
+              "text": "Kontakt für Abrechnungsfragen"
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "+4952116391643"
+              },
+              {
+                "system": "email",
+                "value": "contact@kostentraeger.invalid"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

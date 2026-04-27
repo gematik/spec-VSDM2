@@ -1,0 +1,20 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "VSDMTDSCodeVS",
+  "id": "VSDMTDSCodeVS",
+  "title": "VSDM-TDS-Codes",
+  "description": "Fehlercodes der Betriebsdatenerfassung (TDS) im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "version": "1.0.0",
+  "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMTDSCodeVS",
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "date": "2026-04-17",
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS"
+      }
+    ]
+  }
+}
