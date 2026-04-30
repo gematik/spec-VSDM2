@@ -68,7 +68,7 @@ ref over PS, VSDD_Proxy : Endpunkt-Lokalisierung Fachdienst VSDM 2.0 (siehe gemS
 ref over PS, VSDD_AuthZ : LEI-Authentifizierung (SMC-B) und LEI-Autorisierung (siehe gemSpec_Zero-Trust)
 VSDD_AuthZ -> PS : HTTP 200 OK \n{Refresh-Token, Access-Token} mit scope : vsdservice
 
-PS -> VSDD_Proxy : GET /vsdservice/v1/vsdmbundle \nAuthorization: DPoP <access_token> \nDPoP: <dpop_proof_jwt> \nPoPP: Bearer <popp_token> \nIf-None-Match: "<etag_value>"
+PS -> VSDD_Proxy : GET /vsdservice/v1/vsdmbundle \nAuthorization: DPoP <access_token> \nDPoP: <dpop_proof_jwt> \nPoPP: <popp_token> \nIf-None-Match: "<etag_value>"
 activate VSDD_Proxy
 
 VSDD_Proxy -> VSDD_Proxy : Access-Token prüfen
