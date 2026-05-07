@@ -66,6 +66,15 @@ paths:
       security:
         - oAuthVsdm: [ vsdservice ]
       parameters:
+        - name: profileVersion
+          in: query
+          required: false
+          description: Query to request dedicated major and minor version of FHIR specification.
+            In case of wrong version number is requested server will answer with VSDSERVICE_INVALID_PROFILE_VERSION.
+          schema:
+            type: string
+            pattern: '^\d+\.\d+$'
+            example: "1.0"
         - name: Authorization
           in: header
           description: OAuth2 Bearer AccessToken granting access to the VSDService-API. 
