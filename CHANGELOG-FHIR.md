@@ -17,6 +17,14 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 ### Fehlerbehebung
 
+- In Spezifikationsversion 1.4.0 wurde in A_27012-04 der Fehlercode VSDSERVICE_INVALID_PATIENT_RECORD_VERSION umbenannt in VSDSERVICE_MISSING_PATIENT_RECORD_VERSION. 
+  Diese Anpassung fehlte in der Ressourcenversion 1.0.0 und wird mit dieser Version nachgezogen.
+  ([issue 142](https://github.com/gematik/spec-VSDM2/issues/142))
+- In den ConceptMaps wurden die fehlenden Versionsangaben in den Canonical References nachgetragen.
+  ([issue 143](https://github.com/gematik/spec-VSDM2/issues/143))
+- Der Beschreibungstext zum Fehlercode VSDSERVICE_INVALID_PROFILE_VERSION wurde korrigiert (Parameter ist verpflichtend anzugeben).
+  ([issue 144](https://github.com/gematik/spec-VSDM2/issues/144))
+
 ### Security
 
 ## [1.0.0] - 2026-04-17
