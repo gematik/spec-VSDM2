@@ -65,6 +65,14 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
+    * code = #79016
+    * display = "Der erforderliche Query-Parameter 'profileVersion' fehlt."
+    * target[+]
+      * code = #VSDSERVICE_MISSING_PROFILE_VERSION
+      * display = "Der erforderliche Query-Parameter 'profileVersion' fehlt."
+      * equivalence = #equal
+
+  * element[+]
     * code = #79030
     * display = "Der HTTP-Header [header] ist ungültig."
     * target[+]
