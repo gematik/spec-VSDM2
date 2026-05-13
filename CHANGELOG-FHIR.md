@@ -14,6 +14,10 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 ### Änderung
 
+- Die durch Platzhalter in Meldungstexte eingebetteten Werte wurden durch Hochkommata vom Text getrennt, um die Lesbarkeit zu verbessseren.
+  Weiterhin wurde der Text zum Fehlercode VSDSERVICE_MISSING_PATIENT_RECORD_VERSION auf die tatsächliche Fehlersituation angepasst.
+  ([issue 154](https://github.com/gematik/spec-VSDM2/issues/154))
+
 ### Abkündigung
 
 ### Entfernung
