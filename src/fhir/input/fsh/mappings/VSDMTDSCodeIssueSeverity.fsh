@@ -18,7 +18,7 @@ Usage: #definition
 
   * element[+]
     * code = #79010
-    * display = "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf."
+    * display = "Institutionskennung '[ik]' aus dem PoPP-Token weist Formatfehler auf."
     * target[+]
       * code = #fatal
       * display = "Fatal"
@@ -26,7 +26,7 @@ Usage: #definition
 
   * element[+]
     * code = #79011
-    * display = "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf."
+    * display = "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token weist Formatfehler auf."
     * target[+]
       * code = #fatal
       * display = "Fatal"
@@ -34,7 +34,7 @@ Usage: #definition
 
   * element[+]
     * code = #79012
-    * display = "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
+    * display = "Institutionskennung '[ik]' aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
     * target[+]
       * code = #error
       * display = "Error"
@@ -42,7 +42,7 @@ Usage: #definition
 
   * element[+]
     * code = #79013
-    * display = "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt."
+    * display = "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung '[ik]' nicht bekannt."
     * target[+]
       * code = #error
       * display = "Error"
@@ -50,7 +50,7 @@ Usage: #definition
 
   * element[+]
     * code = #79014
-    * display = "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden."
+    * display = "Der Änderungsindikator '[etag_value]' kann nicht verarbeitet werden."
     * target[+]
       * code = #error
       * display = "Error"
@@ -74,7 +74,7 @@ Usage: #definition
 
   * element[+]
     * code = #79030
-    * display = "Der HTTP-Header [header] ist ungültig."
+    * display = "Der HTTP-Header '[header]' ist ungültig."
     * target[+]
       * code = #fatal
       * display = "Fatal"
@@ -82,7 +82,7 @@ Usage: #definition
 
   * element[+]
     * code = #79031
-    * display = "Das vom Clientsystem angefragte Datenformat [media_type] wird nicht unterstützt."
+    * display = "Das vom Clientsystem angefragte Datenformat '[media_type]' wird nicht unterstützt."
     * target[+]
       * code = #error
       * display = "Error"
@@ -90,7 +90,7 @@ Usage: #definition
 
   * element[+]
     * code = #79040
-    * display = "Die HTTP-Operation [http_operation] wird nicht unterstützt."
+    * display = "Die HTTP-Operation '[http_operation]' wird nicht unterstützt."
     * target[+]
       * code = #fatal
       * display = "Fatal"

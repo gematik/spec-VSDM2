@@ -1,7 +1,7 @@
 Instance: VSDMOperationOutcome-InvalidProfileVersion
 InstanceOf: VSDMOperationOutcome
 Title: "Fehlermeldung VSDSERVICE_INVALID_PROFILE_VERSION"
-Description: "Beispiel zur Fehlermeldung 'Die vom Clientsystem angefragte Profilversion [profile_version] wird nicht unterstützt.'"
+Description: "Beispiel zur Fehlermeldung 'Die vom Clientsystem angefragte Profilversion '[profile_version]' wird nicht unterstützt.'"
 Usage: #example
 
 * meta
@@ -17,8 +17,8 @@ Usage: #example
   * severity = #error "Error"
   * code = #value "Element value invalid"
   * details[+]
-    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_INVALID_PROFILE_VERSION "Die vom Clientsystem angefragte Profilversion [profile_version] wird nicht unterstützt."
-    * text = "Die vom Clientsystem angefragte Profilversion 1.42 wird nicht unterstützt."
+    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_INVALID_PROFILE_VERSION "Die vom Clientsystem angefragte Profilversion '[profile_version]' wird nicht unterstützt."
+    * text = "Die vom Clientsystem angefragte Profilversion '1.42' wird nicht unterstützt."
   * diagnostics = """
       Das Clientsystem hat mit dem verpflichtenden Parameter profileVersion eine Profilversion angefordert, die vom Fachdienst nicht unterstützt wird. 
       Das Clientsystem muss den Parameter mit einer unterstützten Major-/Minor-Version gemäß der aktuellen gematik-Vorgaben füllen.

@@ -18,42 +18,42 @@ Usage: #definition
 
   * element[+]
     * code = #79010
-    * display = "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf."
+    * display = "Institutionskennung '[ik]' aus dem PoPP-Token weist Formatfehler auf."
     * target[+]
       * code = #VSDSERVICE_INVALID_IK
-      * display = "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf."
+      * display = "Institutionskennung '[ik]' aus dem PoPP-Token weist Formatfehler auf."
       * equivalence = #equal
 
   * element[+]
     * code = #79011
-    * display = "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf."
+    * display = "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token weist Formatfehler auf."
     * target[+]
       * code = #VSDSERVICE_INVALID_KVNR
-      * display = "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf."
+      * display = "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token weist Formatfehler auf."
       * equivalence = #equal
 
   * element[+]
     * code = #79012
-    * display = "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
+    * display = "Institutionskennung '[ik]' aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
     * target[+]
       * code = #VSDSERVICE_UNKNOWN_IK
-      * display = "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
+      * display = "Institutionskennung '[ik]' aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
       * equivalence = #equal
 
   * element[+]
     * code = #79013
-    * display = "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt."
+    * display = "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung '[ik]' nicht bekannt."
     * target[+]
       * code = #VSDSERVICE_UNKNOWN_KVNR
-      * display = "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt."
+      * display = "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung '[ik]' nicht bekannt."
       * equivalence = #equal
 
   * element[+]
     * code = #79014
-    * display = "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden."
+    * display = "Der erforderliche Änderungsindikator im Header If-None-Match fehlt."
     * target[+]
       * code = #VSDSERVICE_MISSING_PATIENT_RECORD_VERSION
-      * display = "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden."
+      * display = "Der erforderliche Änderungsindikator im Header If-None-Match fehlt."
       * equivalence = #equal
 
   * element[+]
@@ -61,7 +61,7 @@ Usage: #definition
     * display = "Die vom Clientsystem angefragte Profilversion wird nicht unterstützt."
     * target[+]
       * code = #VSDSERVICE_INVALID_PROFILE_VERSION
-      * display = "Die vom Clientsystem angefragte Profilversion [profile_version] wird nicht unterstützt."
+      * display = "Die vom Clientsystem angefragte Profilversion '[profile_version]' wird nicht unterstützt."
       * equivalence = #equal
 
   * element[+]
@@ -74,26 +74,26 @@ Usage: #definition
 
   * element[+]
     * code = #79030
-    * display = "Der HTTP-Header [header] ist ungültig."
+    * display = "Der HTTP-Header '[header]' ist ungültig."
     * target[+]
       * code = #SERVICE_INVALID_HEADER
-      * display = "Der HTTP-Header [header] ist ungültig."
+      * display = "Der HTTP-Header '[header]' ist ungültig."
       * equivalence = #equal
 
   * element[+]
     * code = #79031
-    * display = "Das vom Clientsystem angefragte Datenformat [media_type] wird nicht unterstützt."
+    * display = "Das vom Clientsystem angefragte Datenformat '[media_type]' wird nicht unterstützt."
     * target[+]
       * code = #SERVICE_UNSUPPORTED_MEDIATYPE
-      * display = "Das vom Clientsystem angefragte Datenformat [media_type] wird nicht unterstützt."
+      * display = "Das vom Clientsystem angefragte Datenformat '[media_type]' wird nicht unterstützt."
       * equivalence = #equal
 
   * element[+]
     * code = #79040
-    * display = "Die HTTP-Operation [http_operation] wird nicht unterstützt."
+    * display = "Die HTTP-Operation '[http_operation]' wird nicht unterstützt."
     * target[+]
       * code = #SERVICE_INVALID_HTTP_OPERATION
-      * display = "Die HTTP-Operation [http_operation] wird nicht unterstützt."
+      * display = "Die HTTP-Operation '[http_operation]' wird nicht unterstützt."
       * equivalence = #equal
 
   * element[+]
