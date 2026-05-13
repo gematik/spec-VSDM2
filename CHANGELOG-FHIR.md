@@ -9,6 +9,9 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 ### Neu
 
+- Ein neuer Fehlercode 79016 / VSDSERVICE_MISSING_PROFILE_VERSION zur Signalisierung eines fehlenden Pflichtparameters wurde aufgenommen.
+  ([issue 152](https://github.com/gematik/spec-VSDM2/issues/152))
+
 ### Änderung
 
 ### Abkündigung

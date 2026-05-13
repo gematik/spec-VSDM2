@@ -1,0 +1,33 @@
+{
+  "resourceType": "OperationOutcome",
+  "id": "VSDMOperationOutcome-MissingProfileVersion",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome|1.0.1-dev"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.</div>"
+  },
+  "issue": [
+    {
+      "severity": "error",
+      "code": "value",
+      "details": {
+        "coding": [
+          {
+            "code": "VSDSERVICE_MISSING_PROFILE_VERSION",
+            "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
+            "display": "Der erforderliche Query-Parameter 'profileVersion' fehlt."
+          }
+        ],
+        "text": "Der erforderliche Query-Parameter 'profileVersion' fehlt."
+      },
+      "diagnostics": "Das Clientsystem hat den obligatorischen Parameter 'profileVersion' bei der Abfrage nicht angegeben. \nDas Clientsystem muss den Parameter mit einer unterstützten Major-/Minor-Version gemäß der aktuellen gematik-Vorgaben füllen.\nWiederholen Sie die Anfrage unter Angabe eines gültigen Werts.",
+      "expression": [
+        "http.profileVersion"
+      ]
+    }
+  ]
+}

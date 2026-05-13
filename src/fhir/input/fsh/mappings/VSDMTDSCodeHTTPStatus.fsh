@@ -62,6 +62,14 @@ Usage: #definition
       * equivalence = #wider //  target mapping is wider in meaning than the source concept.
 
   * element[+]
+    * code = #79016
+    * display = "Der erforderliche Query-Parameter 'profileVersion' fehlt."
+    * target[+]
+      * code = #400
+      * display = "Bad Request"
+      * equivalence = #wider //  target mapping is wider in meaning than the source concept.
+
+  * element[+]
     * code = #79030
     * display = "Der HTTP-Header [header] ist ungültig."
     * target[+]

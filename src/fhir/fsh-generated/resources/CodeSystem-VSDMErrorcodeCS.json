@@ -76,6 +76,17 @@
       ]
     },
     {
+      "code": "VSDSERVICE_MISSING_PROFILE_VERSION",
+      "display": "Der erforderliche Query-Parameter 'profileVersion' fehlt.",
+      "definition": "Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
+      "property": [
+        {
+          "code": "diagnostics",
+          "valueString": "Das Clientsystem hat den obligatorischen Parameter 'profileVersion' bei der Abfrage nicht angegeben. \nDas Clientsystem muss den Parameter mit einer unterstützten Major-/Minor-Version gemäß der aktuellen gematik-Vorgaben füllen.\nWiederholen Sie die Anfrage unter Angabe eines gültigen Werts."
+        }
+      ]
+    },
+    {
       "code": "SERVICE_INVALID_HEADER",
       "display": "Der HTTP-Header [header] ist ungültig.",
       "definition": "Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
@@ -133,5 +144,5 @@
       "type": "string"
     }
   ],
-  "count": 10
+  "count": 11
 }
