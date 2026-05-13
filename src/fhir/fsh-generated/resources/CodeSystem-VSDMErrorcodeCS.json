@@ -11,7 +11,7 @@
   "concept": [
     {
       "code": "VSDSERVICE_INVALID_IK",
-      "display": "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf.",
+      "display": "Institutionskennung '[ik]' aus dem PoPP-Token weist Formatfehler auf.",
       "definition": "Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
       "property": [
         {
@@ -22,7 +22,7 @@
     },
     {
       "code": "VSDSERVICE_INVALID_KVNR",
-      "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf.",
+      "display": "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token weist Formatfehler auf.",
       "definition": "Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
       "property": [
         {
@@ -33,7 +33,7 @@
     },
     {
       "code": "VSDSERVICE_UNKNOWN_IK",
-      "display": "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt.",
+      "display": "Institutionskennung '[ik]' aus dem PoPP-Token ist dem Fachdienst nicht bekannt.",
       "definition": "Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
       "property": [
         {
@@ -44,7 +44,7 @@
     },
     {
       "code": "VSDSERVICE_UNKNOWN_KVNR",
-      "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt.",
+      "display": "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung '[ik]' nicht bekannt.",
       "definition": "Der Patient mit der angegebenen Krankenversicherungsnummer ist bei der angesprochenen Versicherung nicht bekannt.\nWiederholen Sie die Stammdatenabfrage; falls der Fehler bestehen bleibt, prüfen Sie mit dem Versicherten die Gültigkeit seines Versicherungsanspruchs.",
       "property": [
         {
@@ -55,7 +55,7 @@
     },
     {
       "code": "VSDSERVICE_MISSING_PATIENT_RECORD_VERSION",
-      "display": "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden.",
+      "display": "Der Änderungsindikator '[etag_value]' kann nicht verarbeitet werden.",
       "definition": "Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
       "property": [
         {
@@ -66,7 +66,7 @@
     },
     {
       "code": "VSDSERVICE_INVALID_PROFILE_VERSION",
-      "display": "Die vom Clientsystem angefragte Profilversion [profile_version] wird nicht unterstützt.",
+      "display": "Die vom Clientsystem angefragte Profilversion '[profile_version]' wird nicht unterstützt.",
       "definition": "Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
       "property": [
         {
@@ -88,7 +88,7 @@
     },
     {
       "code": "SERVICE_INVALID_HEADER",
-      "display": "Der HTTP-Header [header] ist ungültig.",
+      "display": "Der HTTP-Header '[header]' ist ungültig.",
       "definition": "Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
       "property": [
         {
@@ -99,7 +99,7 @@
     },
     {
       "code": "SERVICE_UNSUPPORTED_MEDIATYPE",
-      "display": "Das vom Clientsystem angefragte Datenformat [media_type] wird nicht unterstützt.",
+      "display": "Das vom Clientsystem angefragte Datenformat '[media_type]' wird nicht unterstützt.",
       "definition": "Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
       "property": [
         {
@@ -110,7 +110,7 @@
     },
     {
       "code": "SERVICE_INVALID_HTTP_OPERATION",
-      "display": "Die HTTP-Operation [http_operation] wird nicht unterstützt.",
+      "display": "Die HTTP-Operation '[http_operation]' wird nicht unterstützt.",
       "definition": "Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.",
       "property": [
         {

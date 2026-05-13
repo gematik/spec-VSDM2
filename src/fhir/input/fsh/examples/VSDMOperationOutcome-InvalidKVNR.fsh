@@ -1,7 +1,7 @@
 Instance: VSDMOperationOutcome-InvalidKVNR
 InstanceOf: VSDMOperationOutcome
 Title: "Fehlermeldung VSDSERVICE_INVALID_KVNR"
-Description: "Beispiel zur Fehlermeldung 'Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf.'"
+Description: "Beispiel zur Fehlermeldung 'Krankenversichertennummer '[kvnr]' aus dem PoPP-Token weist Formatfehler auf.'"
 Usage: #example
 
 * meta
@@ -17,8 +17,8 @@ Usage: #example
   * severity = #fatal "Fatal"
   * code = #value "Element value invalid"
   * details[+]
-    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_INVALID_KVNR "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf."
-    * text = "Krankenversichertennummer 1234567890 aus dem PoPP-Token weist Formatfehler auf."
+    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_INVALID_KVNR "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token weist Formatfehler auf."
+    * text = "Krankenversichertennummer '1234567890' aus dem PoPP-Token weist Formatfehler auf."
   * diagnostics = """
       Die im PoPP-Token enthaltene Krankenversicherungsnummer ist ungültig (Formatfehler).
       Fordern Sie ein neues PoPP-Token an und wiederholen Sie die Abfrage beim zuständigen VSDM 2.0-Fachdienst.

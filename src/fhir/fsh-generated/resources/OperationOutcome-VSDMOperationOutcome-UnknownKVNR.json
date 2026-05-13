@@ -19,10 +19,10 @@
           {
             "code": "VSDSERVICE_UNKNOWN_KVNR",
             "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
-            "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt."
+            "display": "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung '[ik]' nicht bekannt."
           }
         ],
-        "text": "Krankenversichertennummer A123456789 aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung 103456789 nicht bekannt."
+        "text": "Krankenversichertennummer 'A123456789' aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung '103456789' nicht bekannt."
       },
       "diagnostics": "Der Patient mit der angegebenen Krankenversicherungsnummer ist bei der angesprochenen Versicherung nicht bekannt.\nFordern Sie ein neues PoPP-Token an. Wiederholen Sie die Dienstlokalisierung, um den korrekten zuständigen Fachdienst zu ermitteln und wiederholen Sie die Abfrage.\nBei erneutem Fehler wiederholen Sie die Abfrage nicht, sondern weisen Sie die Anwender auf ein möglicherweise ausgelaufenes Versicherungsverhältnis hin.",
       "expression": [

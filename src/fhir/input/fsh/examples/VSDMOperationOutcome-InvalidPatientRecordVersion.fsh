@@ -1,7 +1,7 @@
 Instance: VSDMOperationOutcome-InvalidPatientRecordVersion
 InstanceOf: VSDMOperationOutcome
 Title: "Fehlermeldung VSDSERVICE_MISSING_PATIENT_RECORD_VERSION"
-Description: "Beispiel zur Fehlermeldung 'Der Änderungsindikator [etag_value] kann nicht verarbeitet werden.'"
+Description: "Beispiel zur Fehlermeldung 'Der Änderungsindikator '[etag_value]' kann nicht verarbeitet werden.'"
 Usage: #example
 
 * meta
@@ -17,8 +17,8 @@ Usage: #example
   * severity = #error "Error"
   * code = #value "Element value invalid"
   * details[+]
-    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_MISSING_PATIENT_RECORD_VERSION "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden."
-    * text = "Der Änderungsindikator '' kann nicht verarbeitet werden."
+    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_MISSING_PATIENT_RECORD_VERSION "Der Änderungsindikator '[etag_value]' kann nicht verarbeitet werden."
+    * text = "Der Änderungsindikator 'foobar' kann nicht verarbeitet werden."
   * diagnostics = """
       Der HTTP Header If-none-match fehlt.
       Mit diesem Header muss das Clientsystem den letzten bekannten Aktualitätswert mitteilen.

@@ -25,7 +25,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
 * ^property[=].description = "fehlerhafte Felder (zur Versorgung von OperationOutcome.issue.expression)"
 * ^property[=].type = #string
 
-* #79010 "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf."
+* #79010 "Institutionskennung '[ik]' aus dem PoPP-Token weist Formatfehler auf."
   * ^definition = """
       Die IK aus dem PoPP-Token weist Formatfehler auf.
       Mögliche Ursachen:
@@ -38,7 +38,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
   * ^property[+].code = #expression
   * ^property[=].valueString = "http.ZETA-PoPP-Token-Content.insurerId"
 
-* #79011 "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf."
+* #79011 "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token weist Formatfehler auf."
   * ^definition = """
       Die KVNR aus dem PoPP-Token weist Formatfehler auf.
       Mögliche Ursachen:
@@ -51,7 +51,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
   * ^property[+].code = #expression
   * ^property[=].valueString = "http.ZETA-PoPP-Token-Content.patientId"
 
-* #79012 "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
+* #79012 "Institutionskennung '[ik]' aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
   * ^definition = """
       Die IK aus dem PoPP-Token ist dem Fachdienst nicht bekannt.
       Mögliche Ursachen:
@@ -67,7 +67,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
   * ^property[+].code = #expression
   * ^property[=].valueString = "http.ZETA-PoPP-Token-Content.insurerId"
 
-* #79013 "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt."
+* #79013 "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung '[ik]' nicht bekannt."
   * ^definition = """
       Die KVNR aus dem PoPP-Token ist dem Fachdienst nicht bekannt.
       Mögliche Ursachen:
@@ -79,7 +79,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
   * ^property[+].code = #expression
   * ^property[=].valueString = "http.ZETA-PoPP-Token-Content.insurerId, http.ZETA-PoPP-Token-Content.patientId"
 
-* #79014 "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden."
+* #79014 "Der Änderungsindikator '[etag_value]' kann nicht verarbeitet werden."
   * ^definition = """
       Der HTTP Header If-none-match fehlt.
       Mögliche Ursachen:
@@ -111,7 +111,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
   * ^property[+].code = #target
   * ^property[=].valueCode = #client
   
-* #79030 "Der HTTP-Header [header] ist ungültig."
+* #79030 "Der HTTP-Header '[header]' ist ungültig."
   * ^definition = """
       Der genannte HTTP-Header weist Formatfehler auf.
       Mögliche Ursachen:
@@ -123,7 +123,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
   * ^property[+].code = #expression
   * ^property[=].valueString = "http.[header]"
 
-* #79031 "Das vom Clientsystem angefragte Datenformat [media_type] wird nicht unterstützt."
+* #79031 "Das vom Clientsystem angefragte Datenformat '[media_type]' wird nicht unterstützt."
   * ^definition = """
       Der HTTP-Header Accept enthält nicht unterstütztes Format.
       Mögliche Ursachen:
@@ -135,7 +135,7 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
   * ^property[+].code = #expression
   * ^property[=].valueString = "http.Accept"
 
-* #79040 "Die HTTP-Operation [http_operation] wird nicht unterstützt."
+* #79040 "Die HTTP-Operation '[http_operation]' wird nicht unterstützt."
   * ^definition = """
       Die HTTP-Methode ist nicht GET.
       Mögliche Ursachen:

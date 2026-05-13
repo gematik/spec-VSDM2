@@ -19,10 +19,10 @@
           {
             "code": "VSDSERVICE_MISSING_PATIENT_RECORD_VERSION",
             "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
-            "display": "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden."
+            "display": "Der Änderungsindikator '[etag_value]' kann nicht verarbeitet werden."
           }
         ],
-        "text": "Der Änderungsindikator '' kann nicht verarbeitet werden."
+        "text": "Der Änderungsindikator 'foobar' kann nicht verarbeitet werden."
       },
       "diagnostics": "Der HTTP Header If-none-match fehlt.\nMit diesem Header muss das Clientsystem den letzten bekannten Aktualitätswert mitteilen.\nFalls kein Wert vorliegt, muss der Header mit 0 gefüllt werden.\nWiederholen Sie die Anfrage unter Angabe eines gültigen Werts.",
       "expression": [
