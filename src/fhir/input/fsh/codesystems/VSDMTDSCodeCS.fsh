@@ -79,9 +79,9 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
   * ^property[+].code = #expression
   * ^property[=].valueString = "http.ZETA-PoPP-Token-Content.insurerId, http.ZETA-PoPP-Token-Content.patientId"
 
-* #79014 "Der Änderungsindikator '[etag_value]' kann nicht verarbeitet werden."
+* #79014 "Der erforderliche Änderungsindikator im Header If-None-Match fehlt."
   * ^definition = """
-      Der HTTP Header If-none-match fehlt.
+      Der HTTP Header If-None-Match fehlt.
       Mögliche Ursachen:
       Implementierungsfehler im Clientsystem.
       Relevante Anforderung: A_26755-01.

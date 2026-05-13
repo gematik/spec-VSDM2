@@ -38,8 +38,8 @@ OperationOutcome-VSDMOperationOutcome-InvalidHTTPOperation.json         VSDMOper
 OperationOutcome-VSDMOperationOutcome-InvalidHeader.json                VSDMOperationOutcome-InvalidHeader                Instance    examples/VSDMOperationOutcome-InvalidHeader.fsh                1 - 27
 OperationOutcome-VSDMOperationOutcome-InvalidIK.json                    VSDMOperationOutcome-InvalidIK                    Instance    examples/VSDMOperationOutcome-InvalidIK.fsh                    1 - 28
 OperationOutcome-VSDMOperationOutcome-InvalidKVNR.json                  VSDMOperationOutcome-InvalidKVNR                  Instance    examples/VSDMOperationOutcome-InvalidKVNR.fsh                  1 - 28
-OperationOutcome-VSDMOperationOutcome-InvalidPatientRecordVersion.json  VSDMOperationOutcome-InvalidPatientRecordVersion  Instance    examples/VSDMOperationOutcome-InvalidPatientRecordVersion.fsh  1 - 28
 OperationOutcome-VSDMOperationOutcome-InvalidProfileVersion.json        VSDMOperationOutcome-InvalidProfileVersion        Instance    examples/VSDMOperationOutcome-InvalidProfileVersion.fsh        1 - 27
+OperationOutcome-VSDMOperationOutcome-MissingPatientRecordVersion.json  VSDMOperationOutcome-MissingPatientRecordVersion  Instance    examples/VSDMOperationOutcome-MissingPatientRecordVersion.fsh  1 - 28
 OperationOutcome-VSDMOperationOutcome-MissingProfileVersion.json        VSDMOperationOutcome-MissingProfileVersion        Instance    examples/VSDMOperationOutcome-MissingProfileVersion.fsh        1 - 27
 OperationOutcome-VSDMOperationOutcome-UnknownIK.json                    VSDMOperationOutcome-UnknownIK                    Instance    examples/VSDMOperationOutcome-UnknownIK.fsh                    1 - 28
 OperationOutcome-VSDMOperationOutcome-UnknownKVNR.json                  VSDMOperationOutcome-UnknownKVNR                  Instance    examples/VSDMOperationOutcome-UnknownKVNR.fsh                  1 - 29

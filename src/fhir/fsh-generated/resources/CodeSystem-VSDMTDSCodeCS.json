@@ -71,8 +71,8 @@
     },
     {
       "code": "79014",
-      "display": "Der Änderungsindikator '[etag_value]' kann nicht verarbeitet werden.",
-      "definition": "Der HTTP Header If-none-match fehlt.\nMögliche Ursachen:\nImplementierungsfehler im Clientsystem.\nRelevante Anforderung: A_26755-01.",
+      "display": "Der erforderliche Änderungsindikator im Header If-None-Match fehlt.",
+      "definition": "Der HTTP Header If-None-Match fehlt.\nMögliche Ursachen:\nImplementierungsfehler im Clientsystem.\nRelevante Anforderung: A_26755-01.",
       "property": [
         {
           "code": "target",

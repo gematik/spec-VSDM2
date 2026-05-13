@@ -312,20 +312,20 @@
     "endLine": 28
   },
   {
-    "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidPatientRecordVersion.json",
-    "fshName": "VSDMOperationOutcome-InvalidPatientRecordVersion",
-    "fshType": "Instance",
-    "fshFile": "examples/VSDMOperationOutcome-InvalidPatientRecordVersion.fsh",
-    "startLine": 1,
-    "endLine": 28
-  },
-  {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidProfileVersion.json",
     "fshName": "VSDMOperationOutcome-InvalidProfileVersion",
     "fshType": "Instance",
     "fshFile": "examples/VSDMOperationOutcome-InvalidProfileVersion.fsh",
     "startLine": 1,
     "endLine": 27
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-MissingPatientRecordVersion.json",
+    "fshName": "VSDMOperationOutcome-MissingPatientRecordVersion",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-MissingPatientRecordVersion.fsh",
+    "startLine": 1,
+    "endLine": 28
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-MissingProfileVersion.json",

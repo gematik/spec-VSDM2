@@ -50,7 +50,7 @@ Usage: #definition
 
   * element[+]
     * code = #79014
-    * display = "Der Änderungsindikator '[etag_value]' kann nicht verarbeitet werden."
+    * display = "Der erforderliche Änderungsindikator im Header If-None-Match fehlt."
     * target[+]
       * code = #value
       * display = "Element value invalid"

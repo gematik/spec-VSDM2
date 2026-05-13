@@ -70,14 +70,14 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
       Bei erneutem Fehler wiederholen Sie die Abfrage nicht, sondern weisen Sie die Anwender auf ein möglicherweise ausgelaufenes Versicherungsverhältnis hin.
     """
 
-// #79014 "Der Änderungsindikator '[etag_value]' kann nicht verarbeitet werden."
-* #VSDSERVICE_MISSING_PATIENT_RECORD_VERSION "Der Änderungsindikator '[etag_value]' kann nicht verarbeitet werden."
+// #79014 "Der erforderliche Änderungsindikator im Header If-None-Match fehlt."
+* #VSDSERVICE_MISSING_PATIENT_RECORD_VERSION "Der erforderliche Änderungsindikator im Header If-None-Match fehlt."
   * ^definition = """
       Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.
     """
   * ^property[+].code = #diagnostics
   * ^property[=].valueString = """
-      Der HTTP Header If-none-match fehlt.
+      Der HTTP Header If-None-Match fehlt.
       Mit diesem Header muss das Clientsystem den letzten bekannten Aktualitätswert mitteilen.
       Falls kein Wert vorliegt, muss der Header mit 0 gefüllt werden.
       Wiederholen Sie die Anfrage unter Angabe eines gültigen Werts.

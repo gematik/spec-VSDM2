@@ -50,10 +50,10 @@ Usage: #definition
 
   * element[+]
     * code = #79014
-    * display = "Der Änderungsindikator '[etag_value]' kann nicht verarbeitet werden."
+    * display = "Der erforderliche Änderungsindikator im Header If-None-Match fehlt."
     * target[+]
       * code = #VSDSERVICE_MISSING_PATIENT_RECORD_VERSION
-      * display = "Der Änderungsindikator '[etag_value]' kann nicht verarbeitet werden."
+      * display = "Der erforderliche Änderungsindikator im Header If-None-Match fehlt."
       * equivalence = #equal
 
   * element[+]
