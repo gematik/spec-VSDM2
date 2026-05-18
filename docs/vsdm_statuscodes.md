@@ -11,7 +11,7 @@ Fehler können sowohl im inneren http-Requests (bei fachlichen Fehlern) als auch
 | -------- | -------- | -------- |
 | Resource-Server GET /vsdservice/v1/vsdmbundle | 200 | Anfrage konnte erfolgreich bearbeitet werden. Versichertenstammdaten (VSDMBundle) und Prüfziffer sind in der Antwort enthalten. |
 |    | 304 | Anfrage konnte erfolgreich bearbeitet werden. Das Clientsystem besitzt schon die aktuellsten Versichertenstammdaten und es erfolgt keine Aktualisierung. Der Prüfziffer ist in der Antwort enthalten. |
-|    | 400 | 79010, 79011, 79012, 79015, 79030, 79206, 79207, 79401, 79402 |
+|    | 400 | 79010, 79011, 79012, 79015, 79016, 79030, 79206, 79207, 79401, 79402 |
 |    | 404 |  79013 |
 |    | 405 |  79040 |
 |    | 406 |  79031 |
