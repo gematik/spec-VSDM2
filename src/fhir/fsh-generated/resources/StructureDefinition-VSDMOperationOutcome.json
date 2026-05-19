@@ -55,7 +55,7 @@
         "path": "OperationOutcome.issue.severity",
         "short": "Schweregrad der Fehlermeldung",
         "definition": "Beschreibt die Kritikalität (den Schweregrad) der Fehlermeldung mit Bezug auf die Ausführung der gesamten Anfrage.",
-        "comment": "Für VSDM-spezifische Fehlermeldungen kann der Schweregrad anhand der ConceptMap VSDMErrorcodeIssueSeverity abgeleitet werden.",
+        "comment": "Für VSDM-spezifische Fehlermeldungen kann der Schweregrad anhand der ConceptMap VSDMTDSCodeIssueSeverity abgeleitet werden.",
         "mustSupport": true
       },
       {
@@ -63,7 +63,7 @@
         "path": "OperationOutcome.issue.code",
         "short": "Klassifizierung der Fehlermeldung",
         "definition": "Ordnet die Fehlermeldung einem standardisierten Fehlertyp zu.",
-        "comment": "Für VSDM-spezifische Fehlermeldungen kann der Schweregrad anhand der ConceptMap VSDMErrorcodeIssueType abgeleitet werden.",
+        "comment": "Für VSDM-spezifische Fehlermeldungen kann der Schweregrad anhand der ConceptMap VSDMTDSCodeIssueType abgeleitet werden.",
         "mustSupport": true
       },
       {

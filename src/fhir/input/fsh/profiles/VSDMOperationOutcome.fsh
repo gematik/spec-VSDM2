@@ -36,7 +36,7 @@ Description: "Strukturierte Fehlermeldung im Versichertenstammdatenmanagement (V
         Beschreibt die Kritikalität (den Schweregrad) der Fehlermeldung mit Bezug auf die Ausführung der gesamten Anfrage.
       """
     * ^comment = """
-        Für VSDM-spezifische Fehlermeldungen kann der Schweregrad anhand der ConceptMap VSDMErrorcodeIssueSeverity abgeleitet werden.
+        Für VSDM-spezifische Fehlermeldungen kann der Schweregrad anhand der ConceptMap VSDMTDSCodeIssueSeverity abgeleitet werden.
       """
   * code MS
     * ^short = "Klassifizierung der Fehlermeldung"
@@ -44,7 +44,7 @@ Description: "Strukturierte Fehlermeldung im Versichertenstammdatenmanagement (V
         Ordnet die Fehlermeldung einem standardisierten Fehlertyp zu.
       """
     * ^comment = """
-        Für VSDM-spezifische Fehlermeldungen kann der Schweregrad anhand der ConceptMap VSDMErrorcodeIssueType abgeleitet werden.
+        Für VSDM-spezifische Fehlermeldungen kann der Schweregrad anhand der ConceptMap VSDMTDSCodeIssueType abgeleitet werden.
       """
   * details 1..1
     * ^short = "Fehlerbeschreibung"
