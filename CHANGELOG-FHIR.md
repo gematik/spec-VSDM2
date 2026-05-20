@@ -19,6 +19,8 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
   ([issue 154](https://github.com/gematik/spec-VSDM2/issues/154))
 - In den Paketinhalten werden jetzt contact und jurisdiction konsistent ausgewiesen.
   ([issue 151](https://github.com/gematik/spec-VSDM2/issues/151))
+- Aktualisierung der Paketabhängigkeiten (keine inhaltlichen Auswirkungen)
+  - `kbv.all.st` von Version 1.37.0 auf Version 1.41.0 
 
 ### Abkündigung
 
