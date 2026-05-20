@@ -9,13 +9,13 @@ Usage: #definition
     Diese ConceptMap ordnet den TDS-Codes die HTTP Status Codes aus Tabelle TAB_FACHDIENST_VSDM_HTTP_STATUS_CODES zu.
   """
 
-* sourceUri = Canonical(VSDMTDSCodeVS)
+* sourceUri = Canonical(VSDMTDSCodeVS|1.0.1)
 * group[+]
-  * source = Canonical(VSDMTDSCodeCS)
+  * source = Canonical(VSDMTDSCodeCS|1.0.1)
 
   * element[+]
     * code = #79010
-    * display = "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf."
+    * display = "Institutionskennung '[ik]' aus dem PoPP-Token weist Formatfehler auf."
     * target[+]
       * code = #400
       * display = "Bad Request"
@@ -23,7 +23,7 @@ Usage: #definition
 
   * element[+]
     * code = #79011
-    * display = "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf."
+    * display = "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token weist Formatfehler auf."
     * target[+]
       * code = #400
       * display = "Bad Request"
@@ -31,7 +31,7 @@ Usage: #definition
 
   * element[+]
     * code = #79012
-    * display = "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
+    * display = "Institutionskennung '[ik]' aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
     * target[+]
       * code = #400
       * display = "Bad Request"
@@ -39,7 +39,7 @@ Usage: #definition
 
   * element[+]
     * code = #79013
-    * display = "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt."
+    * display = "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung '[ik]' nicht bekannt."
     * target[+]
       * code = #404
       * display = "Not Found"
@@ -47,7 +47,7 @@ Usage: #definition
 
   * element[+]
     * code = #79014
-    * display = "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden."
+    * display = "Der erforderliche Änderungsindikator im Header If-None-Match fehlt."
     * target[+]
       * code = #428
       * display = "Precondition Required"
@@ -62,8 +62,16 @@ Usage: #definition
       * equivalence = #wider //  target mapping is wider in meaning than the source concept.
 
   * element[+]
+    * code = #79016
+    * display = "Der erforderliche Query-Parameter 'profileVersion' fehlt."
+    * target[+]
+      * code = #400
+      * display = "Bad Request"
+      * equivalence = #wider //  target mapping is wider in meaning than the source concept.
+
+  * element[+]
     * code = #79030
-    * display = "Der HTTP-Header [header] ist ungültig."
+    * display = "Der HTTP-Header '[header]' ist ungültig."
     * target[+]
       * code = #400
       * display = "Bad Request"
@@ -71,7 +79,7 @@ Usage: #definition
 
   * element[+]
     * code = #79031
-    * display = "Das vom Clientsystem angefragte Datenformat [media_type] wird nicht unterstützt."
+    * display = "Das vom Clientsystem angefragte Datenformat '[media_type]' wird nicht unterstützt."
     * target[+]
       * code = #406
       * display = "Not Acceptable"
@@ -79,7 +87,7 @@ Usage: #definition
 
   * element[+]
     * code = #79040
-    * display = "Die HTTP-Operation [http_operation] wird nicht unterstützt."
+    * display = "Die HTTP-Operation '[http_operation]' wird nicht unterstützt."
     * target[+]
       * code = #405
       * display = "Method Not Allowed"

@@ -6,20 +6,42 @@
   "description": "Ermittlung der IssueSeverity aus dem VSDMTDSCode",
   "status": "active",
   "experimental": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "gematik GmbH",
-  "date": "2026-04-17",
+  "contact": [
+    {
+      "name": "gematik GmbH",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://fachportal.gematik.de/anwendungen/versichertenstammdaten-management"
+        }
+      ]
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "DE",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Germany"
+        }
+      ]
+    }
+  ],
+  "date": "2026-05-20",
   "purpose": "Diese ConceptMap ordnet den TDS-Codes die Werte zur Versorgung von VSDMOperationOutcome.issue.severity zu.\nWichtig: Hier werden nur die TDS-Codes mit Fehler-Adressat \"Clientsystem\" erfasst, da für Fehler mit Adressat \"HTTP-Proxy\" keine VSDMOperationOutcome-Ressource erzeugt wird.",
-  "sourceUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMTDSCodeVS",
+  "sourceUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMTDSCodeVS|1.0.1",
   "targetUri": "http://hl7.org/fhir/ValueSet/issue-severity",
   "group": [
     {
-      "source": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS",
+      "source": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS|1.0.1",
       "target": "http://hl7.org/fhir/issue-severity",
       "element": [
         {
           "code": "79010",
-          "display": "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf.",
+          "display": "Institutionskennung '[ik]' aus dem PoPP-Token weist Formatfehler auf.",
           "target": [
             {
               "code": "fatal",
@@ -30,7 +52,7 @@
         },
         {
           "code": "79011",
-          "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf.",
+          "display": "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token weist Formatfehler auf.",
           "target": [
             {
               "code": "fatal",
@@ -41,7 +63,7 @@
         },
         {
           "code": "79012",
-          "display": "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt.",
+          "display": "Institutionskennung '[ik]' aus dem PoPP-Token ist dem Fachdienst nicht bekannt.",
           "target": [
             {
               "code": "error",
@@ -52,7 +74,7 @@
         },
         {
           "code": "79013",
-          "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt.",
+          "display": "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung '[ik]' nicht bekannt.",
           "target": [
             {
               "code": "error",
@@ -63,7 +85,7 @@
         },
         {
           "code": "79014",
-          "display": "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden.",
+          "display": "Der Änderungsindikator '[etag_value]' kann nicht verarbeitet werden.",
           "target": [
             {
               "code": "error",
@@ -84,8 +106,19 @@
           ]
         },
         {
+          "code": "79016",
+          "display": "Der erforderliche Query-Parameter 'profileVersion' fehlt.",
+          "target": [
+            {
+              "code": "error",
+              "display": "Error",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
           "code": "79030",
-          "display": "Der HTTP-Header [header] ist ungültig.",
+          "display": "Der HTTP-Header '[header]' ist ungültig.",
           "target": [
             {
               "code": "fatal",
@@ -96,7 +129,7 @@
         },
         {
           "code": "79031",
-          "display": "Das vom Clientsystem angefragte Datenformat [media_type] wird nicht unterstützt.",
+          "display": "Das vom Clientsystem angefragte Datenformat '[media_type]' wird nicht unterstützt.",
           "target": [
             {
               "code": "error",
@@ -107,7 +140,7 @@
         },
         {
           "code": "79040",
-          "display": "Die HTTP-Operation [http_operation] wird nicht unterstützt.",
+          "display": "Die HTTP-Operation '[http_operation]' wird nicht unterstützt.",
           "target": [
             {
               "code": "fatal",

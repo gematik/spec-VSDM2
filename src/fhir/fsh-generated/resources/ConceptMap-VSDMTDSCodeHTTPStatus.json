@@ -6,18 +6,40 @@
   "description": "Ermittlung des HTTP Status aus dem TDSCode",
   "status": "active",
   "experimental": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "gematik GmbH",
-  "date": "2026-04-17",
+  "contact": [
+    {
+      "name": "gematik GmbH",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://fachportal.gematik.de/anwendungen/versichertenstammdaten-management"
+        }
+      ]
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "DE",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Germany"
+        }
+      ]
+    }
+  ],
+  "date": "2026-05-20",
   "purpose": "Diese ConceptMap ordnet den TDS-Codes die HTTP Status Codes aus Tabelle TAB_FACHDIENST_VSDM_HTTP_STATUS_CODES zu.",
-  "sourceUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMTDSCodeVS",
+  "sourceUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMTDSCodeVS|1.0.1",
   "group": [
     {
-      "source": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS",
+      "source": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS|1.0.1",
       "element": [
         {
           "code": "79010",
-          "display": "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf.",
+          "display": "Institutionskennung '[ik]' aus dem PoPP-Token weist Formatfehler auf.",
           "target": [
             {
               "code": "400",
@@ -28,7 +50,7 @@
         },
         {
           "code": "79011",
-          "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf.",
+          "display": "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token weist Formatfehler auf.",
           "target": [
             {
               "code": "400",
@@ -39,7 +61,7 @@
         },
         {
           "code": "79012",
-          "display": "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt.",
+          "display": "Institutionskennung '[ik]' aus dem PoPP-Token ist dem Fachdienst nicht bekannt.",
           "target": [
             {
               "code": "400",
@@ -50,7 +72,7 @@
         },
         {
           "code": "79013",
-          "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt.",
+          "display": "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung '[ik]' nicht bekannt.",
           "target": [
             {
               "code": "404",
@@ -61,7 +83,7 @@
         },
         {
           "code": "79014",
-          "display": "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden.",
+          "display": "Der erforderliche Änderungsindikator im Header If-None-Match fehlt.",
           "target": [
             {
               "code": "428",
@@ -82,8 +104,19 @@
           ]
         },
         {
+          "code": "79016",
+          "display": "Der erforderliche Query-Parameter 'profileVersion' fehlt.",
+          "target": [
+            {
+              "code": "400",
+              "display": "Bad Request",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
           "code": "79030",
-          "display": "Der HTTP-Header [header] ist ungültig.",
+          "display": "Der HTTP-Header '[header]' ist ungültig.",
           "target": [
             {
               "code": "400",
@@ -94,7 +127,7 @@
         },
         {
           "code": "79031",
-          "display": "Das vom Clientsystem angefragte Datenformat [media_type] wird nicht unterstützt.",
+          "display": "Das vom Clientsystem angefragte Datenformat '[media_type]' wird nicht unterstützt.",
           "target": [
             {
               "code": "406",
@@ -105,7 +138,7 @@
         },
         {
           "code": "79040",
-          "display": "Die HTTP-Operation [http_operation] wird nicht unterstützt.",
+          "display": "Die HTTP-Operation '[http_operation]' wird nicht unterstützt.",
           "target": [
             {
               "code": "405",

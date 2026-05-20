@@ -6,12 +6,12 @@
   "id": "VSDMTDSCodeCS",
   "title": "VSDM-TDS-Codes",
   "description": "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammdatenmanagement (VSDM) 2.0",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "url": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS",
   "concept": [
     {
       "code": "79010",
-      "display": "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf.",
+      "display": "Institutionskennung '[ik]' aus dem PoPP-Token weist Formatfehler auf.",
       "definition": "Die IK aus dem PoPP-Token weist Formatfehler auf.\nMögliche Ursachen:\nFehler im PoPP-Service i.V.m. Fehler im Clientsystem und/oder indirektem Angriffsversuch (PoPP-Service stellt Token trotz fehlerhafter IK aus) oder\ndirekter Angriffsversuch (Angreifer kann PoPP-Signaturen fälschen).\nRelevante Anforderung: A_28604.",
       "property": [
         {
@@ -26,7 +26,7 @@
     },
     {
       "code": "79011",
-      "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf.",
+      "display": "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token weist Formatfehler auf.",
       "definition": "Die KVNR aus dem PoPP-Token weist Formatfehler auf.\nMögliche Ursachen:\nFehler im PoPP-Service i.V.m. Fehler im Clientsystem und/oder indirektem Angriffsversuch (PoPP-Service stellt Token trotz fehlerhafter KVNR aus) oder\ndirekter Angriffsversuch (Angreifer kann PoPP-Signaturen fälschen).\nRelevante Anforderung: A_28606.",
       "property": [
         {
@@ -41,7 +41,7 @@
     },
     {
       "code": "79012",
-      "display": "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt.",
+      "display": "Institutionskennung '[ik]' aus dem PoPP-Token ist dem Fachdienst nicht bekannt.",
       "definition": "Die IK aus dem PoPP-Token ist dem Fachdienst nicht bekannt.\nMögliche Ursachen:\nImplementierungsfehler in der Dienstlokalisierung (Clientsystem schickt korrektes PoPP-Token an den falschen Fachdienst),\nDNS-Fehler (Namensauflösung Clientsystem liefert IP von falschem Fachdienst),\nKonfigurationsfehler Fachdienst (z.B. falsche Datenbank-/Backend-Zuordnung),\nFehler im PoPP-Service i.V.m. Fehler im Clientsystem und/oder indirektem Angriffsversuch (PoPP-Service stellt Token trotz fehlerhafter IK aus) oder\ndirekter Angriffsversuch (Angreifer kann PoPP-Signaturen fälschen).\nRelevante Anforderung: A_28605.",
       "property": [
         {
@@ -56,7 +56,7 @@
     },
     {
       "code": "79013",
-      "display": "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt.",
+      "display": "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung '[ik]' nicht bekannt.",
       "definition": "Die KVNR aus dem PoPP-Token ist dem Fachdienst nicht bekannt.\nMögliche Ursachen:\nEs existiert kein Versicherungsverhältnis beim adressierten Kostenträger oder das Versicherungsverhältnis ist ausgelaufen, der adressierte Kostenträger ist also nicht mehr zuständig.\nRelevante Anforderung: A_28607.",
       "property": [
         {
@@ -71,8 +71,8 @@
     },
     {
       "code": "79014",
-      "display": "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden.",
-      "definition": "Der HTTP Header If-none-match fehlt.\nMögliche Ursachen:\nImplementierungsfehler im Clientsystem.\nRelevante Anforderung: A_26755-01.",
+      "display": "Der erforderliche Änderungsindikator im Header If-None-Match fehlt.",
+      "definition": "Der HTTP Header If-None-Match fehlt.\nMögliche Ursachen:\nImplementierungsfehler im Clientsystem.\nRelevante Anforderung: A_26755-01.",
       "property": [
         {
           "code": "target",
@@ -87,7 +87,18 @@
     {
       "code": "79015",
       "display": "Die vom Clientsystem angefragte Profilversion wird nicht unterstützt.",
-      "definition": "Das Clientsystem hat mit dem optionalen Parameter profileVersion eine Profilversion angefordert, die vom Fachdienst nicht unterstützt wird. \nMögliche Ursachen:\nImplementierungsfehler im Clientsystem.\nRelevante Anforderung: A_28047-01.",
+      "definition": "Das Clientsystem hat mit dem Parameter profileVersion eine Profilversion angefordert, die vom Fachdienst nicht unterstützt wird. \nMögliche Ursachen:\nImplementierungsfehler im Clientsystem.\nRelevante Anforderung: A_28047-01.",
+      "property": [
+        {
+          "code": "target",
+          "valueCode": "client"
+        }
+      ]
+    },
+    {
+      "code": "79016",
+      "display": "Der erforderliche Query-Parameter 'profileVersion' fehlt.",
+      "definition": "Das Clientsystem hat den obligatorischen Parameter 'profileVersion' bei der Abfrage nicht angegeben. \nMögliche Ursachen:\nImplementierungsfehler im Clientsystem.\nRelevante Anforderung: A_28047-01.",
       "property": [
         {
           "code": "target",
@@ -97,7 +108,7 @@
     },
     {
       "code": "79030",
-      "display": "Der HTTP-Header [header] ist ungültig.",
+      "display": "Der HTTP-Header '[header]' ist ungültig.",
       "definition": "Der genannte HTTP-Header weist Formatfehler auf.\nMögliche Ursachen:\nImplementierungsfehler im Clientsystem (Verstoß gegen RFC 9110).\nRelevante Anforderungen: A_28608, A_28609.",
       "property": [
         {
@@ -112,7 +123,7 @@
     },
     {
       "code": "79031",
-      "display": "Das vom Clientsystem angefragte Datenformat [media_type] wird nicht unterstützt.",
+      "display": "Das vom Clientsystem angefragte Datenformat '[media_type]' wird nicht unterstützt.",
       "definition": "Der HTTP-Header Accept enthält nicht unterstütztes Format.\nMögliche Ursachen:\nImplementierungsfehler im Clientsystem.\nRelevante Anforderung: A_28610.",
       "property": [
         {
@@ -127,7 +138,7 @@
     },
     {
       "code": "79040",
-      "display": "Die HTTP-Operation [http_operation] wird nicht unterstützt.",
+      "display": "Die HTTP-Operation '[http_operation]' wird nicht unterstützt.",
       "definition": "Die HTTP-Methode ist nicht GET.\nMögliche Ursachen:\nFehlkonfiguration ZETA Guard.\nRelevante Anforderung: A_26753-01.",
       "property": [
         {
@@ -194,7 +205,29 @@
   ],
   "experimental": false,
   "publisher": "gematik GmbH",
-  "date": "2026-04-17",
+  "contact": [
+    {
+      "name": "gematik GmbH",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://fachportal.gematik.de/anwendungen/versichertenstammdaten-management"
+        }
+      ]
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "DE",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Germany"
+        }
+      ]
+    }
+  ],
+  "date": "2026-05-20",
   "caseSensitive": true,
   "purpose": "Dieses CodeSystem enthält alle Fehlercodes des Telemetriedatenservice (TDS), der Fachdienst gemäß Anforderung A_27012-02 und darin enthaltener Tabelle TAB_FACHDIENST_VSDM_FEHLERREFERENZEN_UND_FEHLERCODES sowie den bei den jeweiligen Codes genanntnen Anforderungen liefern muss.\nDiese TDS-Codes decken alle in der Spezifikation vorgesehenen Fehlersituationen ab.\nDieses CodeSystem definiert die genauen Fehlerzustände und dient als Ausgangspunkt für verschiedene Zuordnungen (ConceptMaps).\nJe nach Fehlerquelle werden diese Fehler entweder an das Clientsystem oder an den HTTP Proxy des ZETA Guard adressiert.\nNur für die Fehlercodes mit Adressat \"Clientsystem\" wird eine Fehlerbeschreibung in Form einer VSDMOperationOutcome-Struktur erzeugt, die dann einen Fehlercode aus dem CodeSystem VSDMErrorcodeCS enthält.",
   "property": [
@@ -211,5 +244,5 @@
       "type": "string"
     }
   ],
-  "count": 14
+  "count": 15
 }

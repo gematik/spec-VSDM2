@@ -3,7 +3,7 @@
   "id": "VSDMOperationOutcome-InvalidIK",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome|1.0.0"
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome|1.0.1"
     ]
   },
   "text": {
@@ -19,10 +19,10 @@
           {
             "code": "VSDSERVICE_INVALID_IK",
             "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS",
-            "display": "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf."
+            "display": "Institutionskennung '[ik]' aus dem PoPP-Token weist Formatfehler auf."
           }
         ],
-        "text": "Institutionskennung 103456789 aus dem PoPP-Token weist Formatfehler auf."
+        "text": "Institutionskennung '103456789' aus dem PoPP-Token weist Formatfehler auf."
       },
       "diagnostics": "Die im PoPP-Token enthaltene IK der Versicherung ist ungültig (Formatfehler).\nFordern Sie ein neues PoPP-Token an und wiederholen Sie die Abfrage beim zuständigen VSDM 2.0-Fachdienst.\nBei erneutem Fehler wiederholen Sie die Abfrage nicht, sondern brechen Sie mit einer Fehlermeldung ab.\nIn diesem Fall liegt wahrscheinlich eine Störung des zentralen PoPP-Service vor.",
       "expression": [

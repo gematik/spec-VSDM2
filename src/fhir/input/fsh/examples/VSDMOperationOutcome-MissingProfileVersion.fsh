@@ -1,7 +1,7 @@
-Instance: VSDMOperationOutcome-InvalidProfileVersion
+Instance: VSDMOperationOutcome-MissingProfileVersion
 InstanceOf: VSDMOperationOutcome
-Title: "Fehlermeldung VSDSERVICE_INVALID_PROFILE_VERSION"
-Description: "Beispiel zur Fehlermeldung 'Die vom Clientsystem angefragte Profilversion '[profile_version]' wird nicht unterstützt.'"
+Title: "Fehlermeldung VSDSERVICE_INVALID_MISSING_VERSION"
+Description: "Beispiel zur Fehlermeldung 'Der erforderliche Query-Parameter 'profileVersion' fehlt.'"
 Usage: #example
 
 * meta
@@ -17,10 +17,10 @@ Usage: #example
   * severity = #error "Error"
   * code = #value "Element value invalid"
   * details[+]
-    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_INVALID_PROFILE_VERSION "Die vom Clientsystem angefragte Profilversion '[profile_version]' wird nicht unterstützt."
-    * text = "Die vom Clientsystem angefragte Profilversion '1.42' wird nicht unterstützt."
+    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_MISSING_PROFILE_VERSION "Der erforderliche Query-Parameter 'profileVersion' fehlt."
+    * text = "Der erforderliche Query-Parameter 'profileVersion' fehlt."
   * diagnostics = """
-      Das Clientsystem hat mit dem verpflichtenden Parameter profileVersion eine Profilversion angefordert, die vom Fachdienst nicht unterstützt wird. 
+      Das Clientsystem hat den obligatorischen Parameter 'profileVersion' bei der Abfrage nicht angegeben. 
       Das Clientsystem muss den Parameter mit einer unterstützten Major-/Minor-Version gemäß der aktuellen gematik-Vorgaben füllen.
       Wiederholen Sie die Anfrage unter Angabe eines gültigen Werts.
     """

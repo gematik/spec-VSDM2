@@ -19,6 +19,47 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 ### Security
 
+## [1.0.1] - 2026-05-20
+
+### Neu
+
+- Ein neuer Fehlercode 79016 / VSDSERVICE_MISSING_PROFILE_VERSION zur Signalisierung eines fehlenden Pflichtparameters wurde aufgenommen.
+  ([issue 152](https://github.com/gematik/spec-VSDM2/issues/152))
+
+### Änderung
+
+- Die durch Platzhalter in Meldungstexte eingebetteten Werte wurden durch Hochkommata vom Text getrennt, um die Lesbarkeit zu verbessseren.
+  Weiterhin wurde der Text zum Fehlercode VSDSERVICE_MISSING_PATIENT_RECORD_VERSION auf die tatsächliche Fehlersituation angepasst.
+  ([issue 154](https://github.com/gematik/spec-VSDM2/issues/154))
+- In den Paketinhalten werden jetzt contact und jurisdiction konsistent ausgewiesen.
+  ([issue 151](https://github.com/gematik/spec-VSDM2/issues/151))
+- Aktualisierung der Paketabhängigkeiten (keine inhaltlichen Auswirkungen)
+  - `kbv.all.st` von Version 1.37.0 auf Version 1.41.0 
+
+### Abkündigung
+
+(keine)
+
+### Entfernung
+
+(keine)
+
+### Fehlerbehebung
+
+- In Spezifikationsversion 1.4.0 wurde in A_27012-04 der Fehlercode VSDSERVICE_INVALID_PATIENT_RECORD_VERSION umbenannt in VSDSERVICE_MISSING_PATIENT_RECORD_VERSION. 
+  Diese Anpassung fehlte in der Ressourcenversion 1.0.0 und wird mit dieser Version nachgezogen.
+  ([issue 142](https://github.com/gematik/spec-VSDM2/issues/142))
+- In den ConceptMaps wurden die fehlenden Versionsangaben in den Canonical References nachgetragen.
+  ([issue 143](https://github.com/gematik/spec-VSDM2/issues/143))
+- Der Beschreibungstext zum Fehlercode VSDSERVICE_INVALID_PROFILE_VERSION wurde korrigiert (Parameter ist verpflichtend anzugeben).
+  ([issue 144](https://github.com/gematik/spec-VSDM2/issues/144))
+- Die veralteten Namen der ConceptMaps in den Beschreibungstexten (Kommentare) von VSDMOperationOutcome wurden korrigiert.
+  ([issue 157](https://github.com/gematik/spec-VSDM2/issues/157))
+
+### Security
+
+(keine)
+
 ## [1.0.0] - 2026-04-17
 
 Keine inhaltlichen Änderungen gegenüber Version 1.0.0-rc8.
@@ -132,3 +173,5 @@ _(Release Notes aus der Simplifier-Veröffentlichung übernommen)_
 [1.0.0-rc6]: https://simplifier.net/packages/de.gematik.vsdm2/1.0.0-rc6
 [1.0.0-rc7]: https://simplifier.net/packages/de.gematik.vsdm2/1.0.0-rc7
 [1.0.0-rc8]: https://simplifier.net/packages/de.gematik.vsdm2/1.0.0-rc8
+[1.0.0]: https://simplifier.net/packages/de.gematik.vsdm2/1.0.0
+[1.0.1]: https://simplifier.net/packages/de.gematik.vsdm2/1.0.1

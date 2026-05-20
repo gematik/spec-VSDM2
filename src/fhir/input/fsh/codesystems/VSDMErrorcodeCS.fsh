@@ -18,8 +18,8 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
 * ^property[=].description = "Technische Informationen zur Fehlerdiagnose"
 * ^property[=].type = #string
 
-// #79010 "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf."
-* #VSDSERVICE_INVALID_IK "Institutionskennung [ik] aus dem PoPP-Token weist Formatfehler auf."
+// #79010 "Institutionskennung '[ik]' aus dem PoPP-Token weist Formatfehler auf."
+* #VSDSERVICE_INVALID_IK "Institutionskennung '[ik]' aus dem PoPP-Token weist Formatfehler auf."
   * ^definition = """
       Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.
     """
@@ -31,8 +31,8 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
        In diesem Fall liegt wahrscheinlich eine Störung des zentralen PoPP-Service vor.
     """
 
-// #79011 "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf."
-* #VSDSERVICE_INVALID_KVNR "Krankenversichertennummer [kvnr] aus dem PoPP-Token weist Formatfehler auf."
+// #79011 "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token weist Formatfehler auf."
+* #VSDSERVICE_INVALID_KVNR "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token weist Formatfehler auf."
   * ^definition = """
       Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.
     """
@@ -44,8 +44,8 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
       In diesem Fall liegt wahrscheinlich eine Störung des zentralen PoPP-Service vor.
     """
 
-// #79012 "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
-* #VSDSERVICE_UNKNOWN_IK "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
+// #79012 "Institutionskennung '[ik]' aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
+* #VSDSERVICE_UNKNOWN_IK "Institutionskennung '[ik]' aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
   * ^definition = """
       Der von Ihrem Anwendungssystem vorgelegte elektronische Nachweis des Versorgungskontexts ist fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.
     """
@@ -57,8 +57,8 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
       Bei Andauern des Fehlers über 24 h liegt möglicherweise ein Fehler in der Implementierung des Clientsystems oder des Fachdients vor.
     """
 
-// #79013 "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt."
-* #VSDSERVICE_UNKNOWN_KVNR "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt."
+// #79013 "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung '[ik]' nicht bekannt."
+* #VSDSERVICE_UNKNOWN_KVNR "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung '[ik]' nicht bekannt."
   * ^definition = """
       Der Patient mit der angegebenen Krankenversicherungsnummer ist bei der angesprochenen Versicherung nicht bekannt.
       Wiederholen Sie die Stammdatenabfrage; falls der Fehler bestehen bleibt, prüfen Sie mit dem Versicherten die Gültigkeit seines Versicherungsanspruchs.
@@ -70,34 +70,45 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
       Bei erneutem Fehler wiederholen Sie die Abfrage nicht, sondern weisen Sie die Anwender auf ein möglicherweise ausgelaufenes Versicherungsverhältnis hin.
     """
 
-// #79014 "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden."
-* #VSDSERVICE_INVALID_PATIENT_RECORD_VERSION "Der Änderungsindikator [etag_value] kann nicht verarbeitet werden."
+// #79014 "Der erforderliche Änderungsindikator im Header If-None-Match fehlt."
+* #VSDSERVICE_MISSING_PATIENT_RECORD_VERSION "Der erforderliche Änderungsindikator im Header If-None-Match fehlt."
   * ^definition = """
       Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.
     """
   * ^property[+].code = #diagnostics
   * ^property[=].valueString = """
-      Der HTTP Header If-none-match fehlt.
+      Der HTTP Header If-None-Match fehlt.
       Mit diesem Header muss das Clientsystem den letzten bekannten Aktualitätswert mitteilen.
       Falls kein Wert vorliegt, muss der Header mit 0 gefüllt werden.
       Wiederholen Sie die Anfrage unter Angabe eines gültigen Werts.
     """
 
 // #79015 "Die vom Clientsystem angefragte Profilversion wird nicht unterstützt."
-* #VSDSERVICE_INVALID_PROFILE_VERSION "Die vom Clientsystem angefragte Profilversion [profile_version] wird nicht unterstützt."
+* #VSDSERVICE_INVALID_PROFILE_VERSION "Die vom Clientsystem angefragte Profilversion '[profile_version]' wird nicht unterstützt."
   * ^definition = """
       Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.
     """
   * ^property[+].code = #diagnostics
   * ^property[=].valueString = """
-      Das Clientsystem hat mit dem optionalen Parameter profileVersion eine Profilversion angefordert, die vom Fachdienst nicht unterstützt wird. 
-      Das Clientsystem muss den Parameter entweder mit einer unterstützten Version gemäß der aktuellen gematik-Vorgaben füllen oder eine Anfrage ohne den Parameter stellen.
-      Wenn das Clientsystem den Parameter nicht übergibt, liefert der Fachdienst die jeweils aktuelle Standardversion.
-      Wiederholen Sie die Anfrage unter Angabe eines gültigen Werts oder ohne den optionalen Parameter.
+      Das Clientsystem hat mit dem verpflichtenden Parameter profileVersion eine Profilversion angefordert, die vom Fachdienst nicht unterstützt wird. 
+      Das Clientsystem muss den Parameter mit einer unterstützten Major-/Minor-Version gemäß der aktuellen gematik-Vorgaben füllen.
+      Wiederholen Sie die Anfrage unter Angabe eines gültigen Werts.
+    """
+    
+// #79016 "Der erforderliche Query-Parameter 'profileVersion' fehlt."
+* #VSDSERVICE_MISSING_PROFILE_VERSION "Der erforderliche Query-Parameter 'profileVersion' fehlt."
+  * ^definition = """
+      Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.
+    """
+  * ^property[+].code = #diagnostics
+  * ^property[=].valueString = """
+      Das Clientsystem hat den obligatorischen Parameter 'profileVersion' bei der Abfrage nicht angegeben. 
+      Das Clientsystem muss den Parameter mit einer unterstützten Major-/Minor-Version gemäß der aktuellen gematik-Vorgaben füllen.
+      Wiederholen Sie die Anfrage unter Angabe eines gültigen Werts.
     """
 
-// #79030 "Der HTTP-Header [header] ist ungültig."
-* #SERVICE_INVALID_HEADER "Der HTTP-Header [header] ist ungültig."
+// #79030 "Der HTTP-Header '[header]' ist ungültig."
+* #SERVICE_INVALID_HEADER "Der HTTP-Header '[header]' ist ungültig."
   * ^definition = """
       Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.
     """
@@ -108,8 +119,8 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
       Prüfen Sie den Aufbau des Headers gegen die einschlägigen Standards (v.A. RFC 9110) und korrigieren Sie die Anfrage entsprechend.
     """
 
-// #79031 "Das vom Clientsystem angefragte Datenformat [media_type] wird nicht unterstützt."
-* #SERVICE_UNSUPPORTED_MEDIATYPE "Das vom Clientsystem angefragte Datenformat [media_type] wird nicht unterstützt."
+// #79031 "Das vom Clientsystem angefragte Datenformat '[media_type]' wird nicht unterstützt."
+* #SERVICE_UNSUPPORTED_MEDIATYPE "Das vom Clientsystem angefragte Datenformat '[media_type]' wird nicht unterstützt."
   * ^definition = """
       Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.
     """
@@ -121,8 +132,8 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
       Stellen Sie sicher, dass nur die genannten Formate verwendet werden.
     """
 
-// #79040 "Die HTTP-Operation [http_operation] wird nicht unterstützt."
-* #SERVICE_INVALID_HTTP_OPERATION "Die HTTP-Operation [http_operation] wird nicht unterstützt."
+// #79040 "Die HTTP-Operation '[http_operation]' wird nicht unterstützt."
+* #SERVICE_INVALID_HTTP_OPERATION "Die HTTP-Operation '[http_operation]' wird nicht unterstützt."
   * ^definition = """
       Die Abfrage der Versichertenstammdaten war technisch fehlerhaft. Bitte wenden Sie sich an Ihren Systemhersteller.
     """

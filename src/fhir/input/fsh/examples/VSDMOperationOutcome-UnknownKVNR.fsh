@@ -1,11 +1,11 @@
 Instance: VSDMOperationOutcome-UnknownKVNR
 InstanceOf: VSDMOperationOutcome
 Title: "Fehlermeldung VSDSERVICE_UNKNOWN_KVNR"
-Description: "Beispiel zur Fehlermeldung 'Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt.'"
+Description: "Beispiel zur Fehlermeldung 'Krankenversichertennummer '[kvnr]' aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung '[ik]' nicht bekannt.'"
 Usage: #example
 
 * meta
-  * profile[0] = Canonical(VSDMOperationOutcome|1.0.0)
+  * profile[0] = Canonical(VSDMOperationOutcome|1.0.1)
 * text
   * status = #generated
   * div[+] = """
@@ -18,8 +18,8 @@ Usage: #example
   * severity = #error "Error"
   * code = #not-found "Not Found"
   * details[+]
-    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_UNKNOWN_KVNR "Krankenversichertennummer [kvnr] aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung [ik] nicht bekannt."
-    * text = "Krankenversichertennummer A123456789 aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung 103456789 nicht bekannt."
+    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_UNKNOWN_KVNR "Krankenversichertennummer '[kvnr]' aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung '[ik]' nicht bekannt."
+    * text = "Krankenversichertennummer 'A123456789' aus dem PoPP-Token ist dem Fachdienst zur Institutionskennung '103456789' nicht bekannt."
   * diagnostics = """
       Der Patient mit der angegebenen Krankenversicherungsnummer ist bei der angesprochenen Versicherung nicht bekannt.
       Fordern Sie ein neues PoPP-Token an. Wiederholen Sie die Dienstlokalisierung, um den korrekten zuständigen Fachdienst zu ermitteln und wiederholen Sie die Abfrage.

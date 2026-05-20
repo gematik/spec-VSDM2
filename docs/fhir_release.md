@@ -11,11 +11,12 @@ Vorbedingungen:
 
 Checkliste:
 
-- Arbeiten im feature branch ausführen (z.B. `feature/prepare-release-<Version>`)
+- Arbeiten im feature branch ausgehend vom develop branch ausführen (z.B. `feature/prepare-release-<Version>`)
 - In der Datei `CHANGELOG-FHIR.md`:
   - Abschnitt "Nächste Version" duplizieren
   - "obere" Kopie leeren (wird die nächste nächste Version)
   - "untere" Kopie umbenennen, die leeren Abschnitte kennzeichnen und die Überschrift mit Link und Datum versehen (wie bei den Vorgängerversionen)
+  - Link am Ende der Datei nicht vergessen
 - In der Datei `src/fhir/input/fsh/ruleset.fsh`:
   - die Versionsangabe in den Metadaten-Rulesets ersetzen (sollte dreimal vorkommen)
   - das Datum in den Metadaten-Rulesets aktualisieren (sollte dreimal vorkommen)
@@ -24,6 +25,8 @@ Checkliste:
 - FHIR-Ressourcen aus den FSH-Quellen neu erzeugen (Aufruf von `sushi` - später mal `ig`)
 - Validierungsergebnisse prüfen und eventuelle Fehler beheben
 - zur Absicherung gesamtes Projekt nach altem Datum und alter Versionsnummer durchsuchen (sollte außer im Changelog keine Treffer mehr ergeben)
+- Commit / PR / Merge auf develop-Branch
+
 
 TODO: Tagging
 

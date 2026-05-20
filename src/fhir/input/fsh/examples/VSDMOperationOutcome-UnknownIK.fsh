@@ -1,11 +1,11 @@
 Instance: VSDMOperationOutcome-UnknownIK
 InstanceOf: VSDMOperationOutcome
 Title: "Fehlermeldung VSDSERVICE_UNKNOWN_IK"
-Description: "Beispiel zur Fehlermeldung 'Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt.'"
+Description: "Beispiel zur Fehlermeldung 'Institutionskennung '[ik]' aus dem PoPP-Token ist dem Fachdienst nicht bekannt.'"
 Usage: #example
 
 * meta
-  * profile[0] = Canonical(VSDMOperationOutcome|1.0.0)
+  * profile[0] = Canonical(VSDMOperationOutcome|1.0.1)
 * text
   * status = #generated
   * div[+] = """
@@ -17,8 +17,8 @@ Usage: #example
   * severity = #error "Error"
   * code = #not-found "Not Found"
   * details[+]
-    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_UNKNOWN_IK "Institutionskennung [ik] aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
-    * text = "Institutionskennung 103456789 aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
+    * coding[0] = VSDMErrorcodeCS#VSDSERVICE_UNKNOWN_IK "Institutionskennung '[ik]' aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
+    * text = "Institutionskennung '103456789' aus dem PoPP-Token ist dem Fachdienst nicht bekannt."
   * diagnostics = """
       Die im PoPP-Token angegebene IK der Versicherung ist dem angesprochenen VSDM 2.0-Fachdienst nicht bekannt.
       Fordern Sie ein neues PoPP-Token an. Wiederholen Sie die Dienstlokalisierung, um den korrekten zuständigen Fachdienst zu ermitteln und wiederholen Sie die Abfrage.

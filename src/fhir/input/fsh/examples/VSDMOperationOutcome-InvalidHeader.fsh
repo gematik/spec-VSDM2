@@ -1,11 +1,11 @@
 Instance: VSDMOperationOutcome-InvalidHeader
 InstanceOf: VSDMOperationOutcome
 Title: "Fehlermeldung SERVICE_INVALID_HEADER"
-Description: "Beispiel zur Fehlermeldung 'Der HTTP-Header [header] ist ungültig.'"
+Description: "Beispiel zur Fehlermeldung 'Der HTTP-Header '[header]' ist ungültig.'"
 Usage: #example
 
 * meta
-  * profile[0] = Canonical(VSDMOperationOutcome|1.0.0)
+  * profile[0] = Canonical(VSDMOperationOutcome|1.0.1)
 * text
   * status = #generated
   * div[+] = """
@@ -17,8 +17,8 @@ Usage: #example
   * severity = #fatal "Fatal"
   * code = #value "Element value invalid"
   * details[+]
-    * coding[0] = VSDMErrorcodeCS#SERVICE_INVALID_HEADER "Der HTTP-Header [header] ist ungültig."
-    * text = "Der HTTP-Header Accept ist ungültig."
+    * coding[0] = VSDMErrorcodeCS#SERVICE_INVALID_HEADER "Der HTTP-Header '[header]' ist ungültig."
+    * text = "Der HTTP-Header 'Accept' ist ungültig."
   * diagnostics = """
       Der angegebene HTTP Header enthält nicht spezifikationskonforme Angaben.
       Hierbei handelt es sich in der Regel um einen Implementierungsfehler im Clientsystem.

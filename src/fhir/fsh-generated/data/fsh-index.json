@@ -197,7 +197,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMErrorcodeCS.fsh",
     "startLine": 1,
-    "endLine": 144
+    "endLine": 155
   },
   {
     "outputFile": "CodeSystem-VSDMISO3166ErgaenzungCS.json",
@@ -221,7 +221,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMTDSCodeCS.fsh",
     "startLine": 1,
-    "endLine": 189
+    "endLine": 199
   },
   {
     "outputFile": "CodeSystem-VSDMVersichertenartPKVCS.json",
@@ -245,7 +245,7 @@
     "fshType": "Instance",
     "fshFile": "mappings/VSDMTDSCodeErrorcode.fsh",
     "startLine": 1,
-    "endLine": 97
+    "endLine": 105
   },
   {
     "outputFile": "ConceptMap-VSDMTDSCodeHTTPStatus.json",
@@ -253,7 +253,7 @@
     "fshType": "Instance",
     "fshFile": "mappings/VSDMTDSCodeHTTPStatus.fsh",
     "startLine": 1,
-    "endLine": 126
+    "endLine": 134
   },
   {
     "outputFile": "ConceptMap-VSDMTDSCodeIssueSeverity.json",
@@ -261,7 +261,7 @@
     "fshType": "Instance",
     "fshFile": "mappings/VSDMTDSCodeIssueSeverity.fsh",
     "startLine": 1,
-    "endLine": 97
+    "endLine": 105
   },
   {
     "outputFile": "ConceptMap-VSDMTDSCodeIssueType.json",
@@ -269,7 +269,7 @@
     "fshType": "Instance",
     "fshFile": "mappings/VSDMTDSCodeIssueType.fsh",
     "startLine": 1,
-    "endLine": 98
+    "endLine": 106
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-InternalServerError.json",
@@ -312,20 +312,28 @@
     "endLine": 28
   },
   {
-    "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidPatientRecordVersion.json",
-    "fshName": "VSDMOperationOutcome-InvalidPatientRecordVersion",
-    "fshType": "Instance",
-    "fshFile": "examples/VSDMOperationOutcome-InvalidPatientRecordVersion.fsh",
-    "startLine": 1,
-    "endLine": 28
-  },
-  {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-InvalidProfileVersion.json",
     "fshName": "VSDMOperationOutcome-InvalidProfileVersion",
     "fshType": "Instance",
     "fshFile": "examples/VSDMOperationOutcome-InvalidProfileVersion.fsh",
     "startLine": 1,
+    "endLine": 27
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-MissingPatientRecordVersion.json",
+    "fshName": "VSDMOperationOutcome-MissingPatientRecordVersion",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-MissingPatientRecordVersion.fsh",
+    "startLine": 1,
     "endLine": 28
+  },
+  {
+    "outputFile": "OperationOutcome-VSDMOperationOutcome-MissingProfileVersion.json",
+    "fshName": "VSDMOperationOutcome-MissingProfileVersion",
+    "fshType": "Instance",
+    "fshFile": "examples/VSDMOperationOutcome-MissingProfileVersion.fsh",
+    "startLine": 1,
+    "endLine": 27
   },
   {
     "outputFile": "OperationOutcome-VSDMOperationOutcome-UnknownIK.json",

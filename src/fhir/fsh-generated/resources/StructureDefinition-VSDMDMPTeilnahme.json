@@ -2,14 +2,36 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMDMPTeilnahme",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "VSDMDMPTeilnahme",
   "title": "Teilnahme an Disease Management-Programm",
   "status": "active",
   "experimental": false,
-  "date": "2026-04-17",
+  "date": "2026-05-20",
   "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "name": "gematik GmbH",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://fachportal.gematik.de/anwendungen/versichertenstammdaten-management"
+        }
+      ]
+    }
+  ],
   "description": "Angaben zur Teilnahme eines Versicherten an einem Disease Management-Programm im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "DE",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Germany"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
