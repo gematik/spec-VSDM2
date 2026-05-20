@@ -9,7 +9,29 @@
   "experimental": false,
   "date": "2026-04-17",
   "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "name": "gematik GmbH",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://fachportal.gematik.de/anwendungen/versichertenstammdaten-management"
+        }
+      ]
+    }
+  ],
   "description": "Angaben zum Kostenträger im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "DE",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Germany"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
