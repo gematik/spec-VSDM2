@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMKrankenhausleistungenPKV",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMKrankenhausleistungenPKV",
-  "version": "1.0.1-dev",
+  "version": "1.0.1",
   "name": "VSDMKrankenhausleistungenPKV",
   "title": "PKV-Kostenübernahme Krankenhausleistungen",
   "status": "active",
   "experimental": false,
-  "date": "2026-04-17",
+  "date": "2026-05-20",
   "publisher": "gematik GmbH",
   "contact": [
     {

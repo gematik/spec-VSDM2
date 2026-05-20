@@ -9,6 +9,20 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 ### Neu
 
+### Änderung
+
+### Abkündigung
+
+### Entfernung
+
+### Fehlerbehebung
+
+### Security
+
+## [1.0.1] - 2026-05-20
+
+### Neu
+
 - Ein neuer Fehlercode 79016 / VSDSERVICE_MISSING_PROFILE_VERSION zur Signalisierung eines fehlenden Pflichtparameters wurde aufgenommen.
   ([issue 152](https://github.com/gematik/spec-VSDM2/issues/152))
 
@@ -24,7 +38,11 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 ### Abkündigung
 
+(keine)
+
 ### Entfernung
+
+(keine)
 
 ### Fehlerbehebung
 
@@ -39,6 +57,8 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
   ([issue 157](https://github.com/gematik/spec-VSDM2/issues/157))
 
 ### Security
+
+(keine)
 
 ## [1.0.0] - 2026-04-17
 
@@ -153,3 +173,5 @@ _(Release Notes aus der Simplifier-Veröffentlichung übernommen)_
 [1.0.0-rc6]: https://simplifier.net/packages/de.gematik.vsdm2/1.0.0-rc6
 [1.0.0-rc7]: https://simplifier.net/packages/de.gematik.vsdm2/1.0.0-rc7
 [1.0.0-rc8]: https://simplifier.net/packages/de.gematik.vsdm2/1.0.0-rc8
+[1.0.0]: https://simplifier.net/packages/de.gematik.vsdm2/1.0.0
+[1.0.1]: https://simplifier.net/packages/de.gematik.vsdm2/1.0.1

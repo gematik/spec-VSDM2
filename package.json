@@ -1,6 +1,6 @@
 {
   "name": "de.gematik.spec-vsdv2",
-  "version": "1.0.1-dev",
+  "version": "1.0.1",
   "fhirVersions": [
     "4.0.1"
   ],
