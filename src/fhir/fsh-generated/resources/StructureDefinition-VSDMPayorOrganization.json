@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMPayorOrganization",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization",
-  "version": "1.0.1",
+  "version": "1.0.2-dev",
   "name": "VSDMPayorOrganization",
   "title": "Kostenträger",
   "status": "active",
