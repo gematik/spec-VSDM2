@@ -133,6 +133,28 @@
   ],
   "experimental": false,
   "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "name": "gematik GmbH",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://fachportal.gematik.de/anwendungen/versichertenstammdaten-management"
+        }
+      ]
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "DE",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Germany"
+        }
+      ]
+    }
+  ],
   "date": "2026-04-17",
   "caseSensitive": true,
   "purpose": "Dieses CodeSystem enthält die an das Clientsystem zu sendenden fachspezifischen Fehlercodes im Versichertenstammdatenmanagement (VSDM) 2.0.\nFür diese Fehlercodes wird eine Fehlerbeschreibung in Form einer VSDMOperationOutcome-Struktur erzeugt, die dann einen Fehlercode aus diesem CodeSystem enthält.\nDie Definition der einzelnen Codes enthält den Meldungstext, der als narrative content für den Anwender des Clientsystems bestimmt ist.\nDie Eigenschaft diagnostics enthält die technischen Zusatzinformationen, die im Element VSDMOperationOutcome.issue.diagnostics der Antwortstruktur angegeben werden sollen.",
