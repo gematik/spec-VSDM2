@@ -92,6 +92,10 @@
         {
           "code": "target",
           "valueCode": "client"
+        },
+        {
+          "code": "expression",
+          "valueString": "http.profileVersion"
         }
       ]
     },
@@ -103,6 +107,10 @@
         {
           "code": "target",
           "valueCode": "client"
+        },
+        {
+          "code": "expression",
+          "valueString": "http.profileVersion"
         }
       ]
     },
