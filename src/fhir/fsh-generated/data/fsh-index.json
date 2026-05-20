@@ -221,7 +221,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMTDSCodeCS.fsh",
     "startLine": 1,
-    "endLine": 199
+    "endLine": 203
   },
   {
     "outputFile": "CodeSystem-VSDMVersichertenartPKVCS.json",
