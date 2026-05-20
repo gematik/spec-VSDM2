@@ -31,6 +31,8 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
   ([issue 143](https://github.com/gematik/spec-VSDM2/issues/143))
 - Der Beschreibungstext zum Fehlercode VSDSERVICE_INVALID_PROFILE_VERSION wurde korrigiert (Parameter ist verpflichtend anzugeben).
   ([issue 144](https://github.com/gematik/spec-VSDM2/issues/144))
+- Die veralteten Namen der ConceptMaps in den Beschreibungstexten (Kommentare) von VSDMOperationOutcome wurden korrigiert.
+  ([issue 157](https://github.com/gematik/spec-VSDM2/issues/157))
 
 ### Security
 
