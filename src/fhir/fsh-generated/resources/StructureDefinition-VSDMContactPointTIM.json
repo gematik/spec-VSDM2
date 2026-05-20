@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMContactPointTIM",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMContactPointTIM",
-  "version": "1.0.1-dev",
+  "version": "1.0.1",
   "name": "VSDMContactPointTIM",
   "title": "TI-Messenger-ID",
   "status": "active",
   "experimental": false,
-  "date": "2026-04-17",
+  "date": "2026-05-20",
   "publisher": "gematik GmbH",
   "contact": [
     {

@@ -6,7 +6,7 @@
   "description": "Ermittlung des VSDMErrorcode aus dem TDS-Code",
   "status": "active",
   "experimental": false,
-  "version": "1.0.1-dev",
+  "version": "1.0.1",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -30,14 +30,14 @@
       ]
     }
   ],
-  "date": "2026-04-17",
+  "date": "2026-05-20",
   "purpose": "Diese ConceptMap ordnet den TDS-Codes die VSDMErrorcodes gemäß Tabelle TAB_FACHDIENST_VSDM_FEHLERREFERENZEN_UND_FEHLERCODES aus Anforderung A_27012-01 zu.\nWichtig: Hier werden nur die TDS-Codes mit Fehler-Adressat \"Clientsystem\" erfasst, da für Fehler mit Adressat \"HTTP-Proxy\" keine VSDMOperationOutcome-Ressource erzeugt wird.",
-  "sourceUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMTDSCodeVS|1.0.1-dev",
-  "targetUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMErrorcodeVS|1.0.1-dev",
+  "sourceUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMTDSCodeVS|1.0.1",
+  "targetUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMErrorcodeVS|1.0.1",
   "group": [
     {
-      "source": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS|1.0.1-dev",
-      "target": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS|1.0.1-dev",
+      "source": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMTDSCodeCS|1.0.1",
+      "target": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMErrorcodeCS|1.0.1",
       "element": [
         {
           "code": "79010",

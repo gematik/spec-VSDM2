@@ -5,7 +5,7 @@
   "id": "VSDMRuhenderLeistungsanspruchArtVS",
   "title": "Art des ruhenden Leistungsanspruchs",
   "description": "Art des ruhenden Leistungsanspruchs im Versichertenstammdatenmanagement (VSDM) 2.0",
-  "version": "1.0.1-dev",
+  "version": "1.0.1",
   "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMRuhenderLeistungsanspruchArtVS",
   "experimental": false,
   "publisher": "gematik GmbH",
@@ -31,7 +31,7 @@
       ]
     }
   ],
-  "date": "2026-04-17",
+  "date": "2026-05-20",
   "compose": {
     "include": [
       {

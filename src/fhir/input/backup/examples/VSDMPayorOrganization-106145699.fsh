@@ -4,7 +4,7 @@ Title: "Beispielkostenträger Suhl"
 Description: "Beispielkostenträger Suhl"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.1-dev)
+* meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.1)
 
 * identifier[IKNR].value = "106145699"
 * name = "Beispielkostenträger Suhl"
