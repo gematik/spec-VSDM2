@@ -5,7 +5,7 @@ Description: "Beispiel zur Fehlermeldung 'Krankenversichertennummer '[kvnr]' aus
 Usage: #example
 
 * meta
-  * profile[0] = Canonical(VSDMOperationOutcome|1.0.1)
+  * profile[0] = Canonical(VSDMOperationOutcome|1.0.2-dev)
 * text
   * status = #generated
   * div[+] = """
