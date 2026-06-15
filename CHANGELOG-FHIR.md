@@ -9,6 +9,10 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 ### Neu
 
+- Es wurde ein neues Basis-Profil VSDMCoverageGKVBase zwischen dem deutschen Basisprofil und dem bereits bestehenden Profil VSDMCoverageGKV eingezogen, um die Umsetzung der EEB zu unterstützen.
+  Durch diese Änderung ergeben sich keine inhaltlichen Änderungen an den VSDM 2.0-Ressourcen.
+  ([issue 171](https://github.com/gematik/spec-VSDM2/issues/171))
+
 ### Änderung
 
 - Im CodeSystem VSDMTDSCodeCS wird für die Codes 79015 und 79016 jetzt ein Wert für das OperationOutcome-Element expression angegeben.

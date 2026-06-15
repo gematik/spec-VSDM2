@@ -405,7 +405,15 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverageGKV.fsh",
     "startLine": 1,
-    "endLine": 193
+    "endLine": 35
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMCoverageGKVBase.json",
+    "fshName": "VSDMCoverageGKVBase",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMCoverageGKVBase.fsh",
+    "startLine": 1,
+    "endLine": 181
   },
   {
     "outputFile": "StructureDefinition-VSDMCoveragePKV.json",
