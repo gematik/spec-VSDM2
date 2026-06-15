@@ -1,5 +1,5 @@
 // ================================================================================================
-// 
+//
 //   CodeSystem (Präfix $cs...)
 //
 
@@ -49,7 +49,7 @@ Alias: $csIssueSeverity = http://hl7.org/fhir/issue-severity
 //   - ConceptMap VSDMErrorcodeIssueType
 Alias: $csIssueType = http://hl7.org/fhir/issue-type
 
-// LOINC, verwendet für 
+// LOINC, verwendet für
 //   - VSDMComposition.type.coding
 Alias: $csLOINC = http://loinc.org
 
@@ -70,7 +70,7 @@ Alias: $csPersonengruppe = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSO
 
 // SNOMED Clinical Terms, verwendet für
 //   - VSDMDMPVS
-Alias: $csSCT = http://snomed.info/sct 
+Alias: $csSCT = http://snomed.info/sct
 
 // Versichertenstatus / Versichertenart, verwendet für
 //   - Beispiel für VSDMCoverageGKV
@@ -86,7 +86,7 @@ Alias: $csVersicherungsart = http://fhir.de/CodeSystem/versicherungsart-de-basis
 Alias: $csWOP = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP
 
 // ================================================================================================
-// 
+//
 //   ValueSet (Präfix $vs...)
 //
 
@@ -123,7 +123,7 @@ Alias: $vsTarifartPKV = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_PKV_TARIFF
 Alias: $vsVersichertenartGKV = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_VERSICHERTENSTATUS
 
 // ================================================================================================
-// 
+//
 //   StructureDefinition: Extensions (Präfix $ext...)
 //
 

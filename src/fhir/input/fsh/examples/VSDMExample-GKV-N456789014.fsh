@@ -62,7 +62,7 @@ Usage: #inline
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.2-dev)
 
 * extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"
-* extension[zuzahlungsstatus] 
+* extension[zuzahlungsstatus]
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = "2029-06-22"
 * extension[kostenerstattung]

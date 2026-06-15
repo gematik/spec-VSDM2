@@ -21,7 +21,7 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes GKV z
 
   * AbrechnenderKostentraeger -> "VSDMCoverageGKV.payor:abrechnenderKostentraeger"
     "Der abrechnende Kostenträger wird als Referenz auf eine VSDMPayorOrganization abgebildet. Die Referenz ist mit einer Erweiterung zur Kennzeichnung der Rolle des Kostenträgers versehen."
-  
+
     * Name -> "VSDMPayorOrganization:abrechnenderKostentraeger.name"
 
     * Kostentraegerlaendercode -> "VSDMPayorOrganization:abrechnenderKostentraeger.address.country"
@@ -46,7 +46,7 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes GKV z
 
   * Versicherungsschutz -> "VSDMCoverageGKV.period"
     "Zur Abbildung werden die Standard-Felder der FHIR-Ressource verwendet."
-    
+
     * Beginn -> "VSDMCoverageGKV.period.start"
       "Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverageGKV-period-1 abgebildet."
 
@@ -81,6 +81,5 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes GKV z
     * Ende -> "VSDMCoverageGKV.extension:ruhenderLeistungsanspruch.extension:dauer.value[x].end"
 
     * Art -> "VSDMCoverageGKV.extension:ruhenderLeistungsanspruch.extension:art"
-    
+
   * Versichertenart -> "VSDMCoverageGKV.extension:versichertenart"
-  

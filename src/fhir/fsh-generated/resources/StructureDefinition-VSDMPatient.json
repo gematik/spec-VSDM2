@@ -44,7 +44,7 @@
         "id": "Patient",
         "path": "Patient",
         "short": "Versicherter im VSDM",
-        "definition": "Der VSDMPatient bildet einen Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0 ab.\nDer VSDMPatient ist vom zentralen TIPatient abgeleitet. \nDer Ressource Server des VSDM stellt allerdings keinen FHIR Data Service im Sinne des Implementation Guide TI Common dar, so dass die meisten Anforderungen dieses IG auf den VSDMPatient nicht zutreffen.\nDieser Sachverhalt wird in einer Folgeversion des IG klargestellt."
+        "definition": "Der VSDMPatient bildet einen Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0 ab.\nDer VSDMPatient ist vom zentralen TIPatient abgeleitet.\nDer Ressource Server des VSDM stellt allerdings keinen FHIR Data Service im Sinne des Implementation Guide TI Common dar, so dass die meisten Anforderungen dieses IG auf den VSDMPatient nicht zutreffen.\nDieser Sachverhalt wird in einer Folgeversion des IG klargestellt."
       },
       {
         "id": "Patient.identifier",
@@ -56,7 +56,7 @@
         "path": "Patient.identifier",
         "sliceName": "KVNR",
         "short": "Versichertennummer (KVNR)",
-        "definition": "Es wird der zehnstellig (unveränderliche) Teil der KVNR verwendet. \nZur eindeutigen Identifikation muss genau eine KVNR angegeben werden.",
+        "definition": "Es wird der zehnstellig (unveränderliche) Teil der KVNR verwendet.\nZur eindeutigen Identifikation muss genau eine KVNR angegeben werden.",
         "comment": "Hinweise zur Verwendung und Beispiele siehe [Lebenslange Krankenversicherten-ID](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-LebenslangeKrankenversichertennummer10-stelligeKVID-Identifier.html) im deutschen Basisprofil.",
         "requirements": "Die KVNR identifiziert den Versicherten, auf den sich die bereitgestellten Stammdaten beziehen.",
         "min": 1
@@ -119,12 +119,12 @@
       {
         "id": "Patient.name:Name.given",
         "path": "Patient.name.given",
-        "comment": "Mehrere Vornamen können durch Leerzeichen oder Bindestrich getrennt in einem Wert angegeben werden. \nVon der Wiederholung des given-Elemente SOLL kein Gebrauch gemacht werden; es wird zur besseren Interoperabilität allerdings nicht technisch verboten.\nVerwender müssen mindestens 45 Zeichen verarbeiten können."
+        "comment": "Mehrere Vornamen können durch Leerzeichen oder Bindestrich getrennt in einem Wert angegeben werden.\nVon der Wiederholung des given-Elemente SOLL kein Gebrauch gemacht werden; es wird zur besseren Interoperabilität allerdings nicht technisch verboten.\nVerwender müssen mindestens 45 Zeichen verarbeiten können."
       },
       {
         "id": "Patient.name:Name.prefix",
         "path": "Patient.name.prefix",
-        "definition": "Namensteile vor dem Vornamen, z.B. akademischer Titel.\nWenn dieses Attribut zur Angabe des akademischen Titels verwendet wird, ist die Erweiterung prefix-qualifier mit dem Wert AC (academic) verpflichtend anzugeben.\nMehrere Titel werden durch Leerzeichen getrennt angegeben. \nVerwender müssen mindestens 20 Zeichen verarbeiten können.",
+        "definition": "Namensteile vor dem Vornamen, z.B. akademischer Titel.\nWenn dieses Attribut zur Angabe des akademischen Titels verwendet wird, ist die Erweiterung prefix-qualifier mit dem Wert AC (academic) verpflichtend anzugeben.\nMehrere Titel werden durch Leerzeichen getrennt angegeben.\nVerwender müssen mindestens 20 Zeichen verarbeiten können.",
         "comment": "Beispiele zur Verwendung siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil."
       },
       {
@@ -183,7 +183,7 @@
       {
         "id": "Patient.birthDate",
         "path": "Patient.birthDate",
-        "definition": "Das Geburtsdatum des Versicherten ist in den VSD eine Pflichtangabe. \nPartielle Datumsangaben sind allerdings zulässig.",
+        "definition": "Das Geburtsdatum des Versicherten ist in den VSD eine Pflichtangabe.\nPartielle Datumsangaben sind allerdings zulässig.",
         "comment": "Hinweise insbesondere zur Angabe unvollständiger Datumswerte siehe [Geburtsdatum (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geburtsdatum)."
       },
       {
@@ -312,7 +312,7 @@
         "path": "Patient.address.country.extension",
         "sliceName": "anlage8",
         "short": "Länderkennzeichen nach DEÜV Anlage 8",
-        "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8. ",
+        "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8.",
         "comment": "Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.\nDie Kodierung nach DEÜV ist im GKV-Bereich eine Pflichtangabe, im PKV-Bereich ist sie optional.\nUm diese Vorgabe einer konditionalen Prüfung umzusetzen, sind die Invarianten VSDMCoverageGKV-address-* an der VSDMCoverageGKV-Struktur hinterlegt.\nDiese Invarianten erzwingen die Angabe des Länderkennzeichens nach DEÜV, sobald auf die Ressource, die die Adresse enthält, aus einem GKV-Versicherungsverhältnis referenziert wird.",
         "min": 0,
         "max": "1",
@@ -440,7 +440,7 @@
         "path": "Patient.address.country.extension",
         "sliceName": "anlage8",
         "short": "Länderkennzeichen nach DEÜV Anlage 8",
-        "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8. ",
+        "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8.",
         "comment": "Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.\nDie Kodierung nach DEÜV ist im GKV-Bereich eine Pflichtangabe, im PKV-Bereich ist sie optional.\nUm diese Vorgabe einer konditionalen Prüfung umzusetzen, sind die Invarianten VSDMCoverageGKV-address-* an der VSDMCoverageGKV-Struktur hinterlegt.\nDiese Invarianten erzwingen die Angabe des Länderkennzeichens nach DEÜV, sobald auf die Ressource, die die Adresse enthält, aus einem GKV-Versicherungsverhältnis referenziert wird.",
         "min": 0,
         "max": "1",

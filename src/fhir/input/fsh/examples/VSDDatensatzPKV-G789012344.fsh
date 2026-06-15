@@ -18,7 +18,7 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
 //  * Postleitzahl
 //  * Ort
 //  * Land
-  * Wohnsitzadresse 
+  * Wohnsitzadresse
     * Strasse = "Am Gänseweiher"
     * Hausnummer = "66"
 //  * Anschriftenzusatz (ohne)
@@ -27,17 +27,17 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
     * Land = #DE
   * TIMessengerID = "@f789012344:demo-ti-messenger"
 
-* Versicherungsdaten 
-  * Kostentraeger 
+* Versicherungsdaten
+  * Kostentraeger
     * Name = "Privatversicherung Venus"
     * Kostentraegerkennung = "168178900"
   * Versicherungsschutz
     * Beginn = "1974-02-12"
 //  * Ende (ohne)
 //* Beihilfe (ohne)
-//  * Beihilfeanspruch 
+//  * Beihilfeanspruch
 //  * QuotePKV
-  * Krankenhausleistungen 
+  * Krankenhausleistungen
     * Allgemein = 100
     * Zweibettzimmer = 0
     * Einbettzimmer = 0
@@ -47,6 +47,6 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
   * Sozialtarif = #B // Basistarif
   * Versichertenart = #VN
 //* Hinweis (ohne)
-//  * Hinweistext 
+//  * Hinweistext
 //  * Institutionstypen
 

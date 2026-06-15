@@ -19,7 +19,7 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
 //       * Ort
 //       * Postfach
 //       * Wohnsitzlaendercode
-    * StrassenAdresse 
+    * StrassenAdresse
       * Postleitzahl = "31135"
       * Ort = "Hildesheim"
       * Wohnsitzlaendercode = #D
@@ -27,8 +27,8 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
       * Hausnummer = "7c"
       * Anschriftenzusatz = "zweite Laube rechts"
 
-* Versicherungsdaten 
-  * Kostentraeger 
+* Versicherungsdaten
+  * Kostentraeger
     * Name = "Beispielkostenträger Hildesheim"
     * Kostentraegerlaendercode = #D
     * Kostentraegerkennung = "102249844"
@@ -41,11 +41,11 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
   * Zuzahlungsstatus
     * Status = true
     * GueltigBis = "2024-03-31"
-  * Versicherungsschutz 
+  * Versicherungsschutz
     * Beginn = "1953-01-01"
     * Ende = "2024-03-31"
   * DMP[+]
-    * DMP = #1 // Diabetes mellitus Typ 2 
+    * DMP = #1 // Diabetes mellitus Typ 2
     * Beginn = "2001-01-01"
     * Ende = "2024-03-31"
     * digitalesDMP = false
@@ -63,4 +63,4 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
 //  * Beginn
 //  * Ende
 //  * Art
-  * Versichertenart = #5 // Rentner und ihre Familienangehörigen 
+  * Versichertenart = #5 // Rentner und ihre Familienangehörigen

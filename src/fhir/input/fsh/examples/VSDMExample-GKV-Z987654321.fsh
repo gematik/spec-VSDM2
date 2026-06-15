@@ -89,7 +89,7 @@ Usage: #inline
   * extension[digitalesDMP].valueBoolean = true
 * extension[besonderePersonengruppe].valueCoding = #07 "SVA1" // "SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht"
 * extension[versichertenart].valueCoding = $csVersichertenartGKV#3 "Familienangehoerige"
-* extension[zuzahlungsstatus] 
+* extension[zuzahlungsstatus]
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = "2025-12-31"
 * extension[kostenerstattung]

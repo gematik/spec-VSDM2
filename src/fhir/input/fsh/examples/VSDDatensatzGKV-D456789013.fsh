@@ -14,12 +14,12 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
 //  * Vorsatzwort (ohne)
 //  * Namenszusatz (ohne)
     * Titel = "Dr. rer. nat."
-    * PostfachAdresse 
+    * PostfachAdresse
       * Postleitzahl = "64283"
       * Ort = "Darmstadt"
       * Postfach = "405060"
       * Wohnsitzlaendercode = #D
-    * StrassenAdresse 
+    * StrassenAdresse
       * Postleitzahl = "64297"
       * Ort = "Darmstadt"
       * Wohnsitzlaendercode = #D
@@ -27,8 +27,8 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
       * Hausnummer = "4-6"
 //    * Anschriftenzusatz (ohne)
 
-* Versicherungsdaten 
-  * Kostentraeger 
+* Versicherungsdaten
+  * Kostentraeger
     * Name = "Beispielkostenträger Darmstadt"
     * Kostentraegerlaendercode = #D
     * Kostentraegerkennung = "105266989"
@@ -39,13 +39,13 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
   * WOP = #46 // Hessen
   * BesonderePersonengruppe = #6 // SER (Soziales Entschädigungsrecht)
 //* Zuzahlungsstatus (ohne)
-//  * Status 
+//  * Status
 //  * GueltigBis
-  * Versicherungsschutz 
+  * Versicherungsschutz
     * Beginn = "2021-10-01"
 //  * Ende (ohne)
   * DMP
-    * DMP = #5 // Asthma bronchiale 
+    * DMP = #5 // Asthma bronchiale
     * Beginn = "2022-01-01"
 //  * Ende
     * digitalesDMP = false

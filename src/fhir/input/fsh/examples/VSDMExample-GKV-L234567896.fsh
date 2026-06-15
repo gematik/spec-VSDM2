@@ -58,8 +58,8 @@ Usage: #inline
 * id = $idVSDMCoverageGKV-L234567896
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.2-dev)
 
-* extension[WOP].valueCoding = $csWOP#17 "Niedersachsen" 
-* extension[zuzahlungsstatus] 
+* extension[WOP].valueCoding = $csWOP#17 "Niedersachsen"
+* extension[zuzahlungsstatus]
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = "2040-07-02"
 * extension[kostenerstattung]

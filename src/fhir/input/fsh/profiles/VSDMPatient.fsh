@@ -3,15 +3,15 @@ Parent: TIPatient
 Title: "Versicherter"
 Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0"
 
-// Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen. 
+// Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen.
 
 // Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
-* . 
+* .
   * ^short = "Versicherter im VSDM"
   * ^definition = """
       Der VSDMPatient bildet einen Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0 ab.
-      Der VSDMPatient ist vom zentralen TIPatient abgeleitet. 
+      Der VSDMPatient ist vom zentralen TIPatient abgeleitet.
       Der Ressource Server des VSDM stellt allerdings keinen FHIR Data Service im Sinne des Implementation Guide TI Common dar, so dass die meisten Anforderungen dieses IG auf den VSDMPatient nicht zutreffen.
       Dieser Sachverhalt wird in einer Folgeversion des IG klargestellt.
     """
@@ -20,7 +20,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
 * identifier[KVNR] 1..1 // MS bereits durch TIPatient vorgegeben
   * ^short = "Versichertennummer (KVNR)"
   * ^definition = """
-      Es wird der zehnstellig (unveränderliche) Teil der KVNR verwendet. 
+      Es wird der zehnstellig (unveränderliche) Teil der KVNR verwendet.
       Zur eindeutigen Identifikation muss genau eine KVNR angegeben werden.
     """
   * ^comment = """
@@ -86,7 +86,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
 // Zuordnung aus Versichertendaten -> Versicherter -> Vorname
 * name[Name].given // 1..* MS bereits durch TIPatient vorgegeben
   * ^comment = """
-      Mehrere Vornamen können durch Leerzeichen oder Bindestrich getrennt in einem Wert angegeben werden. 
+      Mehrere Vornamen können durch Leerzeichen oder Bindestrich getrennt in einem Wert angegeben werden.
       Von der Wiederholung des given-Elemente SOLL kein Gebrauch gemacht werden; es wird zur besseren Interoperabilität allerdings nicht technisch verboten.
       Verwender müssen mindestens 45 Zeichen verarbeiten können.
     """
@@ -96,7 +96,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
   * ^definition = """
       Namensteile vor dem Vornamen, z.B. akademischer Titel.
       Wenn dieses Attribut zur Angabe des akademischen Titels verwendet wird, ist die Erweiterung prefix-qualifier mit dem Wert AC (academic) verpflichtend anzugeben.
-      Mehrere Titel werden durch Leerzeichen getrennt angegeben. 
+      Mehrere Titel werden durch Leerzeichen getrennt angegeben.
       Verwender müssen mindestens 20 Zeichen verarbeiten können.
     """
   * ^comment = """
@@ -149,7 +149,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
 * birthDate // 1..1 MS bereits durch TIPatient vorgegeben
   * ^short = "Geburtsdatum"
   * ^definition = """
-      Das Geburtsdatum des Versicherten ist in den VSD eine Pflichtangabe. 
+      Das Geburtsdatum des Versicherten ist in den VSD eine Pflichtangabe.
       Partielle Datumsangaben sind allerdings zulässig.
     """
   * ^comment = """
@@ -157,7 +157,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
     """
 
 // Slicing der Adresse, um die geforderten Kardinalitäten festzulegen
-* address 
+* address
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "type"
   * ^slicing.rules = #open

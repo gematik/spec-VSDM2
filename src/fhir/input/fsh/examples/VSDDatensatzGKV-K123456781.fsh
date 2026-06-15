@@ -27,8 +27,8 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
 //    * Hausnummer
 //    * Anschriftenzusatz (ohne)
 
-* Versicherungsdaten 
-  * Kostentraeger 
+* Versicherungsdaten
+  * Kostentraeger
     * Name = "Beispielkostenträger Kassel"
     * Kostentraegerlaendercode = #D
     * Kostentraegerkennung = "105532787"
@@ -39,9 +39,9 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
   * WOP = #46 // Hessen
 //* BesonderePersonengruppe (ohne)
 //* Zuzahlungsstatus (ohne)
-//  * Status 
+//  * Status
 //  * GueltigBis
-  * Versicherungsschutz 
+  * Versicherungsschutz
     * Beginn = "1971-07-01"
 //  * Ende (ohne)
 //* DMP (ohne)
@@ -58,4 +58,4 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
     * Beginn = "2024-06-15"
 //  * Ende
     * Art = #2 // eingeschränkt
-  * Versichertenart = #5 // Rentner und ihre Familienangehörigen 
+  * Versichertenart = #5 // Rentner und ihre Familienangehörigen

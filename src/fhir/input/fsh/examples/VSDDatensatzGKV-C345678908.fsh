@@ -19,7 +19,7 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
 //    * Ort
 //    * Postfach
 //    * Wohnsitzlaendercode
-    * StrassenAdresse 
+    * StrassenAdresse
       * Postleitzahl = "09128"
       * Ort = "Chemnitz"
       * Wohnsitzlaendercode = #D
@@ -27,8 +27,8 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
       * Hausnummer = "3c"
       * Anschriftenzusatz = "zweites Hinterhaus links"
 
-* Versicherungsdaten 
-  * Kostentraeger 
+* Versicherungsdaten
+  * Kostentraeger
     * Name = "Beispielkostenträger Chemnitz"
     * Kostentraegerlaendercode = #D
     * Kostentraegerkennung = "107723372"
@@ -39,13 +39,13 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
   * WOP = #98 // Sachsen
 //* BesonderePersonengruppe (ohne)
 //* Zuzahlungsstatus (ohne)
-//  * Status 
+//  * Status
 //  * GueltigBis
-  * Versicherungsschutz 
+  * Versicherungsschutz
     * Beginn = "1979-06-11"
     * Ende = "2027-01-01"
   * DMP[+]
-    * DMP = #1 // Diabetes mellitus Typ 2 
+    * DMP = #1 // Diabetes mellitus Typ 2
     * Beginn = "2001-01-01"
 //  * Ende
     * digitalesDMP = false

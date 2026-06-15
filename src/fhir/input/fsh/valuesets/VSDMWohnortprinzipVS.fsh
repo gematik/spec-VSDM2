@@ -22,13 +22,13 @@ Description: "Wohnortprinzip im Versichertenstammdatenmanagement (VSDM) 2.0"
 * include $csWOP#93 "Thüringen"
 * include $csWOP#98 "Sachsen"
 
-// Die folgenden Codes aus dem Ausgangs-CodeSystem https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_ITA_WOP sind in der BMV-Ä-Vorgabetabelle nicht enthalten. 
+// Die folgenden Codes aus dem Ausgangs-CodeSystem https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_ITA_WOP sind in der BMV-Ä-Vorgabetabelle nicht enthalten.
 
 // Der folgende "Leerwert" ist für VSDM 2.0 nicht mehr notwendig.
 // * include $csWOP#00 "Dummy bei eGK"
 
 // Die folgenden Werte sind in der KVDT-Datensatzbeschreibung als "fusioniert, teilweise aber noch in Gebrauch (bspw. KVK-WOP)" markiert.
-// https://update.kbv.de/ita-update/Abrechnung/KBV_ITA_VGEX_Datensatzbeschreibung_KVDT.pdf 
+// https://update.kbv.de/ita-update/Abrechnung/KBV_ITA_VGEX_Datensatzbeschreibung_KVDT.pdf
 // * include $csWOP#47 "Koblenz"
 // * include $csWOP#48 "Rheinhessen"
 // * include $csWOP#49 "Pfalz"

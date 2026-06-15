@@ -3,11 +3,11 @@ Parent: ContactPoint
 Title: "TI-Messenger-ID"
 Description: "Matrix-ID (MXID) für TI-Messenger im Versichertenstammdatenmanagement (VSDM) 2.0"
 
-// Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen. 
+// Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen.
 
 // Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
-* . 
+* .
   * ^short = "TI-Messenger-ID"
   * ^definition = """
       Matrix-ID (MXID) für TI-Messenger im Versichertenstammdatenmanagement (VSDM) 2.0.

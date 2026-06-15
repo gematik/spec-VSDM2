@@ -137,7 +137,7 @@
         "id": "OperationOutcome.issue.diagnostics",
         "path": "OperationOutcome.issue.diagnostics",
         "short": "Diagnostik- und Lösungsmöglichkeiten",
-        "definition": "Dieses Feld liefert Hinweise zur Fehlerbehebung durch das Clientsystem in Anlehnung an Anforderung A_27014. \nDieser Text richtet sich primär an Entwickler und technische Betreuer des Clientsystems und soll dem Anwender in der Regel nicht zur Anzeige gebracht werden.",
+        "definition": "Dieses Feld liefert Hinweise zur Fehlerbehebung durch das Clientsystem in Anlehnung an Anforderung A_27014.\nDieser Text richtet sich primär an Entwickler und technische Betreuer des Clientsystems und soll dem Anwender in der Regel nicht zur Anzeige gebracht werden.",
         "comment": "Dieses Feld darf keine technischen Interna des Fachdienstes (stack traces o.ä.) enthalten.",
         "min": 1,
         "mustSupport": true

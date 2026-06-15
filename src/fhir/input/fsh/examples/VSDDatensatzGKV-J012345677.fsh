@@ -19,7 +19,7 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
       * Ort = "Baden-Baden"
       * Postfach = "98765"
       * Wohnsitzlaendercode = #D
-    * StrassenAdresse 
+    * StrassenAdresse
       * Postleitzahl = "77815"
       * Ort = "Baden-Baden"
       * Wohnsitzlaendercode = #D
@@ -27,8 +27,8 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
       * Hausnummer = "10d"
 //    * Anschriftenzusatz (ohne)
 
-* Versicherungsdaten 
-  * Kostentraeger 
+* Versicherungsdaten
+  * Kostentraeger
     * Name = "Beispielkostenträger Baden-Baden"
     * Kostentraegerlaendercode = #D
     * Kostentraegerkennung = "106877150"
@@ -39,9 +39,9 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
   * WOP = #52 // Baden-Württemberg
   * BesonderePersonengruppe = #9 // Empfänger von Gesundheitsleistungen nach §§ 4 und 6 des Asylbewerberleistungsgesetzes (AsylbLG)
 //* Zuzahlungsstatus (ohne)
-//  * Status 
+//  * Status
 //  * GueltigBis
-  * Versicherungsschutz 
+  * Versicherungsschutz
     * Beginn = "1964-05-01"
 //  * Ende (ohne)
   * DMP[+]
@@ -68,4 +68,4 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
     * Beginn = "2025-01-01"
     * Ende = "2025-12-31"
     * Art = #1 // vollständig
-  * Versichertenart = #5 // Rentner und ihre Familienangehörigen 
+  * Versichertenart = #5 // Rentner und ihre Familienangehörigen

@@ -57,7 +57,7 @@ Usage: #definition
     * code = #79015
     * display = "Die vom Clientsystem angefragte Profilversion wird nicht unterstützt."
     * target[+]
-      * code = #400 
+      * code = #400
       * display = "Bad Request"
       * equivalence = #wider //  target mapping is wider in meaning than the source concept.
 
@@ -129,6 +129,6 @@ Usage: #definition
     * code = #79402
     * display = "Der Inhalt des HTTP-Headers ZETA-PoPP-Token-Content weist Format- oder Inhaltsfehler auf."
     * target[+]
-      * code = #400 
+      * code = #400
       * display = "Bad Request"
       * equivalence = #wider //  target mapping is wider in meaning than the source concept.

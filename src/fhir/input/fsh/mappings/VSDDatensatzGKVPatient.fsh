@@ -26,10 +26,10 @@ Description: "Zuordnung der Versichertendaten des VSD-Datensatzes GKV zum FHIR-P
 
     * Geschlecht -> "VSDMPatient.gender"
       "Das Geschlecht wird auf die standardisierten FHIR-Werte abgebildet. Da damit nicht alle Werte abgebildet werden können, kommt eine Erweiterung zum Einsatz."
-    
+
     * Geschlecht -> "VSDMPatient.gender.extension:other-amtlich"
       "Diese Erweiterung nimmt die Geschlechtsangabe gemäß der geforderten Wertetabelle auf. Die Pflicht zur Angabe des Werts für GKV-Patienten wird durch die Invariante VSDMCoverageGKV-gender-1 abgebildet."
-    
+
     * Vorsatzwort -> "VSDMPatient.name:Name.family.extension:vorsatzwort"
       "Vorsatzwort zum Nachnamen. Wichtig: Hinweise zur Bildung des kombinierten Nachnamens beachten."
 
@@ -43,7 +43,7 @@ Description: "Zuordnung der Versichertendaten des VSD-Datensatzes GKV zum FHIR-P
       "Postfachadressen werden mit dem Typ \"postal\" gekennzeichnet."
 
       * Postleitzahl -> "VSDMPatient.address:PostfachAdresse.postalCode"
-        
+
       * Ort -> "VSDMPatient.address:PostfachAdresse.city"
 
       * Postfach -> "VSDMPatient.address:PostfachAdresse.line.extension:Postfach"
@@ -67,6 +67,6 @@ Description: "Zuordnung der Versichertendaten des VSD-Datensatzes GKV zum FHIR-P
 
       * Hausnummer -> "VSDMPatient.address:StrassenAdresse.line.extension:Hausnummer"
         "Hinweise zur Bildung der Adresszeilen beachten."
-      
+
       * Anschriftenzusatz -> "VSDMPatient.address:StrassenAdresse.line.extension:Adresszusatz"
         "Hinweise zur Bildung der Adresszeilen beachten."

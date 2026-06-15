@@ -13,8 +13,8 @@ Description: """
     """
   * Geburtsdatum 1..1 date "Geburtsdatum des Versicherten" """
       Gibt das Geburtsdatum der Person an.
-      Zumindest das Geburtsjahr ist immer anzugeben. 
-      Im Geburtstag oder im Geburtstag und im Geburtsmonat ist „00“ bzw. „0000“ zulässig, wenn der Geburtstag und der Geburtsmonat nicht zu ermitteln sind. 
+      Zumindest das Geburtsjahr ist immer anzugeben.
+      Im Geburtstag oder im Geburtstag und im Geburtsmonat ist „00“ bzw. „0000“ zulässig, wenn der Geburtstag und der Geburtsmonat nicht zu ermitteln sind.
     """
   * Vorname 1..1 string "Vorname des Versicherten" """
       Gibt den Vornamen der Person an.
@@ -24,7 +24,7 @@ Description: """
       Gibt den Nachnamen (Familiennamen) der Person an.
     """
   * Geschlecht 0..1 code "Geschlecht des Versicherten" """
-      Gibt das Geschlecht der Person an. 
+      Gibt das Geschlecht der Person an.
       Es werden die gesetzlich vorgegebenen Werte gemäß PStG (weiblich, männlich, divers, ohne Angabe) abgebildet.
     """
   * Vorsatzwort 0..1 string "Vorsatzwörter des Namens des Versicherten" """
@@ -52,10 +52,10 @@ Description: """
         Gibt die Postleitzahl der Strassen- oder Postfachadresse an.
       """
     * Ort 1..1 string "Ort der Postfachadresse" """
-        Gibt den Ort zur Postfachadresse an. 
+        Gibt den Ort zur Postfachadresse an.
       """
     * Land 1..1 code "Land der Postfachadresse" """
-        Gibt das Land zu der Postfachadresse an. 
+        Gibt das Land zu der Postfachadresse an.
         Es werden Landesangaben nach ISO 3166-1 verwendet.
       """
 
@@ -66,20 +66,20 @@ Description: """
       """
     * Hausnummer 0..1 string "Hausnummer der Wohnsitzadresse" """
         Gibt die Hausnummer in der Strasse der Person an.
-        Pflichtangabe soweit bekannt; wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen. 
+        Pflichtangabe soweit bekannt; wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.
       """
     * Anschriftenzusatz 0..1 string "Relevante Zusätze zur Anschrift" """
         Gibt die relevanten Zusätze zur Anschrift an.
         Als Anschriftenzusatz kann z. B. „Hinterhaus“ angegeben werden.
       """
     * Postleitzahl 0..1 string "Postleitzahl der Wohnsitzadresse" """
-        Gibt die Postleitzahl der Wohnsitzadresse an. 
+        Gibt die Postleitzahl der Wohnsitzadresse an.
       """
     * Ort 1..1 string "Ort der Wohnsitzadresse" """
-        Gibt den Ort zur Wohnsitzadresse an. 
+        Gibt den Ort zur Wohnsitzadresse an.
       """
     * Land 1..1 code "Land der Wohnsitzadresse" """
-        Gibt das Land zu der Wohnsitzadresse an. 
+        Gibt das Land zu der Wohnsitzadresse an.
         Es werden Landesangaben nach ISO 3166-1 verwendet.
       """
 
@@ -101,27 +101,27 @@ Description: """
       Wenn diese Struktur angegeben wird, muss mindestens Beginn- oder Endedatum angegeben werden.
     """
     * Beginn 0..1 date "Beginn des Versicherungsschutzes" """
-        Gibt den Beginn des Versicherungsschutzes des Versicherten bei dem angegebenen Kostenträger an. 
+        Gibt den Beginn des Versicherungsschutzes des Versicherten bei dem angegebenen Kostenträger an.
         Dieser Wert darf nicht vor dem Geburtsdatum liegen.
       """
     * Ende 0..1 date "Ende des Versicherungsschutzes" """
-        Gibt das Ende des Versicherungsschutzes des Versicherten bei dem angegebenen Kostenträger an. 
+        Gibt das Ende des Versicherungsschutzes des Versicherten bei dem angegebenen Kostenträger an.
       """
 
   * Beihilfe 0..1 BackboneElement "Beihilfeanspruch" """
-      Informationen für Versicherte mit Beihilfeanspruch. 
+      Informationen für Versicherte mit Beihilfeanspruch.
       Diese Struktur ist für Versicherte ohne Beihilfeanspruch nicht anzugeben.
     """
     * ^comment = "Hintergrundinformationen siehe https://www.pkv.de/wissen/private-krankenversicherung/leistungen-und-erstattung/privatversichert-im-beamtenverhaeltnis/"
     * Beihilfeanspruch 1..1 boolean "Versicherter mit Beihilfeanspruch" """
         Kennzeichnet einen Versicherten mit Beihilfeanspruch.
-        Dieses Kennzeichen ist anzugeben, sobald die Struktur Beihilfe erforderlich wird (notwendig, da die Beihilfequote nicht immer vorliegt). 
+        Dieses Kennzeichen ist anzugeben, sobald die Struktur Beihilfe erforderlich wird (notwendig, da die Beihilfequote nicht immer vorliegt).
       """
     * QuotePKV 0..1 unsignedInt "Quote PKV bei Beihilfe" """
         Prozentwert des über die Beihilfe hinaus in der PKV versicherten Anteils.
       """
       * ^comment = "Prozentwert (0..100)"
-    
+
   * Krankenhausleistungen 0..1 BackboneElement "Kostenübernahme für Krankenhausleistungen" """
       Informationen zur Kostenübernahme für Krankenhausleistungen.
     """
@@ -142,7 +142,7 @@ Description: """
       """
       * ^comment = "Prozentwert (0..100)"
     * Wahlarzt[x] 0..1 boolean or unsignedInt "Wahlärztliche Leistungen" """
-        Übernahme wahlärztlicher Leistungen.        
+        Übernahme wahlärztlicher Leistungen.
       """
       * ^comment = "Angabe als reines Kennzeichen (ja/nein) oder als Prozentwert (0..100) möglich."
     * Belegarzt[x] 0..1 boolean or unsignedInt "Belegärztliche Leistungen" """
@@ -170,7 +170,7 @@ Description: """
       Hinweise ohne Angabe einer Berufsgruppe sind für alle Leistungserbringer relevant.
     """
     * Hinweistext 1..1 markdown "Hinweistext" """
-        Hinweistext im Markdown-Format. 
+        Hinweistext im Markdown-Format.
         Der Hinweistext ist nicht zur maschinellen Verarbeitung vorgesehen, sondern muss dem Leistungserbringer lediglich angezeigt werden.
       """
     * Institutionstypen 0..* oid "betroffene LEI-Typen" """
@@ -178,7 +178,7 @@ Description: """
         Die Angabe erfolgt als Liste von professionOIDs gemäß gemSpec_OID Tabelle Tab_PKI_403-*.
         Die Verwendung anderer OIDs (insbesondere individueller Berufsgruppen) ist nicht zulässig.
         Wenn keine Institutionstypen angegeben sind oder das empfangende System den Filter nicht anzeigen kann, ist der Hinweistext sicherheitshalber anzuzeigen.
-      """ 
+      """
 
 
 

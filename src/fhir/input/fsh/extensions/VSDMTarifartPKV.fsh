@@ -5,7 +5,7 @@ Description: "Tarifart des PKV-Versicherten im Versichertenstammdatenmanagement 
 
 // Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
-* . 
+* .
   * ^short = "PKV-Tarifart"
   * ^definition = """
       Tarifart des PKV-Versicherten, inklusive Anwendung eines PKV-verbandseinheitlichen Tarifs mit Besonderheiten bezüglich der Leistungen und privatärztliche Abrechnungen.
