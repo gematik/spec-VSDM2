@@ -1,0 +1,41 @@
+name: Check for trailing whitespace in .fsh
+
+on:
+  push:
+    paths:
+      - '**.fsh'
+      - '.github/workflows/check-trailing-whitespace.yml'
+  pull_request:
+    paths:
+      - '**.fsh'
+      - '.github/workflows/check-trailing-whitespace.yml'
+
+jobs:
+  trailing-whitespace:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Find trailing whitespace in .fsh files
+        run: |
+          # List all .fsh files present
+          files=$(git ls-files '*.fsh' || true)
+
+          if [ -z "$files" ]; then
+            echo "No .fsh files found"
+            exit 0
+          fi
+
+          violations=$(echo "$files" | xargs -r grep -nP '[ \t]+$' || true)
+
+          if [ -n "$violations" ]; then
+            echo "Found trailing whitespace in the following lines:"
+            echo "$violations"
+            echo
+            echo "Please remove the trailing whitespace."
+            exit 1
+          else
+            echo "No trailing whitespac found in .fsh files."
+          fi
