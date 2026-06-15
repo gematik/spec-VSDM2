@@ -20,6 +20,9 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 ### Fehlerbehebung
 
+- Überflüssige Leerzeichen am Zeilenende der FSH-Dateien, die sich zum Teil auf die Ressourcen ausgewirkt haben, wurden entfernt.
+  ([issue 166](https://github.com/gematik/spec-VSDM2/issues/166))
+
 ### Security
 
 ## [1.0.1] - 2026-05-20
