@@ -71,7 +71,8 @@
         "path": "Patient.name.text",
         "short": "vollständiger zusammengesetzter Name",
         "definition": "Zur besseren Lesbarkeit sowie zur leichteren Verarbeitung für Systeme, die die einzelnen Namensbestandteile nicht getrennt benötigen, SOLL dieses Attribut den gesamten Namen mit Titel, Vorsatzwort und Namenszusätzen enthalten.\nDie Bildungsregel ist dabei [Titel] [Vornamen] [Namenszusätze] [Vorsatzworte] [Nachnamen].",
-        "comment": "Hinweise und Beispiele siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil"
+        "comment": "Hinweise und Beispiele siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil",
+        "mustSupport": true
       },
       {
         "id": "Patient.name:Name.family",
@@ -146,7 +147,8 @@
             }
           ],
           "rules": "open"
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "Patient.telecom:TIMessengerID",
@@ -162,7 +164,8 @@
               "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMContactPointTIM"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Patient.gender",
@@ -197,7 +200,8 @@
             }
           ],
           "rules": "open"
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "Patient.address:StrassenAdresse",
@@ -219,7 +223,8 @@
         "id": "Patient.address:StrassenAdresse.type",
         "path": "Patient.address.type",
         "min": 1,
-        "patternCode": "physical"
+        "patternCode": "physical",
+        "mustSupport": true
       },
       {
         "id": "Patient.address:StrassenAdresse.line",
@@ -359,7 +364,8 @@
         "id": "Patient.address:PostfachAdresse.type",
         "path": "Patient.address.type",
         "min": 1,
-        "patternCode": "postal"
+        "patternCode": "postal",
+        "mustSupport": true
       },
       {
         "id": "Patient.address:PostfachAdresse.line",

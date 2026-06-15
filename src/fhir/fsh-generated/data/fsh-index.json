@@ -389,7 +389,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMBundle.fsh",
     "startLine": 1,
-    "endLine": 54
+    "endLine": 55
   },
   {
     "outputFile": "StructureDefinition-VSDMContactPointTIM.json",
@@ -397,7 +397,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMContactPointTIM.fsh",
     "startLine": 1,
-    "endLine": 18
+    "endLine": 19
   },
   {
     "outputFile": "StructureDefinition-VSDMCoverageGKV.json",
@@ -405,7 +405,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverageGKV.fsh",
     "startLine": 1,
-    "endLine": 191
+    "endLine": 193
   },
   {
     "outputFile": "StructureDefinition-VSDMCoveragePKV.json",
@@ -413,7 +413,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoveragePKV.fsh",
     "startLine": 1,
-    "endLine": 89
+    "endLine": 91
   },
   {
     "outputFile": "StructureDefinition-VSDMDMPTeilnahme.json",
@@ -453,7 +453,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 194
+    "endLine": 196
   },
   {
     "outputFile": "StructureDefinition-VSDMPayorOrganization.json",

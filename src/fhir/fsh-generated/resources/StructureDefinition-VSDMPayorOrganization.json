@@ -59,7 +59,8 @@
           ],
           "rules": "open"
         },
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Organization.identifier:IKNR",
@@ -91,7 +92,9 @@
         "id": "Organization.address",
         "path": "Organization.address",
         "short": "Adresse des Kostenträgers",
-        "definition": "Adresse des Kostenträgers.\nDie meisten Adressfelder sind optional; verpflichtend ist die Angabe des Staats (Ländercode).\nHinweise zur Abbildung von Adressen und Beispiele siehe [Adresse](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Datentypen-Address.html) im deutschen Basisprofil."
+        "definition": "Adresse des Kostenträgers.\nDie meisten Adressfelder sind optional; verpflichtend ist die Angabe des Staats (Ländercode).\nHinweise zur Abbildung von Adressen und Beispiele siehe [Adresse](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Datentypen-Address.html) im deutschen Basisprofil.",
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Organization.address.country",

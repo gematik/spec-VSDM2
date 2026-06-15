@@ -13,6 +13,7 @@ Description: "Matrix-ID (MXID) für TI-Messenger im Versichertenstammdatenmanage
       Matrix-ID (MXID) für TI-Messenger im Versichertenstammdatenmanagement (VSDM) 2.0.
     """
 
+* system MS
 * system = $csContactPointSystem#url (exactly)
 * value 1..1 MS
 * value obeys VSDMContactPointTIM-mxid-1

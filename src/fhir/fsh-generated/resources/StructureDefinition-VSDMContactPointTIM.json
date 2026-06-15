@@ -49,7 +49,8 @@
       {
         "id": "ContactPoint.system",
         "path": "ContactPoint.system",
-        "fixedCode": "url"
+        "fixedCode": "url",
+        "mustSupport": true
       },
       {
         "id": "ContactPoint.value",

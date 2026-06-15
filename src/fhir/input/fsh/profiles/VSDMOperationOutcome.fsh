@@ -46,12 +46,12 @@ Description: "Strukturierte Fehlermeldung im Versichertenstammdatenmanagement (V
     * ^comment = """
         Für VSDM-spezifische Fehlermeldungen kann der Schweregrad anhand der ConceptMap VSDMTDSCodeIssueType abgeleitet werden.
       """
-  * details 1..1
+  * details 1..1 MS
     * ^short = "Fehlerbeschreibung"
     * ^definition = """
         Diese Struktur beschreibt die aufgetretene Fehlersituation.
       """
-    * coding 1..1
+    * coding 1..1 MS
     * coding from VSDMErrorcodeVS (required)
       * ^short = "Fehlercode aus den Wertetabellen gemäß Spezifikation"
       * ^definition = """
@@ -60,7 +60,7 @@ Description: "Strukturierte Fehlermeldung im Versichertenstammdatenmanagement (V
         """
       * system 1..1 MS
       * code 1..1 MS
-      * display
+      * display MS
         * ^short = "Meldungstext laut Katalog"
         * ^definition = """
             Dieses Feld nimmt den unverarbeiteten Meldungstext gemäß CodeSystem/ValueSet auf.

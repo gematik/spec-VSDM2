@@ -58,9 +58,11 @@ Description: "Angaben zum PKV-Versicherungsverhältnis im Versichertenstammdaten
     """
 
 // Versicherungsart (PKV)
+* type MS
 * type = $csVersicherungsart#PKV
 
 // Bezug zum Versicherten
+* beneficiary MS
 * beneficiary only Reference(VSDMPatient)
 
 // Zuordnung aus Versicherungsdaten -> Versicherungsschutz

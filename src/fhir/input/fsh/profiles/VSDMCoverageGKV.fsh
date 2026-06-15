@@ -142,9 +142,11 @@ Description: "Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdaten
   * valueCoding from $vsVersichertenartGKV
 
 // Versicherungsart (GKV)
+* type MS
 * type = $csVersicherungsart#GKV
 
 // Bezug zum Versicherten
+* beneficiary MS
 * beneficiary only Reference(VSDMPatient)
 
 // Zuordnung aus Versicherungsdaten -> Versicherungsschutz

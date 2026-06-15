@@ -19,6 +19,7 @@ Description: "Bundle zur Übermittlung der Ressourcen im Versichertenstammdatenm
     * ^definition = """
         Dieser Zeitpunkt gibt an, wann die Versichertenstammdaten zuletzt inhaltlich aktualisiert wurden.
       """
+* type MS
 * type = #collection (exactly)
   * ^comment = """
       Die im VSDM 2.0 übermittelten Versichertenstammdaten stellen nicht - wie bei anderen Diensten der Telematikinfrastruktur - ein zusammenhängendes [Dokument im Sinne der FHIR-Spezifikation](https://hl7.org/fhir/R4/documents.html) dar.
