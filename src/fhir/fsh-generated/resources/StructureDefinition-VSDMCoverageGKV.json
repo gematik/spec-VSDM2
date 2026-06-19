@@ -116,6 +116,21 @@
             "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV"
           }
         ]
+      },
+      {
+        "id": "Coverage.payor.reference",
+        "path": "Coverage.payor.reference",
+        "min": 1
+      },
+      {
+        "id": "Coverage.payor.identifier",
+        "path": "Coverage.payor.identifier",
+        "min": 1
+      },
+      {
+        "id": "Coverage.payor.display",
+        "path": "Coverage.payor.display",
+        "min": 1
       }
     ]
   }

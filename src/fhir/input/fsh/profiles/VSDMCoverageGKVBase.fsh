@@ -175,7 +175,7 @@ Description: "Basis-Angaben zum GKV-Versicherungsverhältnis im Versichertenstam
       Zur Kompatibilität mit den etablierten Profilen (z.B. ISIK) werden neben der Referenz innerhalb des Bundles auch der Identifier und der Name in der Referenz hinterlegt.
       Innerhalb des VSDM-Bundles werden die Kostenträger als VSDMPayorOrganization-Ressourcen übermittelt; der Verweis erfolgt über die reference-Angabe.
     """
-  * reference 1..1 MS
-  * identifier 1..1 MS
+  * reference MS
+  * identifier MS
   * identifier only IdentifierIknr
-  * display 1..1 MS
+  * display MS

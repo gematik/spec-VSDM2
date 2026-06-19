@@ -49,7 +49,7 @@ StructureDefinition-VSDDatensatzPKV.json                                VSDDaten
 StructureDefinition-VSDMBeihilfe.json                                   VSDMBeihilfe                                      Extension   extensions/VSDMBeihilfe.fsh                                    1 - 41
 StructureDefinition-VSDMBundle.json                                     VSDMBundle                                        Profile     profiles/VSDMBundle.fsh                                        1 - 55
 StructureDefinition-VSDMContactPointTIM.json                            VSDMContactPointTIM                               Profile     profiles/VSDMContactPointTIM.fsh                               1 - 19
-StructureDefinition-VSDMCoverageGKV.json                                VSDMCoverageGKV                                   Profile     profiles/VSDMCoverageGKV.fsh                                   1 - 35
+StructureDefinition-VSDMCoverageGKV.json                                VSDMCoverageGKV                                   Profile     profiles/VSDMCoverageGKV.fsh                                   1 - 38
 StructureDefinition-VSDMCoverageGKVBase.json                            VSDMCoverageGKVBase                               Profile     profiles/VSDMCoverageGKVBase.fsh                               1 - 181
 StructureDefinition-VSDMCoveragePKV.json                                VSDMCoveragePKV                                   Profile     profiles/VSDMCoveragePKV.fsh                                   1 - 91
 StructureDefinition-VSDMDMPTeilnahme.json                               VSDMDMPTeilnahme                                  Extension   extensions/VSDMDMPTeilnahme.fsh                                1 - 54

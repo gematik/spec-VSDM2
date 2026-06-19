@@ -33,6 +33,9 @@ Description: "Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdaten
 * payor 1..2 MS
   * obeys VSDMCoverageGKV-payor-1
   * obeys VSDMCoverageGKV-payor-2
+  * reference 1..1 MS
+  * identifier 1..1 MS
+  * display 1..1 MS
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
