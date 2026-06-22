@@ -11,6 +11,9 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 ### Änderung
 
+- Im CodeSystem VSDMTDSCodeCS wird für die Codes 79015 und 79016 jetzt ein Wert für das OperationOutcome-Element expression angegeben.
+  ([issue 163](https://github.com/gematik/spec-VSDM2/issues/163))
+
 ### Abkündigung
 
 ### Entfernung

@@ -100,7 +100,9 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
     """
   * ^property[+].code = #target
   * ^property[=].valueCode = #client
-  
+  * ^property[+].code = #expression
+  * ^property[=].valueString = "http.profileVersion"
+
 * #79016 "Der erforderliche Query-Parameter 'profileVersion' fehlt."
   * ^definition = """
       Das Clientsystem hat den obligatorischen Parameter 'profileVersion' bei der Abfrage nicht angegeben. 
@@ -110,7 +112,9 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
     """
   * ^property[+].code = #target
   * ^property[=].valueCode = #client
-  
+  * ^property[+].code = #expression
+  * ^property[=].valueString = "http.profileVersion"
+
 * #79030 "Der HTTP-Header '[header]' ist ungültig."
   * ^definition = """
       Der genannte HTTP-Header weist Formatfehler auf.
