@@ -19,7 +19,7 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
       * Ort = "Zwickau"
       * Postfach = "885522"
       * Wohnsitzlaendercode = #D
-    * StrassenAdresse 
+    * StrassenAdresse
       * Postleitzahl = "08066"
       * Ort = "Zwickau"
       * Wohnsitzlaendercode = #D
@@ -27,8 +27,8 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
       * Hausnummer = "99x"
       * Anschriftenzusatz = "zweites Nest rechter Ast"
 
-* Versicherungsdaten 
-  * Kostentraeger 
+* Versicherungsdaten
+  * Kostentraeger
     * Name = "Beispielkostenträger Leipzig"
     * Kostentraegerlaendercode = #D
     * Kostentraegerkennung = "108213958"
@@ -41,11 +41,11 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
   * Zuzahlungsstatus
     * Status = true
     * GueltigBis = "2025-12-31"
-  * Versicherungsschutz 
+  * Versicherungsschutz
     * Beginn = "2000-01-01"
     * Ende = "2029-12-31"
   * DMP[+]
-    * DMP = #1 // Diabetes mellitus Typ 2 
+    * DMP = #1 // Diabetes mellitus Typ 2
     * Beginn = "2001-01-01"
 //  * Ende
     * digitalesDMP = false

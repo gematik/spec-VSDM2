@@ -5,7 +5,7 @@
   "name": "VSDDatensatzGKV",
   "title": "Logisches Modell VSD-Datensatz GKV für VSDM 2.0",
   "status": "draft",
-  "description": "Fachliches Modell zur Beschreibung des VSD-Datensatzes für den Bereich der Gesetzlichen Krankenversicherung (GKV).\nDieses Modell setzt die Original-Angaben der BMV-Ä unverändert um. Es dient als Ausgangspunkt für die Mappings und ConceptSets, die die Abbildung auf FHIR-Ressourcen vornehmen.\nDie Modell-Elemente sind exakt in der Reihenfolge der Ausgangsvereinbarung aufgeführt. Hinweise zum Datenformat wurden in den Langtext der Beschreibung übertragen; der Kurztext wurde zur besseren Lesbarkeit angepasst.\nHinweise aus dem Originaldatensatz: \n  * TI-Messenger ID: Wird nicht aufgenommen, da keine rechtliche Grundlage existiert.\n  * Wahltarife: aktuell keine Abbildung im VSDM 2.0, aber BMV-Ä verständigen sich hierzu im Rahmen weiterer Beratungen (ggf. Protokollnotiz).",
+  "description": "Fachliches Modell zur Beschreibung des VSD-Datensatzes für den Bereich der Gesetzlichen Krankenversicherung (GKV).\nDieses Modell setzt die Original-Angaben der BMV-Ä unverändert um. Es dient als Ausgangspunkt für die Mappings und ConceptSets, die die Abbildung auf FHIR-Ressourcen vornehmen.\nDie Modell-Elemente sind exakt in der Reihenfolge der Ausgangsvereinbarung aufgeführt. Hinweise zum Datenformat wurden in den Langtext der Beschreibung übertragen; der Kurztext wurde zur besseren Lesbarkeit angepasst.\nHinweise aus dem Originaldatensatz:\n  * TI-Messenger ID: Wird nicht aufgenommen, da keine rechtliche Grundlage existiert.\n  * Wahltarife: aktuell keine Abbildung im VSDM 2.0, aber BMV-Ä verständigen sich hierzu im Rahmen weiterer Beratungen (ggf. Protokollnotiz).",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -32,7 +32,7 @@
         "id": "VSDDatensatzGKV",
         "path": "VSDDatensatzGKV",
         "short": "Logisches Modell VSD-Datensatz GKV für VSDM 2.0",
-        "definition": "Fachliches Modell zur Beschreibung des VSD-Datensatzes für den Bereich der Gesetzlichen Krankenversicherung (GKV).\nDieses Modell setzt die Original-Angaben der BMV-Ä unverändert um. Es dient als Ausgangspunkt für die Mappings und ConceptSets, die die Abbildung auf FHIR-Ressourcen vornehmen.\nDie Modell-Elemente sind exakt in der Reihenfolge der Ausgangsvereinbarung aufgeführt. Hinweise zum Datenformat wurden in den Langtext der Beschreibung übertragen; der Kurztext wurde zur besseren Lesbarkeit angepasst.\nHinweise aus dem Originaldatensatz: \n  * TI-Messenger ID: Wird nicht aufgenommen, da keine rechtliche Grundlage existiert.\n  * Wahltarife: aktuell keine Abbildung im VSDM 2.0, aber BMV-Ä verständigen sich hierzu im Rahmen weiterer Beratungen (ggf. Protokollnotiz)."
+        "definition": "Fachliches Modell zur Beschreibung des VSD-Datensatzes für den Bereich der Gesetzlichen Krankenversicherung (GKV).\nDieses Modell setzt die Original-Angaben der BMV-Ä unverändert um. Es dient als Ausgangspunkt für die Mappings und ConceptSets, die die Abbildung auf FHIR-Ressourcen vornehmen.\nDie Modell-Elemente sind exakt in der Reihenfolge der Ausgangsvereinbarung aufgeführt. Hinweise zum Datenformat wurden in den Langtext der Beschreibung übertragen; der Kurztext wurde zur besseren Lesbarkeit angepasst.\nHinweise aus dem Originaldatensatz:\n  * TI-Messenger ID: Wird nicht aufgenommen, da keine rechtliche Grundlage existiert.\n  * Wahltarife: aktuell keine Abbildung im VSDM 2.0, aber BMV-Ä verständigen sich hierzu im Rahmen weiterer Beratungen (ggf. Protokollnotiz)."
       },
       {
         "id": "VSDDatensatzGKV.Versichertendaten",
@@ -84,7 +84,7 @@
         "id": "VSDDatensatzGKV.Versichertendaten.Versicherter.Geburtsdatum",
         "path": "VSDDatensatzGKV.Versichertendaten.Versicherter.Geburtsdatum",
         "short": "Geburtsdatum des Versicherten",
-        "definition": "Gibt das Geburtsdatum der Person an.\nHinweis: Das Geburtsjahr MUSS immer gefüllt werden. Bei Inländern ist immer ein logisch richtiges Geburtsdatum anzugeben. \nBei Ausländern gilt folgendes: Zumindest das Geburtsjahr ist immer anzugeben. Im Geburtstag oder im Geburtstag und im Geburtsmonat ist bei Ausländern „00“ bzw. „0000“ zulässig, wenn der Geburtstag und der Geburtsmonat nicht zu ermitteln sind. \nTyp: AN",
+        "definition": "Gibt das Geburtsdatum der Person an.\nHinweis: Das Geburtsjahr MUSS immer gefüllt werden. Bei Inländern ist immer ein logisch richtiges Geburtsdatum anzugeben.\nBei Ausländern gilt folgendes: Zumindest das Geburtsjahr ist immer anzugeben. Im Geburtstag oder im Geburtstag und im Geburtsmonat ist bei Ausländern „00“ bzw. „0000“ zulässig, wenn der Geburtstag und der Geburtsmonat nicht zu ermitteln sind.\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
@@ -254,7 +254,7 @@
         "id": "VSDDatensatzGKV.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
         "path": "VSDDatensatzGKV.Versichertendaten.Versicherter.PostfachAdresse.Postleitzahl",
         "short": "Postleitzahl der Postfachadresse",
-        "definition": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an. Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. \nIn Verbindung mit dem Wohnsitzländercode \"\"D\"\" für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. \nSoweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. \nBei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.\nLänge: 10\nTyp: AN",
+        "definition": "Gibt die Postleitzahl der Strassen- oder Postfachadresse an. Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV.\nIn Verbindung mit dem Wohnsitzländercode \"\"D\"\" für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein.\nSoweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein.\nBei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.\nLänge: 10\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
@@ -273,7 +273,7 @@
         "id": "VSDDatensatzGKV.Versichertendaten.Versicherter.PostfachAdresse.Ort",
         "path": "VSDDatensatzGKV.Versichertendaten.Versicherter.PostfachAdresse.Ort",
         "short": "Ort der Postfachadresse",
-        "definition": "Gibt den Ort zur Strassen- und oder Postfachadresse an. \nSoweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein.\nAbweichung zur Festlegung in DEÜV (Feldlänge = 34)\nLänge: 40\nTyp: AN",
+        "definition": "Gibt den Ort zur Strassen- und oder Postfachadresse an.\nSoweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein.\nAbweichung zur Festlegung in DEÜV (Feldlänge = 34)\nLänge: 40\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
@@ -312,7 +312,7 @@
         "id": "VSDDatensatzGKV.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
         "path": "VSDDatensatzGKV.Versichertendaten.Versicherter.PostfachAdresse.Wohnsitzlaendercode",
         "short": "Land der Postfachadresse",
-        "definition": "Gibt das Land zu der Strassen- und oder Postfachadresse an. \nSoweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzländercode zu beiden Adressdaten vorhanden sein.\nAnlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp\nLänge: 3\nTyp: AN",
+        "definition": "Gibt das Land zu der Strassen- und oder Postfachadresse an.\nSoweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzländercode zu beiden Adressdaten vorhanden sein.\nAnlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp\nLänge: 3\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
@@ -371,7 +371,7 @@
         "id": "VSDDatensatzGKV.Versichertendaten.Versicherter.StrassenAdresse.Ort",
         "path": "VSDDatensatzGKV.Versichertendaten.Versicherter.StrassenAdresse.Ort",
         "short": "Ort der Strassenadresse",
-        "definition": "Gibt den Ort zur Strassen- und oder Postfachadresse an. \nSoweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein.\nAbweichung zur Festlegung in DEÜV (Feldlänge = 34)\nLänge: 40\nTyp: AN",
+        "definition": "Gibt den Ort zur Strassen- und oder Postfachadresse an.\nSoweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein.\nAbweichung zur Festlegung in DEÜV (Feldlänge = 34)\nLänge: 40\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
@@ -390,7 +390,7 @@
         "id": "VSDDatensatzGKV.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
         "path": "VSDDatensatzGKV.Versichertendaten.Versicherter.StrassenAdresse.Wohnsitzlaendercode",
         "short": "Land der Strassenadresse",
-        "definition": "Gibt das Land zu der Strassen- und oder Postfachadresse an. \nSoweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzländercode zu beiden Adressdaten vorhanden sein.\nAnlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp\nLänge: 3\nTyp: AN",
+        "definition": "Gibt das Land zu der Strassen- und oder Postfachadresse an.\nSoweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzländercode zu beiden Adressdaten vorhanden sein.\nAnlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp\nLänge: 3\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [
@@ -430,7 +430,7 @@
         "id": "VSDDatensatzGKV.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
         "path": "VSDDatensatzGKV.Versichertendaten.Versicherter.StrassenAdresse.Hausnummer",
         "short": "Hausnummer der Strassenadresse",
-        "definition": "Gibt die Hausnummer in der Strasse der Person an.\nPflichtangabe soweit bekannt, wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen. \nAnlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV findet sich nunmehr unter der Rubrik [Fehlerprüfungsverfahren - GKV-Datenaustausch](https://www.gkv-datenaustausch.de/arbeitgeber/deuev/fehlerpruefungsverfahren_1/fehlerpruefungsverfahren.jsp), Datensatz Meldungen (DSME).\nLänge: 9\nTyp: AN",
+        "definition": "Gibt die Hausnummer in der Strasse der Person an.\nPflichtangabe soweit bekannt, wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.\nAnlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV findet sich nunmehr unter der Rubrik [Fehlerprüfungsverfahren - GKV-Datenaustausch](https://www.gkv-datenaustausch.de/arbeitgeber/deuev/fehlerpruefungsverfahren_1/fehlerpruefungsverfahren.jsp), Datensatz Meldungen (DSME).\nLänge: 9\nTyp: AN",
         "min": 0,
         "max": "1",
         "type": [
@@ -659,7 +659,7 @@
         "id": "VSDDatensatzGKV.Versicherungsdaten.BesonderePersonengruppe",
         "path": "VSDDatensatzGKV.Versicherungsdaten.BesonderePersonengruppe",
         "short": "Zuordnung besondere Personengruppe",
-        "definition": "Gibt die Zugehörigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.\n4 = BSHG (Bundessozialhilfegesetz) § 264 SGB V, \n6 = SER (Soziales Entschädigungsrecht), \n7 = SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht: - Personen mit Wohnsitz im Inland, Abrechnung nach Aufwand, \n8 = SVA-Kennzeichnung, pauschal,\n9 = Empfänger von Gesundheitsleistungen nach §§ 4 und 6 des Asylbewerberleistungsgesetzes (AsylbLG)\nLänge: 2\nTyp: N",
+        "definition": "Gibt die Zugehörigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.\n4 = BSHG (Bundessozialhilfegesetz) § 264 SGB V,\n6 = SER (Soziales Entschädigungsrecht),\n7 = SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht: - Personen mit Wohnsitz im Inland, Abrechnung nach Aufwand,\n8 = SVA-Kennzeichnung, pauschal,\n9 = Empfänger von Gesundheitsleistungen nach §§ 4 und 6 des Asylbewerberleistungsgesetzes (AsylbLG)\nLänge: 2\nTyp: N",
         "min": 0,
         "max": "1",
         "type": [
@@ -699,7 +699,7 @@
         "id": "VSDDatensatzGKV.Versicherungsdaten.Zuzahlungsstatus.Status",
         "path": "VSDDatensatzGKV.Versicherungsdaten.Zuzahlungsstatus.Status",
         "short": "Versicherter von Zuzahlungspflicht befreit",
-        "definition": "Gibt an, ob für den Versicherten eine Befreiung von der Zuzahlungspflicht nach § 62 SGB V vorliegt.\t\n1 = von Zuzahlungspflicht befreit\nLänge: 1\nTyp: offen",
+        "definition": "Gibt an, ob für den Versicherten eine Befreiung von der Zuzahlungspflicht nach § 62 SGB V vorliegt.\n1 = von Zuzahlungspflicht befreit\nLänge: 1\nTyp: offen",
         "min": 1,
         "max": "1",
         "type": [
@@ -759,7 +759,7 @@
         "id": "VSDDatensatzGKV.Versicherungsdaten.Versicherungsschutz.Beginn",
         "path": "VSDDatensatzGKV.Versicherungsdaten.Versicherungsschutz.Beginn",
         "short": "Beginn des Versicherungsschutzes",
-        "definition": "Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem unter Klasse Kostenträger angegebenen Kostenträger an. \nTyp: ISO8601Date",
+        "definition": "Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem unter Klasse Kostenträger angegebenen Kostenträger an.\nTyp: ISO8601Date",
         "min": 1,
         "max": "1",
         "type": [
@@ -818,7 +818,7 @@
         "id": "VSDDatensatzGKV.Versicherungsdaten.DMP.DMP",
         "path": "VSDDatensatzGKV.Versicherungsdaten.DMP.DMP",
         "short": "Name des DMP-Programms",
-        "definition": "Gibt den Namen des DMP an; die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.\n1 = Diabetes mellitus Typ 2 \n2 = Brustkrebs \n3 = Koronare Herzkrankheit\n4 = Diabetes mellitus Typ 1 \n5 = Asthma bronchiale \n6 = COPD (chronic obstructive pulmonary disease)\n7 = Chronische Herzinsuffizienz\n8 = Depression\n9 = Rückenschmerz\n10 = Rheuma\n11 = Osteoporose\n12 = Adipositas - Erwachsene\nLänge: zu def.\nTyp: zu def.",
+        "definition": "Gibt den Namen des DMP an; die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.\n1 = Diabetes mellitus Typ 2\n2 = Brustkrebs\n3 = Koronare Herzkrankheit\n4 = Diabetes mellitus Typ 1\n5 = Asthma bronchiale\n6 = COPD (chronic obstructive pulmonary disease)\n7 = Chronische Herzinsuffizienz\n8 = Depression\n9 = Rückenschmerz\n10 = Rheuma\n11 = Osteoporose\n12 = Adipositas - Erwachsene\nLänge: zu def.\nTyp: zu def.",
         "min": 1,
         "max": "1",
         "type": [
@@ -1066,7 +1066,7 @@
         "id": "VSDDatensatzGKV.Versicherungsdaten.Versichertenart",
         "path": "VSDDatensatzGKV.Versicherungsdaten.Versichertenart",
         "short": "Art der Versicherung",
-        "definition": "1 = Mitglied\n3 = Familienversicherter\n5 = Rentner und ihre Familienangehörigen \nLänge: 1\nTyp: AN",
+        "definition": "1 = Mitglied\n3 = Familienversicherter\n5 = Rentner und ihre Familienangehörigen\nLänge: 1\nTyp: AN",
         "min": 1,
         "max": "1",
         "type": [

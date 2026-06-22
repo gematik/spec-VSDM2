@@ -19,7 +19,7 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
 //    * Ort
 //    * Postfach
 //    * Wohnsitzlaendercode
-    * StrassenAdresse 
+    * StrassenAdresse
       * Postleitzahl = "28211"
       * Ort = "Bremen"
       * Wohnsitzlaendercode = #D
@@ -27,8 +27,8 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
       * Hausnummer = "2a"
 //    * Anschriftenzusatz (ohne)
 
-* Versicherungsdaten 
-  * Kostentraeger 
+* Versicherungsdaten
+  * Kostentraeger
     * Name = "Beispielkostenträger Bremen"
     * Kostentraegerlaendercode = #D
     * Kostentraegerkennung = "103169760"
@@ -39,9 +39,9 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
   * WOP = #03 // Bremen
   * BesonderePersonengruppe = #4 // BSHG (Bundessozialhilfegesetz) § 264 SGB V
 //* Zuzahlungsstatus (ohne)
-//  * Status 
+//  * Status
 //  * GueltigBis
-  * Versicherungsschutz 
+  * Versicherungsschutz
     * Beginn = "2011-04-01"
     * Ende = "2024-12-31"
 //* DMP (ohne)

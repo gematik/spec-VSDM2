@@ -18,7 +18,7 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
 //  * Postleitzahl
 //  * Ort
 //  * Land
-  * Wohnsitzadresse 
+  * Wohnsitzadresse
     * Strasse = "Amselweg"
     * Hausnummer = "1"
 //  * Anschriftenzusatz (ohne)
@@ -27,17 +27,17 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
     * Land = #DE
   * TIMessengerID = "@a123456780:demo-ti-messenger"
 
-* Versicherungsdaten 
-  * Kostentraeger 
+* Versicherungsdaten
+  * Kostentraeger
     * Name = "Privatversicherung Pluto"
     * Kostentraegerkennung = "168112342"
   * Versicherungsschutz
     * Beginn = "2020-01-01"
 //  * Ende (ohne)
 //* Beihilfe (ohne)
-//  * Beihilfeanspruch 
+//  * Beihilfeanspruch
 //  * QuotePKV
-  * Krankenhausleistungen 
+  * Krankenhausleistungen
     * Allgemein = 100
     * Zweibettzimmer = 100
     * Einbettzimmer = 100
@@ -45,7 +45,7 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
     * WahlarztUnsignedInt = 100
     * BelegarztUnsignedInt = 100
 //* Sozialtarif (ohne)
-  * Versichertenart = #VN 
-  * Hinweis 
+  * Versichertenart = #VN
+  * Hinweis
     * Hinweistext = "Beihilfetaxe für Physio"
 //  * Institutionstypen (ohne)

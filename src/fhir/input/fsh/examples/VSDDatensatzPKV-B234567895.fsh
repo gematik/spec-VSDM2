@@ -18,7 +18,7 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
 //  * Postleitzahl
 //  * Ort
 //  * Land
-  * Wohnsitzadresse 
+  * Wohnsitzadresse
     * Strasse = "Buntspechtallee"
     * Hausnummer = "2a"
 //  * Anschriftenzusatz (ohne)
@@ -27,17 +27,17 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
     * Land = #DE
   * TIMessengerID = "@b234567895:demo-ti-messenger"
 
-* Versicherungsdaten 
-  * Kostentraeger 
+* Versicherungsdaten
+  * Kostentraeger
     * Name = "Privatversicherung Neptun"
     * Kostentraegerkennung = "168123458"
   * Versicherungsschutz
     * Beginn = "1980-01-01"
     * Ende = "2025-12-31"
 //* Beihilfe (ohne)
-//  * Beihilfeanspruch 
+//  * Beihilfeanspruch
 //  * QuotePKV
-  * Krankenhausleistungen 
+  * Krankenhausleistungen
     * Allgemein = 100
     * Zweibettzimmer = 100
 //  * Einbettzimmer (ohne)
@@ -45,7 +45,7 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
     * WahlarztUnsignedInt = 100
     * BelegarztUnsignedInt = 100
 //* Sozialtarif (ohne)
-  * Versichertenart = #VN 
+  * Versichertenart = #VN
 //* Hinweis (ohne)
-//  * Hinweistext 
+//  * Hinweistext
 //  * Institutionstypen

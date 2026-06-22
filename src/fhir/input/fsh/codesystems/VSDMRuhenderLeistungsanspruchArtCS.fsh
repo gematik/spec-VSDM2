@@ -6,8 +6,8 @@ Description: "Art des ruhenden Leistungsanspruchs im Versichertenstammdatenmanag
 * ^caseSensitive = true // hier nicht kritisch, aber vermeidet Meldung in der Validierung
 * ^content = #complete
 * ^purpose = """
-    Das Ruhen des Leistungsanspruchs im Bereich der GKV wird durch § 16 SGB V geregelt. 
-    Nach § 19 Abs. 3 BMV-Ä ist der Leistungsanspruch von Versicherten, die ihrer Verpflichtung zur Beitragszahlung nicht nachkommen, eingeschränkt (§ 16 Abs. 3a SGB V). 
+    Das Ruhen des Leistungsanspruchs im Bereich der GKV wird durch § 16 SGB V geregelt.
+    Nach § 19 Abs. 3 BMV-Ä ist der Leistungsanspruch von Versicherten, die ihrer Verpflichtung zur Beitragszahlung nicht nachkommen, eingeschränkt (§ 16 Abs. 3a SGB V).
     Die verbleibenden Absätze des § 16 SGB V legen die Rahmenbedingungen für ein vollständiges Ruhen des Leistungsanspruchs fest.
     Die von diesem CodeSystem definierten Werte wurden durch die gematik zur Einführung von VSDM 1 im Jahr 2011 festgelegt und werden hier für die Verwendung in FHIR-Profilen zugänglich gemacht.
   """

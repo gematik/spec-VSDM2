@@ -71,7 +71,7 @@
         "path": "Bundle.timestamp",
         "short": "Aktualisierungszeitpunkt (technisch)",
         "definition": "Dieser Zeitpunkt gibt an, wann das gesamte Bundle erstellt wurde.",
-        "comment": "Wenn der VSDM 2.0 Resource Server das gesamte Bundle speichert, darf dieser Zeitpunkt gleich der Angabe in meta.lastUpdated sein. \nWenn der Resource Server das Bundle bei jeder Anfrage neu erstellt, wird hier jeweils der aktuelle Erstellungszeitpunkt angegeben.",
+        "comment": "Wenn der VSDM 2.0 Resource Server das gesamte Bundle speichert, darf dieser Zeitpunkt gleich der Angabe in meta.lastUpdated sein.\nWenn der Resource Server das Bundle bei jeder Anfrage neu erstellt, wird hier jeweils der aktuelle Erstellungszeitpunkt angegeben.",
         "min": 1,
         "mustSupport": true
       },

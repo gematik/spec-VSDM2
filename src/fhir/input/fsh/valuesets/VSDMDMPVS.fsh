@@ -15,8 +15,8 @@ Description: "Disease-Management-Programm im Versichertenstammdatenmanagement (V
   """
 
 // Perspektivisch wäre es sinnvoll, wenn dieses ValueSet von der KBV (die auch das CodeSystem verantwortet) gepflegt gepflegt würde.
-// Dies ist (Stand 04.09.2025) nach KBV-interner Prüfung möglich, allerdings ist aus internen Gründen keine schnelle Entscheidung zu erwarten. 
-// Es ist für VSDM 2.0 unkritisch, mit einem eigenen ValueSet zu starten. 
+// Dies ist (Stand 04.09.2025) nach KBV-interner Prüfung möglich, allerdings ist aus internen Gründen keine schnelle Entscheidung zu erwarten.
+// Es ist für VSDM 2.0 unkritisch, mit einem eigenen ValueSet zu starten.
 // Ein späterer Austausch des ValueSets wäre KEIN breaking change.
 
 // Wert 00 = "nicht gesetzt" (ehemaliger Dummy-Leerwert für eGK) für VSDM 2 nicht sinnvoll

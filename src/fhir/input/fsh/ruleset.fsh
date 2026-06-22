@@ -1,5 +1,5 @@
 // ================================================================================================
-// 
+//
 //   gemeinsame Metadaten
 //
 RuleSet: Meta
@@ -37,7 +37,7 @@ RuleSet: Meta-Inst
 * date = 2026-05-20
 
 // ================================================================================================
-// 
+//
 //   Landesangabe in Adresse
 //
 RuleSet: Address-Country
@@ -68,10 +68,10 @@ RuleSet: Address-Country
       Um eine Abbildung ohne Informationsverlust zu ermöglichen, wird mit dem erweiterten ValueSet die Verwendung eines alternativen CodeSystem ermöglicht.
     """
   * valueCoding from VSDMISO3166VS (required)
-* extension[anlage8] 
+* extension[anlage8]
   * ^short = "Länderkennzeichen nach DEÜV Anlage 8"
   * ^definition = """
-      Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8. 
+      Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8.
     """
   * ^comment = """
       Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.

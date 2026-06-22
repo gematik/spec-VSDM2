@@ -424,7 +424,7 @@
         "id": "Coverage.period.start",
         "path": "Coverage.period.start",
         "short": "Beginn des Versicherungsschutzes",
-        "definition": "Gibt den Beginn des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an. ",
+        "definition": "Gibt den Beginn des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an.",
         "min": 1,
         "constraint": [
           {
@@ -441,7 +441,7 @@
         "id": "Coverage.period.end",
         "path": "Coverage.period.end",
         "short": "Ende des Versicherungsschutzes",
-        "definition": "Gibt das Ende des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an, wenn ein Endedatum festgelegt ist. ",
+        "definition": "Gibt das Ende des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an, wenn ein Endedatum festgelegt ist.",
         "comment": "Hier kann nicht das Ende der Gültigkeit einer konkreten eGK angegeben werden, weil der VSDM 2.0 Resource Server keine Kenntnis davon erlangt, welche konkrete eGK verwendet wurde.\nFür den Fall der Authentifikation mit einer elektronischen Identität liegt ohnehin kein eGK-Gültigkeitsdatum vor.",
         "constraint": [
           {

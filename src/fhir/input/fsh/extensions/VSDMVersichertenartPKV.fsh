@@ -5,7 +5,7 @@ Description: "Versichertenart (PKV) im Versichertenstammdatenmanagement (VSDM) 2
 
 // Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
-* . 
+* .
   * ^short = "Versichertenart"
   * ^definition = """
       Versichertenart (PKV) im Versichertenstammdatenmanagement (VSDM) 2.0.

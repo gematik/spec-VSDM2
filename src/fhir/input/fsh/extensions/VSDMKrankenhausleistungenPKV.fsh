@@ -5,7 +5,7 @@ Description: "Angaben zur Kostenübernahme von Krankenhausleistungen für PKV-Ve
 
 // Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
-* . 
+* .
   * ^short = "Krankenhausleistungen (PKV)"
   * ^definition = """
       Angaben zur Kostenübernahme von Krankenhausleistungen für PKV-Versicherte im Versichertenstammdatenmanagement (VSDM) 2.0
@@ -68,7 +68,7 @@ Description: "Angaben zur Kostenübernahme von Krankenhausleistungen für PKV-Ve
 * extension[wahlarzt]
   * ^short = "Wahlärztliche Leistungen"
   * ^definition = """
-      Übernahme wahlärztlicher Leistungen.        
+      Übernahme wahlärztlicher Leistungen.
     """
   * ^comment = """
       Angabe als reines Kennzeichen (ja/nein) oder als Prozentwert (0..100) möglich.
@@ -81,7 +81,7 @@ Description: "Angaben zur Kostenübernahme von Krankenhausleistungen für PKV-Ve
 * extension[belegarzt]
   * ^short = "Belegärztliche Leistungen"
   * ^definition = """
-      Übernahme belegärztlicher Leistungen.        
+      Übernahme belegärztlicher Leistungen.
     """
   * ^comment = """
       Angabe als reines Kennzeichen (ja/nein) oder als Prozentwert (0..100) möglich.

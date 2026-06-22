@@ -3,11 +3,11 @@ Parent: Bundle
 Title: "Versichertenstammdaten"
 Description: "Bundle zur Übermittlung der Ressourcen im Versichertenstammdatenmanagement (VSDM) 2.0"
 
-// Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen. 
+// Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen.
 
 // Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
-* . 
+* .
   * ^short = "Versichertenstammdaten"
   * ^definition = """
       Bundle zur Übermittlung der Ressourcen im Versichertenstammdatenmanagement (VSDM) 2.0
@@ -18,7 +18,7 @@ Description: "Bundle zur Übermittlung der Ressourcen im Versichertenstammdatenm
     * ^short = "Aktualisierungszeitpunkt (inhaltlich)"
     * ^definition = """
         Dieser Zeitpunkt gibt an, wann die Versichertenstammdaten zuletzt inhaltlich aktualisiert wurden.
-      """  
+      """
 * type = #collection (exactly)
   * ^comment = """
       Die im VSDM 2.0 übermittelten Versichertenstammdaten stellen nicht - wie bei anderen Diensten der Telematikinfrastruktur - ein zusammenhängendes [Dokument im Sinne der FHIR-Spezifikation](https://hl7.org/fhir/R4/documents.html) dar.
@@ -29,9 +29,9 @@ Description: "Bundle zur Übermittlung der Ressourcen im Versichertenstammdatenm
   * ^short = "Aktualisierungszeitpunkt (technisch)"
   * ^definition = """
       Dieser Zeitpunkt gibt an, wann das gesamte Bundle erstellt wurde.
-    """  
+    """
   * ^comment = """
-      Wenn der VSDM 2.0 Resource Server das gesamte Bundle speichert, darf dieser Zeitpunkt gleich der Angabe in meta.lastUpdated sein. 
+      Wenn der VSDM 2.0 Resource Server das gesamte Bundle speichert, darf dieser Zeitpunkt gleich der Angabe in meta.lastUpdated sein.
       Wenn der Resource Server das Bundle bei jeder Anfrage neu erstellt, wird hier jeweils der aktuelle Erstellungszeitpunkt angegeben.
     """
 
@@ -41,8 +41,8 @@ Description: "Bundle zur Übermittlung der Ressourcen im Versichertenstammdatenm
   * ^slicing.rules = #closed
 * entry contains
     VSDMPatient 1..1 and
-    VSDMCoverage 1..1 and 
-    VSDMPayorOrganization 1..2  
+    VSDMCoverage 1..1 and
+    VSDMPayorOrganization 1..2
 * entry[VSDMPatient] MS
   * resource 1..1 MS
   * resource only VSDMPatient

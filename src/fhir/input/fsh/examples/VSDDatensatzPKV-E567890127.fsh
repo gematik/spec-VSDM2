@@ -18,7 +18,7 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
     * Postleitzahl = "8055"
     * Ort = "Graz"
     * Land = #AT
-  * Wohnsitzadresse 
+  * Wohnsitzadresse
     * Strasse = "Elsterstraße"
     * Hausnummer = "5"
 //  * Anschriftenzusatz (ohne)
@@ -27,17 +27,17 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
     * Land = #DE
   * TIMessengerID = "@e567890127:demo-ti-messenger"
 
-* Versicherungsdaten 
-  * Kostentraeger 
+* Versicherungsdaten
+  * Kostentraeger
     * Name = "Privatversicherung Jupiter"
     * Kostentraegerkennung = "168156788"
   * Versicherungsschutz
     * Beginn = "2020-01-01"
 //  * Ende (ohne)
 //* Beihilfe (ohne)
-//  * Beihilfeanspruch 
+//  * Beihilfeanspruch
 //  * QuotePKV
-  * Krankenhausleistungen 
+  * Krankenhausleistungen
     * Allgemein = 100
     * Zweibettzimmer = 100
     * Einbettzimmer = 100
@@ -45,7 +45,7 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
     * WahlarztBoolean = false
     * BelegarztBoolean = false
   * Sozialtarif = #S // Standardtarif
-  * Versichertenart = #VN 
+  * Versichertenart = #VN
 //* Hinweis (ohne)
-//  * Hinweistext 
+//  * Hinweistext
 //  * Institutionstypen

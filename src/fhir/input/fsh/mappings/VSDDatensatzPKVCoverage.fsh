@@ -9,7 +9,7 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes PKV z
 
 * Versicherungsdaten
 
-  * Kostentraeger -> "VSDMCoveragePKV.payor:Hauptkostentraeger" 
+  * Kostentraeger -> "VSDMCoveragePKV.payor:Hauptkostentraeger"
     "Der Kostenträger wird als Referenz auf eine VSDMPayorOrganization abgebildet. Im PKV-Bereich gibt es keine Unterscheidung zwischen Haupt- und abrechnendem Kostenträger."
     * Name -> "VSDMPayorOrganization:Hauptkostentraeger.name"
     * Kostentraegerkennung -> "VSDMPayorOrganization:Hauptkostentraeger.identifier:IKNR"
@@ -24,7 +24,7 @@ Description: "Zuordnung der Versicherungsinformationen des VSD-Datensatzes PKV z
     * Beihilfeanspruch -> "VSDMCoveragePKV.extension:beihilfe.extension:anspruch"
     * QuotePKV -> "VSDMCoveragePKV.extension:beihilfe.extension:quote"
 
-  * Krankenhausleistungen 
+  * Krankenhausleistungen
     * Allgemein -> "VSDMCoveragePKV.extension:krankenhaus.extension:allgemein"
     * Zweibettzimmer -> "VSDMCoveragePKV.extension:krankenhaus.extension:zweibett"
     * Einbettzimmer -> "VSDMCoveragePKV.extension:krankenhaus.extension:einbett"

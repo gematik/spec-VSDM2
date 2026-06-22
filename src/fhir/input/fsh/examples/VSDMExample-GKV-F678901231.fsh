@@ -63,7 +63,7 @@ Usage: #inline
 
 * extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"
 * extension[besonderePersonengruppe].valueCoding = #08 "SVA2" // "SVA-Kennzeichnung, pauschal"
-* extension[zuzahlungsstatus] 
+* extension[zuzahlungsstatus]
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = "2026-09-30"
 * extension[ruhenderLeistungsanspruch]

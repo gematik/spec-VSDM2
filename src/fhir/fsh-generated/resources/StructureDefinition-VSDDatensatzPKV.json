@@ -71,7 +71,7 @@
         "id": "VSDDatensatzPKV.Versichertendaten.Geburtsdatum",
         "path": "VSDDatensatzPKV.Versichertendaten.Geburtsdatum",
         "short": "Geburtsdatum des Versicherten",
-        "definition": "Gibt das Geburtsdatum der Person an.\nZumindest das Geburtsjahr ist immer anzugeben. \nIm Geburtstag oder im Geburtstag und im Geburtsmonat ist „00“ bzw. „0000“ zulässig, wenn der Geburtstag und der Geburtsmonat nicht zu ermitteln sind. ",
+        "definition": "Gibt das Geburtsdatum der Person an.\nZumindest das Geburtsjahr ist immer anzugeben.\nIm Geburtstag oder im Geburtstag und im Geburtsmonat ist „00“ bzw. „0000“ zulässig, wenn der Geburtstag und der Geburtsmonat nicht zu ermitteln sind.",
         "min": 1,
         "max": "1",
         "type": [
@@ -136,7 +136,7 @@
         "id": "VSDDatensatzPKV.Versichertendaten.Geschlecht",
         "path": "VSDDatensatzPKV.Versichertendaten.Geschlecht",
         "short": "Geschlecht des Versicherten",
-        "definition": "Gibt das Geschlecht der Person an. \nEs werden die gesetzlich vorgegebenen Werte gemäß PStG (weiblich, männlich, divers, ohne Angabe) abgebildet.",
+        "definition": "Gibt das Geschlecht der Person an.\nEs werden die gesetzlich vorgegebenen Werte gemäß PStG (weiblich, männlich, divers, ohne Angabe) abgebildet.",
         "min": 0,
         "max": "1",
         "type": [
@@ -282,7 +282,7 @@
         "id": "VSDDatensatzPKV.Versichertendaten.Postfachadresse.Ort",
         "path": "VSDDatensatzPKV.Versichertendaten.Postfachadresse.Ort",
         "short": "Ort der Postfachadresse",
-        "definition": "Gibt den Ort zur Postfachadresse an. ",
+        "definition": "Gibt den Ort zur Postfachadresse an.",
         "min": 1,
         "max": "1",
         "type": [
@@ -301,7 +301,7 @@
         "id": "VSDDatensatzPKV.Versichertendaten.Postfachadresse.Land",
         "path": "VSDDatensatzPKV.Versichertendaten.Postfachadresse.Land",
         "short": "Land der Postfachadresse",
-        "definition": "Gibt das Land zu der Postfachadresse an. \nEs werden Landesangaben nach ISO 3166-1 verwendet.",
+        "definition": "Gibt das Land zu der Postfachadresse an.\nEs werden Landesangaben nach ISO 3166-1 verwendet.",
         "min": 1,
         "max": "1",
         "type": [
@@ -361,7 +361,7 @@
         "id": "VSDDatensatzPKV.Versichertendaten.Wohnsitzadresse.Hausnummer",
         "path": "VSDDatensatzPKV.Versichertendaten.Wohnsitzadresse.Hausnummer",
         "short": "Hausnummer der Wohnsitzadresse",
-        "definition": "Gibt die Hausnummer in der Strasse der Person an.\nPflichtangabe soweit bekannt; wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen. ",
+        "definition": "Gibt die Hausnummer in der Strasse der Person an.\nPflichtangabe soweit bekannt; wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.",
         "min": 0,
         "max": "1",
         "type": [
@@ -401,7 +401,7 @@
         "id": "VSDDatensatzPKV.Versichertendaten.Wohnsitzadresse.Postleitzahl",
         "path": "VSDDatensatzPKV.Versichertendaten.Wohnsitzadresse.Postleitzahl",
         "short": "Postleitzahl der Wohnsitzadresse",
-        "definition": "Gibt die Postleitzahl der Wohnsitzadresse an. ",
+        "definition": "Gibt die Postleitzahl der Wohnsitzadresse an.",
         "min": 0,
         "max": "1",
         "type": [
@@ -420,7 +420,7 @@
         "id": "VSDDatensatzPKV.Versichertendaten.Wohnsitzadresse.Ort",
         "path": "VSDDatensatzPKV.Versichertendaten.Wohnsitzadresse.Ort",
         "short": "Ort der Wohnsitzadresse",
-        "definition": "Gibt den Ort zur Wohnsitzadresse an. ",
+        "definition": "Gibt den Ort zur Wohnsitzadresse an.",
         "min": 1,
         "max": "1",
         "type": [
@@ -439,7 +439,7 @@
         "id": "VSDDatensatzPKV.Versichertendaten.Wohnsitzadresse.Land",
         "path": "VSDDatensatzPKV.Versichertendaten.Wohnsitzadresse.Land",
         "short": "Land der Wohnsitzadresse",
-        "definition": "Gibt das Land zu der Wohnsitzadresse an. \nEs werden Landesangaben nach ISO 3166-1 verwendet.",
+        "definition": "Gibt das Land zu der Wohnsitzadresse an.\nEs werden Landesangaben nach ISO 3166-1 verwendet.",
         "min": 1,
         "max": "1",
         "type": [
@@ -570,7 +570,7 @@
         "id": "VSDDatensatzPKV.Versicherungsdaten.Versicherungsschutz.Beginn",
         "path": "VSDDatensatzPKV.Versicherungsdaten.Versicherungsschutz.Beginn",
         "short": "Beginn des Versicherungsschutzes",
-        "definition": "Gibt den Beginn des Versicherungsschutzes des Versicherten bei dem angegebenen Kostenträger an. \nDieser Wert darf nicht vor dem Geburtsdatum liegen.",
+        "definition": "Gibt den Beginn des Versicherungsschutzes des Versicherten bei dem angegebenen Kostenträger an.\nDieser Wert darf nicht vor dem Geburtsdatum liegen.",
         "min": 0,
         "max": "1",
         "type": [
@@ -589,7 +589,7 @@
         "id": "VSDDatensatzPKV.Versicherungsdaten.Versicherungsschutz.Ende",
         "path": "VSDDatensatzPKV.Versicherungsdaten.Versicherungsschutz.Ende",
         "short": "Ende des Versicherungsschutzes",
-        "definition": "Gibt das Ende des Versicherungsschutzes des Versicherten bei dem angegebenen Kostenträger an. ",
+        "definition": "Gibt das Ende des Versicherungsschutzes des Versicherten bei dem angegebenen Kostenträger an.",
         "min": 0,
         "max": "1",
         "type": [
@@ -608,7 +608,7 @@
         "id": "VSDDatensatzPKV.Versicherungsdaten.Beihilfe",
         "path": "VSDDatensatzPKV.Versicherungsdaten.Beihilfe",
         "short": "Beihilfeanspruch",
-        "definition": "Informationen für Versicherte mit Beihilfeanspruch. \nDiese Struktur ist für Versicherte ohne Beihilfeanspruch nicht anzugeben.",
+        "definition": "Informationen für Versicherte mit Beihilfeanspruch.\nDiese Struktur ist für Versicherte ohne Beihilfeanspruch nicht anzugeben.",
         "comment": "Hintergrundinformationen siehe https://www.pkv.de/wissen/private-krankenversicherung/leistungen-und-erstattung/privatversichert-im-beamtenverhaeltnis/",
         "min": 0,
         "max": "1",
@@ -629,7 +629,7 @@
         "id": "VSDDatensatzPKV.Versicherungsdaten.Beihilfe.Beihilfeanspruch",
         "path": "VSDDatensatzPKV.Versicherungsdaten.Beihilfe.Beihilfeanspruch",
         "short": "Versicherter mit Beihilfeanspruch",
-        "definition": "Kennzeichnet einen Versicherten mit Beihilfeanspruch.\nDieses Kennzeichen ist anzugeben, sobald die Struktur Beihilfe erforderlich wird (notwendig, da die Beihilfequote nicht immer vorliegt). ",
+        "definition": "Kennzeichnet einen Versicherten mit Beihilfeanspruch.\nDieses Kennzeichen ist anzugeben, sobald die Struktur Beihilfe erforderlich wird (notwendig, da die Beihilfequote nicht immer vorliegt).",
         "min": 1,
         "max": "1",
         "type": [
@@ -761,7 +761,7 @@
         "id": "VSDDatensatzPKV.Versicherungsdaten.Krankenhausleistungen.Wahlarzt[x]",
         "path": "VSDDatensatzPKV.Versicherungsdaten.Krankenhausleistungen.Wahlarzt[x]",
         "short": "Wahlärztliche Leistungen",
-        "definition": "Übernahme wahlärztlicher Leistungen.        ",
+        "definition": "Übernahme wahlärztlicher Leistungen.",
         "comment": "Angabe als reines Kennzeichen (ja/nein) oder als Prozentwert (0..100) möglich.",
         "min": 0,
         "max": "1",
@@ -866,7 +866,7 @@
         "id": "VSDDatensatzPKV.Versicherungsdaten.Hinweis.Hinweistext",
         "path": "VSDDatensatzPKV.Versicherungsdaten.Hinweis.Hinweistext",
         "short": "Hinweistext",
-        "definition": "Hinweistext im Markdown-Format. \nDer Hinweistext ist nicht zur maschinellen Verarbeitung vorgesehen, sondern muss dem Leistungserbringer lediglich angezeigt werden.",
+        "definition": "Hinweistext im Markdown-Format.\nDer Hinweistext ist nicht zur maschinellen Verarbeitung vorgesehen, sondern muss dem Leistungserbringer lediglich angezeigt werden.",
         "min": 1,
         "max": "1",
         "type": [
