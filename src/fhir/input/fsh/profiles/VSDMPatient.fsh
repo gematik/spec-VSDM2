@@ -29,7 +29,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
   * ^requirements = "Die KVNR identifiziert den Versicherten, auf den sich die bereitgestellten Stammdaten beziehen."
 
 // Bildung aus den in der Folge spezifizierten Einzelwerten
-* name[Name].text
+* name[Name].text MS
   * ^short = "vollständiger zusammengesetzter Name"
   * ^definition = """
       Zur besseren Lesbarkeit sowie zur leichteren Verarbeitung für Systeme, die die einzelnen Namensbestandteile nicht getrennt benötigen, SOLL dieses Attribut den gesamten Namen mit Titel, Vorsatzwort und Namenszusätzen enthalten.
@@ -114,11 +114,11 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
       """
 
 // Slicing der Telekommunikationsdaten
-* telecom
+* telecom MS
   * ^slicing.discriminator.type = #profile
   * ^slicing.discriminator.path = "system"
   * ^slicing.rules = #open
-* telecom contains TIMessengerID 0..1
+* telecom contains TIMessengerID 0..1 MS
 
 // TI-Messenger-ID
 * telecom[TIMessengerID] only VSDMContactPointTIM
@@ -157,7 +157,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
     """
 
 // Slicing der Adresse, um die geforderten Kardinalitäten festzulegen
-* address
+* address MS
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "type"
   * ^slicing.rules = #open
@@ -166,6 +166,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
 // Zuordnung aus Versichertendaten -> Versicherter -> PostfachAdresse
 * address[PostfachAdresse] only AddressDeBasis // address-de-basis
 * address[PostfachAdresse] MS
+  * type MS
   * type = #postal
   * line MS
     * ^comment = """
@@ -180,6 +181,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
 // Zuordnung aus Versichertendaten -> Versicherter -> StrassenAdresse
 * address[StrassenAdresse] only AddressDeBasis // address-de-basis
 * address[StrassenAdresse] MS
+  * type MS
   * type = #physical
   * line MS
     * ^comment = """

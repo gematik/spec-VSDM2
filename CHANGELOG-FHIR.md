@@ -13,6 +13,8 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 - Im CodeSystem VSDMTDSCodeCS wird für die Codes 79015 und 79016 jetzt ein Wert für das OperationOutcome-Element expression angegeben.
   ([issue 163](https://github.com/gematik/spec-VSDM2/issues/163))
+- Die Kennzeichnung der Must Support-Elemente wurde an die Empfehlungen des HL7 Deutschland TC FHIR angepasst.
+  ([issue 168](https://github.com/gematik/spec-VSDM2/issues/168))
 
 ### Abkündigung
 

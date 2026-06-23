@@ -17,7 +17,7 @@ Description: "Angaben zum Kostenträger im Versichertenstammdatenmanagement (VSD
     """
 
 // Zuordnung aus Versicherungsdaten -> [Abrechnender]Kostentraeger -> Kostentraegerkennung
-* identifier
+* identifier MS
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "system"
   * ^slicing.rules = #open
@@ -37,7 +37,7 @@ Description: "Angaben zum Kostenträger im Versichertenstammdatenmanagement (VSD
     """
 
 // Zuordnung aus Versicherungsdaten -> [Abrechnender]Kostentraeger -> Kostentraegerlaendercode
-* address
+* address 1.. MS
   * ^short = "Adresse des Kostenträgers"
   * ^definition = """
       Adresse des Kostenträgers.

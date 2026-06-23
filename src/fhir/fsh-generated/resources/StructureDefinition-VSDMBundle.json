@@ -64,7 +64,8 @@
         "id": "Bundle.type",
         "path": "Bundle.type",
         "comment": "Die im VSDM 2.0 übermittelten Versichertenstammdaten stellen nicht - wie bei anderen Diensten der Telematikinfrastruktur - ein zusammenhängendes [Dokument im Sinne der FHIR-Spezifikation](https://hl7.org/fhir/R4/documents.html) dar.\nSie bestehen lediglich aus administrativen Daten, die zur Abbildung in FHIR auf mehrere miteinander verbundene Ressourcen verteilt sind.\nAus diesem Grund wird auf den Overhead eines Document-Bundles verzichtet und lediglich eine Collection verwendet.",
-        "fixedCode": "collection"
+        "fixedCode": "collection",
+        "mustSupport": true
       },
       {
         "id": "Bundle.timestamp",
