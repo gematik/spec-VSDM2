@@ -1,6 +1,6 @@
 <img align="right" width="200" height="37" src="./images/Gematik_Logo_Flag.png"/> <br/>
 
-# Spezifikation VSDM 2.0 FHIR-Profile und API
+# VSDM 2.0 Implementierungsleitfaden, FHIR-Profile und API
 
 ## Disclaimer
 Dieses Dokument beschreibt die für die Implementierung des Versicherungsstammdatenmanagements (VSDM) 2.0 erforderlichen Vorgaben. Weitere Vorgaben zur Implementierung der Anteile von PoPP und Zero Trust sind nicht Bestandteil dieses Dokuments. Die Implementierungsvorgaben für PoPP und Zero Trust erfolgt in den jeweiligen Implementierungsleitfäden der Produkttypen.
