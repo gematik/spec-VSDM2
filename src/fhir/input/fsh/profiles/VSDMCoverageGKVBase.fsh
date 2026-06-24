@@ -3,12 +3,12 @@ Parent: CoverageDeBasis
 Title: "Versicherungsdaten GKV (Basis)"
 Description: "Basis-Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0"
 
-// Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen. 
+// Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen.
 // Die Extensions sind in der Reihenfolge der Nennung der Attribute im logischen Modell aufgeführt.
 
 // Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
-* . 
+* .
   * ^short = "Versicherungsdaten GKV"
   * ^definition = """
       Basis-Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0.
@@ -16,7 +16,7 @@ Description: "Basis-Angaben zum GKV-Versicherungsverhältnis im Versichertenstam
       Es ist nicht zur direkten Nutzung in VSDM 2.0-Ressourcen vorgesehen.
     """
   * ^comment = """
-      Zur Harmonisierung der Strukturen mit dem deutschen Basisprofil werden getrennte Profile für GKV und PKV gebildet.      
+      Zur Harmonisierung der Strukturen mit dem deutschen Basisprofil werden getrennte Profile für GKV und PKV gebildet.
     """
 
 // Zuordnung aus Versicherungsdaten -> WOP
@@ -64,8 +64,8 @@ Description: "Basis-Angaben zum GKV-Versicherungsverhältnis im Versichertenstam
     """
   * ^requirements = """
       Befreiung des Versicherten von der Zuzahlungspflicht nach § 62 Abs. 3 SGB V.
-    """ 
-  * extension[status] MS 
+    """
+  * extension[status] MS
     * ^comment = """
         Wenn keine Zuzahlungsbefreiung vorliegt (der Wert also false wäre), entfällt die gesamte Extension.
       """
@@ -149,13 +149,13 @@ Description: "Basis-Angaben zum GKV-Versicherungsverhältnis im Versichertenstam
   * start 1.. MS
     * ^short = "Beginn des Versicherungsschutzes"
     * ^definition = """
-        Gibt den Beginn des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an. 
+        Gibt den Beginn des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an.
       """
     * obeys date-precision-1
   * end MS
     * ^short = "Ende des Versicherungsschutzes"
     * ^definition = """
-        Gibt das Ende des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an, wenn ein Endedatum festgelegt ist. 
+        Gibt das Ende des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an, wenn ein Endedatum festgelegt ist.
       """
     * ^comment = """
         Hier kann nicht das Ende der Gültigkeit einer konkreten eGK angegeben werden, weil der VSDM 2.0 Resource Server keine Kenntnis davon erlangt, welche konkrete eGK verwendet wurde.
