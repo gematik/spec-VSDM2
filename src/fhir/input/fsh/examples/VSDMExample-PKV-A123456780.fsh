@@ -48,7 +48,7 @@ Usage: #inline
   * city = "Aachen"
   * postalCode = "52070"
   * country = "Deutschland"
-    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
+    * extension[countryCodeISO].valueCoding = $csCountryCodeISO3166#DE
 
 
 Instance: VSDMCoveragePKV-A123456780

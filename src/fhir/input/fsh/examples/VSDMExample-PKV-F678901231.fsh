@@ -48,7 +48,7 @@ Usage: #inline
   * city = "Bern"
   * postalCode = "3013"
   * country = "Schweiz"
-    * extension[countryCode].valueCoding = $csCountryCodeISO3166#CH
+    * extension[countryCodeISO].valueCoding = $csCountryCodeISO3166#CH
 
 
 Instance: VSDMCoveragePKV-F678901231

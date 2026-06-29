@@ -45,7 +45,7 @@ Usage: #inline
   * city = "Fischbach"
   * postalCode = "7430"
   * country = "Luxemburg"
-    * extension[countryCode].valueCoding = $csCountryCodeISO3166#LU
+    * extension[countryCodeISO].valueCoding = $csCountryCodeISO3166#LU
     * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#L
 
 

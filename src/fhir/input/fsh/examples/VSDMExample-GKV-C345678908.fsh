@@ -48,7 +48,7 @@ Usage: #inline
   * city = "Chemnitz"
   * postalCode = "09128"
   * country = "Deutschland"
-    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
+    * extension[countryCodeISO].valueCoding = $csCountryCodeISO3166#DE
     * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#D
 
 

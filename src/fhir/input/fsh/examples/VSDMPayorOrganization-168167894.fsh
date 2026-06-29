@@ -11,4 +11,4 @@ Usage: #inline
 * name = "Privatversicherung Mars"
 * address
   * country = "Deutschland"
-    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
+    * extension[countryCodeISO].valueCoding = $csCountryCodeISO3166#DE

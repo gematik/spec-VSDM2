@@ -55,7 +55,7 @@ Usage: #inline
   * city = "Zwickau"
   * postalCode = "08066"
   * country = "Deutschland"
-    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
+    * extension[countryCodeISO].valueCoding = $csCountryCodeISO3166#DE
     * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#D
 * address[PostfachAdresse]
   * line[+] = "Postfach 885522"
@@ -63,7 +63,7 @@ Usage: #inline
   * city = "Zwickau"
   * postalCode = "08062"
   * country = "Deutschland"
-    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
+    * extension[countryCodeISO].valueCoding = $csCountryCodeISO3166#DE
     * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#D
 
 

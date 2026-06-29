@@ -28,6 +28,10 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 - Überflüssige Leerzeichen am Zeilenende der FSH-Dateien, die sich zum Teil auf die Ressourcen ausgewirkt haben, wurden entfernt.
   ([issue 166](https://github.com/gematik/spec-VSDM2/issues/166))
+- Das Slicing der Länder-Kodierungen in den Adressen der Patient- und Organization-Ressourcen wurde auf eine robustere Implementierung umgestellt.
+  Dadurch ändern sich zwar die Slice-Namen im Profil; auf die Inhalte der Ressourcen (Nutzdaten) hat das aber keinen Einfluss.
+  ([issue 175](https://github.com/gematik/spec-VSDM2/issues/175))
+
 
 ### Security
 

@@ -48,14 +48,14 @@ Usage: #inline
   * city = "Darmstadt"
   * postalCode = "64297"
   * country = "Deutschland"
-    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
+    * extension[countryCodeISO].valueCoding = $csCountryCodeISO3166#DE
 * address[PostfachAdresse]
   * line[+] = "Postfach 405060"
     * extension[Postfach].valueString = "Postfach 405060"
   * city = "Darmstadt"
   * postalCode = "64283"
   * country = "Deutschland"
-    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
+    * extension[countryCodeISO].valueCoding = $csCountryCodeISO3166#DE
 
 
 Instance: VSDMCoveragePKV-D456789013

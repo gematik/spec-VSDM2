@@ -47,7 +47,7 @@ Usage: #inline
   * city = "Luxembourg"
   * postalCode = "1120"
   * country = "Luxemburg"
-    * extension[countryCode].valueCoding = $csCountryCodeISO3166#LU
+    * extension[countryCodeISO].valueCoding = $csCountryCodeISO3166#LU
     * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#L
 
 
