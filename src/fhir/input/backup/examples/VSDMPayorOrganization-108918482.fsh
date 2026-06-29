@@ -10,7 +10,7 @@ Usage: #inline
 * name = "Beispielkostenträger Oberpfalz"
 * address
   * country = "Deutschland"
-    * extension[countryCodeISO].valueCoding = $csCountryCodeISO3166#DE
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
     * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#D
 
 // Beispiel zur Übertragung weitergehender (nicht verpflichtender) Informationen zum Kostenträger

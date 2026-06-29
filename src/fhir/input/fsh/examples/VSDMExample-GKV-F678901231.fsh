@@ -48,7 +48,7 @@ Usage: #inline
   * city = "Bern"
   * postalCode = "3013"
   * country = "Schweiz"
-    * extension[countryCodeISO].valueCoding = $csCountryCodeISO3166#CH
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#CH
     * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#CH
 
 

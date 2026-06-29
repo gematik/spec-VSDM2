@@ -48,7 +48,7 @@ Usage: #inline
   * city = "Stuttgart"
   * postalCode = "70180"
   * country = "Deutschland"
-    * extension[countryCodeISO].valueCoding = $csCountryCodeISO3166#DE
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
     * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#D
 
 

@@ -52,12 +52,12 @@ RuleSet: Address-Country
   * ^slicing.rules = #open
   * ^slicing.discriminator[+].type = #value
   * ^slicing.discriminator[=].path = "url"
-  * ^slicing.discriminator[+].type = #pattern
+  * ^slicing.discriminator[+].type = #value
   * ^slicing.discriminator[=].path = "value.ofType(Coding).system"
-* extension contains $extCodedString named countryCodeISO 0..1 MS and
+* extension contains $extCodedString named countryCode 0..1 MS and
                      $extCodedString named countryCodeExt 0..1 MS and
                      $extCodedString named anlage8 0..1 MS
-* extension[countryCodeISO]
+* extension[countryCode]
   * ^short = "Länderkennzeichen nach ISO 3166-1 (ISO)"
   * ^definition = """
       Kodierte Angabe des Länderkennzeichens nach ISO 3166-1 (offizieller Wertevorrat).

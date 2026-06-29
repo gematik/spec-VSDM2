@@ -11,7 +11,7 @@ Usage: #inline
 * name = "Privatversicherung Jupiter"
 * address
   * country = "Deutschland"
-    * extension[countryCodeISO].valueCoding = $csCountryCodeISO3166#DE
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
 
 // Beispiel zur Übertragung weitergehender (nicht verpflichtender) Informationen zum Kostenträger
 * contact[+]

@@ -48,7 +48,7 @@ Usage: #inline
   * city = "Darmstadt"
   * postalCode = "64297"
   * country = "Deutschland"
-    * extension[countryCodeISO].valueCoding = $csCountryCodeISO3166#DE
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
     * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#D
 * address[PostfachAdresse]
   * line[+] = "Postfach 405060"
@@ -56,7 +56,7 @@ Usage: #inline
   * city = "Darmstadt"
   * postalCode = "64283"
   * country = "Deutschland"
-    * extension[countryCodeISO].valueCoding = $csCountryCodeISO3166#DE
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
     * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#D
 
 

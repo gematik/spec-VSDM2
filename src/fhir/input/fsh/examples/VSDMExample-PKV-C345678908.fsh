@@ -48,7 +48,7 @@ Usage: #inline
   * city = "Chemnitz"
   * postalCode = "09128"
   * country = "Deutschland"
-    * extension[countryCodeISO].valueCoding = $csCountryCodeISO3166#DE
+    * extension[countryCode].valueCoding = $csCountryCodeISO3166#DE
 
 
 Instance: VSDMCoveragePKV-C345678908

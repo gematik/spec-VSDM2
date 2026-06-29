@@ -287,16 +287,16 @@
               "path": "url"
             },
             {
-              "type": "pattern",
+              "type": "value",
               "path": "value.ofType(Coding).system"
             }
           ]
         }
       },
       {
-        "id": "Patient.address:StrassenAdresse.country.extension:countryCodeISO",
+        "id": "Patient.address:StrassenAdresse.country.extension:countryCode",
         "path": "Patient.address.country.extension",
-        "sliceName": "countryCodeISO",
+        "sliceName": "countryCode",
         "short": "Länderkennzeichen nach ISO 3166-1 (ISO)",
         "definition": "Kodierte Angabe des Länderkennzeichens nach ISO 3166-1 (offizieller Wertevorrat).",
         "comment": "Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur [Kodierung der Landesangabe](https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html).\nDurch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.",
@@ -313,7 +313,7 @@
         "mustSupport": true
       },
       {
-        "id": "Patient.address:StrassenAdresse.country.extension:countryCodeISO.value[x]",
+        "id": "Patient.address:StrassenAdresse.country.extension:countryCode.value[x]",
         "path": "Patient.address.country.extension.value[x]",
         "binding": {
           "strength": "required",
@@ -321,7 +321,7 @@
         }
       },
       {
-        "id": "Patient.address:StrassenAdresse.country.extension:countryCodeISO.value[x].system",
+        "id": "Patient.address:StrassenAdresse.country.extension:countryCode.value[x].system",
         "path": "Patient.address.country.extension.value[x].system",
         "fixedUri": "urn:iso:std:iso:3166"
       },
@@ -461,16 +461,16 @@
               "path": "url"
             },
             {
-              "type": "pattern",
+              "type": "value",
               "path": "value.ofType(Coding).system"
             }
           ]
         }
       },
       {
-        "id": "Patient.address:PostfachAdresse.country.extension:countryCodeISO",
+        "id": "Patient.address:PostfachAdresse.country.extension:countryCode",
         "path": "Patient.address.country.extension",
-        "sliceName": "countryCodeISO",
+        "sliceName": "countryCode",
         "short": "Länderkennzeichen nach ISO 3166-1 (ISO)",
         "definition": "Kodierte Angabe des Länderkennzeichens nach ISO 3166-1 (offizieller Wertevorrat).",
         "comment": "Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur [Kodierung der Landesangabe](https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html).\nDurch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.",
@@ -487,7 +487,7 @@
         "mustSupport": true
       },
       {
-        "id": "Patient.address:PostfachAdresse.country.extension:countryCodeISO.value[x]",
+        "id": "Patient.address:PostfachAdresse.country.extension:countryCode.value[x]",
         "path": "Patient.address.country.extension.value[x]",
         "binding": {
           "strength": "required",
@@ -495,7 +495,7 @@
         }
       },
       {
-        "id": "Patient.address:PostfachAdresse.country.extension:countryCodeISO.value[x].system",
+        "id": "Patient.address:PostfachAdresse.country.extension:countryCode.value[x].system",
         "path": "Patient.address.country.extension.value[x].system",
         "fixedUri": "urn:iso:std:iso:3166"
       },
