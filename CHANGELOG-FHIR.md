@@ -21,6 +21,9 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
   ([issue 168](https://github.com/gematik/spec-VSDM2/issues/168))
 - Das Paket verwendet jetzt das deutsche Basisprofil in Version 1.6.0 als Abhängigkeit.  
   ([issue 177](https://github.com/gematik/spec-VSDM2/issues/177))
+- Zur Vermeidung/Behebung von Validierungsproblemen wird das Länderkennzeichen nach Anlage 8 DEÜV jetzt in einer eigenen Erweiterung abgelegt.
+  ACHTUNG: Dadurch ändert sich die technische Abbildung des Werts (keine inhaltliche Änderung.)
+  ([issue 175](https://github.com/gematik/spec-VSDM2/issues/175))
 
 ### Abkündigung
 

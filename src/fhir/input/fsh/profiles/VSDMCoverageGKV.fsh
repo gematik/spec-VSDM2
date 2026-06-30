@@ -51,12 +51,12 @@ Severity: #error
 
 Invariant: VSDMCoverageGKV-address-1
 Description: "Für GKV-Versicherte ist die Angabe des Länderkennzeichens nach DEÜV Anlage 8 in Adressen des Patienten erforderlich."
-Expression: "beneficiary.resolve().address.all(country.extension('http://hl7.org/fhir/StructureDefinition/iso21090-codedString').value.ofType(Coding).where(system = 'http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen').exists())"
+Expression: "beneficiary.resolve().address.all(country.extension('https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichenAnlage8').exists())"
 Severity: #error
 
 Invariant: VSDMCoverageGKV-address-2
 Description: "Für GKV-Versicherte ist die Angabe des Länderkennzeichens nach DEÜV Anlage 8 in Adressen des Kostenträgers erforderlich."
-Expression: "payor.all(resolve().address.all(country.extension('http://hl7.org/fhir/StructureDefinition/iso21090-codedString').value.ofType(Coding).where(system = 'http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen').exists()))"
+Expression: "payor.all(resolve().address.all(country.extension('https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichenAnlage8').exists()))"
 Severity: #error
 
 Invariant: VSDMCoverageGKV-payor-1

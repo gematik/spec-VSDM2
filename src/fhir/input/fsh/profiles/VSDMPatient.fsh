@@ -176,7 +176,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
   * city MS
   * postalCode MS
   * country MS
-    * insert Address-Country
+    * insert AddressDeBasis-Country
 
 // Zuordnung aus Versichertendaten -> Versicherter -> StrassenAdresse
 * address[StrassenAdresse] only AddressDeBasis // address-de-basis
@@ -193,4 +193,4 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
   * city MS
   * postalCode MS
   * country MS
-    * insert Address-Country
+    * insert AddressDeBasis-Country

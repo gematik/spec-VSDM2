@@ -432,6 +432,14 @@
     "endLine": 90
   },
   {
+    "outputFile": "StructureDefinition-VSDMLaenderkennzeichenAnlage8.json",
+    "fshName": "VSDMLaenderkennzeichenAnlage8",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMLaenderkennzeichenAnlage8.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
     "outputFile": "StructureDefinition-VSDMOperationOutcome.json",
     "fshName": "VSDMOperationOutcome",
     "fshType": "Profile",

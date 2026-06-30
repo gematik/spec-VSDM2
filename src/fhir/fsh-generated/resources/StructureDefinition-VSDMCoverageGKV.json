@@ -63,14 +63,14 @@
             "key": "VSDMCoverageGKV-address-1",
             "severity": "error",
             "human": "Für GKV-Versicherte ist die Angabe des Länderkennzeichens nach DEÜV Anlage 8 in Adressen des Patienten erforderlich.",
-            "expression": "beneficiary.resolve().address.all(country.extension('http://hl7.org/fhir/StructureDefinition/iso21090-codedString').value.ofType(Coding).where(system = 'http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen').exists())",
+            "expression": "beneficiary.resolve().address.all(country.extension('https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichenAnlage8').exists())",
             "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV"
           },
           {
             "key": "VSDMCoverageGKV-address-2",
             "severity": "error",
             "human": "Für GKV-Versicherte ist die Angabe des Länderkennzeichens nach DEÜV Anlage 8 in Adressen des Kostenträgers erforderlich.",
-            "expression": "payor.all(resolve().address.all(country.extension('http://hl7.org/fhir/StructureDefinition/iso21090-codedString').value.ofType(Coding).where(system = 'http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen').exists()))",
+            "expression": "payor.all(resolve().address.all(country.extension('https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichenAnlage8').exists()))",
             "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV"
           }
         ]

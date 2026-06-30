@@ -162,24 +162,11 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/StructureDefinition/iso21090-codedString"
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichenAnlage8"
             ]
           }
         ],
         "mustSupport": true
-      },
-      {
-        "id": "Organization.address.country.extension:anlage8.value[x]",
-        "path": "Organization.address.country.extension.value[x]",
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8"
-        }
-      },
-      {
-        "id": "Organization.address.country.extension:anlage8.value[x].system",
-        "path": "Organization.address.country.extension.value[x].system",
-        "fixedUri": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
       }
     ]
   }

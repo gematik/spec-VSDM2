@@ -270,38 +270,14 @@
       {
         "id": "Patient.address:StrassenAdresse.country.extension",
         "path": "Patient.address.country.extension",
-        "slicing": {
-          "rules": "open",
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            },
-            {
-              "type": "pattern",
-              "path": "value.ofType(Coding)"
-            }
-          ]
-        },
         "min": 1
       },
       {
         "id": "Patient.address:StrassenAdresse.country.extension:countryCode",
         "path": "Patient.address.country.extension",
         "sliceName": "countryCode",
-        "short": "Länderkennzeichen nach ISO 3166-1",
-        "definition": "Kodierte Angabe des Länderkennzeichens nach ISO 3166-1.",
         "comment": "Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur [Kodierung der Landesangabe](https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html).\nDurch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.\nIn der DEÜV gibt es allerdings Ländercodes, die sich nicht auf den zum Zeitpunkt der Veröffentlichung bestehenden Stand der ISO 3166-1 abbilden lassen.\nUm eine Abbildung ohne Informationsverlust zu ermöglichen, wird mit dem erweiterten ValueSet die Verwendung eines alternativen CodeSystem ermöglicht.",
         "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/iso21090-codedString"
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {
@@ -325,24 +301,11 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/StructureDefinition/iso21090-codedString"
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichenAnlage8"
             ]
           }
         ],
         "mustSupport": true
-      },
-      {
-        "id": "Patient.address:StrassenAdresse.country.extension:anlage8.value[x]",
-        "path": "Patient.address.country.extension.value[x]",
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8"
-        }
-      },
-      {
-        "id": "Patient.address:StrassenAdresse.country.extension:anlage8.value[x].system",
-        "path": "Patient.address.country.extension.value[x].system",
-        "fixedUri": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
       },
       {
         "id": "Patient.address:PostfachAdresse",
@@ -399,38 +362,14 @@
       {
         "id": "Patient.address:PostfachAdresse.country.extension",
         "path": "Patient.address.country.extension",
-        "slicing": {
-          "rules": "open",
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            },
-            {
-              "type": "pattern",
-              "path": "value.ofType(Coding)"
-            }
-          ]
-        },
         "min": 1
       },
       {
         "id": "Patient.address:PostfachAdresse.country.extension:countryCode",
         "path": "Patient.address.country.extension",
         "sliceName": "countryCode",
-        "short": "Länderkennzeichen nach ISO 3166-1",
-        "definition": "Kodierte Angabe des Länderkennzeichens nach ISO 3166-1.",
         "comment": "Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur [Kodierung der Landesangabe](https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html).\nDurch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.\nIn der DEÜV gibt es allerdings Ländercodes, die sich nicht auf den zum Zeitpunkt der Veröffentlichung bestehenden Stand der ISO 3166-1 abbilden lassen.\nUm eine Abbildung ohne Informationsverlust zu ermöglichen, wird mit dem erweiterten ValueSet die Verwendung eines alternativen CodeSystem ermöglicht.",
         "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/iso21090-codedString"
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {
@@ -454,24 +393,11 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/StructureDefinition/iso21090-codedString"
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichenAnlage8"
             ]
           }
         ],
         "mustSupport": true
-      },
-      {
-        "id": "Patient.address:PostfachAdresse.country.extension:anlage8.value[x]",
-        "path": "Patient.address.country.extension.value[x]",
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8"
-        }
-      },
-      {
-        "id": "Patient.address:PostfachAdresse.country.extension:anlage8.value[x].system",
-        "path": "Patient.address.country.extension.value[x].system",
-        "fixedUri": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
       }
     ]
   }
