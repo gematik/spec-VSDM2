@@ -115,8 +115,8 @@ Description: "Basis-Angaben zum GKV-Versicherungsverhältnis im Versichertenstam
     """
   * extension[art] MS
     * value[x] 1..1
-    * valueCoding from VSDMRuhenderLeistungsanspruchArtVS
-      * system = Canonical(VSDMRuhenderLeistungsanspruchArtCS) (exactly)
+    * valueCoding from $vsRuhenderLeistungsanspruch
+      * system = $csRuhenderLeistungsanspruch (exactly)
   * extension[dauer] MS
     * valuePeriod 1..1
       * start 1..1

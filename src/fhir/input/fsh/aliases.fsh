@@ -68,13 +68,21 @@ Alias: $csTarifartPKV = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PKV_TARI
 //     - VSDMCoverageGKV.extension[besonderePersonengruppe]
 Alias: $csPersonengruppe = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE
 
+// Art des ruhenden Leistungsanspruchs, verwendet für
+//   - VSDMCoverageGKV
+Alias: $csRuhenderLeistungsanspruch = http://fhir.de/CodeSystem/gkv/RuhenderLeistungsanspruchGKV
+
 // SNOMED Clinical Terms, verwendet für
 //   - VSDMDMPVS
 Alias: $csSCT = http://snomed.info/sct
 
 // Versichertenstatus / Versichertenart, verwendet für
-//   - Beispiel für VSDMCoverageGKV
+//   - VSDMCoverageGKV
 Alias: $csVersichertenartGKV = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS
+
+// Versichertenstatus / Versichertenart, verwendet für
+//   - VSDMCoveragePKV
+Alias: $csVersichertenartPKV = http://fhir.de/CodeSystem/pkv/Versichertenart
 
 // Versicherungsart, verwendet für:
 //   - Beispiel für VSDMCoverageGKV
@@ -113,6 +121,10 @@ Alias: $vsIssueType = http://hl7.org/fhir/ValueSet/issue-type
 //     - VSDMCoverageGKV.extension[besonderePersonengruppe]
 Alias: $vsPersonengruppe = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_PERSONENGRUPPE
 
+// Art des ruhenden Leistungsanspruchs, verwendet für
+//   - VSDMCoverageGKV
+Alias: $vsRuhenderLeistungsanspruch = http://fhir.de/ValueSet/gkv/RuhenderLeistungsanspruchGKV
+
 // PKV-Tarifart, verwendet für
 //   - VSDMTarifartPKV
 //     - VSDMCoveragePKV.extension[tarifart]
@@ -121,6 +133,10 @@ Alias: $vsTarifartPKV = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_PKV_TARIFF
 // Versichertenstatus / Versichertenart, verwendet für
 //   - Beispiel für VSDMCoverageGKV
 Alias: $vsVersichertenartGKV = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_VERSICHERTENSTATUS
+
+// Versichertenstatus / Versichertenart, verwendet für
+//   - VSDMCoveragePKV
+Alias: $vsVersichertenartPKV = http://fhir.de/ValueSet/pkv/Versichertenart
 
 // ================================================================================================
 //

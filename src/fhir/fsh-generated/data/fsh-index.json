@@ -208,28 +208,12 @@
     "endLine": 35
   },
   {
-    "outputFile": "CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json",
-    "fshName": "VSDMRuhenderLeistungsanspruchArtCS",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh",
-    "startLine": 1,
-    "endLine": 23
-  },
-  {
     "outputFile": "CodeSystem-VSDMTDSCodeCS.json",
     "fshName": "VSDMTDSCodeCS",
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMTDSCodeCS.fsh",
     "startLine": 1,
     "endLine": 203
-  },
-  {
-    "outputFile": "CodeSystem-VSDMVersichertenartPKVCS.json",
-    "fshName": "VSDMVersichertenartPKVCS",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMVersichertenartPKVCS.fsh",
-    "startLine": 1,
-    "endLine": 21
   },
   {
     "outputFile": "ConceptMap-VSDMDEUEVAnlage8ISO3166.json",
@@ -520,26 +504,10 @@
     "endLine": 7
   },
   {
-    "outputFile": "ValueSet-VSDMRuhenderLeistungsanspruchArtVS.json",
-    "fshName": "VSDMRuhenderLeistungsanspruchArtVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMRuhenderLeistungsanspruchArtVS.fsh",
-    "startLine": 1,
-    "endLine": 7
-  },
-  {
     "outputFile": "ValueSet-VSDMTDSCodeVS.json",
     "fshName": "VSDMTDSCodeVS",
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMBDECodeVS.fsh",
-    "startLine": 1,
-    "endLine": 7
-  },
-  {
-    "outputFile": "ValueSet-VSDMVersichertenartPKVVS.json",
-    "fshName": "VSDMVersichertenartPKVVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMVersichertenartPKVVS.fsh",
     "startLine": 1,
     "endLine": 7
   },

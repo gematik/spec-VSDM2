@@ -45,21 +45,11 @@
         "path": "Coverage",
         "short": "Versicherungsdaten GKV",
         "definition": "Basis-Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0.\nDieses Profil ist so gestaltet, dass es sowohl innerhalb von VSDM 2.0 als auch zur Abbildung der elektronischen Ersatzbescheinigung (EEB) verwendet werden kann.\nEs ist nicht zur direkten Nutzung in VSDM 2.0-Ressourcen vorgesehen.",
-        "comment": "Zur Harmonisierung der Strukturen mit dem deutschen Basisprofil werden getrennte Profile für GKV und PKV gebildet.      "
+        "comment": "Zur Harmonisierung der Strukturen mit dem deutschen Basisprofil werden getrennte Profile für GKV und PKV gebildet."
       },
       {
         "id": "Coverage.extension",
         "path": "Coverage.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
         "min": 2
       },
       {
@@ -290,7 +280,7 @@
         "min": 1,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMRuhenderLeistungsanspruchArtVS"
+          "valueSet": "http://fhir.de/ValueSet/gkv/RuhenderLeistungsanspruchGKV"
         }
       },
       {
@@ -382,7 +372,7 @@
         "id": "Coverage.period.start",
         "path": "Coverage.period.start",
         "short": "Beginn des Versicherungsschutzes",
-        "definition": "Gibt den Beginn des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an. ",
+        "definition": "Gibt den Beginn des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an.",
         "min": 1,
         "constraint": [
           {
@@ -399,7 +389,7 @@
         "id": "Coverage.period.end",
         "path": "Coverage.period.end",
         "short": "Ende des Versicherungsschutzes",
-        "definition": "Gibt das Ende des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an, wenn ein Endedatum festgelegt ist. ",
+        "definition": "Gibt das Ende des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an, wenn ein Endedatum festgelegt ist.",
         "comment": "Hier kann nicht das Ende der Gültigkeit einer konkreten eGK angegeben werden, weil der VSDM 2.0 Resource Server keine Kenntnis davon erlangt, welche konkrete eGK verwendet wurde.\nFür den Fall der Authentifikation mit einer elektronischen Identität liegt ohnehin kein eGK-Gültigkeitsdatum vor.",
         "constraint": [
           {

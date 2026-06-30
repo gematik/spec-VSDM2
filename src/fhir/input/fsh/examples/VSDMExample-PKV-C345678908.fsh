@@ -70,7 +70,7 @@ Usage: #inline
   * extension[anspruch].valueBoolean = true
   * extension[quote].valueUnsignedInt = 80
 * extension[tarifart].valueCoding = #01 "Individualtarif"
-* extension[versichertenart].valueCoding = VSDMVersichertenartPKVCS#VP "versicherte Person"
+* extension[versichertenart].valueCoding = $csVersichertenartPKV#VP "versicherte Person"
 * status = #active
 * type = $csVersicherungsart#PKV "private Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-PKV-C345678908

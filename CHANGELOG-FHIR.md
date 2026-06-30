@@ -19,10 +19,17 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
   ([issue 163](https://github.com/gematik/spec-VSDM2/issues/163))
 - Die Kennzeichnung der Must Support-Elemente wurde an die Empfehlungen des HL7 Deutschland TC FHIR angepasst.
   ([issue 168](https://github.com/gematik/spec-VSDM2/issues/168))
+- Das Paket verwendet jetzt das deutsche Basisprofil in Version 1.6.0 als Abhängigkeit.  
+  ([issue 177](https://github.com/gematik/spec-VSDM2/issues/177))
 
 ### Abkündigung
 
 ### Entfernung
+
+- Das CodeSystem VSDMRuhenderLeistungsanspruchArtCS und das zugehörige ValueSet VSDMRuhenderLeistungsanspruchArtVS wurden durch die inhaltsgleichen Versionen aus dem deutschen Basisprofil ersetzt.
+  ([issue 53](https://github.com/gematik/spec-VSDM2/issues/53))
+- Das CodeSystem VSDMVersichertenartPKVCS und das zugehörige ValueSet VSDMVersichertenartPKVVS wurden durch die inhaltsgleichen Versionen aus dem deutschen Basisprofil ersetzt.
+  ([issue 59](https://github.com/gematik/spec-VSDM2/issues/59))
 
 ### Fehlerbehebung
 
