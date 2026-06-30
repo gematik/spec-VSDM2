@@ -44,7 +44,6 @@
         "id": "Coverage",
         "path": "Coverage",
         "definition": "Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0.\nDieses Profil bildet die im VSDM 2.0-Bundle zu verwendenden Inhalte ab.",
-        "comment": "Zur Harmonisierung der Strukturen mit dem deutschen Basisprofil werden getrennte Profile für GKV und PKV gebildet.",
         "constraint": [
           {
             "key": "VSDMCoverageGKV-gender-1",
