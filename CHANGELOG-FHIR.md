@@ -26,6 +26,9 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 - Das CodeSystem VSDMRuhenderLeistungsanspruchArtCS und das zugehörige ValueSet VSDMRuhenderLeistungsanspruchArtVS wurden durch die inhaltsgleichen Versionen aus dem deutschen Basisprofil ersetzt.
   ([issue 53](https://github.com/gematik/spec-VSDM2/issues/53))
+- Das CodeSystem VSDMVersichertenartPKVCS und das zugehörige ValueSet VSDMVersichertenartPKVVS wurden durch die inhaltsgleichen Versionen aus dem deutschen Basisprofil ersetzt.
+  ([issue 59](https://github.com/gematik/spec-VSDM2/issues/59))
+
 ### Fehlerbehebung
 
 - Überflüssige Leerzeichen am Zeilenende der FSH-Dateien, die sich zum Teil auf die Ressourcen ausgewirkt haben, wurden entfernt.

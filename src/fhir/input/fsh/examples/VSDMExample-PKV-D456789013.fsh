@@ -73,7 +73,7 @@ Usage: #inline
   * extension[wahlarzt].valueBoolean = false
   * extension[belegarzt].valueBoolean = false
 * extension[tarifart].valueCoding = #01 "Individualtarif"
-* extension[versichertenart].valueCoding = VSDMVersichertenartPKVCS#VN "Versicherungsnehmer"
+* extension[versichertenart].valueCoding = $csVersichertenartPKV#VN "Versicherungsnehmer"
 * status = #active
 * type = $csVersicherungsart#PKV "private Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-PKV-D456789013

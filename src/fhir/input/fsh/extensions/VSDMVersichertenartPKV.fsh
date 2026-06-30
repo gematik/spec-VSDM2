@@ -15,6 +15,6 @@ Description: "Versichertenart (PKV) im Versichertenstammdatenmanagement (VSDM) 2
     """
 
 * value[x] only Coding
-* value[x] from VSDMVersichertenartPKVVS (required)
+* value[x] from $vsVersichertenartPKV (required)
   * system 1..
   * code 1..

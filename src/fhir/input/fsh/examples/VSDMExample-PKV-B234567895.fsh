@@ -71,7 +71,7 @@ Usage: #inline
   * extension[wahlarzt].valueUnsignedInt = 100
   * extension[belegarzt].valueUnsignedInt = 100
 * extension[tarifart].valueCoding = #01 "Individualtarif"
-* extension[versichertenart].valueCoding = VSDMVersichertenartPKVCS#VN "Versicherungsnehmer"
+* extension[versichertenart].valueCoding = $csVersichertenartPKV#VN "Versicherungsnehmer"
 * status = #active
 * type = $csVersicherungsart#PKV "private Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-PKV-B234567895

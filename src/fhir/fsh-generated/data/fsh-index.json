@@ -216,14 +216,6 @@
     "endLine": 203
   },
   {
-    "outputFile": "CodeSystem-VSDMVersichertenartPKVCS.json",
-    "fshName": "VSDMVersichertenartPKVCS",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMVersichertenartPKVCS.fsh",
-    "startLine": 1,
-    "endLine": 21
-  },
-  {
     "outputFile": "ConceptMap-VSDMDEUEVAnlage8ISO3166.json",
     "fshName": "VSDMDEUEVAnlage8ISO3166",
     "fshType": "Instance",
@@ -516,14 +508,6 @@
     "fshName": "VSDMTDSCodeVS",
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMBDECodeVS.fsh",
-    "startLine": 1,
-    "endLine": 7
-  },
-  {
-    "outputFile": "ValueSet-VSDMVersichertenartPKVVS.json",
-    "fshName": "VSDMVersichertenartPKVVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMVersichertenartPKVVS.fsh",
     "startLine": 1,
     "endLine": 7
   },

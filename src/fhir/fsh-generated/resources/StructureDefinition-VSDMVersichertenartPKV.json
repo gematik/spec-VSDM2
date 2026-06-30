@@ -73,7 +73,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMVersichertenartPKVVS"
+          "valueSet": "http://fhir.de/ValueSet/pkv/Versichertenart"
         }
       },
       {

@@ -77,8 +77,12 @@ Alias: $csRuhenderLeistungsanspruch = http://fhir.de/CodeSystem/gkv/RuhenderLeis
 Alias: $csSCT = http://snomed.info/sct
 
 // Versichertenstatus / Versichertenart, verwendet für
-//   - Beispiel für VSDMCoverageGKV
+//   - VSDMCoverageGKV
 Alias: $csVersichertenartGKV = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS
+
+// Versichertenstatus / Versichertenart, verwendet für
+//   - VSDMCoveragePKV
+Alias: $csVersichertenartPKV = http://fhir.de/CodeSystem/pkv/Versichertenart
 
 // Versicherungsart, verwendet für:
 //   - Beispiel für VSDMCoverageGKV
@@ -129,6 +133,10 @@ Alias: $vsTarifartPKV = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_PKV_TARIFF
 // Versichertenstatus / Versichertenart, verwendet für
 //   - Beispiel für VSDMCoverageGKV
 Alias: $vsVersichertenartGKV = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_VERSICHERTENSTATUS
+
+// Versichertenstatus / Versichertenart, verwendet für
+//   - VSDMCoveragePKV
+Alias: $vsVersichertenartPKV = http://fhir.de/ValueSet/pkv/Versichertenart
 
 // ================================================================================================
 //
