@@ -11,7 +11,7 @@ Description: "PKV-Versichertenart im Versichertenstammdatenmanagement (VSDM) 2.0
 // Das "neue" CodeSystem wird aber erst nach dem geplanten Veröffentlichungsdatum zur Verfügung stehen.
 // Um einen breaking change zu vermeiden, erhält dieses CodeSystem wie im TC FHIR am 27.11.2025 besprochen jetzt schon die finale canonical URL.
 // Nach Veröffentlichung des neuen CodeSystem (voraussichtlich in Q1/2026) und Aktualisierung der Paketabhängigkeiten kann dieses CodeSystem dann entfallen.
-* ^url = "http://fhir.de/ValueSet/pkv/Versichertenart"
+* ^url = "http://fhir.de/CodeSystem/pkv/Versichertenart"
 
 * #VN "Versicherungsnehmer"
   * ^definition = """

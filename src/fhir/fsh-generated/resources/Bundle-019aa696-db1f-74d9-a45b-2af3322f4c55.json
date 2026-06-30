@@ -137,7 +137,7 @@
             "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMVersichertenartPKV",
             "valueCoding": {
               "code": "VP",
-              "system": "http://fhir.de/ValueSet/pkv/Versichertenart",
+              "system": "http://fhir.de/CodeSystem/pkv/Versichertenart",
               "display": "versicherte Person"
             }
           },
