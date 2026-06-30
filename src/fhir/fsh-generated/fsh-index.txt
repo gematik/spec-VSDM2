@@ -52,7 +52,7 @@ StructureDefinition-VSDMCoverageGKV.json                                VSDMCove
 StructureDefinition-VSDMCoverageGKVBase.json                            VSDMCoverageGKVBase                               Profile     profiles/VSDMCoverageGKVBase.fsh                               1 - 181
 StructureDefinition-VSDMCoveragePKV.json                                VSDMCoveragePKV                                   Profile     profiles/VSDMCoveragePKV.fsh                                   1 - 91
 StructureDefinition-VSDMDMPTeilnahme.json                               VSDMDMPTeilnahme                                  Extension   extensions/VSDMDMPTeilnahme.fsh                                1 - 54
-StructureDefinition-VSDMHinweisPKV.json                                 VSDMHinweisPKV                                    Extension   extensions/VSDMHinweisPKV.fsh                                  1 - 39
+StructureDefinition-VSDMHinweisPKV.json                                 VSDMHinweisPKV                                    Extension   extensions/VSDMHinweisPKV.fsh                                  1 - 36
 StructureDefinition-VSDMISO3166Ergaenzung.json                          VSDMISO3166Ergaenzung                             Extension   extensions/VSDMISO3166Ergaenzung.fsh                           1 - 24
 StructureDefinition-VSDMKrankenhausleistungenPKV.json                   VSDMKrankenhausleistungenPKV                      Extension   extensions/VSDMKrankenhausleistungenPKV.fsh                    1 - 90
 StructureDefinition-VSDMLaenderkennzeichenAnlage8.json                  VSDMLaenderkennzeichenAnlage8                     Extension   extensions/VSDMLaenderkennzeichenAnlage8.fsh                   1 - 22

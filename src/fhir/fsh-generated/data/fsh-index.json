@@ -429,7 +429,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMHinweisPKV.fsh",
     "startLine": 1,
-    "endLine": 39
+    "endLine": 36
   },
   {
     "outputFile": "StructureDefinition-VSDMISO3166Ergaenzung.json",

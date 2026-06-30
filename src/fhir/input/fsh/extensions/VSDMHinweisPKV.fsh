@@ -33,7 +33,4 @@ Description: "Optionale Hinweise in Freitextform für PKV-Leistungserbringer im 
         Die Verwendung anderer OIDs (insbesondere individueller Berufsgruppen) ist nicht zulässig.
         Wenn keine Institutionstypen angegeben sind oder das empfangende System den Filter nicht anzeigen kann, ist der Hinweistext sicherheitshalber anzuzeigen.
   	"""
-  * ^comment = """
-      Prozentwert (0..100)
-    """
   * value[x] only oid

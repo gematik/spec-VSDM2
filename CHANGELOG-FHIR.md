@@ -42,6 +42,8 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 - Im CodeSystem VSDMVersichertenartPKVCS wurde die falsch angegebene Canonical URL (/ValueSet/ statt /CodeSystem/) korrigiert.
   ACHTUNG: Dadurch ändern sich die Inhalte der Nutzdaten-Ressourcen. Das ist allerdings unkritisch, da der PKV-Zweig des Profils noch nicht in Verwendung ist.
   ([issue 166](https://github.com/gematik/spec-VSDM2/issues/166))
+- In VSDMHinweisPKV und VSDMCoveragePKV wurden kleinere Dokumentationsfehler behoben.
+  ([issue 174](https://github.com/gematik/spec-VSDM2/issues/175))
 
 ### Security
 

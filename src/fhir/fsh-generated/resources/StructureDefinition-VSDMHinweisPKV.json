@@ -92,7 +92,6 @@
         "sliceName": "professionOID",
         "short": "betroffene LEI-Typen",
         "definition": "Leistungserbringer-Institutionstypen, für die der Hinweistext relevant ist.\nDie Angabe erfolgt als Liste von professionOIDs gemäß gemSpec_OID Tabelle Tab_PKI_403-*.\nDie Verwendung anderer OIDs (insbesondere individueller Berufsgruppen) ist nicht zulässig.\nWenn keine Institutionstypen angegeben sind oder das empfangende System den Filter nicht anzeigen kann, ist der Hinweistext sicherheitshalber anzuzeigen.",
-        "comment": "Prozentwert (0..100)",
         "min": 0,
         "max": "*",
         "mustSupport": true
