@@ -208,14 +208,6 @@
     "endLine": 35
   },
   {
-    "outputFile": "CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json",
-    "fshName": "VSDMRuhenderLeistungsanspruchArtCS",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh",
-    "startLine": 1,
-    "endLine": 23
-  },
-  {
     "outputFile": "CodeSystem-VSDMTDSCodeCS.json",
     "fshName": "VSDMTDSCodeCS",
     "fshType": "CodeSystem",
@@ -516,14 +508,6 @@
     "fshName": "VSDMNamenszusatzVS",
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMNamenszusatzVS.fsh",
-    "startLine": 1,
-    "endLine": 7
-  },
-  {
-    "outputFile": "ValueSet-VSDMRuhenderLeistungsanspruchArtVS.json",
-    "fshName": "VSDMRuhenderLeistungsanspruchArtVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMRuhenderLeistungsanspruchArtVS.fsh",
     "startLine": 1,
     "endLine": 7
   },

@@ -280,7 +280,7 @@
         "min": 1,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMRuhenderLeistungsanspruchArtVS"
+          "valueSet": "http://fhir.de/ValueSet/gkv/RuhenderLeistungsanspruchGKV"
         }
       },
       {

@@ -68,6 +68,10 @@ Alias: $csTarifartPKV = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PKV_TARI
 //     - VSDMCoverageGKV.extension[besonderePersonengruppe]
 Alias: $csPersonengruppe = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE
 
+// Art des ruhenden Leistungsanspruchs, verwendet für
+//   - VSDMCoverageGKV
+Alias: $csRuhenderLeistungsanspruch = http://fhir.de/CodeSystem/gkv/RuhenderLeistungsanspruchGKV
+
 // SNOMED Clinical Terms, verwendet für
 //   - VSDMDMPVS
 Alias: $csSCT = http://snomed.info/sct
@@ -112,6 +116,10 @@ Alias: $vsIssueType = http://hl7.org/fhir/ValueSet/issue-type
 //   - VSDMBesonderePersonengruppeVS
 //     - VSDMCoverageGKV.extension[besonderePersonengruppe]
 Alias: $vsPersonengruppe = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_PERSONENGRUPPE
+
+// Art des ruhenden Leistungsanspruchs, verwendet für
+//   - VSDMCoverageGKV
+Alias: $vsRuhenderLeistungsanspruch = http://fhir.de/ValueSet/gkv/RuhenderLeistungsanspruchGKV
 
 // PKV-Tarifart, verwendet für
 //   - VSDMTarifartPKV

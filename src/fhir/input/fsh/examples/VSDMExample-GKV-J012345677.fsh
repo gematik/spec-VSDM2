@@ -81,7 +81,7 @@ Usage: #inline
   * extension[zeitraum].valuePeriod.start = "2003-03-13"
   * extension[digitalesDMP].valueBoolean = false
 * extension[ruhenderLeistungsanspruch]
-  * extension[art].valueCoding = VSDMRuhenderLeistungsanspruchArtCS#1 "vollständig"
+  * extension[art].valueCoding = $csRuhenderLeistungsanspruch#1 "vollständig"
   * extension[dauer].valuePeriod
     * start = "2025-01-01"
     * end = "2025-12-31"
