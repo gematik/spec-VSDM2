@@ -2,8 +2,8 @@
   "resourceType": "ConceptMap",
   "id": "VSDMDEUEVAnlage8ISO3166",
   "url": "https://gematik.de/fhir/vsdm2/ConceptMap/VSDMDEUEVAnlage8ISO3166",
-  "title": "DEÜV Anlage 8 zu ISO 3166-1 (erweitert)",
-  "description": "Ermittlung des (temporären) Ländercodes nach ISO 3166-1 aus dem Ländercode nach DEÜV Anlage 8",
+  "title": "DEÜV Anlage 8 zu ISO 3166-1",
+  "description": "Ermittlung des Ländercodes nach ISO 3166-1 aus dem Ländercode nach DEÜV Anlage 8",
   "status": "active",
   "experimental": false,
   "version": "1.0.2-dev",
@@ -31,9 +31,9 @@
     }
   ],
   "date": "2026-05-20",
-  "purpose": "Diese ConceptMap ordnet den Ländercodes aus der DEÜV Anlage 8 die korrespondierenden Ländercodes nach ISO 3166-1 zu.\nWo keine offiziellen Ländercodes verfügbar sind, werden temporäre Codes aus einem lokalen CodeSystem verwendet.",
+  "purpose": "Diese ConceptMap ordnet den Ländercodes aus der DEÜV Anlage 8 die korrespondierenden offiziellen Ländercodes nach ISO 3166-1 zu.",
   "sourceUri": "https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8",
-  "targetUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMISO3166VS|1.0.2-dev",
+  "targetUri": "http://hl7.org/fhir/ValueSet/iso3166-1-2",
   "group": [
     {
       "source": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
@@ -2785,34 +2785,6 @@
             {
               "code": "CY",
               "display": "Cyprus",
-              "equivalence": "equal"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
-      "target": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMISO3166ErgaenzungCS|1.0.2-dev",
-      "element": [
-        {
-          "code": "KOS",
-          "display": "Kosovo",
-          "target": [
-            {
-              "code": "XK",
-              "display": "Kosovo, Republic of",
-              "equivalence": "equal"
-            }
-          ]
-        },
-        {
-          "code": "CP",
-          "display": "Clipperton",
-          "target": [
-            {
-              "code": "CP",
-              "display": "Clipperton",
               "equivalence": "equal"
             }
           ]

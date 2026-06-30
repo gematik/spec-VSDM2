@@ -22,7 +22,8 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 - Das Paket verwendet jetzt das deutsche Basisprofil in Version 1.6.0 als Abhängigkeit.  
   ([issue 177](https://github.com/gematik/spec-VSDM2/issues/177))
 - Zur Vermeidung/Behebung von Validierungsproblemen wird das Länderkennzeichen nach Anlage 8 DEÜV jetzt in einer eigenen Erweiterung abgelegt.
-  ACHTUNG: Dadurch ändert sich die technische Abbildung des Werts (keine inhaltliche Änderung.)
+  Außerdem werden die Ergänzungswerte zu ISO 3166-1 in eine eigene Erweiterung ausgelagert (betrifft insbesondere Kosovo).
+  ACHTUNG: Dadurch ändert sich die technische Abbildung der Werte (keine inhaltliche Änderung.)
   ([issue 175](https://github.com/gematik/spec-VSDM2/issues/175))
 
 ### Abkündigung

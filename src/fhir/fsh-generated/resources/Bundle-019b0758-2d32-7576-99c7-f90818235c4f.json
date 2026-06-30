@@ -70,11 +70,11 @@
             "_country": {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
                   "valueCoding": {
-                    "code": "XK",
-                    "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMISO3166ErgaenzungCS"
-                  }
+                    "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMISO3166ErgaenzungCS",
+                    "code": "XK"
+                  },
+                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMISO3166Ergaenzung"
                 },
                 {
                   "valueCoding": {
