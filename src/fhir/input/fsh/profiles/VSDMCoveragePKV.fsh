@@ -14,7 +14,7 @@ Description: "Angaben zum PKV-Versicherungsverhältnis im Versichertenstammdaten
       Angaben zum PKV-Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0
     """
   * ^comment = """
-      Zur Harmonisierung der Strukturen mit dem deutschen Basisprofil werden getrennte Profile für PKV und PKV gebildet.
+      Zur Harmonisierung der Strukturen mit dem deutschen Basisprofil werden getrennte Profile für GKV und PKV gebildet.
     """
 
 // Zuordnung aus Versicherungsdaten PKV -> Beihilfe
