@@ -26,7 +26,8 @@ Bundle-019b0758-2d32-7576-99c7-f90818235c4f.json                        VSDMBund
 CodeSystem-VSDMErrorcodeCS.json                                         VSDMErrorcodeCS                                   CodeSystem  codesystems/VSDMErrorcodeCS.fsh                                1 - 155
 CodeSystem-VSDMISO3166ErgaenzungCS.json                                 VSDMISO3166ErgaenzungCS                           CodeSystem  codesystems/VSDMISO3166ErgaenzungCS.fsh                        1 - 35
 CodeSystem-VSDMTDSCodeCS.json                                           VSDMTDSCodeCS                                     CodeSystem  codesystems/VSDMTDSCodeCS.fsh                                  1 - 203
-ConceptMap-VSDMDEUEVAnlage8ISO3166.json                                 VSDMDEUEVAnlage8ISO3166                           Instance    mappings/VSDMDEUEVAnlage8ISO3166.fsh                           1 - 2039
+ConceptMap-VSDMDEUEVAnlage8ISO3166.json                                 VSDMDEUEVAnlage8ISO3166                           Instance    mappings/VSDMDEUEVAnlage8ISO3166.fsh                           1 - 2016
+ConceptMap-VSDMDEUEVAnlage8ISO3166Ergaenzung.json                       VSDMDEUEVAnlage8ISO3166Ergaenzung                 Instance    mappings/VSDMDEUEVAnlage8ISO3166Ergaenzung.fsh                 1 - 33
 ConceptMap-VSDMTDSCodeErrorcode.json                                    VSDMTDSCodeErrorcode                              Instance    mappings/VSDMTDSCodeErrorcode.fsh                              1 - 105
 ConceptMap-VSDMTDSCodeHTTPStatus.json                                   VSDMTDSCodeHTTPStatus                             Instance    mappings/VSDMTDSCodeHTTPStatus.fsh                             1 - 134
 ConceptMap-VSDMTDSCodeIssueSeverity.json                                VSDMTDSCodeIssueSeverity                          Instance    mappings/VSDMTDSCodeIssueSeverity.fsh                          1 - 105
@@ -52,7 +53,9 @@ StructureDefinition-VSDMCoverageGKVBase.json                            VSDMCove
 StructureDefinition-VSDMCoveragePKV.json                                VSDMCoveragePKV                                   Profile     profiles/VSDMCoveragePKV.fsh                                   1 - 91
 StructureDefinition-VSDMDMPTeilnahme.json                               VSDMDMPTeilnahme                                  Extension   extensions/VSDMDMPTeilnahme.fsh                                1 - 54
 StructureDefinition-VSDMHinweisPKV.json                                 VSDMHinweisPKV                                    Extension   extensions/VSDMHinweisPKV.fsh                                  1 - 39
+StructureDefinition-VSDMISO3166Ergaenzung.json                          VSDMISO3166Ergaenzung                             Extension   extensions/VSDMISO3166Ergaenzung.fsh                           1 - 24
 StructureDefinition-VSDMKrankenhausleistungenPKV.json                   VSDMKrankenhausleistungenPKV                      Extension   extensions/VSDMKrankenhausleistungenPKV.fsh                    1 - 90
+StructureDefinition-VSDMLaenderkennzeichenAnlage8.json                  VSDMLaenderkennzeichenAnlage8                     Extension   extensions/VSDMLaenderkennzeichenAnlage8.fsh                   1 - 22
 StructureDefinition-VSDMOperationOutcome.json                           VSDMOperationOutcome                              Profile     profiles/VSDMOperationOutcome.fsh                              1 - 82
 StructureDefinition-VSDMPatient.json                                    VSDMPatient                                       Profile     profiles/VSDMPatient.fsh                                       1 - 196
 StructureDefinition-VSDMPayorOrganization.json                          VSDMPayorOrganization                             Profile     profiles/VSDMPayorOrganization.fsh                             1 - 48
@@ -60,7 +63,7 @@ StructureDefinition-VSDMTarifartPKV.json                                VSDMTari
 StructureDefinition-VSDMVersichertenartPKV.json                         VSDMVersichertenartPKV                            Extension   extensions/VSDMVersichertenartPKV.fsh                          1 - 20
 ValueSet-VSDMDMPVS.json                                                 VSDMDMPVS                                         ValueSet    valuesets/VSDMDMPVS.fsh                                        1 - 69
 ValueSet-VSDMErrorcodeVS.json                                           VSDMErrorcodeVS                                   ValueSet    valuesets/VSDMErrorcodeVS.fsh                                  1 - 8
-ValueSet-VSDMISO3166VS.json                                             VSDMISO3166VS                                     ValueSet    valuesets/VSDMISO3166VS.fsh                                    1 - 8
+ValueSet-VSDMISO3166ErgaenzungVS.json                                   VSDMISO3166ErgaenzungVS                           ValueSet    valuesets/VSDMISO3166ErgaenzungVS.fsh                          1 - 7
 ValueSet-VSDMNamenszusatzVS.json                                        VSDMNamenszusatzVS                                ValueSet    valuesets/VSDMNamenszusatzVS.fsh                               1 - 7
 ValueSet-VSDMTDSCodeVS.json                                             VSDMTDSCodeVS                                     ValueSet    valuesets/VSDMBDECodeVS.fsh                                    1 - 7
 ValueSet-VSDMVorsatzwortVS.json                                         VSDMVorsatzwortVS                                 ValueSet    valuesets/VSDMVorsatzwortVS.fsh                                1 - 7

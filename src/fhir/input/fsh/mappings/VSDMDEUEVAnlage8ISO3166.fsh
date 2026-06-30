@@ -1,17 +1,16 @@
 Instance: VSDMDEUEVAnlage8ISO3166
 InstanceOf: ConceptMap
-Title: "DEÜV Anlage 8 zu ISO 3166-1 (erweitert)"
-Description: "Ermittlung des (temporären) Ländercodes nach ISO 3166-1 aus dem Ländercode nach DEÜV Anlage 8"
+Title: "DEÜV Anlage 8 zu ISO 3166-1"
+Description: "Ermittlung des Ländercodes nach ISO 3166-1 aus dem Ländercode nach DEÜV Anlage 8"
 Usage: #definition
 
 * insert Meta-Inst
 * purpose = """
-    Diese ConceptMap ordnet den Ländercodes aus der DEÜV Anlage 8 die korrespondierenden Ländercodes nach ISO 3166-1 zu.
-    Wo keine offiziellen Ländercodes verfügbar sind, werden temporäre Codes aus einem lokalen CodeSystem verwendet.
+    Diese ConceptMap ordnet den Ländercodes aus der DEÜV Anlage 8 die korrespondierenden offiziellen Ländercodes nach ISO 3166-1 zu.
   """
 
 * sourceUri = $vsAnlage8Laenderkennzeichen
-* targetUri = Canonical(VSDMISO3166VS|1.0.2-dev)
+* targetUri = $vsCountryCodeISO3166
 * group[+]
   * source = $csAnlage8Laenderkennzeichen
   * target = $csCountryCodeISO3166
@@ -2015,26 +2014,3 @@ Usage: #definition
       * code = #CY
       * display = "Cyprus"
       * equivalence = #equal
-
-* sourceUri = $vsAnlage8Laenderkennzeichen
-* targetUri = Canonical(VSDMISO3166VS|1.0.2-dev)
-* group[+]
-  * source = $csAnlage8Laenderkennzeichen
-  * target = Canonical(VSDMISO3166ErgaenzungCS|1.0.2-dev)
-
-  * element[+]
-    * code = #KOS
-    * display = "Kosovo"
-    * target[+]
-      * code = #XK
-      * display = "Kosovo, Republic of"
-      * equivalence = #equal
-
-  * element[+]
-    * code = #CP
-    * display = "Clipperton"
-    * target[+]
-      * code = #CP
-      * display = "Clipperton"
-      * equivalence = #equal
-

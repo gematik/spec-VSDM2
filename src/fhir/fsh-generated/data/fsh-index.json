@@ -221,7 +221,15 @@
     "fshType": "Instance",
     "fshFile": "mappings/VSDMDEUEVAnlage8ISO3166.fsh",
     "startLine": 1,
-    "endLine": 2039
+    "endLine": 2016
+  },
+  {
+    "outputFile": "ConceptMap-VSDMDEUEVAnlage8ISO3166Ergaenzung.json",
+    "fshName": "VSDMDEUEVAnlage8ISO3166Ergaenzung",
+    "fshType": "Instance",
+    "fshFile": "mappings/VSDMDEUEVAnlage8ISO3166Ergaenzung.fsh",
+    "startLine": 1,
+    "endLine": 33
   },
   {
     "outputFile": "ConceptMap-VSDMTDSCodeErrorcode.json",
@@ -424,12 +432,28 @@
     "endLine": 39
   },
   {
+    "outputFile": "StructureDefinition-VSDMISO3166Ergaenzung.json",
+    "fshName": "VSDMISO3166Ergaenzung",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMISO3166Ergaenzung.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
     "outputFile": "StructureDefinition-VSDMKrankenhausleistungenPKV.json",
     "fshName": "VSDMKrankenhausleistungenPKV",
     "fshType": "Extension",
     "fshFile": "extensions/VSDMKrankenhausleistungenPKV.fsh",
     "startLine": 1,
     "endLine": 90
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMLaenderkennzeichenAnlage8.json",
+    "fshName": "VSDMLaenderkennzeichenAnlage8",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMLaenderkennzeichenAnlage8.fsh",
+    "startLine": 1,
+    "endLine": 22
   },
   {
     "outputFile": "StructureDefinition-VSDMOperationOutcome.json",
@@ -488,12 +512,12 @@
     "endLine": 8
   },
   {
-    "outputFile": "ValueSet-VSDMISO3166VS.json",
-    "fshName": "VSDMISO3166VS",
+    "outputFile": "ValueSet-VSDMISO3166ErgaenzungVS.json",
+    "fshName": "VSDMISO3166ErgaenzungVS",
     "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMISO3166VS.fsh",
+    "fshFile": "valuesets/VSDMISO3166ErgaenzungVS.fsh",
     "startLine": 1,
-    "endLine": 8
+    "endLine": 7
   },
   {
     "outputFile": "ValueSet-VSDMNamenszusatzVS.json",
