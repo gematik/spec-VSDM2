@@ -33,7 +33,11 @@ Description: "Basis-Angaben zum GKV-Versicherungsverhältnis im Versichertenstam
       Das Kennzeichen WOP ist für GKV-Patienten gemäss § 2 Abs. 2 der Vereinbarung zur Festsetzung des Durchschnittsbetrages gemäss Artikel 2 § 2 Abs. 2 des Gesetzes zur Einführung des Wohnortprinzips bei Honorarvereinbarungen für Ärzte und Zahnärzte und zur Krankenversichertenkarte gemäss § 291 Abs. 2 Fünftes Sozialgesetzbuch (SGB V) erforderlich.
     """
   * value[x] from VSDMWohnortprinzipVS (required)
+    * system 1.. MS
     * system = $csWOP (exactly)
+    * version 1.. MS
+    * version = "1.00" (exactly) // Version($csWOP)
+    * code 1.. MS
 
 // Zuordnung aus Versicherungsdaten -> BesonderePersonengruppe
 * extension contains $extBesonderePersonengruppe named besonderePersonengruppe 0..1 MS
@@ -49,7 +53,11 @@ Description: "Basis-Angaben zum GKV-Versicherungsverhältnis im Versichertenstam
       Die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.
     """
   * value[x] from $vsPersonengruppe (required)
+    * system 1.. MS
     * system = $csPersonengruppe (exactly)
+    * version 1.. MS
+    * version = "1.03" (exactly) // Version($csPersonengruppe)
+    * code 1.. MS
 
 // Zuordnung aus Versicherungsdaten -> Zuzahlungsstatus
 * extension contains $extZuzahlungsstatus named zuzahlungsstatus 0..1 MS
@@ -116,7 +124,11 @@ Description: "Basis-Angaben zum GKV-Versicherungsverhältnis im Versichertenstam
   * extension[art] MS
     * value[x] 1..1
     * valueCoding from $vsRuhenderLeistungsanspruch
+      * system 1.. MS
       * system = $csRuhenderLeistungsanspruch (exactly)
+      * version 1.. MS
+      * version = "1.6.0" (exactly) // Version($csRuhenderLeistungsanspruch)
+      * code 1.. MS
   * extension[dauer] MS
     * valuePeriod 1..1
       * start 1..1
@@ -136,9 +148,14 @@ Description: "Basis-Angaben zum GKV-Versicherungsverhältnis im Versichertenstam
     """
   * value[x] 1..1
   * valueCoding from $vsVersichertenartGKV
+    * system 1.. MS
+    * system = $csVersichertenartGKV (exactly)
+    * version 1.. MS
+    * version = "1.02" (exactly) // Version($csVersichertenartGKV)
+    * code 1.. MS
 
 // Versicherungsart (GKV)
-* type = $csVersicherungsart#GKV
+* type = $csVersicherungsart|1.6.0#GKV
 
 // Zuordnung aus Versicherungsdaten -> Versicherungsschutz
 * period MS // zur Kardinalität siehe Invariante VSDMCoverageGKV-period-1

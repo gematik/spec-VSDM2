@@ -128,12 +128,13 @@
         "_gender": {
           "extension": [
             {
-              "url": "http://fhir.de/StructureDefinition/gender-amtlich-de",
               "valueCoding": {
-                "code": "X",
                 "system": "http://fhir.de/CodeSystem/gender-amtlich-de",
+                "version": "1.6.0",
+                "code": "X",
                 "display": "unbestimmt"
-              }
+              },
+              "url": "http://fhir.de/StructureDefinition/gender-amtlich-de"
             }
           ]
         }
@@ -154,6 +155,7 @@
             {
               "code": "PKV",
               "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+              "version": "1.6.0",
               "display": "private Krankenversicherung"
             }
           ]
@@ -163,6 +165,7 @@
             "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMTarifartPKV",
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PKV_TARIFF",
+              "version": "1.01",
               "code": "01",
               "display": "Individualtarif"
             }
@@ -170,8 +173,9 @@
           {
             "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMVersichertenartPKV",
             "valueCoding": {
-              "code": "VN",
               "system": "http://fhir.de/CodeSystem/pkv/Versichertenart",
+              "version": "1.6.0",
+              "code": "VN",
               "display": "Versicherungsnehmer"
             }
           },

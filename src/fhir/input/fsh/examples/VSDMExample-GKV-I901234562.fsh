@@ -58,7 +58,7 @@ Usage: #inline
 * id = $idVSDMCoverageGKV-I901234562
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.2-dev)
 
-* extension[WOP].valueCoding = $csWOP#98 "Sachsen"
+* extension[WOP].valueCoding = $csWOP|1.00#98 "Sachsen"
 * extension[dmp][+]
   * extension[dmp].valueCoding = #01 "DM2" // "Diabetes mellitus Typ 2"
   * extension[zeitraum].valuePeriod
@@ -70,9 +70,9 @@ Usage: #inline
   * extension[zahnaerztlicheVersorgung].valueBoolean = true
   * extension[stationaererBereich].valueBoolean = true
   * extension[veranlassteLeistungen].valueBoolean = true
-* extension[versichertenart].valueCoding = $csVersichertenartGKV#5 "Rentner"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV|1.02#5 "Rentner"
 * status = #active
-* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-I901234562
 * period
   * start = "1942-02-28"

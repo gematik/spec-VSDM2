@@ -66,7 +66,7 @@ Usage: #inline
 * id = $idVSDMCoverageGKV-J012345677
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.2-dev)
 
-* extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"
+* extension[WOP].valueCoding = $csWOP|1.00#52 "Baden-Württemberg"
 * extension[besonderePersonengruppe].valueCoding = #09 "ASY" // "Empfänger von Gesundheitsleistungen nach §§ 4 und 6 des Asylbewerberleistungsgesetzes (AsylbLG)"
 * extension[dmp][+]
   * extension[dmp].valueCoding = #06 "COPD"
@@ -81,13 +81,13 @@ Usage: #inline
   * extension[zeitraum].valuePeriod.start = "2003-03-13"
   * extension[digitalesDMP].valueBoolean = false
 * extension[ruhenderLeistungsanspruch]
-  * extension[art].valueCoding = $csRuhenderLeistungsanspruch#1 "vollständig"
+  * extension[art].valueCoding = $csRuhenderLeistungsanspruch|1.6.0#1 "vollständig"
   * extension[dauer].valuePeriod
     * start = "2025-01-01"
     * end = "2025-12-31"
-* extension[versichertenart].valueCoding = $csVersichertenartGKV#5 "Rentner"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV|1.02#5 "Rentner"
 * status = #active
-* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-J012345677
 * period
   * start = "1964-05-01"

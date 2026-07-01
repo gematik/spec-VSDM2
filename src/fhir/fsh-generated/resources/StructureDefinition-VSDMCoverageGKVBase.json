@@ -83,7 +83,20 @@
       {
         "id": "Coverage.extension:WOP.value[x].system",
         "path": "Coverage.extension.value[x].system",
-        "fixedUri": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP"
+        "fixedUri": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.extension:WOP.value[x].version",
+        "path": "Coverage.extension.value[x].version",
+        "min": 1,
+        "fixedString": "1.00",
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.extension:WOP.value[x].code",
+        "path": "Coverage.extension.value[x].code",
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:besonderePersonengruppe",
@@ -108,7 +121,20 @@
       {
         "id": "Coverage.extension:besonderePersonengruppe.value[x].system",
         "path": "Coverage.extension.value[x].system",
-        "fixedUri": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE"
+        "fixedUri": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.extension:besonderePersonengruppe.value[x].version",
+        "path": "Coverage.extension.value[x].version",
+        "min": 1,
+        "fixedString": "1.03",
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.extension:besonderePersonengruppe.value[x].code",
+        "path": "Coverage.extension.value[x].code",
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:zuzahlungsstatus",
@@ -286,7 +312,21 @@
       {
         "id": "Coverage.extension:ruhenderLeistungsanspruch.extension:art.value[x].system",
         "path": "Coverage.extension.extension.value[x].system",
-        "fixedUri": "http://fhir.de/CodeSystem/gkv/RuhenderLeistungsanspruchGKV"
+        "min": 1,
+        "fixedUri": "http://fhir.de/CodeSystem/gkv/RuhenderLeistungsanspruchGKV",
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.extension:ruhenderLeistungsanspruch.extension:art.value[x].version",
+        "path": "Coverage.extension.extension.value[x].version",
+        "min": 1,
+        "fixedString": "1.6.0",
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.extension:ruhenderLeistungsanspruch.extension:art.value[x].code",
+        "path": "Coverage.extension.extension.value[x].code",
+        "mustSupport": true
       },
       {
         "id": "Coverage.extension:ruhenderLeistungsanspruch.extension:dauer",
@@ -350,13 +390,32 @@
         "min": 1
       },
       {
+        "id": "Coverage.extension:versichertenart.value[x].system",
+        "path": "Coverage.extension.value[x].system",
+        "fixedUri": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.extension:versichertenart.value[x].version",
+        "path": "Coverage.extension.value[x].version",
+        "min": 1,
+        "fixedString": "1.02",
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.extension:versichertenart.value[x].code",
+        "path": "Coverage.extension.value[x].code",
+        "mustSupport": true
+      },
+      {
         "id": "Coverage.type",
         "path": "Coverage.type",
         "patternCodeableConcept": {
           "coding": [
             {
               "code": "GKV",
-              "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis"
+              "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+              "version": "1.6.0"
             }
           ]
         }

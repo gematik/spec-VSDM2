@@ -45,7 +45,7 @@ Usage: #inline
   * prefix = "Prof. Dr. rer. nat."
     * extension[prefix-qualifier].valueCode = #AC
 * gender = #other
-  * extension[other-amtlich].valueCoding = $csGenderAmtlich#X "unbestimmt"
+  * extension[other-amtlich].valueCoding = $csGenderAmtlich|1.6.0#X "unbestimmt"
 * address[StrassenAdresse]
   * line[+] = "Zaunkönigpfad 99x"
     * extension[Hausnummer].valueString = "99x"
@@ -76,7 +76,7 @@ Usage: #inline
 * id = $idVSDMCoverageGKV-Z987654321
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.2-dev)
 
-* extension[WOP].valueCoding = $csWOP#98 "Sachsen"
+* extension[WOP].valueCoding = $csWOP|1.00#98 "Sachsen"
 * extension[dmp][+]
   * extension[dmp].valueCoding = #01 "DM2" // "Diabetes mellitus Typ 2"
   * extension[zeitraum].valuePeriod.start = "2001-01-01"
@@ -88,7 +88,7 @@ Usage: #inline
     * end = "2023-12-31"
   * extension[digitalesDMP].valueBoolean = true
 * extension[besonderePersonengruppe].valueCoding = #07 "SVA1" // "SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht"
-* extension[versichertenart].valueCoding = $csVersichertenartGKV#3 "Familienangehoerige"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV|1.02#3 "Familienangehoerige"
 * extension[zuzahlungsstatus]
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = "2025-12-31"
@@ -98,12 +98,12 @@ Usage: #inline
   * extension[stationaererBereich].valueBoolean = true
   * extension[veranlassteLeistungen].valueBoolean = false
 * extension[ruhenderLeistungsanspruch]
-  * extension[art].valueCoding = $csRuhenderLeistungsanspruch#1 "vollständig"
+  * extension[art].valueCoding = $csRuhenderLeistungsanspruch|1.6.0#1 "vollständig"
   * extension[dauer].valuePeriod
     * start = "2025-01-01"
     * end = "2025-12-31"
 * status = #active
-* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-Z987654321
 * period
   * start = "2000-01-01"

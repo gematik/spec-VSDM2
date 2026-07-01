@@ -36,6 +36,7 @@
     "include": [
       {
         "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+        "version": "1.00",
         "concept": [
           {
             "code": "01",

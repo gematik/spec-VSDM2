@@ -96,6 +96,7 @@
                 {
                   "valueCoding": {
                     "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+                    "version": "8.00",
                     "code": "CH"
                   },
                   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichenAnlage8"
@@ -123,6 +124,7 @@
             {
               "code": "GKV",
               "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+              "version": "1.6.0",
               "display": "gesetzliche Krankenversicherung"
             }
           ]
@@ -132,6 +134,7 @@
             "url": "http://fhir.de/StructureDefinition/gkv/wop",
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+              "version": "1.00",
               "code": "52",
               "display": "Baden-Württemberg"
             }
@@ -139,14 +142,16 @@
           {
             "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
             "valueCoding": {
-              "code": "3",
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
+              "version": "1.02",
+              "code": "3",
               "display": "Familienangehoerige"
             }
           },
           {
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
+              "version": "1.03",
               "code": "08",
               "display": "SVA2"
             },
@@ -171,8 +176,9 @@
               {
                 "url": "art",
                 "valueCoding": {
-                  "code": "1",
                   "system": "http://fhir.de/CodeSystem/gkv/RuhenderLeistungsanspruchGKV",
+                  "version": "1.6.0",
+                  "code": "1",
                   "display": "vollständig"
                 }
               },
@@ -236,6 +242,7 @@
                 {
                   "valueCoding": {
                     "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+                    "version": "8.00",
                     "code": "D"
                   },
                   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichenAnlage8"

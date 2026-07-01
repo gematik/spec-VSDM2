@@ -59,7 +59,7 @@ Description: "Angaben zum PKV-Versicherungsverhältnis im Versichertenstammdaten
 
 // Versicherungsart (PKV)
 * type MS
-* type = $csVersicherungsart#PKV
+* type = $csVersicherungsart|1.6.0#PKV
 
 // Bezug zum Versicherten
 * beneficiary MS

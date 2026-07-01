@@ -61,17 +61,17 @@ Usage: #inline
 * id = $idVSDMCoverageGKV-F678901231
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.2-dev)
 
-* extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"
+* extension[WOP].valueCoding = $csWOP|1.00#52 "Baden-Württemberg"
 * extension[besonderePersonengruppe].valueCoding = #08 "SVA2" // "SVA-Kennzeichnung, pauschal"
 * extension[zuzahlungsstatus]
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = "2026-09-30"
 * extension[ruhenderLeistungsanspruch]
-  * extension[art].valueCoding = $csRuhenderLeistungsanspruch#1 "vollständig"
+  * extension[art].valueCoding = $csRuhenderLeistungsanspruch|1.6.0#1 "vollständig"
   * extension[dauer].valuePeriod.start = "2025-01-01"
-* extension[versichertenart].valueCoding = $csVersichertenartGKV#3 "Familienangehoerige"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV|1.02#3 "Familienangehoerige"
 * status = #active
-* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-F678901231
 * period
   * start = "1992-12-01"

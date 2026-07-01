@@ -13,6 +13,8 @@ Description: "Tarifart des PKV-Versicherten im Versichertenstammdatenmanagement 
 
 * value[x] only Coding
 * value[x] from $vsTarifartPKV (required)
-  * system 1..
-  * system = $csTarifartPKV
-  * code 1..
+  * system 1.. MS
+  * system = $csTarifartPKV (exactly)
+  * version 1.. MS
+  * version = "1.01" (exactly) // Version($csTarifartPKV)
+  * code 1.. MS

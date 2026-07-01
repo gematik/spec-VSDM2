@@ -60,7 +60,7 @@ Usage: #inline
 * id = $idVSDMCoverageGKV-G789012344
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.2-dev)
 
-* extension[WOP].valueCoding = $csWOP#46 "Hessen"
+* extension[WOP].valueCoding = $csWOP|1.00#46 "Hessen"
 * extension[zuzahlungsstatus]
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = "2026-12-31"
@@ -70,13 +70,13 @@ Usage: #inline
   * extension[stationaererBereich].valueBoolean = true
   * extension[veranlassteLeistungen].valueBoolean = true
 * extension[ruhenderLeistungsanspruch]
-  * extension[art].valueCoding = $csRuhenderLeistungsanspruch#2 "eingeschränkt"
+  * extension[art].valueCoding = $csRuhenderLeistungsanspruch|1.6.0#2 "eingeschränkt"
   * extension[dauer].valuePeriod
     * start = "2025-06-01"
     * end = "2027-12-31"
-* extension[versichertenart].valueCoding = $csVersichertenartGKV#1 "Mitglieder"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV|1.02#1 "Mitglieder"
 * status = #active
-* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-G789012344
 * period
   * start = "1974-02-12"

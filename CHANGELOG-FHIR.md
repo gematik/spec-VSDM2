@@ -25,6 +25,26 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
   Außerdem werden die Ergänzungswerte zu ISO 3166-1 in eine eigene Erweiterung ausgelagert (betrifft insbesondere Kosovo).
   ACHTUNG: Dadurch ändert sich die technische Abbildung der Werte (keine inhaltliche Änderung.)
   ([issue 175](https://github.com/gematik/spec-VSDM2/issues/175))
+- Um die Nutzung von CodeSystem/ValueSet-Ressourcen aus verschiedenen Paketversionen stabil zu ermöglichen, wird für die folgenden kodierten Elemente die Angabe einer Versionsnummer verpflichtend gemacht
+  ([issue 175](https://github.com/gematik/spec-VSDM2/issues/175)):
+    * VSDMPatient:
+      * Patient.gender.extension:other-amtlich
+      * Patient.address.country.extension:countryCodeExt (VSDMISO3166Ergaenzung)
+      * Patient.address.country.extension:anlage8 (VSDMISO3166Ergaenzung)
+    * VSDMCoverageGKV:
+      * Coverage.extension:dmp.extension:dmp (VSDMDMPTeilnahme)
+      * Coverage.extension:WOP
+      * Coverage.extension:besonderePersonengruppe
+      * Coverage.extension:ruhenderLeistungsanspruch.extension:art
+      * Coverage.extension:versichertenart
+      * Coverage.type
+    * VSDMCoveragePKV:
+      * Coverage.extension:tarifart (VSDMTarifartPKV)
+      * Coverage.extension:versichertenart (VSDMVersichertenartPKV)
+      * Coverage.type
+    * VSDMPayorOrganization
+      * Organization.address.country.extension:countryCodeExt (VSDMISO3166Ergaenzung)
+      * Organization.address.country.extension:anlage8 (VSDMISO3166Ergaenzung)
 
 ### Abkündigung
 
