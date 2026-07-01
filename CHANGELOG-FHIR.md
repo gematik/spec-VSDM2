@@ -26,7 +26,7 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
   ACHTUNG: Dadurch ändert sich die technische Abbildung der Werte (keine inhaltliche Änderung.)
   ([issue 175](https://github.com/gematik/spec-VSDM2/issues/175))
 - Um die Nutzung von CodeSystem/ValueSet-Ressourcen aus verschiedenen Paketversionen stabil zu ermöglichen, wird für die folgenden kodierten Elemente die Angabe einer Versionsnummer verpflichtend gemacht
-  ([issue 175](https://github.com/gematik/spec-VSDM2/issues/175)):
+  ([issue 173](https://github.com/gematik/spec-VSDM2/issues/173)):
     * VSDMPatient:
       * Patient.gender.extension:other-amtlich
       * Patient.address.country.extension:countryCodeExt (VSDMISO3166Ergaenzung)
@@ -45,6 +45,9 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
     * VSDMPayorOrganization
       * Organization.address.country.extension:countryCodeExt (VSDMISO3166Ergaenzung)
       * Organization.address.country.extension:anlage8 (VSDMISO3166Ergaenzung)
+- Das Pflichtelement Coverage.status wird für VSDMCoverageGKV und VSDMCoveragePKV jetzt mit dem Festwert active belegt.
+  Das Element musste auch vor dieser Änderung schon mit einem Wert belegt werden (FHIR Core-Vorgabe), allerdings war der zu verwendende Wert nicht definiert.
+  ([issue 169](https://github.com/gematik/spec-VSDM2/issues/169)):
 
 ### Abkündigung
 

@@ -183,6 +183,7 @@
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.2-dev"
           ]
         },
+        "status": "active",
         "type": {
           "coding": [
             {
@@ -344,7 +345,6 @@
             "display": "Beispielkostenträger Schwerin"
           }
         ],
-        "status": "active",
         "beneficiary": {
           "reference": "https://gematik.de/fhir/Patient/019aa693-b177-79c2-a927-39ec2d7486df"
         },

@@ -98,6 +98,7 @@
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.2-dev"
           ]
         },
+        "status": "active",
         "type": {
           "coding": [
             {
@@ -187,7 +188,6 @@
             "display": "Beispielkostenträger Koblenz"
           }
         ],
-        "status": "active",
         "beneficiary": {
           "reference": "https://gematik.de/fhir/Patient/019aa694-042b-7240-98e0-2ea7952c3fec"
         },

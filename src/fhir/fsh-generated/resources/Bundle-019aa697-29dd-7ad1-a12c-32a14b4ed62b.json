@@ -102,6 +102,7 @@
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.2-dev"
           ]
         },
+        "status": "active",
         "type": {
           "coding": [
             {
@@ -184,7 +185,6 @@
             "display": "Beispielkostenträger Niederbayern"
           }
         ],
-        "status": "active",
         "beneficiary": {
           "reference": "https://gematik.de/fhir/Patient/019aa693-d14a-7370-bdb9-19b88d14f8d1"
         },

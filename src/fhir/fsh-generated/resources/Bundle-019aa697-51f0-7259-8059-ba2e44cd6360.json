@@ -102,6 +102,7 @@
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.2-dev"
           ]
         },
+        "status": "active",
         "type": {
           "coding": [
             {
@@ -176,7 +177,6 @@
             "display": "Beispielkostenträger Lüneburg"
           }
         ],
-        "status": "active",
         "beneficiary": {
           "reference": "https://gematik.de/fhir/Patient/019aa693-f5c1-7f37-a51f-0cffee08db71"
         },

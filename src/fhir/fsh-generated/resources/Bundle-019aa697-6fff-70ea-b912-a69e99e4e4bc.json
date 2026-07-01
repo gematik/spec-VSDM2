@@ -140,6 +140,7 @@
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.2-dev"
           ]
         },
+        "status": "active",
         "type": {
           "coding": [
             {
@@ -282,7 +283,6 @@
             "display": "Beispielkostenträger Baden-Baden"
           }
         ],
-        "status": "active",
         "beneficiary": {
           "reference": "https://gematik.de/fhir/Patient/019aa694-120e-7e8a-8f0b-701ea96908c8"
         },
