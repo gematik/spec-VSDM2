@@ -124,7 +124,7 @@
               "path": "url"
             },
             {
-              "type": "pattern",
+              "type": "value",
               "path": "value.ofType(Coding)"
             }
           ]
