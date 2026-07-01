@@ -47,7 +47,10 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
       * Organization.address.country.extension:anlage8 (VSDMISO3166Ergaenzung)
 - Das Pflichtelement Coverage.status wird für VSDMCoverageGKV und VSDMCoveragePKV jetzt mit dem Festwert active belegt.
   Das Element musste auch vor dieser Änderung schon mit einem Wert belegt werden (FHIR Core-Vorgabe), allerdings war der zu verwendende Wert nicht definiert.
-  ([issue 169](https://github.com/gematik/spec-VSDM2/issues/169)):
+  ([issue 169](https://github.com/gematik/spec-VSDM2/issues/169))
+- Der Verweis auf das CodeSystem https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP wurde auf die Draft-Version 1.07 aus kbv.all.st-rc aktualisiert.
+  Damit ist es möglich, das bereits veröffentlichte (aber noch nicht in Kraft gesetzte) DMP 13 (Adipositas Kinder und Jugendliche) abzubilden.
+  ([issue 181](https://github.com/gematik/spec-VSDM2/issues/181))
 
 ### Abkündigung
 
