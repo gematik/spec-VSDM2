@@ -40,7 +40,7 @@ Usage: #inline
   * prefix = "Dr. rer. nat."
     * extension[prefix-qualifier].valueCode = #AC
 * gender = #other
-  * extension[other-amtlich].valueCoding = $csGenderAmtlich#X "unbestimmt"
+  * extension[other-amtlich].valueCoding = $csGenderAmtlich|1.6.0#X "unbestimmt"
 * address[StrassenAdresse]
   * line[+] = "Dohlenallee 4-6"
     * extension[Hausnummer].valueString = "4-6"
@@ -69,7 +69,7 @@ Usage: #inline
 * id = $idVSDMCoverageGKV-D456789013
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.2-dev)
 
-* extension[WOP].valueCoding = $csWOP#46 "Hessen"
+* extension[WOP].valueCoding = $csWOP|1.00#46 "Hessen"
 * extension[besonderePersonengruppe].valueCoding = #06 "SER" // "SER (Soziales Entschädigungsrecht)"
 * extension[dmp][+]
   * extension[dmp].valueCoding = #05 "Asthma" // "Asthma bronchiale"
@@ -80,9 +80,9 @@ Usage: #inline
   * extension[zahnaerztlicheVersorgung].valueBoolean = true
   * extension[stationaererBereich].valueBoolean = true
   * extension[veranlassteLeistungen].valueBoolean = true
-* extension[versichertenart].valueCoding = $csVersichertenartGKV#3 "Familienangehoerige"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV|1.02#3 "Familienangehoerige"
 * status = #active
-* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-D456789013
 * period
   * start = "2021-10-01"

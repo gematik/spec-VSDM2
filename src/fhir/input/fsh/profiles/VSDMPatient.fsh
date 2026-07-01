@@ -144,6 +144,12 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
         Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe [Geschlecht (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht) im deutschen Basisprofil.
         Nur bei FHIR-Kodierung "other" zu verwenden (vgl. Constraint pat-de-1).
       """
+    * valueCoding
+      * system 1.. MS
+      * system = $csGenderAmtlich (exactly)
+      * version 1.. MS
+      * version = "1.6.0" (exactly) // Version($csGenderAmtlich)
+      * code 1.. MS
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Geburtsdatum
 * birthDate // 1..1 MS bereits durch TIPatient vorgegeben

@@ -25,9 +25,11 @@ Description: "Angaben zur Teilnahme eines Versicherten an einem Disease Manageme
   * value[x] 1..1
   * value[x] only Coding
   * value[x] from VSDMDMPVS (required)
-    * system 1..
-    * system = $csDMP
-    * code 1..
+    * system 1.. MS
+    * system = $csDMP (exactly)
+    * version 1.. MS
+    * version = "1.06" (exactly) // Version($csDMP)
+    * code 1.. MS
 
 // Zuordnung aus Versicherungsdaten -> DMP -> Beginn/Ende
 * extension contains zeitraum 1..1 MS

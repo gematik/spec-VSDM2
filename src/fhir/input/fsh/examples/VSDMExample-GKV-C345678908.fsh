@@ -38,7 +38,7 @@ Usage: #inline
     * extension[nachname].valueString = "Carolinataube"
   * given = "Charlie"
 * gender = #other
-  * extension[other-amtlich].valueCoding = $csGenderAmtlich#D "divers"
+  * extension[other-amtlich].valueCoding = $csGenderAmtlich|1.6.0#D "divers"
 * address[StrassenAdresse]
   * line[+] = "Taubenweg 3c"
     * extension[Hausnummer].valueString = "3c"
@@ -61,7 +61,7 @@ Usage: #inline
 * id = $idVSDMCoverageGKV-C345678908
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.2-dev)
 
-* extension[WOP].valueCoding = $csWOP#98 "Sachsen"
+* extension[WOP].valueCoding = $csWOP|1.00#98 "Sachsen"
 * extension[dmp][+]
   * extension[dmp].valueCoding = #01 "DM2" // "Diabetes mellitus Typ 2"
   * extension[zeitraum].valuePeriod.start = "2001-01-01"
@@ -77,9 +77,9 @@ Usage: #inline
   * extension[zahnaerztlicheVersorgung].valueBoolean = true
   * extension[stationaererBereich].valueBoolean = true
   * extension[veranlassteLeistungen].valueBoolean = true
-* extension[versichertenart].valueCoding = $csVersichertenartGKV#1 "Mitglieder"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV|1.02#1 "Mitglieder"
 * status = #active
-* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-C345678908
 * period
   * start = "1979-06-11"

@@ -66,7 +66,7 @@ Usage: #inline
 * id = $idVSDMCoverageGKV-H890123459
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.2-dev)
 
-* extension[WOP].valueCoding = $csWOP#17 "Niedersachsen"
+* extension[WOP].valueCoding = $csWOP|1.00#17 "Niedersachsen"
 * extension[besonderePersonengruppe].valueCoding = #07 "SVA1" // "SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht: - Personen mit Wohnsitz im Inland, Abrechnung nach Aufwand"
 * extension[zuzahlungsstatus]
   * extension[status].valueBoolean = true
@@ -83,9 +83,9 @@ Usage: #inline
     * start = "2020-01-01"
     * end = "2023-12-31"
   * extension[digitalesDMP].valueBoolean = true
-* extension[versichertenart].valueCoding = $csVersichertenartGKV#5 "Rentner"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV|1.02#5 "Rentner"
 * status = #active
-* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-H890123459
 * period
   * start = "1953-01-01"

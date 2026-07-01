@@ -17,6 +17,8 @@ Description: "Länderkennzeichen nach DEÜV Anlage 8"
 
 * value[x] only Coding
 * value[x] from $vsAnlage8Laenderkennzeichen (required)
-  * system 1..
+  * system 1.. MS
   * system = $csAnlage8Laenderkennzeichen (exactly)
-  * code 1..
+  * version 1.. MS
+  * version = "8.00" (exactly) // Version($csAnlage8Laenderkennzeichen)
+  * code 1.. MS

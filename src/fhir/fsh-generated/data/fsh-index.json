@@ -405,7 +405,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverageGKVBase.fsh",
     "startLine": 1,
-    "endLine": 181
+    "endLine": 198
   },
   {
     "outputFile": "StructureDefinition-VSDMCoveragePKV.json",
@@ -421,7 +421,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMDMPTeilnahme.fsh",
     "startLine": 1,
-    "endLine": 54
+    "endLine": 56
   },
   {
     "outputFile": "StructureDefinition-VSDMHinweisPKV.json",
@@ -437,7 +437,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMISO3166Ergaenzung.fsh",
     "startLine": 1,
-    "endLine": 24
+    "endLine": 26
   },
   {
     "outputFile": "StructureDefinition-VSDMKrankenhausleistungenPKV.json",
@@ -453,7 +453,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMLaenderkennzeichenAnlage8.fsh",
     "startLine": 1,
-    "endLine": 22
+    "endLine": 24
   },
   {
     "outputFile": "StructureDefinition-VSDMOperationOutcome.json",
@@ -469,7 +469,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 196
+    "endLine": 202
   },
   {
     "outputFile": "StructureDefinition-VSDMPayorOrganization.json",
@@ -485,7 +485,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMTarifartPKV.fsh",
     "startLine": 1,
-    "endLine": 18
+    "endLine": 20
   },
   {
     "outputFile": "StructureDefinition-VSDMVersichertenartPKV.json",
@@ -493,7 +493,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMVersichertenartPKV.fsh",
     "startLine": 1,
-    "endLine": 20
+    "endLine": 23
   },
   {
     "outputFile": "ValueSet-VSDMDMPVS.json",

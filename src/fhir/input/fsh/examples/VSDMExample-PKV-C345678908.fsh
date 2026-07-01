@@ -38,7 +38,7 @@ Usage: #inline
     * extension[nachname].valueString = "Carolinataube"
   * given = "Charlie"
 * gender = #other
-  * extension[other-amtlich].valueCoding = $csGenderAmtlich#D "divers"
+  * extension[other-amtlich].valueCoding = $csGenderAmtlich|1.6.0#D "divers"
 * address[StrassenAdresse]
   * line[+] = "Taubenweg 3c"
     * extension[Hausnummer].valueString = "3c"
@@ -70,9 +70,9 @@ Usage: #inline
   * extension[anspruch].valueBoolean = true
   * extension[quote].valueUnsignedInt = 80
 * extension[tarifart].valueCoding = #01 "Individualtarif"
-* extension[versichertenart].valueCoding = $csVersichertenartPKV#VP "versicherte Person"
+* extension[versichertenart].valueCoding = $csVersichertenartPKV|1.6.0#VP "versicherte Person"
 * status = #active
-* type = $csVersicherungsart#PKV "private Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#PKV "private Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-PKV-C345678908
 * period
   * start = "2020-01-01"

@@ -79,12 +79,22 @@
       {
         "id": "Extension.value[x].system",
         "path": "Extension.value[x].system",
-        "min": 1
+        "min": 1,
+        "fixedUri": "http://fhir.de/CodeSystem/pkv/Versichertenart",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.value[x].version",
+        "path": "Extension.value[x].version",
+        "min": 1,
+        "fixedString": "1.6.0",
+        "mustSupport": true
       },
       {
         "id": "Extension.value[x].code",
         "path": "Extension.value[x].code",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       }
     ]
   }

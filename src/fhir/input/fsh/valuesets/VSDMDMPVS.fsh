@@ -20,51 +20,51 @@ Description: "Disease-Management-Programm im Versichertenstammdatenmanagement (V
 // Ein späterer Austausch des ValueSets wäre KEIN breaking change.
 
 // Wert 00 = "nicht gesetzt" (ehemaliger Dummy-Leerwert für eGK) für VSDM 2 nicht sinnvoll
-* include $csDMP#01 "DM2"
+* include $csDMP|1.06#01 "DM2"
   * ^designation[0].use = $csSCT#900000000000003001 "Fully specified name"
   * ^designation[0].value = "Diabetes mellitus Typ 2"
 
-* include $csDMP#02 "BRK"
+* include $csDMP|1.06#02 "BRK"
   * ^designation[0].use = $csSCT#900000000000003001 "Fully specified name"
   * ^designation[0].value = "Brustkrebs"
 
-* include $csDMP#03 "KHK"
+* include $csDMP|1.06#03 "KHK"
   * ^designation[0].use = $csSCT#900000000000003001 "Fully specified name"
   * ^designation[0].value = "Koronare Herzkrankheit"
 
-* include $csDMP#04 "DM1"
+* include $csDMP|1.06#04 "DM1"
   * ^designation[0].use = $csSCT#900000000000003001 "Fully specified name"
   * ^designation[0].value = "Diabetes mellitus Typ 1"
 
-* include $csDMP#05 "Asthma"
+* include $csDMP|1.06#05 "Asthma"
   * ^designation[0].use = $csSCT#900000000000003001 "Fully specified name"
   * ^designation[0].value = "Asthma bronchiale"
 
-* include $csDMP#06 "COPD"
+* include $csDMP|1.06#06 "COPD"
   * ^designation[0].use = $csSCT#900000000000003001 "Fully specified name"
   * ^designation[0].value = "COPD (chronic obstructive pulmonary disease)"
 
-* include $csDMP#07 "HI"
+* include $csDMP|1.06#07 "HI"
   * ^designation[0].use = $csSCT#900000000000003001 "Fully specified name"
   * ^designation[0].value = "Chronische Herzinsuffizienz"
 
-* include $csDMP#08 "Depression"
+* include $csDMP|1.06#08 "Depression"
   * ^designation[0].use = $csSCT#900000000000003001 "Fully specified name"
   * ^designation[0].value = "Depression"
 
-* include $csDMP#09 "Rueckenschmerz"
+* include $csDMP|1.06#09 "Rueckenschmerz"
   * ^designation[0].use = $csSCT#900000000000003001 "Fully specified name"
   * ^designation[0].value = "Rückenschmerz"
 
-* include $csDMP#10 "Rheuma"
+* include $csDMP|1.06#10 "Rheuma"
   * ^designation[0].use = $csSCT#900000000000003001 "Fully specified name"
   * ^designation[0].value = "Rheuma"
 
-* include $csDMP#11 "Osteoporose"
+* include $csDMP|1.06#11 "Osteoporose"
   * ^designation[0].use = $csSCT#900000000000003001 "Fully specified name"
   * ^designation[0].value = "Osteoporose"
 
-* include $csDMP#12 "Adipositas"
+* include $csDMP|1.06#12 "Adipositas"
   * ^designation[0].use = $csSCT#900000000000003001 "Fully specified name"
   * ^designation[0].value = "Adipositas - Erwachsene"
 

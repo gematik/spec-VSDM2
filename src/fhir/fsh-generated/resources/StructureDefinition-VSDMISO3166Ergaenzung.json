@@ -83,9 +83,17 @@
         "fixedUri": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMISO3166ErgaenzungCS"
       },
       {
+        "id": "Extension.value[x].version",
+        "path": "Extension.value[x].version",
+        "min": 1,
+        "fixedString": "1.0.2-dev",
+        "mustSupport": true
+      },
+      {
         "id": "Extension.value[x].code",
         "path": "Extension.value[x].code",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       }
     ]
   }

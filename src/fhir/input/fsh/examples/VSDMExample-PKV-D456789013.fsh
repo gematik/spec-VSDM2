@@ -40,7 +40,7 @@ Usage: #inline
   * prefix = "Dr. rer. nat."
     * extension[prefix-qualifier].valueCode = #AC
 * gender = #other
-  * extension[other-amtlich].valueCoding = $csGenderAmtlich#X "unbestimmt"
+  * extension[other-amtlich].valueCoding = $csGenderAmtlich|1.6.0#X "unbestimmt"
 * address[StrassenAdresse]
   * line[+] = "Dohlenallee 4-6"
     * extension[Hausnummer].valueString = "4-6"
@@ -73,9 +73,9 @@ Usage: #inline
   * extension[wahlarzt].valueBoolean = false
   * extension[belegarzt].valueBoolean = false
 * extension[tarifart].valueCoding = #01 "Individualtarif"
-* extension[versichertenart].valueCoding = $csVersichertenartPKV#VN "Versicherungsnehmer"
+* extension[versichertenart].valueCoding = $csVersichertenartPKV|1.6.0#VN "Versicherungsnehmer"
 * status = #active
-* type = $csVersicherungsart#PKV "private Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#PKV "private Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-PKV-D456789013
 * period
   * start = "1980-01-01"

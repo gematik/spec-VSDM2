@@ -58,10 +58,10 @@ Usage: #inline
 * id = $idVSDMCoverageGKV-A123456780
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.2-dev)
 
-* extension[WOP].valueCoding = $csWOP#38 "Nordrhein"
-* extension[versichertenart].valueCoding = $csVersichertenartGKV#1 "Mitglieder"
+* extension[WOP].valueCoding = $csWOP|1.00#38 "Nordrhein"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV|1.02#1 "Mitglieder"
 * status = #active
-* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-A123456780
 * period
   * start = "1997-12-28"
