@@ -76,6 +76,12 @@
         ]
       },
       {
+        "id": "Coverage.status",
+        "path": "Coverage.status",
+        "comment": "Im VSDM 2.0 werden nur Informationen über aktive Versicherungsverhältnisse ausgetauscht.",
+        "fixedCode": "active"
+      },
+      {
         "id": "Coverage.beneficiary",
         "path": "Coverage.beneficiary",
         "type": [

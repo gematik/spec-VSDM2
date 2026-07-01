@@ -150,6 +150,7 @@
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoveragePKV|1.0.2-dev"
           ]
         },
+        "status": "active",
         "type": {
           "coding": [
             {
@@ -201,7 +202,6 @@
             ]
           }
         ],
-        "status": "active",
         "beneficiary": {
           "reference": "https://gematik.de/fhir/Patient/019aa693-6fb9-7553-a456-b40a01819bad"
         },

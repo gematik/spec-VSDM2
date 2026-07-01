@@ -166,6 +166,7 @@
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.2-dev"
           ]
         },
+        "status": "active",
         "type": {
           "coding": [
             {
@@ -260,7 +261,6 @@
             "display": "Beispielkostenträger Darmstadt"
           }
         ],
-        "status": "active",
         "beneficiary": {
           "reference": "https://gematik.de/fhir/Patient/019aa694-6f37-72b0-89ea-042e20e449a8"
         },

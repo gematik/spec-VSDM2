@@ -24,6 +24,12 @@ Description: "Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdaten
 * obeys VSDMCoverageGKV-address-1          // Pflichtangabe Länderkennzeichen nach DEÜV im Patient
 * obeys VSDMCoverageGKV-address-2          // Pflichtangabe Länderkennzeichen nach DEÜV im Kostenträger
 
+// Status des Versicherungsverhältnisses
+* status = #active (exactly)
+  * ^comment = """
+    Im VSDM 2.0 werden nur Informationen über aktive Versicherungsverhältnisse ausgetauscht.
+  """
+
 // Bezug zum Versicherten
 * beneficiary MS
 * beneficiary only Reference(VSDMPatient)

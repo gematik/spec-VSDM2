@@ -148,6 +148,7 @@
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.2-dev"
           ]
         },
+        "status": "active",
         "type": {
           "coding": [
             {
@@ -279,7 +280,6 @@
             "display": "Beispielkostenträger Essen"
           }
         ],
-        "status": "active",
         "beneficiary": {
           "reference": "https://gematik.de/fhir/Patient/019aa694-5fec-7003-9b99-6a81eea5b057"
         },

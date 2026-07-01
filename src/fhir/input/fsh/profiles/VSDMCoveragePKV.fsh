@@ -57,6 +57,12 @@ Description: "Angaben zum PKV-Versicherungsverhältnis im Versichertenstammdaten
       Optionale Hinweise in Freitextform für Leistungserbringer.
     """
 
+// Status des Versicherungsverhältnisses
+* status = #active (exactly)
+  * ^comment = """
+    Im VSDM 2.0 werden nur Informationen über aktive Versicherungsverhältnisse ausgetauscht.
+  """
+
 // Versicherungsart (PKV)
 * type MS
 * type = $csVersicherungsart|1.6.0#PKV

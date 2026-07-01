@@ -119,6 +119,7 @@
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.2-dev"
           ]
         },
+        "status": "active",
         "type": {
           "coding": [
             {
@@ -201,7 +202,6 @@
             "display": "Beispielkostenträger Freiburg"
           }
         ],
-        "status": "active",
         "beneficiary": {
           "reference": "https://gematik.de/fhir/Patient/019aa694-512a-7308-81bd-cffd96cec457"
         },

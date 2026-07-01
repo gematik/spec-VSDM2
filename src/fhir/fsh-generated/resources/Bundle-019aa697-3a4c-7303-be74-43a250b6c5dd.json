@@ -111,6 +111,7 @@
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.2-dev"
           ]
         },
+        "status": "active",
         "type": {
           "coding": [
             {
@@ -164,7 +165,6 @@
             "display": "Beispielkostenträger München-Stadt"
           }
         ],
-        "status": "active",
         "beneficiary": {
           "reference": "https://gematik.de/fhir/Patient/019aa693-e2f4-750d-a4a3-d76f636546c1"
         },

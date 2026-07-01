@@ -103,6 +103,7 @@
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.2-dev"
           ]
         },
+        "status": "active",
         "type": {
           "coding": [
             {
@@ -156,7 +157,6 @@
             "display": "Beispielkostenträger Offenburg"
           }
         ],
-        "status": "active",
         "beneficiary": {
           "reference": "https://gematik.de/fhir/Patient/019b0758-985e-7703-b4f7-c5064736aed2"
         },

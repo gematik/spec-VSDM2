@@ -102,6 +102,7 @@
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.2-dev"
           ]
         },
+        "status": "active",
         "type": {
           "coding": [
             {
@@ -188,7 +189,6 @@
             "display": "Beispielkostenträger Dresden"
           }
         ],
-        "status": "active",
         "beneficiary": {
           "reference": "https://gematik.de/fhir/Patient/019aa694-2007-76e7-80d0-37887bfb769f"
         },

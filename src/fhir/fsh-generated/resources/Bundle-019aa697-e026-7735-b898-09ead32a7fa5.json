@@ -124,6 +124,7 @@
             "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.2-dev"
           ]
         },
+        "status": "active",
         "type": {
           "coding": [
             {
@@ -234,7 +235,6 @@
             "display": "Beispielkostenträger Chemnitz"
           }
         ],
-        "status": "active",
         "beneficiary": {
           "reference": "https://gematik.de/fhir/Patient/019aa694-7e82-76ba-9b71-cbb1456f219e"
         },
