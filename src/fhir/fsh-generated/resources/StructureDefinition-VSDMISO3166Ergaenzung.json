@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMISO3166Ergaenzung",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMISO3166Ergaenzung",
-  "version": "1.0.2-dev",
+  "version": "1.1.0-dev",
   "name": "VSDMISO3166Ergaenzung",
   "title": "ergänzende Ländercodes",
   "status": "active",
@@ -86,7 +86,7 @@
         "id": "Extension.value[x].version",
         "path": "Extension.value[x].version",
         "min": 1,
-        "fixedString": "1.0.2-dev",
+        "fixedString": "1.1.0-dev",
         "mustSupport": true
       },
       {

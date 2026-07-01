@@ -5,7 +5,7 @@ Description: "Beispiel zur Fehlermeldung 'Institutionskennung '[ik]' aus dem PoP
 Usage: #example
 
 * meta
-  * profile[0] = Canonical(VSDMOperationOutcome|1.0.2-dev)
+  * profile[0] = Canonical(VSDMOperationOutcome|1.1.0-dev)
 * text
   * status = #generated
   * div[+] = """

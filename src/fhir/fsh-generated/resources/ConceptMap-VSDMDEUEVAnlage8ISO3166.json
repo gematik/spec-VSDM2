@@ -6,7 +6,7 @@
   "description": "Ermittlung des Ländercodes nach ISO 3166-1 aus dem Ländercode nach DEÜV Anlage 8",
   "status": "active",
   "experimental": false,
-  "version": "1.0.2-dev",
+  "version": "1.1.0-dev",
   "publisher": "gematik GmbH",
   "contact": [
     {

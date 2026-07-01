@@ -5,7 +5,7 @@
 RuleSet: Meta
 * ^status = #active
 * ^experimental = false
-* ^version = "1.0.2-dev"
+* ^version = "1.1.0-dev"
 * ^publisher = "gematik GmbH"
 * ^contact.name = "gematik GmbH"
 * ^contact.telecom.system = #url
@@ -16,7 +16,7 @@ RuleSet: Meta
 RuleSet: Meta-CodeSystem
 * ^status = #active // Caution: CodeSystems with status "draft" trigger a validation error
 * ^experimental = false
-* ^version = "1.0.2-dev"
+* ^version = "1.1.0-dev"
 * ^publisher = "gematik GmbH"
 * ^contact.name = "gematik GmbH"
 * ^contact.telecom.system = #url
@@ -28,7 +28,7 @@ RuleSet: Meta-CodeSystem
 RuleSet: Meta-Inst
 * status = #active
 * experimental = false
-* version = "1.0.2-dev"
+* version = "1.1.0-dev"
 * publisher = "gematik GmbH"
 * contact.name = "gematik GmbH"
 * contact.telecom.system = #url
