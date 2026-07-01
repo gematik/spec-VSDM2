@@ -5,7 +5,7 @@ Description: "Privatversicherung Neptun"
 Usage: #inline
 
 * id = $idVSDMPayorOrganization-168123458
-* meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.2-dev)
+* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.0-dev)
 
 * identifier[IKNR].value = "168123458"
 * name = "Privatversicherung Neptun"

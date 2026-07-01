@@ -4,7 +4,7 @@ Title: "Beispielkostenträger Unterfranken"
 Description: "Beispielkostenträger Unterfranken"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMPayorOrganization|1.0.2-dev)
+* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.0-dev)
 
 * identifier[IKNR].value = "108846691"
 * name = "Beispielkostenträger Unterfranken"

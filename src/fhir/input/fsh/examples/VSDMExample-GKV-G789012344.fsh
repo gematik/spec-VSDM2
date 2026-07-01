@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-GKV-G789012344
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.2-dev)
+  * profile[0] = Canonical(VSDMBundle|1.1.0-dev)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -28,7 +28,7 @@ Description: "Versichertendaten G789012344 Edle von der Graugans, Gabriele (GKV)
 Usage: #inline
 
 * id = $idVSDMPatient-GKV-G789012344
-* meta.profile[0] = Canonical(VSDMPatient|1.0.2-dev)
+* meta.profile[0] = Canonical(VSDMPatient|1.1.0-dev)
 
 * identifier[KVNR].value = "G789012344"
 * birthDate = "1974-02-12"
@@ -58,7 +58,7 @@ Description: "Versicherungsdaten G789012344 Edle von der Graugans, Gabriele (GKV
 Usage: #inline
 
 * id = $idVSDMCoverageGKV-G789012344
-* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.2-dev)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.1.0-dev)
 
 * extension[WOP].valueCoding = $csWOP|1.00#46 "Hessen"
 * extension[zuzahlungsstatus]

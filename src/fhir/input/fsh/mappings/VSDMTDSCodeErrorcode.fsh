@@ -10,11 +10,11 @@ Usage: #definition
     Wichtig: Hier werden nur die TDS-Codes mit Fehler-Adressat "Clientsystem" erfasst, da für Fehler mit Adressat "HTTP-Proxy" keine VSDMOperationOutcome-Ressource erzeugt wird.
   """
 
-* sourceUri = Canonical(VSDMTDSCodeVS|1.0.2-dev)
-* targetUri = Canonical(VSDMErrorcodeVS|1.0.2-dev)
+* sourceUri = Canonical(VSDMTDSCodeVS|1.1.0-dev)
+* targetUri = Canonical(VSDMErrorcodeVS|1.1.0-dev)
 * group[+]
-  * source = Canonical(VSDMTDSCodeCS|1.0.2-dev)
-  * target = Canonical(VSDMErrorcodeCS|1.0.2-dev)
+  * source = Canonical(VSDMTDSCodeCS|1.1.0-dev)
+  * target = Canonical(VSDMErrorcodeCS|1.1.0-dev)
 
   * element[+]
     * code = #79010
