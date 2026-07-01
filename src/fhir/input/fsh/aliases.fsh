@@ -38,7 +38,9 @@ Alias: $csCountryCodeISO3166 = urn:iso:std:iso:3166
 //   - VSDMDMPVS
 //     - VSDMDMPTeilnahme
 //       - VSDMCoverageGKV.extension[dmp]
-Alias: $csDMP = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP // "1.06" // Version($csDMP)
+Alias: $csDMP = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP // "1.07" // Version($csDMP)
+// ACHTUNG: Hier wird die Vorab-Version aus kbv.all.st-rc verwendet, die noch als "draft" gekennzeichnet ist, weil nur dort der Code 13 hinterlegt ist.
+// Das Verfahren bzw. die Statusangabe ist aktuell noch in Klärung mit der KBV.
 
 // administrative Geschlechtsangabe, verwendet für
 //   - Beispiel für VSDMPatient

@@ -103,7 +103,7 @@
         "id": "Extension.extension:dmp.value[x].version",
         "path": "Extension.extension.value[x].version",
         "min": 1,
-        "fixedString": "1.06",
+        "fixedString": "1.07",
         "mustSupport": true
       },
       {
