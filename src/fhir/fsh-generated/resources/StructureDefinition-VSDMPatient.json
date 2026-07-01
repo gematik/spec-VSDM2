@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMPatient",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient",
-  "version": "1.0.1",
+  "version": "1.1.0-dev",
   "name": "VSDMPatient",
   "title": "Versicherter",
   "status": "active",
@@ -44,7 +44,7 @@
         "id": "Patient",
         "path": "Patient",
         "short": "Versicherter im VSDM",
-        "definition": "Der VSDMPatient bildet einen Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0 ab.\nDer VSDMPatient ist vom zentralen TIPatient abgeleitet. \nDer Ressource Server des VSDM stellt allerdings keinen FHIR Data Service im Sinne des Implementation Guide TI Common dar, so dass die meisten Anforderungen dieses IG auf den VSDMPatient nicht zutreffen.\nDieser Sachverhalt wird in einer Folgeversion des IG klargestellt."
+        "definition": "Der VSDMPatient bildet einen Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0 ab.\nDer VSDMPatient ist vom zentralen TIPatient abgeleitet.\nDer Ressource Server des VSDM stellt allerdings keinen FHIR Data Service im Sinne des Implementation Guide TI Common dar, so dass die meisten Anforderungen dieses IG auf den VSDMPatient nicht zutreffen.\nDieser Sachverhalt wird in einer Folgeversion des IG klargestellt."
       },
       {
         "id": "Patient.identifier",
@@ -56,7 +56,7 @@
         "path": "Patient.identifier",
         "sliceName": "KVNR",
         "short": "Versichertennummer (KVNR)",
-        "definition": "Es wird der zehnstellig (unveränderliche) Teil der KVNR verwendet. \nZur eindeutigen Identifikation muss genau eine KVNR angegeben werden.",
+        "definition": "Es wird der zehnstellig (unveränderliche) Teil der KVNR verwendet.\nZur eindeutigen Identifikation muss genau eine KVNR angegeben werden.",
         "comment": "Hinweise zur Verwendung und Beispiele siehe [Lebenslange Krankenversicherten-ID](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-LebenslangeKrankenversichertennummer10-stelligeKVID-Identifier.html) im deutschen Basisprofil.",
         "requirements": "Die KVNR identifiziert den Versicherten, auf den sich die bereitgestellten Stammdaten beziehen.",
         "min": 1
@@ -71,7 +71,8 @@
         "path": "Patient.name.text",
         "short": "vollständiger zusammengesetzter Name",
         "definition": "Zur besseren Lesbarkeit sowie zur leichteren Verarbeitung für Systeme, die die einzelnen Namensbestandteile nicht getrennt benötigen, SOLL dieses Attribut den gesamten Namen mit Titel, Vorsatzwort und Namenszusätzen enthalten.\nDie Bildungsregel ist dabei [Titel] [Vornamen] [Namenszusätze] [Vorsatzworte] [Nachnamen].",
-        "comment": "Hinweise und Beispiele siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil"
+        "comment": "Hinweise und Beispiele siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil",
+        "mustSupport": true
       },
       {
         "id": "Patient.name:Name.family",
@@ -119,12 +120,12 @@
       {
         "id": "Patient.name:Name.given",
         "path": "Patient.name.given",
-        "comment": "Mehrere Vornamen können durch Leerzeichen oder Bindestrich getrennt in einem Wert angegeben werden. \nVon der Wiederholung des given-Elemente SOLL kein Gebrauch gemacht werden; es wird zur besseren Interoperabilität allerdings nicht technisch verboten.\nVerwender müssen mindestens 45 Zeichen verarbeiten können."
+        "comment": "Mehrere Vornamen können durch Leerzeichen oder Bindestrich getrennt in einem Wert angegeben werden.\nVon der Wiederholung des given-Elemente SOLL kein Gebrauch gemacht werden; es wird zur besseren Interoperabilität allerdings nicht technisch verboten.\nVerwender müssen mindestens 45 Zeichen verarbeiten können."
       },
       {
         "id": "Patient.name:Name.prefix",
         "path": "Patient.name.prefix",
-        "definition": "Namensteile vor dem Vornamen, z.B. akademischer Titel.\nWenn dieses Attribut zur Angabe des akademischen Titels verwendet wird, ist die Erweiterung prefix-qualifier mit dem Wert AC (academic) verpflichtend anzugeben.\nMehrere Titel werden durch Leerzeichen getrennt angegeben. \nVerwender müssen mindestens 20 Zeichen verarbeiten können.",
+        "definition": "Namensteile vor dem Vornamen, z.B. akademischer Titel.\nWenn dieses Attribut zur Angabe des akademischen Titels verwendet wird, ist die Erweiterung prefix-qualifier mit dem Wert AC (academic) verpflichtend anzugeben.\nMehrere Titel werden durch Leerzeichen getrennt angegeben.\nVerwender müssen mindestens 20 Zeichen verarbeiten können.",
         "comment": "Beispiele zur Verwendung siehe [Name (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Name) im deutschen Basisprofil."
       },
       {
@@ -146,7 +147,8 @@
             }
           ],
           "rules": "open"
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "Patient.telecom:TIMessengerID",
@@ -162,7 +164,8 @@
               "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMContactPointTIM"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Patient.gender",
@@ -181,9 +184,29 @@
         "mustSupport": true
       },
       {
+        "id": "Patient.gender.extension:other-amtlich.value[x].system",
+        "path": "Patient.gender.extension.value[x].system",
+        "min": 1,
+        "fixedUri": "http://fhir.de/CodeSystem/gender-amtlich-de",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.gender.extension:other-amtlich.value[x].version",
+        "path": "Patient.gender.extension.value[x].version",
+        "min": 1,
+        "fixedString": "1.6.0",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.gender.extension:other-amtlich.value[x].code",
+        "path": "Patient.gender.extension.value[x].code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "Patient.birthDate",
         "path": "Patient.birthDate",
-        "definition": "Das Geburtsdatum des Versicherten ist in den VSD eine Pflichtangabe. \nPartielle Datumsangaben sind allerdings zulässig.",
+        "definition": "Das Geburtsdatum des Versicherten ist in den VSD eine Pflichtangabe.\nPartielle Datumsangaben sind allerdings zulässig.",
         "comment": "Hinweise insbesondere zur Angabe unvollständiger Datumswerte siehe [Geburtsdatum (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geburtsdatum)."
       },
       {
@@ -197,7 +220,8 @@
             }
           ],
           "rules": "open"
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "Patient.address:StrassenAdresse",
@@ -219,7 +243,8 @@
         "id": "Patient.address:StrassenAdresse.type",
         "path": "Patient.address.type",
         "min": 1,
-        "patternCode": "physical"
+        "patternCode": "physical",
+        "mustSupport": true
       },
       {
         "id": "Patient.address:StrassenAdresse.line",
@@ -260,59 +285,49 @@
         "path": "Patient.address.country",
         "definition": "Staatsangabe",
         "comment": "Hier ist die Staatsangabe im Volltext (z.B. zur postalischen Adressierung) anzugeben.",
+        "constraint": [
+          {
+            "key": "country-code-iso-or-extension-1",
+            "severity": "error",
+            "human": "Der Ländercode muss entweder als ISO 3166-1-Code in countryCode oder mit der alternativen Erweiterung countryCodeExt angegeben werden.",
+            "expression": "extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-codedString').exists() != extension.where(url = 'https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMISO3166Ergaenzung').exists()",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
+          }
+        ],
         "mustSupport": true
-      },
-      {
-        "id": "Patient.address:StrassenAdresse.country.extension",
-        "path": "Patient.address.country.extension",
-        "slicing": {
-          "rules": "open",
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            },
-            {
-              "type": "pattern",
-              "path": "value.ofType(Coding)"
-            }
-          ]
-        },
-        "min": 1
       },
       {
         "id": "Patient.address:StrassenAdresse.country.extension:countryCode",
         "path": "Patient.address.country.extension",
         "sliceName": "countryCode",
-        "short": "Länderkennzeichen nach ISO 3166-1",
-        "definition": "Kodierte Angabe des Länderkennzeichens nach ISO 3166-1.",
         "comment": "Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur [Kodierung der Landesangabe](https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html).\nDurch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.\nIn der DEÜV gibt es allerdings Ländercodes, die sich nicht auf den zum Zeitpunkt der Veröffentlichung bestehenden Stand der ISO 3166-1 abbilden lassen.\nUm eine Abbildung ohne Informationsverlust zu ermöglichen, wird mit dem erweiterten ValueSet die Verwendung eines alternativen CodeSystem ermöglicht.",
-        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:StrassenAdresse.country.extension:countryCodeExt",
+        "path": "Patient.address.country.extension",
+        "sliceName": "countryCodeExt",
+        "short": "Länderkennzeichen nach ISO 3166-1 (erweitert)",
+        "definition": "Kodierte Angabe des Länderkennzeichens nach ISO 3166-1 (erweitert).",
+        "comment": "In der DEÜV gibt es Ländercodes, die sich nicht auf den zum Zeitpunkt der Veröffentlichung bestehenden Stand der ISO 3166-1 abbilden lassen.\nUm eine Abbildung ohne Informationsverlust zu ermöglichen, wird mit dieser Erweiterung die Verwendung eines alternativen CodeSystem ermöglicht.",
+        "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/StructureDefinition/iso21090-codedString"
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMISO3166Ergaenzung"
             ]
           }
         ],
         "mustSupport": true
       },
       {
-        "id": "Patient.address:StrassenAdresse.country.extension:countryCode.value[x]",
-        "path": "Patient.address.country.extension.value[x]",
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMISO3166VS"
-        }
-      },
-      {
         "id": "Patient.address:StrassenAdresse.country.extension:anlage8",
         "path": "Patient.address.country.extension",
         "sliceName": "anlage8",
         "short": "Länderkennzeichen nach DEÜV Anlage 8",
-        "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8. ",
+        "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8.",
         "comment": "Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.\nDie Kodierung nach DEÜV ist im GKV-Bereich eine Pflichtangabe, im PKV-Bereich ist sie optional.\nUm diese Vorgabe einer konditionalen Prüfung umzusetzen, sind die Invarianten VSDMCoverageGKV-address-* an der VSDMCoverageGKV-Struktur hinterlegt.\nDiese Invarianten erzwingen die Angabe des Länderkennzeichens nach DEÜV, sobald auf die Ressource, die die Adresse enthält, aus einem GKV-Versicherungsverhältnis referenziert wird.",
         "min": 0,
         "max": "1",
@@ -320,24 +335,11 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/StructureDefinition/iso21090-codedString"
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichenAnlage8"
             ]
           }
         ],
         "mustSupport": true
-      },
-      {
-        "id": "Patient.address:StrassenAdresse.country.extension:anlage8.value[x]",
-        "path": "Patient.address.country.extension.value[x]",
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8"
-        }
-      },
-      {
-        "id": "Patient.address:StrassenAdresse.country.extension:anlage8.value[x].system",
-        "path": "Patient.address.country.extension.value[x].system",
-        "fixedUri": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
       },
       {
         "id": "Patient.address:PostfachAdresse",
@@ -359,7 +361,8 @@
         "id": "Patient.address:PostfachAdresse.type",
         "path": "Patient.address.type",
         "min": 1,
-        "patternCode": "postal"
+        "patternCode": "postal",
+        "mustSupport": true
       },
       {
         "id": "Patient.address:PostfachAdresse.line",
@@ -388,59 +391,49 @@
         "path": "Patient.address.country",
         "definition": "Staatsangabe",
         "comment": "Hier ist die Staatsangabe im Volltext (z.B. zur postalischen Adressierung) anzugeben.",
+        "constraint": [
+          {
+            "key": "country-code-iso-or-extension-1",
+            "severity": "error",
+            "human": "Der Ländercode muss entweder als ISO 3166-1-Code in countryCode oder mit der alternativen Erweiterung countryCodeExt angegeben werden.",
+            "expression": "extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-codedString').exists() != extension.where(url = 'https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMISO3166Ergaenzung').exists()",
+            "source": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient"
+          }
+        ],
         "mustSupport": true
-      },
-      {
-        "id": "Patient.address:PostfachAdresse.country.extension",
-        "path": "Patient.address.country.extension",
-        "slicing": {
-          "rules": "open",
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            },
-            {
-              "type": "pattern",
-              "path": "value.ofType(Coding)"
-            }
-          ]
-        },
-        "min": 1
       },
       {
         "id": "Patient.address:PostfachAdresse.country.extension:countryCode",
         "path": "Patient.address.country.extension",
         "sliceName": "countryCode",
-        "short": "Länderkennzeichen nach ISO 3166-1",
-        "definition": "Kodierte Angabe des Länderkennzeichens nach ISO 3166-1.",
         "comment": "Diese Abbildung entspricht der auf EU-Ebene in Abstimmung befindlichen Profilierung zur [Kodierung der Landesangabe](https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-Address-eu.html).\nDurch die Verwendung der internationalen Kodierung wird die interoperable Verwendung der Adressangabe erleichtert.\nIn der DEÜV gibt es allerdings Ländercodes, die sich nicht auf den zum Zeitpunkt der Veröffentlichung bestehenden Stand der ISO 3166-1 abbilden lassen.\nUm eine Abbildung ohne Informationsverlust zu ermöglichen, wird mit dem erweiterten ValueSet die Verwendung eines alternativen CodeSystem ermöglicht.",
-        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address:PostfachAdresse.country.extension:countryCodeExt",
+        "path": "Patient.address.country.extension",
+        "sliceName": "countryCodeExt",
+        "short": "Länderkennzeichen nach ISO 3166-1 (erweitert)",
+        "definition": "Kodierte Angabe des Länderkennzeichens nach ISO 3166-1 (erweitert).",
+        "comment": "In der DEÜV gibt es Ländercodes, die sich nicht auf den zum Zeitpunkt der Veröffentlichung bestehenden Stand der ISO 3166-1 abbilden lassen.\nUm eine Abbildung ohne Informationsverlust zu ermöglichen, wird mit dieser Erweiterung die Verwendung eines alternativen CodeSystem ermöglicht.",
+        "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/StructureDefinition/iso21090-codedString"
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMISO3166Ergaenzung"
             ]
           }
         ],
         "mustSupport": true
       },
       {
-        "id": "Patient.address:PostfachAdresse.country.extension:countryCode.value[x]",
-        "path": "Patient.address.country.extension.value[x]",
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMISO3166VS"
-        }
-      },
-      {
         "id": "Patient.address:PostfachAdresse.country.extension:anlage8",
         "path": "Patient.address.country.extension",
         "sliceName": "anlage8",
         "short": "Länderkennzeichen nach DEÜV Anlage 8",
-        "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8. ",
+        "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8.",
         "comment": "Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.\nDie Kodierung nach DEÜV ist im GKV-Bereich eine Pflichtangabe, im PKV-Bereich ist sie optional.\nUm diese Vorgabe einer konditionalen Prüfung umzusetzen, sind die Invarianten VSDMCoverageGKV-address-* an der VSDMCoverageGKV-Struktur hinterlegt.\nDiese Invarianten erzwingen die Angabe des Länderkennzeichens nach DEÜV, sobald auf die Ressource, die die Adresse enthält, aus einem GKV-Versicherungsverhältnis referenziert wird.",
         "min": 0,
         "max": "1",
@@ -448,24 +441,11 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/StructureDefinition/iso21090-codedString"
+              "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichenAnlage8"
             ]
           }
         ],
         "mustSupport": true
-      },
-      {
-        "id": "Patient.address:PostfachAdresse.country.extension:anlage8.value[x]",
-        "path": "Patient.address.country.extension.value[x]",
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8"
-        }
-      },
-      {
-        "id": "Patient.address:PostfachAdresse.country.extension:anlage8.value[x].system",
-        "path": "Patient.address.country.extension.value[x].system",
-        "fixedUri": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
       }
     ]
   }

@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-GKV-L234567896
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.1)
+  * profile[0] = Canonical(VSDMBundle|1.1.0-dev)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -28,7 +28,7 @@ Description: "Versichertendaten L234567896 Lachmöwe, Lisa (GKV)"
 Usage: #inline
 
 * id = $idVSDMPatient-GKV-L234567896
-* meta.profile[0] = Canonical(VSDMPatient|1.0.1)
+* meta.profile[0] = Canonical(VSDMPatient|1.1.0-dev)
 
 * identifier[KVNR].value = "L234567896"
 * birthDate = "2022-07-02"
@@ -56,10 +56,14 @@ Description: "Versicherungsdaten L234567896 Lachmöwe, Lisa (GKV)"
 Usage: #inline
 
 * id = $idVSDMCoverageGKV-L234567896
-* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.1)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.1.0-dev)
 
-* extension[WOP].valueCoding = $csWOP#17 "Niedersachsen" 
-* extension[zuzahlungsstatus] 
+* extension[WOP].valueCoding = $csWOP|1.00#17 "Niedersachsen"
+* extension[dmp][+]
+  * extension[dmp].valueCoding = #13 "Adipositas Kinder und Jugendliche"
+  * extension[zeitraum].valuePeriod.start = "2026-10-01"
+  * extension[digitalesDMP].valueBoolean = false
+* extension[zuzahlungsstatus]
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = "2040-07-02"
 * extension[kostenerstattung]
@@ -67,9 +71,9 @@ Usage: #inline
   * extension[zahnaerztlicheVersorgung].valueBoolean = true
   * extension[stationaererBereich].valueBoolean = true
   * extension[veranlassteLeistungen].valueBoolean = true
-* extension[versichertenart].valueCoding = $csVersichertenartGKV#3 "Familienangehoerige"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV|1.02#3 "Familienangehoerige"
 * status = #active
-* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-L234567896
 * period
   * start = "2022-07-02"

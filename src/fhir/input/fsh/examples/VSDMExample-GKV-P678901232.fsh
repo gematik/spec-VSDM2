@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-GKV-P678901232
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.1)
+  * profile[0] = Canonical(VSDMBundle|1.1.0-dev)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -28,7 +28,7 @@ Description: "Versichertendaten P678901232 Pinguin, Paula (GKV)"
 Usage: #inline
 
 * id = $idVSDMPatient-GKV-P678901232
-* meta.profile[0] = Canonical(VSDMPatient|1.0.1)
+* meta.profile[0] = Canonical(VSDMPatient|1.1.0-dev)
 
 * identifier[KVNR].value = "P678901232"
 * birthDate = "2009-06-08"
@@ -45,7 +45,7 @@ Usage: #inline
   * city = "Prishtina"
   * postalCode = "10000"
   * country = "Kosovo"
-    * extension[countryCode].valueCoding = VSDMISO3166ErgaenzungCS#XK
+    * extension[countryCodeExt].valueCoding = VSDMISO3166ErgaenzungCS|1.1.0-dev#XK
     * extension[anlage8].valueCoding = $csAnlage8Laenderkennzeichen#KOS
 
 
@@ -56,15 +56,15 @@ Description: "Versicherungsdaten P678901232 Pinguin, Paula (GKV)"
 Usage: #inline
 
 * id = $idVSDMCoverageGKV-P678901232
-* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.1)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.1.0-dev)
 
-* extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"
-* extension[zuzahlungsstatus] 
+* extension[WOP].valueCoding = $csWOP|1.00#52 "Baden-Württemberg"
+* extension[zuzahlungsstatus]
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = "2027-06-09"
-* extension[versichertenart].valueCoding = $csVersichertenartGKV#3 "Familienangehoerige"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV|1.02#3 "Familienangehoerige"
 * status = #active
-* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-P678901232
 * period
   * start = "2009-06-08"

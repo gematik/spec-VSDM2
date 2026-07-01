@@ -93,24 +93,28 @@ Description: "Fehlercodes des Telemetriedatenservice (TDS) im Versichertenstammd
 
 * #79015 "Die vom Clientsystem angefragte Profilversion wird nicht unterstützt."
   * ^definition = """
-      Das Clientsystem hat mit dem Parameter profileVersion eine Profilversion angefordert, die vom Fachdienst nicht unterstützt wird. 
+      Das Clientsystem hat mit dem Parameter profileVersion eine Profilversion angefordert, die vom Fachdienst nicht unterstützt wird.
       Mögliche Ursachen:
       Implementierungsfehler im Clientsystem.
       Relevante Anforderung: A_28047-01.
     """
   * ^property[+].code = #target
   * ^property[=].valueCode = #client
-  
+  * ^property[+].code = #expression
+  * ^property[=].valueString = "http.profileVersion"
+
 * #79016 "Der erforderliche Query-Parameter 'profileVersion' fehlt."
   * ^definition = """
-      Das Clientsystem hat den obligatorischen Parameter 'profileVersion' bei der Abfrage nicht angegeben. 
+      Das Clientsystem hat den obligatorischen Parameter 'profileVersion' bei der Abfrage nicht angegeben.
       Mögliche Ursachen:
       Implementierungsfehler im Clientsystem.
       Relevante Anforderung: A_28047-01.
     """
   * ^property[+].code = #target
   * ^property[=].valueCode = #client
-  
+  * ^property[+].code = #expression
+  * ^property[=].valueString = "http.profileVersion"
+
 * #79030 "Der HTTP-Header '[header]' ist ungültig."
   * ^definition = """
       Der genannte HTTP-Header weist Formatfehler auf.

@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-PKV-D456789013
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.1)
+  * profile[0] = Canonical(VSDMBundle|1.1.0-dev)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -28,7 +28,7 @@ Description: "Versichertendaten D456789013 Dohle, Dara (PKV)"
 Usage: #inline
 
 * id = $idVSDMPatient-PKV-D456789013
-* meta.profile[0] = Canonical(VSDMPatient|1.0.1)
+* meta.profile[0] = Canonical(VSDMPatient|1.1.0-dev)
 
 * identifier[KVNR].value = "D456789013"
 * birthDate = "1970-01-20"
@@ -40,7 +40,7 @@ Usage: #inline
   * prefix = "Dr. rer. nat."
     * extension[prefix-qualifier].valueCode = #AC
 * gender = #other
-  * extension[other-amtlich].valueCoding = $csGenderAmtlich#X "unbestimmt"
+  * extension[other-amtlich].valueCoding = $csGenderAmtlich|1.6.0#X "unbestimmt"
 * address[StrassenAdresse]
   * line[+] = "Dohlenallee 4-6"
     * extension[Hausnummer].valueString = "4-6"
@@ -65,7 +65,7 @@ Description: "Versicherungsdaten D456789013 Dohle, Dara (PKV)"
 Usage: #inline
 
 * id = $idVSDMCoveragePKV-D456789013
-* meta.profile[0] = Canonical(VSDMCoveragePKV|1.0.1)
+* meta.profile[0] = Canonical(VSDMCoveragePKV|1.1.0-dev)
 
 * extension[krankenhaus]
   * extension[allgemein].valueUnsignedInt = 100
@@ -73,9 +73,9 @@ Usage: #inline
   * extension[wahlarzt].valueBoolean = false
   * extension[belegarzt].valueBoolean = false
 * extension[tarifart].valueCoding = #01 "Individualtarif"
-* extension[versichertenart].valueCoding = VSDMVersichertenartPKVCS#VN "Versicherungsnehmer"
+* extension[versichertenart].valueCoding = $csVersichertenartPKV|1.6.0#VN "Versicherungsnehmer"
 * status = #active
-* type = $csVersicherungsart#PKV "private Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#PKV "private Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-PKV-D456789013
 * period
   * start = "1980-01-01"

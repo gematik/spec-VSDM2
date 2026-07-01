@@ -1,0 +1,101 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "VSDMLaenderkennzeichenAnlage8",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichenAnlage8",
+  "version": "1.1.0-dev",
+  "name": "VSDMLaenderkennzeichenAnlage8",
+  "title": "Land (Anlage 8 DEÜV)",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-05-20",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "name": "gematik GmbH",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://fachportal.gematik.de/anwendungen/versichertenstammdaten-management"
+        }
+      ]
+    }
+  ],
+  "description": "Länderkennzeichen nach DEÜV Anlage 8",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "DE",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Germany"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Address.country",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Länderkennzeichen nach DEÜV Anlage 8",
+        "definition": "Kodierte Angabe des Länderkennzeichens nach DEÜV, Anlage 8.",
+        "comment": "Diese Erweiterung dient zur Wahrung der Abwärtskompatibilität für Systeme, die den gemäß DEÜV kodierten Wert benötigen.\nDie Kodierung nach DEÜV ist im GKV-Bereich eine Pflichtangabe, im PKV-Bereich ist sie optional."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichenAnlage8"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8"
+        }
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "min": 1,
+        "fixedUri": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.value[x].version",
+        "path": "Extension.value[x].version",
+        "min": 1,
+        "fixedString": "8.00",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.value[x].code",
+        "path": "Extension.value[x].code",
+        "min": 1,
+        "mustSupport": true
+      }
+    ]
+  }
+}

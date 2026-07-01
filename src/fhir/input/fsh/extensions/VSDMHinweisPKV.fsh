@@ -5,7 +5,7 @@ Description: "Optionale Hinweise in Freitextform für PKV-Leistungserbringer im 
 
 // Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
-* . 
+* .
   * ^short = "Hinweise an PKV-Leistungserbringer"
   * ^definition = """
       Optionale Hinweise in Freitextform für Leistungserbringer im Versichertenstammdatenmanagement (VSDM) 2.0.
@@ -18,7 +18,7 @@ Description: "Optionale Hinweise in Freitextform für PKV-Leistungserbringer im 
 * extension[text]
   * ^short = "Hinweistext"
   * ^definition = """
-        Hinweistext im Markdown-Format. 
+        Hinweistext im Markdown-Format.
         Der Hinweistext ist nicht zur maschinellen Verarbeitung vorgesehen, sondern muss dem Leistungserbringer lediglich angezeigt werden.
 	  """
   * value[x] only markdown
@@ -33,7 +33,4 @@ Description: "Optionale Hinweise in Freitextform für PKV-Leistungserbringer im 
         Die Verwendung anderer OIDs (insbesondere individueller Berufsgruppen) ist nicht zulässig.
         Wenn keine Institutionstypen angegeben sind oder das empfangende System den Filter nicht anzeigen kann, ist der Hinweistext sicherheitshalber anzuzeigen.
   	"""
-  * ^comment = """
-      Prozentwert (0..100)
-    """
   * value[x] only oid

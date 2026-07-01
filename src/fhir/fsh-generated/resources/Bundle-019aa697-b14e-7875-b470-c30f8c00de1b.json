@@ -3,7 +3,7 @@
   "id": "019aa697-b14e-7875-b470-c30f8c00de1b",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.1"
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.1.0-dev"
     ],
     "lastUpdated": "2025-07-14T15:16:17.890+01:00"
   },
@@ -17,7 +17,7 @@
         "id": "019aa694-512a-7308-81bd-cffd96cec457",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.1"
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.1.0-dev"
           ]
         },
         "identifier": [
@@ -94,11 +94,12 @@
                   }
                 },
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
                   "valueCoding": {
-                    "code": "CH",
-                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
-                  }
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+                    "version": "8.00",
+                    "code": "CH"
+                  },
+                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichenAnlage8"
                 }
               ]
             }
@@ -115,14 +116,16 @@
         "id": "019aa696-1070-728a-ad84-4b44e373daac",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.1"
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.1.0-dev"
           ]
         },
+        "status": "active",
         "type": {
           "coding": [
             {
               "code": "GKV",
               "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+              "version": "1.6.0",
               "display": "gesetzliche Krankenversicherung"
             }
           ]
@@ -132,6 +135,7 @@
             "url": "http://fhir.de/StructureDefinition/gkv/wop",
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+              "version": "1.00",
               "code": "52",
               "display": "Baden-Württemberg"
             }
@@ -139,14 +143,16 @@
           {
             "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
             "valueCoding": {
-              "code": "3",
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
+              "version": "1.02",
+              "code": "3",
               "display": "Familienangehoerige"
             }
           },
           {
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
+              "version": "1.03",
               "code": "08",
               "display": "SVA2"
             },
@@ -171,8 +177,9 @@
               {
                 "url": "art",
                 "valueCoding": {
-                  "code": "1",
                   "system": "http://fhir.de/CodeSystem/gkv/RuhenderLeistungsanspruchGKV",
+                  "version": "1.6.0",
+                  "code": "1",
                   "display": "vollständig"
                 }
               },
@@ -195,7 +202,6 @@
             "display": "Beispielkostenträger Freiburg"
           }
         ],
-        "status": "active",
         "beneficiary": {
           "reference": "https://gematik.de/fhir/Patient/019aa694-512a-7308-81bd-cffd96cec457"
         },
@@ -212,7 +218,7 @@
         "id": "019aa691-fec3-79c7-bd58-5538f03fea37",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.1"
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.1.0-dev"
           ]
         },
         "identifier": [
@@ -234,11 +240,12 @@
                   }
                 },
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
                   "valueCoding": {
-                    "code": "D",
-                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
-                  }
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+                    "version": "8.00",
+                    "code": "D"
+                  },
+                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichenAnlage8"
                 }
               ]
             }

@@ -1,0 +1,67 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "VSDMDEUEVAnlage8ISO3166Ergaenzung",
+  "url": "https://gematik.de/fhir/vsdm2/ConceptMap/VSDMDEUEVAnlage8ISO3166Ergaenzung",
+  "title": "DEÜV Anlage 8 zu ISO 3166-1 (Ergänzung)",
+  "description": "Ermittlung des vorläufigen Ländercodes nach ISO 3166-1 aus dem Ländercode nach DEÜV Anlage 8",
+  "status": "active",
+  "experimental": false,
+  "version": "1.1.0-dev",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "name": "gematik GmbH",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://fachportal.gematik.de/anwendungen/versichertenstammdaten-management"
+        }
+      ]
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "DE",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Germany"
+        }
+      ]
+    }
+  ],
+  "date": "2026-05-20",
+  "purpose": "Diese ConceptMap ordnet den Ländercodes aus der DEÜV Anlage 8 die vorläufigen Ländercodes in Anlehnung an ISO 3166-1 zu.\nZur Ablage dieser Werte ist eine separate Extension zu verwenden (siehe Profilierung der jeweiligen Address-Strukturen).",
+  "sourceUri": "https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8",
+  "targetUri": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMISO3166ErgaenzungVS|1.1.0-dev",
+  "group": [
+    {
+      "source": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+      "target": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMISO3166ErgaenzungCS|1.1.0-dev",
+      "element": [
+        {
+          "code": "KOS",
+          "display": "Kosovo",
+          "target": [
+            {
+              "code": "XK",
+              "display": "Kosovo, Republic of",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "CP",
+          "display": "Clipperton",
+          "target": [
+            {
+              "code": "CP",
+              "display": "Clipperton",
+              "equivalence": "equal"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

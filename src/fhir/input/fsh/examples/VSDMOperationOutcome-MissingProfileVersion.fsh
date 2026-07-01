@@ -5,7 +5,7 @@ Description: "Beispiel zur Fehlermeldung 'Der erforderliche Query-Parameter 'pro
 Usage: #example
 
 * meta
-  * profile[0] = Canonical(VSDMOperationOutcome|1.0.1)
+  * profile[0] = Canonical(VSDMOperationOutcome|1.1.0-dev)
 * text
   * status = #generated
   * div[+] = """
@@ -20,7 +20,7 @@ Usage: #example
     * coding[0] = VSDMErrorcodeCS#VSDSERVICE_MISSING_PROFILE_VERSION "Der erforderliche Query-Parameter 'profileVersion' fehlt."
     * text = "Der erforderliche Query-Parameter 'profileVersion' fehlt."
   * diagnostics = """
-      Das Clientsystem hat den obligatorischen Parameter 'profileVersion' bei der Abfrage nicht angegeben. 
+      Das Clientsystem hat den obligatorischen Parameter 'profileVersion' bei der Abfrage nicht angegeben.
       Das Clientsystem muss den Parameter mit einer unterstützten Major-/Minor-Version gemäß der aktuellen gematik-Vorgaben füllen.
       Wiederholen Sie die Anfrage unter Angabe eines gültigen Werts.
     """

@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-GKV-Z987654321
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.1)
+  * profile[0] = Canonical(VSDMBundle|1.1.0-dev)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -31,7 +31,7 @@ Description: "Versichertendaten Z987654321 Graf von und zu Zaunkönig, Zacharias
 Usage: #inline
 
 * id = $idVSDMPatient-GKV-Z987654321
-* meta.profile[0] = Canonical(VSDMPatient|1.0.1)
+* meta.profile[0] = Canonical(VSDMPatient|1.1.0-dev)
 
 * identifier[KVNR].value = "Z987654321"
 * birthDate = "1987-05-16"
@@ -45,7 +45,7 @@ Usage: #inline
   * prefix = "Prof. Dr. rer. nat."
     * extension[prefix-qualifier].valueCode = #AC
 * gender = #other
-  * extension[other-amtlich].valueCoding = $csGenderAmtlich#X "unbestimmt"
+  * extension[other-amtlich].valueCoding = $csGenderAmtlich|1.6.0#X "unbestimmt"
 * address[StrassenAdresse]
   * line[+] = "Zaunkönigpfad 99x"
     * extension[Hausnummer].valueString = "99x"
@@ -74,9 +74,9 @@ Description: "Versicherungsdaten Z987654321 Graf von und zu Zaunkönig, Zacharia
 Usage: #inline
 
 * id = $idVSDMCoverageGKV-Z987654321
-* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.1)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.1.0-dev)
 
-* extension[WOP].valueCoding = $csWOP#98 "Sachsen"
+* extension[WOP].valueCoding = $csWOP|1.00#98 "Sachsen"
 * extension[dmp][+]
   * extension[dmp].valueCoding = #01 "DM2" // "Diabetes mellitus Typ 2"
   * extension[zeitraum].valuePeriod.start = "2001-01-01"
@@ -88,8 +88,8 @@ Usage: #inline
     * end = "2023-12-31"
   * extension[digitalesDMP].valueBoolean = true
 * extension[besonderePersonengruppe].valueCoding = #07 "SVA1" // "SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht"
-* extension[versichertenart].valueCoding = $csVersichertenartGKV#3 "Familienangehoerige"
-* extension[zuzahlungsstatus] 
+* extension[versichertenart].valueCoding = $csVersichertenartGKV|1.02#3 "Familienangehoerige"
+* extension[zuzahlungsstatus]
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = "2025-12-31"
 * extension[kostenerstattung]
@@ -98,12 +98,12 @@ Usage: #inline
   * extension[stationaererBereich].valueBoolean = true
   * extension[veranlassteLeistungen].valueBoolean = false
 * extension[ruhenderLeistungsanspruch]
-  * extension[art].valueCoding = VSDMRuhenderLeistungsanspruchArtCS#1 "vollständig"
+  * extension[art].valueCoding = $csRuhenderLeistungsanspruch|1.6.0#1 "vollständig"
   * extension[dauer].valuePeriod
     * start = "2025-01-01"
     * end = "2025-12-31"
 * status = #active
-* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-Z987654321
 * period
   * start = "2000-01-01"

@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-PKV-E567890127
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.1)
+  * profile[0] = Canonical(VSDMBundle|1.1.0-dev)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -28,7 +28,7 @@ Description: "Versichertendaten E567890127 Freifrau an der Elster, Elke (PKV)"
 Usage: #inline
 
 * id = $idVSDMPatient-PKV-E567890127
-* meta.profile[0] = Canonical(VSDMPatient|1.0.1)
+* meta.profile[0] = Canonical(VSDMPatient|1.1.0-dev)
 
 * identifier[KVNR].value = "E567890127"
 * birthDate = "1992-11-13"
@@ -67,7 +67,7 @@ Description: "Versicherungsdaten E567890127 Freifrau an der Elster, Elke (PKV)"
 Usage: #inline
 
 * id = $idVSDMCoveragePKV-E567890127
-* meta.profile[0] = Canonical(VSDMCoveragePKV|1.0.1)
+* meta.profile[0] = Canonical(VSDMCoveragePKV|1.1.0-dev)
 
 * extension[krankenhaus]
   * extension[allgemein].valueUnsignedInt = 100
@@ -76,9 +76,9 @@ Usage: #inline
   * extension[wahlarzt].valueBoolean = false
   * extension[belegarzt].valueBoolean = false
 * extension[tarifart].valueCoding = #02 "Standardtarif"
-* extension[versichertenart].valueCoding = VSDMVersichertenartPKVCS#VN "Versicherungsnehmer"
+* extension[versichertenart].valueCoding = $csVersichertenartPKV|1.6.0#VN "Versicherungsnehmer"
 * status = #active
-* type = $csVersicherungsart#PKV "private Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#PKV "private Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-PKV-E567890127
 * period
   * start = "2020-01-01"

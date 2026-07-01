@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-PKV-B234567895
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.1)
+  * profile[0] = Canonical(VSDMBundle|1.1.0-dev)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -28,7 +28,7 @@ Description: "Versichertendaten B234567895 Graf von und zu Buntspecht, Bernd Ben
 Usage: #inline
 
 * id = $idVSDMPatient-PKV-B234567895
-* meta.profile[0] = Canonical(VSDMPatient|1.0.1)
+* meta.profile[0] = Canonical(VSDMPatient|1.1.0-dev)
 
 * identifier[KVNR].value = "B234567895"
 * birthDate = "1988-06-22"
@@ -62,7 +62,7 @@ Description: "Versicherungsdaten B234567895 Graf von und zu Buntspecht, Bernd Be
 Usage: #inline
 
 * id = $idVSDMCoveragePKV-B234567895
-* meta.profile[0] = Canonical(VSDMCoveragePKV|1.0.1)
+* meta.profile[0] = Canonical(VSDMCoveragePKV|1.1.0-dev)
 
 * extension[krankenhaus]
   * extension[allgemein].valueUnsignedInt = 100
@@ -71,9 +71,9 @@ Usage: #inline
   * extension[wahlarzt].valueUnsignedInt = 100
   * extension[belegarzt].valueUnsignedInt = 100
 * extension[tarifart].valueCoding = #01 "Individualtarif"
-* extension[versichertenart].valueCoding = VSDMVersichertenartPKVCS#VN "Versicherungsnehmer"
+* extension[versichertenart].valueCoding = $csVersichertenartPKV|1.6.0#VN "Versicherungsnehmer"
 * status = #active
-* type = $csVersicherungsart#PKV "private Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#PKV "private Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-PKV-B234567895
 * period
   * start = "1980-01-01"

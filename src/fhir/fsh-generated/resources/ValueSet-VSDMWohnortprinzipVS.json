@@ -5,7 +5,7 @@
   "id": "VSDMWohnortprinzipVS",
   "title": "Wohnortprinzip (WOP)",
   "description": "Wohnortprinzip im Versichertenstammdatenmanagement (VSDM) 2.0",
-  "version": "1.0.1",
+  "version": "1.1.0-dev",
   "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMWohnortprinzipVS",
   "experimental": false,
   "publisher": "gematik GmbH",
@@ -36,6 +36,7 @@
     "include": [
       {
         "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+        "version": "1.00",
         "concept": [
           {
             "code": "01",

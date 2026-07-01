@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-GKV-O567890128
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.1)
+  * profile[0] = Canonical(VSDMBundle|1.1.0-dev)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -28,7 +28,7 @@ Description: "Versichertendaten O567890128 Ortolan, Oliver (GKV)"
 Usage: #inline
 
 * id = $idVSDMPatient-GKV-O567890128
-* meta.profile[0] = Canonical(VSDMPatient|1.0.1)
+* meta.profile[0] = Canonical(VSDMPatient|1.1.0-dev)
 
 * identifier[KVNR].value = "O567890128"
 * birthDate = "2009-06-08"
@@ -58,15 +58,15 @@ Description: "Versicherungsdaten O567890128 Ortolan, Oliver (GKV)"
 Usage: #inline
 
 * id = $idVSDMCoverageGKV-O567890128
-* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.1)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.1.0-dev)
 
-* extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"
-* extension[zuzahlungsstatus] 
+* extension[WOP].valueCoding = $csWOP|1.00#52 "Baden-Württemberg"
+* extension[zuzahlungsstatus]
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = "2027-06-09"
-* extension[versichertenart].valueCoding = $csVersichertenartGKV#3 "Familienangehoerige"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV|1.02#3 "Familienangehoerige"
 * status = #active
-* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-O567890128
 * period
   * start = "2009-06-08"

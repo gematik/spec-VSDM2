@@ -1,23 +1,22 @@
 Instance: VSDMDEUEVAnlage8ISO3166
 InstanceOf: ConceptMap
-Title: "DEÜV Anlage 8 zu ISO 3166-1 (erweitert)"
-Description: "Ermittlung des (temporären) Ländercodes nach ISO 3166-1 aus dem Ländercode nach DEÜV Anlage 8"
+Title: "DEÜV Anlage 8 zu ISO 3166-1"
+Description: "Ermittlung des Ländercodes nach ISO 3166-1 aus dem Ländercode nach DEÜV Anlage 8"
 Usage: #definition
 
 * insert Meta-Inst
 * purpose = """
-    Diese ConceptMap ordnet den Ländercodes aus der DEÜV Anlage 8 die korrespondierenden Ländercodes nach ISO 3166-1 zu.
-    Wo keine offiziellen Ländercodes verfügbar sind, werden temporäre Codes aus einem lokalen CodeSystem verwendet.
+    Diese ConceptMap ordnet den Ländercodes aus der DEÜV Anlage 8 die korrespondierenden offiziellen Ländercodes nach ISO 3166-1 zu.
   """
 
 * sourceUri = $vsAnlage8Laenderkennzeichen
-* targetUri = Canonical(VSDMISO3166VS|1.0.1)
+* targetUri = $vsCountryCodeISO3166
 * group[+]
   * source = $csAnlage8Laenderkennzeichen
   * target = $csCountryCodeISO3166
 
   * element[+]
-    * code = #AFG 
+    * code = #AFG
     * display = "Afghanistan"
     * target[+]
       * code = #AF
@@ -25,7 +24,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #ET 
+    * code = #ET
     * display = "Ägypten"
     * target[+]
       * code = #EG
@@ -33,7 +32,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #AX 
+    * code = #AX
     * display = "Åland"
     * target[+]
       * code = #AX
@@ -41,7 +40,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #AL 
+    * code = #AL
     * display = "Albanien"
     * target[+]
       * code = #AL
@@ -49,7 +48,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #DZ 
+    * code = #DZ
     * display = "Algerien"
     * target[+]
       * code = #DZ
@@ -57,7 +56,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #AJ 
+    * code = #AJ
     * display = "Amerik.-Jungferninseln"
     * target[+]
       * code = #VI
@@ -65,7 +64,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #AS 
+    * code = #AS
     * display = "Amerikanisch-Samoa"
     * target[+]
       * code = #AS
@@ -73,7 +72,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #AND 
+    * code = #AND
     * display = "Andorra"
     * target[+]
       * code = #AD
@@ -81,7 +80,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #AGO 
+    * code = #AGO
     * display = "Angola"
     * target[+]
       * code = #AO
@@ -89,7 +88,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #ANG 
+    * code = #ANG
     * display = "Anguilla"
     * target[+]
       * code = #AI
@@ -97,7 +96,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #ANT 
+    * code = #ANT
     * display = "Antigua und Barbuda"
     * target[+]
       * code = #AG
@@ -105,7 +104,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #AQU 
+    * code = #AQU
     * display = "Äquatorialguinea"
     * target[+]
       * code = #GQ
@@ -113,7 +112,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #RA 
+    * code = #RA
     * display = "Argentinien"
     * target[+]
       * code = #AR
@@ -121,7 +120,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #AQ 
+    * code = #AQ
     * display = "Argentinische Antarktis"
     * target[+]
       * code = #AQ
@@ -129,7 +128,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #ARM 
+    * code = #ARM
     * display = "Armenien"
     * target[+]
       * code = #AM
@@ -137,7 +136,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #AW 
+    * code = #AW
     * display = "Aruba"
     * target[+]
       * code = #AW
@@ -145,7 +144,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #HEL 
+    * code = #HEL
     * display = "Ascension"
     * target[+]
       * code = #SH
@@ -153,7 +152,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #ASE 
+    * code = #ASE
     * display = "Aserbaidschan"
     * target[+]
       * code = #AZ
@@ -169,7 +168,7 @@ Usage: #definition
       * equivalence = #wider
 
   * element[+]
-    * code = #ETH 
+    * code = #ETH
     * display = "Äthiopien"
     * target[+]
       * code = #ET
@@ -177,7 +176,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #AUS 
+    * code = #AUS
     * display = "Australien"
     * target[+]
       * code = #AU
@@ -185,7 +184,7 @@ Usage: #definition
       * equivalence = #wider
 
   * element[+]
-    * code = #BS 
+    * code = #BS
     * display = "Bahamas"
     * target[+]
       * code = #BS
@@ -193,7 +192,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #BRN 
+    * code = #BRN
     * display = "Bahrain"
     * target[+]
       * code = #BH
@@ -201,7 +200,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #BD 
+    * code = #BD
     * display = "Bangladesch"
     * target[+]
       * code = #BD
@@ -209,7 +208,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #BDS 
+    * code = #BDS
     * display = "Barbados"
     * target[+]
       * code = #BB
@@ -217,7 +216,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #BY 
+    * code = #BY
     * display = "Belarus"
     * target[+]
       * code = #BY
@@ -225,7 +224,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #B 
+    * code = #B
     * display = "Belgien"
     * target[+]
       * code = #BE
@@ -233,7 +232,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #BH 
+    * code = #BH
     * display = "Belize"
     * target[+]
       * code = #BZ
@@ -241,7 +240,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #DY 
+    * code = #DY
     * display = "Benin"
     * target[+]
       * code = #BJ
@@ -249,7 +248,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #BER 
+    * code = #BER
     * display = "Bermuda"
     * target[+]
       * code = #BM
@@ -257,7 +256,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #BHT 
+    * code = #BHT
     * display = "Bhutan"
     * target[+]
       * code = #BT
@@ -265,7 +264,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #BOL 
+    * code = #BOL
     * display = "Bolivien"
     * target[+]
       * code = #BO
@@ -273,7 +272,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #BQ 
+    * code = #BQ
     * display = "Bonaire, Saba, St. Eustatius"
     * target[+]
       * code = #BQ
@@ -281,7 +280,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #BIH 
+    * code = #BIH
     * display = "Bosnien und Herzegowina"
     * target[+]
       * code = #BA
@@ -289,7 +288,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #RB 
+    * code = #RB
     * display = "Botsuana"
     * target[+]
       * code = #BW
@@ -297,7 +296,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #BV 
+    * code = #BV
     * display = "Bouvetinsel"
     * target[+]
       * code = #BV
@@ -305,7 +304,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #BR 
+    * code = #BR
     * display = "Brasilien"
     * target[+]
       * code = #BR
@@ -313,7 +312,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #BJ 
+    * code = #BJ
     * display = "Britische Jungferninseln"
     * target[+]
       * code = #VG
@@ -321,7 +320,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #IO 
+    * code = #IO
     * display = "Britisches Territorium im Indischen Ozean"
     * target[+]
       * code = #IO
@@ -329,7 +328,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #BRU 
+    * code = #BRU
     * display = "Brunei Darussalam"
     * target[+]
       * code = #BN
@@ -337,7 +336,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #BG 
+    * code = #BG
     * display = "Bulgarien"
     * target[+]
       * code = #BG
@@ -345,7 +344,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #HV 
+    * code = #HV
     * display = "Burkina Faso"
     * target[+]
       * code = #BF
@@ -353,7 +352,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #RU 
+    * code = #RU
     * display = "Burundi"
     * target[+]
       * code = #BI
@@ -361,7 +360,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #RCH 
+    * code = #RCH
     * display = "Chile"
     * target[+]
       * code = #CL
@@ -369,7 +368,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #COI 
+    * code = #COI
     * display = "Cookinseln"
     * target[+]
       * code = #CK
@@ -377,7 +376,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #CR 
+    * code = #CR
     * display = "Costa Rica"
     * target[+]
       * code = #CR
@@ -385,7 +384,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #CI 
+    * code = #CI
     * display = "Cote d`Ivoire"
     * target[+]
       * code = #CI
@@ -393,7 +392,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #CW 
+    * code = #CW
     * display = "Curaçao"
     * target[+]
       * code = #CW
@@ -401,7 +400,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #DK 
+    * code = #DK
     * display = "Dänemark"
     * target[+]
       * code = #DK
@@ -409,7 +408,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #D 
+    * code = #D
     * display = "Deutschland"
     * target[+]
       * code = #DE
@@ -417,7 +416,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #WD 
+    * code = #WD
     * display = "Dominica"
     * target[+]
       * code = #DM
@@ -425,7 +424,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #DOM 
+    * code = #DOM
     * display = "Dominikanische Republik"
     * target[+]
       * code = #DO
@@ -433,7 +432,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #DSC 
+    * code = #DSC
     * display = "Dschibuti"
     * target[+]
       * code = #DJ
@@ -441,7 +440,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #EC 
+    * code = #EC
     * display = "Ecuador"
     * target[+]
       * code = #EC
@@ -449,7 +448,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #ES 
+    * code = #ES
     * display = "El Salvador"
     * target[+]
       * code = #SV
@@ -457,7 +456,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #ERI 
+    * code = #ERI
     * display = "Eritrea"
     * target[+]
       * code = #ER
@@ -465,7 +464,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #EST 
+    * code = #EST
     * display = "Estland"
     * target[+]
       * code = #EE
@@ -473,7 +472,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #SWZ 
+    * code = #SWZ
     * display = "Eswatini"
     * target[+]
       * code = #SZ
@@ -481,7 +480,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #FAL 
+    * code = #FAL
     * display = "Falklandinseln"
     * target[+]
       * code = #FK
@@ -489,7 +488,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #FR 
+    * code = #FR
     * display = "Färöer"
     * target[+]
       * code = #FO
@@ -497,7 +496,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #FJI 
+    * code = #FJI
     * display = "Fidschi"
     * target[+]
       * code = #FJ
@@ -505,7 +504,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #FIN 
+    * code = #FIN
     * display = "Finnland"
     * target[+]
       * code = #FI
@@ -513,7 +512,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #F 
+    * code = #F
     * display = "Frankreich"
     * target[+]
       * code = #FR
@@ -521,7 +520,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #TF 
+    * code = #TF
     * display = "Französische Süd- und Antarktisgebiete"
     * target[+]
       * code = #TF
@@ -529,7 +528,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #FG 
+    * code = #FG
     * display = "Franz.-Guayana"
     * target[+]
       * code = #GF
@@ -537,7 +536,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #FP 
+    * code = #FP
     * display = "Franz.-Polynesien"
     * target[+]
       * code = #PF
@@ -545,7 +544,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #GAB 
+    * code = #GAB
     * display = "Gabun"
     * target[+]
       * code = #GA
@@ -553,7 +552,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #WAG 
+    * code = #WAG
     * display = "Gambia"
     * target[+]
       * code = #GM
@@ -561,7 +560,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #GEO 
+    * code = #GEO
     * display = "Georgien"
     * target[+]
       * code = #GE
@@ -569,7 +568,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #GH 
+    * code = #GH
     * display = "Ghana"
     * target[+]
       * code = #GH
@@ -577,7 +576,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #GIB 
+    * code = #GIB
     * display = "Gibraltar"
     * target[+]
       * code = #GI
@@ -585,7 +584,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #WG 
+    * code = #WG
     * display = "Grenada"
     * target[+]
       * code = #GD
@@ -593,7 +592,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #GR 
+    * code = #GR
     * display = "Griechenland"
     * target[+]
       * code = #GR
@@ -601,7 +600,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #GRO 
+    * code = #GRO
     * display = "Grönland"
     * target[+]
       * code = #GL
@@ -609,7 +608,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #GUA 
+    * code = #GUA
     * display = "Guadeloupe"
     * target[+]
       * code = #GP
@@ -617,7 +616,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #GUM 
+    * code = #GUM
     * display = "Guam"
     * target[+]
       * code = #GU
@@ -625,7 +624,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #GCA 
+    * code = #GCA
     * display = "Guatemala"
     * target[+]
       * code = #GT
@@ -633,7 +632,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #GG 
+    * code = #GG
     * display = "Guernsey"
     * target[+]
       * code = #GG
@@ -641,7 +640,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #RG 
+    * code = #RG
     * display = "Guinea"
     * target[+]
       * code = #GN
@@ -649,7 +648,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #GUB 
+    * code = #GUB
     * display = "Guinea-Bissau"
     * target[+]
       * code = #GW
@@ -657,7 +656,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #GUY 
+    * code = #GUY
     * display = "Guyana"
     * target[+]
       * code = #GY
@@ -665,7 +664,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #RH 
+    * code = #RH
     * display = "Haiti"
     * target[+]
       * code = #HT
@@ -673,7 +672,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #HM 
+    * code = #HM
     * display = "Heard und McDonaldinseln"
     * target[+]
       * code = #HM
@@ -681,7 +680,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #HCA 
+    * code = #HCA
     * display = "Honduras"
     * target[+]
       * code = #HN
@@ -689,7 +688,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #HKG 
+    * code = #HKG
     * display = "Hongkong"
     * target[+]
       * code = #HK
@@ -697,7 +696,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #IND 
+    * code = #IND
     * display = "Indien"
     * target[+]
       * code = #IN
@@ -705,7 +704,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #RI 
+    * code = #RI
     * display = "Indonesien"
     * target[+]
       * code = #ID
@@ -713,7 +712,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #MAN 
+    * code = #MAN
     * display = "Insel Man"
     * target[+]
       * code = #IM
@@ -721,7 +720,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #IRQ 
+    * code = #IRQ
     * display = "Irak"
     * target[+]
       * code = #IQ
@@ -729,7 +728,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #IR 
+    * code = #IR
     * display = "Iran"
     * target[+]
       * code = #IR
@@ -737,7 +736,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #IRL 
+    * code = #IRL
     * display = "Irland"
     * target[+]
       * code = #IE
@@ -745,7 +744,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #IS 
+    * code = #IS
     * display = "Island"
     * target[+]
       * code = #IS
@@ -753,7 +752,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #IL 
+    * code = #IL
     * display = "Israel"
     * target[+]
       * code = #IL
@@ -761,7 +760,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #I 
+    * code = #I
     * display = "Italien"
     * target[+]
       * code = #IT
@@ -769,7 +768,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #JA 
+    * code = #JA
     * display = "Jamaika"
     * target[+]
       * code = #JM
@@ -777,7 +776,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #J 
+    * code = #J
     * display = "Japan"
     * target[+]
       * code = #JP
@@ -785,7 +784,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #YEM 
+    * code = #YEM
     * display = "Jemen"
     * target[+]
       * code = #YE
@@ -793,7 +792,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #JE 
+    * code = #JE
     * display = "Jersey"
     * target[+]
       * code = #JE
@@ -801,7 +800,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #JOR 
+    * code = #JOR
     * display = "Jordanien"
     * target[+]
       * code = #JO
@@ -809,7 +808,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #KAI 
+    * code = #KAI
     * display = "Kaimaninseln"
     * target[+]
       * code = #KY
@@ -817,7 +816,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #K 
+    * code = #K
     * display = "Kambodscha"
     * target[+]
       * code = #KH
@@ -825,7 +824,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #CAM 
+    * code = #CAM
     * display = "Kamerun"
     * target[+]
       * code = #CM
@@ -833,7 +832,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #CDN 
+    * code = #CDN
     * display = "Kanada"
     * target[+]
       * code = #CA
@@ -841,7 +840,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #CV 
+    * code = #CV
     * display = "Cabo Verde"
     * target[+]
       * code = #CV
@@ -849,7 +848,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #KAS 
+    * code = #KAS
     * display = "Kasachstan"
     * target[+]
       * code = #KZ
@@ -857,7 +856,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #QAT 
+    * code = #QAT
     * display = "Katar"
     * target[+]
       * code = #QA
@@ -865,7 +864,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #EAK 
+    * code = #EAK
     * display = "Kenia"
     * target[+]
       * code = #KE
@@ -873,7 +872,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #KIS 
+    * code = #KIS
     * display = "Kirgisistan"
     * target[+]
       * code = #KG
@@ -881,7 +880,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #KIB 
+    * code = #KIB
     * display = "Kiribati"
     * target[+]
       * code = #KI
@@ -889,7 +888,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #CC 
+    * code = #CC
     * display = "Kokosinseln"
     * target[+]
       * code = #CC
@@ -897,7 +896,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #CO 
+    * code = #CO
     * display = "Kolumbien"
     * target[+]
       * code = #CO
@@ -905,7 +904,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #KOM 
+    * code = #KOM
     * display = "Komoren"
     * target[+]
       * code = #KM
@@ -913,7 +912,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #RCB 
+    * code = #RCB
     * display = "Kongo(-Brazzaville), Republik"
     * target[+]
       * code = #CG
@@ -921,7 +920,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #ZRE 
+    * code = #ZRE
     * display = "Kongo, Demokratische Republik (ehem. Zaire)"
     * target[+]
       * code = #CD
@@ -929,7 +928,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #KOR 
+    * code = #KOR
     * display = "Korea, Demokratische Volksrepublik (Nordkorea)"
     * target[+]
       * code = #KP
@@ -937,7 +936,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #ROK 
+    * code = #ROK
     * display = "Korea, Republik (Südkorea)"
     * target[+]
       * code = #KR
@@ -945,7 +944,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #HR 
+    * code = #HR
     * display = "Kroatien"
     * target[+]
       * code = #HR
@@ -953,7 +952,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #C 
+    * code = #C
     * display = "Kuba"
     * target[+]
       * code = #CU
@@ -961,7 +960,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #KWT 
+    * code = #KWT
     * display = "Kuwait"
     * target[+]
       * code = #KW
@@ -969,7 +968,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #LAO 
+    * code = #LAO
     * display = "Laos"
     * target[+]
       * code = #LA
@@ -977,7 +976,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #LS 
+    * code = #LS
     * display = "Lesotho"
     * target[+]
       * code = #LS
@@ -985,7 +984,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #LV 
+    * code = #LV
     * display = "Lettland"
     * target[+]
       * code = #LV
@@ -993,7 +992,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #RL 
+    * code = #RL
     * display = "Libanon"
     * target[+]
       * code = #LB
@@ -1001,7 +1000,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #LB 
+    * code = #LB
     * display = "Liberia"
     * target[+]
       * code = #LR
@@ -1009,7 +1008,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #LAR 
+    * code = #LAR
     * display = "Libyen"
     * target[+]
       * code = #LY
@@ -1017,7 +1016,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #FL 
+    * code = #FL
     * display = "Liechtenstein"
     * target[+]
       * code = #LI
@@ -1025,7 +1024,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #LT 
+    * code = #LT
     * display = "Litauen"
     * target[+]
       * code = #LT
@@ -1033,7 +1032,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #L 
+    * code = #L
     * display = "Luxemburg"
     * target[+]
       * code = #LU
@@ -1041,7 +1040,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #MAC 
+    * code = #MAC
     * display = "Macau"
     * target[+]
       * code = #MO
@@ -1049,7 +1048,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #RM 
+    * code = #RM
     * display = "Madagaskar"
     * target[+]
       * code = #MG
@@ -1057,7 +1056,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #MW 
+    * code = #MW
     * display = "Malawi"
     * target[+]
       * code = #MW
@@ -1065,7 +1064,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #MAL 
+    * code = #MAL
     * display = "Malaysia"
     * target[+]
       * code = #MY
@@ -1073,7 +1072,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #BIO 
+    * code = #BIO
     * display = "Malediven"
     * target[+]
       * code = #MV
@@ -1081,7 +1080,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #RMM 
+    * code = #RMM
     * display = "Mali"
     * target[+]
       * code = #ML
@@ -1089,7 +1088,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #M 
+    * code = #M
     * display = "Malta"
     * target[+]
       * code = #MT
@@ -1097,7 +1096,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #MA 
+    * code = #MA
     * display = "Marokko"
     * target[+]
       * code = #MA
@@ -1105,7 +1104,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #MAR 
+    * code = #MAR
     * display = "Marshallinseln"
     * target[+]
       * code = #MH
@@ -1113,7 +1112,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #MAT 
+    * code = #MAT
     * display = "Martinique"
     * target[+]
       * code = #MQ
@@ -1121,7 +1120,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #RIM 
+    * code = #RIM
     * display = "Mauretanien"
     * target[+]
       * code = #MR
@@ -1129,7 +1128,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #MS 
+    * code = #MS
     * display = "Mauritius"
     * target[+]
       * code = #MU
@@ -1137,7 +1136,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #MAY 
+    * code = #MAY
     * display = "Mayotte"
     * target[+]
       * code = #YT
@@ -1145,7 +1144,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #MEX 
+    * code = #MEX
     * display = "Mexiko"
     * target[+]
       * code = #MX
@@ -1153,7 +1152,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #MIK 
+    * code = #MIK
     * display = "Mikronesien"
     * target[+]
       * code = #FM
@@ -1161,7 +1160,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #MD 
+    * code = #MD
     * display = "Moldau"
     * target[+]
       * code = #MD
@@ -1169,7 +1168,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #MC 
+    * code = #MC
     * display = "Monaco"
     * target[+]
       * code = #MC
@@ -1177,7 +1176,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #MON 
+    * code = #MON
     * display = "Mongolei"
     * target[+]
       * code = #MN
@@ -1185,7 +1184,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #MNE 
+    * code = #MNE
     * display = "Montenegro"
     * target[+]
       * code = #ME
@@ -1193,7 +1192,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #MOT 
+    * code = #MOT
     * display = "Montserrat"
     * target[+]
       * code = #MS
@@ -1201,7 +1200,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #MOZ 
+    * code = #MOZ
     * display = "Mosambik"
     * target[+]
       * code = #MZ
@@ -1209,7 +1208,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #MYA 
+    * code = #MYA
     * display = "Myanmar"
     * target[+]
       * code = #MM
@@ -1217,7 +1216,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #SWA 
+    * code = #SWA
     * display = "Namibia"
     * target[+]
       * code = #NA
@@ -1225,7 +1224,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #NAU 
+    * code = #NAU
     * display = "Nauru"
     * target[+]
       * code = #NR
@@ -1233,7 +1232,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #UM 
+    * code = #UM
     * display = "Navassa"
     * target[+]
       * code = #UM
@@ -1241,7 +1240,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #NEP 
+    * code = #NEP
     * display = "Nepal"
     * target[+]
       * code = #NP
@@ -1249,7 +1248,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #NKA 
+    * code = #NKA
     * display = "Neukaledonien"
     * target[+]
       * code = #NC
@@ -1257,7 +1256,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #NZ 
+    * code = #NZ
     * display = "Neuseeland"
     * target[+]
       * code = #NZ
@@ -1265,7 +1264,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #NIC 
+    * code = #NIC
     * display = "Nicaragua"
     * target[+]
       * code = #NI
@@ -1273,7 +1272,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #NL 
+    * code = #NL
     * display = "Niederlande"
     * target[+]
       * code = #NL
@@ -1281,7 +1280,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #RN 
+    * code = #RN
     * display = "Niger"
     * target[+]
       * code = #NE
@@ -1289,7 +1288,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #WAN 
+    * code = #WAN
     * display = "Nigeria"
     * target[+]
       * code = #NG
@@ -1297,7 +1296,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #NIU 
+    * code = #NIU
     * display = "Niue"
     * target[+]
       * code = #NU
@@ -1305,7 +1304,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #MK 
+    * code = #MK
     * display = "Nordmazedonien"
     * target[+]
       * code = #MK
@@ -1313,7 +1312,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #NMA 
+    * code = #NMA
     * display = "Nördliche Marianen"
     * target[+]
       * code = #MP
@@ -1321,7 +1320,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #NF 
+    * code = #NF
     * display = "Norfolkinsel"
     * target[+]
       * code = #NF
@@ -1329,7 +1328,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #N 
+    * code = #N
     * display = "Norwegen"
     * target[+]
       * code = #NO
@@ -1337,7 +1336,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #MAO 
+    * code = #MAO
     * display = "Oman"
     * target[+]
       * code = #OM
@@ -1345,7 +1344,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #A 
+    * code = #A
     * display = "Österreich"
     * target[+]
       * code = #AT
@@ -1353,7 +1352,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #PK 
+    * code = #PK
     * display = "Pakistan"
     * target[+]
       * code = #PK
@@ -1361,7 +1360,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #PSE 
+    * code = #PSE
     * display = "Palästinensische Gebiete"
     * target[+]
       * code = #PS
@@ -1369,7 +1368,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #PAL 
+    * code = #PAL
     * display = "Palau"
     * target[+]
       * code = #PW
@@ -1377,7 +1376,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #PA 
+    * code = #PA
     * display = "Panama"
     * target[+]
       * code = #PA
@@ -1385,7 +1384,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #PNG 
+    * code = #PNG
     * display = "Papua-Neugiunea"
     * target[+]
       * code = #PG
@@ -1393,7 +1392,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #PY 
+    * code = #PY
     * display = "Paraguay"
     * target[+]
       * code = #PY
@@ -1401,7 +1400,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #PE 
+    * code = #PE
     * display = "Peru"
     * target[+]
       * code = #PE
@@ -1409,7 +1408,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #RP 
+    * code = #RP
     * display = "Philippinen"
     * target[+]
       * code = #PH
@@ -1417,7 +1416,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #PIT 
+    * code = #PIT
     * display = "Pitcairninseln"
     * target[+]
       * code = #PN
@@ -1425,7 +1424,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #PL 
+    * code = #PL
     * display = "Polen"
     * target[+]
       * code = #PL
@@ -1433,7 +1432,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #P 
+    * code = #P
     * display = "Portugal"
     * target[+]
       * code = #PT
@@ -1441,7 +1440,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #PRI 
+    * code = #PRI
     * display = "Puerto Rico"
     * target[+]
       * code = #PR
@@ -1449,7 +1448,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #REU 
+    * code = #REU
     * display = "Réunion"
     * target[+]
       * code = #RE
@@ -1457,7 +1456,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #RWA 
+    * code = #RWA
     * display = "Ruanda"
     * target[+]
       * code = #RW
@@ -1465,7 +1464,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #RO 
+    * code = #RO
     * display = "Rumänien"
     * target[+]
       * code = #RO
@@ -1473,7 +1472,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #RUS 
+    * code = #RUS
     * display = "Russische Föderation"
     * target[+]
       * code = #RU
@@ -1481,7 +1480,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #PIE 
+    * code = #PIE
     * display = "Saint Pierre und Miquelon"
     * target[+]
       * code = #PM
@@ -1489,7 +1488,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #SOL 
+    * code = #SOL
     * display = "Salomonen"
     * target[+]
       * code = #SB
@@ -1497,7 +1496,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #Z 
+    * code = #Z
     * display = "Sambia"
     * target[+]
       * code = #ZM
@@ -1505,7 +1504,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #WS 
+    * code = #WS
     * display = "Samoa"
     * target[+]
       * code = #WS
@@ -1513,7 +1512,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #RSM 
+    * code = #RSM
     * display = "San Marino"
     * target[+]
       * code = #SM
@@ -1521,7 +1520,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #STP 
+    * code = #STP
     * display = "Sao Tomé und Principe"
     * target[+]
       * code = #ST
@@ -1529,7 +1528,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #SAU 
+    * code = #SAU
     * display = "Saudi-Arabien"
     * target[+]
       * code = #SA
@@ -1537,7 +1536,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #S 
+    * code = #S
     * display = "Schweden"
     * target[+]
       * code = #SE
@@ -1545,7 +1544,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #CH 
+    * code = #CH
     * display = "Schweiz"
     * target[+]
       * code = #CH
@@ -1553,7 +1552,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #SN 
+    * code = #SN
     * display = "Senegal"
     * target[+]
       * code = #SN
@@ -1561,7 +1560,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #SRB 
+    * code = #SRB
     * display = "Serbien"
     * target[+]
       * code = #RS
@@ -1569,7 +1568,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #SY 
+    * code = #SY
     * display = "Seychellen"
     * target[+]
       * code = #SC
@@ -1577,7 +1576,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #WAL 
+    * code = #WAL
     * display = "Sierra Leone"
     * target[+]
       * code = #SL
@@ -1585,7 +1584,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #ZW 
+    * code = #ZW
     * display = "Simbabwe"
     * target[+]
       * code = #ZW
@@ -1593,7 +1592,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #SGP 
+    * code = #SGP
     * display = "Singapur"
     * target[+]
       * code = #SG
@@ -1601,7 +1600,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #SK 
+    * code = #SK
     * display = "Slowakei"
     * target[+]
       * code = #SK
@@ -1609,7 +1608,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #SLO 
+    * code = #SLO
     * display = "Slowenien"
     * target[+]
       * code = #SI
@@ -1617,7 +1616,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #SP 
+    * code = #SP
     * display = "Somalia"
     * target[+]
       * code = #SO
@@ -1625,7 +1624,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #E 
+    * code = #E
     * display = "Spanien"
     * target[+]
       * code = #ES
@@ -1633,7 +1632,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #CL 
+    * code = #CL
     * display = "Sri Lanka"
     * target[+]
       * code = #LK
@@ -1641,7 +1640,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #BL 
+    * code = #BL
     * display = "St. Barthélemy"
     * target[+]
       * code = #BL
@@ -1649,7 +1648,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #SCN 
+    * code = #SCN
     * display = "St. Kitts und Nevis"
     * target[+]
       * code = #KN
@@ -1657,7 +1656,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #WL 
+    * code = #WL
     * display = "St. Lucia"
     * target[+]
       * code = #LC
@@ -1665,7 +1664,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #MF 
+    * code = #MF
     * display = "St. Martin (französischer Teil)"
     * target[+]
       * code = #MF
@@ -1673,7 +1672,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #SX 
+    * code = #SX
     * display = "St. Martin (niederländischer Teil)"
     * target[+]
       * code = #SX
@@ -1681,7 +1680,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #WV 
+    * code = #WV
     * display = "St. Vincent und die Grenadinen"
     * target[+]
       * code = #VC
@@ -1689,7 +1688,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #ZA 
+    * code = #ZA
     * display = "Südafrika"
     * target[+]
       * code = #ZA
@@ -1697,7 +1696,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #SDN 
+    * code = #SDN
     * display = "Sudan"
     * target[+]
       * code = #SD
@@ -1705,7 +1704,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #GS 
+    * code = #GS
     * display = "Südgeorgien und die südlichen Sandwichinseln"
     * target[+]
       * code = #GS
@@ -1713,7 +1712,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #SSD 
+    * code = #SSD
     * display = "Südsudan"
     * target[+]
       * code = #SS
@@ -1721,7 +1720,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #SME 
+    * code = #SME
     * display = "Suriname"
     * target[+]
       * code = #SR
@@ -1729,7 +1728,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #SJ 
+    * code = #SJ
     * display = "Svalbard und Jan Mayen"
     * target[+]
       * code = #SJ
@@ -1737,7 +1736,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #SYR 
+    * code = #SYR
     * display = "Syrien"
     * target[+]
       * code = #SY
@@ -1745,7 +1744,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #TAD 
+    * code = #TAD
     * display = "Tadschikistan"
     * target[+]
       * code = #TJ
@@ -1753,7 +1752,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #TWN 
+    * code = #TWN
     * display = "Taiwan"
     * target[+]
       * code = #TW
@@ -1761,7 +1760,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #EAT 
+    * code = #EAT
     * display = "Tansania"
     * target[+]
       * code = #TZ
@@ -1769,7 +1768,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #T 
+    * code = #T
     * display = "Thailand"
     * target[+]
       * code = #TH
@@ -1777,7 +1776,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #TJ 
+    * code = #TJ
     * display = "China"
     * target[+]
       * code = #CN
@@ -1785,7 +1784,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #OTI 
+    * code = #OTI
     * display = "Timor-Leste"
     * target[+]
       * code = #TL
@@ -1793,7 +1792,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #TG 
+    * code = #TG
     * display = "Togo"
     * target[+]
       * code = #TG
@@ -1801,7 +1800,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #TOK 
+    * code = #TOK
     * display = "Tokelau"
     * target[+]
       * code = #TK
@@ -1809,7 +1808,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #TON 
+    * code = #TON
     * display = "Tonga"
     * target[+]
       * code = #TO
@@ -1817,7 +1816,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #TT 
+    * code = #TT
     * display = "Trinidad und Tobago"
     * target[+]
       * code = #TT
@@ -1825,7 +1824,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #CHD 
+    * code = #CHD
     * display = "Tschad"
     * target[+]
       * code = #TD
@@ -1833,7 +1832,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #CZ 
+    * code = #CZ
     * display = "Tschechien"
     * target[+]
       * code = #CZ
@@ -1841,7 +1840,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #TN 
+    * code = #TN
     * display = "Tunesien"
     * target[+]
       * code = #TN
@@ -1849,7 +1848,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #TR 
+    * code = #TR
     * display = "Türkei"
     * target[+]
       * code = #TR
@@ -1857,7 +1856,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #TUR 
+    * code = #TUR
     * display = "Turkmenistan"
     * target[+]
       * code = #TM
@@ -1865,7 +1864,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #TUC 
+    * code = #TUC
     * display = "Turks- und Caicosinseln"
     * target[+]
       * code = #TC
@@ -1873,7 +1872,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #TUV 
+    * code = #TUV
     * display = "Tuvalu"
     * target[+]
       * code = #TV
@@ -1881,7 +1880,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #EAU 
+    * code = #EAU
     * display = "Uganda"
     * target[+]
       * code = #UG
@@ -1889,7 +1888,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #UA 
+    * code = #UA
     * display = "Ukraine"
     * target[+]
       * code = #UA
@@ -1897,7 +1896,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #H 
+    * code = #H
     * display = "Ungarn"
     * target[+]
       * code = #HU
@@ -1905,7 +1904,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #ROU 
+    * code = #ROU
     * display = "Uruguay"
     * target[+]
       * code = #UY
@@ -1913,7 +1912,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #USB 
+    * code = #USB
     * display = "Usbekistan"
     * target[+]
       * code = #UZ
@@ -1921,7 +1920,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #VAN 
+    * code = #VAN
     * display = "Vanuatu"
     * target[+]
       * code = #VU
@@ -1929,7 +1928,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #V 
+    * code = #V
     * display = "Vatikanstadt"
     * target[+]
       * code = #VA
@@ -1937,7 +1936,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #YV 
+    * code = #YV
     * display = "Venezuela"
     * target[+]
       * code = #VE
@@ -1945,7 +1944,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #UAE 
+    * code = #UAE
     * display = "Vereinigte Arabische Emirate"
     * target[+]
       * code = #AE
@@ -1953,7 +1952,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #USA 
+    * code = #USA
     * display = "Vereinigte Staaten"
     * target[+]
       * code = #US
@@ -1961,7 +1960,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #GB 
+    * code = #GB
     * display = "Vereinigtes Königreich"
     * target[+]
       * code = #GB
@@ -1969,7 +1968,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #VN 
+    * code = #VN
     * display = "Vietnam"
     * target[+]
       * code = #VN
@@ -1977,7 +1976,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #WF 
+    * code = #WF
     * display = "Wallis und Futuna"
     * target[+]
       * code = #WF
@@ -1985,7 +1984,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #CX 
+    * code = #CX
     * display = "Weihnachtsinsel"
     * target[+]
       * code = #CX
@@ -1993,7 +1992,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #EH 
+    * code = #EH
     * display = "Westsahara"
     * target[+]
       * code = #EH
@@ -2001,7 +2000,7 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #RCA 
+    * code = #RCA
     * display = "Zentralafrikanische Republik"
     * target[+]
       * code = #CF
@@ -2009,32 +2008,9 @@ Usage: #definition
       * equivalence = #equal
 
   * element[+]
-    * code = #CY 
+    * code = #CY
     * display = "Zypern"
     * target[+]
       * code = #CY
       * display = "Cyprus"
       * equivalence = #equal
-
-* sourceUri = $vsAnlage8Laenderkennzeichen
-* targetUri = Canonical(VSDMISO3166VS|1.0.1)
-* group[+]
-  * source = $csAnlage8Laenderkennzeichen
-  * target = Canonical(VSDMISO3166ErgaenzungCS|1.0.1)
-
-  * element[+]
-    * code = #KOS
-    * display = "Kosovo"
-    * target[+]
-      * code = #XK
-      * display = "Kosovo, Republic of"
-      * equivalence = #equal
-
-  * element[+]
-    * code = #CP
-    * display = "Clipperton"
-    * target[+]
-      * code = #CP
-      * display = "Clipperton"
-      * equivalence = #equal
-

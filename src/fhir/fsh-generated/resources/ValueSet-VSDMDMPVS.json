@@ -5,7 +5,7 @@
   "id": "VSDMDMPVS",
   "title": "Disease-Management-Programm (DMP)",
   "description": "Disease-Management-Programm im Versichertenstammdatenmanagement (VSDM) 2.0",
-  "version": "1.0.1",
+  "version": "1.1.0-dev",
   "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMDMPVS",
   "experimental": false,
   "publisher": "gematik GmbH",
@@ -37,6 +37,7 @@
     "include": [
       {
         "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+        "version": "1.07",
         "concept": [
           {
             "code": "01",
@@ -194,7 +195,7 @@
           },
           {
             "code": "12",
-            "display": "Adipositas",
+            "display": "Adipositas Erwachsene",
             "designation": [
               {
                 "use": {
@@ -202,7 +203,21 @@
                   "system": "http://snomed.info/sct",
                   "display": "Fully specified name"
                 },
-                "value": "Adipositas - Erwachsene"
+                "value": "Adipositas Erwachsene"
+              }
+            ]
+          },
+          {
+            "code": "13",
+            "display": "Adipositas Kinder und Jugendliche",
+            "designation": [
+              {
+                "use": {
+                  "code": "900000000000003001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Fully specified name"
+                },
+                "value": "Adipositas Kinder und Jugendliche"
               }
             ]
           }

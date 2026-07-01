@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-GKV-I901234562
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.1)
+  * profile[0] = Canonical(VSDMBundle|1.1.0-dev)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -28,7 +28,7 @@ Description: "Versichertendaten I901234562 Ibis, Ingrid (GKV)"
 Usage: #inline
 
 * id = $idVSDMPatient-GKV-I901234562
-* meta.profile[0] = Canonical(VSDMPatient|1.0.1)
+* meta.profile[0] = Canonical(VSDMPatient|1.1.0-dev)
 
 * identifier[KVNR].value = "I901234562"
 * birthDate = "1942-02-28"
@@ -56,9 +56,9 @@ Description: "Versicherungsdaten I901234562 Ibis, Ingrid (GKV)"
 Usage: #inline
 
 * id = $idVSDMCoverageGKV-I901234562
-* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.1)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.1.0-dev)
 
-* extension[WOP].valueCoding = $csWOP#98 "Sachsen"
+* extension[WOP].valueCoding = $csWOP|1.00#98 "Sachsen"
 * extension[dmp][+]
   * extension[dmp].valueCoding = #01 "DM2" // "Diabetes mellitus Typ 2"
   * extension[zeitraum].valuePeriod
@@ -70,9 +70,9 @@ Usage: #inline
   * extension[zahnaerztlicheVersorgung].valueBoolean = true
   * extension[stationaererBereich].valueBoolean = true
   * extension[veranlassteLeistungen].valueBoolean = true
-* extension[versichertenart].valueCoding = $csVersichertenartGKV#5 "Rentner"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV|1.02#5 "Rentner"
 * status = #active
-* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-I901234562
 * period
   * start = "1942-02-28"

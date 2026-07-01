@@ -18,7 +18,7 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
 //  * Postleitzahl
 //  * Ort
 //  * Land
-  * Wohnsitzadresse 
+  * Wohnsitzadresse
     * Strasse = "Taubenweg"
     * Hausnummer = "3c"
     * Anschriftenzusatz = "zweites Hinterhaus links"
@@ -27,8 +27,8 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
     * Land = #DE
 // * TIMessengerID (ohne)
 
-* Versicherungsdaten 
-  * Kostentraeger 
+* Versicherungsdaten
+  * Kostentraeger
     * Name = "Privatversicherung Uranus"
     * Kostentraegerkennung = "168134565"
   * Versicherungsschutz
@@ -37,7 +37,7 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
   * Beihilfe
     * Beihilfeanspruch = true
     * QuotePKV = 80
-  * Krankenhausleistungen 
+  * Krankenhausleistungen
     * Allgemein = 100
     * Zweibettzimmer = 100
 //  * Einbettzimmer (ohne)

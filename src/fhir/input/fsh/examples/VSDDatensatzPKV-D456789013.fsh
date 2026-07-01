@@ -13,12 +13,12 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
 //* Vorsatzwort (ohne)
 //* Namenszusatz (ohne)
   * Titel = "Dr. rer. nat."
-  * Postfachadresse 
+  * Postfachadresse
     * Postfach = "405060"
     * Postleitzahl = "64283"
     * Ort = "Darmstadt"
     * Land = #DE
-  * Wohnsitzadresse 
+  * Wohnsitzadresse
     * Strasse = "Dohlenallee"
     * Hausnummer = "4-6"
 //  * Anschriftenzusatz (ohne)
@@ -27,17 +27,17 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
     * Land = #DE
 // * TIMessengerID (ohne)
 
-* Versicherungsdaten 
-  * Kostentraeger 
+* Versicherungsdaten
+  * Kostentraeger
     * Name = "Privatversicherung Saturn"
     * Kostentraegerkennung = "168145671"
   * Versicherungsschutz
     * Beginn = "1980-01-01"
 //  * Ende (ohne)
 //* Beihilfe (ohne)
-//  * Beihilfeanspruch 
+//  * Beihilfeanspruch
 //  * QuotePKV
-  * Krankenhausleistungen 
+  * Krankenhausleistungen
     * Allgemein = 100
     * Zweibettzimmer = 50
 //  * Einbettzimmer (ohne)
@@ -47,5 +47,5 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
 //* Sozialtarif (ohne)
   * Versichertenart = #VN
 //* Hinweis (ohne)
-//  * Hinweistext 
+//  * Hinweistext
 //  * Institutionstypen

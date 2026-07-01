@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-PKV-A123456780
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.1)
+  * profile[0] = Canonical(VSDMBundle|1.1.0-dev)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -28,7 +28,7 @@ Description: "Versichertendaten A123456780 Amsel, Andrea (PKV)"
 Usage: #inline
 
 * id = $idVSDMPatient-PKV-A123456780
-* meta.profile[0] = Canonical(VSDMPatient|1.0.1)
+* meta.profile[0] = Canonical(VSDMPatient|1.1.0-dev)
 
 * identifier[KVNR].value = "A123456780"
 * birthDate = "1997-12-28"
@@ -58,7 +58,7 @@ Description: "Versicherungsdaten A123456780 Amsel, Andrea (PKV)"
 Usage: #inline
 
 * id = $idVSDMCoveragePKV-A123456780
-* meta.profile[0] = Canonical(VSDMCoveragePKV|1.0.1)
+* meta.profile[0] = Canonical(VSDMCoveragePKV|1.1.0-dev)
 
 * extension[hinweis]
   * extension[text].valueMarkdown = "Beihilfetaxe für Physio"
@@ -67,11 +67,11 @@ Usage: #inline
   * extension[zweibett].valueUnsignedInt = 100
   * extension[einbett].valueUnsignedInt = 100
   * extension[wahlarzt].valueUnsignedInt = 100
-  * extension[belegarzt].valueUnsignedInt = 100 
+  * extension[belegarzt].valueUnsignedInt = 100
 * extension[tarifart].valueCoding = #01 "Individualtarif"
-* extension[versichertenart].valueCoding = VSDMVersichertenartPKVCS#VN "Versicherungsnehmer"
+* extension[versichertenart].valueCoding = $csVersichertenartPKV|1.6.0#VN "Versicherungsnehmer"
 * status = #active
-* type = $csVersicherungsart#PKV "private Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#PKV "private Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-PKV-A123456780
 * period
   * start = "2020-01-01"

@@ -9,9 +9,9 @@ Usage: #definition
     Diese ConceptMap ordnet den TDS-Codes die HTTP Status Codes aus Tabelle TAB_FACHDIENST_VSDM_HTTP_STATUS_CODES zu.
   """
 
-* sourceUri = Canonical(VSDMTDSCodeVS|1.0.1)
+* sourceUri = Canonical(VSDMTDSCodeVS|1.1.0-dev)
 * group[+]
-  * source = Canonical(VSDMTDSCodeCS|1.0.1)
+  * source = Canonical(VSDMTDSCodeCS|1.1.0-dev)
 
   * element[+]
     * code = #79010
@@ -57,7 +57,7 @@ Usage: #definition
     * code = #79015
     * display = "Die vom Clientsystem angefragte Profilversion wird nicht unterstützt."
     * target[+]
-      * code = #400 
+      * code = #400
       * display = "Bad Request"
       * equivalence = #wider //  target mapping is wider in meaning than the source concept.
 
@@ -129,6 +129,6 @@ Usage: #definition
     * code = #79402
     * display = "Der Inhalt des HTTP-Headers ZETA-PoPP-Token-Content weist Format- oder Inhaltsfehler auf."
     * target[+]
-      * code = #400 
+      * code = #400
       * display = "Bad Request"
       * equivalence = #wider //  target mapping is wider in meaning than the source concept.

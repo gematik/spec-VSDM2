@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-PKV-C345678908
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.1)
+  * profile[0] = Canonical(VSDMBundle|1.1.0-dev)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -28,7 +28,7 @@ Description: "Versichertendaten C345678908 Carolinataube, Charlie (PKV)"
 Usage: #inline
 
 * id = $idVSDMPatient-PKV-C345678908
-* meta.profile[0] = Canonical(VSDMPatient|1.0.1)
+* meta.profile[0] = Canonical(VSDMPatient|1.1.0-dev)
 
 * identifier[KVNR].value = "C345678908"
 * birthDate = "1979-06-11"
@@ -38,7 +38,7 @@ Usage: #inline
     * extension[nachname].valueString = "Carolinataube"
   * given = "Charlie"
 * gender = #other
-  * extension[other-amtlich].valueCoding = $csGenderAmtlich#D "divers"
+  * extension[other-amtlich].valueCoding = $csGenderAmtlich|1.6.0#D "divers"
 * address[StrassenAdresse]
   * line[+] = "Taubenweg 3c"
     * extension[Hausnummer].valueString = "3c"
@@ -58,7 +58,7 @@ Description: "Versicherungsdaten C345678908 Carolinataube, Charlie (PKV)"
 Usage: #inline
 
 * id = $idVSDMCoveragePKV-C345678908
-* meta.profile[0] = Canonical(VSDMCoveragePKV|1.0.1)
+* meta.profile[0] = Canonical(VSDMCoveragePKV|1.1.0-dev)
 
 * extension[krankenhaus]
   * extension[allgemein].valueUnsignedInt = 100
@@ -70,9 +70,9 @@ Usage: #inline
   * extension[anspruch].valueBoolean = true
   * extension[quote].valueUnsignedInt = 80
 * extension[tarifart].valueCoding = #01 "Individualtarif"
-* extension[versichertenart].valueCoding = VSDMVersichertenartPKVCS#VP "versicherte Person"
+* extension[versichertenart].valueCoding = $csVersichertenartPKV|1.6.0#VP "versicherte Person"
 * status = #active
-* type = $csVersicherungsart#PKV "private Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#PKV "private Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-PKV-C345678908
 * period
   * start = "2020-01-01"

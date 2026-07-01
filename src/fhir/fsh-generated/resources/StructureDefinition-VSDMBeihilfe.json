@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMBeihilfe",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBeihilfe",
-  "version": "1.0.1",
+  "version": "1.1.0-dev",
   "name": "VSDMBeihilfe",
   "title": "Beihilfeanspruch",
   "status": "active",
@@ -50,7 +50,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Beihilfeanspruch",
-        "definition": "Angaben zum Beihilfe-Anspruch eines PKV-Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0.\nDiese Struktur ist für Versicherte ohne Beihilfeanspruch nicht anzugeben.      ",
+        "definition": "Angaben zum Beihilfe-Anspruch eines PKV-Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0.\nDiese Struktur ist für Versicherte ohne Beihilfeanspruch nicht anzugeben.",
         "comment": "Hintergrundinformationen siehe https://www.pkv.de/wissen/private-krankenversicherung/leistungen-und-erstattung/privatversichert-im-beamtenverhaeltnis/"
       },
       {
@@ -63,7 +63,7 @@
         "path": "Extension.extension",
         "sliceName": "anspruch",
         "short": "Versicherter mit Beihilfeanspruch",
-        "definition": "Kennzeichnet einen Versicherten mit Beihilfeanspruch.\nDieses Kennzeichen ist anzugeben, sobald die Struktur Beihilfe erforderlich wird. \nDas ist notwendig, da die Beihilfequote nicht immer vorliegt. ",
+        "definition": "Kennzeichnet einen Versicherten mit Beihilfeanspruch.\nDieses Kennzeichen ist anzugeben, sobald die Struktur Beihilfe erforderlich wird.\nDas ist notwendig, da die Beihilfequote nicht immer vorliegt.",
         "min": 1,
         "max": "1",
         "mustSupport": true

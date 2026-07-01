@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMHinweisPKV",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMHinweisPKV",
-  "version": "1.0.1",
+  "version": "1.1.0-dev",
   "name": "VSDMHinweisPKV",
   "title": "Hinweise an PKV-Leistungserbringer",
   "status": "active",
@@ -62,7 +62,7 @@
         "path": "Extension.extension",
         "sliceName": "text",
         "short": "Hinweistext",
-        "definition": "Hinweistext im Markdown-Format. \nDer Hinweistext ist nicht zur maschinellen Verarbeitung vorgesehen, sondern muss dem Leistungserbringer lediglich angezeigt werden.",
+        "definition": "Hinweistext im Markdown-Format.\nDer Hinweistext ist nicht zur maschinellen Verarbeitung vorgesehen, sondern muss dem Leistungserbringer lediglich angezeigt werden.",
         "min": 1,
         "max": "1",
         "mustSupport": true
@@ -92,7 +92,6 @@
         "sliceName": "professionOID",
         "short": "betroffene LEI-Typen",
         "definition": "Leistungserbringer-Institutionstypen, für die der Hinweistext relevant ist.\nDie Angabe erfolgt als Liste von professionOIDs gemäß gemSpec_OID Tabelle Tab_PKI_403-*.\nDie Verwendung anderer OIDs (insbesondere individueller Berufsgruppen) ist nicht zulässig.\nWenn keine Institutionstypen angegeben sind oder das empfangende System den Filter nicht anzeigen kann, ist der Hinweistext sicherheitshalber anzuzeigen.",
-        "comment": "Prozentwert (0..100)",
         "min": 0,
         "max": "*",
         "mustSupport": true

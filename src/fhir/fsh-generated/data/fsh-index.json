@@ -208,28 +208,12 @@
     "endLine": 35
   },
   {
-    "outputFile": "CodeSystem-VSDMRuhenderLeistungsanspruchArtCS.json",
-    "fshName": "VSDMRuhenderLeistungsanspruchArtCS",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMRuhenderLeistungsanspruchArtCS.fsh",
-    "startLine": 1,
-    "endLine": 23
-  },
-  {
     "outputFile": "CodeSystem-VSDMTDSCodeCS.json",
     "fshName": "VSDMTDSCodeCS",
     "fshType": "CodeSystem",
     "fshFile": "codesystems/VSDMTDSCodeCS.fsh",
     "startLine": 1,
-    "endLine": 199
-  },
-  {
-    "outputFile": "CodeSystem-VSDMVersichertenartPKVCS.json",
-    "fshName": "VSDMVersichertenartPKVCS",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/VSDMVersichertenartPKVCS.fsh",
-    "startLine": 1,
-    "endLine": 21
+    "endLine": 203
   },
   {
     "outputFile": "ConceptMap-VSDMDEUEVAnlage8ISO3166.json",
@@ -237,7 +221,15 @@
     "fshType": "Instance",
     "fshFile": "mappings/VSDMDEUEVAnlage8ISO3166.fsh",
     "startLine": 1,
-    "endLine": 2039
+    "endLine": 2016
+  },
+  {
+    "outputFile": "ConceptMap-VSDMDEUEVAnlage8ISO3166Ergaenzung.json",
+    "fshName": "VSDMDEUEVAnlage8ISO3166Ergaenzung",
+    "fshType": "Instance",
+    "fshFile": "mappings/VSDMDEUEVAnlage8ISO3166Ergaenzung.fsh",
+    "startLine": 1,
+    "endLine": 33
   },
   {
     "outputFile": "ConceptMap-VSDMTDSCodeErrorcode.json",
@@ -389,7 +381,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMBundle.fsh",
     "startLine": 1,
-    "endLine": 54
+    "endLine": 55
   },
   {
     "outputFile": "StructureDefinition-VSDMContactPointTIM.json",
@@ -397,7 +389,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMContactPointTIM.fsh",
     "startLine": 1,
-    "endLine": 18
+    "endLine": 19
   },
   {
     "outputFile": "StructureDefinition-VSDMCoverageGKV.json",
@@ -405,7 +397,15 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoverageGKV.fsh",
     "startLine": 1,
-    "endLine": 191
+    "endLine": 44
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMCoverageGKVBase.json",
+    "fshName": "VSDMCoverageGKVBase",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMCoverageGKVBase.fsh",
+    "startLine": 1,
+    "endLine": 198
   },
   {
     "outputFile": "StructureDefinition-VSDMCoveragePKV.json",
@@ -413,7 +413,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMCoveragePKV.fsh",
     "startLine": 1,
-    "endLine": 89
+    "endLine": 97
   },
   {
     "outputFile": "StructureDefinition-VSDMDMPTeilnahme.json",
@@ -421,7 +421,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMDMPTeilnahme.fsh",
     "startLine": 1,
-    "endLine": 54
+    "endLine": 56
   },
   {
     "outputFile": "StructureDefinition-VSDMHinweisPKV.json",
@@ -429,7 +429,15 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMHinweisPKV.fsh",
     "startLine": 1,
-    "endLine": 39
+    "endLine": 36
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMISO3166Ergaenzung.json",
+    "fshName": "VSDMISO3166Ergaenzung",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMISO3166Ergaenzung.fsh",
+    "startLine": 1,
+    "endLine": 26
   },
   {
     "outputFile": "StructureDefinition-VSDMKrankenhausleistungenPKV.json",
@@ -438,6 +446,14 @@
     "fshFile": "extensions/VSDMKrankenhausleistungenPKV.fsh",
     "startLine": 1,
     "endLine": 90
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMLaenderkennzeichenAnlage8.json",
+    "fshName": "VSDMLaenderkennzeichenAnlage8",
+    "fshType": "Extension",
+    "fshFile": "extensions/VSDMLaenderkennzeichenAnlage8.fsh",
+    "startLine": 1,
+    "endLine": 24
   },
   {
     "outputFile": "StructureDefinition-VSDMOperationOutcome.json",
@@ -453,7 +469,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 194
+    "endLine": 202
   },
   {
     "outputFile": "StructureDefinition-VSDMPayorOrganization.json",
@@ -469,7 +485,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMTarifartPKV.fsh",
     "startLine": 1,
-    "endLine": 18
+    "endLine": 20
   },
   {
     "outputFile": "StructureDefinition-VSDMVersichertenartPKV.json",
@@ -477,7 +493,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/VSDMVersichertenartPKV.fsh",
     "startLine": 1,
-    "endLine": 20
+    "endLine": 23
   },
   {
     "outputFile": "ValueSet-VSDMDMPVS.json",
@@ -485,7 +501,7 @@
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMDMPVS.fsh",
     "startLine": 1,
-    "endLine": 69
+    "endLine": 73
   },
   {
     "outputFile": "ValueSet-VSDMErrorcodeVS.json",
@@ -496,12 +512,12 @@
     "endLine": 8
   },
   {
-    "outputFile": "ValueSet-VSDMISO3166VS.json",
-    "fshName": "VSDMISO3166VS",
+    "outputFile": "ValueSet-VSDMISO3166ErgaenzungVS.json",
+    "fshName": "VSDMISO3166ErgaenzungVS",
     "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMISO3166VS.fsh",
+    "fshFile": "valuesets/VSDMISO3166ErgaenzungVS.fsh",
     "startLine": 1,
-    "endLine": 8
+    "endLine": 7
   },
   {
     "outputFile": "ValueSet-VSDMNamenszusatzVS.json",
@@ -512,26 +528,10 @@
     "endLine": 7
   },
   {
-    "outputFile": "ValueSet-VSDMRuhenderLeistungsanspruchArtVS.json",
-    "fshName": "VSDMRuhenderLeistungsanspruchArtVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMRuhenderLeistungsanspruchArtVS.fsh",
-    "startLine": 1,
-    "endLine": 7
-  },
-  {
     "outputFile": "ValueSet-VSDMTDSCodeVS.json",
     "fshName": "VSDMTDSCodeVS",
     "fshType": "ValueSet",
     "fshFile": "valuesets/VSDMBDECodeVS.fsh",
-    "startLine": 1,
-    "endLine": 7
-  },
-  {
-    "outputFile": "ValueSet-VSDMVersichertenartPKVVS.json",
-    "fshName": "VSDMVersichertenartPKVVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/VSDMVersichertenartPKVVS.fsh",
     "startLine": 1,
     "endLine": 7
   },

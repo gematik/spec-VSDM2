@@ -19,7 +19,7 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
 //    * Ort
 //    * Postfach
 //    * Wohnsitzlaendercode
-    * StrassenAdresse 
+    * StrassenAdresse
       * Postleitzahl = "7430"
       * Ort = "Fischbach"
       * Wohnsitzlaendercode = #L
@@ -27,8 +27,8 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
       * Hausnummer = "95"
 //    * Anschriftenzusatz (ohne)
 
-* Versicherungsdaten 
-  * Kostentraeger 
+* Versicherungsdaten
+  * Kostentraeger
     * Name = "Beispielkostenträger Dresden"
     * Kostentraegerlaendercode = #D
     * Kostentraegerkennung = "107933230"
@@ -39,13 +39,13 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
   * WOP = #98 // Sachsen
 //* BesonderePersonengruppe (ohne)
 //* Zuzahlungsstatus (ohne)
-//  * Status 
+//  * Status
 //  * GueltigBis
-  * Versicherungsschutz 
+  * Versicherungsschutz
     * Beginn = "1942-02-28"
     * Ende = "2028-02-15"
   * DMP[+]
-    * DMP = #1 // Diabetes mellitus Typ 2 
+    * DMP = #1 // Diabetes mellitus Typ 2
     * Beginn = "2021-02-07"
     * Ende = "2028-02-15"
     * digitalesDMP = false
@@ -58,4 +58,4 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
 //  * Beginn
 //  * Ende
 //  * Art
-  * Versichertenart = #5 // Rentner und ihre Familienangehörigen 
+  * Versichertenart = #5 // Rentner und ihre Familienangehörigen

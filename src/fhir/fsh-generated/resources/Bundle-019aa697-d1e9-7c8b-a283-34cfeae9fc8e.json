@@ -3,7 +3,7 @@
   "id": "019aa697-d1e9-7c8b-a283-34cfeae9fc8e",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.0.1"
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMBundle|1.1.0-dev"
     ],
     "lastUpdated": "2025-07-14T15:16:17.890+01:00"
   },
@@ -17,7 +17,7 @@
         "id": "019aa694-6f37-72b0-89ea-042e20e449a8",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.0.1"
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPatient|1.1.0-dev"
           ]
         },
         "identifier": [
@@ -90,11 +90,12 @@
                   }
                 },
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
                   "valueCoding": {
-                    "code": "D",
-                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
-                  }
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+                    "version": "8.00",
+                    "code": "D"
+                  },
+                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichenAnlage8"
                 }
               ]
             }
@@ -127,11 +128,12 @@
                   }
                 },
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
                   "valueCoding": {
-                    "code": "D",
-                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
-                  }
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+                    "version": "8.00",
+                    "code": "D"
+                  },
+                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichenAnlage8"
                 }
               ]
             }
@@ -142,12 +144,13 @@
         "_gender": {
           "extension": [
             {
-              "url": "http://fhir.de/StructureDefinition/gender-amtlich-de",
               "valueCoding": {
-                "code": "X",
                 "system": "http://fhir.de/CodeSystem/gender-amtlich-de",
+                "version": "1.6.0",
+                "code": "X",
                 "display": "unbestimmt"
-              }
+              },
+              "url": "http://fhir.de/StructureDefinition/gender-amtlich-de"
             }
           ]
         }
@@ -160,14 +163,16 @@
         "id": "019aa696-4962-7577-9a24-9be92b1dde93",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.0.1"
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMCoverageGKV|1.1.0-dev"
           ]
         },
+        "status": "active",
         "type": {
           "coding": [
             {
               "code": "GKV",
               "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+              "version": "1.6.0",
               "display": "gesetzliche Krankenversicherung"
             }
           ]
@@ -177,6 +182,7 @@
             "url": "http://fhir.de/StructureDefinition/gkv/wop",
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ITA_WOP",
+              "version": "1.00",
               "code": "46",
               "display": "Hessen"
             }
@@ -184,14 +190,16 @@
           {
             "url": "http://fhir.de/StructureDefinition/gkv/versichertenart",
             "valueCoding": {
-              "code": "3",
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_VERSICHERTENSTATUS",
+              "version": "1.02",
+              "code": "3",
               "display": "Familienangehoerige"
             }
           },
           {
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_PERSONENGRUPPE",
+              "version": "1.03",
               "code": "06",
               "display": "SER"
             },
@@ -204,6 +212,7 @@
                 "url": "dmp",
                 "valueCoding": {
                   "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+                  "version": "1.07",
                   "code": "05",
                   "display": "Asthma"
                 }
@@ -252,7 +261,6 @@
             "display": "Beispielkostenträger Darmstadt"
           }
         ],
-        "status": "active",
         "beneficiary": {
           "reference": "https://gematik.de/fhir/Patient/019aa694-6f37-72b0-89ea-042e20e449a8"
         },
@@ -268,7 +276,7 @@
         "id": "019aa692-6f84-7efd-bb81-1a4ebbff8075",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.0.1"
+            "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMPayorOrganization|1.1.0-dev"
           ]
         },
         "identifier": [
@@ -290,11 +298,12 @@
                   }
                 },
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/iso21090-codedString",
                   "valueCoding": {
-                    "code": "D",
-                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"
-                  }
+                    "system": "http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen",
+                    "version": "8.00",
+                    "code": "D"
+                  },
+                  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMLaenderkennzeichenAnlage8"
                 }
               ]
             }

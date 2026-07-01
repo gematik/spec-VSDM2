@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMDMPTeilnahme",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
-  "version": "1.0.1",
+  "version": "1.1.0-dev",
   "name": "VSDMDMPTeilnahme",
   "title": "Teilnahme an Disease Management-Programm",
   "status": "active",
@@ -96,12 +96,21 @@
         "id": "Extension.extension:dmp.value[x].system",
         "path": "Extension.extension.value[x].system",
         "min": 1,
-        "patternUri": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP"
+        "fixedUri": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:dmp.value[x].version",
+        "path": "Extension.extension.value[x].version",
+        "min": 1,
+        "fixedString": "1.07",
+        "mustSupport": true
       },
       {
         "id": "Extension.extension:dmp.value[x].code",
         "path": "Extension.extension.value[x].code",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Extension.extension:zeitraum",

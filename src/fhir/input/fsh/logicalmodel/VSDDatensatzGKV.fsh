@@ -5,14 +5,14 @@ Description: """
   Fachliches Modell zur Beschreibung des VSD-Datensatzes für den Bereich der Gesetzlichen Krankenversicherung (GKV).
   Dieses Modell setzt die Original-Angaben der BMV-Ä unverändert um. Es dient als Ausgangspunkt für die Mappings und ConceptSets, die die Abbildung auf FHIR-Ressourcen vornehmen.
   Die Modell-Elemente sind exakt in der Reihenfolge der Ausgangsvereinbarung aufgeführt. Hinweise zum Datenformat wurden in den Langtext der Beschreibung übertragen; der Kurztext wurde zur besseren Lesbarkeit angepasst.
-  Hinweise aus dem Originaldatensatz: 
+  Hinweise aus dem Originaldatensatz:
     * TI-Messenger ID: Wird nicht aufgenommen, da keine rechtliche Grundlage existiert.
     * Wahltarife: aktuell keine Abbildung im VSDM 2.0, aber BMV-Ä verständigen sich hierzu im Rahmen weiterer Beratungen (ggf. Protokollnotiz).
 """
 
 * Versichertendaten 1..1 BackboneElement "Versichertendaten"
 
-  * Versicherter 1..1 BackboneElement "Angaben zum Versicherten" 
+  * Versicherter 1..1 BackboneElement "Angaben zum Versicherten"
     * VersichertenID 1..1 string "Versicherten-ID (KVNR)" """
         Die Versicherten-ID ist der 10-stellige unveränderliche Teil der 30-stelligen Krankenversichertennummer.
         Länge: 10
@@ -20,8 +20,8 @@ Description: """
       """
     * Geburtsdatum 1..1 date "Geburtsdatum des Versicherten" """
         Gibt das Geburtsdatum der Person an.
-        Hinweis: Das Geburtsjahr MUSS immer gefüllt werden. Bei Inländern ist immer ein logisch richtiges Geburtsdatum anzugeben. 
-        Bei Ausländern gilt folgendes: Zumindest das Geburtsjahr ist immer anzugeben. Im Geburtstag oder im Geburtstag und im Geburtsmonat ist bei Ausländern „00“ bzw. „0000“ zulässig, wenn der Geburtstag und der Geburtsmonat nicht zu ermitteln sind. 
+        Hinweis: Das Geburtsjahr MUSS immer gefüllt werden. Bei Inländern ist immer ein logisch richtiges Geburtsdatum anzugeben.
+        Bei Ausländern gilt folgendes: Zumindest das Geburtsjahr ist immer anzugeben. Im Geburtstag oder im Geburtstag und im Geburtsmonat ist bei Ausländern „00“ bzw. „0000“ zulässig, wenn der Geburtstag und der Geburtsmonat nicht zu ermitteln sind.
         Typ: AN
       """
       // Typ AN ist hier auf den ersten Blick unerwartet, hängt aber vielleicht mit der Definition von ISO8601Date zusammen.
@@ -64,15 +64,15 @@ Description: """
 
     * PostfachAdresse 0..1 BackboneElement "Postfachadresse des Versicherten"
       * Postleitzahl 1..1 string "Postleitzahl der Postfachadresse" """
-          Gibt die Postleitzahl der Strassen- oder Postfachadresse an. Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV. 
-          In Verbindung mit dem Wohnsitzländercode ""D"" für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein. 
-          Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein. 
+          Gibt die Postleitzahl der Strassen- oder Postfachadresse an. Die Befüllung des Feldes Postleitzahl erfolgt gemäß den Festlegungen der DEÜV.
+          In Verbindung mit dem Wohnsitzländercode ""D"" für Deutschland MUSS die Postleitzahl 5-stellig numerisch sein.
+          Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS die Postleitzahl zu beiden Adressdaten vorhanden sein.
           Bei Anschriften ohne Postleitzahl wird das Feld nicht verwendet.
           Länge: 10
           Typ: AN
         """
       * Ort 1..1 string "Ort der Postfachadresse" """
-          Gibt den Ort zur Strassen- und oder Postfachadresse an. 
+          Gibt den Ort zur Strassen- und oder Postfachadresse an.
           Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein.
           Abweichung zur Festlegung in DEÜV (Feldlänge = 34)
           Länge: 40
@@ -84,7 +84,7 @@ Description: """
           Typ: AN
         """
       * Wohnsitzlaendercode 1..1 code "Land der Postfachadresse" """
-          Gibt das Land zu der Strassen- und oder Postfachadresse an. 
+          Gibt das Land zu der Strassen- und oder Postfachadresse an.
           Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzländercode zu beiden Adressdaten vorhanden sein.
           Anlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp
           Länge: 3
@@ -99,14 +99,14 @@ Description: """
           Typ: AN
         """
       * Ort 1..1 string "Ort der Strassenadresse" """
-          Gibt den Ort zur Strassen- und oder Postfachadresse an. 
+          Gibt den Ort zur Strassen- und oder Postfachadresse an.
           Soweit Angaben zur Adresse und zum Postfach gemacht werden, MUSS der Ort zu beiden Adressdaten vorhanden sein.
           Abweichung zur Festlegung in DEÜV (Feldlänge = 34)
           Länge: 40
           Typ: AN
         """
       * Wohnsitzlaendercode 1..1 code "Land der Strassenadresse" """
-          Gibt das Land zu der Strassen- und oder Postfachadresse an. 
+          Gibt das Land zu der Strassen- und oder Postfachadresse an.
           Soweit Angaben zur Adresse und zum Postfach gemacht werden, muss der Wohnsitzländercode zu beiden Adressdaten vorhanden sein.
           Anlage 8 (Staatsangehörigkeit und Länderkennzeichen für Auslandsanschriften) zur DEÜV, siehe www.gkv-datenaustausch.de/arbeitgeber/deuev/gemeinsame_rundschreiben/gemeinsame_rundschreiben.jsp
           Länge: 3
@@ -121,7 +121,7 @@ Description: """
         """
       * Hausnummer 0..1 string "Hausnummer der Strassenadresse" """
           Gibt die Hausnummer in der Strasse der Person an.
-          Pflichtangabe soweit bekannt, wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen. 
+          Pflichtangabe soweit bekannt, wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das Feld Straße zu übernehmen.
           Anlage 9.4 (Datensätze und Datenbausteine sowie Fehlerkatalog) zur DEÜV findet sich nunmehr unter der Rubrik [Fehlerprüfungsverfahren - GKV-Datenaustausch](https://www.gkv-datenaustausch.de/arbeitgeber/deuev/fehlerpruefungsverfahren_1/fehlerpruefungsverfahren.jsp), Datensatz Meldungen (DSME).
           Länge: 9
           Typ: AN
@@ -193,9 +193,9 @@ Description: """
     """
   * BesonderePersonengruppe 0..1 code "Zuordnung besondere Personengruppe" """
       Gibt die Zugehörigkeit des Versicherten zu einer besonderen Personengruppe an. Die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.
-      4 = BSHG (Bundessozialhilfegesetz) § 264 SGB V, 
-      6 = SER (Soziales Entschädigungsrecht), 
-      7 = SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht: - Personen mit Wohnsitz im Inland, Abrechnung nach Aufwand, 
+      4 = BSHG (Bundessozialhilfegesetz) § 264 SGB V,
+      6 = SER (Soziales Entschädigungsrecht),
+      7 = SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht: - Personen mit Wohnsitz im Inland, Abrechnung nach Aufwand,
       8 = SVA-Kennzeichnung, pauschal,
       9 = Empfänger von Gesundheitsleistungen nach §§ 4 und 6 des Asylbewerberleistungsgesetzes (AsylbLG)
       Länge: 2
@@ -203,7 +203,7 @@ Description: """
     """
   * Zuzahlungsstatus 0..1 BackboneElement "Zuzahlungsstatus des Versicherten"
     * Status 1..1 boolean "Versicherter von Zuzahlungspflicht befreit" """
-        Gibt an, ob für den Versicherten eine Befreiung von der Zuzahlungspflicht nach § 62 SGB V vorliegt.	
+        Gibt an, ob für den Versicherten eine Befreiung von der Zuzahlungspflicht nach § 62 SGB V vorliegt.
         1 = von Zuzahlungspflicht befreit
         Länge: 1
         Typ: offen
@@ -214,7 +214,7 @@ Description: """
       """
   * Versicherungsschutz 1..1 BackboneElement "Versicherungsschutz des Versicherten"
     * Beginn 1..1 date "Beginn des Versicherungsschutzes" """
-        Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem unter Klasse Kostenträger angegebenen Kostenträger an. 
+        Gibt den Beginn des Versicherungsschutzes (hier: Leistungsanspruch) des Versicherten bei dem unter Klasse Kostenträger angegebenen Kostenträger an.
         Typ: ISO8601Date
       """
     * Ende 0..1 date "Ende des Versicherungsschutzes" """
@@ -224,11 +224,11 @@ Description: """
   * DMP 0..* BackboneElement "Angaben zur Teilnahme des Versicherten an Disease Management-Programmen"
     * DMP 1..1 code "Name des DMP-Programms" """
         Gibt den Namen des DMP an; die Kennzeichnung erfolgt gemäß der aktuellen Schlüsseltabelle.
-        1 = Diabetes mellitus Typ 2 
-        2 = Brustkrebs 
+        1 = Diabetes mellitus Typ 2
+        2 = Brustkrebs
         3 = Koronare Herzkrankheit
-        4 = Diabetes mellitus Typ 1 
-        5 = Asthma bronchiale 
+        4 = Diabetes mellitus Typ 1
+        5 = Asthma bronchiale
         6 = COPD (chronic obstructive pulmonary disease)
         7 = Chronische Herzinsuffizienz
         8 = Depression
@@ -300,7 +300,7 @@ Description: """
   * Versichertenart 1..1 code "Art der Versicherung" """
       1 = Mitglied
       3 = Familienversicherter
-      5 = Rentner und ihre Familienangehörigen 
+      5 = Rentner und ihre Familienangehörigen
       Länge: 1
       Typ: AN
     """

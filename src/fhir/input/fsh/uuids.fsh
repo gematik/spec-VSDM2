@@ -1,4 +1,4 @@
-// Die IG TI Common-Anforderungen fordern UUIDv7 als Ressourcen-IDs. 
+// Die IG TI Common-Anforderungen fordern UUIDv7 als Ressourcen-IDs.
 // Wenn man die in die FSH-Ressourcennamen einträgt, führt da zu unleserlichen Querverweisen und dementsprechend
 // unschönen Fehlersituationen. Deshalb sind alle UUIDs für die Beispiele hier zentral gesammelt.
 // Da man in FSH leider Aliases nicht zur Konkatenation von URLs verwenden kann, gibt's hier auch die

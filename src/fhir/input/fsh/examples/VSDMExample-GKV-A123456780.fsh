@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-GKV-A123456780
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.1)
+  * profile[0] = Canonical(VSDMBundle|1.1.0-dev)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -28,7 +28,7 @@ Description: "Versichertendaten A123456780 Amsel, Andrea (GKV)"
 Usage: #inline
 
 * id = $idVSDMPatient-GKV-A123456780
-* meta.profile[0] = Canonical(VSDMPatient|1.0.1)
+* meta.profile[0] = Canonical(VSDMPatient|1.1.0-dev)
 
 * identifier[KVNR].value = "A123456780"
 * birthDate = "1997-12-28"
@@ -56,12 +56,12 @@ Description: "Versicherungsdaten A123456780 Amsel, Andrea (GKV)"
 Usage: #inline
 
 * id = $idVSDMCoverageGKV-A123456780
-* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.1)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.1.0-dev)
 
-* extension[WOP].valueCoding = $csWOP#38 "Nordrhein"
-* extension[versichertenart].valueCoding = $csVersichertenartGKV#1 "Mitglieder"
+* extension[WOP].valueCoding = $csWOP|1.00#38 "Nordrhein"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV|1.02#1 "Mitglieder"
 * status = #active
-* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-A123456780
 * period
   * start = "1997-12-28"

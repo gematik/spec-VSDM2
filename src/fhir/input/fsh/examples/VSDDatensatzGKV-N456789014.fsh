@@ -19,7 +19,7 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
 //    * Ort
 //    * Postfach
 //    * Wohnsitzlaendercode
-    * StrassenAdresse 
+    * StrassenAdresse
       * Postleitzahl = "70180"
       * Ort = "Stuttgart"
       * Wohnsitzlaendercode = #D
@@ -27,21 +27,21 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
       * Hausnummer = "14"
 //    * Anschriftenzusatz (ohne)
 
-* Versicherungsdaten 
-  * Kostentraeger 
+* Versicherungsdaten
+  * Kostentraeger
     * Name = "Beispielkostenträger Nord-Württemberg"
     * Kostentraegerlaendercode = #D
     * Kostentraegerkennung = "108028771"
   * AbrechnenderKostentraeger
     * Name = "Beispielkostenträger Niederbayern"
-    * Kostentraegerlaendercode = #D 
+    * Kostentraegerlaendercode = #D
     * Kostentraegerkennung = "109083613"
   * WOP = #52 // Baden-Württemberg
 //* BesonderePersonengruppe (ohne)
   * Zuzahlungsstatus
     * Status = true
     * GueltigBis = "2029-06-22"
-  * Versicherungsschutz 
+  * Versicherungsschutz
     * Beginn = "2011-06-22"
 //  * Ende (ohne)
 //* DMP (ohne)

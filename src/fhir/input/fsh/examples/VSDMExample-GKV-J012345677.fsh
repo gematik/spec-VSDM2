@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-GKV-J012345677
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.1)
+  * profile[0] = Canonical(VSDMBundle|1.1.0-dev)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -28,7 +28,7 @@ Description: "Versichertendaten J012345677 Junko, Jens-Jörg (GKV)"
 Usage: #inline
 
 * id = $idVSDMPatient-GKV-J012345677
-* meta.profile[0] = Canonical(VSDMPatient|1.0.1)
+* meta.profile[0] = Canonical(VSDMPatient|1.1.0-dev)
 
 * identifier[KVNR].value = "J012345677"
 * birthDate = "1958-12"
@@ -64,9 +64,9 @@ Description: "Versicherungsdaten J012345677 Junko, Jens-Jörg (GKV)"
 Usage: #inline
 
 * id = $idVSDMCoverageGKV-J012345677
-* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.1)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.1.0-dev)
 
-* extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"
+* extension[WOP].valueCoding = $csWOP|1.00#52 "Baden-Württemberg"
 * extension[besonderePersonengruppe].valueCoding = #09 "ASY" // "Empfänger von Gesundheitsleistungen nach §§ 4 und 6 des Asylbewerberleistungsgesetzes (AsylbLG)"
 * extension[dmp][+]
   * extension[dmp].valueCoding = #06 "COPD"
@@ -81,13 +81,13 @@ Usage: #inline
   * extension[zeitraum].valuePeriod.start = "2003-03-13"
   * extension[digitalesDMP].valueBoolean = false
 * extension[ruhenderLeistungsanspruch]
-  * extension[art].valueCoding = VSDMRuhenderLeistungsanspruchArtCS#1 "vollständig"
+  * extension[art].valueCoding = $csRuhenderLeistungsanspruch|1.6.0#1 "vollständig"
   * extension[dauer].valuePeriod
     * start = "2025-01-01"
     * end = "2025-12-31"
-* extension[versichertenart].valueCoding = $csVersichertenartGKV#5 "Rentner"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV|1.02#5 "Rentner"
 * status = #active
-* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-J012345677
 * period
   * start = "1964-05-01"

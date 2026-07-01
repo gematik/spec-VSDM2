@@ -3,15 +3,15 @@ Parent: TIPatient
 Title: "Versicherter"
 Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0"
 
-// Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen. 
+// Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen.
 
 // Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
-* . 
+* .
   * ^short = "Versicherter im VSDM"
   * ^definition = """
       Der VSDMPatient bildet einen Versicherten im Versichertenstammdatenmanagement (VSDM) 2.0 ab.
-      Der VSDMPatient ist vom zentralen TIPatient abgeleitet. 
+      Der VSDMPatient ist vom zentralen TIPatient abgeleitet.
       Der Ressource Server des VSDM stellt allerdings keinen FHIR Data Service im Sinne des Implementation Guide TI Common dar, so dass die meisten Anforderungen dieses IG auf den VSDMPatient nicht zutreffen.
       Dieser Sachverhalt wird in einer Folgeversion des IG klargestellt.
     """
@@ -20,7 +20,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
 * identifier[KVNR] 1..1 // MS bereits durch TIPatient vorgegeben
   * ^short = "Versichertennummer (KVNR)"
   * ^definition = """
-      Es wird der zehnstellig (unveränderliche) Teil der KVNR verwendet. 
+      Es wird der zehnstellig (unveränderliche) Teil der KVNR verwendet.
       Zur eindeutigen Identifikation muss genau eine KVNR angegeben werden.
     """
   * ^comment = """
@@ -29,7 +29,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
   * ^requirements = "Die KVNR identifiziert den Versicherten, auf den sich die bereitgestellten Stammdaten beziehen."
 
 // Bildung aus den in der Folge spezifizierten Einzelwerten
-* name[Name].text
+* name[Name].text MS
   * ^short = "vollständiger zusammengesetzter Name"
   * ^definition = """
       Zur besseren Lesbarkeit sowie zur leichteren Verarbeitung für Systeme, die die einzelnen Namensbestandteile nicht getrennt benötigen, SOLL dieses Attribut den gesamten Namen mit Titel, Vorsatzwort und Namenszusätzen enthalten.
@@ -86,7 +86,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
 // Zuordnung aus Versichertendaten -> Versicherter -> Vorname
 * name[Name].given // 1..* MS bereits durch TIPatient vorgegeben
   * ^comment = """
-      Mehrere Vornamen können durch Leerzeichen oder Bindestrich getrennt in einem Wert angegeben werden. 
+      Mehrere Vornamen können durch Leerzeichen oder Bindestrich getrennt in einem Wert angegeben werden.
       Von der Wiederholung des given-Elemente SOLL kein Gebrauch gemacht werden; es wird zur besseren Interoperabilität allerdings nicht technisch verboten.
       Verwender müssen mindestens 45 Zeichen verarbeiten können.
     """
@@ -96,7 +96,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
   * ^definition = """
       Namensteile vor dem Vornamen, z.B. akademischer Titel.
       Wenn dieses Attribut zur Angabe des akademischen Titels verwendet wird, ist die Erweiterung prefix-qualifier mit dem Wert AC (academic) verpflichtend anzugeben.
-      Mehrere Titel werden durch Leerzeichen getrennt angegeben. 
+      Mehrere Titel werden durch Leerzeichen getrennt angegeben.
       Verwender müssen mindestens 20 Zeichen verarbeiten können.
     """
   * ^comment = """
@@ -114,11 +114,11 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
       """
 
 // Slicing der Telekommunikationsdaten
-* telecom
+* telecom MS
   * ^slicing.discriminator.type = #profile
   * ^slicing.discriminator.path = "system"
   * ^slicing.rules = #open
-* telecom contains TIMessengerID 0..1
+* telecom contains TIMessengerID 0..1 MS
 
 // TI-Messenger-ID
 * telecom[TIMessengerID] only VSDMContactPointTIM
@@ -144,12 +144,18 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
         Hinweise zur Verwendung dieses Attributs und der Erweiterung siehe [Geschlecht (Patient)](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geschlecht) im deutschen Basisprofil.
         Nur bei FHIR-Kodierung "other" zu verwenden (vgl. Constraint pat-de-1).
       """
+    * valueCoding
+      * system 1.. MS
+      * system = $csGenderAmtlich (exactly)
+      * version 1.. MS
+      * version = "1.6.0" (exactly) // Version($csGenderAmtlich)
+      * code 1.. MS
 
 // Zuordnung aus Versichertendaten -> Versicherter -> Geburtsdatum
 * birthDate // 1..1 MS bereits durch TIPatient vorgegeben
   * ^short = "Geburtsdatum"
   * ^definition = """
-      Das Geburtsdatum des Versicherten ist in den VSD eine Pflichtangabe. 
+      Das Geburtsdatum des Versicherten ist in den VSD eine Pflichtangabe.
       Partielle Datumsangaben sind allerdings zulässig.
     """
   * ^comment = """
@@ -157,7 +163,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
     """
 
 // Slicing der Adresse, um die geforderten Kardinalitäten festzulegen
-* address 
+* address MS
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "type"
   * ^slicing.rules = #open
@@ -166,6 +172,7 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
 // Zuordnung aus Versichertendaten -> Versicherter -> PostfachAdresse
 * address[PostfachAdresse] only AddressDeBasis // address-de-basis
 * address[PostfachAdresse] MS
+  * type MS
   * type = #postal
   * line MS
     * ^comment = """
@@ -175,11 +182,12 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
   * city MS
   * postalCode MS
   * country MS
-    * insert Address-Country
+    * insert AddressDeBasis-Country
 
 // Zuordnung aus Versichertendaten -> Versicherter -> StrassenAdresse
 * address[StrassenAdresse] only AddressDeBasis // address-de-basis
 * address[StrassenAdresse] MS
+  * type MS
   * type = #physical
   * line MS
     * ^comment = """
@@ -191,4 +199,4 @@ Description: "Angaben zum Versicherten im Versichertenstammdatenmanagement (VSDM
   * city MS
   * postalCode MS
   * country MS
-    * insert Address-Country
+    * insert AddressDeBasis-Country

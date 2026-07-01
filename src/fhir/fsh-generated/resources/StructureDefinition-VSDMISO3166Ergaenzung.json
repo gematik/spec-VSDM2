@@ -1,0 +1,100 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "VSDMISO3166Ergaenzung",
+  "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMISO3166Ergaenzung",
+  "version": "1.1.0-dev",
+  "name": "VSDMISO3166Ergaenzung",
+  "title": "ergänzende Ländercodes",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-05-20",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "name": "gematik GmbH",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://fachportal.gematik.de/anwendungen/versichertenstammdaten-management"
+        }
+      ]
+    }
+  ],
+  "description": "ergänzende Ländercodes zu ISO 3166-1 im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "DE",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Germany"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Address.country",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "ergänzende Ländercodes",
+        "definition": "ergänzende Ländercodes zu ISO 3166-1 im Versichertenstammdatenmanagement (VSDM) 2.0",
+        "comment": "Im VSDM 2.0 werden Länderkennungen in Adressdaten grundsätzlich nach ISO 3166-1 und für den GKV-Bereich zusätzlich nach DEÜV Anlage 8 kodiert.\nDie DEÜV spiegelt den Stand in den Quellsystemen, aus denen die VSDM 2.0-Fachdienste versorgt werden, wieder.\nIn der DEÜV gibt es Ländercodes, die sich nicht auf den zum Zeitpunkt der Veröffentlichung bestehenden Stand der ISO 3166-1 abbilden lassen.\nDieses CodeSystem enthält zusätzlichen Ländercodes, um eine verlustfreie Abbildung zu ermöglichen."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMISO3166Ergaenzung"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMISO3166ErgaenzungVS"
+        }
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "min": 1,
+        "fixedUri": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMISO3166ErgaenzungCS"
+      },
+      {
+        "id": "Extension.value[x].version",
+        "path": "Extension.value[x].version",
+        "min": 1,
+        "fixedString": "1.1.0-dev",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.value[x].code",
+        "path": "Extension.value[x].code",
+        "min": 1,
+        "mustSupport": true
+      }
+    ]
+  }
+}

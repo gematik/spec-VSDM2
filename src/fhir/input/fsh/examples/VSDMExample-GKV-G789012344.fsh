@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-GKV-G789012344
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.1)
+  * profile[0] = Canonical(VSDMBundle|1.1.0-dev)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -28,7 +28,7 @@ Description: "Versichertendaten G789012344 Edle von der Graugans, Gabriele (GKV)
 Usage: #inline
 
 * id = $idVSDMPatient-GKV-G789012344
-* meta.profile[0] = Canonical(VSDMPatient|1.0.1)
+* meta.profile[0] = Canonical(VSDMPatient|1.1.0-dev)
 
 * identifier[KVNR].value = "G789012344"
 * birthDate = "1974-02-12"
@@ -58,10 +58,10 @@ Description: "Versicherungsdaten G789012344 Edle von der Graugans, Gabriele (GKV
 Usage: #inline
 
 * id = $idVSDMCoverageGKV-G789012344
-* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.1)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.1.0-dev)
 
-* extension[WOP].valueCoding = $csWOP#46 "Hessen"
-* extension[zuzahlungsstatus] 
+* extension[WOP].valueCoding = $csWOP|1.00#46 "Hessen"
+* extension[zuzahlungsstatus]
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = "2026-12-31"
 * extension[kostenerstattung]
@@ -70,13 +70,13 @@ Usage: #inline
   * extension[stationaererBereich].valueBoolean = true
   * extension[veranlassteLeistungen].valueBoolean = true
 * extension[ruhenderLeistungsanspruch]
-  * extension[art].valueCoding = VSDMRuhenderLeistungsanspruchArtCS#2 "eingeschränkt"
+  * extension[art].valueCoding = $csRuhenderLeistungsanspruch|1.6.0#2 "eingeschränkt"
   * extension[dauer].valuePeriod
     * start = "2025-06-01"
     * end = "2027-12-31"
-* extension[versichertenart].valueCoding = $csVersichertenartGKV#1 "Mitglieder"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV|1.02#1 "Mitglieder"
 * status = #active
-* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-G789012344
 * period
   * start = "1974-02-12"

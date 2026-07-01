@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-GKV-H890123459
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.1)
+  * profile[0] = Canonical(VSDMBundle|1.1.0-dev)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -31,7 +31,7 @@ Description: "Versichertendaten H890123459 vorm Habicht, Hans (GKV)"
 Usage: #inline
 
 * id = $idVSDMPatient-GKV-H890123459
-* meta.profile[0] = Canonical(VSDMPatient|1.0.1)
+* meta.profile[0] = Canonical(VSDMPatient|1.1.0-dev)
 
 * identifier[KVNR].value = "H890123459"
 * birthDate = "1953-07-29"
@@ -64,11 +64,11 @@ Description: "Versicherungsdaten H890123459 vorm Habicht, Hans (GKV)"
 Usage: #inline
 
 * id = $idVSDMCoverageGKV-H890123459
-* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.1)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.1.0-dev)
 
-* extension[WOP].valueCoding = $csWOP#17 "Niedersachsen" 
+* extension[WOP].valueCoding = $csWOP|1.00#17 "Niedersachsen"
 * extension[besonderePersonengruppe].valueCoding = #07 "SVA1" // "SVA-Kennzeichnung für zwischenstaatliches Krankenversicherungsrecht: - Personen mit Wohnsitz im Inland, Abrechnung nach Aufwand"
-* extension[zuzahlungsstatus] 
+* extension[zuzahlungsstatus]
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = "2024-03-31"
 * extension[dmp][+]
@@ -83,9 +83,9 @@ Usage: #inline
     * start = "2020-01-01"
     * end = "2023-12-31"
   * extension[digitalesDMP].valueBoolean = true
-* extension[versichertenart].valueCoding = $csVersichertenartGKV#5 "Rentner"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV|1.02#5 "Rentner"
 * status = #active
-* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-H890123459
 * period
   * start = "1953-01-01"

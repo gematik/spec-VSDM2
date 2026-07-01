@@ -3,11 +3,11 @@ Parent: OperationOutcome
 Title: "Fehlermeldung des VSDM Resource Servers"
 Description: "Strukturierte Fehlermeldung im Versichertenstammdatenmanagement (VSDM) 2.0"
 
-// Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen. 
+// Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen.
 
 // Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
-* . 
+* .
   * ^short = "Fehlermeldung des VSDM Resource Servers"
   * ^definition = """
       Strukturierte Fehlermeldung im Versichertenstammdatenmanagement (VSDM) 2.0
@@ -22,7 +22,7 @@ Description: "Strukturierte Fehlermeldung im Versichertenstammdatenmanagement (V
   * ^comment = """
       Der Beschreibungstext darf identisch zum Anzeigetext in issue.details.text sein.
     """
-  * status = #generated 
+  * status = #generated
   * div MS
 
 * issue MS
@@ -30,7 +30,7 @@ Description: "Strukturierte Fehlermeldung im Versichertenstammdatenmanagement (V
   * ^definition = """
       Diese strukturierte Fehlerbeschreibung kann zur Behandlung innerhalb des Clientsystems ausgewertet werden.
     """
-  * severity MS 
+  * severity MS
     * ^short = "Schweregrad der Fehlermeldung"
     * ^definition = """
         Beschreibt die Kritikalität (den Schweregrad) der Fehlermeldung mit Bezug auf die Ausführung der gesamten Anfrage.
@@ -46,12 +46,12 @@ Description: "Strukturierte Fehlermeldung im Versichertenstammdatenmanagement (V
     * ^comment = """
         Für VSDM-spezifische Fehlermeldungen kann der Schweregrad anhand der ConceptMap VSDMTDSCodeIssueType abgeleitet werden.
       """
-  * details 1..1
+  * details 1..1 MS
     * ^short = "Fehlerbeschreibung"
     * ^definition = """
         Diese Struktur beschreibt die aufgetretene Fehlersituation.
       """
-    * coding 1..1
+    * coding 1..1 MS
     * coding from VSDMErrorcodeVS (required)
       * ^short = "Fehlercode aus den Wertetabellen gemäß Spezifikation"
       * ^definition = """
@@ -60,7 +60,7 @@ Description: "Strukturierte Fehlermeldung im Versichertenstammdatenmanagement (V
         """
       * system 1..1 MS
       * code 1..1 MS
-      * display 
+      * display MS
         * ^short = "Meldungstext laut Katalog"
         * ^definition = """
             Dieses Feld nimmt den unverarbeiteten Meldungstext gemäß CodeSystem/ValueSet auf.
@@ -73,7 +73,7 @@ Description: "Strukturierte Fehlermeldung im Versichertenstammdatenmanagement (V
   * diagnostics 1..1 MS
     * ^short = "Diagnostik- und Lösungsmöglichkeiten"
     * ^definition = """
-        Dieses Feld liefert Hinweise zur Fehlerbehebung durch das Clientsystem in Anlehnung an Anforderung A_27014. 
+        Dieses Feld liefert Hinweise zur Fehlerbehebung durch das Clientsystem in Anlehnung an Anforderung A_27014.
         Dieser Text richtet sich primär an Entwickler und technische Betreuer des Clientsystems und soll dem Anwender in der Regel nicht zur Anzeige gebracht werden.
       """
     * ^comment = """

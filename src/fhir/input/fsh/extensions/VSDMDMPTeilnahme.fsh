@@ -5,7 +5,7 @@ Description: "Angaben zur Teilnahme eines Versicherten an einem Disease Manageme
 
 // Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
-* . 
+* .
   * ^short = "Teilnahme an Disease Management-Programm"
   * ^definition = """
       Angaben zur Teilnahme eines Versicherten an einem Disease Management-Programm im Versichertenstammdatenmanagement (VSDM) 2.0.
@@ -22,12 +22,14 @@ Description: "Angaben zur Teilnahme eines Versicherten an einem Disease Manageme
       Hier sind nur die DMP-Schlüssel zulässig, die einzelne DMP identifizieren (keine Kombinationswerte).
       Der bisherigen Leerwerts 00 darf nicht verwendet werden; stattdessen ist die gesamte Extension nicht anzugeben, wenn keine DMP-Teilnahme registriert ist.
     """
-  * value[x] 1..1 
+  * value[x] 1..1
   * value[x] only Coding
   * value[x] from VSDMDMPVS (required)
-    * system 1..
-    * system = $csDMP
-    * code 1..
+    * system 1.. MS
+    * system = $csDMP (exactly)
+    * version 1.. MS
+    * version = "1.07" (exactly) // Version($csDMP)
+    * code 1.. MS
 
 // Zuordnung aus Versicherungsdaten -> DMP -> Beginn/Ende
 * extension contains zeitraum 1..1 MS
@@ -50,5 +52,5 @@ Description: "Angaben zur Teilnahme eines Versicherten an einem Disease Manageme
   * ^definition = """
       Gibt an, ob das DMP als digitales DMP durchgeführt wird.
     """
-  * value[x] 1..1 
+  * value[x] 1..1
   * value[x] only boolean

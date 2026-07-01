@@ -6,7 +6,7 @@ Usage: #example
 
 * id = $idVSDMBundle-GKV-N456789014
 * meta
-  * profile[0] = Canonical(VSDMBundle|1.0.1)
+  * profile[0] = Canonical(VSDMBundle|1.1.0-dev)
   * lastUpdated = "2025-07-14T15:16:17.890+01:00"
 * type = #collection
 * timestamp = "2025-07-14T15:16:17.890+01:00"
@@ -31,7 +31,7 @@ Description: "Versichertendaten N456789014 Nachtigall, Nina Nicole (GKV)"
 Usage: #inline
 
 * id = $idVSDMPatient-GKV-N456789014
-* meta.profile[0] = Canonical(VSDMPatient|1.0.1)
+* meta.profile[0] = Canonical(VSDMPatient|1.1.0-dev)
 
 * identifier[KVNR].value = "N456789014"
 * birthDate = "2011-06-22"
@@ -59,10 +59,10 @@ Description: "Versicherungsdaten N456789014 Nachtigall, Nina Nicole (GKV)"
 Usage: #inline
 
 * id = $idVSDMCoverageGKV-N456789014
-* meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.1)
+* meta.profile[0] = Canonical(VSDMCoverageGKV|1.1.0-dev)
 
-* extension[WOP].valueCoding = $csWOP#52 "Baden-Württemberg"
-* extension[zuzahlungsstatus] 
+* extension[WOP].valueCoding = $csWOP|1.00#52 "Baden-Württemberg"
+* extension[zuzahlungsstatus]
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = "2029-06-22"
 * extension[kostenerstattung]
@@ -70,9 +70,9 @@ Usage: #inline
   * extension[zahnaerztlicheVersorgung].valueBoolean = true
   * extension[stationaererBereich].valueBoolean = true
   * extension[veranlassteLeistungen].valueBoolean = true
-* extension[versichertenart].valueCoding = $csVersichertenartGKV#3 "Familienangehoerige"
+* extension[versichertenart].valueCoding = $csVersichertenartGKV|1.02#3 "Familienangehoerige"
 * status = #active
-* type = $csVersicherungsart#GKV "gesetzliche Krankenversicherung"
+* type = $csVersicherungsart|1.6.0#GKV "gesetzliche Krankenversicherung"
 * beneficiary.reference = $urlVSDMPatient-GKV-N456789014
 * period
   * start = "2011-06-22"

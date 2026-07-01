@@ -1,12 +1,12 @@
 {
   "resourceType": "ValueSet",
   "status": "active",
-  "name": "VSDMRuhenderLeistungsanspruchArtVS",
-  "id": "VSDMRuhenderLeistungsanspruchArtVS",
-  "title": "Art des ruhenden Leistungsanspruchs",
-  "description": "Art des ruhenden Leistungsanspruchs im Versichertenstammdatenmanagement (VSDM) 2.0",
-  "version": "1.0.1",
-  "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMRuhenderLeistungsanspruchArtVS",
+  "name": "VSDMISO3166ErgaenzungVS",
+  "id": "VSDMISO3166ErgaenzungVS",
+  "title": "ergänzende Ländercodes",
+  "description": "ergänzende Ländercodes zu ISO 3166-1 im Versichertenstammdatenmanagement (VSDM) 2.0",
+  "version": "1.1.0-dev",
+  "url": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMISO3166ErgaenzungVS",
   "experimental": false,
   "publisher": "gematik GmbH",
   "contact": [
@@ -35,7 +35,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://fhir.de/CodeSystem/gkv/RuhenderLeistungsanspruchGKV"
+        "system": "https://gematik.de/fhir/vsdm2/CodeSystem/VSDMISO3166ErgaenzungCS"
       }
     ]
   }

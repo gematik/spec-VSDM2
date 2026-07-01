@@ -3,18 +3,18 @@ Parent: CoverageDeBasis
 Title: "Versicherungsdaten PKV"
 Description: "Angaben zum PKV-Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0"
 
-// Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen. 
+// Die Reihenfolge der Elemente in diesem Profil entspricht der Reihenfolge der Elemente in den FHIR-Datentypen.
 // Die Extensions sind in der Reihenfolge der Nennung der Attribute im logischen Modell aufgeführt.
 
 // Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
-* . 
+* .
   * ^short = "Versicherungsdaten PKV"
   * ^definition = """
       Angaben zum PKV-Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0
     """
   * ^comment = """
-      Zur Harmonisierung der Strukturen mit dem deutschen Basisprofil werden getrennte Profile für PKV und PKV gebildet.
+      Zur Harmonisierung der Strukturen mit dem deutschen Basisprofil werden getrennte Profile für GKV und PKV gebildet.
     """
 
 // Zuordnung aus Versicherungsdaten PKV -> Beihilfe
@@ -57,11 +57,19 @@ Description: "Angaben zum PKV-Versicherungsverhältnis im Versichertenstammdaten
       Optionale Hinweise in Freitextform für Leistungserbringer.
     """
 
+// Status des Versicherungsverhältnisses
+* status = #active (exactly)
+  * ^comment = """
+    Im VSDM 2.0 werden nur Informationen über aktive Versicherungsverhältnisse ausgetauscht.
+  """
+
 // Versicherungsart (PKV)
-* type = $csVersicherungsart#PKV
+* type MS
+* type = $csVersicherungsart|1.6.0#PKV
 
 // Bezug zum Versicherten
-* beneficiary only Reference(VSDMPatient) 
+* beneficiary MS
+* beneficiary only Reference(VSDMPatient)
 
 // Zuordnung aus Versicherungsdaten -> Versicherungsschutz
 * period MS // zur Kardinalität siehe Invariante VSDMCoveragePKV-period-1
@@ -72,12 +80,12 @@ Description: "Angaben zum PKV-Versicherungsverhältnis im Versichertenstammdaten
   * start MS
     * ^short = "Beginn des Versicherungsschutzes"
     * ^definition = """
-        Gibt den Beginn des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an. 
+        Gibt den Beginn des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an.
       """
   * end MS
     * ^short = "Ende des Versicherungsschutzes"
     * ^definition = """
-        Gibt das Ende des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an, wenn ein Endedatum festgelegt ist. 
+        Gibt das Ende des Versicherungsschutzes (Leistungsanspruchs) des Versicherten bei dem Kostenträger an, wenn ein Endedatum festgelegt ist.
       """
     * ^comment = """
         Hier kann nicht das Ende der Gültigkeit einer konkreten eGK angegeben werden, weil der VSDM 2.0 Resource Server keine Kenntnis davon erlangt, welche konkrete eGK verwendet wurde.

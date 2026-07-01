@@ -90,11 +90,11 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
     """
   * ^property[+].code = #diagnostics
   * ^property[=].valueString = """
-      Das Clientsystem hat mit dem verpflichtenden Parameter profileVersion eine Profilversion angefordert, die vom Fachdienst nicht unterstützt wird. 
+      Das Clientsystem hat mit dem verpflichtenden Parameter profileVersion eine Profilversion angefordert, die vom Fachdienst nicht unterstützt wird.
       Das Clientsystem muss den Parameter mit einer unterstützten Major-/Minor-Version gemäß der aktuellen gematik-Vorgaben füllen.
       Wiederholen Sie die Anfrage unter Angabe eines gültigen Werts.
     """
-    
+
 // #79016 "Der erforderliche Query-Parameter 'profileVersion' fehlt."
 * #VSDSERVICE_MISSING_PROFILE_VERSION "Der erforderliche Query-Parameter 'profileVersion' fehlt."
   * ^definition = """
@@ -102,7 +102,7 @@ Description: "Fachspezifische Fehlercodes im Versichertenstammdatenmanagement (V
     """
   * ^property[+].code = #diagnostics
   * ^property[=].valueString = """
-      Das Clientsystem hat den obligatorischen Parameter 'profileVersion' bei der Abfrage nicht angegeben. 
+      Das Clientsystem hat den obligatorischen Parameter 'profileVersion' bei der Abfrage nicht angegeben.
       Das Clientsystem muss den Parameter mit einer unterstützten Major-/Minor-Version gemäß der aktuellen gematik-Vorgaben füllen.
       Wiederholen Sie die Anfrage unter Angabe eines gültigen Werts.
     """

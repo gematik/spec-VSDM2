@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMOperationOutcome",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome",
-  "version": "1.0.1",
+  "version": "1.1.0-dev",
   "name": "VSDMOperationOutcome",
   "title": "Fehlermeldung des VSDM Resource Servers",
   "status": "active",
@@ -93,7 +93,8 @@
         "path": "OperationOutcome.issue.details",
         "short": "Fehlerbeschreibung",
         "definition": "Diese Struktur beschreibt die aufgetretene Fehlersituation.",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "OperationOutcome.issue.details.coding",
@@ -102,6 +103,7 @@
         "definition": "Es sind grundsätzlich die VSDM-spezifischen Fehlercodes aus dem CodeSystem VSDMErrorcodeCS zu verwenden.\nFalls keiner der Fehlercodes fachlich zutreffend ist, kann ein allgemeiner Fehlercode aus den Standard-FHIR-CodeSystemen verwendet werden.",
         "min": 1,
         "max": "1",
+        "mustSupport": true,
         "binding": {
           "strength": "required",
           "valueSet": "https://gematik.de/fhir/vsdm2/ValueSet/VSDMErrorcodeVS"
@@ -123,7 +125,8 @@
         "id": "OperationOutcome.issue.details.coding.display",
         "path": "OperationOutcome.issue.details.coding.display",
         "short": "Meldungstext laut Katalog",
-        "definition": "Dieses Feld nimmt den unverarbeiteten Meldungstext gemäß CodeSystem/ValueSet auf."
+        "definition": "Dieses Feld nimmt den unverarbeiteten Meldungstext gemäß CodeSystem/ValueSet auf.",
+        "mustSupport": true
       },
       {
         "id": "OperationOutcome.issue.details.text",
@@ -137,7 +140,7 @@
         "id": "OperationOutcome.issue.diagnostics",
         "path": "OperationOutcome.issue.diagnostics",
         "short": "Diagnostik- und Lösungsmöglichkeiten",
-        "definition": "Dieses Feld liefert Hinweise zur Fehlerbehebung durch das Clientsystem in Anlehnung an Anforderung A_27014. \nDieser Text richtet sich primär an Entwickler und technische Betreuer des Clientsystems und soll dem Anwender in der Regel nicht zur Anzeige gebracht werden.",
+        "definition": "Dieses Feld liefert Hinweise zur Fehlerbehebung durch das Clientsystem in Anlehnung an Anforderung A_27014.\nDieser Text richtet sich primär an Entwickler und technische Betreuer des Clientsystems und soll dem Anwender in der Regel nicht zur Anzeige gebracht werden.",
         "comment": "Dieses Feld darf keine technischen Interna des Fachdienstes (stack traces o.ä.) enthalten.",
         "min": 1,
         "mustSupport": true

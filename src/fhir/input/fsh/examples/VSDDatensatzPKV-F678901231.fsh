@@ -18,7 +18,7 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
 //  * Postleitzahl
 //  * Ort
 //  * Land
-  * Wohnsitzadresse 
+  * Wohnsitzadresse
     * Strasse = "Fasanenallee"
     * Hausnummer = "50"
 //  * Anschriftenzusatz (ohne)
@@ -27,17 +27,17 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
     * Land = #CH
 // * TIMessengerID (ohne)
 
-* Versicherungsdaten 
-  * Kostentraeger 
+* Versicherungsdaten
+  * Kostentraeger
     * Name = "Privatversicherung Mars"
     * Kostentraegerkennung = "168167894"
   * Versicherungsschutz
     * Beginn = "2020-01-01"
 //  * Ende (ohne)
 //* Beihilfe (ohne)
-//  * Beihilfeanspruch 
+//  * Beihilfeanspruch
 //  * QuotePKV
-  * Krankenhausleistungen 
+  * Krankenhausleistungen
     * Allgemein = 100
     * Zweibettzimmer = 0
     * Einbettzimmer = 0
@@ -47,5 +47,5 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
   * Sozialtarif = #N // Notlagentarif
   * Versichertenart = #VN
 //* Hinweis (ohne)
-//  * Hinweistext 
+//  * Hinweistext
 //  * Institutionstypen
