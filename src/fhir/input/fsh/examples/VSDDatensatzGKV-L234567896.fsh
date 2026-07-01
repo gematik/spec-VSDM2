@@ -44,11 +44,11 @@ Usage: #inline // to prevent SUSHI from generating JSON files that confuse many 
   * Versicherungsschutz
     * Beginn = "2022-07-02"
 //  * Ende (ohne)
-//* DMP (ohne)
-//  * DMP
-//  * Beginn
-//  * Ende
-//  * digitalesDMP
+  * DMP[+]
+    * DMP = #13 // Adipositas Kinder und Jugendliche
+    * Beginn = "2026-10-01"
+//  * Ende = "2024-03-31"
+    * digitalesDMP = false
   * Kostenerstattung
     * AerztlicheVersorgung = true
     * ZahnaerztlicheVersorgung = true

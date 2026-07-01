@@ -59,6 +59,10 @@ Usage: #inline
 * meta.profile[0] = Canonical(VSDMCoverageGKV|1.0.2-dev)
 
 * extension[WOP].valueCoding = $csWOP|1.00#17 "Niedersachsen"
+* extension[dmp][+]
+  * extension[dmp].valueCoding = #13 "Adipositas Kinder und Jugendliche"
+  * extension[zeitraum].valuePeriod.start = "2026-10-01"
+  * extension[digitalesDMP].valueBoolean = false
 * extension[zuzahlungsstatus]
   * extension[status].valueBoolean = true
   * extension[gueltigBis].valueDate = "2040-07-02"
