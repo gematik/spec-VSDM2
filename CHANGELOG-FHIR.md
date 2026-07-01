@@ -51,6 +51,10 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 - Der Verweis auf das CodeSystem https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP wurde auf die Draft-Version 1.07 aus kbv.all.st-rc aktualisiert.
   Damit ist es möglich, das bereits veröffentlichte (aber noch nicht in Kraft gesetzte) DMP 13 (Adipositas Kinder und Jugendliche) abzubilden.
   ([issue 181](https://github.com/gematik/spec-VSDM2/issues/181))
+- Zur Behebung von Warnungen wurde der Slicing-Diskriminator in VSDMPayorOrganization.address.country.extension von pattern auf value geändert.
+  Damit folgt das Slicing der Adresse in der Patient-Ressource.
+  Diese Änderung hat keine Auswirkung auf die ausgelieferten Ressourcen.
+  ([issue 97](https://github.com/gematik/spec-VSDM2/issues/97))
 
 ### Abkündigung
 

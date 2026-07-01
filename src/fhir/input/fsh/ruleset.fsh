@@ -52,7 +52,7 @@ RuleSet: Address-Country
   * ^slicing.rules = #open
   * ^slicing.discriminator[+].type = #value
   * ^slicing.discriminator[=].path = "url"
-  * ^slicing.discriminator[+].type = #pattern
+  * ^slicing.discriminator[+].type = #value
   * ^slicing.discriminator[=].path = "value.ofType(Coding)"
 * extension contains $extCodedString named countryCode 0..1 MS and
                      VSDMISO3166Ergaenzung named countryCodeExt 0..1 MS and
