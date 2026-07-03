@@ -27,8 +27,8 @@ Checkliste:
 - Validierungsergebnisse prüfen und eventuelle Fehler beheben
 - zur Absicherung gesamtes Projekt nach altem Datum und alter Versionsnummer durchsuchen (sollte außer im Changelog keine Treffer mehr ergeben)
 - Commit / PR / Merge auf develop-Branch
-
-
-TODO: Tagging
-
-TODO: Simplifier-Aktualisierung und Release
+- PR von develop auf main
+- nach Merge wird Simplifier automatisch aktualisiert
+- Paket auf Simplifier erstellen
+- develop auf main rebasen, damit die Zweige wieder synchron sind
+- in develop schon die nächste Version `-dev` eintragen (die gleichen Stellen wie oben)
