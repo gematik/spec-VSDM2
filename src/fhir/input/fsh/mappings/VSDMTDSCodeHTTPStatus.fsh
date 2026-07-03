@@ -9,9 +9,9 @@ Usage: #definition
     Diese ConceptMap ordnet den TDS-Codes die HTTP Status Codes aus Tabelle TAB_FACHDIENST_VSDM_HTTP_STATUS_CODES zu.
   """
 
-* sourceUri = Canonical(VSDMTDSCodeVS|1.1.0)
+* sourceUri = Canonical(VSDMTDSCodeVS|1.1.1-dev)
 * group[+]
-  * source = Canonical(VSDMTDSCodeCS|1.1.0)
+  * source = Canonical(VSDMTDSCodeCS|1.1.1-dev)
 
   * element[+]
     * code = #79010
