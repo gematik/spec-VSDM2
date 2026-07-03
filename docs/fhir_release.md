@@ -22,6 +22,7 @@ Checkliste:
   - das Datum in den Metadaten-Rulesets aktualisieren (sollte dreimal vorkommen)
 - In der Datei `package.json` die Versionsangabe ersetzen
 - In allen Dateien mit der Endung `.fsh` den Text `|<Version-alt>)` ersetzen durch `|<Version-neu>)` (also z.B. `|1.0.0-rc7)` durch `|1.0.0-rc8)`)
+- In allen Dateien mit der Endung `.fsh` den Text `<Version-alt>` suchen, manuell prüfen und ersetzen durch `<Version-neu>`
 - FHIR-Ressourcen aus den FSH-Quellen neu erzeugen (Aufruf von `sushi` - später mal `ig`)
 - Validierungsergebnisse prüfen und eventuelle Fehler beheben
 - zur Absicherung gesamtes Projekt nach altem Datum und alter Versionsnummer durchsuchen (sollte außer im Changelog keine Treffer mehr ergeben)

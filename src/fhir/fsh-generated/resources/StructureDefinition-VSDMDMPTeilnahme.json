@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "VSDMDMPTeilnahme",
   "url": "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMDMPTeilnahme",
-  "version": "1.1.0-dev",
+  "version": "1.1.0",
   "name": "VSDMDMPTeilnahme",
   "title": "Teilnahme an Disease Management-Programm",
   "status": "active",
   "experimental": false,
-  "date": "2026-05-20",
+  "date": "2026-07-03",
   "publisher": "gematik GmbH",
   "contact": [
     {
