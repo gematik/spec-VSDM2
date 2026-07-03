@@ -9,6 +9,20 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 ### Neu
 
+### Änderung
+
+### Abkündigung
+
+### Entfernung
+
+### Fehlerbehebung
+
+### Security
+
+## [1.1.0] - 2026-07-03
+
+### Neu
+
 - Es wurde ein neues Basis-Profil VSDMCoverageGKVBase zwischen dem deutschen Basisprofil und dem bereits bestehenden Profil VSDMCoverageGKV eingezogen, um die Umsetzung der EEB zu unterstützen.
   Durch diese Änderung ergeben sich keine inhaltlichen Änderungen an den VSDM 2.0-Ressourcen.
   ([issue 171](https://github.com/gematik/spec-VSDM2/issues/171))
@@ -62,6 +76,8 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 ### Abkündigung
 
+(keine)
+
 ### Entfernung
 
 - Das CodeSystem VSDMRuhenderLeistungsanspruchArtCS und das zugehörige ValueSet VSDMRuhenderLeistungsanspruchArtVS wurden durch die inhaltsgleichen Versionen aus dem deutschen Basisprofil ersetzt.
@@ -80,6 +96,8 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
   ([issue 174](https://github.com/gematik/spec-VSDM2/issues/175))
 
 ### Security
+
+(keine)
 
 ## [1.0.1] - 2026-05-20
 
@@ -237,3 +255,4 @@ _(Release Notes aus der Simplifier-Veröffentlichung übernommen)_
 [1.0.0-rc8]: https://simplifier.net/packages/de.gematik.vsdm2/1.0.0-rc8
 [1.0.0]: https://simplifier.net/packages/de.gematik.vsdm2/1.0.0
 [1.0.1]: https://simplifier.net/packages/de.gematik.vsdm2/1.0.1
+[1.1.0]: https://simplifier.net/packages/de.gematik.vsdm2/1.1.0
