@@ -1,8 +1,8 @@
 openapi: 3.1.0
 info:
   title: VSDM2
-  description: HTTP-based "Versichertenstammdatendienst" (VSDD) interface to request "Versichertenstammdaten" (vsd). 
-    This API document specifies the contract between a vsdm-client ("Primaersystem") and the resource server of the "Versichertenstammdatendienst". 
+  description: HTTP-based "Versichertenstammdatendienst" (VSDD) interface to request "Versichertenstammdaten" (vsd).
+    This API document specifies the contract between a vsdm-client ("Primaersystem") and the resource server of the "Versichertenstammdatendienst".
     The ressource server ist protected by a proxy component. Details about the interface description of the proxy component can be found (soon) at a separate GitHub project https://github.com/gematik/spec-t20r/tree/develop/src/openapi.
     Practitioners software clients "Primaersysteme" can request data about patients by using this interface to support a current treatment.
   contact:
@@ -68,14 +68,14 @@ paths:
       parameters:
         - name: Authorization
           in: header
-          description: OAuth2 Bearer AccessToken granting access to the VSDService-API. 
+          description: OAuth2 Bearer AccessToken granting access to the VSDService-API.
             The Access-Token is verified by the HTTP-Proxy component of the "Versichertenstammdatendienst".
             The Access-Token is bound via "demonstrating proof of possession" (DPoP) to the requesting client, according to RFC 9449 6.1. JWK Thumbprint Confirmation Method.
           schema:
             type: string
         - name: PoPP
           in: header
-          description: Bearer Token containing proof of patient presence (Versorgungskontextnachweis). 
+          description: Bearer Token containing proof of patient presence (Versorgungskontextnachweis).
             This token represents the proof of an actual encounter between patient and practitioner as a resource access condition.
             The HTTP-Proxy verifies the Token and sends the Token-Payload within the custom header "ZETA-PoPP-Token-Content" to the resource server.
             The Header contains the "Krankenversichertennummer" (KVNR) as the identifier for the corresponding VSDMBundle instance.
@@ -83,7 +83,7 @@ paths:
             type: string
         - name: DPoP
           in: header
-          description: The DPoP-Header holds the DPoP-JWT to demonstrate possession of a local client key and to bind a local client to his oauth2 AccessToken according to RFC 9449. 
+          description: The DPoP-Header holds the DPoP-JWT to demonstrate possession of a local client key and to bind a local client to his oauth2 AccessToken according to RFC 9449.
             The DPoP is verified by the HTTP-Proxy component of the "Versichertenstammdatendienst".
           schema:
             type: string
@@ -95,6 +95,12 @@ paths:
         - name: Accept
           in: header
           description: Specifies the format of the FHIR response requested by a client which could be application/fhir+json or application/fhir+xml.
+          schema:
+            type: string
+        - name: profileVersion
+          in: query
+          description: Specifies the FHIR version which is requested by the VSDM client system e.g. values "1.0" or "1.1" or similar.
+          required: true
           schema:
             type: string
       responses:
