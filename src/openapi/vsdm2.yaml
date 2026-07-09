@@ -14,6 +14,10 @@ info:
 
   version: 1.0.0
 
+  # Changes in 1.0.1
+  #  - correcting content-type
+  # Changes in 1.0.0
+  #  - adding profile version
   # Changes in 0.0.1
   #  - initial version
 
@@ -101,7 +105,10 @@ paths:
         '200':
           description: OK
           content:
-            application/json:
+            application/fhir+json:
+              schema:
+                $ref: '#/components/schemas/GetVSDMBundleResponse'
+            application/fhir+xml:
               schema:
                 $ref: '#/components/schemas/GetVSDMBundleResponse'
           headers:
@@ -110,7 +117,7 @@ paths:
             VSDM-Pz:
               $ref: '#/components/parameters/VSDM-Pz'
         '304':
-          description: Bundle was found but not modified
+          description: Not modified
           headers:
             ETag:
               $ref: '#/components/parameters/ETag'
@@ -119,37 +126,55 @@ paths:
         '400':
           description: Bad Request
           content:
-            application/json:
+            application/fhir+json:
+              schema:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
+            application/fhir+xml:
               schema:
                 $ref: '#/components/schemas/VSDMOperationOutcome'
         '404':
           description: Not Found
           content:
-            application/json:
+            application/fhir+json:
+              schema:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
+            application/fhir+xml:
               schema:
                 $ref: '#/components/schemas/VSDMOperationOutcome'
         '405':
           description: Method Not Allowed
           content:
-            application/json:
+            application/fhir+json:
+              schema:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
+            application/fhir+xml:
               schema:
                 $ref: '#/components/schemas/VSDMOperationOutcome'
         '406':
           description: Not Acceptable
           content:
-            application/json:
+            application/fhir+json:
+              schema:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
+            application/fhir+xml:
               schema:
                 $ref: '#/components/schemas/VSDMOperationOutcome'
         '428':
           description: Precondition Required
           content:
-            application/json:
+            application/fhir+json:
+              schema:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
+            application/fhir+xml:
               schema:
                 $ref: '#/components/schemas/VSDMOperationOutcome'
         '500':
           description: Internal Server Error
           content:
-            application/json:
+            application/fhir+json:
+              schema:
+                $ref: '#/components/schemas/VSDMOperationOutcome'
+            application/fhir+xml:
               schema:
                 $ref: '#/components/schemas/VSDMOperationOutcome'
 components:
