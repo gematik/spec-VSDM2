@@ -469,7 +469,15 @@
     "fshType": "Profile",
     "fshFile": "profiles/VSDMPatient.fsh",
     "startLine": 1,
-    "endLine": 202
+    "endLine": 20
+  },
+  {
+    "outputFile": "StructureDefinition-VSDMPatientBase.json",
+    "fshName": "VSDMPatientBase",
+    "fshType": "Profile",
+    "fshFile": "profiles/VSDMPatientBase.fsh",
+    "startLine": 1,
+    "endLine": 200
   },
   {
     "outputFile": "StructureDefinition-VSDMPayorOrganization.json",
