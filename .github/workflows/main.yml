@@ -42,7 +42,7 @@ jobs:
           java-version: '17'
         
       - name: Firely.Terminal (GitHub Actions)
-        uses: FirelyTeam/firely-terminal-pipeline@v0.8.14
+        uses: FirelyTeam/firely-terminal-pipeline@v0.8.16
         with:
           PATH_TO_CONFORMANCE_RESOURCES: src/fhir/fsh-generated/resources/
           FIRELY_TERMINAL_VERSION: 3.5.0

@@ -21,6 +21,9 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 ### Fehlerbehebung
 
+- In der ConceptMap VSDMTDSCodeIssueSeverity war dem Fehlercode #79014 noch der falsche Text zugeordnet.
+  ([issue 203](https://github.com/gematik/spec-VSDM2/issues/203))
+
 ### Security
 
 ## [1.1.0] - 2026-07-03
