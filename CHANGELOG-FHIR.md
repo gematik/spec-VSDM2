@@ -11,6 +11,10 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 ### Änderung
 
+- Statt des Pakets `kbv.basis` wird jetzt das deutlich kleinere Paket `kbv.basis.terminology` verwendet.
+  Durch diese Änderung ergeben sich keine inhaltlichen Änderungen an den VSDM 2.0-Ressourcen.
+  ([issue 201](https://github.com/gematik/spec-VSDM2/issues/201))
+
 ### Abkündigung
 
 ### Entfernung
