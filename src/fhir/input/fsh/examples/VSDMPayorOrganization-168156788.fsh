@@ -5,7 +5,7 @@ Description: "Privatversicherung Jupiter"
 Usage: #inline
 
 * id = $idVSDMPayorOrganization-168156788
-* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.1-dev)
+* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.2)
 
 * identifier[IKNR].value = "168156788"
 * name = "Privatversicherung Jupiter"

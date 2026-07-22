@@ -4,7 +4,7 @@ Title: "Beispielkostenträger Marburg"
 Description: "Beispielkostenträger Marburg"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.1-dev)
+* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.2)
 
 * identifier[IKNR].value = "105763413"
 * name = "Beispielkostenträger Marburg"

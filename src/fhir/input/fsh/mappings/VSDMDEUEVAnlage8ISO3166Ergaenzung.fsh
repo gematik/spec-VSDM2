@@ -11,10 +11,10 @@ Usage: #definition
   """
 
 * sourceUri = $vsAnlage8Laenderkennzeichen
-* targetUri = Canonical(VSDMISO3166ErgaenzungVS|1.1.1-dev)
+* targetUri = Canonical(VSDMISO3166ErgaenzungVS|1.1.2)
 * group[+]
   * source = $csAnlage8Laenderkennzeichen
-  * target = Canonical(VSDMISO3166ErgaenzungCS|1.1.1-dev)
+  * target = Canonical(VSDMISO3166ErgaenzungCS|1.1.2)
 
   * element[+]
     * code = #KOS
