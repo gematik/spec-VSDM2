@@ -5,7 +5,7 @@ Description: "Privatversicherung Uranus"
 Usage: #inline
 
 * id = $idVSDMPayorOrganization-168134565
-* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.0)
+* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.1-dev)
 
 * identifier[IKNR].value = "168134565"
 * name = "Privatversicherung Uranus"

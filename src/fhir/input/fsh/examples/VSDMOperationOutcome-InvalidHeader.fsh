@@ -5,7 +5,7 @@ Description: "Beispiel zur Fehlermeldung 'Der HTTP-Header '[header]' ist ungült
 Usage: #example
 
 * meta
-  * profile[0] = Canonical(VSDMOperationOutcome|1.1.0)
+  * profile[0] = Canonical(VSDMOperationOutcome|1.1.1-dev)
 * text
   * status = #generated
   * div[+] = """
