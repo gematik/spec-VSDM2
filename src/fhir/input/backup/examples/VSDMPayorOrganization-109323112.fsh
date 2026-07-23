@@ -4,7 +4,7 @@ Title: "Beispielkostenträger Saarland"
 Description: "Beispielkostenträger Saarland"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.1-dev)
+* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.2)
 
 * identifier[IKNR].value = "109323112"
 * name = "Beispielkostenträger Saarland"

@@ -11,6 +11,20 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 ### Änderung
 
+### Abkündigung
+
+### Entfernung
+
+### Fehlerbehebung
+
+### Security
+
+## [1.1.2] - 2026-07-22
+
+### Neu
+
+### Änderung
+
 - Statt des Pakets `kbv.basis` wird jetzt das deutlich kleinere Paket `kbv.basis.terminology` verwendet.
   Durch diese Änderung ergeben sich keine inhaltlichen Änderungen an den VSDM 2.0-Ressourcen.
   ([issue 201](https://github.com/gematik/spec-VSDM2/issues/201))
@@ -263,3 +277,4 @@ _(Release Notes aus der Simplifier-Veröffentlichung übernommen)_
 [1.0.0]: https://simplifier.net/packages/de.gematik.vsdm2/1.0.0
 [1.0.1]: https://simplifier.net/packages/de.gematik.vsdm2/1.0.1
 [1.1.0]: https://simplifier.net/packages/de.gematik.vsdm2/1.1.0
+[1.1.2]: https://simplifier.net/packages/de.gematik.vsdm2/1.1.2

@@ -22,5 +22,5 @@ Description: "ergänzende Ländercodes zu ISO 3166-1 im Versichertenstammdatenma
   * system 1..
   * system = Canonical(VSDMISO3166ErgaenzungCS) (exactly)
   * version 1.. MS
-  * version = "1.1.1-dev" (exactly)
+  * version = "1.1.2" (exactly)
   * code 1.. MS
