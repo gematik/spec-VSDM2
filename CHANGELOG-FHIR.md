@@ -23,6 +23,10 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 ### Neu
 
+- Es wurde ein neues Basis-Profil VSDMPatientBase zwischen dem TIPatient und dem bereits bestehenden Profil VSDMPatient eingezogen, um die Umsetzung der EEB zu unterstützen.
+  Durch diese Änderung ergeben sich keine inhaltlichen Änderungen an den VSDM 2.0-Ressourcen.
+  ([issue 171](https://github.com/gematik/spec-VSDM2/issues/198))
+
 ### Änderung
 
 - Statt des Pakets `kbv.basis` wird jetzt das deutlich kleinere Paket `kbv.basis.terminology` verwendet.
@@ -31,7 +35,11 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 ### Abkündigung
 
+(keine)
+
 ### Entfernung
+
+(keine)
 
 ### Fehlerbehebung
 
@@ -39,6 +47,8 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
   ([issue 203](https://github.com/gematik/spec-VSDM2/issues/203))
 
 ### Security
+
+(keine)
 
 ## [1.1.0] - 2026-07-03
 
