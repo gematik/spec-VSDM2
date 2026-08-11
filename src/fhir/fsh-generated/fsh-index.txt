@@ -57,7 +57,8 @@ StructureDefinition-VSDMISO3166Ergaenzung.json                          VSDMISO3
 StructureDefinition-VSDMKrankenhausleistungenPKV.json                   VSDMKrankenhausleistungenPKV                      Extension   extensions/VSDMKrankenhausleistungenPKV.fsh                    1 - 90
 StructureDefinition-VSDMLaenderkennzeichenAnlage8.json                  VSDMLaenderkennzeichenAnlage8                     Extension   extensions/VSDMLaenderkennzeichenAnlage8.fsh                   1 - 24
 StructureDefinition-VSDMOperationOutcome.json                           VSDMOperationOutcome                              Profile     profiles/VSDMOperationOutcome.fsh                              1 - 82
-StructureDefinition-VSDMPatient.json                                    VSDMPatient                                       Profile     profiles/VSDMPatient.fsh                                       1 - 202
+StructureDefinition-VSDMPatient.json                                    VSDMPatient                                       Profile     profiles/VSDMPatient.fsh                                       1 - 20
+StructureDefinition-VSDMPatientBase.json                                VSDMPatientBase                                   Profile     profiles/VSDMPatientBase.fsh                                   1 - 200
 StructureDefinition-VSDMPayorOrganization.json                          VSDMPayorOrganization                             Profile     profiles/VSDMPayorOrganization.fsh                             1 - 48
 StructureDefinition-VSDMTarifartPKV.json                                VSDMTarifartPKV                                   Extension   extensions/VSDMTarifartPKV.fsh                                 1 - 20
 StructureDefinition-VSDMVersichertenartPKV.json                         VSDMVersichertenartPKV                            Extension   extensions/VSDMVersichertenartPKV.fsh                          1 - 23

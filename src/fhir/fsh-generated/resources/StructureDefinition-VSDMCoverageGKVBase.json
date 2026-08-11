@@ -43,7 +43,7 @@
       {
         "id": "Coverage",
         "path": "Coverage",
-        "short": "Versicherungsdaten GKV",
+        "short": "Basis-Versicherungsdaten GKV",
         "definition": "Basis-Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0.\nDieses Profil ist so gestaltet, dass es sowohl innerhalb von VSDM 2.0 als auch zur Abbildung der elektronischen Ersatzbescheinigung (EEB) verwendet werden kann.\nEs ist nicht zur direkten Nutzung in VSDM 2.0-Ressourcen vorgesehen.",
         "comment": "Zur Harmonisierung der Strukturen mit dem deutschen Basisprofil werden getrennte Profile für GKV und PKV gebildet."
       },

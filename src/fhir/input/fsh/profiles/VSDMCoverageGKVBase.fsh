@@ -9,7 +9,7 @@ Description: "Basis-Angaben zum GKV-Versicherungsverhältnis im Versichertenstam
 // Metadaten der StructureDefinition und Beschreibungstext des Strukturelements
 * insert Meta
 * .
-  * ^short = "Versicherungsdaten GKV"
+  * ^short = "Basis-Versicherungsdaten GKV"
   * ^definition = """
       Basis-Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0.
       Dieses Profil ist so gestaltet, dass es sowohl innerhalb von VSDM 2.0 als auch zur Abbildung der elektronischen Ersatzbescheinigung (EEB) verwendet werden kann.

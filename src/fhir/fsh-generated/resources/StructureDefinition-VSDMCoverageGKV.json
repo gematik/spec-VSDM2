@@ -43,6 +43,7 @@
       {
         "id": "Coverage",
         "path": "Coverage",
+        "short": "Versicherungsdaten GKV",
         "definition": "Angaben zum GKV-Versicherungsverhältnis im Versichertenstammdatenmanagement (VSDM) 2.0.\nDieses Profil bildet die im VSDM 2.0-Bundle zu verwendenden Inhalte ab.",
         "constraint": [
           {
