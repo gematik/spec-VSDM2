@@ -88,9 +88,9 @@ jobs:
         run: |
           echo "🔄 Starting optimized package installation..."
           
-          # Disable man-db auto-update to save 3-5 minutes!
-          sudo rm /var/lib/man-db/auto-update
-          echo "🚫 Disabled man-db auto-update"
+          # DISABLED THIS WORKAROUND because it fails; Disable man-db auto-update to save 3-5 minutes!
+          # sudo rm /var/lib/man-db/auto-update
+          # echo "🚫 Disabled man-db auto-update"
           
           # Update package list
           sudo apt-get update
