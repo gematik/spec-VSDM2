@@ -10,17 +10,17 @@ participant PS order 1 [
 	----
 	""Primärsystem""
 ]
-participant VSDD_AuthZ order 30 [
+participant VSDD_AuthZ order 10 [
 	=VSD-Dienst
 	----
 	""Authorization-Server""
 ]
-participant VSDD_Proxy order 31 [
+participant VSDD_Proxy order 11 [
 	=VSD-Dienst
 	----
 	""HTTP-Proxy""
 ]
-participant VSDD_Server order 32 [
+participant VSDD_Server order 12 [
 	=VSD-Dienst
 	----
 	""Ressource-Server""
@@ -30,7 +30,7 @@ participant PoPP order 20 [
 	----
 	""PoPP-Service""
 ]
-participant Service_Discovery order 25 [
+participant Service_Discovery order 30 [
 	=Service Discovery
 	----
 	""Service Discovery""
