@@ -30,7 +30,7 @@ participant PoPP order 20 [
 	----
 	""PoPP-Service""
 ]
-participant Service_Discovery order 30 [
+participant Service_Discovery order 25 [
 	=Service Discovery
 	----
 	""Service Discovery""
