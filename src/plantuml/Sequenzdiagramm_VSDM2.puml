@@ -10,17 +10,17 @@ participant PS order 1 [
 	----
 	""Primärsystem""
 ]
-participant VSDD_AuthZ order 10 [
+participant VSDD_AuthZ order 30 [
 	=VSD-Dienst
 	----
 	""Authorization-Server""
 ]
-participant VSDD_Proxy order 11 [
+participant VSDD_Proxy order 31 [
 	=VSD-Dienst
 	----
 	""HTTP-Proxy""
 ]
-participant VSDD_Server order 12 [
+participant VSDD_Server order 32 [
 	=VSD-Dienst
 	----
 	""Ressource-Server""
@@ -29,6 +29,11 @@ participant PoPP order 20 [
 	=PoPP-Service
 	----
 	""PoPP-Service""
+]
+participant Service_Discovery order 25 [
+	=Service Discovery
+	----
+	""Service Discovery""
 ]
 
 <style>
@@ -58,15 +63,25 @@ PoPP -> PS : PoPP-Token mit \nKVNR, IK-Nummer, OID, Zeitstempel
 PS -> PS : PoPP-Token speichern \n(bspw. im Patientenstamm)
 PS -> PS : PoPP-Token dekodieren und KVNR, IK-Nummer \n(bspw. im Patientenstamm) speichern
 
-== Fachdienst VSDM 2.0 Dienstlokalisierung (alle 24 Stunden) ==
-ref over PS, PoPP : Dienstlokalisierung mit FQDN <ik-nummer>.vsdm2.ti-dienste.de
+== Fachdienst VSDM 2.0 Service Discovery (regelmäßiger, asychroner Check via eTag gewünscht) ==
+ref over PS, Service_Discovery : Download bzw. Update-Check des Service Discovery Dokuments (catalog.json) von gematik-Endpunkten
+
+PS -> Service_Discovery : GET https://service-discovery.<bu-identifier>.ti-platform.de/catalog.json \nIf-None-Match: "<servicediscovery_etag_value>"
+activate Service_Discovery
+alt Keine Änderung am Service Discovery-Dokument (ETag identisch)
+	Service_Discovery -> PS : HTTP 304 Not Modified \nETag: "<servicediscovery_etag_value>"
+else Service Discovery-Dokument geändert (ETag nicht identisch)
+	Service_Discovery -> PS : HTTP 200 OK \nETag: "<new_servicediscovery_etag_value>" \nBody: "<catalog.json Inhalt>"
+	deactivate Service_Discovery
+	PS -> PS : Aktualisiere Service Discovery Dokument und ETag
+end
+
+PS -> PS : Dienstlokalisierung mittels Service Discovery Dokument und IK-Nummer des Versicherten
 
 == Versichertenstammdaten abrufen ==
 ' VSDD Endpunkte Lokalisieren
-ref over PS, VSDD_Proxy : Endpunkt-Lokalisierung Fachdienst VSDM 2.0 (siehe gemSpec_Zero-Trust)
-'Authentifizierung und AUtorisierung am VSDM AuthZ-Server durchführen
+'Authentifizierung und Autorisierung am VSDM AuthZ-Server durchführen
 ref over PS, VSDD_AuthZ : LEI-Authentifizierung (SMC-B) und LEI-Autorisierung (siehe gemSpec_Zero-Trust)
-VSDD_AuthZ -> PS : HTTP 200 OK \n{Refresh-Token, Access-Token} mit scope : vsdservice
 
 PS -> VSDD_Proxy : GET /vsdservice/v1/vsdmbundle \nAuthorization: DPoP <access_token> \nDPoP: <dpop_proof_jwt> \nPoPP: <popp_token> \nIf-None-Match: "<etag_value>"
 activate VSDD_Proxy
@@ -105,18 +120,16 @@ else etag_value(client) != etag_value(VSDD)
 	VSDD_Server -> VSDD_Server : lokalisiere VSD zu KVNR(PoPP-Token)
 	VSDD_Server -> VSDD_Proxy : HTTP 200 OK \nETag: "<new_etag_value>" \nVSDM-Pz: <Prüfziffer>\nVSDMBundle
 	VSDD_Proxy -> PS : HTTP 200 OK \nETag: "<new_etag_value>" \nVSDM-Pz: <Prüfziffer>\nVSDMBundle
-	PS -> PS : Aktualisiere VSD
+    deactivate VSDD_Proxy
+    PS -> PS : Aktualisiere VSD
 	PS -> LE : Zeige VSD an
 end
 
-PS -> PS : Aktualisiere Prüfziffer
 VSDD_Server -> VSDD_Server : write Zugriffsprotokoll(KVNR) mit Inhalt: User-Info
-activate VSDD_Server
-deactivate PS
-deactivate VSDD_Proxy
-deactivate VSDD_Server
-deactivate VSDD_Server
+PS -> PS : Aktualisiere Prüfziffer
+
 deactivate LE
+deactivate VSDD_Server
 
 == Fehlerbehandlung HTTP 401 Unauthorized (Access-Token ungültig) ==
 'Authentifizierung und AUtorisierung am VSDM AuthZ-Server durchführen
@@ -124,7 +137,9 @@ ref over PS, VSDD_AuthZ : LEI-Authentifizierung (SMC-B) und LEI-Autorisierung (s
 VSDD_AuthZ -> PS : HTTP 200 OK \n{Refresh-Token, Access-Token} mit scope : vsdservice
 
 == Fehlerbehandlung HTTP 403 Forbidden (Versorgungskontext bzw. PoPP-Token ungültig) ==
-ref over Ver, LE, PS, VSDD_AuthZ, VSDD_Proxy, VSDD_Server, PoPP : Versorgungskontext mit eGK oder GesundheitsID herstellen (siehe gemSpec_PoPP_Service)
+ref over Ver, PS, PoPP : Versorgungskontext mit eGK oder GesundheitsID herstellen (siehe gemSpec_PoPP_Service)
 PoPP -> PS : PoPP-Token mit\nKVNR, IK-Nummer, OID, Zeitstempel
+
+deactivate PS
 
 @enduml
