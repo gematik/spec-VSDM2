@@ -4,7 +4,7 @@ Title: "Beispielkostenträger Göttingen"
 Description: "Beispielkostenträger Göttingen"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.2)
+* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.3)
 
 * identifier[IKNR].value = "102060928"
 * name = "Beispielkostenträger Göttingen"

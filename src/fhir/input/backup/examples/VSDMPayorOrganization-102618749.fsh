@@ -4,7 +4,7 @@ Title: "Beispielkostenträger Stade"
 Description: "Beispielkostenträger Stade"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.2)
+* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.3)
 
 * identifier[IKNR].value = "102618749"
 * name = "Beispielkostenträger Stade"

@@ -3,7 +3,7 @@
   "id": "VSDMOperationOutcome-MissingProfileVersion",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome|1.1.2"
+      "https://gematik.de/fhir/vsdm2/StructureDefinition/VSDMOperationOutcome|1.1.3"
     ]
   },
   "text": {

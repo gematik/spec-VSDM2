@@ -5,7 +5,7 @@ Description: "Beispielkostenträger Bremen"
 Usage: #inline
 
 * id = $idVSDMPayorOrganization-103169760
-* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.2)
+* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.3)
 
 * identifier[IKNR].value = "103169760"
 * name = "Beispielkostenträger Bremen"
