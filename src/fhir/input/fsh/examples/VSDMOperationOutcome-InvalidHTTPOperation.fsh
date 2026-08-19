@@ -5,7 +5,7 @@ Description: "Beispiel zur Fehlermeldung 'Die HTTP-Operation '[http_operation]' 
 Usage: #example
 
 * meta
-  * profile[0] = Canonical(VSDMOperationOutcome|1.1.2)
+  * profile[0] = Canonical(VSDMOperationOutcome|1.1.3)
 * text
   * status = #generated
   * div[+] = """

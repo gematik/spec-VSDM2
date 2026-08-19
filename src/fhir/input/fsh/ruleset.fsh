@@ -5,36 +5,36 @@
 RuleSet: Meta
 * ^status = #active
 * ^experimental = false
-* ^version = "1.1.2"
+* ^version = "1.1.3"
 * ^publisher = "gematik GmbH"
 * ^contact.name = "gematik GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "https://fachportal.gematik.de/anwendungen/versichertenstammdaten-management"
 * ^jurisdiction = urn:iso:std:iso:3166#DE "Germany"
-* ^date = 2026-07-22
+* ^date = 2026-08-19
 
 RuleSet: Meta-CodeSystem
 * ^status = #active // Caution: CodeSystems with status "draft" trigger a validation error
 * ^experimental = false
-* ^version = "1.1.2"
+* ^version = "1.1.3"
 * ^publisher = "gematik GmbH"
 * ^contact.name = "gematik GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "https://fachportal.gematik.de/anwendungen/versichertenstammdaten-management"
 * ^jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * ^jurisdiction = urn:iso:std:iso:3166#DE "Germany"
-* ^date = 2026-07-22
+* ^date = 2026-08-19
 
 RuleSet: Meta-Inst
 * status = #active
 * experimental = false
-* version = "1.1.2"
+* version = "1.1.3"
 * publisher = "gematik GmbH"
 * contact.name = "gematik GmbH"
 * contact.telecom.system = #url
 * contact.telecom.value = "https://fachportal.gematik.de/anwendungen/versichertenstammdaten-management"
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
-* date = 2026-07-22
+* date = 2026-08-19
 
 // ================================================================================================
 //

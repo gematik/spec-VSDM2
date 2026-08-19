@@ -4,7 +4,7 @@ Title: "Beispielkostenträger Münster"
 Description: "Beispielkostenträger Münster"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.2)
+* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.3)
 
 * identifier[IKNR].value = "103707692"
 * name = "Beispielkostenträger Münster"

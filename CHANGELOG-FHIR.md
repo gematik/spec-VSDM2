@@ -19,6 +19,32 @@ Historische Release Notes (vor Beginn dieser Aufzeichnung) wurden zum Teil unbea
 
 ### Security
 
+## [1.1.3] - 2026-08-19
+
+### Neu
+
+(keine)
+
+### Änderung
+
+(keine)
+
+### Abkündigung
+
+(keine)
+
+### Entfernung
+
+(keine)
+
+### Fehlerbehebung
+
+- Die fehlenden Dependency aufgrund eines fehlerhaften Simplifier-Builds sollen behoben werden.
+
+### Security
+
+(keine)
+
 ## [1.1.2] - 2026-07-22
 
 ### Neu
@@ -288,3 +314,4 @@ _(Release Notes aus der Simplifier-Veröffentlichung übernommen)_
 [1.0.1]: https://simplifier.net/packages/de.gematik.vsdm2/1.0.1
 [1.1.0]: https://simplifier.net/packages/de.gematik.vsdm2/1.1.0
 [1.1.2]: https://simplifier.net/packages/de.gematik.vsdm2/1.1.2
+[1.1.3]: https://simplifier.net/packages/de.gematik.vsdm2/1.1.3

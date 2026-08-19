@@ -4,7 +4,7 @@ Title: "Beispielkostenträger Rostock"
 Description: "Beispielkostenträger Rostock"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.2)
+* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.3)
 
 * identifier[IKNR].value = "100390876"
 * name = "Beispielkostenträger Rostock"

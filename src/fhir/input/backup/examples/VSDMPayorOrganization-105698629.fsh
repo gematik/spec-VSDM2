@@ -4,7 +4,7 @@ Title: "Beispielkostenträger Limburg"
 Description: "Beispielkostenträger Limburg"
 Usage: #inline
 
-* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.2)
+* meta.profile[0] = Canonical(VSDMPayorOrganization|1.1.3)
 
 * identifier[IKNR].value = "105698629"
 * name = "Beispielkostenträger Limburg"
